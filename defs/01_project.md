@@ -1,5 +1,3 @@
-# 01_project.md
-
 # Dopamine
 
 ## Purpose
@@ -12,7 +10,7 @@ The player survives by continuously seeking stimulation. When stimulation stops,
 
 ---
 
-# Vision
+## Vision
 
 The game should initially feel exciting, rewarding and satisfying.
 
@@ -24,9 +22,9 @@ The player should eventually realize they have been conditioned into the exact b
 
 ---
 
-# Design Pillars
+## Design Pillars
 
-## 1. Attention is the main resource
+### 1. Attention is the main resource
 
 The player is not managing health, mana or energy.
 
@@ -36,7 +34,7 @@ Everything in the game exists to compete for the player's attention.
 
 ---
 
-## 2. Constant context switching
+### 2. Constant context switching
 
 The optimal strategy is never remaining focused on one activity.
 
@@ -46,7 +44,7 @@ The player should constantly feel that something else deserves immediate attenti
 
 ---
 
-## 3. Controlled chaos
+### 3. Controlled chaos
 
 The interface should appear overwhelming without becoming unreadable.
 
@@ -63,7 +61,7 @@ Despite the visual chaos, gameplay must always remain understandable.
 
 ---
 
-## 4. Positive reinforcement over punishment
+### 4. Positive reinforcement over punishment
 
 The game should avoid frequent direct punishment.
 
@@ -75,7 +73,7 @@ Players should voluntarily develop addictive habits because those habits are con
 
 ---
 
-## 5. Escalating stimulation
+### 5. Escalating stimulation
 
 Difficulty should increase through pressure, not complexity.
 
@@ -92,7 +90,7 @@ The player gradually loses the ability to comfortably process everything.
 
 ---
 
-## 6. Arcade first
+### 6. Arcade first
 
 The game should always feel like an arcade game.
 
@@ -111,7 +109,7 @@ Examples include:
 
 ---
 
-## 7. Satire through exaggeration
+### 7. Satire through exaggeration
 
 Every system should exaggerate behaviors commonly found on modern digital platforms.
 
@@ -134,7 +132,7 @@ Everything should feel intentionally excessive.
 
 ---
 
-# Target Session Length
+## Target Session Length
 
 There is no time limit.
 
@@ -144,7 +142,7 @@ Session duration depends on player skill and system balance.
 
 ---
 
-# Platform
+## Platform
 
 Primary platform:
 
@@ -164,9 +162,19 @@ No backend.
 
 No database.
 
+### Desktop Layout
+
+Five permanent windows at once: the selected Minigame plus Loop, Pulse, Wave, and Echo. Alerts overlay on top and are not a permanent layout slot.
+
+### Mobile Layout
+
+Three permanent windows at once: the selected Minigame plus two other gameplay windows chosen at random from Loop, Pulse, Wave, and Echo. Alerts still overlay on top when they appear.
+
+Full visual arrangement details belong in `07_layout.md`.
+
 ---
 
-# Technical Scope
+## Technical Scope
 
 The project must remain intentionally small.
 
@@ -184,7 +192,7 @@ The project should be deployable as static files to any common web hosting provi
 
 ---
 
-# Art Direction
+## Art Direction
 
 Style:
 
@@ -205,7 +213,7 @@ Visual feedback is more important than visual fidelity.
 
 ---
 
-# Audio Direction
+## Audio Direction
 
 Audio should constantly reinforce stimulation.
 
@@ -223,7 +231,7 @@ That silence should feel dramatic.
 
 ---
 
-# Player Fantasy
+## Player Fantasy
 
 The player should gradually become:
 
@@ -237,7 +245,7 @@ Without noticing, they should optimize their behavior around maximizing stimulat
 
 ---
 
-# Core Experience
+## Core Experience
 
 The player experience should be:
 
@@ -252,7 +260,7 @@ The game loop must communicate this without requiring explanation.
 
 ---
 
-# Success Criteria
+## Success Criteria
 
 The project is successful if:
 

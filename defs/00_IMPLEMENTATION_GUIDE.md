@@ -1,3 +1,7 @@
+# Implementation Guide
+
+## Reading Order
+
 **Read this file first.**
 
 Then read the remaining documents in the specified order.
@@ -67,6 +71,8 @@ Avoid duplicating gameplay rules across multiple files.
 
 If a rule changes, update the defining document instead of copying the change elsewhere.
 
+Hard process and architecture choices are recorded as ADRs in `docs/adr/`.
+
 Document responsibilities:
 
 - Gameplay Core: global gameplay rules.
@@ -98,7 +104,7 @@ The project should be implemented in this order:
 Do not implement advanced visual polish before gameplay systems are functional.
 
 
-# Project Structure
+## Project Structure
 
 The implementation should follow this structure:
 

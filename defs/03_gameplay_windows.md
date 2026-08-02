@@ -162,9 +162,9 @@ Failure comes from missing opportunities while passive Dopamine drain continues.
 
 ---
 
-# Minigame Window
+## Minigame Window
 
-## Purpose
+### Purpose
 
 Primary gameplay activity.
 
@@ -178,7 +178,7 @@ The selected minigame never changes until Game Over.
 
 ---
 
-## Passive Behavior
+### Passive Behavior
 
 The game continues running continuously.
 
@@ -188,7 +188,7 @@ Difficulty continuously increases.
 
 ---
 
-## Possible Player Actions
+### Possible Player Actions
 
 Actions depend on the selected minigame.
 
@@ -198,7 +198,7 @@ See:
 
 ---
 
-## Attention Requests
+### Attention Requests
 
 Examples
 
@@ -214,7 +214,7 @@ The player should instinctively want to return to the minigame.
 
 ---
 
-## Rewards
+### Rewards
 
 Every successful gameplay action grants:
 
@@ -245,7 +245,7 @@ The player should experience failure as another interruption competing for atten
 
 ---
 
-## Visual State
+### Visual State
 
 The minigame should always feel active.
 
@@ -261,7 +261,7 @@ Never visually static.
 
 ---
 
-## Audio
+### Audio
 
 Continuous gameplay audio.
 
@@ -271,9 +271,9 @@ Boss music overlays when applicable.
 
 ---
 
-# Loop Window
+## Loop Window
 
-## Purpose
+### Purpose
 
 Loop represents an endless stream of short-form vertical videos.
 
@@ -283,7 +283,7 @@ Loop should constantly tempt the player away from every other gameplay window.
 
 ---
 
-## Visual Composition
+### Visual Composition
 
 The window displays a single vertical video.
 
@@ -303,7 +303,7 @@ The interface should feel immediately familiar while remaining legally distinct.
 
 ---
 
-## Passive Behaviour
+### Passive Behaviour
 
 The current video continuously loops.
 
@@ -321,7 +321,7 @@ The longer the player ignores new content, the stronger the desire to switch vid
 
 ---
 
-## Active Behaviour
+### Active Behaviour
 
 Whenever the player interacts, the window immediately responds with satisfying visual feedback.
 
@@ -331,9 +331,9 @@ The player should never wait for network responses.
 
 ---
 
-## Possible Player Actions
+### Possible Player Actions
 
-### Next Video
+#### Next Video
 
 Advances to the next video.
 
@@ -356,7 +356,7 @@ Repeatedly advancing too quickly eventually produces diminishing returns.
 
 ---
 
-### Like
+#### Like
 
 The player may repeatedly Like the current video.
 
@@ -372,7 +372,7 @@ This mechanic intentionally imitates compulsive repetitive interactions while na
 
 ---
 
-### Repost
+#### Repost
 
 Instantly republishes the current video.
 
@@ -391,7 +391,7 @@ Reposts also increase the probability of future engagement events inside Loop.
 
 ---
 
-## Passive Events
+### Passive Events
 
 Examples:
 
@@ -413,7 +413,7 @@ They never require interaction.
 
 ---
 
-## Interactive Opportunities
+### Interactive Opportunities
 
 Examples:
 
@@ -449,7 +449,7 @@ No direct penalty is applied.
 
 ---
 
-## Reward Philosophy
+### Reward Philosophy
 
 Loop provides frequent but individually small rewards.
 
@@ -461,7 +461,7 @@ Long uninterrupted sessions inside Loop become progressively less efficient beca
 
 ---
 
-## Difficulty Scaling
+### Difficulty Scaling
 
 Difficulty never changes player controls.
 
@@ -476,31 +476,7 @@ The window gradually becomes more demanding without becoming mechanically harder
 
 ---
 
-# Window Attention States
-
-Every gameplay window continuously evaluates its own attention state.
-
-Possible states:
-
-- Idle
-
-No special opportunity exists.
-
-- Focus Ready
-
-A temporary opportunity is available.
-
-Ignoring it may reduce potential rewards.
-
-- Urgent
-
-A high-value opportunity exists for a limited duration.
-
-Responding quickly provides increased Dopamine and Score rewards.
-
-Each window defines its own rules for entering these states.
-
-## Focus Chain Behaviour
+### Focus Chain Behaviour
 
 Loop works especially well as a transition window.
 
@@ -534,9 +510,11 @@ Because videos continuously repeat, Focus Ready opportunities occur frequently.
 
 Experienced players should naturally use Loop as one of the primary windows for maintaining long Focus Chains.
 
+Interactive Opportunities in Loop create high-value Attention Requests; responding quickly provides increased Dopamine and Score rewards.
+
 ---
 
-## Burnout Behaviour
+### Burnout Behaviour
 
 During Burnout:
 
@@ -548,7 +526,7 @@ The underlying interaction rules never change.
 
 ---
 
-## Visual Feedback
+### Visual Feedback
 
 Every interaction should produce immediate arcade feedback.
 
@@ -569,7 +547,7 @@ They should visually dominate the window without obscuring the video itself.
 
 ---
 
-## Audio Feedback
+### Audio Feedback
 
 Every interaction plays short, satisfying feedback.
 
@@ -581,7 +559,7 @@ No sound should resemble an existing commercial platform.
 
 ---
 
-## Failure Cases
+### Failure Cases
 
 Remaining inside Loop for extended periods is allowed.
 
@@ -594,7 +572,7 @@ The player is gently encouraged to leave rather than punished for staying.
 
 ---
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 The implementation satisfies this specification if:
 
@@ -604,10 +582,11 @@ The implementation satisfies this specification if:
 - Focus Ready can be recognized through repeated play
 - the player naturally alternates between Loop and other windows instead of remaining permanently inside it
 
+---
 
-# Pulse Window
+## Pulse Window
 
-## Purpose
+### Purpose
 
 Pulse represents a fictional microblogging social network.
 
@@ -626,7 +605,7 @@ The player is encouraged to participate in conversations that maximize engagemen
 
 ---
 
-## Visual Composition
+### Visual Composition
 
 Pulse displays:
 
@@ -644,7 +623,7 @@ No existing branding.
 
 ---
 
-## Passive Behaviour
+### Passive Behaviour
 
 The timeline continuously updates.
 
@@ -668,7 +647,8 @@ Not every post is valuable.
 
 The player must identify opportunities.
 
-### Advertising and Spam:
+#### Advertising and Spam
+
 Advertising and Spam are filler content.
 
 They intentionally imitate low-value internet noise.
@@ -686,7 +666,7 @@ They should not become optimal interactions.
 
 ---
 
-## Active Behaviour
+### Active Behaviour
 
 The player can:
 
@@ -700,9 +680,9 @@ Interactions produce different engagement values.
 
 ---
 
-## Possible Player Actions
+### Possible Player Actions
 
-### Like
+#### Like
 
 The player likes a post.
 
@@ -715,7 +695,7 @@ Repeated likes on the same post follow Diminishing Returns.
 
 ---
 
-### Repost
+#### Repost
 
 The player republishes a post.
 
@@ -733,7 +713,7 @@ Effects:
 
 ---
 
-### Reply
+#### Reply
 
 The player writes a response to a post.
 
@@ -745,7 +725,7 @@ A reply matching an active trend has higher engagement potential.
 
 ---
 
-### Create Post
+#### Create Post
 
 The player writes their own post.
 
@@ -761,7 +741,7 @@ Posts without connection to current trends receive limited interaction.
 
 ---
 
-### Trend Participation
+#### Trend Participation
 
 The player may intentionally join trending conversations.
 
@@ -774,11 +754,11 @@ Successful participation generates:
 
 ---
 
-## Passive Events
+### Passive Events
 
 Examples:
 
-### Trend Appears
+#### Trend Appears
 
 A new topic becomes popular.
 
@@ -788,7 +768,7 @@ The topic has limited lifetime.
 
 ---
 
-### Ragebait Event
+#### Ragebait Event
 
 A controversial post gains visibility.
 
@@ -798,7 +778,7 @@ Participating generates larger rewards.
 
 ---
 
-### Mention Event
+#### Mention Event
 
 Another user mentions the player.
 
@@ -808,7 +788,7 @@ The player can respond for additional rewards.
 
 ---
 
-### Viral Post
+#### Viral Post
 
 A random post suddenly receives high engagement.
 
@@ -816,7 +796,7 @@ The opportunity expires quickly.
 
 ---
 
-## Interactive Opportunities
+### Interactive Opportunities
 
 Examples:
 
@@ -835,7 +815,7 @@ Successful response grants:
 
 ---
 
-## Reward Philosophy
+### Reward Philosophy
 
 Pulse rewards emotional engagement.
 
@@ -849,7 +829,7 @@ The satire comes from rewarding behaviors commonly optimized by social platforms
 
 ---
 
-## Focus Chain Behaviour
+### Focus Chain Behaviour
 
 Pulse is a medium-duration interaction window.
 
@@ -863,7 +843,7 @@ Pulse should frequently create reasons for the player to leave and return later.
 
 ---
 
-## Burnout Behaviour
+### Burnout Behaviour
 
 During Burnout:
 
@@ -875,8 +855,7 @@ The player should feel socially overwhelmed.
 
 ---
 
-
-## Visual Feedback
+### Visual Feedback
 
 Interactions create:
 
@@ -895,7 +874,7 @@ Examples:
 
 ---
 
-## Audio Feedback
+### Audio Feedback
 
 Examples:
 
@@ -917,7 +896,7 @@ rising tension sound
 
 ---
 
-## Failure Cases
+### Failure Cases
 
 The player can ignore Pulse completely.
 
@@ -927,7 +906,7 @@ The cost is missing engagement opportunities.
 
 ---
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 The implementation satisfies this specification if:
 
@@ -938,9 +917,364 @@ The implementation satisfies this specification if:
 - Pulse creates reasons to repeatedly return
 - no existing social network branding is used
 
-# Echo Window
+---
 
-## Purpose
+## Wave Window
+
+### Purpose
+
+Wave represents music streaming and background audio consumption.
+
+Its purpose is to create a constant emotional layer while competing for attention through recommendations, discoveries and social validation.
+
+Unlike Loop and Pulse, Wave should require fewer interactions.
+
+It creates passive attachment and occasional high-value opportunities.
+
+---
+
+### Visual Composition
+
+Wave displays:
+
+- abstract generated artwork
+- waveform visualization
+- track title
+- artist name
+- playback controls
+
+The interface should resemble a generic music player.
+
+No existing platform branding.
+
+---
+
+### Passive Behaviour
+
+Music is selected randomly from the available music library.
+
+There are no playlists.
+
+The game does not require album artwork or external metadata.
+
+When a track finishes:
+
+- another random track starts immediately
+- no user interaction is required
+
+The player may interrupt playback at any moment by skipping.
+
+Wave alternates between two possible behaviors:
+
+- active discovery through skipping
+- passive listening while waiting for valuable moments
+
+---
+
+### Active Behaviour
+
+The player may interact with Wave to:
+
+- control playback
+- discover music
+- react to songs
+- manage recommendations
+
+Interactions are intentionally limited.
+
+Wave should alternate between high-frequency discovery moments and passive listening periods.
+
+During discovery:
+
+- rapid skipping is encouraged
+- Dopamine increases through anticipation
+
+During passive listening:
+
+- the player is rewarded for waiting
+- Song Moments become valuable
+
+The optimal strategy should change over time.
+
+---
+
+### Possible Player Actions
+
+#### Playback
+
+Music playback cannot be paused.
+
+The player cannot stop the audio stream.
+
+The only available actions are:
+
+- skip current track
+- react to current track
+- discover new content
+
+This reinforces the feeling of constant stimulation.
+
+---
+
+#### Skip Track
+
+Changes the current song.
+
+Skipping creates a Dopamine Discovery Bonus.
+
+The player receives increasing excitement when searching for a better song.
+
+The bonus follows a logarithmic curve.
+
+Each consecutive skip increases anticipation.
+
+However, the reward gain decreases progressively.
+
+The purpose is simulating:
+
+"Maybe the next one is the perfect song."
+
+The bonus resets when:
+
+- a recommended song is opened
+- an Attention Request redirects to a song
+- the player stays listening for a significant amount of time
+
+---
+
+#### Song Moment
+
+Every song contains a hidden valuable moment.
+
+The moment is randomly generated between:
+
+25%
+
+and
+
+75%
+
+of the song duration.
+
+When playback reaches this moment:
+
+- visual feedback occurs
+- Dopamine reward is granted
+- Focus Chain quality increases
+
+The player should feel rewarded for staying with a song instead of constantly skipping.
+
+---
+
+#### Like Track
+
+Likes the current song.
+
+A song can only be liked once.
+
+The first Like provides:
+
+- Dopamine
+- Score
+
+Additional attempts have no effect.
+
+The player must discover new content to receive new Like rewards.
+
+---
+
+#### Discover Recommendation
+
+The player accepts a recommendation.
+
+Examples:
+
+- new artist
+- trending song
+- unexpected genre
+
+Rewards:
+
+- higher Dopamine
+- Score bonus
+
+Discovery should feel more valuable than repetition.
+
+---
+
+### Passive Events
+
+#### New Recommendation
+
+A new song recommendation appears.
+
+Creates an Attention Request.
+
+---
+
+#### Trending Audio
+
+A song becomes popular inside the fictional ecosystem.
+
+May connect with:
+
+- Loop videos
+- Pulse trends
+
+---
+
+#### Music Moment
+
+A special moment occurs:
+
+Examples:
+
+- chorus starts
+- beat drop
+- unusual sound
+
+The player may receive an opportunity to interact.
+
+---
+
+#### Playlist Update
+
+A playlist changes.
+
+Creates curiosity.
+
+---
+
+### Interactive Opportunities
+
+Examples:
+
+- "Everyone is listening to this"
+- "New viral sound discovered"
+- "Your recommendation is ready"
+
+Successful interaction grants:
+
+- Dopamine
+- Score
+- Focus Chain bonus
+
+#### Recommended Track
+
+A recommendation can immediately replace the current song.
+
+When accepted:
+
+- current track changes instantly
+- Skip Discovery Bonus resets
+- large Dopamine reward is granted
+
+The player feels that the system found something valuable for them.
+
+---
+
+### Reward Philosophy
+
+Wave provides lower interaction frequency but continuous presence.
+
+Its purpose is creating background engagement.
+
+The player should feel:
+
+"I should check what is playing"
+
+not:
+
+"I need to constantly click."
+
+---
+
+### Focus Chain Behaviour
+
+Wave creates slower Focus Chain transitions.
+
+Because interactions are less frequent, successful Wave interactions should have higher quality.
+
+Example:
+
+Pulse
+
+↓
+
+Wave discovery
+
+↓
+
+Loop
+
+creates a stronger chain than repeated Loop interactions.
+
+---
+
+### Burnout Behaviour
+
+During Burnout:
+
+- music intensity increases
+- visualizers become stronger
+- recommendations appear faster
+
+The audio itself should never become painful.
+
+---
+
+### Visual Feedback
+
+Examples:
+
+- waveform animations
+- beat reactions
+- floating engagement numbers
+- recommendation effects
+
+Important moments should create strong but clean feedback.
+
+---
+
+### Audio Feedback
+
+Wave is the main background audio source.
+
+The system must support:
+
+- music playback
+- gameplay sound effects
+- notification sounds
+
+Audio priority rules belong in `09_game_feel.md`.
+
+---
+
+### Failure Cases
+
+Ignoring Wave is allowed.
+
+The player only loses possible opportunities.
+
+No direct penalty exists.
+
+---
+
+### Acceptance Criteria
+
+The implementation satisfies this specification if:
+
+- music continues automatically
+- songs transition without interaction
+- skipping is not the optimal strategy
+- recommendations create attention opportunities
+- Wave contributes to Focus Chain without dominating gameplay
+
+---
+
+## Echo Window
+
+### Purpose
 
 Echo represents long-form passive media consumption.
 
@@ -954,7 +1288,7 @@ It creates attachment through continuous consumption.
 
 ---
 
-## Visual Composition
+### Visual Composition
 
 Echo displays:
 
@@ -971,7 +1305,7 @@ No existing platform branding.
 
 ---
 
-## Passive Behaviour
+### Passive Behaviour
 
 Echo content continues playing while the player interacts with other windows.
 
@@ -998,7 +1332,7 @@ Examples:
 
 ---
 
-## Active Behaviour
+### Active Behaviour
 
 The player may interact with Echo to generate rewards.
 
@@ -1010,9 +1344,9 @@ Its role is providing occasional attention opportunities.
 
 ---
 
-## Possible Player Actions
+### Possible Player Actions
 
-### Play / Pause
+#### Play / Pause
 
 Controls content playback.
 
@@ -1022,7 +1356,7 @@ Repeated toggling follows Diminishing Returns.
 
 ---
 
-### Change Content
+#### Change Content
 
 Changes the current Echo content.
 
@@ -1039,7 +1373,7 @@ The player should not optimize Echo by constantly changing content.
 
 ---
 
-### React
+#### React
 
 The player selects an emotional reaction.
 
@@ -1054,7 +1388,7 @@ Reactions create simulated engagement.
 
 ---
 
-### Subscribe
+#### Subscribe
 
 Represents committing attention to a creator.
 
@@ -1067,9 +1401,9 @@ Only limited rewards per content item.
 
 ---
 
-## Passive Events
+### Passive Events
 
-### Interesting Moment
+#### Interesting Moment
 
 A segment becomes highlighted.
 
@@ -1081,7 +1415,7 @@ Creates an Attention Request.
 
 ---
 
-### Quote Moment
+#### Quote Moment
 
 A memorable phrase appears.
 
@@ -1089,7 +1423,7 @@ The player can react.
 
 ---
 
-### Debate Moment
+#### Debate Moment
 
 A controversial statement appears.
 
@@ -1097,7 +1431,7 @@ This can connect Echo with Pulse trends.
 
 ---
 
-### Sponsor Segment
+#### Sponsor Segment
 
 A fake advertisement appears.
 
@@ -1109,7 +1443,7 @@ It exists as satire.
 
 ---
 
-## Interactive Opportunities
+### Interactive Opportunities
 
 Examples:
 
@@ -1125,7 +1459,7 @@ Successful interaction grants:
 
 ---
 
-## Reward Philosophy
+### Reward Philosophy
 
 Echo provides lower-frequency but larger attention opportunities.
 
@@ -1139,7 +1473,7 @@ rather than:
 
 ---
 
-## Focus Chain Behaviour
+### Focus Chain Behaviour
 
 Echo is a strategic window.
 
@@ -1147,7 +1481,7 @@ Because it generates fewer but larger opportunities, returning to Echo after che
 
 ---
 
-## Burnout Behaviour
+### Burnout Behaviour
 
 During Burnout:
 
@@ -1159,7 +1493,7 @@ The content itself does not accelerate.
 
 ---
 
-## Visual Feedback
+### Visual Feedback
 
 Interactions create:
 
@@ -1171,7 +1505,7 @@ Important moments should visually compete with other windows.
 
 ---
 
-## Audio Feedback
+### Audio Feedback
 
 Audio includes:
 
@@ -1183,7 +1517,7 @@ Playback audio should have lower priority than important gameplay feedback.
 
 ---
 
-## Failure Cases
+### Failure Cases
 
 Ignoring Echo is allowed.
 
@@ -1193,7 +1527,7 @@ No direct punishment exists.
 
 ---
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 The implementation satisfies this specification if:
 
@@ -1203,9 +1537,11 @@ The implementation satisfies this specification if:
 - Echo provides strategic Focus Chain opportunities
 - fake advertising creates noise without rewards
 
-# Alerts System
+---
 
-## Purpose
+## Alerts System
+
+### Purpose
 
 Alerts represents operating system style notifications.
 
@@ -1219,7 +1555,7 @@ Their purpose is to create interruption and urgency.
 
 ---
 
-## Visual Composition
+### Visual Composition
 
 Alerts appear as floating notification cards.
 
@@ -1237,7 +1573,7 @@ The visual style should resemble familiar device notifications without copying a
 
 ---
 
-## Behaviour
+### Behaviour
 
 Alerts are generated independently from all windows.
 
@@ -1253,9 +1589,9 @@ Alerts have expiration timers.
 
 ---
 
-## Alert Categories
+### Alert Categories
 
-### Social Alerts
+#### Social Alerts
 
 Generated from Pulse.
 
@@ -1273,7 +1609,7 @@ Rewards:
 
 ---
 
-### Media Alerts
+#### Media Alerts
 
 Generated from Loop, Echo and Wave.
 
@@ -1287,7 +1623,7 @@ Rewards vary depending on urgency.
 
 ---
 
-### Fake System Alerts
+#### Fake System Alerts
 
 Designed as satire.
 
@@ -1304,7 +1640,7 @@ Some provide rewards.
 
 Some are intentionally useless.
 
-### Standalone Alerts
+#### Standalone Alerts
 
 Alerts that do not redirect the player to another gameplay window.
 
@@ -1337,7 +1673,7 @@ depending on their type.
 
 ---
 
-### Spam Alerts
+#### Spam Alerts
 
 Low-value interruptions.
 
@@ -1357,9 +1693,9 @@ They exist as noise.
 
 ---
 
-## Possible Player Actions
+### Possible Player Actions
 
-### Open Alert
+#### Open Alert
 
 The player interacts with the notification.
 
@@ -1377,7 +1713,7 @@ Rewards depend on alert type.
 
 ---
 
-### Dismiss Alert
+#### Dismiss Alert
 
 The player removes the notification.
 
@@ -1387,7 +1723,7 @@ Certain fake alerts may provide a small comedic reward.
 
 ---
 
-### Ignore Alert
+#### Ignore Alert
 
 The player does nothing.
 
@@ -1400,7 +1736,7 @@ No direct penalty.
 
 ---
 
-## Attention Requests
+### Attention Requests
 
 Every Alert is automatically an Attention Request.
 
@@ -1424,7 +1760,7 @@ Priority affects:
 
 ---
 
-## Focus Chain Behaviour
+### Focus Chain Behaviour
 
 Opening an Alert can extend Focus Chain.
 
@@ -1446,7 +1782,7 @@ High Priority Alert
 
 ---
 
-## Burnout Behaviour
+### Burnout Behaviour
 
 During Burnout:
 
@@ -1459,7 +1795,7 @@ The player should feel overwhelmed by demands for attention.
 
 ---
 
-## Visual Feedback
+### Visual Feedback
 
 Alerts use:
 
@@ -1476,7 +1812,7 @@ Critical Alerts may use:
 
 ---
 
-## Audio Feedback
+### Audio Feedback
 
 Alerts have distinct notification sounds.
 
@@ -1486,7 +1822,7 @@ Critical Alerts can temporarily override background audio.
 
 ---
 
-## Failure Cases
+### Failure Cases
 
 Ignoring Alerts is allowed.
 
@@ -1496,7 +1832,7 @@ Alerts must never create unavoidable failure.
 
 ---
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 The implementation satisfies this specification if:
 
@@ -1505,355 +1841,3 @@ The implementation satisfies this specification if:
 - Alerts can create Focus Chain opportunities
 - Alerts create urgency without becoming mandatory
 - Spam creates noise without becoming an optimal strategy
-
-
-# Wave Window
-
-## Purpose
-
-Wave represents music streaming and background audio consumption.
-
-Its purpose is to create a constant emotional layer while competing for attention through recommendations, discoveries and social validation.
-
-Unlike Loop and Pulse, Wave should require fewer interactions.
-
-It creates passive attachment and occasional high-value opportunities.
-
----
-
-## Visual Composition
-
-Wave displays:
-
-- abstract generated artwork
-- waveform visualization
-- track title
-- artist name
-- playback controls
-
-The interface should resemble a generic music player.
-
-No existing platform branding.
-
----
-
-## Passive Behaviour
-
-Music is selected randomly from the available music library.
-
-There are no playlists.
-
-The game does not require album artwork or external metadata.
-
-When a track finishes:
-
-- another random track starts immediately
-- no user interaction is required
-
-The player may interrupt playback at any moment by skipping.
-
-Wave alternates between two possible behaviors:
-
-- active discovery through skipping
-- passive listening while waiting for valuable moments
-
----
-
-## Active Behaviour
-
-The player may interact with Wave to:
-
-- control playback
-- discover music
-- react to songs
-- manage recommendations
-
-Interactions are intentionally limited.
-
-Wave should alternate between high-frequency discovery moments and passive listening periods.
-
-During discovery:
-
-- rapid skipping is encouraged
-- Dopamine increases through anticipation
-
-During passive listening:
-
-- the player is rewarded for waiting
-- Song Moments become valuable
-
-The optimal strategy should change over time.
-
----
-
-## Possible Player Actions
-
-### Playback
-
-Music playback cannot be paused.
-
-The player cannot stop the audio stream.
-
-The only available actions are:
-
-- skip current track
-- react to current track
-- discover new content
-
-This reinforces the feeling of constant stimulation.
-
----
-
-### Skip Track
-
-Changes the current song.
-
-Skipping creates a Dopamine Discovery Bonus.
-
-The player receives increasing excitement when searching for a better song.
-
-The bonus follows a logarithmic curve.
-
-Each consecutive skip increases anticipation.
-
-However, the reward gain decreases progressively.
-
-The purpose is simulating:
-
-"Maybe the next one is the perfect song."
-
-The bonus resets when:
-
-- a recommended song is opened
-- an Attention Request redirects to a song
-- the player stays listening for a significant amount of time
-
----
-
-### Song Moment
-
-Every song contains a hidden valuable moment.
-
-The moment is randomly generated between:
-
-25%
-
-and
-
-75%
-
-of the song duration.
-
-When playback reaches this moment:
-
-- visual feedback occurs
-- Dopamine reward is granted
-- Focus Chain quality increases
-
-The player should feel rewarded for staying with a song instead of constantly skipping.
-
----
-
-### Like Track
-
-Likes the current song.
-
-A song can only be liked once.
-
-The first Like provides:
-
-- Dopamine
-- Score
-
-Additional attempts have no effect.
-
-The player must discover new content to receive new Like rewards.
-
----
-
-### Discover Recommendation
-
-The player accepts a recommendation.
-
-Examples:
-
-- new artist
-- trending song
-- unexpected genre
-
-Rewards:
-
-- higher Dopamine
-- Score bonus
-
-Discovery should feel more valuable than repetition.
-
----
-
-## Passive Events
-
-### New Recommendation
-
-A new song recommendation appears.
-
-Creates an Attention Request.
-
----
-
-### Trending Audio
-
-A song becomes popular inside the fictional ecosystem.
-
-May connect with:
-
-- Loop videos
-- Pulse trends
-
----
-
-### Music Moment
-
-A special moment occurs:
-
-Examples:
-
-- chorus starts
-- beat drop
-- unusual sound
-
-The player may receive an opportunity to interact.
-
----
-
-### Playlist Update
-
-A playlist changes.
-
-Creates curiosity.
-
----
-
-## Interactive Opportunities
-
-Examples:
-
-- "Everyone is listening to this"
-- "New viral sound discovered"
-- "Your recommendation is ready"
-
-Successful interaction grants:
-
-- Dopamine
-- Score
-- Focus Chain bonus
-
-### Recommended Track
-
-A recommendation can immediately replace the current song.
-
-When accepted:
-
-- current track changes instantly
-- Skip Discovery Bonus resets
-- large Dopamine reward is granted
-
-The player feels that the system found something valuable for them.
-
----
-
-## Reward Philosophy
-
-Wave provides lower interaction frequency but continuous presence.
-
-Its purpose is creating background engagement.
-
-The player should feel:
-
-"I should check what is playing"
-
-not:
-
-"I need to constantly click."
-
----
-
-## Focus Chain Behaviour
-
-Wave creates slower Focus Chain transitions.
-
-Because interactions are less frequent, successful Wave interactions should have higher quality.
-
-Example:
-
-Pulse
-
-↓
-
-Wave discovery
-
-↓
-
-Loop
-
-creates a stronger chain than repeated Loop interactions.
-
----
-
-## Burnout Behaviour
-
-During Burnout:
-
-- music intensity increases
-- visualizers become stronger
-- recommendations appear faster
-
-The audio itself should never become painful.
-
----
-
-## Visual Feedback
-
-Examples:
-
-- waveform animations
-- beat reactions
-- floating engagement numbers
-- recommendation effects
-
-Important moments should create strong but clean feedback.
-
----
-
-## Audio Feedback
-
-Wave is the main background audio source.
-
-The system must support:
-
-- music playback
-- gameplay sound effects
-- notification sounds
-
-Audio priority rules belong in `09_game_feel.md`.
-
----
-
-## Failure Cases
-
-Ignoring Wave is allowed.
-
-The player only loses possible opportunities.
-
-No direct penalty exists.
-
----
-
-## Acceptance Criteria
-
-The implementation satisfies this specification if:
-
-- music continues automatically
-- songs transition without interaction
-- skipping is not the optimal strategy
-- recommendations create attention opportunities
-- Wave contributes to Focus Chain without dominating gameplay

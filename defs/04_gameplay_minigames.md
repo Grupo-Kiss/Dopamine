@@ -1,18 +1,20 @@
-# Minigame Philosophy
+# Gameplay Minigames Specification
+
+## Minigame Philosophy
 
 Every play session selects one minigame.
 
-The selected minigame remains active for the entire run.
+The selected minigame remains active for the entire Match.
 
-The minigame never changes during a run.
+The minigame never changes during a Match.
 
-When the player loses the run (Dopamine reaches zero), a new minigame is randomly selected for the next run.
+When the player loses the Match (Dopamine reaches zero), a new minigame is randomly selected for the next Match.
 
-The player may receive the same minigame multiple runs in a row.
+The player may receive the same minigame multiple Matches in a row.
 
-# Input System
+## Input System
 
-## Lane Defender and Endless Runner
+### Lane Defender and Endless Runner
 
 1 = Left lane
 
@@ -20,7 +22,7 @@ The player may receive the same minigame multiple runs in a row.
 
 3 = Right lane
 
-## Block Cascade
+### Block Cascade
 
 ← = Move Left
 
@@ -32,9 +34,9 @@ The player may receive the same minigame multiple runs in a row.
 
 ---
 
-# Lane Defender
+## Lane Defender
 
-## Purpose
+### Purpose
 
 Lane Defender is a fast-paced arcade shooter.
 
@@ -46,7 +48,7 @@ Its purpose is generating continuous micro-decisions while competing for attenti
 
 ---
 
-## Camera
+### Camera
 
 Fixed top-down view.
 
@@ -60,14 +62,14 @@ The camera never moves or zooms.
 
 ---
 
-## Controls
+### Controls
 
-Desktop
+#### Desktop
 
 - Mouse movement changes lane.
 - Shooting is fully automatic.
 
-Mobile
+#### Mobile
 
 - Tap a lane to move.
 - Shooting is fully automatic.
@@ -78,7 +80,7 @@ Removing manual shooting allows the player to divide attention between gameplay 
 
 ---
 
-## Playfield
+### Playfield
 
 The playfield contains three lanes.
 
@@ -94,7 +96,7 @@ Changing lanes is instantaneous.
 
 ---
 
-## Core Loop
+### Core Loop
 
 Enemies continuously advance toward the player.
 
@@ -110,9 +112,9 @@ It continues forever.
 
 ---
 
-## Enemy Types
+### Enemy Types
 
-### Normal Enemy
+#### Normal Enemy
 
 Moves toward the player.
 
@@ -120,7 +122,7 @@ Destroyed with one hit.
 
 ---
 
-### Boss
+#### Boss
 
 Appears periodically.
 
@@ -198,7 +200,7 @@ Hazards intentionally create short-term tactical decisions.
 
 ---
 
-## Pickups
+### Pickups
 
 Examples:
 
@@ -218,7 +220,7 @@ Pickups disappear after a short duration.
 
 ---
 
-## Failure
+### Failure
 
 If an enemy reaches the player:
 
@@ -238,7 +240,7 @@ Only the internal state of the minigame restarts.
 
 ---
 
-## Numeric Indicators
+### Numeric Indicators
 
 Numeric indicators are a universal visual language.
 
@@ -263,7 +265,7 @@ Large values should never clutter the interface.
 
 ---
 
-## Difficulty Scaling
+### Difficulty Scaling
 
 Difficulty increases by:
 
@@ -290,11 +292,11 @@ This includes:
 
 Scaling should remain gradual.
 
-Numeric values should increase slowly enough that upgraded weapons remain meaningful throughout the run.
+Numeric values should increase slowly enough that upgraded weapons remain meaningful throughout the Match.
 
 ---
 
-## Attention Requests
+### Attention Requests
 
 Bosses.
 
@@ -306,7 +308,7 @@ These events should visually compete with every other gameplay window.
 
 ---
 
-## Focus Chain
+### Focus Chain
 
 Entering the minigame may begin or extend a Focus Chain.
 
@@ -316,7 +318,7 @@ Leaving and returning later is encouraged.
 
 ---
 
-## Burnout
+### Burnout
 
 During Burnout:
 
@@ -328,7 +330,7 @@ Reward density increases significantly.
 
 ---
 
-## Visual Feedback
+### Visual Feedback
 
 Normal enemies produce minimal feedback.
 
@@ -354,7 +356,7 @@ These events receive exaggerated arcade feedback.
 
 ---
 
-## Audio Feedback
+### Audio Feedback
 
 Enemy hit
 
@@ -370,7 +372,7 @@ These sounds are specified in 09_game_feel.md.
 
 ---
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 Implementation satisfies this specification if:
 
@@ -383,9 +385,9 @@ Implementation satisfies this specification if:
 
 ---
 
-# Block Cascade
+## Block Cascade
 
-## Purpose
+### Purpose
 
 Block Cascade is an endless block-stacking puzzle inspired by classic falling block games like Tetris.
 
@@ -395,7 +397,7 @@ Unlike Lane Defender, this minigame alternates between calm planning and urgent 
 
 ---
 
-## Camera
+### Camera
 
 Fixed top-down playfield.
 
@@ -405,16 +407,16 @@ No camera movement.
 
 ---
 
-## Controls
+### Controls
 
-Desktop
+#### Desktop
 
 - Move piece left
 - Move piece right
 - Rotate
 - Soft drop
 
-Mobile
+#### Mobile
 
 - Swipe left/right
 - Tap to rotate
@@ -426,7 +428,7 @@ The player should never need extremely high precision.
 
 ---
 
-## Board
+### Board
 
 Standard rectangular playfield.
 
@@ -438,7 +440,7 @@ The game is endless.
 
 ---
 
-## Core Loop
+### Core Loop
 
 The player places pieces.
 
@@ -450,7 +452,7 @@ The game never pauses.
 
 ---
 
-## Piece Types
+### Piece Types
 
 Use the seven classic tetrominoes.
 
@@ -460,7 +462,7 @@ No special pieces.
 
 ---
 
-## Line Clear
+### Line Clear
 
 Removing lines grants:
 
@@ -475,7 +477,7 @@ Rewards increase with:
 
 ---
 
-## Overflow
+### Overflow
 
 If pieces reach the top:
 
@@ -485,7 +487,7 @@ The global game continues unchanged.
 
 ---
 
-## Difficulty Scaling
+### Difficulty Scaling
 
 Difficulty increases by:
 
@@ -498,7 +500,7 @@ The player should survive for several minutes before the highest speeds are reac
 
 ---
 
-## Attention Requests
+### Attention Requests
 
 Examples:
 
@@ -511,7 +513,7 @@ These naturally compete for attention with the other gameplay windows.
 
 ---
 
-## Focus Chain
+### Focus Chain
 
 Leaving Block Cascade for a short time is often safe.
 
@@ -521,7 +523,7 @@ Returning at the correct moment creates valuable Focus Chains.
 
 ---
 
-## Burnout
+### Burnout
 
 During Burnout:
 
@@ -533,7 +535,7 @@ Controls never change.
 
 ---
 
-## Visual Feedback
+### Visual Feedback
 
 Single line clears:
 
@@ -551,7 +553,7 @@ Only major clears should compete with the other gameplay windows.
 
 ---
 
-## Audio Feedback
+### Audio Feedback
 
 Piece placed.
 
@@ -567,7 +569,7 @@ Detailed audio rules are defined in 09_game_feel.md.
 
 ---
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 The implementation satisfies this specification if:
 
@@ -579,9 +581,9 @@ The implementation satisfies this specification if:
 
 ---
 
-# Endless Runner
+## Endless Runner
 
-## Purpose
+### Purpose
 
 Endless Runner is a continuous obstacle avoidance game.
 
@@ -591,7 +593,7 @@ Unlike Lane Defender, the player focuses on survival instead of combat.
 
 ---
 
-## Camera
+### Camera
 
 Fixed third-person camera.
 
@@ -603,15 +605,15 @@ The player always remains near the bottom of the playfield.
 
 ---
 
-## Controls
+### Controls
 
-Desktop
+#### Desktop
 
 - Left lane
 - Center lane
 - Right lane
 
-Mobile
+#### Mobile
 
 - Swipe left
 - Swipe right
@@ -620,7 +622,7 @@ The player constantly moves forward automatically.
 
 ---
 
-## Playfield
+### Playfield
 
 Three lanes.
 
@@ -632,7 +634,7 @@ The game never ends.
 
 ---
 
-## Core Loop
+### Core Loop
 
 Avoid obstacles.
 
@@ -644,7 +646,7 @@ Objects become denser over time.
 
 ---
 
-## Obstacle Types
+### Obstacle Types
 
 Static obstacle.
 
@@ -658,7 +660,7 @@ Touching any obstacle immediately resets the minigame.
 
 ---
 
-## Collectibles
+### Collectibles
 
 Coins.
 
@@ -674,7 +676,7 @@ Collectibles disappear after a short duration.
 
 ---
 
-## Difficulty Scaling
+### Difficulty Scaling
 
 Difficulty increases through:
 
@@ -686,7 +688,7 @@ The player should constantly make lane-change decisions.
 
 ---
 
-## Attention Requests
+### Attention Requests
 
 Examples:
 
@@ -702,7 +704,7 @@ These moments should tempt the player to temporarily ignore other gameplay windo
 
 ---
 
-## Focus Chain
+### Focus Chain
 
 Because movement is continuous, leaving the runner even briefly creates risk.
 
@@ -710,7 +712,7 @@ Returning at the correct moment produces valuable Focus Chains.
 
 ---
 
-## Burnout
+### Burnout
 
 During Burnout:
 
@@ -722,7 +724,7 @@ The player experiences intense pressure with proportionally larger rewards.
 
 ---
 
-## Visual Feedback
+### Visual Feedback
 
 Ordinary collectibles produce minimal feedback.
 
@@ -736,7 +738,7 @@ Only significant rewards should compete with the other gameplay windows.
 
 ---
 
-## Audio Feedback
+### Audio Feedback
 
 Jump is intentionally omitted.
 
@@ -747,11 +749,11 @@ Only:
 - collision
 - rare pickup
 
-Detailed rules belong to 09_game_feel.md.
+Detailed rules belong in 09_game_feel.md.
 
 ---
 
-## Failure
+### Failure
 
 Colliding with any obstacle immediately resets the minigame.
 
@@ -761,7 +763,7 @@ Only the runner state resets.
 
 ---
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 The implementation satisfies this specification if:
 
