@@ -65,7 +65,9 @@ Despite the visual chaos, gameplay must always remain understandable.
 
 ## 4. Positive reinforcement over punishment
 
-The game should rarely punish the player directly.
+The game should avoid frequent direct punishment.
+
+Failure should feel dramatic and meaningful when it happens.
 
 Instead, it should constantly reward desirable behavior.
 
@@ -74,6 +76,8 @@ Players should voluntarily develop addictive habits because those habits are con
 ---
 
 ## 5. Escalating stimulation
+
+Difficulty should increase through pressure, not complexity.
 
 Difficulty should increase primarily by increasing the frequency of events rather than making interactions mechanically harder.
 
@@ -136,11 +140,7 @@ There is no time limit.
 
 A match ends only when Dopamine reaches zero.
 
-Average session target:
-
-- New player: 2–5 minutes
-- Experienced player: 8–15 minutes
-- Highly skilled player: 20+ minutes
+Session duration depends on player skill and system balance.
 
 ---
 
@@ -174,6 +174,8 @@ Priorities:
 
 - fast loading
 - responsive controls
+- keyboard accessibility
+- consistent shortcut system
 - maintainable architecture
 - modular systems
 - frontend only
@@ -207,7 +209,11 @@ Visual feedback is more important than visual fidelity.
 
 Audio should constantly reinforce stimulation.
 
-Every system may emit sounds simultaneously.
+Every system may generate audio feedback.
+
+The final audio mix should intentionally become increasingly dense during long sessions.
+
+Audio priority and mixing rules are defined in 09_game_feel.md.
 
 The overall mix should intentionally become increasingly dense during long sessions.
 
@@ -228,6 +234,21 @@ The player should gradually become:
 - unable to comfortably ignore notifications
 
 Without noticing, they should optimize their behavior around maximizing stimulation rather than enjoying any individual activity.
+
+---
+
+# Core Experience
+
+The player experience should be:
+
+1. Discover stimulation.
+2. Switch attention rapidly.
+3. Receive immediate rewards.
+4. Handle increasing pressure.
+5. Lose dramatically when stimulation is no longer maintained.
+6. Restart immediately.
+
+The game loop must communicate this without requiring explanation.
 
 ---
 

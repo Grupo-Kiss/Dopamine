@@ -26,6 +26,10 @@ There is no mandatory gameplay loop.
 
 Every mechanic is optional.
 
+The player chooses where to focus.
+
+The challenge comes from deciding what to ignore.
+
 However, mastering optional mechanics produces significantly better scores and longer survival.
 
 ---
@@ -46,7 +50,7 @@ Difficulty starts at Level 1.
 
 Score starts at zero.
 
-Combo starts at zero.
+All gameplay windows begin in the Idle state.
 
 Focus Chain starts at zero.
 
@@ -64,6 +68,40 @@ The only ending condition is losing.
 
 ---
 
+# Competing Priorities
+
+Multiple gameplay systems may simultaneously request attention.
+
+The game never pauses any system.
+
+The player is expected to prioritize.
+
+Missing one opportunity is preferable to trying to complete everything.
+
+The core experience is making impossible attention-allocation decisions.
+
+---
+
+# Gameplay Layers
+
+Gameplay is composed of independent systems running simultaneously.
+
+These layers include:
+
+- Minigame
+- Gameplay Windows
+- Alerts HUD
+- Dopamine System
+- Difficulty System
+- Focus Chain
+- Burnout
+
+No gameplay layer pauses another.
+
+Every layer progresses independently unless explicitly specified otherwise.
+
+---
+
 # Global Gameplay States
 
 The game always exists in exactly one of the following states.
@@ -73,7 +111,7 @@ The game always exists in exactly one of the following states.
 Responsibilities
 
 - preload assets
-- validate required assets
+- validate required content
 - initialize systems
 - generate random session values
 
@@ -113,6 +151,8 @@ Playing
 
 Game Over
 
+All windows continuously evaluate whether to request the player's attention.
+
 ---
 
 ## Burnout
@@ -138,6 +178,10 @@ Burnout automatically ends when player APM falls below the required threshold fo
 After Burnout ends:
 
 the Recovery state begins immediately.
+
+Burnout affects every gameplay system simultaneously.
+
+Individual windows may react differently according to their own specifications.
 
 ---
 
@@ -200,6 +244,8 @@ Triggered immediately when Dopamine reaches zero.
 
 All gameplay systems stop.
 
+The final rendered frame remains visible during the dramatic pause.
+
 All audio stops.
 
 Animations stop.
@@ -207,6 +253,10 @@ Animations stop.
 Notifications disappear.
 
 The player avatar turns off the device.
+
+The interface immediately loses all stimulation.
+
+Silence should feel uncomfortable.
 
 After a dramatic pause:
 
@@ -355,24 +405,6 @@ This distinction is extremely important.
 
 ---
 
-# Attention Model
-
-Every gameplay window continuously requests attention.
-
-Attention requests occur independently.
-
-Each request belongs exclusively to its originating window.
-
-The player chooses which requests deserve immediate response.
-
-The game never explicitly recommends the correct decision.
-
-Instead, the player gradually learns patterns that maximize reward.
-
-This learning process is intended to mirror modern attention-driven digital platforms.
-
----
-
 # Focus Chain System
 
 ## Purpose
@@ -388,6 +420,183 @@ Focus Chain is completely optional.
 A player may ignore it entirely.
 
 However, efficient use of Focus Chain dramatically increases score, Dopamine generation and long-term survival.
+
+---
+
+# Input System
+
+## Purpose
+
+The Input System defines all keyboard shortcuts and interaction rules.
+
+Keyboard shortcuts exist to reward advanced players and improve efficiency.
+
+Mouse and touch interactions remain fully supported.
+
+Keyboard shortcuts must never be required to complete the game.
+
+## Shortcut Philosophy
+
+Shortcuts should:
+
+- remain consistent across all systems
+- use the same key for the same action whenever possible
+- minimize hand movement
+- reward mastery
+
+The same action must always use the same shortcut.
+
+Examples:
+
+Like always uses L.
+
+Next content always uses N.
+
+Repost always uses R.
+
+## Shortcut Priority
+
+When multiple systems could receive the same input, priority order is:
+
+1. Active text input
+2. Active Alert
+3. Active Window
+4. Global Navigation
+
+Examples:
+
+If the player is writing a Pulse post:
+
+Enter publishes the post.
+
+It does not trigger another action.
+
+If an Alert is visible:
+
+Esc dismisses the Alert.
+
+It does not cancel another operation.
+
+## Window Navigation
+
+Window navigation allows experienced players to rapidly switch focus.
+
+Q = Loop
+
+W = Pulse
+
+E = Wave
+
+R = Echo
+
+T = Minigame
+
+Changing window focus:
+
+- updates the active window
+- counts as a Focus Change
+- follows normal Focus Chain rules
+
+## Global Actions
+
+### Alert Interaction
+
+A = Open the highest priority available Alert.
+
+Esc = Dismiss the currently active Alert.
+
+Alerts always have priority over normal window shortcuts.
+
+---
+
+### Confirmation
+
+Enter = Confirm the current action.
+
+Examples:
+
+- publish a Pulse post
+- confirm a selection
+- submit text input
+
+---
+
+## Window Actions
+
+### Loop
+
+N = Next video
+
+L = Like
+
+R = Repost
+
+---
+
+### Pulse
+
+L = Like
+
+R = Repost
+
+C = Reply
+
+P = Create Post
+
+Enter = Publish
+
+---
+
+### Wave
+
+N = Next Song
+
+L = Like Song
+
+---
+
+### Echo
+
+N = Next Content
+
+L = React
+
+S = Subscribe
+
+---
+
+### Minigame Actions
+
+Minigame-specific controls are defined in:
+
+04_gameplay_minigames.md
+
+Shared shortcuts should be reused whenever possible.
+
+## Input Consistency Rule
+
+New gameplay systems must reuse existing shortcuts.
+
+New shortcuts should only be introduced when no existing shortcut can represent the action.
+
+
+---
+
+# Attention Model
+
+Every gameplay window continuously requests attention.
+
+Attention requests occur independently.
+
+Each request belongs exclusively to its originating window.
+
+The player chooses which requests deserve immediate response.
+
+The game never explicitly recommends the correct decision.
+
+Instead, the player gradually learns patterns that maximize reward.
+
+This learning process is intended to mirror modern attention-driven digital platforms.
 
 ---
 

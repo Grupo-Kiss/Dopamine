@@ -35,6 +35,10 @@ Every window may simultaneously request attention.
 
 The game never guarantees that only one window requires attention.
 
+Every window has keyboard shortcuts for key actions
+
+Keyboard shortcuts are defined in Gameplay Core.
+
 ---
 
 ## Common Window States
@@ -86,20 +90,6 @@ The player should naturally learn to recognize these indicators after repeated p
 
 ---
 
-### Attention Request
-
-A temporary opportunity requiring immediate attention.
-
-Attention Requests expire after a configurable duration.
-
-Responding before expiration grants significantly larger rewards.
-
-Ignoring the request carries no direct punishment.
-
-The player simply loses the opportunity.
-
----
-
 ### Active
 
 The player is currently interacting with this window.
@@ -126,6 +116,8 @@ Waiting automatically transitions to Focus Ready once Reward Cooldown expires.
 
 ### Attention Request
 
+A temporary opportunity requiring immediate attention.
+
 The window is actively asking for interaction.
 
 Examples:
@@ -141,7 +133,11 @@ Attention Requests should never permanently remain on screen.
 
 Each request expires after a configurable duration.
 
+Responding before expiration grants significantly larger rewards.
+
 Ignoring requests is allowed.
+
+Ignoring the request carries no direct punishment.
 
 The player simply loses the opportunity.
 
@@ -854,6 +850,7 @@ During Burnout:
 The player should feel socially overwhelmed.
 
 ---
+
 
 ## Visual Feedback
 

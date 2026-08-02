@@ -4,8 +4,6 @@ Then read the remaining documents in the specified order.
 
 Do not begin implementation before reading every specification.
 
-00_IMPLEMENTATION_GUIDE.md
-
 01_project.md
 
 02_gameplay_core.md
@@ -74,8 +72,8 @@ Document responsibilities:
 - Gameplay Core: global gameplay rules.
 - Gameplay Windows: individual window behavior.
 - Gameplay Minigames: minigame mechanics.
-- Difficulty: global scaling.
-- Balance: numerical values only.
+- Difficulty: progression rules and scaling behavior.
+- Balance: numerical tuning values only.
 - Layout: visual arrangement only.
 - Content: assets and media.
 - Game Feel: visual/audio feedback.
@@ -92,9 +90,10 @@ The project should be implemented in this order:
 4. One complete minigame
 5. Window systems
 6. Difficulty scaling
-7. Visual effects
-8. Audio
-9. Content expansion
+7. Automated testing
+8. Visual effects
+9. Audio
+10. Content expansion
 
 Do not implement advanced visual polish before gameplay systems are functional.
 
@@ -110,7 +109,8 @@ src/
 │   ├── dopamine/
 │   ├── scoring/
 │   ├── difficulty/
-│   └── events/
+│   ├── events/
+│   └── input/
 
 ├── windows/
 │   ├── Loop/
@@ -120,9 +120,9 @@ src/
 │   └── Alerts/
 
 ├── minigames/
-│   ├── lane_runner/
-│   ├── arcade_shooter/
-│   └── block_puzzle/
+│   ├── lane_defender/
+│   ├── endless_runner/
+│   └── block_cascade/
 
 ├── components/
 │   ├── HUD/
@@ -141,7 +141,7 @@ src/
 └── utils/
 
 
-## Legal Requirements
+## Credits and Attribution
 
 The implementation must include a credits system.
 
@@ -153,4 +153,6 @@ Credits must be accessible from:
 
 All third-party assets must have attribution data stored.
 
-All legal and attribution details are specified in: 13_credits_and_legal.md
+Detailed attribution rules are specified in:
+
+13_credits_and_legal.md
