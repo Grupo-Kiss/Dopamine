@@ -4,8 +4,12 @@ Frontend-only web arcade game that satirizes the attention economy by making the
 
 ## Language
 
+**Match**:
+One continuous play session from pressing PLAY until Dopamine reaches zero. There are no stages, checkpoints, or victory — only survival until loss. At Match start, one Minigame is chosen at random and kept for the whole Match.
+_Avoid_: Round, run (as the canonical doc term — informal speech may still say these)
+
 **Dopamine**:
-The player's sole survival resource — their need for constant stimulation. It rises from successful actions and Focus Chains, and depletes constantly. The match ends when it reaches zero. It is not health, lives, mana, or energy.
+The player's sole survival resource — their need for constant stimulation. It rises from successful actions and Focus Chains, and depletes constantly. The Match ends when it reaches zero. It is not health, lives, mana, or energy.
 _Avoid_: Health, lives, energy, mana
 
 **Player**:
