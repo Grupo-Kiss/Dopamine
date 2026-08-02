@@ -55,11 +55,15 @@ Skill expression from doing a few valid actions across many windows in successio
 _Avoid_: Treating Focus Chain as the same system as Combo/Multiplier
 
 **Burnout**:
-Optional high-intensity boost entered by sustained high APM. While active the player must keep APM up and receives bonus Dopamine. Modifies Playing; does not replace it. Ends into Recovery.
+Optional high-intensity boost entered by sustained high APM. While active the player must keep APM up and receives bonus Dopamine. Modifies Playing; does not replace it. Ends into Recovery. After each Burnout→Recovery cycle, the minimum APM required for the next Burnout permanently increases for the rest of the Match.
 _Avoid_: Rage mode, frenzy (unless later defined as distinct)
 
+**Burnout Telegraph**:
+A readable warning that current APM is approaching the Burnout threshold, so the player can ease off (save Burnout for later) or push harder to enter it. Visual/audio language belongs in `09_game_feel.md`.
+_Avoid_: Surprise Burnout with no approach signal
+
 **Recovery**:
-State immediately after Burnout where gaining/keeping Dopamine is harder (faster drain and related penalties). Burnout cannot retrigger until Recovery ends.
+State immediately after Burnout where gaining/keeping Dopamine is harder (faster drain and related penalties). Burnout cannot retrigger until Recovery ends. Completing Recovery raises the next Burnout APM threshold.
 _Avoid_: Cooldown (as the domain name for this state)
 
 **Active Window**:

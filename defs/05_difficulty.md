@@ -192,9 +192,13 @@ Focus Chain mechanics themselves never change.
 
 Higher difficulty naturally makes Burnout easier to enter because the player performs more actions.
 
-Burnout thresholds never decrease.
+Burnout APM thresholds never decrease during a Match.
+
+After every completed Burnout→Recovery cycle, the minimum APM required to enter the next Burnout permanently increases for the remainder of the Match.
 
 Only player activity determines Burnout activation.
+
+Difficulty scaling and Burnout threshold escalation are independent systems that both increase pressure over a long Match.
 
 ---
 

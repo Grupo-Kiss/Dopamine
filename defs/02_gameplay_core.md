@@ -165,6 +165,8 @@ The player may complete an entire match without entering Burnout.
 
 Entering Burnout is determined exclusively by sustained Actions Per Minute (APM).
 
+The minimum APM threshold starts at a base value and permanently increases after every completed Burnout→Recovery cycle for the remainder of the Match.
+
 Burnout does not replace Playing.
 
 It modifies Playing.
@@ -172,6 +174,8 @@ It modifies Playing.
 All gameplay systems continue functioning.
 
 Additional visual, audio and scoring modifiers become active.
+
+The player must receive a Burnout Telegraph when APM approaches the current threshold so they can ease off or push in. Telegraph presentation is defined in `09_game_feel.md`.
 
 Burnout automatically ends when player APM falls below the required threshold for a configurable period.
 
@@ -234,7 +238,7 @@ Burnout 3
 
 requires 125 APM
 
-Actual values are defined inside balance.md.
+Actual values are defined inside `06_balance.md`.
 
 ---
 
