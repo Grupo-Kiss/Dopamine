@@ -5,16 +5,20 @@ Frontend-only web arcade game that satirizes the attention economy by making the
 ## Language
 
 **Dopamine**:
-The player's sole survival resource — their need for constant stimulation. The match ends when it reaches zero. It is not health, lives, mana, or energy.
+The player's sole survival resource — their need for constant stimulation. It rises from successful actions and Focus Chains, and depletes constantly. The match ends when it reaches zero. It is not health, lives, mana, or energy.
 _Avoid_: Health, lives, energy, mana
 
 **Player**:
-The person at the controls, inhabiting the addicted agent who must keep seeking stimulation. Survival comes from continuous attention-seeking, not from mastering one activity.
+The person at the controls, inhabiting the addicted agent who must keep seeking stimulation by switching focus across windows. Survival comes from continuous attention-seeking, not from mastering one activity.
 _Avoid_: Observer, manager, operator (of someone else's addiction)
 
 **Gameplay Window**:
-An independent, always-running attention competitor on the desktop (Loop, Pulse, Wave, Echo, or the Minigame). Windows never pause each other.
+An independent, always-running attention competitor (the selected Minigame, Loop, Pulse, Wave, or Echo). Windows never pause each other. Alerts are not a permanent window; they overlay on top.
 _Avoid_: App, tab, panel (as the domain term)
+
+**Minigame**:
+One of three programmed arcade activities (Lane Defender, Block Cascade, Endless Runner). At match start exactly one is chosen at random and stays for the whole match until the player loses.
+_Avoid_: Mode, level, stage (for the minigame selection)
 
 **Loop**:
 Short-form vertical video stream. Fast, frequent, small rewards; strong novelty temptation.
@@ -33,17 +37,31 @@ Long-form video and podcasts — slower, persistent background consumption with 
 _Avoid_: YouTube, podcast apps
 
 **Alerts**:
-OS-style notifications that float above the layout and interrupt. The only element allowed to overlap other windows.
+OS-style notifications that float above the layout and interrupt. The only element allowed to overlap other windows. Not a permanent layout slot.
 _Avoid_: System notifications (as a branded OS imitation)
 
+**Desktop Layout**:
+Five permanent windows at once: the selected Minigame plus Loop, Pulse, Wave, and Echo, with Alerts overlaying on top when they appear.
+
+**Mobile Layout**:
+Three permanent windows at once: the selected Minigame plus two other gameplay windows chosen at random from Loop, Pulse, Wave, and Echo, with Alerts still able to overlay.
+
 **Focus Chain**:
-Optional skill expression that rewards intelligent attention switching across Focus Ready / Attention Request windows, not raw click speed or farming one window.
+Skill expression from doing a few valid actions across many windows in succession, especially when a window is demanding attention (Attention Request / notification). Rewards timed switching, not farming one window.
 _Avoid_: Combo (as a synonym for this system — combo may exist separately)
 
 **Burnout**:
-Optional high-intensity modifier entered by sustained high APM. Modifies Playing; does not replace it. Ends into Recovery.
+Optional high-intensity boost entered by sustained high APM. While active the player must keep APM up and receives bonus Dopamine. Modifies Playing; does not replace it. Ends into Recovery.
 _Avoid_: Rage mode, frenzy (unless later defined as distinct)
+
+**Recovery**:
+State immediately after Burnout where gaining/keeping Dopamine is harder (faster drain and related penalties). Burnout cannot retrigger until Recovery ends.
+_Avoid_: Cooldown (as the domain name for this state)
 
 **Active Window**:
 The window currently receiving meaningful gameplay interaction. Hover or bare keyboard focus alone does not change it; valid interactions and window-navigation shortcuts do.
 _Avoid_: Focused window, hovered window
+
+**TDD**:
+After documentation is finished, implementation proceeds test-driven: write a failing test for the intended behavior, then the minimal code to pass, then refactor. Documentation-first, then TDD — not the reverse.
+_Avoid_: Tests-after, coverage-only testing (as the delivery method)
