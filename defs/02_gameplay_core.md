@@ -395,13 +395,15 @@ Its purpose is creating psychological tension, not replacing gameplay rewards.
 
 ### Negative Gain
 
-The game should almost never remove Dopamine directly.
+The game never removes Dopamine directly.
 
-Instead, failing to interact simply allows passive drain to continue.
+Failing to interact simply allows passive drain to continue.
 
 The player should feel they are failing because they stopped earning stimulation rather than because the game punished them.
 
 This distinction is extremely important.
+
+_Pinned for ongoing review:_ if a future mechanic seems to need a direct Dopamine penalty, challenge it against this rule before adding an exception.
 
 ---
 

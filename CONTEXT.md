@@ -9,8 +9,8 @@ One continuous play session from pressing PLAY until Dopamine reaches zero. Ther
 _Avoid_: Round, run (as the canonical doc term — informal speech may still say these)
 
 **Dopamine**:
-The player's sole survival resource — their need for constant stimulation. It rises from successful actions and Focus Chains, and depletes constantly. The Match ends when it reaches zero. It is not health, lives, mana, or energy.
-_Avoid_: Health, lives, energy, mana
+The player's sole survival resource — their need for constant stimulation. It rises from successful actions and Focus Chains, and depletes constantly via passive drain only — never by direct penalty subtraction. The Match ends when it reaches zero. It is not health, lives, mana, or energy.
+_Avoid_: Health, lives, energy, mana; direct Dopamine penalties
 
 **Player**:
 The person at the controls, inhabiting the addicted agent who must keep seeking stimulation by switching focus across windows. Survival comes from continuous attention-seeking, not from mastering one activity.
