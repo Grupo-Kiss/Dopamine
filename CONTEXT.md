@@ -66,6 +66,18 @@ _Avoid_: Cooldown (as the domain name for this state)
 The window currently receiving meaningful gameplay interaction. Hover or bare keyboard focus alone does not change it; valid interactions and window-navigation shortcuts do.
 _Avoid_: Focused window, hovered window
 
+**Combo / Multiplier**:
+Arcade-style successive-action scoring feedback (multipliers, popups) in the classic coin-op tradition. Distinct from Focus Chain, which is attention-switching skill expression — though both should read as old-arcade overlays when celebrated.
+_Avoid_: Using "combo" as a synonym for Focus Chain
+
+**Window Art**:
+Caricaturesque, simple graphics for Loop/Pulse/Wave/Echo/Alerts — readable as a stylized computer screen, not high-fidelity UI clones.
+_Avoid_: Photoreal OS/app chrome, brand-accurate platform UI
+
+**Minigame Art**:
+Over-the-top arcade presentation for the selected minigame — exaggerated arcade feedback, particles, and spectacle versus the simpler window chrome.
+_Avoid_: Matching the flat “desktop window” look for the playfield
+
 **TDD**:
 After documentation is finished, implementation proceeds test-driven: write a failing test for the intended behavior, then the minimal code to pass, then refactor. Documentation-first, then TDD — not the reverse.
 _Avoid_: Tests-after, coverage-only testing (as the delivery method)
