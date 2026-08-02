@@ -8,6 +8,8 @@ Then read the remaining documents in the specified order.
 
 Do not begin implementation before reading every specification.
 
+Open design reminders that belong in later docs live in `_PINS.md` until absorbed.
+
 01_project.md
 
 02_gameplay_core.md
