@@ -476,6 +476,30 @@ The window gradually becomes more demanding without becoming mechanically harder
 
 ---
 
+# Window Attention States
+
+Every gameplay window continuously evaluates its own attention state.
+
+Possible states:
+
+- Idle
+
+No special opportunity exists.
+
+- Focus Ready
+
+A temporary opportunity is available.
+
+Ignoring it may reduce potential rewards.
+
+- Urgent
+
+A high-value opportunity exists for a limited duration.
+
+Responding quickly provides increased Dopamine and Score rewards.
+
+Each window defines its own rules for entering these states.
+
 ## Focus Chain Behaviour
 
 Loop works especially well as a transition window.
