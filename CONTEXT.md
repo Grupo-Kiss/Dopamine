@@ -51,8 +51,8 @@ Five permanent windows at once: the selected Minigame plus Loop, Pulse, Wave, an
 Three permanent windows at once: the selected Minigame plus two other gameplay windows chosen at random from Loop, Pulse, Wave, and Echo, with Alerts still able to overlay.
 
 **Focus Chain**:
-Skill expression from doing a few valid actions across many windows in succession, especially when a window is demanding attention (Attention Request / notification). Rewards timed switching, not farming one window.
-_Avoid_: Combo (as a synonym for this system — combo may exist separately)
+Skill expression from doing a few valid actions across many windows in succession, especially when a window is demanding attention (Attention Request / notification). Rewards timed switching, not farming one window. Celebrated with old-arcade style message overlays (not quiet UI chrome).
+_Avoid_: Treating Focus Chain as the same system as Combo/Multiplier
 
 **Burnout**:
 Optional high-intensity boost entered by sustained high APM. While active the player must keep APM up and receives bonus Dopamine. Modifies Playing; does not replace it. Ends into Recovery.
