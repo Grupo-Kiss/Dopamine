@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img" aria-label="Boss Monster">
+  <ellipse cx="80" cy="78" rx="70" ry="52" fill="#c0392b" stroke="#333" stroke-width="4"/>
+  <circle cx="55" cy="70" r="16" fill="#fff" stroke="#333" stroke-width="3"/>
+  <circle cx="105" cy="70" r="16" fill="#fff" stroke="#333" stroke-width="3"/>
+  <circle cx="55" cy="74" r="7" fill="#111"/><circle cx="105" cy="74" r="7" fill="#111"/>
+  <path d="M50 100h60" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+  <path d="M30 40l15 22M130 40l-15 22M80 20v24" stroke="#922b21" stroke-width="8" stroke-linecap="round"/>
+</svg>

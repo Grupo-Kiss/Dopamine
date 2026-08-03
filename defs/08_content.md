@@ -163,16 +163,37 @@ API queries should bias short duration, safesearch on, tags suitable for satire 
 
 ## Pulse (`content/pulse/`)
 
-All text. **Hand-authored post library is deferred to later development** (pin). Ship generators + seeds first so Matches can run.
+All text. No video/audio required.
+
+### Library size And Templates
+
+Target on the order of **~100 posts** (plus trends/users), built mainly as **templates with variables** so lines reuse cleanly, for example:
+
+```text
+"Is {noun} even legal in {place}? Asking for a friend."
+"{user} just declared {topic} cancelled. Ratios welcome."
+```
+
+Variables fill from `users.json`, `trends.json`, and `generators/seeds.json` (nouns, places, takes, emoji crumbs). Hand-written fully unique posts are optional extras on top of templates.
+
+**Authoring timing:** expand the ~100-template library during development once generators exist; seeds can cover early Matches before the full set is written.
+
+### Local layout
 
 ```
 content/pulse/
-  posts.json             ← fill later in development
+  posts.json             ← ~100 template posts (variables allowed)
   trends.json
   users.json
   generators/seeds.json
 ```
 
+### Generation rules (high level)
+
+- Posts may be library templates, runtime generation, or mixed.
+- Categories from gameplay docs: harmless trends, absurd debates, ragebait, memes, controversial opinions, fake news, internet drama, advertising, spam.
+- **Advertising / spam** must be identifiable in data (`rewardable: false`) so Dopamine stays `0`.
+- Never include real people’s private data or real brand slogans that imply endorsement.
 ---
 
 ## Wave (`content/wave/`) — pace by folder + API mapping

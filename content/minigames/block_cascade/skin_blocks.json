@@ -1,0 +1,15 @@
+{
+  "comment": "Modern-classic tetromino colors — replace with final skin anytime",
+  "pieces": {
+    "I": "#00e5ff",
+    "O": "#ffd600",
+    "T": "#aa00ff",
+    "S": "#00e676",
+    "Z": "#ff1744",
+    "J": "#2979ff",
+    "L": "#ff9100"
+  },
+  "ghostOpacity": 0.25,
+  "boardBackground": "#12141c",
+  "gridLine": "#2a2f3a"
+}

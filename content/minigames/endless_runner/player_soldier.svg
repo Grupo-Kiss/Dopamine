@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 128" role="img" aria-label="Soldier">
+  <rect x="28" y="8" width="40" height="28" rx="6" fill="#f5d0a9" stroke="#333" stroke-width="3"/>
+  <rect x="22" y="36" width="52" height="44" rx="4" fill="#5b8c3e" stroke="#333" stroke-width="3"/>
+  <rect x="18" y="40" width="12" height="36" fill="#5b8c3e" stroke="#333" stroke-width="2"/>
+  <rect x="66" y="40" width="12" height="36" fill="#5b8c3e" stroke="#333" stroke-width="2"/>
+  <rect x="30" y="80" width="14" height="36" fill="#3d3d3d" stroke="#333" stroke-width="2"/>
+  <rect x="52" y="80" width="14" height="36" fill="#3d3d3d" stroke="#333" stroke-width="2"/>
+  <rect x="34" y="4" width="28" height="10" fill="#2f5d2e" stroke="#333" stroke-width="2"/>
+  <circle cx="40" cy="20" r="3" fill="#222"/><circle cx="56" cy="20" r="3" fill="#222"/>
+</svg>
