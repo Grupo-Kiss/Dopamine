@@ -2,9 +2,35 @@
 
 ## Purpose
 
-This document defines **how the game looks, sounds, and feedbacks** — arcade juice, HUD stickers, window chrome vs minigame spectacle, audio mix priority, splash, and the art direction + asset inventory for each minigame.
+This document defines **how the game looks, sounds, and feedbacks** — start/splash/game-over surfaces, window branding, arcade stickers (Balatro-level energy, not Balatro art), Dopamine bar, Burnout/Recovery overlays, audio mix (including focus muffling), minigame art direction, and mid-fi mockups for review.
 
-Gameplay rules: `02`–`05`. Layout: `07`. Content sources: `08`. Numbers: `06`.
+Gameplay: `02`–`05`. Layout: `07`. Content: `08`. Numbers: `06`.
+
+**Mockups live in** `content/mockups/` — mid-fidelity references you can pull offline and rework.
+
+---
+
+## Product Surfaces
+
+### Start Page (before PLAY)
+
+Not an instant jump into the Match. Includes:
+
+- Title / brand (arcade energy)
+- Brief how-to-play (Focus Chain idea in one sentence, Dopamine drains, switch windows)
+- **Accessibility mode** toggle (reduced motion: less shake/flash/pulsing; stickers stay readable)
+- Credits entry point
+- PLAY
+
+English-only UI strings for v1. Player-typed Pulse text may be any language; the game does not localize or judge it.
+
+### Splash (`Loading`)
+
+Arcade-like short splash while the starter pack loads (`08`). Bold title treatment, light sticker motion, window icons. Must feel like a cabinet boot, not an installer.
+
+### Game Over
+
+Reuse the same informational blocks as the Start Page (brief instructions reminder, credits, accessibility) adapted around survival stats + **PLAY AGAIN** (demanding if ignored). Hard silence under the hold frame.
 
 ---
 
@@ -12,218 +38,208 @@ Gameplay rules: `02`–`05`. Layout: `07`. Content sources: `08`. Numbers: `06`.
 
 | Surface | Look | Density |
 | --- | --- | --- |
-| **Desktop / window UI** (Loop, Pulse, Wave, Echo, Alerts, layout chrome) | Minimal, simple, clean caricaturesque “computer screen” | Low — readable first |
-| **Arcade feedback** (combos, Focus Chain, score stickers, Burnout telegraph) | Classic arcade pop — bold type, short-lived stickers | Medium — only when events fire |
-| **Minigames** | Fun, toony, caricaturesque; Supercell-adjacent (Lane Defender / Endless Runner) or modern-classic Tetris (Block Cascade) | High inside the minigame slot only |
+| **Desktop chrome / windows** | Minimal, rounded, stroked, clean caricaturesque UI | Low |
+| **Arcade stickers / FX** | High energy (Balatro-*motion* energy: snappy squash/stretch, punchy pops) — not Balatro’s art style | Event-only |
+| **Minigames** | Cute Supercell-friendly toony (Lane/Runner) or harmonious modern-classic Tetris (Block Cascade) | High in-slot |
 
-Do not paint window chrome with minigame spectacle. Do not make the Dopamine bar or layout gutters noisy.
+Overall satire stays **cute / readable**, not depressive-dark. Individual windows may use **darker palettes** (e.g. Wave “dark player”, Block Cascade dark board) without gloomy styling.
 
----
-
-## Global UI Chrome (clean / minimal)
-
-- Thin window frames, clear Active Window highlight, soft Focus Ready shimmer (discovered, not labeled).
-- **Dopamine:** persistent vertical edge bar only (see `07`).
-- **No permanent score/combo/chain HUD strip** — those are stickers.
-- Icons: `content/icons/*.svg` (gradient tiles, generic marks).
-- Motion on UI: small (pulse, shimmer, slide-in stickers). No constant screen shake outside minigame / major arcade events.
+**Gutter / stage background:** near-black (`#0a0a0c` range) visible between windows.
 
 ---
 
-## Arcade Feedback Stickers
+## Window Branding Palettes
 
-All of these are ephemeral overlays. They appear, celebrate, then clear.
+Rounded corners + stroke + minimal controls. Accent color for primary actions (Like, Publish, Skip). Derived from `content/icons/` gradients:
 
-### Combo / Multiplier
+| Window | Primary | Accent | Notes |
+| --- | --- | --- | --- |
+| Loop | `#ff4d6d` → `#ff8fa3` | `#fff` / hot pink highlight | Light playful feed |
+| Pulse | `#1da1f2` → `#6ec6ff` | `#ffffff` buttons on blue | Clean microblog |
+| Wave | `#0b3d2e` / `#1db954` | `#1db954` | **Dark player** chrome (Spotify-*like* darkness, fictional) |
+| Echo | `#990022` → `#ff0033` | `#ffffff` | Long-form; video or audio chrome |
+| Alerts | `#f5a623` → `#f76b1c` | `#fff` | Urgent cards |
+| Dopamine bar | See below | — | Edge meter |
+| Minigame frame | Neutral dark stroke | Per-game | Doesn’t steal Loop pink |
 
-- Shows over the **Active Window** as `x2`, `x3`, … `x7!!` style marks.
-- Early hits in a fresh window: juicy (scale punch, bright color, strong SFX).
-- As **diminishing returns** apply for staying in the same window: the sticker stays correct numerically but **looks and sounds flatter** (less scale, duller color, quieter / thinner SFX) — “boring reward” telegraph.
-- Switching windows restores juice on the next combo sequence.
-
-### Focus Chain
-
-- Old-arcade message stickers (`CHAIN 5`, `NICE SWITCH`, completion cash-out burst).
-- Stronger than combo stickers; may briefly use screen flash / light shake at high chain tiers (see visual progression in `02`).
-- Distinct language from combo so players learn both systems.
-
-### Score / Dopamine ticks
-
-- Tiny floating `+N` near the action; Dopamine bar fills react smoothly.
-- Prefer quiet ticks for routine actions; bigger pops for Attention Requests / bosses / chain completion.
-
-### Burnout Telegraph
-
-- Sticker + optional edge glow when APM ≥ `threshold × BURNOUT_TELEGRAPH_APM_RATIO`.
-- Readable enough to choose: ease off or push in.
-- Not a permanent meter chrome (APM itself is not a full-time HUD).
-
-### Burnout / Recovery
-
-- Burnout: denser particles, stronger reward pops, hotter color grade inside windows/minigame — still controllable.
-- Recovery: cooler, quieter, drained feel; stickers less celebratory.
-
-### Game Over
-
-- Hard cut to silence (see Audio).
-- Final frame holds; then stats + demanding PLAY AGAIN (grows/pulses if ignored).
+Active Window: stronger stroke / subtle glow in that window’s primary. Focus Ready: soft shimmer in-brand.
 
 ---
 
-## Splash
+## Dopamine Bar
 
-- Short branded splash during `Loading` starter-pack preload (`08`).
-- Light motion only; must not feel like an installer.
-- May show window icons + Dopamine mark from `content/icons/`.
+Vertical edge meter (`07`).
 
----
-
-## Window Surface Feel (non-minigame)
-
-| Window | Feel notes |
+| Fill level | Color |
 | --- | --- |
-| Loop | Vertical video stage; instant like/repost pops; Attention Requests dominate without covering the whole clip |
-| Pulse | Clean text feed; exaggerated engagement numbers on viral events; ads/spam visually “cheap” |
-| Wave | Compact player; waveform/abstract art; boring tracks can look visually flatter too |
-| Echo | Video → long-form player chrome (fictional, not YouTube). Audio → Wave-like chrome |
-| Alerts | OS-like cards; priority drives size/urgency; spam looks dismissible and dull |
+| Full / high | **Orange** (`#ff8c00` → `#ffb347`), **radioactive glow + pulsating** |
+| Mid | Interpolate orange → violet |
+| Low / empty | **Purple / violet** (`#7b2cbf` → `#5b1d8a`), glow dies down |
+
+Fill amount drives both height/amount **and** hue continuously. High Dopamine = stronger pulse + bloom. Low = quieter, colder bar.
+
+Mockup: `content/mockups/dopamine_bar.svg`
 
 ---
 
-## Audio Mix Priority
+## Arcade Stickers And Motion (Balatro energy)
 
-From highest to lowest ducking priority:
+Snappy pops, brief overshoot, satisfying settle. Not constant chaos on chrome.
 
-1. Critical Alerts / Burnout telegraph / Game Over sting  
-2. Focus Chain / big arcade rewards  
-3. Combo SFX (subject to boredom curve)  
-4. Minigame action SFX  
-5. Wave music bed  
-6. Echo playback  
-7. Ambient UI loops  
+| Sticker | Behavior |
+| --- | --- |
+| Combo `xN` / `xN!!` | Over Active Window; **juicy → bored** as same-window diminishing returns rise |
+| Focus Chain | Bigger arcade banners; tiered punch |
+| Score / Dopamine `+N` | Tiny floats; bigger on Attention Requests |
+| Burnout telegraph | Edge + sticker when near APM threshold |
 
-Rules:
+Reduced-motion (accessibility): replace shake/big pulse with opacity/color transitions; keep information.
 
-- Mix gets **denser** as the Match and difficulty rise (`05`).
-- **Silence only after Game Over** — then it should feel uncomfortable.
-- Wave never becomes painful in Burnout; intensify without clipping into noise torture.
-- Detailed bus levels tuned in implementation; this doc owns priority order.
+Mockups: `content/mockups/stickers_combo.svg`, `content/mockups/stickers_chain.svg`
 
 ---
 
-## Minigame Art Direction
+## Burnout And Recovery Overlays
 
-All minigame art is **first-party produced** for this project (no ripped commercial packs). Drop zones: `content/minigames/<id>/` (see Asset Inventory). Starter placeholders may ship as SVG/PNG for review and be replaced.
+### Burnout (more stressful)
 
-Shared rules for Lane Defender + Endless Runner:
+- Hotter reward pops / denser particles (as before)
+- **Reddish vignette** over the playfield
+- **Semi-transparent grunge texture** overlay (colorized, not B&W), **pulsating** opacity
+- Wave bed may **saturate / bother** (real-life overload) — still respect master limiter slightly so hardware isn’t harsh-clipped into pain, but it should feel dirty
+- **No focus muffling** — everything competes equally
 
-- **Supercell-like** readability: chunky silhouettes, saturated colors, friendly-toony menace — think Clash family energy, **not** photoreal, **not** Doom texture cloning.
-- Characters/enemies: **2D sprites as cardboard cutouts** billboarded in a simple 3D lane space (Doom-like *technique*, different aesthetic).
-- Mild idle/animation on cutouts (sway, frame swap) — paper/cardboard feel welcome.
-- Hazards / props: **basic 3D primitives** (boxes, cylinders, cones) with flat toony materials — no complex PBR texturing.
-- Camera: fixed; playfield always readable with many entities.
+Reference energy for grunge: textured overlay similar to grunge stock (e.g. Texturelabs-style) with alpha — place final texture at `content/minigames/_shared/textures/burnout_grunge.png` (you supply; see Audio/Assets asks below).
 
-### Lane Defender
+Mockup: `content/mockups/overlay_burnout.svg`
 
-| Element | Direction |
-| --- | --- |
-| Player | Toony **soldier** cutout at bottom of three lanes |
-| Enemies | Toony **monsters** cutouts advancing down lanes |
-| Boss | Larger cutout / multi-lane presence; big readable tell |
-| Hazards | Basic 3D shapes + numeric counters (Mine, Barrier, etc.) |
-| Pickups | Bright simple 3D or cutout icons (shield, rapid fire, …) |
-| FX | Small hits for fodder; big arcade bursts only for boss/rare |
+### Recovery (sleepy opposite)
 
-### Endless Runner
+- **Violet / cooler vignette**
+- **Darker desaturating overlay** over apps (mutes color)
+- Stickers less celebratory; slower pulse
+- Extra muffling on almost everything, easing back to normal as Recovery ends
 
-Same world language as Lane Defender (soldier / obstacles / toony props).
+Mockup: `content/mockups/overlay_recovery.svg`
 
-| Element | Direction |
-| --- | --- |
-| Player | Soldier cutout running in place / lane hops |
-| Obstacles | Mix of cutout blockers + basic 3D shapes; gaps readable |
-| Collectibles | Bright, simple; rare ones get sticker-level juice |
-| Motion | World scrolls toward player; keep silhouette clarity at speed |
+---
+
+## Minigame Framing (aspect)
+
+Minigame **playable content** sits in a **fixed aspect box** inside its layout slot. Letterbox / pillarbox (or extend non-playable ground) with near-black or in-world ground fill — do **not** stretch sprites.
+
+Aspect is chosen to fit the `07` masonry slot (not assumed 16:9 fullscreen). Author art for that box; scale uniformly.
+
+3D primitives (hazards/props): **bevelled edges**, no sharp razor corners — soft toony blocks.
+
+### Lane Defender / Endless Runner
+
+Cute Supercell-friendly soldier + monsters as **cardboard cutout** billboards in simple 3D space. Shared cast OK. Hazards = bevelled basic shapes.
 
 ### Block Cascade
 
-| Element | Direction |
-| --- | --- |
-| Reference feel | Modern-classic mobile Tetris — clean board, satisfying clears (PLAYSTUDIOS Tetris energy: polished, contemporary, still instantly Tetris) |
-| Pieces | Seven tetrominoes; crisp colors; soft bevel or clean flat — not muddy |
-| Board | High contrast grid; ghost piece subtle |
-| Clears | Minimal FX on single; escalating arcade celebration on multi / four-line |
-| No | Skeuo plastic overload or dark “realistic blocks” |
+Dark modern board, crisp bright tetrominoes (starter `skin_blocks.json`), soft bevels — harmonious with Wave’s dark-but-fun energy, not out of place next to Loop/Pulse pastels.
+
+Mockups: `content/mockups/minigame_lane.svg`, `content/mockups/minigame_blocks.svg`
 
 ---
 
-## Asset Inventory (produce all)
+## Audio Mix
 
-Paths are authoring drop zones. Replace starters after review.
+### Priority (unchanged order)
 
-### `content/minigames/lane_defender/`
+1. Critical Alerts / Burnout telegraph / Game Over sting  
+2. Focus Chain / big arcade rewards  
+3. Combo SFX (boredom curve)  
+4. Minigame action SFX  
+5. Wave music bed  
+6. Echo playback  
+7. Ambient UI  
 
-| Asset | Notes |
-| --- | --- |
-| `player_soldier.svg` (+ optional anim frames) | Cardboard cutout |
-| `enemy_normal.svg` | Monster cutout |
-| `enemy_boss.svg` | Larger monster |
-| `hazard_mine.*` / `hazard_barrier.*` | Basic 3D or simple mesh refs + icons |
-| `pickup_*.svg` | One per pickup type in `04` |
-| `bg_lanes.*` | Simple ground / sky / lane marks |
-| `sfx_hit`, `sfx_destroy`, `sfx_boss_warn`, `sfx_boss_down`, `sfx_pickup` | Short arcade WAV/OGG |
+Silence only after Game Over.
 
-### `content/minigames/endless_runner/`
+### Focus muffling (yes — feasible)
 
-| Asset | Notes |
-| --- | --- |
-| `player_soldier.svg` | Can share style with Lane Defender; may reuse with tint |
-| `obstacle_*.svg` / basic mesh | Static, moving, gap markers |
-| `collectible_*.svg` | Coin, shield, magnet, rare |
-| `bg_scroll.*` | Looping ground / horizon |
-| `sfx_lane`, `sfx_collect`, `sfx_crash`, `sfx_rare` | |
+**Real-time programmatic mixing is possible** in browsers via the **Web Audio API** (`GainNode`, lowpass/`BiquadFilterNode` per bus). Complexity is **moderate**, not huge: one small mixer module, not a DAW.
 
-### `content/minigames/block_cascade/`
+Intended behaviour:
 
-| Asset | Notes |
-| --- | --- |
-| `skin_blocks.json` + textures/colors | Seven piece colors / optional soft atlases |
-| `board_frame.svg` | Clean modern frame |
-| `sfx_place`, `sfx_rotate`, `sfx_clear`, `sfx_tetris`, `sfx_reset` | |
+| State | Non-focused window audio | Focused |
+| --- | --- | --- |
+| Playing (normal) | Slightly muffled / lower gain | Clear |
+| Burnout | **No muffling** — all competing | All hot |
+| Recovery | **Extra muffled** globally, ease back to normal | Still muted relative |
 
-### Shared arcade stickers (`content/minigames/_shared/` or UI pack)
+If scheduling pressure appears during TDD, ship priority ducks first and muffling second — but **design intent includes muffling**.
 
-| Asset | Notes |
-| --- | --- |
-| Combo type styles | Juicy vs bored variants |
-| Focus Chain banner frames | |
-| Burnout telegraph mark | |
-| Floating `+N` glyph set | |
-
-Audio files follow `08` license rules; prefer owned/CC0.
+Wave in Burnout may saturate/bother on purpose.
 
 ---
 
-## Motion Budget (intentional)
+## English
 
-Ship at least:
+All system UI, alerts templates, and Pulse *library* strings: English. Free-typed Pulse content: unrestricted.
 
-1. Sticker spawn (combo / chain / telegraph)  
-2. Dopamine bar reactive fill  
-3. Active Window focus treat + Focus Ready shimmer  
-4. Minigame hit/clear feedback scaled by importance  
-5. Game Over silence + PLAY AGAIN demand motion  
+---
 
-Avoid constant non-stop shake or particle fog on the desktop chrome.
+## Accessibility Mode
+
+Toggle on Start Page (persisted locally). When on:
+
+- Reduce/disable shake, heavy pulse, radioactive bar throb intensity
+- Prefer fade/color for Burnout telegraph
+- Keep stickers readable
+- Do not remove information — only motion intensity
+
+---
+
+## Mid-Fi Mockups (review offline)
+
+| File | Shows |
+| --- | --- |
+| `content/mockups/start_page.svg` | Title, short instructions, accessibility, credits, PLAY |
+| `content/mockups/desktop_layout.svg` | Near-black gutters, branded windows, Dopamine bar |
+| `content/mockups/dopamine_bar.svg` | High orange glow vs low violet |
+| `content/mockups/stickers_combo.svg` | Juicy vs bored combo |
+| `content/mockups/stickers_chain.svg` | Focus Chain arcade banner |
+| `content/mockups/overlay_burnout.svg` | Red vignette + grunge pulse |
+| `content/mockups/overlay_recovery.svg` | Violet sleepy mute |
+| `content/mockups/game_over.svg` | Stats + PLAY AGAIN + reused info |
+| `content/mockups/minigame_lane.svg` | Cutout soldier/monster lanes |
+| `content/mockups/minigame_blocks.svg` | Dark modern Tetris board |
+| `content/mockups/splash.svg` | Arcade splash |
+
+---
+
+## Assets You Should Drop In (I won’t invent final SFX/music beds)
+
+| Path | What |
+| --- | --- |
+| `content/minigames/_shared/textures/burnout_grunge.png` | Colorized transparent grunge (your Texturelabs-style source, with alpha) |
+| `content/minigames/lane_defender/sfx_*.ogg` | hit, destroy, boss_warn, boss_down, pickup |
+| `content/minigames/endless_runner/sfx_*.ogg` | lane, collect, crash, rare |
+| `content/minigames/block_cascade/sfx_*.ogg` | place, rotate, clear, tetris, reset |
+| `content/minigames/_shared/sfx_sticker_*.ogg` | combo juicy/bored, chain step, chain complete, telegraph |
+| `content/wave/high/*` / `content/wave/boring/*` | Music beds (as `08`) |
+
+Starter **visual** SVGs already under `content/icons/` and `content/minigames/` — replace anytime.
+
+---
+
+## Asset Inventory (minigames)
+
+Unchanged lists from prior revision: produce all first-party art under `content/minigames/<id>/`. Bevel 3D props. Cute, not grim.
 
 ---
 
 ## Acceptance Criteria
 
-- Window UI stays clean; arcade juice is sticker-based and event-driven.
-- Combo boredom curve is visible/audible under diminishing returns.
-- Burnout telegraph is readable before threshold cross.
-- Lane Defender / Endless Runner read as toony cardboard cutouts in simple 3D space with primitive hazards.
-- Block Cascade reads as modern-classic Tetris, not a clone of a branded skin.
-- Asset drop zones exist; all listed minigame assets are produced in-project (starters OK pending review).
-- Audio priority order is respected; silence only at Game Over.
+- Start Page exists with instructions, credits, accessibility, PLAY.
+- Dopamine bar hue-shifts orange→violet with radioactive high-end glow.
+- Stage background near-black; windows branded, rounded, stroked, minimal.
+- Stickers carry Balatro-*energy* motion; combo boredom curve visible.
+- Burnout = red vignette + pulsing grunge; Recovery = violet/sleepy mute.
+- Focus muffling in normal/recovery; none in Burnout — via Web Audio buses.
+- Minigame content fixed-aspect letterboxed; 3D edges bevelled.
+- Mockups present under `content/mockups/` for offline rework.
+- English system strings; accessibility toggle honored.

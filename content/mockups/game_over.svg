@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Game over mockup">
+  <rect width="960" height="540" fill="#0a0a0c"/>
+  <rect x="0" y="0" width="960" height="540" fill="#1a0a28" opacity="0.35"/>
+  <text x="480" y="80" text-anchor="middle" font-family="Impact" font-size="48" fill="#7b2cbf">GAME OVER</text>
+  <text x="480" y="110" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#666">(silence)</text>
+  <rect x="300" y="140" width="360" height="160" rx="14" fill="#141418" stroke="#333" stroke-width="2"/>
+  <text x="320" y="175" font-family="Segoe UI" font-size="14" fill="#aaa">Survival 4:12</text>
+  <text x="320" y="200" font-family="Segoe UI" font-size="14" fill="#aaa">Score 12840</text>
+  <text x="320" y="225" font-family="Segoe UI" font-size="14" fill="#aaa">Longest Focus Chain 11</text>
+  <text x="320" y="250" font-family="Segoe UI" font-size="14" fill="#aaa">Highest Combo x9</text>
+  <text x="320" y="275" font-family="Segoe UI" font-size="14" fill="#aaa">Burnouts 2</text>
+  <rect x="330" y="330" width="300" height="64" rx="16" fill="#ff8c00" stroke="#fff" stroke-width="3"/>
+  <text x="480" y="372" text-anchor="middle" font-family="Impact" font-size="28" fill="#111">PLAY AGAIN</text>
+  <text x="480" y="430" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#777">How to play · Accessibility · Credits</text>
+  <text x="480" y="500" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#444">same info blocks as Start Page, adapted</text>
+</svg>

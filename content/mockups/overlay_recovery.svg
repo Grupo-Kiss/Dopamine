@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Recovery overlay mockup">
+  <rect width="800" height="450" fill="#0a0a0c"/>
+  <rect x="40" y="40" width="300" height="200" rx="12" fill="#1a1a22" stroke="#5b8c3e" stroke-width="2"/>
+  <rect x="360" y="40" width="240" height="120" rx="12" fill="#2a1520" stroke="#ff4d6d" stroke-width="2"/>
+  <rect x="360" y="180" width="240" height="60" rx="12" fill="#0b3d2e" stroke="#1db954" stroke-width="2"/>
+  <!-- mute overlay -->
+  <rect width="800" height="450" fill="#1a0a28" opacity="0.45"/>
+  <radialGradient id="vig2" cx="50%" cy="50%" r="70%">
+    <stop offset="50%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#4a0080" stop-opacity="0.7"/>
+  </radialGradient>
+  <rect width="800" height="450" fill="url(#vig2)"/>
+  <text x="400" y="420" text-anchor="middle" font-family="Impact" font-size="36" fill="#c77dff" stroke="#2a0040" stroke-width="2">RECOVERY</text>
+  <text x="400" y="445" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#aaf">violet vignette · sleepy desat · extra muffling</text>
+</svg>

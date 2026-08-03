@@ -286,6 +286,8 @@ Examples
 - glows
 - shakes
 
+Also surface adapted Start Page info blocks (brief how-to, accessibility, credits) as specified in `09_game_feel.md`.
+
 The satire intentionally encourages immediate replay.
 
 ---

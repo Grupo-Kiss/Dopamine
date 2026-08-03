@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Burnout overlay mockup">
+  <rect width="800" height="450" fill="#0a0a0c"/>
+  <rect x="40" y="40" width="300" height="200" rx="12" fill="#1a1a22" stroke="#5b8c3e" stroke-width="2"/>
+  <rect x="360" y="40" width="240" height="120" rx="12" fill="#2a1520" stroke="#ff4d6d" stroke-width="2"/>
+  <rect x="360" y="180" width="240" height="60" rx="12" fill="#0b3d2e" stroke="#1db954" stroke-width="2"/>
+  <!-- red vignette -->
+  <radialGradient id="vig" cx="50%" cy="50%" r="65%">
+    <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#8b0000" stop-opacity="0.75"/>
+  </radialGradient>
+  <rect width="800" height="450" fill="url(#vig)"/>
+  <!-- grunge-ish dots -->
+  <g fill="#c0392b" opacity="0.35">
+    <circle cx="60" cy="80" r="3"/><circle cx="120" cy="200" r="2"/><circle cx="400" cy="100" r="4"/>
+    <circle cx="700" cy="300" r="3"/><circle cx="200" cy="350" r="2"/><circle cx="550" cy="400" r="5"/>
+    <circle cx="300" cy="50" r="2"/><circle cx="750" cy="80" r="3"/><circle cx="480" cy="250" r="2"/>
+  </g>
+  <text x="400" y="420" text-anchor="middle" font-family="Impact" font-size="36" fill="#ff6b6b" stroke="#400" stroke-width="2">BURNOUT</text>
+  <text x="400" y="445" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#caa">red vignette + pulsing colorized grunge · no muffling</text>
+</svg>

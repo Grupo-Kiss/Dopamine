@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Start page mockup">
+  <rect width="960" height="540" fill="#0a0a0c"/>
+  <text x="480" y="120" text-anchor="middle" font-family="Impact, Haettenschweiler, sans-serif" font-size="72" fill="#ff8c00" stroke="#5b1d8a" stroke-width="2">DOPAMINE</text>
+  <text x="480" y="160" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="18" fill="#ffb347">ATTENTION ARCADE</text>
+  <rect x="280" y="200" width="400" height="120" rx="16" fill="#141418" stroke="#333" stroke-width="2"/>
+  <text x="300" y="230" font-family="Segoe UI, sans-serif" font-size="14" fill="#ccc">How to play</text>
+  <text x="300" y="255" font-family="Segoe UI, sans-serif" font-size="13" fill="#888">Dopamine always drains. Act to refill.</text>
+  <text x="300" y="275" font-family="Segoe UI, sans-serif" font-size="13" fill="#888">Switch windows to build Focus Chains.</text>
+  <text x="300" y="295" font-family="Segoe UI, sans-serif" font-size="13" fill="#888">Ignore some alerts  you cannot do everything.</text>
+  <rect x="280" y="340" width="24" height="24" rx="6" fill="#1da1f2" stroke="#fff" stroke-width="2"/>
+  <text x="316" y="358" font-family="Segoe UI, sans-serif" font-size="14" fill="#eee">Accessibility mode (reduced motion)</text>
+  <rect x="360" y="390" width="240" height="56" rx="14" fill="#ff8c00" stroke="#fff" stroke-width="3"/>
+  <text x="480" y="426" text-anchor="middle" font-family="Impact, sans-serif" font-size="28" fill="#111">PLAY</text>
+  <text x="480" y="490" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" fill="#666">Credits</text>
+</svg>

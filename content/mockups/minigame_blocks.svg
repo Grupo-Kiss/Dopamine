@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" role="img" aria-label="Block Cascade mid-fi">
+  <rect width="400" height="520" fill="#0a0a0c"/>
+  <rect x="70" y="40" width="260" height="440" rx="12" fill="#12141c" stroke="#2a2f3a" stroke-width="3"/>
+  <!-- grid hint -->
+  <g stroke="#1c2230" stroke-width="1">
+    <path d="M70 84H330M70 128H330M70 172H330M70 216H330M70 260H330M70 304H330M70 348H330M70 392H330M70 436H330"/>
+  </g>
+  <!-- pieces -->
+  <rect x="114" y="216" width="40" height="40" rx="6" fill="#aa00ff" stroke="#222" stroke-width="2"/>
+  <rect x="154" y="216" width="40" height="40" rx="6" fill="#aa00ff" stroke="#222" stroke-width="2"/>
+  <rect x="154" y="256" width="40" height="40" rx="6" fill="#aa00ff" stroke="#222" stroke-width="2"/>
+  <rect x="194" y="256" width="40" height="40" rx="6" fill="#aa00ff" stroke="#222" stroke-width="2"/>
+  <rect x="90" y="400" width="40" height="40" rx="6" fill="#00e5ff" stroke="#222" stroke-width="2"/>
+  <rect x="130" y="400" width="40" height="40" rx="6" fill="#00e5ff" stroke="#222" stroke-width="2"/>
+  <rect x="170" y="400" width="40" height="40" rx="6" fill="#00e5ff" stroke="#222" stroke-width="2"/>
+  <rect x="210" y="400" width="40" height="40" rx="6" fill="#00e5ff" stroke="#222" stroke-width="2"/>
+  <rect x="250" y="360" width="40" height="40" rx="6" fill="#ffd600" stroke="#222" stroke-width="2"/>
+  <rect x="290" y="360" width="40" height="40" rx="6" fill="#ffd600" stroke="#222" stroke-width="2"/>
+  <rect x="250" y="400" width="40" height="40" rx="6" fill="#ffd600" stroke="#222" stroke-width="2"/>
+  <rect x="290" y="400" width="40" height="40" rx="6" fill="#ffd600" stroke="#222" stroke-width="2"/>
+  <text x="200" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#888">dark modern board · bright bevelled blocks</text>
+</svg>
