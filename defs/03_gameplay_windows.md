@@ -1020,7 +1020,7 @@ This reinforces the feeling of constant stimulation.
 
 Changes the current song.
 
-Skipping creates a Dopamine Discovery Bonus.
+Skipping feeds the global **Anticipation Bonus** (see `02_gameplay_core.md` / `06_balance.md`).
 
 The player receives increasing excitement when searching for a better song.
 
@@ -1034,11 +1034,12 @@ The purpose is simulating:
 
 "Maybe the next one is the perfect song."
 
-The bonus resets when:
+Anticipation Bonus resets when:
 
 - a recommended song is opened
 - an Attention Request redirects to a song
 - the player stays listening for a significant amount of time
+- the player changes activity (per core rules)
 
 ---
 
@@ -1166,7 +1167,7 @@ A recommendation can immediately replace the current song.
 When accepted:
 
 - current track changes instantly
-- Skip Discovery Bonus resets
+- Anticipation Bonus resets
 - large Dopamine reward is granted
 
 The player feels that the system found something valuable for them.

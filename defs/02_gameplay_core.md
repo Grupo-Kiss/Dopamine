@@ -36,11 +36,11 @@ However, mastering optional mechanics produces significantly better scores and l
 
 ## Match Structure
 
-A match begins immediately after pressing PLAY.
+A Match begins when Loading finishes after PLAY (or PLAY AGAIN) and the game enters Playing.
 
 No countdown is shown.
 
-One minigame is randomly selected.
+One minigame is randomly selected during Loading.
 
 The remaining windows are initialized.
 
@@ -56,7 +56,7 @@ Focus Chain starts at zero.
 
 Burnout state starts inactive.
 
-The match continues indefinitely until Dopamine reaches zero.
+The Match continues indefinitely until Dopamine reaches zero.
 
 There are no stages.
 
@@ -65,6 +65,8 @@ There are no checkpoints.
 There is no victory condition.
 
 The only ending condition is losing.
+
+Pre-Match hub behaviour (Start Page) and splash preload (Loading) are Global Gameplay States — they are not part of the Match clock.
 
 ---
 
@@ -106,6 +108,36 @@ Every layer progresses independently unless explicitly specified otherwise.
 
 The game always exists in exactly one of the following states.
 
+### Start Page
+
+Pre-Match hub. Not gameplay.
+
+Responsibilities
+
+- show title / brand
+- brief how-to-play
+- Accessibility Mode toggle (persisted locally)
+- credits entry point
+- PLAY
+
+English system UI. Presentation in `09_game_feel.md`.
+
+No Dopamine drain. No Match timers. No window gameplay.
+
+Transitions
+
+Boot / return from Game Over (full hub)
+
+↓
+
+Start Page
+
+↓ (PLAY)
+
+Loading
+
+---
+
 ### Loading
 
 Responsibilities
@@ -114,13 +146,19 @@ Responsibilities
 - validate required content manifests
 - preload a **starter pack** (~first couple of Match minutes) — see `08_content.md`
 - initialize systems
-- generate random session values
+- generate random session values (including Minigame pick and layout shuffle)
 
 The player cannot interact with gameplay yet.
 
 After transition to Playing, remaining content continues loading in the background.
 
-Transition
+If starter-pack validation fails, remain on Loading with a clear error — never enter Playing broken.
+
+Transitions
+
+Start Page (PLAY) or Game Over (PLAY AGAIN)
+
+↓
 
 Loading (splash)
 
@@ -289,6 +327,20 @@ Examples
 Also surface adapted Start Page info blocks (brief how-to, accessibility, credits) as specified in `09_game_feel.md`.
 
 The satire intentionally encourages immediate replay.
+
+Transitions
+
+Game Over
+
+↓ (PLAY AGAIN)
+
+Loading
+
+Game Over
+
+↓ (full hub / credits deep-link if offered)
+
+Start Page
 
 ---
 
@@ -574,7 +626,9 @@ A window is considered Focus Ready when:
 - its Reward Cooldown has expired
 - it is not currently active
 
-Only Focus Ready windows may extend Focus Chain.
+Focus Ready is a **quality tier**, not the only way to extend Focus Chain.
+
+Destinations that may extend the chain: **Normal**, **Focus Ready**, and **Attention Request** (see Building Focus Chain). A destination still in **Waiting** (Reward Cooldown active) does not extend the chain; repeatedly farming cooldown windows breaks it.
 
 #### Focus Ready Visual Indicator
 
@@ -940,15 +994,19 @@ W = Pulse
 
 E = Wave
 
-R = Echo
+Y = Echo
 
 T = Minigame
+
+**Why not R for Echo:** action shortcuts own letter meanings globally. **R is always Repost.** Echo navigation uses **Y** so Loop/Pulse Repost never fights window switching.
 
 Changing window focus:
 
 - updates the active window
 - counts as a Focus Change
 - follows normal Focus Chain rules
+
+Navigation keys apply only when higher-priority layers (text input, Alert, Active Window action that claims that key) do not consume the input — see Shortcut Priority.
 
 ### Global Actions
 
@@ -1031,6 +1089,8 @@ Shared shortcuts should be reused whenever possible.
 New gameplay systems must reuse existing shortcuts.
 
 New shortcuts should only be introduced when no existing shortcut can represent the action.
+
+Action meanings beat navigation when both could claim the same key — assign navigation to an unused letter rather than overloading an action key.
 
 ---
 

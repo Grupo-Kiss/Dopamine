@@ -10,17 +10,26 @@ Short reminders. Remove when done.
 
 ## Docs review pass
 
-- [ ] `00_IMPLEMENTATION_GUIDE.md` — re-populate for current structure (`content/`, Start Page, mockups, SSOT)
-- [ ] Spot-check `01`–`09` vs `CONTEXT.md`
+- [x] `00_IMPLEMENTATION_GUIDE.md` — re-populated for current structure (`content/`, Start Page, mockups, SSOT)
+- [x] Spot-check `01`–`09` vs `CONTEXT.md` (contradictions fixed: Focus Chain eligibility, `Y`=Echo vs `R`=Repost, Start Page in state machine, Anticipation Bonus naming)
+
+## Next docs
+
+- [ ] `10_tech.md`
+- [ ] `11_testing_strategy.md`
+- [ ] `12_coding_rules.md`
+- [ ] `13_credits_and_legal.md`
 
 ## Later development
 
 - Pulse ~100 template posts (`content/pulse/posts.json`)
 - SFX + `burnout_grunge.png` where listed in `09`
 - APIs (Pixabay/Pexels/Jamendo) only with keys + legal OK
+- Create empty drop dirs if missing: `content/wave/high|boring`, `loop/clips`, `echo/audio|video`, `minigames/_shared/`
 
 ## Ongoing
 
 - Never direct Dopamine removal
 - Balance numbers provisional; ease-in early Match
 - TDD after docs (`docs/adr/0001-tdd-after-docs.md`)
+- Conscious call on brand-adjacent palette hexes in `09` (Pulse/Wave) before high-fi lock
