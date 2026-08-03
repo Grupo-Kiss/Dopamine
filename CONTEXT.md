@@ -45,13 +45,13 @@ OS-style notifications that float above the layout and interrupt. The only eleme
 _Avoid_: System notifications (as a branded OS imitation)
 
 **Desktop Layout**:
-Five permanent windows at once: the selected Minigame plus Loop, Pulse, Wave, and Echo, with Alerts overlaying on top when they appear.
+Five permanent windows in a **masonry** pack (uneven sizes, no internal gaps, small gutters). Minigame is always the largest region; Wave is the smallest. Service window positions may shuffle each Match. Alerts overlay on top (not a permanent slot). Details in `07_layout.md`.
 
 **Mobile Layout**:
-Three permanent windows at once: the selected Minigame plus two other gameplay windows chosen at random from Loop, Pulse, Wave, and Echo, with Alerts still able to overlay.
+Three permanent windows: Minigame plus two randomly chosen from Loop/Pulse/Wave/Echo, stacked with the same size priorities and gutters. Alerts still overlay. Details in `07_layout.md`.
 
 **Focus Chain**:
-Skill expression from doing a few valid actions across many windows in succession, especially when a window is demanding attention (Attention Request / notification). Rewards timed switching, not farming one window. Celebrated with old-arcade style message overlays (not quiet UI chrome).
+Skill expression from doing a few valid actions across many windows in succession, especially when a window is demanding attention (Attention Request / notification). Rewards timed switching, not farming one window. The continue-window starts generous and **shortens as the chain grows**. Celebrated with old-arcade style message overlays (not quiet UI chrome).
 _Avoid_: Treating Focus Chain as the same system as Combo/Multiplier
 
 **Burnout**:
