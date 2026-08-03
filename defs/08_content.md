@@ -12,7 +12,7 @@ Gameplay rules stay in `02`–`05`. Feel/presentation stays in `09_game_feel.md`
 
 1. **No copyright risk.** Only use media you own, that is explicitly licensed for this use, or that comes from an API whose terms allow playback/caching in a web game. When in doubt, use local files you cleared yourself.
 2. **No real-platform branding** in content (logos, watermarks, recognizable UI of TikTok/Twitter/Spotify/YouTube/etc.).
-3. **Short splash, then play.** `Loading` shows a splash while a **small starter pack** loads — enough for roughly the **first couple of Match minutes**. Remaining items load in the background during `Playing`. Never block the player on a huge download.
+3. **Short splash, then play.** After Start Page PLAY, `Loading` shows a splash while a **small starter pack** loads — enough for roughly the **first couple of Match minutes**. Remaining items load in the background during `Playing`. Never block the player on a huge download.
 4. **Local directories are the default shipping path.** APIs are optional. If an API key is missing, rate-limited, or legally unclear, use `content/` files.
 
 ---
@@ -38,7 +38,9 @@ content/
 
 ---
 
-## Splash And Preload Gate
+### Splash And Preload Gate
+
+Entered from **Start Page** (PLAY) or **Game Over** (PLAY AGAIN). Start Page itself does not require the full starter pack.
 
 ### Splash
 

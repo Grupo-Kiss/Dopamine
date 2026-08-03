@@ -25,8 +25,8 @@ Hard process choices: `docs/adr/` (notably TDD-after-docs).
 | `07_layout.md` | Done | Desktop masonry + mobile stack + Dopamine bar |
 | `08_content.md` | Done | `content/` packs, splash preload, optional APIs |
 | `09_game_feel.md` | Done | Start Page, stickers, palettes, audio mix, mockups |
-| `10_tech.md` | **Next** | Stack, tooling, config, env, build/deploy |
-| `11_testing_strategy.md` | Pending | TDD map against specs |
+| `10_tech.md` | Done | Stack, architecture, audio, content load, env, deploy |
+| `11_testing_strategy.md` | **Next** | TDD map against specs |
 | `12_coding_rules.md` | Pending | Code conventions |
 | `13_credits_and_legal.md` | Pending | Attribution and license obligations |
 
@@ -79,8 +79,8 @@ Document responsibilities:
 | Spatial layout / HUD chrome | `07_layout.md` |
 | Media libraries, preload, APIs | `08_content.md` + repo-root `content/` |
 | Visual/audio feel, Start Page, mockups | `09_game_feel.md` + `content/mockups/` |
-| Implementation stack | `10_tech.md` (forthcoming) |
-| Testing approach | `11_testing_strategy.md` + ADR-0001 |
+| Implementation stack | `10_tech.md` |
+| Testing approach | `11_testing_strategy.md` (forthcoming) + ADR-0001 |
 | Code conventions | `12_coding_rules.md` (forthcoming) |
 | Credits / legal | `13_credits_and_legal.md` (forthcoming) |
 
@@ -123,7 +123,7 @@ After the asset gate and docs/TDD readiness:
 
 1. Project scaffold + test runner (`10` / `11` / `12`)
 2. Core state machine (Start Page → Loading → Playing → Game Over)
-3. Dopamine system (passive drain, gains, diminishing returns, Anticipation Bonus)
+3. Dopamine system (passive drain, gains, diminishing returns, Anticipation + Discovery bonuses)
 4. Focus Chain (decaying continue-window, quality tiers, completion bonus)
 5. Layout shell (desktop masonry + Dopamine bar + mobile)
 6. All three minigames (one random per Match; all must ship)
@@ -156,7 +156,7 @@ content/                    ← authoring drop zone (local-first)
 ├── echo/audio|video/
 └── alerts/
 
-src/                        ← application (exact stack in 10_tech.md)
+src/                        ← application (stack in `10_tech.md`)
 ├── core/
 │   ├── gameState/
 │   ├── dopamine/

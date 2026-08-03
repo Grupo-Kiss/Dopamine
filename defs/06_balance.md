@@ -55,13 +55,30 @@ Reset when the player changes target or switches gameplay system (per core).
 
 ## Anticipation Bonus
 
+Waiting for an expected payoff while already engaged (Song Moment / beat drop, Echo highlight, Pulse engagement, etc.). **Not** skip-to-new-track novelty.
+
 | Constant | Starter | Notes |
 | --- | ---: | --- |
-| `ANTICIPATION_STEP_DOPAMINE` | `0.4` | Per consecutive expect/skip beat. **Tune** |
+| `ANTICIPATION_STEP_DOPAMINE` | `0.4` | Per tick/step while waiting toward payoff. **Tune** |
 | `ANTICIPATION_LOG_BASE` | `2` | Growth slows each step |
 | `ANTICIPATION_CAP_VS_DIRECT_MULT` | `0.5` | Must stay below comparable direct interaction reward |
 
 Resets when expected reward obtained, activity changes, or opportunity expires.
+
+---
+
+## Discovery Bonus (Wave)
+
+Novelty of encountering a track that has **not played yet this Match**. Distinct from Anticipation.
+
+| Constant | Starter | Notes |
+| --- | ---: | --- |
+| `DISCOVERY_STEP_DOPAMINE` | `0.5` | Per consecutive skip/accept onto an unheard track. **Tune** |
+| `DISCOVERY_LOG_BASE` | `2` | Growth slows each step |
+| `DISCOVERY_HEARD_TRACK_MULT` | `0` | Skip onto already-heard track: no Discovery. **Tune** |
+| `DISCOVERY_CAP_VS_DIRECT_MULT` | `0.5` | Keep below comparable direct rewards |
+
+Resets when recommendation accepted, Attention Request redirects, player listens long enough that the discovery streak ends, or player leaves Wave.
 
 ---
 
@@ -206,10 +223,11 @@ Units: Dopamine / Score per successful base action.
 | Pulse | Reply (on-trend) | `2.5` | `40` | |
 | Pulse | Create post (on-trend) | `3.0` | `50` | |
 | Pulse | Mention / viral respond | `4.5` | `90` | Attention Request |
-| Wave | Skip (anticipation path) | `0.3` | `5` | Plus anticipation table |
+| Wave | Skip (unheard track) | `0.3` | `5` | Plus Discovery Bonus table |
+| Wave | Skip (already heard) | `0.1` | `2` | No Discovery; noise skip |
 | Wave | Like track | `1.5` | `25` | Once per track |
-| Wave | Song Moment | `3.5` | `70` | |
-| Wave | Accept recommendation | `4.0` | `80` | |
+| Wave | Song Moment | `3.5` | `70` | Anticipation payoff |
+| Wave | Accept recommendation | `4.0` | `80` | Often also ends Discovery streak |
 | Echo | Play/pause | `0.4` | `5` | Dimishes if toggled |
 | Echo | Change content | `0.5` | `8` | Not primary |
 | Echo | React | `1.2` | `20` | |

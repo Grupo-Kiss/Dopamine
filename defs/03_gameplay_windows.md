@@ -1020,32 +1020,34 @@ This reinforces the feeling of constant stimulation.
 
 Changes the current song.
 
-Skipping feeds the global **Anticipation Bonus** (see `02_gameplay_core.md` / `06_balance.md`).
+Skipping feeds **Discovery Bonus** when the next track is **new this Match** (has not played yet).
 
-The player receives increasing excitement when searching for a better song.
+Discovery Bonus is the novelty of hearing something unheard — not the same as Anticipation (waiting for a beat drop while enjoying a track already playing).
 
-The bonus follows a logarithmic curve.
+The player receives increasing excitement when searching for a better / new song.
 
-Each consecutive skip increases anticipation.
+The bonus follows a logarithmic curve (constants in `06_balance.md`).
 
-However, the reward gain decreases progressively.
+Each consecutive skip onto a **still-unheard** track increases Discovery.
+
+Skipping onto a track already heard this Match grants little or no Discovery (diminishing / zero — tune in `06`).
 
 The purpose is simulating:
 
 "Maybe the next one is the perfect song."
 
-Anticipation Bonus resets when:
+Discovery Bonus resets when:
 
-- a recommended song is opened
+- a recommended song is opened / accepted
 - an Attention Request redirects to a song
-- the player stays listening for a significant amount of time
-- the player changes activity (per core rules)
+- the player stays listening for a significant amount of time (discovery streak ends; Anticipation may begin instead)
+- the player changes activity away from Wave
 
 ---
 
 #### Song Moment
 
-Every song contains a hidden valuable moment.
+Every song contains a hidden valuable moment (chorus / beat drop / unusual sound).
 
 The moment is randomly generated between:
 
@@ -1057,13 +1059,18 @@ and
 
 of the song duration.
 
+While the player **stays with** the track toward that moment, **Anticipation Bonus** may build (see `02`).
+
 When playback reaches this moment:
 
+- Anticipation cashes out / resets per core rules
 - visual feedback occurs
 - Dopamine reward is granted
 - Focus Chain quality increases
 
 The player should feel rewarded for staying with a song instead of constantly skipping.
+
+Skipping before the moment abandons that track's Anticipation buildup.
 
 ---
 
@@ -1167,7 +1174,8 @@ A recommendation can immediately replace the current song.
 When accepted:
 
 - current track changes instantly
-- Anticipation Bonus resets
+- Discovery Bonus resets (novelty streak ends; new track may start fresh Discovery if unheard, or none if already heard)
+- Anticipation for the previous track is abandoned
 - large Dopamine reward is granted
 
 The player feels that the system found something valuable for them.
@@ -1267,9 +1275,12 @@ The implementation satisfies this specification if:
 
 - music continues automatically
 - songs transition without interaction
-- skipping is not the optimal strategy
+- skipping unheard tracks grants Discovery Bonus; already-heard skips do not farm Discovery
+- staying toward Song Moment builds Anticipation; landing the moment pays off
+- Discovery and Anticipation are never treated as the same system
 - recommendations create attention opportunities
 - Wave contributes to Focus Chain without dominating gameplay
+- skipping alone is not the optimal long-term strategy (Song Moments / recommendations matter)
 
 ---
 

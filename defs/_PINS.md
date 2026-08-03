@@ -11,11 +11,11 @@ Short reminders. Remove when done.
 ## Docs review pass
 
 - [x] `00_IMPLEMENTATION_GUIDE.md` — re-populated for current structure (`content/`, Start Page, mockups, SSOT)
-- [x] Spot-check `01`–`09` vs `CONTEXT.md` (contradictions fixed: Focus Chain eligibility, `Y`=Echo vs `R`=Repost, Start Page in state machine, Anticipation Bonus naming)
+- [x] Spot-check `01`–`09` vs `CONTEXT.md` (Focus Chain quality tiers; `Y`=Echo / `R`=Repost; Start Page state; Discovery ≠ Anticipation)
 
 ## Next docs
 
-- [ ] `10_tech.md`
+- [x] `10_tech.md`
 - [ ] `11_testing_strategy.md`
 - [ ] `12_coding_rules.md`
 - [ ] `13_credits_and_legal.md`
@@ -33,3 +33,4 @@ Short reminders. Remove when done.
 - Balance numbers provisional; ease-in early Match
 - TDD after docs (`docs/adr/0001-tdd-after-docs.md`)
 - Conscious call on brand-adjacent palette hexes in `09` (Pulse/Wave) before high-fi lock
+- Discovery (unheard novelty) ≠ Anticipation (waiting for payoff) — keep separate in code/tests

@@ -5,7 +5,7 @@ Frontend-only web arcade game that satirizes the attention economy by making the
 ## Language
 
 **Match**:
-One continuous play session from pressing PLAY until Dopamine reaches zero. There are no stages, checkpoints, or victory — only survival until loss. At Match start, one Minigame is chosen at random and kept for the whole Match.
+One continuous play session from entering **Playing** (after Start Page PLAY and Loading) until Dopamine reaches zero. There are no stages, checkpoints, or victory — only survival until loss. At Match start (during Loading), one Minigame is chosen at random and kept for the whole Match.
 _Avoid_: Round, run (as the canonical doc term — informal speech may still say these)
 
 **Dopamine**:
@@ -17,8 +17,12 @@ The person at the controls, inhabiting the addicted agent who must keep seeking 
 _Avoid_: Observer, manager, operator (of someone else's addiction)
 
 **Start Page**:
-Pre-Match screen with title, brief how-to-play, accessibility toggle, credits, and PLAY. English system UI. Feel in `09_game_feel.md`.
+Pre-Match hub (global game state): title, brief how-to-play, Accessibility Mode toggle, credits, and PLAY. English system UI. No Dopamine drain. Feel in `09_game_feel.md`; state machine in `02_gameplay_core.md`.
 _Avoid_: Instant boot into Playing with no options
+
+**Loading**:
+Splash + starter-pack preload after PLAY / PLAY AGAIN. Validates manifests, picks Minigame and layout shuffle, then transitions to Playing. Details in `02` / `08`.
+_Avoid_: Treating Loading as the Start Page; long installer-style waits
 
 **Accessibility Mode**:
 Start Page toggle that reduces motion intensity (shake/heavy pulse) while keeping stickers and information readable.
@@ -40,8 +44,8 @@ Microblogging social network — trends, outrage, validation, engagement farming
 _Avoid_: Twitter, X, Bluesky
 
 **Wave**:
-Music streaming with continuous background audio, skip-discovery, and occasional song moments.
-_Avoid_: Spotify, Apple Music
+Music streaming with continuous background audio. **Discovery** = novelty of unheard tracks (skips / new recommendations). **Anticipation** = staying with a track waiting for Song Moment / beat drop. Occasional recommendations and song moments compete for attention.
+_Avoid_: Spotify, Apple Music; conflating Discovery with Anticipation
 
 **Echo**:
 Long-form video and podcasts — slower, persistent background consumption with sparse high-value moments.
@@ -50,6 +54,14 @@ _Avoid_: YouTube, podcast apps
 **Alerts**:
 OS-style notifications that float above the layout and interrupt. The only element allowed to overlap other windows. Not a permanent layout slot.
 _Avoid_: System notifications (as a branded OS imitation)
+
+**Anticipation Bonus**:
+Dopamine from waiting for an expected payoff while already engaged (e.g. Wave beat drop, Echo highlight). Distinct from Discovery.
+_Avoid_: Using Anticipation for skip-to-new-song novelty
+
+**Discovery Bonus**:
+Dopamine from encountering content that has not played yet this Match (especially Wave skips onto unheard tracks). Distinct from Anticipation.
+_Avoid_: Using Discovery for waiting-for-the-drop tension
 
 **Desktop Layout**:
 Masonry playfield beside a persistent vertical Dopamine bar (default right): top band is Minigame beside Loop-over-Wave (equal height, fill masonry width); bottom band is Pulse | Echo. Other HUD (score, Focus Chain, Burnout telegraph, combo `xN`) are event stickers — combo over Active Window. Small gutters; no internal gaps. Details in `07_layout.md`.
