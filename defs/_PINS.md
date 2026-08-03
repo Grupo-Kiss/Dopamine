@@ -4,9 +4,11 @@ Short reminders agreed during design that belong in a later doc. Remove each pin
 
 ## For `09_game_feel.md`
 
-- **Burnout Telegraph:** when APM approaches the current Burnout threshold, show a clear arcade-readable warning so the player can ease off (save Burnout) or push to enter it. Threshold ratio constant: `BURNOUT_TELEGRAPH_APM_RATIO` in `06_balance.md`.
-- Arcade multipliers for successive actions; Focus Chain uses old-arcade message overlays.
+- **Burnout Telegraph:** when APM approaches the current Burnout threshold, show a clear arcade-readable warning so the player can ease off (save Burnout) or push to enter it. Threshold ratio constant: `BURNOUT_TELEGRAPH_APM_RATIO` in `06_balance.md`. Sticker-style overlay, not permanent HUD chrome.
+- Arcade multipliers for successive actions as Active-Window stickers (`x2`, `x7!!`); Focus Chain uses old-arcade message overlays/stickers.
+- **Combo boredom curve:** combo stickers must feel progressively flatter/more boring as diminishing returns apply for staying in the same window — reward is still shown, juice drops.
 - Dual art: caricaturesque simple windows vs over-the-top minigame spectacle.
+- Persistent Dopamine = vertical edge bar; almost everything else = ephemeral stickers.
 
 ## Ongoing review
 

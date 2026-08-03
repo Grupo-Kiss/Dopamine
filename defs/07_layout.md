@@ -75,53 +75,55 @@ Desktop always shows all four service windows. Mobile picks **two** of {Loop, Pu
 ### ASCII — canonical desktop (Minigame left)
 
 ```
-+------------------------------------------------------------------+
-| HUD band (Dopamine / score / Focus Chain / Burnout telegraph)    |
-+------------------------------------------------------------------+
-|  +-----------------------------+  g  +-------------------------+ |
-|  |                             |  u  |                         | |
-|  |                             |  t  |         LOOP            | |
-|  |                             |  t  |      (taller panel)     | |
-|  |         MINIGAME            |  e  |                         | |
-|  |                             |  r  +-------------------------+ |
-|  |                             |     |         WAVE            | |
-|  |                             |     |      (smaller panel)    | |
-|  +-----------------------------+     +-------------------------+ |
-|  ^-- same height: Minigame == Loop + gutter + Wave --^           |
-|  ^-- together fill content width --^                             |
-|  +-----------------------------+  g  +-------------------------+ |
-|  |           PULSE             |  u  |          ECHO           | |
-|  |                             |  t  |                         | |
-|  +-----------------------------+  t  +-------------------------+ |
-|                                                                  |
-|  [ Alerts float above this grid — not packed into masonry ]      |
-+------------------------------------------------------------------+
++----------------------------------------------------------------+----+
+|  +---------------------------+ g +---------------------------+ | D  |
+|  |                           | u |           LOOP            | | O  |
+|  |                           | t |        (taller)           | | P  |
+|  |        MINIGAME           | t +---------------------------+ | A  |
+|  |                           | e |           WAVE            | | M  |
+|  |                           | r |        (smaller)          | | I  |
+|  +---------------------------+   +---------------------------+ | N  |
+|  +---------------------------+ g +---------------------------+ | E  |
+|  |          PULSE            | u |           ECHO            | |    |
+|  +---------------------------+ t +---------------------------+ | || |
+|                                                                | \/ |
+|  [ Alerts + stickers (combo xN / chain / score) float above ]  |bar |
++----------------------------------------------------------------+----+
+  Minigame height == Loop + gutter + Wave
+  Masonry width + Dopamine bar = viewport (minus outer inset)
 ```
 
 ### ASCII — shuffled desktop (Minigame right, Pulse/Echo swapped)
 
 ```
-+------------------------------------------------------------------+
-|  +-------------------------+     +-----------------------------+ |
-|  |         LOOP            |  g  |                             | |
-|  |      (taller panel)     |  u  |                             | |
-|  +-------------------------+  t  |         MINIGAME            | |
-|  |         WAVE            |  t  |                             | |
-|  |      (smaller panel)    |  e  |                             | |
-|  +-------------------------+  r  +-----------------------------+ |
-|  +-------------------------+     +-----------------------------+ |
-|  |          ECHO           |     |           PULSE             | |
-|  +-------------------------+     +-----------------------------+ |
-+------------------------------------------------------------------+
++----------------------------------------------------------------+----+
+|  +---------------------------+ g +---------------------------+ | D  |
+|  |           LOOP            | u |                           | | O  |
+|  +---------------------------+ t |        MINIGAME           | | P  |
+|  |           WAVE            | t |                           | | A  |
+|  +---------------------------+ e +---------------------------+ | M  |
+|  +---------------------------+ r +---------------------------+ | I  |
+|  |           ECHO            |   |          PULSE            | | N  |
+|  +---------------------------+   +---------------------------+ | E  |
++----------------------------------------------------------------+----+
 ```
 
-Starter width hint (tunable): Minigame ≈ `60%` of content width; Loop/Wave column ≈ `40%`. Loop ≈ `70%` of the top-band column height; Wave ≈ `30%` (after gutter).
+Starter width hint (tunable): of the masonry content area (excluding Dopamine bar), Minigame ≈ `60%`; Loop/Wave column ≈ `40%`. Loop ≈ `70%` of the top-band column height; Wave ≈ `30%` (after gutter).
 
 Gutters (`LAYOUT_GUTTER_PX`) sit between every adjacent edge. Masonry must close the rectangle: no orphan empty panels.
 
 ### Desktop HUD
 
-Dopamine meter, score, Focus Chain readout, and Burnout telegraph occupy a thin reserved band **outside** the masonry content rectangle.
+**Dopamine meter** is a persistent **vertical bar** on the screen edge (default: **right**). It is reserved chrome outside the masonry content rectangle — the Minigame | Loop/Wave + Pulse | Echo pack fills the remaining width beside it.
+
+All other HUD readouts are **event stickers**, not a permanent top band:
+
+- Score ticks, Focus Chain steps / completion, Burnout telegraph, Recovery cues, and similar feedback appear as short-lived overlay stickers when they happen, then clear.
+- They must not permanently occupy layout slots or resize masonry.
+
+**Combo / Multiplier** stickers (e.g. `x2`, `x7!!`) appear over the **Active Window**, not in a global chrome strip. Presentation must also reflect diminishing returns for staying in one window — early hits feel juicy; repeated same-window hits look and feel progressively flatter / more boring while still readable. Full motion/audio language belongs in `09_game_feel.md`.
+
+Starter inset: masonry content width = viewport − `LAYOUT_OUTER_INSET_PX` − Dopamine bar width − gutters.
 
 ---
 
@@ -133,6 +135,7 @@ Dopamine meter, score, Focus Chain readout, and Burnout telegraph occupy a thin 
 - Vertical stack or simple split: Minigame still largest (typically top or dominant half).
 - The two service windows share the remaining space according to size priority (e.g. if Wave is selected, it gets the smaller of the two service slots).
 - Alerts still overlay on top.
+- Dopamine remains a persistent edge meter (may sit top or side on narrow viewports as long as it stays continuous and readable); other readouts stay event stickers.
 - Touch targets must remain usable; gutters still apply.
 
 ### ASCII — example (Minigame + Loop + Wave)
@@ -190,7 +193,8 @@ The Active Window may receive a stronger border / focus treatment. Inactive wind
 ## Acceptance Criteria
 
 - Desktop always shows five permanent windows + overlay Alerts.
-- Desktop top band: Minigame beside Loop-over-Wave; Loop+Wave height equals Minigame height; that pair fills content width.
+- Desktop top band: Minigame beside Loop-over-Wave; Loop+Wave height equals Minigame height; that pair fills masonry width beside the Dopamine bar.
+- Desktop Dopamine meter is a persistent vertical edge bar; other HUD feedback is sticker overlays (including Active-Window combo `xN`).
 - Desktop bottom band: Pulse and Echo side by side filling remaining space.
 - Mobile always shows Minigame + exactly two service windows + overlay Alerts.
 - Masonry tiles without internal empty gaps; gutters provide breathing space.
