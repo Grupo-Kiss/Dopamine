@@ -28,15 +28,13 @@ Gameplay rules live in `02`–`05`. Numbers that are not spatial (rewards, timer
 
 ## Size Priorities
 
-Relative slot weight for packing (higher = larger area). Used when assigning masonry cells or mobile stack heights.
-
 | Priority | Window | Role |
 | ---: | --- | --- |
-| 1 (largest) | **Minigame** | Primary arcade surface; always the biggest slot |
-| 2 | **Loop** | Tall short-video column |
-| 3 | **Pulse** | Medium feed / text |
-| 3 | **Echo** | Medium long-form player (same band as Pulse; packer may swap) |
-| 4 (smallest) | **Wave** | Compact music player |
+| 1 (largest) | **Minigame** | Primary arcade surface; dominant column in the top band |
+| 2 | **Loop** | Tall short-video panel stacked above Wave |
+| 3 | **Pulse** | Medium feed / text (bottom band) |
+| 3 | **Echo** | Medium long-form player (bottom band; same band as Pulse) |
+| 4 (smallest) | **Wave** | Compact music player stacked under Loop |
 
 On Mobile, the two randomly selected service windows keep these relative priorities among themselves; Minigame remains largest.
 
@@ -47,11 +45,15 @@ On Mobile, the two randomly selected service windows keep these relative priorit
 At Match start:
 
 1. Choose the Minigame (existing rule).
-2. **Shuffle placement order** of the service windows among the non-minigame slots so Matches feel varied.
-3. Size priorities still apply — shuffle changes **which region** a window occupies, not its relative size class.
-4. Minigame always claims the largest region.
+2. **Desktop structural pairs stay fixed:**
+   - Top band: Minigame column beside a **Loop-over-Wave** stack.
+   - Bottom band: **Pulse** and **Echo** side by side.
+3. Allowed shuffle (variation without breaking size intent):
+   - Minigame column on the **left or right** of the top band.
+   - Pulse / Echo swap left/right in the bottom band.
+4. Loop always sits above Wave in their shared column. Wave never becomes a full-width strip under the Minigame.
 
-Desktop always shows all four service windows. Mobile picks **two** of {Loop, Pulse, Wave, Echo} at random, then shuffles those two plus the Minigame into the mobile regions under the same size priorities.
+Desktop always shows all four service windows. Mobile picks **two** of {Loop, Pulse, Wave, Echo} at random, then stacks them with the Minigame under the same size priorities (if both Loop and Wave are selected, keep Loop above Wave).
 
 ---
 
@@ -60,55 +62,66 @@ Desktop always shows all four service windows. Mobile picks **two** of {Loop, Pu
 ### Rules
 
 - Five permanent windows: Minigame + Loop + Pulse + Wave + Echo.
-- **Masonry packing:** windows may have different heights and widths; they tile the playfield so the composed block has **no leftover gaps** inside the content area (gutters only, not empty cells).
-- Prefer a stable region map with weighted areas rather than a chaotic reflow every frame.
+- **Masonry packing:** different heights/widths; tile with **no leftover gaps** (gutters only).
+- **Top band (fills content width):**
+  - One column = **Minigame**.
+  - Other column = **Loop** (taller) stacked over **Wave** (shorter).
+  - **Loop height + gutter + Wave height = Minigame height.**
+  - Minigame column width + Loop/Wave column width = full content width (plus gutters).
+- **Bottom band (fills remaining height and full width):**
+  - **Pulse** and **Echo** side by side (equal weight unless tuned later).
+- Prefer this stable region map over free-form reflow every frame.
 
-### ASCII — example region map (one Match)
-
-Illustrative only; shuffled Matches may swap which service window sits in S1–S4, but weights stay: Minigame largest, Wave smallest.
+### ASCII — canonical desktop (Minigame left)
 
 ```
 +------------------------------------------------------------------+
-|  OUTER INSET                                                     |
-|  +---------------------------+  +-------------+  +-------------+ |
-|  |                           |  |             |  |             | |
-|  |                           |  |     S1      |  |     S2      | |
-|  |        MINIGAME           |  |  (e.g. Loop)|  | (e.g. Pulse)| |
-|  |        (largest)          |  |             |  |             | |
-|  |                           |  +-------------+  +-------------+ |
-|  |                           |  +-----------------------------+ |
-|  |                           |  |            S3               | |
-|  |                           |  |        (e.g. Echo)          | |
-|  +---------------------------+  +-----------------------------+ |
-|  +------------------------------------------------------------+ |
-|  |                     S4  Wave (smallest, wide strip)          | |
-|  +------------------------------------------------------------+ |
+| HUD band (Dopamine / score / Focus Chain / Burnout telegraph)    |
++------------------------------------------------------------------+
+|  +-----------------------------+  g  +-------------------------+ |
+|  |                             |  u  |                         | |
+|  |                             |  t  |         LOOP            | |
+|  |                             |  t  |      (taller panel)     | |
+|  |         MINIGAME            |  e  |                         | |
+|  |                             |  r  +-------------------------+ |
+|  |                             |     |         WAVE            | |
+|  |                             |     |      (smaller panel)    | |
+|  +-----------------------------+     +-------------------------+ |
+|  ^-- same height: Minigame == Loop + gutter + Wave --^           |
+|  ^-- together fill content width --^                             |
+|  +-----------------------------+  g  +-------------------------+ |
+|  |           PULSE             |  u  |          ECHO           | |
+|  |                             |  t  |                         | |
+|  +-----------------------------+  t  +-------------------------+ |
 |                                                                  |
 |  [ Alerts float above this grid — not packed into masonry ]      |
 +------------------------------------------------------------------+
 ```
 
-Alternate shuffle example (same weights, different service assignment):
+### ASCII — shuffled desktop (Minigame right, Pulse/Echo swapped)
 
 ```
 +------------------------------------------------------------------+
-|  +---------------------------+  +-------------+  +-------------+ |
-|  |                           |  |    Pulse    |  |    Echo     | |
-|  |        MINIGAME           |  +-------------+  +-------------+ |
-|  |                           |  +-----------------------------+ |
-|  |                           |  |           Loop                | |
-|  +---------------------------+  +-----------------------------+ |
-|  +------------------------------------------------------------+ |
-|  |                         Wave                                 | |
-|  +------------------------------------------------------------+ |
+|  +-------------------------+     +-----------------------------+ |
+|  |         LOOP            |  g  |                             | |
+|  |      (taller panel)     |  u  |                             | |
+|  +-------------------------+  t  |         MINIGAME            | |
+|  |         WAVE            |  t  |                             | |
+|  |      (smaller panel)    |  e  |                             | |
+|  +-------------------------+  r  +-----------------------------+ |
+|  +-------------------------+     +-----------------------------+ |
+|  |          ECHO           |     |           PULSE             | |
+|  +-------------------------+     +-----------------------------+ |
 +------------------------------------------------------------------+
 ```
 
-Gutters (`LAYOUT_GUTTER_PX`) sit between every adjacent edge. Masonry must close the rectangle: no orphan empty panels at the bottom or side.
+Starter width hint (tunable): Minigame ≈ `60%` of content width; Loop/Wave column ≈ `40%`. Loop ≈ `70%` of the top-band column height; Wave ≈ `30%` (after gutter).
+
+Gutters (`LAYOUT_GUTTER_PX`) sit between every adjacent edge. Masonry must close the rectangle: no orphan empty panels.
 
 ### Desktop HUD
 
-Dopamine meter, score, Focus Chain readout, and Burnout telegraph occupy a thin reserved band (top or edge) that is **outside** the masonry content rectangle, so packing math stays simple.
+Dopamine meter, score, Focus Chain readout, and Burnout telegraph occupy a thin reserved band **outside** the masonry content rectangle.
 
 ---
 
@@ -177,8 +190,10 @@ The Active Window may receive a stronger border / focus treatment. Inactive wind
 ## Acceptance Criteria
 
 - Desktop always shows five permanent windows + overlay Alerts.
+- Desktop top band: Minigame beside Loop-over-Wave; Loop+Wave height equals Minigame height; that pair fills content width.
+- Desktop bottom band: Pulse and Echo side by side filling remaining space.
 - Mobile always shows Minigame + exactly two service windows + overlay Alerts.
-- Masonry (desktop) tiles without internal empty gaps; gutters provide breathing space.
-- Minigame is always the largest region; Wave is the smallest when present.
-- Service window **positions** can shuffle each Match; size priority classes do not.
+- Masonry tiles without internal empty gaps; gutters provide breathing space.
+- Minigame is the dominant region; Wave is the smallest panel when present; Loop stays above Wave when both are shown.
+- Allowed shuffle: Minigame left/right; Pulse/Echo left/right — not free reassignment of Loop/Wave away from their stacked column.
 - Layout reflow never ends the Match or resets Dopamine / Focus Chain / score.

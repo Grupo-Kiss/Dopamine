@@ -45,7 +45,7 @@ OS-style notifications that float above the layout and interrupt. The only eleme
 _Avoid_: System notifications (as a branded OS imitation)
 
 **Desktop Layout**:
-Five permanent windows in a **masonry** pack (uneven sizes, no internal gaps, small gutters). Minigame is always the largest region; Wave is the smallest. Service window positions may shuffle each Match. Alerts overlay on top (not a permanent slot). Details in `07_layout.md`.
+Masonry playfield: top band is Minigame beside a Loop-over-Wave stack (Loop+Wave height equals Minigame; together they fill content width); bottom band is Pulse | Echo. Small gutters; no internal gaps. Minigame may flip left/right; Pulse/Echo may swap. Alerts overlay. Details in `07_layout.md`.
 
 **Mobile Layout**:
 Three permanent windows: Minigame plus two randomly chosen from Loop/Pulse/Wave/Echo, stacked with the same size priorities and gutters. Alerts still overlay. Details in `07_layout.md`.
