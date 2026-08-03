@@ -251,12 +251,13 @@ Without noticing, they should optimize their behavior around maximizing stimulat
 
 The player experience should be:
 
-1. Discover stimulation.
-2. Switch attention rapidly.
-3. Receive immediate rewards.
-4. Handle increasing pressure.
-5. Lose dramatically when stimulation is no longer maintained.
-6. Restart immediately.
+1. Land on Start Page (how-to, accessibility, credits) → PLAY.
+2. Discover stimulation.
+3. Switch attention rapidly.
+4. Receive immediate rewards.
+5. Handle increasing pressure.
+6. Lose dramatically when stimulation is no longer maintained.
+7. See Game Over (stats + PLAY AGAIN + same info blocks) → restart.
 
 The game loop must communicate this without requiring explanation.
 

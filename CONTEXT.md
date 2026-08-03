@@ -9,12 +9,19 @@ One continuous play session from pressing PLAY until Dopamine reaches zero. Ther
 _Avoid_: Round, run (as the canonical doc term — informal speech may still say these)
 
 **Dopamine**:
-The player's sole survival resource — their need for constant stimulation. It rises from successful actions and Focus Chains, and depletes constantly via passive drain only — never by direct penalty subtraction. The Match ends when it reaches zero. It is not health, lives, mana, or energy.
+The player's sole survival resource — their need for constant stimulation. It rises from successful actions and Focus Chains, and depletes constantly via passive drain only — never by direct penalty subtraction. The Match ends when it reaches zero. UI: vertical bar that shifts **orange (full, radioactive glow)** → **violet (empty)**. It is not health, lives, mana, or energy.
 _Avoid_: Health, lives, energy, mana; direct Dopamine penalties
 
 **Player**:
 The person at the controls, inhabiting the addicted agent who must keep seeking stimulation by switching focus across windows. Survival comes from continuous attention-seeking, not from mastering one activity.
 _Avoid_: Observer, manager, operator (of someone else's addiction)
+
+**Start Page**:
+Pre-Match screen with title, brief how-to-play, accessibility toggle, credits, and PLAY. English system UI. Feel in `09_game_feel.md`.
+_Avoid_: Instant boot into Playing with no options
+
+**Accessibility Mode**:
+Start Page toggle that reduces motion intensity (shake/heavy pulse) while keeping stickers and information readable.
 
 **Gameplay Window**:
 An independent, always-running attention competitor (the selected Minigame, Loop, Pulse, Wave, or Echo). Windows never pause each other. Alerts are not a permanent window; they overlay on top.
