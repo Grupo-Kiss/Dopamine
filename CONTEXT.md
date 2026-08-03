@@ -85,3 +85,7 @@ _Avoid_: Matching the flat “desktop window” look for the playfield
 **TDD**:
 After documentation is finished, implementation proceeds test-driven: write a failing test for the intended behavior, then the minimal code to pass, then refactor. Documentation-first, then TDD — not the reverse.
 _Avoid_: Tests-after, coverage-only testing (as the delivery method)
+
+**Content Pack**:
+The Match’s resolved library of Loop clips, Pulse posts, Wave tracks, Echo items, and Alert templates. Must be validated and preloaded in `Loading` before `Playing`. Local authoring root: `content/<window>/`.
+_Avoid_: Streaming uncleared commercial catalogs; starting a Match with missing media
