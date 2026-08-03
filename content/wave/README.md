@@ -1,10 +1,14 @@
 # Wave — local music
 
-Put tracks in `tracks/` and list them in `manifest.json`.
+## Where to put files
 
-Pace tags:
-- `high` — primary (techno / instrumental / energetic)
-- `mid` — optional filler
-- `boring` — occasional throw-offs
+| Directory | Pace |
+| --- | --- |
+| `high/` | High-paced (techno / instrumental / energetic) — **primary** |
+| `boring/` | Slow / dull / throw-off — occasional |
 
-Each entry needs: `id`, `path`, `title`, `artistLabel`, `pace`, `license`, `attribution`.
+The folder name sets default `pace`. Optional `manifest.json` can override.
+
+## API pace
+
+If using Jamendo (only when legally cleared): map tags/BPM/query buckets to `high` vs `boring` as in `defs/08_content.md`. Unknown → do not auto-play; drop the file into `high/` or `boring/` yourself.

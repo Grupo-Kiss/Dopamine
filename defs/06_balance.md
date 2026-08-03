@@ -240,6 +240,19 @@ Presentation (popups, sounds): `09_game_feel.md`.
 
 ---
 
+## Content Starter Pack (splash)
+
+Provisional counts that may block `Loading` → `Playing`. Keep small so the splash stays short. Runtime preload fills the rest (`08_content.md`).
+
+| Constant | Starter | Notes |
+| --- | ---: | --- |
+| `PRELOAD_LOOP_CLIPS` | `5` | **Tune** |
+| `PRELOAD_WAVE_TRACKS` | `3` | Bias high; ≤1 boring |
+| `PRELOAD_ECHO_ITEMS` | `1` | Deep-buffer one item |
+| `PRELOAD_TARGET_MATCH_SECONDS` | `120` | Soft goal for starter coverage |
+
+---
+
 ## Minigame Intensity (difficulty-linked)
 
 Shared knobs; each minigame maps these onto its own spawners in code.

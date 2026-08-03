@@ -9,6 +9,13 @@ Short reminders agreed during design that belong in a later doc. Remove each pin
 - **Combo boredom curve:** combo stickers must feel progressively flatter/more boring as diminishing returns apply for staying in the same window — reward is still shown, juice drops.
 - Dual art: caricaturesque simple windows vs over-the-top minigame spectacle.
 - Persistent Dopamine = vertical edge bar; almost everything else = ephemeral stickers.
+- Splash screen: short, branded; must not feel like a long install.
+
+## For later development
+
+- **Pulse posts library:** author a large `content/pulse/posts.json` (and trends/users) after generators are working — explicitly deferred.
+- Review/replace SVGs in `content/icons/`.
+- Enable Pixabay/Pexels/Jamendo only with keys + legal check (`08_content.md`); Jamendo commercial use needs clearance.
 
 ## Ongoing review
 

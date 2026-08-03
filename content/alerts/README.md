@@ -1,6 +1,7 @@
-# Alerts — notification templates
+# Alerts
 
-Edit `templates.json`. Optional icons in `icons/`.
+Most notifications are **generated from media/post metadata** at runtime.
 
-Templates support placeholders like `{user}`, `{topic}`, `{track}` and fields:
-`source` (loop|pulse|wave|echo|system), `priority`, `rewardable`.
+Optional: add curated lines in `templates.json` (see `templates.example.json`). If the file is missing or empty, the game still runs.
+
+Window logos used on alerts live in `../icons/`.

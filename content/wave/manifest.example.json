@@ -2,7 +2,7 @@
   "tracks": [
     {
       "id": "wave_001",
-      "path": "tracks/track_001.mp3",
+      "path": "high/track_001.mp3",
       "title": "Corridor Pulse",
       "artistLabel": "Null Festival",
       "pace": "high",
@@ -11,7 +11,7 @@
     },
     {
       "id": "wave_boring_001",
-      "path": "tracks/track_boring_001.mp3",
+      "path": "boring/track_boring_001.mp3",
       "title": "Hold Music Forever",
       "artistLabel": "Waiting Room",
       "pace": "boring",

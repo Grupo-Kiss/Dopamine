@@ -1,16 +1,16 @@
 # Content drop zone
 
-Place all hand-authored media and text libraries here — one folder per window.
+Place hand-authored media and text here — one folder per window.
 
-| Folder | Window | What to put |
-| --- | --- | --- |
-| `loop/` | Loop | Short vertical video clips + `manifest.json` |
-| `pulse/` | Pulse | Text posts, trends, users, generator seeds |
-| `wave/` | Wave | Music tracks + `manifest.json` (tag `pace`: high/mid/boring) |
-| `echo/audio/` | Echo | Long-form audio episodes |
-| `echo/video/` | Echo | Long-form video episodes |
-| `alerts/` | Alerts | Notification templates (+ optional icons) |
+| Folder | What to put |
+| --- | --- |
+| `icons/` | Window logos (SVG). Starter set included — replace after review |
+| `loop/clips/` | Short videos + `manifest.json` |
+| `pulse/` | Generators now; **hand posts later in development** |
+| `wave/high/` | High-paced / techno / energetic tracks |
+| `wave/boring/` | Slow / throw-off tracks |
+| `echo/audio/` | Long-form audio |
+| `echo/video/` | Long-form video |
+| `alerts/templates.json` | **Optional** hand notification lines (most alerts are algorithmic) |
 
-Full rules: `defs/08_content.md`.
-
-Only use files you own or that have a clear free license suitable for this game. Record license/attribution in each manifest.
+Full rules + API notes: `defs/08_content.md`.

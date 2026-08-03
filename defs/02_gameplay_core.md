@@ -110,16 +110,19 @@ The game always exists in exactly one of the following states.
 
 Responsibilities
 
-- preload assets
-- validate required content
+- show a short splash screen
+- validate required content manifests
+- preload a **starter pack** (~first couple of Match minutes) — see `08_content.md`
 - initialize systems
 - generate random session values
 
-The player cannot interact.
+The player cannot interact with gameplay yet.
+
+After transition to Playing, remaining content continues loading in the background.
 
 Transition
 
-Loading
+Loading (splash)
 
 ↓
 
