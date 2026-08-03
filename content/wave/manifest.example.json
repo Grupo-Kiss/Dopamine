@@ -1,0 +1,22 @@
+{
+  "tracks": [
+    {
+      "id": "wave_001",
+      "path": "tracks/track_001.mp3",
+      "title": "Corridor Pulse",
+      "artistLabel": "Null Festival",
+      "pace": "high",
+      "license": "CC0",
+      "attribution": "Null Festival — CC0"
+    },
+    {
+      "id": "wave_boring_001",
+      "path": "tracks/track_boring_001.mp3",
+      "title": "Hold Music Forever",
+      "artistLabel": "Waiting Room",
+      "pace": "boring",
+      "license": "owned",
+      "attribution": ""
+    }
+  ]
+}

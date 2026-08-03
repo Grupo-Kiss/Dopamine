@@ -1,0 +1,13 @@
+{
+  "clips": [
+    {
+      "id": "loop_001",
+      "path": "clips/clip_001.webm",
+      "title": "Totally Normal Dance",
+      "creatorLabel": "@definitely_human",
+      "tags": ["brainrot", "funny"],
+      "license": "owned",
+      "attribution": ""
+    }
+  ]
+}

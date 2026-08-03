@@ -148,6 +148,8 @@ src/
 
 └── utils/
 
+Authoring media/text libraries (drop zone for humans) live at repo-root `content/` — see `08_content.md`. Build may bundle them into `src/assets/` or `public/`.
+
 
 ## Credits and Attribution
 

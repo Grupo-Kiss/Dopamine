@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "id": "pulse_001",
+      "userId": "user_a",
+      "body": "Is cereal a soup? Scientists HATE this take.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_ad_001",
+      "userId": "brand_bot",
+      "body": "BUY MORE STIMULATION — 50% OFF YOUR ATTENTION",
+      "category": "advertising",
+      "rewardable": false
+    }
+  ]
+}

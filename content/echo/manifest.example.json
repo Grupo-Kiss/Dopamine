@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "id": "echo_a_001",
+      "kind": "audio",
+      "path": "audio/ep_001.mp3",
+      "title": "Three Hours On Nothing",
+      "creatorLabel": "Deep Dive Fiction",
+      "license": "owned",
+      "attribution": "",
+      "moments": [{ "atSec": 120, "label": "controversial take" }]
+    },
+    {
+      "id": "echo_v_001",
+      "kind": "video",
+      "path": "video/ep_001.webm",
+      "title": "I Edited This For Too Long",
+      "creatorLabel": "Longform Larry",
+      "license": "CC0",
+      "attribution": "Longform Larry — CC0"
+    }
+  ]
+}

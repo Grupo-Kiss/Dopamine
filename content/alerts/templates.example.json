@@ -1,0 +1,18 @@
+{
+  "templates": [
+    {
+      "id": "alert_mention",
+      "source": "pulse",
+      "priority": "high",
+      "rewardable": true,
+      "body": "{user} mentioned you in a totally normal discussion about {topic}"
+    },
+    {
+      "id": "alert_spam",
+      "source": "system",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Your storage is 97% full of unread dopamine"
+    }
+  ]
+}
