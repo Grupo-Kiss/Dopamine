@@ -291,7 +291,7 @@ The satire intentionally encourages immediate replay.
 
 Dopamine is the player's primary survival resource.
 
-Maximum value is defined in balance.md.
+Maximum value is defined in `06_balance.md`.
 
 Minimum value is zero.
 
@@ -335,7 +335,7 @@ Remaining inside a single window continuously reduces its reward efficiency.
 
 Changing attention between different gameplay systems generally restores reward efficiency.
 
-Exact reward values are defined in balance.md.
+Exact reward values are defined in `06_balance.md`.
 
 ---
 
@@ -558,7 +558,7 @@ Each window only becomes "Focus Ready" after its Reward Cooldown expires.
 
 Reward Cooldown begins immediately after leaving that window.
 
-Cooldown durations are defined inside balance.md.
+Cooldown durations are defined in `06_balance.md`.
 
 ---
 
@@ -661,7 +661,7 @@ If the timer expires:
 
 Focus Chain immediately resets to zero.
 
-Timeout duration is defined in balance.md.
+Timeout duration is defined in `06_balance.md`.
 
 The timeout should feel generous enough to allow decision making while still encouraging constant engagement.
 
@@ -709,7 +709,7 @@ Quality affects:
 - dopamine bonus
 - visual intensity
 
-Exact values belong in balance.md.
+Exact values belong in `06_balance.md`.
 
 ---
 
@@ -853,7 +853,7 @@ Completion Bonus includes:
 
 The reward should feel similar to "cashing out" a combo in classic arcade games.
 
-Exact values belong in balance.md.
+Exact values belong in `06_balance.md`.
 
 ---
 
