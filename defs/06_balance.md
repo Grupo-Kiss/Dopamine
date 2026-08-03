@@ -69,10 +69,36 @@ Resets when expected reward obtained, activity changes, or opportunity expires.
 
 | Constant | Starter | Notes |
 | --- | ---: | --- |
-| `FOCUS_CHAIN_TIMEOUT_MS` | `4000` | Generous decision window. **Tune** |
-| `FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS` | `3` | Below this, ending grants no completion cash-out |
+| `FOCUS_CHAIN_TIMEOUT_BASE_MS` | `4500` | Time allowed to make the **next** Focus Change when chain length is 1. Generous early. **Tune** |
+| `FOCUS_CHAIN_TIMEOUT_DECAY_MS` | `350` | Subtracted from the continue-window per additional chain step. **Tune** |
+| `FOCUS_CHAIN_TIMEOUT_MIN_MS` | `1500` | Floor — never tighter than this. **Tune** |
+| `FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS` | `3` | Below this, ending the chain grants **no** completion cash-out |
 | `FOCUS_CHAIN_MAX_LINGER_MS` | `8000` | Too long in one window breaks chain. **Tune** |
 | `WINDOW_REWARD_COOLDOWN_MS` | `2500` | Per-window cooldown before Focus Ready. **Tune** |
+
+### Continue-window (decaying timeout)
+
+After each successful Focus Change that sets chain length to `L`, the timer to perform the **next** Focus Change is:
+
+```
+timeoutMs(L) = max(
+  FOCUS_CHAIN_TIMEOUT_MIN_MS,
+  FOCUS_CHAIN_TIMEOUT_BASE_MS - (L - 1) × FOCUS_CHAIN_TIMEOUT_DECAY_MS
+)
+```
+
+Examples (starter values):
+
+| Current length `L` | Time to reach `L+1` |
+| ---: | ---: |
+| 1 | `4500` ms |
+| 2 | `4150` ms |
+| 3 | `3800` ms |
+| 5 | `3100` ms |
+| 10 | `1500` ms (hit floor) |
+| 15+ | `1500` ms |
+
+Early chain steps stay readable; long chains demand faster switching. If the timer expires, the chain breaks (resets to 0).
 
 ### Focus Change quality multipliers (Dopamine + Score)
 
@@ -83,11 +109,13 @@ Resets when expected reward obtained, activity changes, or opportunity expires.
 | Excellent | Attention Request destination | `1.6` | `1.6` |
 | Perfect | Attention Request + tight timing. **Tune** | `2.0` | `2.0` |
 
-### Chain step bonuses
+### Chain step bonuses (on successful extend)
 
-| Chain length | Extra Dopamine | Extra Score | Notes |
+Granted **when the chain successfully increases** to that length — not when it breaks.
+
+| Chain length reached | Extra Dopamine | Extra Score | Notes |
 | --- | ---: | ---: | --- |
-| `1` | `0.5` | `10` | Starter |
+| `1` | `0.5` | `10` | Awarded on first valid Focus Change |
 | `2` | `0.75` | `20` | |
 | `3` | `1.0` | `35` | |
 | `5` | `1.5` | `60` | |
@@ -97,16 +125,27 @@ Resets when expected reward obtained, activity changes, or opportunity expires.
 
 Interpolate or use nearest lower tier until a formula replaces the table.
 
-### Chain Completion Bonus
+### Chain Completion Bonus (on chain end only)
 
-Granted once when a chain ends at length ≥ `FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS`.
+Granted **once when the chain ends**, and **only if** final length ≥ `FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS` (starter: `3`).
 
 | Constant | Starter |
 | --- | ---: |
 | `CHAIN_COMPLETION_DOPAMINE_PER_STEP` | `0.5` |
 | `CHAIN_COMPLETION_SCORE_PER_STEP` | `25` |
 
-`completionDopamine = length × CHAIN_COMPLETION_DOPAMINE_PER_STEP` (same pattern for score).
+```
+if finalLength >= FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS:
+  completionDopamine = finalLength × CHAIN_COMPLETION_DOPAMINE_PER_STEP
+  completionScore    = finalLength × CHAIN_COMPLETION_SCORE_PER_STEP
+else:
+  completionDopamine = 0
+  completionScore    = 0
+```
+
+**Breaking at length 1 or 2 does not reduce Dopamine** and does **not** pay completion. Any step bonuses already earned when the chain grew remain; there is no clawback.
+
+Example: chain reaches 1 (player already got `+0.5` Dopamine step bonus), then times out → completion = `0`. Net from the chain mechanics ≈ that earlier step bonus only.
 
 ---
 

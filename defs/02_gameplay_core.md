@@ -655,15 +655,15 @@ Dopamine bonus is granted.
 
 Focus Chain cannot remain active indefinitely.
 
-Every successful Focus Change refreshes a timer.
+Every successful Focus Change refreshes a timer for the **next** Focus Change.
+
+The continue-window starts generous at low chain lengths and **decreases as the chain grows**, down to a minimum floor (values in `06_balance.md`).
 
 If the timer expires:
 
 Focus Chain immediately resets to zero.
 
-Timeout duration is defined in `06_balance.md`.
-
-The timeout should feel generous enough to allow decision making while still encouraging constant engagement.
+The early steps should feel readable; long chains should feel urgently paced.
 
 ---
 
