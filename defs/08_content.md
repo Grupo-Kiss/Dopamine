@@ -2,282 +2,288 @@
 
 ## Purpose
 
-This document defines **what media and text content** each window needs, where it comes from, how it is licensed, how it is stored locally, and when it must be ready for a Match.
+This document defines **what media and text content** each window needs, where it comes from, how it is licensed, how it is stored locally, optional APIs, splash/preload behaviour, and how Alerts are generated.
 
-Gameplay rules stay in `02`–`05`. Feel/presentation of players and stickers stays in `09_game_feel.md`. Legal attribution detail is finalized in `13_credits_and_legal.md`.
+Gameplay rules stay in `02`–`05`. Feel/presentation stays in `09_game_feel.md`. Legal attribution is finalized in `13_credits_and_legal.md`.
 
 ---
 
 ## Hard Rules
 
-1. **No copyright risk.** Only use media you own, that is explicitly licensed for this use (e.g. CC0 / public domain / clear free-for-commercial terms), or that comes from an API whose terms allow redistribution/playback in a game. When in doubt, use local files you cleared yourself.
-2. **No real-platform branding** in content (logos, watermarks, recognizable UI chrome of TikTok/Twitter/Spotify/YouTube/etc.). Fictional services only.
-3. **Preload before PLAY.** A Match must not start until required content for that Match is validated and loaded (see Preload Gate). The existing `Loading` state owns this.
-4. **Local directories are the default shipping path.** APIs are optional enhancers. If an API is unavailable, offline, or legally unclear, the game uses `content/` files.
+1. **No copyright risk.** Only use media you own, that is explicitly licensed for this use, or that comes from an API whose terms allow playback/caching in a web game. When in doubt, use local files you cleared yourself.
+2. **No real-platform branding** in content (logos, watermarks, recognizable UI of TikTok/Twitter/Spotify/YouTube/etc.).
+3. **Short splash, then play.** `Loading` shows a splash while a **small starter pack** loads — enough for roughly the **first couple of Match minutes**. Remaining items load in the background during `Playing`. Never block the player on a huge download.
+4. **Local directories are the default shipping path.** APIs are optional. If an API key is missing, rate-limited, or legally unclear, use `content/` files.
 
 ---
 
 ## Local Content Root (put files here)
 
-All hand-placed media and text libraries live under the repo root:
-
 ```
 content/
 ├── README.md
-├── loop/          ← short-form vertical videos for Loop
-├── pulse/         ← tweet/post library + generation seeds for Pulse
-├── wave/          ← music tracks for Wave
-├── echo/          ← long-form audio and/or video for Echo
+├── icons/           ← window logos (SVG, gradient, generic) — review/replace anytime
+├── loop/            ← short-form vertical videos
+├── pulse/           ← tweet library + generation seeds (posts authored later in dev)
+├── wave/
+│   ├── high/        ← high-paced / techno / instrumental energy
+│   └── boring/      ← slow / dull / throw-off tracks
+├── echo/
 │   ├── audio/
 │   └── video/
-└── alerts/        ← notification copy templates (and optional icons)
+└── alerts/          ← optional hand templates only (most alerts are algorithmic)
 ```
 
-**This is the directory to fill.** One folder per window that needs local files. Easy to find: top-level `content/`, named after the window.
+**This is the directory to fill.** One folder per window. Icons live in `content/icons/`.
 
-Runtime code may copy or bundle these into `src/assets/` or `public/` during build — that is an implementation detail in `10_tech.md`. Authors always drop source files into `content/<window>/`.
+---
 
-Each folder includes a `README.md` describing accepted formats and a `manifest.example.json` shape.
+## Splash And Preload Gate
+
+### Splash
+
+While in `Loading`, show a short splash (brand + light motion). It must feel brief — not a long install bar.
+
+### Starter pack (must finish before `Playing`)
+
+Load only what is needed for ~the first **2 minutes** of play, for example (tunable in `06_balance.md`):
+
+| Kind | Starter count (provisional) |
+| --- | ---: |
+| Loop clips | `4`–`6` short videos |
+| Wave tracks | `2`–`3` (bias `high`, at most one `boring`) |
+| Echo item | `1` (audio or video) — buffer start only |
+| Pulse | seed pool / generator ready in memory (text is cheap) |
+| Alerts | generator rules + optional hand templates |
+| Icons / UI chrome | window SVGs |
+
+Also validate manifests for the **queued** rest of the Match pack (paths exist, licenses present) even if bytes are not fully buffered yet.
+
+### Runtime preload
+
+After `Playing` starts, continue fetching/decoding the next items on a background queue so the player rarely waits. If a window would need an item that is not ready, keep showing the last safe item or a lightweight placeholder — never freeze the whole game.
+
+If starter-pack validation fails → stay on splash with a clear error; never start a broken Match.
+
+---
+
+## Defined Content APIs (optional)
+
+Keys live in env / `10_tech.md` config — never commit secrets. Always cache per provider rules. Prefer downloading/caching media to our origin rather than permanent hotlinking when the provider forbids it.
+
+### Pixabay API — Loop (video) primary candidate; optional stills
+
+| | |
+| --- | --- |
+| Docs | https://pixabay.com/api/docs/ |
+| Video search | `GET https://pixabay.com/api/videos/` |
+| Auth | `key` query param (free account) |
+| License | Pixabay Content License — commercial use OK as part of a larger creative work; **no standalone redistribution** of files; depicted trademarks/people still your responsibility |
+| API attribution | Pixabay requests showing where results come from when search results are displayed; cache requests ~24h; no mass automated scraping |
+| Hotlink | Images: do not permanently hotlink — download to our server. Videos: may embed; downloading preferred |
+| Pace / mood | Use `q`, `category`, `video_type`, `safesearch=true`, prefer `orientation` via crop for vertical Loop |
+| Dopamine use | **Loop** short clips; optionally **Echo** video if duration is long enough |
+
+### Pexels API — Loop / Echo video alternative
+
+| | |
+| --- | --- |
+| Docs | https://www.pexels.com/api/documentation |
+| Video search | `GET https://api.pexels.com/v1/videos/search` |
+| Auth | `Authorization: <API_KEY>` header |
+| License | Pexels License — free personal/commercial; attribution not legally required but encouraged (API may expect visible credit for higher limits) |
+| Limits | Default rate limits apply; do not abuse |
+| Dopamine use | **Loop** (prefer vertical / crop), **Echo** long video |
+
+### Jamendo API — Wave music (caution)
+
+| | |
+| --- | --- |
+| Docs | https://developer.jamendo.com/v3.0/tracks |
+| Auth | `client_id` |
+| License | Per-track Creative Commons via `license_ccurl`; filter with `ccnc=false` style flags as needed |
+| API terms | Free API use is aimed at **non-commercial**; commercial/monetized use may need a deal with Jamendo (`licensing@jamendo.com`). **Do not enable in production monetized builds until cleared.** |
+| Pace | Use `include=musicinfo` + tags (`electronic`, `techno`, `upbeat`, `ambient`, `calm`, BPM if present). Map tags → `high` / `boring` (see Wave pace mapping). |
+| Dopamine use | **Wave** only after legal OK; otherwise use `content/wave/high|boring` |
+
+### Freesound API — SFX / short audio only (not primary music bed)
+
+| | |
+| --- | --- |
+| Docs | https://freesound.org/docs/api/ |
+| License | Per-sound CC (respect NC); API itself is free for **non-commercial** unless you negotiate commercial API access |
+| Dopamine use | Optional UI/SFX later — **not** the main Wave catalog unless cleared |
+
+### Not allowed as media backends
+
+Spotify, YouTube download/stream scraping, Apple Music, Twitter/X media firehose, or any service that forbids game embedding / redistribution.
+
+### Provider config shape (implementation)
+
+```json
+{
+  "providers": {
+    "pixabay": { "enabled": false, "apiKeyEnv": "PIXABAY_API_KEY" },
+    "pexels": { "enabled": false, "apiKeyEnv": "PEXELS_API_KEY" },
+    "jamendo": { "enabled": false, "clientIdEnv": "JAMENDO_CLIENT_ID", "commercialCleared": false }
+  }
+}
+```
+
+Default: all `enabled: false` → local `content/` only.
 
 ---
 
 ## Source Modes Per Window
 
-| Window | Primary source | Optional API | Notes |
-| --- | --- | --- | --- |
-| **Loop** | `content/loop/` | Free stock video API only if license is clear for games | Short vertical clips |
-| **Pulse** | `content/pulse/` text library + runtime generators | None required | All text; no media API needed |
-| **Wave** | `content/wave/` | Free/legal music API only (see below) | High-paced bias |
-| **Echo** | `content/echo/audio/` and `content/echo/video/` | Free/legal long-form only | Audio **or** video per item |
-| **Alerts** | `content/alerts/` templates + runtime fills from other windows | None | Copy tied to Attention Requests |
-
-### Music / long-form APIs (if used later)
-
-Allowed only when terms explicitly permit use in an interactive web game (playback + caching as needed). Prefer:
-
-- Tracks/podcasts you downloaded yourself under a clear free license into `content/wave/` or `content/echo/`
-- APIs that return **license metadata** with every item (store it for credits)
-
-Do **not** wire Spotify, YouTube Data downloads, or other commercial catalog APIs for raw media. If no safe API is configured, **local directories only**.
-
----
-
-## Preload Gate
-
-Before transitioning `Loading` → `Playing`:
-
-1. Resolve the Match content pack (which Loop clips, Wave tracks, Echo items, Pulse pool, Alert templates will be used).
-2. Validate manifests (required fields, file exists, license tag present for third-party media).
-3. Load enough buffered media to start smoothly (at least: first Loop clip, first Wave track, first Echo item, Pulse pool in memory, Alert templates).
-4. If validation fails → stay in Loading with a clear error; never start a broken Match.
-
-Optional progressive fetch of *later* queue items is allowed **after** start only if the first N items are already safe; prefer full pack preload for the MVP.
+| Window | Primary | Optional API |
+| --- | --- | --- |
+| **Loop** | `content/loop/` | Pixabay videos, Pexels videos |
+| **Pulse** | generators + later `posts.json` | none |
+| **Wave** | `content/wave/high/` + `content/wave/boring/` | Jamendo only if cleared |
+| **Echo** | `content/echo/audio|video/` | Pixabay/Pexels long videos; audio local-first |
+| **Alerts** | **algorithmic from metadata** (+ optional hand templates) | none |
 
 ---
 
 ## Loop (`content/loop/`)
 
-### Needs
-
-- Short vertical (or croppable) video clips that can loop
-- Metadata: id, title, creatorLabel (fictional), tags/hashtags, optional mood (`funny` / `ragebait` / `brainrot` / `calm` / …)
-
-### Local layout
+Unchanged needs: short vertical/croppable clips + metadata.
 
 ```
 content/loop/
   README.md
-  manifest.json          ← list of clips
+  manifest.json
   clips/
-    clip_001.webm
-    clip_002.webm
-    …
 ```
 
-### Formats
-
-Prefer `webm` or `mp4` (browser-decodable). Keep files small for fast preload.
-
-### API
-
-Only if license-safe. Otherwise local only.
-
-### Notifications tied to Loop
-
-Templates that can fire Attention Requests / Alerts, e.g. “LIVE NOW”, “Breaking trend”, “Limited challenge” — stored under `content/alerts/` with `source: loop` or generated from Loop metadata.
+API queries should bias short duration, safesearch on, tags suitable for satire without real logos.
 
 ---
 
 ## Pulse (`content/pulse/`)
 
-### Needs
-
-**All text.** No video/audio required.
-
-Two complementary approaches (both allowed):
-
-1. **Library** — large JSON/CSV of posts, trends, usernames, reply snippets  
-2. **Runtime generation** — rules/templates that compose posts from seeds (ragebait patterns, trend slots, spam/ad fillers)
-
-### Local layout
+All text. **Hand-authored post library is deferred to later development** (pin). Ship generators + seeds first so Matches can run.
 
 ```
 content/pulse/
-  README.md
-  posts.json             ← hand-authored posts
-  trends.json            ← trend topics + lifetimes hints
-  users.json             ← display names / handles (fictional)
-  generators/
-    seeds.json           ← fragments for algorithmic posts
-    README.md
+  posts.json             ← fill later in development
+  trends.json
+  users.json
+  generators/seeds.json
 ```
-
-### Generation rules (high level)
-
-- Posts may be library picks, generated, or mixed.
-- Categories from gameplay docs: harmless trends, absurd debates, ragebait, memes, controversial opinions, fake news, internet drama, advertising, spam.
-- **Advertising / spam** must be identifiable in data (`rewardable: false`) so Dopamine stays `0`.
-- Never include real people’s private data or real brand slogans that imply endorsement.
-
-### Notifications tied to Pulse
-
-Mentions, replies, “your post is trending”, ragebait spikes — from `content/alerts/` with `source: pulse`, filled with generated names/topics.
 
 ---
 
-## Wave (`content/wave/`)
+## Wave (`content/wave/`) — pace by folder + API mapping
 
-### Needs
-
-- Streamable audio tracks
-- Metadata: id, title, artistLabel (fictional ok), duration, **pace** (`high` | `mid` | `boring`), license
-
-### Pacing intent
-
-- **Primarily high-paced** — instrumental / techno / electronic energy that supports arcade stimulation
-- **Random boring tracks** occasionally — slower, dull, or mismatched — to throw the player off (satire + Wave discovery tension)
-
-Manifest should tag `pace` so the Match playlist can bias high with sparse boring inserts (ratios in `06_balance.md` later if needed; default e.g. ~85% high / ~15% boring).
-
-### Local layout
+### Local (authoritative for dropped files)
 
 ```
 content/wave/
   README.md
-  manifest.json
-  tracks/
+  manifest.json          ← optional overrides; folder implies default pace
+  high/                  ← PUT HIGH-PACED TRACKS HERE
     track_001.mp3
-    track_002.ogg
-    …
+  boring/                ← PUT SLOW / THROW-OFF TRACKS HERE
+    track_boring_001.mp3
 ```
 
-### Formats
+- Anything under `high/` defaults to `pace: "high"`.
+- Anything under `boring/` defaults to `pace: "boring"`.
+- Manifest may override a single file’s pace if needed.
 
-`mp3`, `ogg`, or `wav` (prefer compressed for preload size).
+Playlist bias: mostly `high`, occasional `boring` (~85% / ~15% provisional).
 
-### API
+### How we know pace from an API
 
-Optional free/legal music API with per-track license fields. If unused or unsafe → **local only** in this folder.
+APIs rarely give a single “BPM for games” flag. Pipeline:
 
-### Notifications tied to Wave
+1. **Query buckets** — separate searches: e.g. `techno instrumental`, `electronic upbeat` → candidate `high`; `ambient calm`, `lofi slow`, `elevator` → candidate `boring`.
+2. **Tag / musicinfo map** (Jamendo `musicinfo`, Pixabay tags if music used):
 
-“Everyone is listening”, “New viral sound”, recommendation ready — `content/alerts/` with `source: wave`.
+| Signals → `high` | Signals → `boring` |
+| --- | --- |
+| techno, electronic, dance, upbeat, energetic, drum, bass, intens | ambient, calm, slow, quiet, piano soft, boring, lounge, elevator |
+
+3. **Optional BPM** if present: e.g. ≥ `120` → `high`, ≤ `90` → `boring`, else `mid` (prefer not to schedule `mid` often).
+4. **Manual curation list** — optional allowlist IDs in config forcing pace.
+5. If still unknown → **do not auto-schedule**; download into `high/` or `boring/` by hand and use local.
 
 ---
 
 ## Echo (`content/echo/`)
 
-### Needs
-
-Long-form items that are **either audio or video** (flexible per item).
-
-| Media kind | Player chrome | Notes |
-| --- | --- | --- |
-| `video` | Long-form **video player** look (YouTube-*like*, fictional — no YT brand) | Shows picture + controls |
-| `audio` | **Wave-like** audio player chrome | No video frame; waveform / abstract art ok |
-
-### Local layout
+Audio → Wave-like chrome. Video → fictional long-form video player (no YouTube brand).
 
 ```
 content/echo/
-  README.md
-  manifest.json
   audio/
-    ep_001.mp3
-    …
   video/
-    ep_001.webm
-    …
+  manifest.json
 ```
 
-`manifest.json` entries include `kind: "audio" | "video"`, path, title, creatorLabel, optional chapter/moment markers for Attention Requests, license.
-
-### Formats
-
-Audio: same as Wave. Video: `webm` / `mp4`, longer allowed but keep preload budget sane (lazy-buffer after first item if needed — still validate presence in Loading).
-
-### API
-
-Same legal bar as Wave. Default: local folders above.
-
-### Notifications tied to Echo
-
-“Everyone reacted to this moment”, debate/quote moments, sponsor segments (noise, `rewardable: false`) — `content/alerts/` with `source: echo`.
+Starter pack buffers **one** Echo item deeply; further items progressive.
 
 ---
 
-## Alerts (`content/alerts/`)
+## Alerts — algorithmic first, hand templates optional
 
-### Needs
+### Default: generate from content metadata
 
-Copy templates and optional simple icons for:
+When a window creates an Attention Request or the Alerts system needs a notification, **compose copy from the active item’s metadata** (title, creatorLabel, tags, pace, kind, trend topic, etc.) using small rule templates in code, for example:
 
-- Social (from Pulse)
-- Media (from Loop / Wave / Echo)
-- Fake system / standalone satire
-- Spam (no Dopamine)
+- Loop: `"{creatorLabel} just dropped: {title}"` / `"Everyone is looping {tag}"`
+- Pulse: `"{user} mentioned you about {topic}"` (from generator)
+- Wave: `"New {pace} track: {title}"` / `"Nobody asked for this lullaby: {title}"` when `boring`
+- Echo: `"Highlight in {title}"` / `"Debate moment — {momentLabel}"`
+- System satire: rotate a tiny built-in list (storage full, update available, …)
 
-### Local layout
+No need to pre-author every alert for every file.
+
+### Optional hand templates
+
+You may still add curated lines in:
 
 ```
-content/alerts/
-  README.md
-  templates.json
-  icons/                 ← optional caricaturesque PNGs/SVGs
+content/alerts/templates.json
 ```
 
-Templates reference `source`, `priority`, `rewardable`, and placeholder slots (`{user}`, `{topic}`, `{track}`).
+Hand templates are merged with algorithmic ones (hand templates can override by `id` or add rare specials). **Empty/missing file is fine** — game runs on algorithmic alerts only.
 
-Window Attention Requests may use the same template pool or window-local strings; Alerts is the shared notification content SSOT for copy.
+### Icons
+
+Window logos (and generic alert mark) live in:
+
+```
+content/icons/
+  loop.svg
+  pulse.svg
+  wave.svg
+  echo.svg
+  alerts.svg
+  dopamine.svg
+```
+
+Style: simple, generic, **SVG + gradient background**. Replace anytime after review.
 
 ---
 
-## Manifest Requirements (all media windows)
+## Manifest Requirements
 
-Every third-party or dropped-in media file listed in a manifest must include:
+Media manifests need `id`, `path`, `license`, `attribution`, display labels. For Wave local files, folder (`high`/`boring`) sets default pace.
 
-- `id` (stable string)
-- `path` (relative to that window’s content folder)
-- `license` (`CC0` | `CC-BY` | `owned` | …)
-- `attribution` (who to credit; may be empty only for `owned` original work)
-- `title` / display labels as needed by the window
-
-Missing license on non-owned media → **fail Loading**.
-
----
-
-## Minigame Art / SFX
-
-Not player “catalog” content. Ship under `src/assets/` (or later `content/minigames/` if you prefer parity). Rules for spectacle vs window chrome stay in art direction / `09_game_feel.md`. Attribution still required for third-party packs (`13`).
+API-ingested items must persist license + attribution + resolved `pace` into the Match cache for credits (`13`).
 
 ---
 
 ## Acceptance Criteria
 
-- Top-level `content/loop|pulse|wave|echo|alerts` exist and are the authoring drop zones.
-- Pulse can run on text library and/or generators with no media API.
-- Wave playlist biases high-paced with occasional boring tracks via metadata.
-- Echo supports audio-only (Wave-like chrome) and video (long-form player chrome) per item.
-- Match cannot enter Playing until preload/validation succeeds.
-- Alert/Attention Request copy is template-driven and can bind to window events.
-- No real-platform brands or uncleared commercial media in shipped content.
+- Splash stays short; only a ~2-minute starter pack blocks `Playing`.
+- Runtime progressive preload continues without freezing the game.
+- `content/wave/high` and `content/wave/boring` are the author drop zones for pace.
+- API pace uses query buckets + tag/BPM mapping; unknowns are not auto-played.
+- Pixabay / Pexels / Jamendo are documented with enable flags; default off → local.
+- Alerts are mostly algorithmic from metadata; `templates.json` is optional.
+- Window SVGs exist under `content/icons/` for review.
+- Pulse hand posts are explicitly deferred; generators cover early Matches.
