@@ -47,6 +47,29 @@ _Avoid_: System notifications (as a branded OS imitation)
 **Desktop Layout**:
 Masonry playfield beside a persistent vertical Dopamine bar (default right): top band is Minigame beside Loop-over-Wave (equal height, fill masonry width); bottom band is Pulse | Echo. Other HUD (score, Focus Chain, Burnout telegraph, combo `xN`) are event stickers — combo over Active Window. Small gutters; no internal gaps. Details in `07_layout.md`.
 
+**Mobile Layout**:
+Three permanent windows: Minigame plus two randomly chosen from Loop/Pulse/Wave/Echo, stacked with the same size priorities and gutters. Dopamine stays a persistent edge meter; other readouts are stickers. Alerts still overlay. Details in `07_layout.md`.
+
+**Focus Chain**:
+Skill expression from doing a few valid actions across many windows in succession, especially when a window is demanding attention (Attention Request / notification). Rewards timed switching, not farming one window. The continue-window starts generous and **shortens as the chain grows**. Celebrated with old-arcade style message stickers/overlays (not quiet UI chrome).
+_Avoid_: Treating Focus Chain as the same system as Combo/Multiplier
+
+**Burnout**:
+Optional high-intensity boost entered by sustained high APM. While active the player must keep APM up and receives bonus Dopamine. Modifies Playing; does not replace it. Ends into Recovery. After each Burnout→Recovery cycle, the minimum APM required for the next Burnout permanently increases for the rest of the Match.
+_Avoid_: Rage mode, frenzy (unless later defined as distinct)
+
+**Burnout Telegraph**:
+A readable warning sticker that current APM is approaching the Burnout threshold, so the player can ease off (save Burnout for later) or push harder to enter it. Visual/audio language belongs in `09_game_feel.md`.
+_Avoid_: Surprise Burnout with no approach signal
+
+**Recovery**:
+State immediately after Burnout where gaining/keeping Dopamine is harder (faster drain and related penalties). Burnout cannot retrigger until Recovery ends. Completing Recovery raises the next Burnout APM threshold.
+_Avoid_: Cooldown (as the domain name for this state)
+
+**Active Window**:
+The window currently receiving meaningful gameplay interaction. Hover or bare keyboard focus alone does not change it; valid interactions and window-navigation shortcuts do.
+_Avoid_: Focused window, hovered window
+
 **Combo / Multiplier**:
 Arcade-style successive-action feedback shown as stickers like `x2` / `x7!!` over the Active Window. Distinct from Focus Chain. Visual intensity should flatten (“get more boring”) as diminishing returns kick in for staying in the same window — still readable, less juicy. Feel details in `09_game_feel.md`.
 _Avoid_: Using "combo" as a synonym for Focus Chain; permanent combo chrome in the HUD bar
