@@ -1,24 +1,26 @@
 # Design Pins
 
-Short reminders agreed during design that belong in a later doc or pass. Remove when done.
+Short reminders. Remove when done.
 
-## Docs review pass (pinned)
+## Before development (your review)
 
-Re-read and re-populate for consistency with decisions made through `09`:
+- [ ] Review **all assets** before coding starts: `content/icons/`, `content/mockups/`, `content/minigames/` starters
+- [ ] You will supply **high-fidelity graphics** (specs to develop + ready-to-use files) — drop into the paths in `09_game_feel.md` / `08_content.md`
+- [ ] Replace or approve mid-fi mockups in `content/mockups/`
 
-- [ ] `00_IMPLEMENTATION_GUIDE.md` — refresh reading order notes, structure (`content/`, mockups, start page), SSOT pointers
-- [ ] `01_project.md` — Start Page, accessibility, English-only, palette/Dopamine bar pointers
-- [ ] `02`–`07` — spot-check terminology vs `CONTEXT.md` / layout / feel
-- [ ] `08_content.md` — Pulse ~100 templates already noted; confirm alert algorithmic rules still match
+## Docs review pass
 
-## For later development
+- [ ] `00_IMPLEMENTATION_GUIDE.md` — re-populate for current structure (`content/`, Start Page, mockups, SSOT)
+- [ ] Spot-check `01`–`09` vs `CONTEXT.md`
 
-- **Pulse posts library:** ~100 template posts with variables in `content/pulse/posts.json`
-- Review/replace `content/icons/`, `content/mockups/`, `content/minigames/` starters
-- Drop SFX + `burnout_grunge.png` where listed in `09_game_feel.md`
-- Enable Pixabay/Pexels/Jamendo only with keys + legal check; Jamendo commercial clearance if needed
+## Later development
 
-## Ongoing review
+- Pulse ~100 template posts (`content/pulse/posts.json`)
+- SFX + `burnout_grunge.png` where listed in `09`
+- APIs (Pixabay/Pexels/Jamendo) only with keys + legal OK
 
-- **Negative Gain:** never direct Dopamine removal
-- **Balance numbers:** provisional; ease-in early Match
+## Ongoing
+
+- Never direct Dopamine removal
+- Balance numbers provisional; ease-in early Match
+- TDD after docs (`docs/adr/0001-tdd-after-docs.md`)
