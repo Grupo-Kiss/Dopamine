@@ -211,6 +211,8 @@ Avoid:
 
 Visual feedback is more important than visual fidelity.
 
+Detailed split between clean window UI, arcade stickers, and minigame spectacle (including Lane Defender / Endless Runner / Block Cascade art direction) lives in `09_game_feel.md`.
+
 ---
 
 ## Audio Direction

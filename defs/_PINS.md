@@ -2,19 +2,11 @@
 
 Short reminders agreed during design that belong in a later doc. Remove each pin when the owning document absorbs it.
 
-## For `09_game_feel.md`
-
-- **Burnout Telegraph:** when APM approaches the current Burnout threshold, show a clear arcade-readable warning so the player can ease off (save Burnout) or push to enter it. Threshold ratio constant: `BURNOUT_TELEGRAPH_APM_RATIO` in `06_balance.md`. Sticker-style overlay, not permanent HUD chrome.
-- Arcade multipliers for successive actions as Active-Window stickers (`x2`, `x7!!`); Focus Chain uses old-arcade message overlays/stickers.
-- **Combo boredom curve:** combo stickers must feel progressively flatter/more boring as diminishing returns apply for staying in the same window — reward is still shown, juice drops.
-- Dual art: caricaturesque simple windows vs over-the-top minigame spectacle.
-- Persistent Dopamine = vertical edge bar; almost everything else = ephemeral stickers.
-- Splash screen: short, branded; must not feel like a long install.
-
 ## For later development
 
-- **Pulse posts library:** author a large `content/pulse/posts.json` (and trends/users) after generators are working — explicitly deferred.
-- Review/replace SVGs in `content/icons/`.
+- **Pulse posts library:** author ~100 **template posts with variables** in `content/pulse/posts.json` (plus trends/users/seeds) during development — see `08_content.md`.
+- Review/replace SVGs in `content/icons/` and starter minigame art in `content/minigames/`.
+- Produce remaining minigame assets from the inventory in `09_game_feel.md` (pickups, hazards, SFX, runner obstacles, shared sticker frames).
 - Enable Pixabay/Pexels/Jamendo only with keys + legal check (`08_content.md`); Jamendo commercial use needs clearance.
 
 ## Ongoing review
