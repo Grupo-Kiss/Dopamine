@@ -17,7 +17,7 @@ Short reminders. Remove when done.
 
 - [x] `10_tech.md`
 - [x] `11_testing_strategy.md`
-- [ ] `12_coding_rules.md`
+- [x] `12_coding_rules.md`
 - [ ] `13_credits_and_legal.md`
 
 ## Later development
@@ -32,6 +32,6 @@ Short reminders. Remove when done.
 
 - Never direct Dopamine removal
 - Balance numbers provisional; ease-in early Match
-- TDD after docs (`docs/adr/0001-tdd-after-docs.md`)
+- TDD after docs (`docs/adr/0001-tdd-after-docs.md`) — process locked in `00`; `11` is the coverage map
 - Conscious call on brand-adjacent palette hexes in `09` (Pulse/Wave) before high-fi lock
 - Discovery (unheard novelty) ≠ Anticipation (waiting for payoff) — keep separate in code/tests

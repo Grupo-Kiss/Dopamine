@@ -40,8 +40,8 @@ During a coding slice: re-read the **owning** gameplay/balance doc for the featu
 | `09_game_feel.md` | Done | Start Page, stickers, palettes, audio mix, mockups |
 | `10_tech.md` | Done | Stack, architecture, audio, content load, env, deploy |
 | `11_testing_strategy.md` | Done | TDD map, pyramid, determinism, CI |
-| `12_coding_rules.md` | **Next** | Code conventions |
-| `13_credits_and_legal.md` | Pending | Attribution and license obligations |
+| `12_coding_rules.md` | Done | Code conventions, boundaries, TDD daily practice |
+| `13_credits_and_legal.md` | **Next** | Attribution and license obligations |
 
 Handoff for fresh chats: `HANDOFF.md`.
 
@@ -94,7 +94,7 @@ Document responsibilities:
 | Visual/audio feel, Start Page, mockups | `09_game_feel.md` + `content/mockups/` |
 | Implementation stack | `10_tech.md` |
 | Testing approach | `11_testing_strategy.md` + ADR-0001 |
-| Code conventions | `12_coding_rules.md` (forthcoming) |
+| Code conventions | `12_coding_rules.md` |
 | Credits / legal | `13_credits_and_legal.md` (forthcoming) |
 
 ---
