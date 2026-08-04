@@ -285,7 +285,7 @@ Numeric values/indicators also scale with global difficulty.
 
 This includes:
 
-- Boss health
+- Boss integrity
 - Hazard counters
 - Upgrade effectiveness
 - Enemy density
