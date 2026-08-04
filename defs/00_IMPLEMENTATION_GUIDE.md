@@ -26,8 +26,8 @@ Hard process choices: `docs/adr/` (notably TDD-after-docs).
 | `08_content.md` | Done | `content/` packs, splash preload, optional APIs |
 | `09_game_feel.md` | Done | Start Page, stickers, palettes, audio mix, mockups |
 | `10_tech.md` | Done | Stack, architecture, audio, content load, env, deploy |
-| `11_testing_strategy.md` | **Next** | TDD map against specs |
-| `12_coding_rules.md` | Pending | Code conventions |
+| `11_testing_strategy.md` | Done | TDD map, pyramid, determinism, CI |
+| `12_coding_rules.md` | **Next** | Code conventions |
 | `13_credits_and_legal.md` | Pending | Attribution and license obligations |
 
 Handoff for fresh chats: `HANDOFF.md`.
@@ -80,7 +80,7 @@ Document responsibilities:
 | Media libraries, preload, APIs | `08_content.md` + repo-root `content/` |
 | Visual/audio feel, Start Page, mockups | `09_game_feel.md` + `content/mockups/` |
 | Implementation stack | `10_tech.md` |
-| Testing approach | `11_testing_strategy.md` (forthcoming) + ADR-0001 |
+| Testing approach | `11_testing_strategy.md` + ADR-0001 |
 | Code conventions | `12_coding_rules.md` (forthcoming) |
 | Credits / legal | `13_credits_and_legal.md` (forthcoming) |
 

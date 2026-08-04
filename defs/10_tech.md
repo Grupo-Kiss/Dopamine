@@ -4,7 +4,7 @@
 
 This document defines **how the game is built**: stack, architecture boundaries, rendering, audio, content loading, config/env, build/deploy, and browser targets.
 
-Gameplay rules: `02`–`05`. Numbers: `06`. Layout: `07`. Content: `08`. Feel: `09`. Testing details: `11_testing_strategy.md` (forthcoming). Code style: `12_coding_rules.md` (forthcoming).
+Gameplay rules: `02`–`05`. Numbers: `06`. Layout: `07`. Content: `08`. Feel: `09`. Testing details: `11_testing_strategy.md`. Code style: `12_coding_rules.md` (forthcoming).
 
 ---
 
@@ -221,7 +221,7 @@ After asset gate + TDD readiness:
 7. Content preload gate  
 8. Remaining windows / minigames / feel  
 
-Exact test plan: `11_testing_strategy.md`.
+Exact test plan: see `11_testing_strategy.md`.
 
 ---
 
