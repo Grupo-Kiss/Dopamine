@@ -108,7 +108,9 @@ Reward Cooldown is active.
 
 Returning immediately is allowed.
 
-However, rewards are temporarily reduced.
+Base Dopamine/Score from valid actions may still apply at a **reduced** rate while Waiting.
+
+Focus Chain: a Waiting destination does **not** extend the chain; repeatedly farming cooldown windows breaks it (`02`).
 
 Waiting automatically transitions to Focus Ready once Reward Cooldown expires.
 
@@ -293,8 +295,8 @@ Visible UI elements include:
 - title
 - hashtags
 - like count
-- comment count
-- share button
+- comment count (display only — not a separate Loop action in v1)
+- repost control
 - progress indicator
 
 The layout should resemble modern short-form video platforms without reproducing any identifiable brand.
@@ -311,13 +313,11 @@ Videos never automatically advance.
 
 The player must actively decide when to consume new content.
 
-As a video remains on screen, its reward value gradually decreases.
+As a video remains on screen, its reward value gradually decreases (diminishing returns).
 
-After a configurable amount of time, the window transitions into the Focus Ready state.
+The window does **not** enter Focus Ready while it remains Active. Focus Ready follows the global rule: leave the window → Waiting (Reward Cooldown) → Focus Ready (`02`).
 
-This represents the player's subconscious desire for novelty.
-
-The longer the player ignores new content, the stronger the desire to switch videos becomes.
+Desire for novelty while staying on one clip is expressed through diminishing rewards and eventual Attention Requests / Interactive Opportunities — not by marking the Active Loop as Focus Ready.
 
 ---
 
@@ -576,10 +576,10 @@ The player is gently encouraged to leave rather than punished for staying.
 
 The implementation satisfies this specification if:
 
-- videos continue automatically
+- the current clip **loops** until the player chooses Next (no auto-advance to a new video)
 - every interaction feels instantaneous
 - premium opportunities clearly attract attention
-- Focus Ready can be recognized through repeated play
+- Focus Ready appears only after leaving and cooldown (global rules), recognizable through repeated play
 - the player naturally alternates between Loop and other windows instead of remaining permanently inside it
 
 ---
@@ -984,14 +984,15 @@ Interactions are intentionally limited.
 
 Wave should alternate between high-frequency discovery moments and passive listening periods.
 
-During discovery:
+During discovery (skipping toward unheard tracks):
 
 - rapid skipping is encouraged
-- Dopamine increases through anticipation
+- Dopamine increases through **Discovery Bonus**
 
 During passive listening:
 
 - the player is rewarded for waiting
+- **Anticipation** builds toward Song Moments / beat drops
 - Song Moments become valuable
 
 The optimal strategy should change over time.
@@ -1145,11 +1146,13 @@ The player may receive an opportunity to interact.
 
 ---
 
-#### Playlist Update
+#### Queue Refresh
 
-A playlist changes.
+The fictional “up next” / recommendation shelf reshuffles.
 
 Creates curiosity.
+
+(There are still **no playlists** as a player-managed library — only algorithmic queue / recommendations.)
 
 ---
 
@@ -1424,6 +1427,8 @@ Example:
 "Everyone is talking about this part"
 
 Creates an Attention Request.
+
+While the player stays with the item toward that highlight, **Anticipation Bonus** may build (`02`); landing the moment pays off / resets Anticipation.
 
 ---
 

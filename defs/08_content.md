@@ -23,8 +23,10 @@ Legal attribution: `13_credits_and_legal.md`. Gameplay rules stay in `02`–`05`
 content/
 ├── README.md
 ├── icons/           ← window logos (SVG, gradient, generic) — review/replace anytime
+├── mockups/         ← mid/hi-fi screen & chrome references (`09`)
+├── minigames/       ← first-party minigame art/SFX (`09`)
 ├── loop/            ← short-form vertical videos
-├── pulse/           ← tweet library + generation seeds (posts authored later in dev)
+├── pulse/           ← microblog library + generation seeds (posts authored later in dev)
 ├── wave/
 │   ├── high/        ← high-paced / techno / instrumental energy
 │   └── boring/      ← slow / dull / throw-off tracks
@@ -34,7 +36,7 @@ content/
 └── alerts/          ← optional hand templates only (most alerts are algorithmic)
 ```
 
-**This is the directory to fill.** One folder per window. Icons live in `content/icons/`.
+**This is the directory to fill.** One folder per window plus shared icons / mockups / minigames.
 
 ---
 
@@ -48,16 +50,7 @@ While in `Loading`, show a short splash (brand + light motion). It must feel bri
 
 ### Starter pack (must finish before `Playing`)
 
-Load only what is needed for ~the first **2 minutes** of play, for example (tunable in `06_balance.md`):
-
-| Kind | Starter count (provisional) |
-| --- | ---: |
-| Loop clips | `4`–`6` short videos |
-| Wave tracks | `2`–`3` (bias `high`, at most one `boring`) |
-| Echo item | `1` (audio or video) — buffer start only |
-| Pulse | seed pool / generator ready in memory (text is cheap) |
-| Alerts | generator rules + optional hand templates |
-| Icons / UI chrome | window SVGs |
+Load only what is needed for ~the first **2 minutes** of play. Authoritative starter counts are the `PRELOAD_*` constants in `06_balance.md` (illustrative ranges: Loop ~4–6 clips, Wave ~2–3 tracks, Echo 1 item, Pulse seeds in memory, icons/chrome).
 
 Also validate manifests for the **queued** rest of the Match pack (paths exist, licenses present) even if bytes are not fully buffered yet.
 

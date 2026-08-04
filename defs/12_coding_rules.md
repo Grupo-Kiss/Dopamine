@@ -79,7 +79,7 @@ Public ports (interfaces) between core and adapters stay small and stable.
 ## React And UI
 
 - Function components; keep Match rules out of JSX.
-- Accessibility Mode and credits entry points stay reachable from Start Page / Game Over (`09`).
+- Accessibility Mode and **Credits** link (→ Credits Modal) stay reachable from Start Page / Game Over (`09` / `13`).
 - Stickers/overlays must not permanently steal masonry layout slots (`07`).
 - English system strings only for v1 (`09`).
 - No photoreal OS clones or real-platform trademarks in assets or copy (`08` / `01`).

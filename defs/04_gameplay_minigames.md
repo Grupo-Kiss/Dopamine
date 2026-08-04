@@ -128,7 +128,7 @@ Appears periodically.
 
 Occupies multiple lanes visually.
 
-Has significantly more health.
+Has significantly more hit points (boss integrity counter — not player “health”).
 
 Creates a strong visual Attention Request inside the minigame.
 
@@ -246,7 +246,7 @@ Numeric indicators are a universal visual language.
 
 They are used for:
 
-- Boss health
+- Boss integrity (hit counter)
 - Hazard state
 - Upgrade levels
 - Temporary effects

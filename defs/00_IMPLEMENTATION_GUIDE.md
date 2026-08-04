@@ -193,9 +193,14 @@ src/                        ← application (stack in `10_tech.md`)
 │   ├── HUD/                ← Dopamine bar + sticker hosts
 │   ├── Layout/
 │   ├── StartPage/
+│   ├── GameOver/
+│   ├── CreditsModal/       ← long attribution list (`13`)
 │   └── Effects/
+├── audio/                  ← Web Audio mixer buses
+├── content/                ← manifest loaders / preload queue
+├── config/
 ├── assets/                 ← built/bundled media (from content/ or generated)
-├── tests/
+├── testing/                ← shared fakes (clock, rng, media, audio)
 └── utils/
 
 docs/
@@ -207,17 +212,18 @@ HANDOFF.md
 defs/
 ```
 
+Co-locate `*.test.ts(x)` next to modules (`11` / `12`).
 ---
 
 ## Credits and Attribution
 
 Credits must be accessible from:
 
-- **Start Page** (primary hub entry)
-- **Game Over** (adapted info blocks)
-- settings/about section if implemented later
+- **Start Page** — Credits link opens **Credits Modal** (long scrollable list)
+- **Game Over** — same link among adapted info blocks
+- settings/about section if implemented later (same modal)
 
-Do not treat the Loading splash as the only credits surface.
+Do not treat the Loading splash as the only credits surface. Do not dump the full attribution wall onto the hub itself.
 
 All third-party assets must carry attribution data in manifests / credits store.
 

@@ -19,10 +19,14 @@ Not an instant jump into the Match. Includes:
 - Title / brand (arcade energy)
 - Brief how-to-play (Focus Chain idea in one sentence, Dopamine drains, switch windows)
 - **Accessibility mode** toggle (reduced motion: less shake/flash/pulsing; stickers stay readable)
-- Credits entry point
+- **Credits** link → opens **Credits Modal** (long attribution list; see `13`)
 - PLAY
 
 English-only UI strings for v1. Player-typed Pulse text may be any language; the game does not localize or judge it.
+
+### Credits Modal
+
+Scrollable overlay over Start Page or Game Over. Opened by the Credits link; Esc / close returns to the hub. Holds game blurb, third-party media list, OSS/fonts, provider notices, satire disclaimer. Not a separate full-page route that replaces the hub.
 
 ### Splash (`Loading`)
 
@@ -30,7 +34,7 @@ Arcade-like short splash while the starter pack loads (`08`). Bold title treatme
 
 ### Game Over
 
-Reuse the same informational blocks as the Start Page (brief instructions reminder, credits, accessibility) adapted around survival stats + **PLAY AGAIN** (demanding if ignored). Hard silence under the hold frame.
+Reuse the same informational blocks as the Start Page (brief instructions reminder, **Credits** link → modal, accessibility) adapted around survival stats + **PLAY AGAIN** (demanding if ignored). Hard silence under the hold frame.
 
 ---
 
@@ -55,8 +59,8 @@ Rounded corners + stroke + minimal controls. Accent color for primary actions (L
 | Window | Primary | Accent | Notes |
 | --- | --- | --- | --- |
 | Loop | `#ff4d6d` → `#ff8fa3` | `#fff` / hot pink highlight | Light playful feed |
-| Pulse | `#1da1f2` → `#6ec6ff` | `#ffffff` buttons on blue | Clean microblog |
-| Wave | `#0b3d2e` / `#1db954` | `#1db954` | **Dark player** chrome (Spotify-*like* darkness, fictional) |
+| Pulse | `#1da1f2` → `#6ec6ff` | `#ffffff` buttons on blue | Clean microblog (parody-adjacent blue — finalize in high-fi) |
+| Wave | `#0b3d2e` / `#1db954` | `#1db954` | **Dark player** chrome (fictional; finalize green in high-fi) |
 | Echo | `#990022` → `#ff0033` | `#ffffff` | Long-form; video or audio chrome |
 | Alerts | `#f5a623` → `#f76b1c` | `#fff` | Urgent cards |
 | Dopamine bar | See below | — | Edge meter |
@@ -197,49 +201,99 @@ Toggle on Start Page (persisted locally). When on:
 
 | File | Shows |
 | --- | --- |
-| `content/mockups/start_page.svg` | Title, short instructions, accessibility, credits, PLAY |
+| `content/mockups/start_page.svg` | Title, short instructions, accessibility, Credits link, PLAY |
+| `content/mockups/credits_modal.svg` | **Hi-fi target** — scrollable Credits Modal over hub |
 | `content/mockups/desktop_layout.svg` | Near-black gutters, branded windows, Dopamine bar |
+| `content/mockups/mobile_layout.svg` | **Hi-fi target** — Minigame + 2 services + edge Dopamine |
 | `content/mockups/dopamine_bar.svg` | High orange glow vs low violet |
 | `content/mockups/stickers_combo.svg` | Juicy vs bored combo |
 | `content/mockups/stickers_chain.svg` | Focus Chain arcade banner |
 | `content/mockups/overlay_burnout.svg` | Red vignette + grunge pulse |
 | `content/mockups/overlay_recovery.svg` | Violet sleepy mute |
-| `content/mockups/game_over.svg` | Stats + PLAY AGAIN + reused info |
+| `content/mockups/game_over.svg` | Stats + PLAY AGAIN + Credits link |
 | `content/mockups/minigame_lane.svg` | Cutout soldier/monster lanes |
+| `content/mockups/minigame_runner.svg` | **Hi-fi target** — Endless Runner lanes |
 | `content/mockups/minigame_blocks.svg` | Dark modern Tetris board |
 | `content/mockups/splash.svg` | Arcade splash |
+| `content/mockups/window_loop.svg` | **Hi-fi target** — Loop chrome alone |
+| `content/mockups/window_pulse.svg` | **Hi-fi target** — Pulse chrome alone |
+| `content/mockups/window_wave.svg` | **Hi-fi target** — Wave dark player |
+| `content/mockups/window_echo.svg` | **Hi-fi target** — Echo player |
+| `content/mockups/window_alerts.svg` | **Hi-fi target** — Alert cards |
+
+Existing mid-fi SVGs are placeholders until high-fi replaces them. Rows marked **Hi-fi target** may not exist yet — create during asset review.
 
 ---
 
-## Assets You Should Drop In (I won’t invent final SFX/music beds)
+## Assets To Supply (final art / audio)
+
+Do not invent final SFX or music beds in code — drop files into these paths.
+
+### Shared / feel
 
 | Path | What |
 | --- | --- |
-| `content/minigames/_shared/textures/burnout_grunge.png` | Colorized transparent grunge (your Texturelabs-style source, with alpha) |
+| `content/minigames/_shared/textures/burnout_grunge.png` | Colorized transparent grunge (alpha) |
+| `content/minigames/_shared/sfx_sticker_*.ogg` | combo juicy, combo bored, chain step, chain complete, burnout telegraph |
+| `content/icons/*.svg` | Replace starters: loop, pulse, wave, echo, alerts, dopamine |
+
+### Minigame SFX
+
+| Path | What |
+| --- | --- |
 | `content/minigames/lane_defender/sfx_*.ogg` | hit, destroy, boss_warn, boss_down, pickup |
 | `content/minigames/endless_runner/sfx_*.ogg` | lane, collect, crash, rare |
 | `content/minigames/block_cascade/sfx_*.ogg` | place, rotate, clear, tetris, reset |
-| `content/minigames/_shared/sfx_sticker_*.ogg` | combo juicy/bored, chain step, chain complete, telegraph |
-| `content/wave/high/*` / `content/wave/boring/*` | Music beds (as `08`) |
+
+### Minigame visuals (first-party)
+
+Produce under `content/minigames/<id>/`. Bevel 3D props. Cute, not grim. Letterbox to fixed aspect (`07` slot).
+
+**Lane Defender**
+
+- `player_soldier` (cutout)
+- `enemy_normal`, `enemy_boss` (cutouts)
+- hazard meshes/sprites: mine, barrier (bevelled primitives OK)
+- pickups: score mult, rapid fire, pierce, wide, shield, magnet
+- lane/ground/backdrop fills
+
+**Endless Runner**
+
+- shared or sibling soldier cutout
+- obstacles set (at least 3 readable types)
+- collectibles + rare pickup
+- ground / parallax strips
+
+**Block Cascade**
+
+- `skin_blocks.json` + tetromino face textures / colors (dark board, bright pieces)
+- ghost piece, clear FX frames (optional sprites)
+- board frame chrome
+
+### Window media beds (`08`)
+
+| Path | What |
+| --- | --- |
+| `content/wave/high/*` | High-paced tracks + manifest license/attribution |
+| `content/wave/boring/*` | Slow / throw-off tracks |
+| `content/loop/clips/*` | Short vertical/croppable videos + `manifest.json` |
+| `content/echo/audio/*` and/or `video/*` | Long-form items + `manifest.json` |
+| `content/pulse/*.json` | Expand from `*.example.json` during mid-dev (~100 templates) |
+| `content/alerts/templates.json` | Optional |
 
 Starter **visual** SVGs already under `content/icons/` and `content/minigames/` — replace anytime.
 
 ---
 
-## Asset Inventory (minigames)
-
-Unchanged lists from prior revision: produce all first-party art under `content/minigames/<id>/`. Bevel 3D props. Cute, not grim.
-
----
-
 ## Acceptance Criteria
 
-- Start Page exists with instructions, credits, accessibility, PLAY.
+- Start Page exists with instructions, accessibility, Credits link → Credits Modal, PLAY.
+- Credits Modal scrolls a long attribution list without replacing the hub layout.
 - Dopamine bar hue-shifts orange→violet with radioactive high-end glow.
 - Stage background near-black; windows branded, rounded, stroked, minimal.
 - Stickers carry Balatro-*energy* motion; combo boredom curve visible.
 - Burnout = red vignette + pulsing grunge; Recovery = violet/sleepy mute.
 - Focus muffling in normal/recovery; none in Burnout — via Web Audio buses.
 - Minigame content fixed-aspect letterboxed; 3D edges bevelled.
-- Mockups present under `content/mockups/` for offline rework.
+- Mockups present under `content/mockups/` for offline rework (mid-fi OK until high-fi).
 - English system strings; accessibility toggle honored.

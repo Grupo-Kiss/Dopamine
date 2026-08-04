@@ -17,35 +17,45 @@ This is **not** formal legal advice. When commercializing or enabling APIs, a hu
 3. **Parody, not imitation** — fictional services (Loop, Pulse, Wave, Echo, Alerts); legally distinct presentation (`01` / `00`).
 4. **Local-first** — providers default `enabled: false`; never ship secrets.
 5. **Attribution is data** — every third-party (and API-ingested) item carries `license` + `attribution` into a credits store; UI can always list them.
-6. **Credits are reachable** — Start Page and Game Over (and About if added). Loading splash is **not** the sole credits surface.
+6. **Credits are reachable** — Credits Modal via link on Start Page and Game Over (and About if added). Loading splash is **not** the sole credits surface.
 
 ---
 
 ## Credits UI
 
+Attribution lists get long (many media files + OSS). Do **not** dedicate a full route or replace the Start Page / Game Over composition with a wall of credits.
+
+### Presentation: modal
+
+- **Credits Modal** — scrollable overlay/dialog over the current hub surface (Start Page or Game Over).
+- Opened by a **Credits** text link (or equivalent control) on Start Page and Game Over.
+- Close returns to the same hub; does not start Loading or change Match state.
+- Long third-party lists live **inside** the modal (grouped / searchable later if needed); the hub only needs the short link.
+- Optional About later may open the same modal.
+
 ### Required entry points
 
 | Surface | Requirement |
 | --- | --- |
-| **Start Page** | Primary “Credits” / About control before PLAY |
-| **Game Over** | Same info blocks adapted beside stats + PLAY AGAIN (`09`) |
-| Optional About | If settings exist later, link here too |
+| **Start Page** | “Credits” link opens Credits Modal |
+| **Game Over** | Same link among adapted info blocks (`09`) |
+| Optional About | May open the same modal |
 
-### Credits screen content (minimum)
+### Modal content (minimum)
 
 1. **Game** — title, short one-liner, studio / authors as you define.
-2. **Third-party media** — scrollable list built from the credits store (title / creator / license / source).
-3. **Fonts / libraries** — npm and font licenses that require notice (generated or hand-maintained list).
-4. **Provider notices** — when a provider was used this build/session, show the required courtesy line (e.g. Pixabay / Pexels encouragement).
+2. **Third-party media** — scrollable list from the credits store (title / creator / license / source). Expect a long list; keep it in the modal, not on the hub.
+3. **Fonts / libraries** — npm and font licenses that require notice.
+4. **Provider notices** — when a provider was used this build/session, required courtesy lines.
 5. **Disclaimer** — satire; not affiliated with any real social or streaming platform.
 
-English UI (`09`). Keep readable under Accessibility Mode (no essential info only in motion).
+English UI (`09`). Keep readable under Accessibility Mode (no essential info only in motion). Trap focus in the modal; Esc closes.
 
 ### In-Match attribution
 
 - Do **not** clutter gameplay with permanent watermark bars.
-- Optional subtle per-item credit on Wave/Echo detail chrome is allowed if a license demands visible credit **during** playback — prefer satisfying that via the Credits screen unless the license text requires on-screen credit.
-- Pixabay “show where results come from” applies when **displaying search results**; in-game playback of cached items still lists those items in Credits.
+- Optional subtle per-item credit on Wave/Echo detail chrome is allowed if a license demands visible credit **during** playback — prefer satisfying that via the Credits Modal unless the license text requires on-screen credit.
+- Pixabay “show where results come from” applies when **displaying search results**; in-game playback of cached items still lists those items in the Credits Modal.
 
 ---
 
@@ -147,7 +157,7 @@ Human pin: populate `.env` only when enabling (`_PINS.md`); keep `enabled: false
 
 - [ ] Every `content/` media file has manifest `license` (+ `attribution` when required)
 - [ ] No real-platform logos or trademarked UI in shipping assets
-- [ ] Credits reachable from Start Page and Game Over
+- [ ] Credits Modal reachable from Start Page and Game Over links
 - [ ] Credits list matches shipped third-party media
 - [ ] Providers still `enabled: false` **or** keys present, terms re-read, Jamendo commercial cleared if monetized
 - [ ] `.env` / secrets not committed; `.env.example` has empty placeholders only
@@ -160,14 +170,14 @@ Human pin: populate `.env` only when enabling (`_PINS.md`); keep `enabled: false
 ## Implementation Notes
 
 - Credits store is readable while on Start Page (static pack) and after a Match (include `usedInMatch` if implemented).
-- Tests (`11`): preload rejects missing license; Credits route/components render a fixture list — full license review remains human.
+- Tests (`11`): preload rejects missing license; Credits Modal renders a fixture list — full license review remains human.
 - Coding (`12`): no secrets in repo; providers default off.
 
 ---
 
 ## Acceptance Criteria
 
-- Credits entry points exist on Start Page and Game Over (splash alone is insufficient).
+- Credits Modal opens from Start Page and Game Over links (splash alone is insufficient).
 - Attribution model covers local manifests and API-ingested items.
 - Provider enablement is gated on legal OK; Jamendo monetized use requires explicit clearance flag.
 - Parody / no real-platform branding rules are explicit and testable at asset review.

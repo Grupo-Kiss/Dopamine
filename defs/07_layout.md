@@ -14,7 +14,7 @@ Gameplay rules live in `02`–`05`. Numbers that are not spatial (rewards, timer
 - Permanent windows never overlap each other.
 - **Alerts** are not permanent slots; they float above the layout and must not participate in masonry packing.
 - A small **gutter** (margin) separates every pair of adjacent windows so the layout can breathe. Attention should not be hurt by cramped packing.
-- Window chrome is caricaturesque and simple; the minigame playfield may use denser arcade spectacle inside its slot (`CONTEXT.md` / later `09_game_feel.md`).
+- Window chrome is caricaturesque and simple; the minigame playfield may use denser arcade spectacle inside its slot (`CONTEXT.md` / `09_game_feel.md`).
 - Layout does not pause gameplay. Resizing the browser reflows slots but does not reset Match state.
 
 ### Gutter

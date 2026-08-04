@@ -223,9 +223,7 @@ Every system may generate audio feedback.
 
 The final audio mix should intentionally become increasingly dense during long sessions.
 
-Audio priority and mixing rules are defined in 09_game_feel.md.
-
-The overall mix should intentionally become increasingly dense during long sessions.
+Audio priority and mixing rules are defined in `09_game_feel.md`.
 
 Silence should only exist after Game Over.
 
@@ -251,7 +249,7 @@ Without noticing, they should optimize their behavior around maximizing stimulat
 
 The player experience should be:
 
-1. Land on **Start Page** (how-to, accessibility, credits) → PLAY.
+1. Land on **Start Page** (how-to, accessibility, Credits link → modal) → PLAY.
 2. Brief **Loading** splash (starter pack preload) → **Playing**.
 3. Discover stimulation.
 4. Switch attention rapidly.

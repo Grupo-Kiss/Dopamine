@@ -117,7 +117,7 @@ Responsibilities
 - show title / brand
 - brief how-to-play
 - Accessibility Mode toggle (persisted locally)
-- credits entry point
+- credits entry point (**Credits** link → Credits Modal; see `13`)
 - PLAY
 
 English system UI. Presentation in `09_game_feel.md`.
@@ -324,7 +324,7 @@ Examples
 - glows
 - shakes
 
-Also surface adapted Start Page info blocks (brief how-to, accessibility, credits) as specified in `09_game_feel.md`.
+Also surface adapted Start Page info blocks (brief how-to, accessibility, **Credits** link → Credits Modal) as specified in `09_game_feel.md` / `13`.
 
 The satire intentionally encourages immediate replay.
 
@@ -545,8 +545,7 @@ Loop
 
 - next video
 - like
-- comment
-- share
+- repost
 
 Pulse
 
@@ -559,11 +558,12 @@ Wave
 
 - skip
 - like
-- playlist interaction
+- accept recommendation
 
 Echo
 
 - playback interaction
+- react / subscribe
 
 Alerts
 
@@ -696,7 +696,7 @@ If every condition is satisfied:
 
 Focus Chain +1
 
-Combo may increase.
+Arcade **Combo** may also tick if the action qualifies under the separate Combo window (`06`) — Combo is not Focus Chain.
 
 Multipliers are recalculated.
 

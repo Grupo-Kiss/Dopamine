@@ -17,8 +17,12 @@ The person at the controls, inhabiting the addicted agent who must keep seeking 
 _Avoid_: Observer, manager, operator (of someone else's addiction)
 
 **Start Page**:
-Pre-Match hub (global game state): title, brief how-to-play, Accessibility Mode toggle, credits, and PLAY. English system UI. No Dopamine drain. Feel in `09_game_feel.md`; state machine in `02_gameplay_core.md`.
-_Avoid_: Instant boot into Playing with no options
+Pre-Match hub (global game state): title, brief how-to-play, Accessibility Mode toggle, **Credits** link (opens Credits Modal — long attribution list), and PLAY. English system UI. No Dopamine drain. Feel in `09_game_feel.md`; state machine in `02_gameplay_core.md`; credits rules in `13_credits_and_legal.md`.
+_Avoid_: Instant boot into Playing with no options; dumping the full attribution list onto the hub itself
+
+**Credits Modal**:
+Scrollable overlay opened from Start Page / Game Over Credits links. Holds game blurb, long third-party media list, OSS/fonts, provider notices, satire disclaimer. Closing returns to the hub; does not start a Match.
+_Avoid_: Full-page credits route that replaces the hub; in-Match permanent watermark bars
 
 **Loading**:
 Splash + starter-pack preload after PLAY / PLAY AGAIN. Validates manifests, picks Minigame and layout shuffle, then transitions to Playing. Details in `02` / `08`.
@@ -82,8 +86,8 @@ A readable warning sticker that current APM is approaching the Burnout threshold
 _Avoid_: Surprise Burnout with no approach signal
 
 **Recovery**:
-State immediately after Burnout where gaining/keeping Dopamine is harder (faster drain and related penalties). Burnout cannot retrigger until Recovery ends. Completing Recovery raises the next Burnout APM threshold.
-_Avoid_: Cooldown (as the domain name for this state)
+State immediately after Burnout where gaining/keeping Dopamine is harder (**faster drain** and optionally **reduced gains** — never direct Dopamine subtraction). Burnout cannot retrigger until Recovery ends. Completing Recovery raises the next Burnout APM threshold.
+_Avoid_: Cooldown (as the domain name for this state); calling Recovery effects “penalties” that subtract Dopamine
 
 **Active Window**:
 The window currently receiving meaningful gameplay interaction. Hover or bare keyboard focus alone does not change it; valid interactions and window-navigation shortcuts do.

@@ -30,7 +30,7 @@ Examples include:
 
 - Dopamine drain
 - Event frequency
-- FOMO frequency
+- Attention Request / FOMO-like urgency frequency
 - Notification frequency
 - Minigame intensity
 - Visual stimulation

@@ -159,10 +159,10 @@ src/
   audio/          # Web Audio mixer buses
   content/        # manifest loaders, preload queue (reads shipped assets)
   config/
-  tests/          # or co-located *.test.ts — decide in 11/12; prefer co-located
+  testing/        # shared fakes; prefer co-located *.test.ts(x) beside modules
 ```
 
-Repo-root `content/` stays the human drop zone.
+Repo-root `content/` stays the human drop zone. Credits Modal component under `components/` (`13`).
 
 ---
 

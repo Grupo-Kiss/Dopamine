@@ -34,7 +34,7 @@ Documentation-first, then TDD — not the reverse (ADR-0001).
 | E2E smoke | **Playwright** (optional until core is green) | Start Page → PLAY → Loading → Playing visible |
 | CI | `pnpm test` (+ lint/build) | Required; E2E optional job |
 
-Prefer **co-located** `*.test.ts` / `*.test.tsx` next to the module under test (`10`). Shared fixtures live under `src/test/` or `src/testing/`.
+Prefer **co-located** `*.test.ts` / `*.test.tsx` next to the module under test (`10`). Shared fixtures live under `src/testing/`.
 
 ---
 
