@@ -8,6 +8,7 @@ Short reminders. Remove when done.
 - [ ] You will supply **high-fidelity graphics** (specs to develop + ready-to-use files) — drop into the paths in `09_game_feel.md` / `08_content.md`
 - [ ] Replace or approve mid-fi mockups in `content/mockups/`
 - [ ] Start with **screen hi-fi mockups**, then roll down (windows → HUD → minigames → media) — full checklist in `09`
+- [ ] Hi-fi generation prompts stay **out of the repo** (local / Gemini Canvas only)
 
 ## Defs series
 
