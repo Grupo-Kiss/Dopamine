@@ -13,16 +13,17 @@ Short reminders. Remove when done.
 - [x] `00_IMPLEMENTATION_GUIDE.md` — re-populated for current structure (`content/`, Start Page, mockups, SSOT)
 - [x] Spot-check `01`–`09` vs `CONTEXT.md` (Focus Chain quality tiers; `Y`=Echo / `R`=Repost; Start Page state; Discovery ≠ Anticipation)
 
-## Next docs
+## Defs series
 
 - [x] `10_tech.md`
 - [x] `11_testing_strategy.md`
 - [x] `12_coding_rules.md`
-- [ ] `13_credits_and_legal.md`
+- [x] `13_credits_and_legal.md` — **planned defs complete**
 
 ## Later development
 
 - [ ] **You:** populate `.env` / `.env.local` with provider keys when enabling APIs (`PIXABAY_API_KEY`, `PEXELS_API_KEY`, `JAMENDO_CLIENT_ID` per `10_tech.md` / `08`) — never commit secrets; keep providers `enabled: false` until keys + legal OK
+- [ ] Run human checklist in `13_credits_and_legal.md` before release / before enabling APIs
 - Pulse ~100 template posts (`content/pulse/posts.json`)
 - SFX + `burnout_grunge.png` where listed in `09`
 - APIs (Pixabay/Pexels/Jamendo) only with keys + legal OK

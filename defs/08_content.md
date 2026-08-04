@@ -4,7 +4,7 @@
 
 This document defines **what media and text content** each window needs, where it comes from, how it is licensed, how it is stored locally, optional APIs, splash/preload behaviour, and how Alerts are generated.
 
-Gameplay rules stay in `02`–`05`. Feel/presentation stays in `09_game_feel.md`. Legal attribution is finalized in `13_credits_and_legal.md`.
+Legal attribution: `13_credits_and_legal.md`. Gameplay rules stay in `02`–`05`. Feel/presentation stays in `09_game_feel.md`.
 
 ---
 

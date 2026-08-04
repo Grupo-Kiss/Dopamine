@@ -41,7 +41,7 @@ During a coding slice: re-read the **owning** gameplay/balance doc for the featu
 | `10_tech.md` | Done | Stack, architecture, audio, content load, env, deploy |
 | `11_testing_strategy.md` | Done | TDD map, pyramid, determinism, CI |
 | `12_coding_rules.md` | Done | Code conventions, boundaries, TDD daily practice |
-| `13_credits_and_legal.md` | **Next** | Attribution and license obligations |
+| `13_credits_and_legal.md` | Done | Attribution, licenses, credits UI, release checklist |
 
 Handoff for fresh chats: `HANDOFF.md`.
 
@@ -95,7 +95,7 @@ Document responsibilities:
 | Implementation stack | `10_tech.md` |
 | Testing approach | `11_testing_strategy.md` + ADR-0001 |
 | Code conventions | `12_coding_rules.md` |
-| Credits / legal | `13_credits_and_legal.md` (forthcoming) |
+| Credits / legal | `13_credits_and_legal.md` |
 
 ---
 
@@ -221,7 +221,7 @@ Do not treat the Loading splash as the only credits surface.
 
 All third-party assets must carry attribution data in manifests / credits store.
 
-Detailed attribution rules: `13_credits_and_legal.md` (forthcoming). Until then, follow hard rules in `08_content.md` (no copyright risk; APIs default off).
+Detailed attribution rules: `13_credits_and_legal.md`. Content hard rules also in `08_content.md` (no copyright risk; APIs default off).
 
 ---
 
