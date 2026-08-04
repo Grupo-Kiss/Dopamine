@@ -14,6 +14,19 @@ Canonical glossary: `CONTEXT.md` (repo root).
 
 Hard process choices: `docs/adr/` (notably TDD-after-docs).
 
+### How development uses this order
+
+The numbered defs teach **what to build** (domain → feel → stack). That is intentional: an agent must understand Dopamine, Focus Chain, windows, and layout before writing useful tests.
+
+**How to build** is fixed up front, not discovered at `11`:
+
+1. Finish / respect the docs slice (`00`–relevant specs).
+2. Every behavior change is **TDD**: failing test → minimal code → refactor (`docs/adr/0001-tdd-after-docs.md`).
+3. `11_testing_strategy.md` is the **coverage map** (what to lock, pyramid, determinism) — read it before scaffolding tests, but do not wait until “the end of the handbook” to adopt TDD. The Pre-Implementation Gate below already requires it.
+4. `12_coding_rules.md` is daily code practice while staying on that cadence.
+
+During a coding slice: re-read the **owning** gameplay/balance doc for the feature, then write the failing test (`11` order), then implement (`10` / `12`). Do not implement from memory of `01`–`09` alone without a test.
+
 | Doc | Status | Responsibility |
 | --- | --- | --- |
 | `01_project.md` | Done | Vision, pillars, platform, success criteria |

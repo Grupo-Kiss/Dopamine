@@ -4,7 +4,9 @@
 
 This document defines **how behavior is verified**: TDD cadence, test layers, what must be covered from the specs, tooling, determinism rules, and CI expectations.
 
-Gameplay authority: `02`–`05`. Numbers: `06`. Layout: `07`. Content: `08`. Feel: `09`. Stack: `10`. Process ADR: `docs/adr/0001-tdd-after-docs.md`.
+You should already treat TDD as mandatory from `00_IMPLEMENTATION_GUIDE.md` and `docs/adr/0001-tdd-after-docs.md`. This file does **not** introduce the process late — it maps **what to test** and in what order once you start a coding slice.
+
+Gameplay authority: `02`–`05`. Numbers: `06`. Layout: `07`. Content: `08`. Feel: `09`. Stack: `10`. Coding practice: `12`.
 
 ---
 
@@ -17,6 +19,8 @@ Gameplay authority: `02`–`05`. Numbers: `06`. Layout: `07`. Content: `08`. Fee
 5. Do not ship behavior that only exists in UI polish without a core or contract test when the rule is gameplay-critical.
 
 Documentation-first, then TDD — not the reverse (ADR-0001).
+
+**Per feature:** open the owning def (`02`–`09` as relevant) → write the failing test → implement → only then move to the next behavior. Do not batch-implement a whole window and “add tests later.”
 
 ---
 

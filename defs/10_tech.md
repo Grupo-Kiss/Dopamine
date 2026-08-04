@@ -4,7 +4,7 @@
 
 This document defines **how the game is built**: stack, architecture boundaries, rendering, audio, content loading, config/env, build/deploy, and browser targets.
 
-Gameplay rules: `02`–`05`. Numbers: `06`. Layout: `07`. Content: `08`. Feel: `09`. Testing details: `11_testing_strategy.md`. Code style: `12_coding_rules.md` (forthcoming).
+Gameplay rules: `02`–`05`. Numbers: `06`. Layout: `07`. Content: `08`. Feel: `09`. Testing details: `11_testing_strategy.md`. Code style: `12_coding_rules.md`.
 
 ---
 
