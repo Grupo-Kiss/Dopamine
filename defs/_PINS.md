@@ -33,3 +33,5 @@ Short reminders. Remove when done.
 - Conscious call on brand-adjacent palette hexes in `09` (Pulse/Wave) before high-fi lock
 - Discovery (unheard novelty) ≠ Anticipation (waiting for payoff) — keep separate in code/tests
 - Credits = modal from hub links (not a full-page dump)
+- **Cross-surface look (owner brief):** dark stage + soft grid + glowing orbs; OS-window chrome for content; **CRT / old tube-monitor overlay** as a shared screen effect (not per-window decoration only); Start Page framed as a window (“browser in browser”); secondary chrome low-contrast in corners; PLAY/title dominate; Active Window gets animated outer glow in Playing; stage is chaotic attention pressure — never corporate/minimal website
+- **Tunables home:** game title string, balance numbers, and other owner-editable values live in one easy-to-find config area (not scattered) — title may change later; default title **Dopamine**

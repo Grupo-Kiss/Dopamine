@@ -37,8 +37,12 @@ Neighboring arcade or idle games cannot truthfully claim this mechanism: the pla
 
 ## Brand Commitments
 
-- Product name: **Dopamine**.
-- Voice: arcade-first satire through exaggeration; stylized, cartoon, colorful, expressive — not photorealistic OS/app clones.
+- Product name: **Dopamine** (string must be a single tunable; owner may rename later).
+- Voice: arcade-first satire through exaggeration; stylized, cartoon, colorful, expressive — not photorealistic OS/app clones. Not a traditional website, corporate, or plain-minimal look — energizing game hierarchy.
+- Shared stage language (all screens): dark theme, soft background grid, glowing orbs; content lives in OS-window chrome; a CRT / old tube-monitor overlay sits above the stage to bind the arcade cabinet feel.
+- Start Page: CTA-first dopamine rush (learn by doing); brief how-to / Accessibility / Credits stay low-contrast in corners; PLAY leads; surface may itself be framed as a window.
+- Playing: Active Window uses a highlighted outer glow (slight animation); stage chaos is intentional attention competition.
+- Accessibility Mode is **reduced motion only** (per `defs/09`) — not a light-theme switch unless the owner later decides otherwise.
 - Any third-party or stock-platform media must remain attributable; attribution lives in the Credits Modal (and credits data model in `defs/13_credits_and_legal.md`).
 
 ## Evidence on Hand
