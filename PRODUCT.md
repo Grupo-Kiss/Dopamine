@@ -46,6 +46,7 @@ Neighboring arcade or idle games cannot truthfully claim this mechanism: the pla
 - Accessibility Mode is **reduced motion only** (per `defs/09`) — not a light-theme switch unless the owner later decides otherwise.
 - Any third-party or stock-platform media must remain attributable; attribution lives in the Credits Modal (and credits data model in `defs/13_credits_and_legal.md`).
 - Rejected flavors while searching the world: heavy CRT nostalgia, childish pinball clutter, stiff phosphor-only CTAs, corporate website plainness.
+- **Locked visual world (Start Page establishes):** Collider Attention Display as *inspiration* — concentric bloom / collision energy on a GitHub-dark violet stage — **not** a literal particle-detector UI. **No track lines connecting nodes.** Start Page stays sparse (title + PLAY lead; secondary UI quiet in corners). Quality bar: `.impeccable/quality-bar/particle-detector-event-display.webp`.
 
 ## Evidence on Hand
 
