@@ -57,7 +57,7 @@ components:
 
 ## Overview
 
-Dopamine’s shell is a **GitHub-dark stage** with **violet/magenta collision blooms** and a **subtle CRT overlay**. Content lives in **OS-window chrome**. Arcade punch (title wordmark + PLAY) sits on top of calm dark panels. Start Page establishes the world: sparse, CTA-first, centered window.
+Dopamine’s shell is a **GitHub-dark stage** with **violet/magenta collision blooms** and a **full-screen CRT glass overlay** (scanlines, convex vignette, lo-fi noise) above every surface. Content lives in shared **OS-window chrome**. An **animated grid** (ambient pulse + cursor-following glow) replaces concentric rings. Arcade punch (title wordmark + PLAY) sits on calm dark panels. Start Page establishes the world: sparse, CTA-first, centered window; Credits reuses the same window chrome over a dimmed stage.
 
 ## Colors
 
@@ -98,9 +98,9 @@ Dopamine’s shell is a **GitHub-dark stage** with **violet/magenta collision bl
 
 ## Do's and Don'ts
 
-- Do keep secondary UI quiet in corners; let title + PLAY dominate.
-- Do keep CRT subtle; do not rebuild heavy tube nostalgia.
-- Do keep concentric blooms as glow rings only — **no connecting track lines**.
+- Do keep CRT as a **full-screen top layer** (not on individual controls).
+- Do keep concentric **grid** atmosphere — **no connecting track lines or ring diagrams**.
+- Don’t put scanlines on PLAY or other controls; the CRT overlay owns that language.
 - Don’t ship corporate marketing sections, feature cards, or info-dense Start Page copy.
 - Don’t introduce a light theme via Accessibility Mode (motion only).
 - Don’t put real-platform logos in window skins.

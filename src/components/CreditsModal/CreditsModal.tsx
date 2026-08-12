@@ -1,5 +1,7 @@
 import { useEffect, useId, useRef } from 'react'
 import { GAME_TITLE } from '../../config/tunables'
+import { OsWindowChrome } from '../OsWindow/OsWindowChrome'
+import '../OsWindow/OsWindow.css'
 import './CreditsModal.css'
 
 type CreditsModalProps = {
@@ -27,24 +29,27 @@ export function CreditsModal({ onClose }: CreditsModalProps) {
         aria-label="Close credits"
         onClick={onClose}
       />
-      <div
-        className="credits-modal__dialog"
+      <section
+        className="os-window credits-modal__window"
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
       >
-        <header className="credits-modal__header">
-          <h2 id={titleId}>{GAME_TITLE} — Credits</h2>
-          <button
-            ref={closeRef}
-            type="button"
-            className="credits-modal__close"
-            onClick={onClose}
-          >
-            Close
-          </button>
-        </header>
-        <div className="credits-modal__body">
+        <OsWindowChrome title={`${GAME_TITLE} — Credits`} />
+        <div className="os-window__body credits-modal__body">
+          <div className="credits-modal__toolbar">
+            <h2 id={titleId} className="credits-modal__heading">
+              Credits
+            </h2>
+            <button
+              ref={closeRef}
+              type="button"
+              className="credits-modal__close"
+              onClick={onClose}
+            >
+              Close
+            </button>
+          </div>
           <p>
             Frontend-only web arcade satire of the attention economy. Not affiliated
             with any real social or streaming platform.
@@ -60,7 +65,7 @@ export function CreditsModal({ onClose }: CreditsModalProps) {
             <li>React, Vite, and other OSS — see package manifests</li>
           </ul>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

@@ -40,13 +40,9 @@ Neighboring arcade or idle games cannot truthfully claim this mechanism: the pla
 - Product name: **Dopamine** (string must be a single tunable; owner may rename later).
 - Voice: arcade-first satire with punchy retro-action energy (Broforce / Kung Fury / Metal Slug / Mortal Kombat) — not cute/childish. Not a traditional website or corporate-minimal look; energizing hierarchy.
 - Shell UI: dark, structured chrome in the vein of GitHub’s dark landing (violet glows, calm panels) carrying the arcade layer on top.
-- Shared stage: dark theme; soft grid; **blurred glowing gradient blooms** in the background (not literal ball orbs); content in OS-window chrome; a **subtle** CRT / tube overlay (light scanline/vignette only).
-- Start Page: CTA-first dopamine rush (learn by doing); brief how-to / Accessibility / Credits stay low-contrast in corners; title + PLAY carry the punch; surface may itself be framed as a window. Prefer Phosphor-like tight structure with Pinball-like name/CTA impact — without stiff mono CTAs or childish lamp clutter.
-- Playing: Active Window uses a highlighted outer glow (slight animation); stage chaos is intentional. Each window keeps its own skin (Wave follows Spotify-like dark player grammar without real logos/wordmarks).
-- Accessibility Mode is **reduced motion only** (per `defs/09`) — not a light-theme switch unless the owner later decides otherwise.
-- Any third-party or stock-platform media must remain attributable; attribution lives in the Credits Modal (and credits data model in `defs/13_credits_and_legal.md`).
-- Rejected flavors while searching the world: heavy CRT nostalgia, childish pinball clutter, stiff phosphor-only CTAs, corporate website plainness.
-- **Locked visual world (Start Page establishes):** Collider Attention Display as *inspiration* — concentric bloom / collision energy on a GitHub-dark violet stage — **not** a literal particle-detector UI. **No track lines connecting nodes.** Start Page stays sparse (title + PLAY lead; secondary UI quiet in corners). Quality bar: `.impeccable/quality-bar/particle-detector-event-display.webp`.
+- Shared stage: dark theme; soft **animated grid** (cursor-reactive glow patches; not concentric rings); **blurred glowing gradient blooms** in the background (with gentle motion); content in OS-window chrome; a **subtle full-screen CRT overlay** (scanlines + tube vignette/convex glass + lo-fi noise) above all UI — never localized onto controls.
+- Start Page: CTA-first dopamine rush (learn by doing); brief how-to / Accessibility / Credits stay low-contrast in corners; title + PLAY carry the punch; surface may itself be framed as a window. Prefer Phosphor-like tight structure with Pinball-like name/CTA impact — without stiff mono CTAs or childish lamp clutter. Credits Modal uses the **same OS window chrome** as the Start window over a dimmed stage.
+- **Locked visual world (Start Page establishes):** Collider Attention Display as *inspiration* — bloom energy on a GitHub-dark violet stage with an interactive grid — **not** a literal particle-detector UI. **No track lines / concentric ring diagrams.** Start Page stays sparse (title + PLAY lead; secondary UI quiet in corners). Quality bar: `.impeccable/quality-bar/particle-detector-event-display.webp`.
 
 ## Evidence on Hand
 
