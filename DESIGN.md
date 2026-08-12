@@ -82,7 +82,10 @@ Dopamine’s shell is a **GitHub-dark stage** with **violet/magenta collision bl
 
 - Window: soft deep shadow + faint violet outer glow.
 - PLAY: metallic frame + inset face glow.
-- CRT: light vignette + fine scanlines over the whole stage (`soft-light`).
+- CRT: full-screen barrel displacement (SVG map) + scanlines + vignette + lo-fi noise above all UI.
+- Stage energy: animated grid, drifting blooms, ghost windows, arcade stickers, streaks — never peaceful empty negative space.
+- PLAY: hunger scale grows exponentially while idle; strong hover snap; no local scanlines.
+- Start window: occasional position glitch pulses (disabled under Accessibility Mode).
 
 ## Shapes
 
