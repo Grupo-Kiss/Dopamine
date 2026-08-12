@@ -38,12 +38,14 @@ Neighboring arcade or idle games cannot truthfully claim this mechanism: the pla
 ## Brand Commitments
 
 - Product name: **Dopamine** (string must be a single tunable; owner may rename later).
-- Voice: arcade-first satire through exaggeration; stylized, cartoon, colorful, expressive — not photorealistic OS/app clones. Not a traditional website, corporate, or plain-minimal look — energizing game hierarchy.
-- Shared stage language (all screens): dark theme, soft background grid, glowing orbs; content lives in OS-window chrome; a CRT / old tube-monitor overlay sits above the stage to bind the arcade cabinet feel.
-- Start Page: CTA-first dopamine rush (learn by doing); brief how-to / Accessibility / Credits stay low-contrast in corners; PLAY leads; surface may itself be framed as a window.
-- Playing: Active Window uses a highlighted outer glow (slight animation); stage chaos is intentional attention competition.
+- Voice: arcade-first satire with punchy retro-action energy (Broforce / Kung Fury / Metal Slug / Mortal Kombat) — not cute/childish. Not a traditional website or corporate-minimal look; energizing hierarchy.
+- Shell UI: dark, structured chrome in the vein of GitHub’s dark landing (violet glows, calm panels) carrying the arcade layer on top.
+- Shared stage: dark theme; soft grid; **blurred glowing gradient blooms** in the background (not literal ball orbs); content in OS-window chrome; a **subtle** CRT / tube overlay (light scanline/vignette only).
+- Start Page: CTA-first dopamine rush (learn by doing); brief how-to / Accessibility / Credits stay low-contrast in corners; title + PLAY carry the punch; surface may itself be framed as a window. Prefer Phosphor-like tight structure with Pinball-like name/CTA impact — without stiff mono CTAs or childish lamp clutter.
+- Playing: Active Window uses a highlighted outer glow (slight animation); stage chaos is intentional. Each window keeps its own skin (Wave follows Spotify-like dark player grammar without real logos/wordmarks).
 - Accessibility Mode is **reduced motion only** (per `defs/09`) — not a light-theme switch unless the owner later decides otherwise.
 - Any third-party or stock-platform media must remain attributable; attribution lives in the Credits Modal (and credits data model in `defs/13_credits_and_legal.md`).
+- Rejected flavors while searching the world: heavy CRT nostalgia, childish pinball clutter, stiff phosphor-only CTAs, corporate website plainness.
 
 ## Evidence on Hand
 
