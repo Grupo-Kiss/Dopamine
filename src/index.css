@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-stage: #0d1117;
+  --color-panel: #161b22;
+  --color-panel-edge: #30363d;
+  --color-text: #c9d1d9;
+  --color-text-dim: #6e7681;
+  --color-violet: #6e40c9;
+  --color-violet-hot: #a371f7;
+  --color-play: #ff4d1a;
+  --color-play-hot: #ff8c00;
+  --font-ui: 'Public Sans', 'Segoe UI', sans-serif;
+  --font-display: 'Teko', 'Arial Narrow', sans-serif;
+  --radius-window: 14px;
+  --radius-control: 10px;
+  --radius-chip: 8px;
+}
+
 html,
 body,
 #root {
@@ -12,8 +29,9 @@ body,
 }
 
 body {
-  background: #0d1117;
-  color: #c9d1d9;
+  background: var(--color-stage);
+  color: var(--color-text);
+  font-family: var(--font-ui);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }

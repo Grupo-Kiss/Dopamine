@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-12T15:43:00.000Z",
+  "title": "Design System: Dopamine",
+  "extensions": {
+    "colorMeta": {
+      "stage": { "role": "neutral", "displayName": "Stage", "tonalRamp": ["#010409", "#0d1117", "#161b22", "#21262d", "#30363d", "#484f58", "#6e7681", "#c9d1d9"] },
+      "violet": { "role": "secondary", "displayName": "Collision Violet", "tonalRamp": ["#2a1548", "#3d1f6b", "#6e40c9", "#8957e5", "#a371f7", "#bc8cff", "#d2a8ff", "#ecd8ff"] },
+      "play": { "role": "primary", "displayName": "Play Heat", "tonalRamp": ["#7a1800", "#b82800", "#ff4d1a", "#ff6a2e", "#ff8c00", "#ffb347", "#ffd08a", "#ffe8c2"] }
+    },
+    "typographyMeta": {
+      "ui": { "displayName": "UI", "purpose": "Chrome, credits, labels." },
+      "display-play": { "displayName": "Play Display", "purpose": "PLAY CTA face only." },
+      "label-dim": { "displayName": "Dim Label", "purpose": "Corner secondary controls." }
+    },
+    "shadows": [
+      { "name": "window", "value": "0 24px 80px rgba(0,0,0,0.55), 0 0 60px rgba(110,64,201,0.2)", "purpose": "OS window lift + violet bloom." },
+      { "name": "play", "value": "0 10px 28px rgba(0,0,0,0.45), 0 0 24px rgba(255,77,26,0.25)", "purpose": "PLAY heat glow." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "PLAY hover settle." },
+      { "name": "bloom-breathe", "value": "6s ease-in-out infinite", "purpose": "Soft bloom pulse; disabled under Accessibility Mode." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "PLAY Button",
+      "kind": "button",
+      "refersTo": "play-button",
+      "description": "Primary Start Page / Game Over CTA.",
+      "html": "<button class=\"ds-play\" type=\"button\"><span class=\"ds-play__face\">PLAY</span></button>",
+      "css": ".ds-play{appearance:none;border:0;cursor:pointer;padding:4px;border-radius:10px;background:linear-gradient(180deg,#9a9a9a 0%,#3a3a3a 18%,#1a1a1a 55%,#6a6a6a 100%);box-shadow:0 10px 28px rgba(0,0,0,.45),0 0 24px rgba(255,77,26,.25)}.ds-play__face{display:grid;place-items:center;min-height:3.6rem;border-radius:7px;font-family:Teko,Arial Narrow,sans-serif;font-size:2.4rem;font-weight:600;letter-spacing:.12em;color:#f5f0ea;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.18) 0,rgba(0,0,0,.18) 2px,transparent 2px,transparent 4px),linear-gradient(180deg,#ff8c00 0%,#ff4d1a 55%,#b82800 100%)}.ds-play:hover{transform:translateY(-2px) scale(1.02)}.ds-play:focus-visible{outline:2px solid #a371f7;outline-offset:3px}"
+    },
+    {
+      "name": "OS Window",
+      "kind": "custom",
+      "refersTo": "os-window",
+      "description": "Shell chrome for Start Page and later windowed surfaces.",
+      "html": "<section class=\"ds-window\"><header class=\"ds-window__chrome\"><span class=\"ds-window__dots\" aria-hidden=\"true\"></span><span class=\"ds-window__chip\">Dopamine</span></header><div class=\"ds-window__body\">Content</div></section>",
+      "css": ".ds-window{width:min(520px,92vw);background:linear-gradient(180deg,#1c2128,#161b22);border:1px solid #30363d;border-radius:14px;box-shadow:0 24px 80px rgba(0,0,0,.55),0 0 60px rgba(110,64,201,.2);overflow:hidden;color:#c9d1d9;font-family:Public Sans,Segoe UI,sans-serif}.ds-window__chrome{display:flex;align-items:center;gap:.75rem;padding:.65rem .85rem;background:#0d1117;border-bottom:1px solid #30363d}.ds-window__chip{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:#6e7681}.ds-window__body{padding:1.75rem 1.25rem 2.25rem}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Centered collision bloom — sparse CTA on a dark violet stage",
+    "overview": "GitHub-dark shell carries Broforce/MK arcade punch. Collision blooms and subtle CRT bind the arcade monitor feel without childish ornament or track-line diagrams.",
+    "keyCharacteristics": [
+      "Dark stage + violet blooms",
+      "OS-window chrome",
+      "Sparse Start Page hierarchy",
+      "Subtle CRT overlay"
+    ],
+    "rules": [
+      { "name": "No track lines", "body": "Concentric glow only; never connector diagrams on the stage.", "section": "layout" },
+      { "name": "Corner secondary", "body": "Accessibility and Credits stay low-contrast in corners.", "section": "layout" }
+    ],
+    "dos": [
+      "Do keep title + PLAY dominant",
+      "Do keep CRT subtle",
+      "Do put owner knobs in src/config/tunables.ts"
+    ],
+    "donts": [
+      "Don't add feature cards to Start Page",
+      "Don't heavy CRT nostalgia",
+      "Don't use Accessibility Mode as a light theme"
+    ]
+  }
+}
