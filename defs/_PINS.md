@@ -23,6 +23,7 @@ Short reminders. Remove when done.
 - SFX + `burnout_grunge.png` where listed in `09`
 - APIs (Pixabay/Pexels/Jamendo) only with keys + legal OK
 - Create empty drop dirs if missing: `content/wave/high|boring`, `loop/clips`, `echo/audio|video`, `minigames/_shared/`
+- [ ] **Burnout overlay + Recovery overlay:** defer design; owner will supply **external visual references** before those surfaces are designed (do not invent their look from mid-fi alone)
 
 ## Ongoing
 
