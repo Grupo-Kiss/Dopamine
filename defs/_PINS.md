@@ -23,6 +23,7 @@ Short reminders. Remove when done.
 - SFX + `burnout_grunge.png` where listed in `09`
 - APIs (Pixabay/Pexels/Jamendo) only with keys + legal OK
 - Create empty drop dirs if missing: `content/wave/high|boring`, `loop/clips`, `echo/audio|video`, `minigames/_shared/`
+- [ ] **Burnout overlay + Recovery overlay:** defer design; owner will supply **external visual references** before those surfaces are designed (do not invent their look from mid-fi alone)
 
 ## Ongoing
 
@@ -32,3 +33,9 @@ Short reminders. Remove when done.
 - Conscious call on brand-adjacent palette hexes in `09` (Pulse/Wave) before high-fi lock
 - Discovery (unheard novelty) ≠ Anticipation (waiting for payoff) — keep separate in code/tests
 - Credits = modal from hub links (not a full-page dump)
+- **Cross-surface look (owner brief):** dark stage; soft grid; **blurred glowing gradient blooms** (not literal orbs); OS-window chrome; **subtle CRT overlay**; Start Page framed as a window; secondary chrome low-contrast in corners; PLAY/title dominate; Active Window glow in Playing
+- **Arcade layer refs:** Broforce, Kung Fury, Metal Slug, Mortal Kombat — punchy retro-action, not cute/childish
+- **Shell UI refs:** GitHub dark landing — structured dark chrome + violet glows under the arcade punch
+- **Per-window skins:** each window keeps its own grammar (Wave ≈ Spotify-like dark player — style only, no logos/wordmarks)
+- **Tunables home:** game title string, balance numbers, and other owner-editable values in one easy-to-find config area — title may change later; default **Dopamine**
+- [ ] **Burnout overlay + Recovery overlay:** defer; owner supplies **external visual references** before those surfaces are designed
