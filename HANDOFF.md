@@ -1,13 +1,14 @@
-# Handoff — Dopamine (docs complete → asset review → TDD)
+# Handoff — Dopamine (docs complete → agent hi-fi → TDD)
 
-Use this file + `CONTEXT.md` + `defs/_PINS.md` so a new chat does not need the old thread.
+Use this file + `CONTEXT.md` + `defs/_PINS.md` + `PRODUCT.md` + `DESIGN.md` so a new chat does not need the old thread.
 
 ## Repo / branch
 
 - Repo: `Grupo-Kiss/Dopamine`
-- **Canonical docs branch after merge:** `develop` (this arc’s work was `cursor/defs-consistency-pass-d990`, PR #4)
+- **Canonical docs branch:** `develop`
 - Glossary: `CONTEXT.md`
 - Pins: `defs/_PINS.md`
+- Visual lock: `PRODUCT.md`, `DESIGN.md`, `.impeccable/` (salvaged from closed PR #5)
 - Specs: `defs/00_IMPLEMENTATION_GUIDE.md` … `defs/13_credits_and_legal.md` — **planned series complete**
 - ADR: `docs/adr/0001-tdd-after-docs.md`
 - Content drop zones: `content/` (icons, mockups, minigames, loop/pulse/wave/echo/alerts)
@@ -32,56 +33,54 @@ Match clock / Dopamine drain start in **Playing**, not at PLAY press.
 | Doc | Role |
 | --- | --- |
 | `CONTEXT.md` | Glossary |
+| `PRODUCT.md` / `DESIGN.md` | Impeccable product + visual lock |
 | `00` | Reading order, TDD-early process, structure, asset gate |
-| `01` | Vision / pillars |
-| `02` | Global rules, states, Dopamine, Focus Chain, Burnout, input (`R`=Repost, `Y`=Echo) |
-| `03` | Loop / Pulse / Wave / Echo / Alerts |
-| `04` | Lane Defender, Block Cascade, Endless Runner |
-| `05` | Continuous difficulty |
-| `06` | Provisional balance constants |
-| `07` | Layout |
-| `08` | Content packs, preload, optional APIs (default off) |
-| `09` | Feel, palettes, mockups checklist, asset drop paths |
-| `10` | Tech stack / architecture |
-| `11` | Testing strategy (coverage map; TDD process already in `00`/ADR) |
-| `12` | Coding rules |
-| `13` | Credits Modal, attribution, legal checklist |
+| `01`–`13` | Vision through credits/legal (see prior map) |
 
 **Process:** Reading order teaches domain; TDD is mandatory from `00`/ADR before coding. Per feature: owning def → failing test → implement (`11` / `12`).
 
 ## Done this arc
 
 - Consistency + full defs `00`–`13`
-- Discovery ≠ Anticipation corrected; Start Page in state machine; Credits Modal UX
 - Mid-fi mockups + starter icons/minigame SVGs under `content/`
-- Pins: asset review, `.env` population, legal checklist
-- Gemini prompt was drafted for hi-fi generation but **must not live in the repo** (generate offline / local only)
+- Closed stale drafts: PR #1 (skills already on `develop`), PR #5 (Start Page prototype — design lock salvaged; scaffold not merged)
+- Owner cannot produce hi-fi alone — **agent produces**, owner **approves**
 
 ## Hard gate
 
-**Do not start feature coding / scaffold** until the user finishes **asset review** and supplies **high-fi graphics** into paths in `09` / `08`.
+**Do not start feature coding / scaffold** until hi-fi mockups replace mid-fi under `content/mockups/` (and icons/minigame starters as needed) and the owner has approved them.
 
-User plan: start broad with **screen hi-fi mockups**, then roll down (windows → HUD → minigames → media). Checklist in `09_game_feel.md`.
+**Who makes assets:** a Cursor Cloud Agent with the **Impeccable** design harness (same approach as the closed PR #5 Start Page pass), using `PRODUCT.md` / `DESIGN.md` / `.impeccable/` + mid-fi refs in `content/mockups/`. Owner reviews screenshots / dropped files; does not hand-draw.
+
+Order (from `09`): screen hi-fi mockups → windows → HUD → minigames → media beds. Burnout/Recovery overlays still need external visual refs before design (`_PINS`).
 
 ## After assets — first coding slice
 
-1. Scaffold Vite + TS + React + Vitest + pnpm (`10`)
+1. Scaffold Vite + TS + React + Vitest + pnpm (`10`) — fresh TDD scaffold; do not revive the closed PR #5 app tree wholesale
 2. TDD core state machine (Start Page → Loading → Playing → Game Over)
 3. Dopamine → Focus Chain → layout shell → …
 4. Follow `11` TDD order; keep core React-free
 
-## Human pins (from `_PINS.md`)
+## Pins summary
 
-- [ ] Hi-fi asset review / replace mid-fi mockups
+- [ ] Agent hi-fi pass → owner approve → replace mid-fi
 - [ ] Populate `.env` when enabling APIs (never commit secrets)
 - [ ] Run `13` legal checklist before release / API enable
 - Pulse ~100 templates, SFX, `burnout_grunge.png`, empty media dirs as needed
 - Palette conscious call (Pulse blue / Wave green) before high-fi lock
 
-## Suggested first message in a new Cursor chat
+## Suggested first message — hi-fi asset agent
 
 ```
-Continue Dopamine from @HANDOFF.md and @CONTEXT.md and @defs/_PINS.md.
-Docs 00–13 are on develop. I am still on high-fi asset review — do not scaffold or feature-code until I say go and drop assets.
-When I say go: scaffold per 10/11/12 and TDD the state machine first.
+Continue Dopamine from @HANDOFF.md @CONTEXT.md @PRODUCT.md @DESIGN.md @defs/_PINS.md @defs/09_game_feel.md.
+Produce hi-fi screen mockups into content/mockups/ (and icons as needed), starting with Start Page / splash / desktop layout / Game Over.
+Use Impeccable + the locked Collider-inspired GitHub-dark violet stage. Mid-fi SVGs are refs to replace, not keep.
+Do not scaffold the Vite app or feature-code until I approve the mockups.
+```
+
+## Suggested first message — after assets approved
+
+```
+Continue Dopamine from @HANDOFF.md. Hi-fi mockups are approved under content/mockups/.
+Scaffold per defs/10–12 and TDD the state machine first. Do not revive closed PR #5's app tree wholesale.
 ```
