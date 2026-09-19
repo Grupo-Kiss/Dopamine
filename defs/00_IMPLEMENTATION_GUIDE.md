@@ -42,8 +42,9 @@ During a coding slice: re-read the **owning** gameplay/balance doc for the featu
 | `11_testing_strategy.md` | Done | TDD map, pyramid, determinism, CI |
 | `12_coding_rules.md` | Done | Code conventions, boundaries, TDD daily practice |
 | `13_credits_and_legal.md` | Done | Attribution, licenses, credits UI, release checklist |
+| `14_visual_assets.md` | Done | Opus hi-fi production brief: all views, windows, icons, sprites, “3D” props |
 
-Handoff for fresh chats: `HANDOFF.md`.
+Handoff for fresh chats: `HANDOFF.md`. Visual asset pass: `14_visual_assets.md`.
 
 ---
 

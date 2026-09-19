@@ -1,21 +1,22 @@
-# Handoff — Dopamine (docs complete → agent hi-fi → TDD)
+# Handoff — Dopamine (docs complete → Opus hi-fi assets → TDD)
 
-Use this file + `CONTEXT.md` + `defs/_PINS.md` + `PRODUCT.md` + `DESIGN.md` so a new chat does not need the old thread.
+Use this file + `CONTEXT.md` + `defs/14_visual_assets.md` + `defs/_PINS.md` + `PRODUCT.md` + `DESIGN.md` so a new chat does not need the old thread.
 
 ## Repo / branch
 
 - Repo: `Grupo-Kiss/Dopamine`
-- **Canonical docs branch:** `develop`
+- **Canonical branch:** `develop`
 - Glossary: `CONTEXT.md`
+- **Visual asset brief (SSOT for this pass):** `defs/14_visual_assets.md`
 - Pins: `defs/_PINS.md`
-- Visual lock: `PRODUCT.md`, `DESIGN.md`, `.impeccable/` (salvaged from closed PR #5)
-- Specs: `defs/00_IMPLEMENTATION_GUIDE.md` … `defs/13_credits_and_legal.md` — **planned series complete**
+- Visual lock: `PRODUCT.md`, `DESIGN.md`, `.impeccable/`
+- Specs: `defs/00` … `defs/13` + `14_visual_assets.md`
 - ADR: `docs/adr/0001-tdd-after-docs.md`
-- Content drop zones: `content/` (icons, mockups, minigames, loop/pulse/wave/echo/alerts)
+- Content drop zones: `content/`
 
 ## Product (one paragraph)
 
-Frontend-only web arcade satire of the attention economy. A **Match** runs from Playing until **Dopamine** hits 0 (passive drain only — never direct penalties). Desktop masonry: Minigame | Loop-over-Wave + Pulse|Echo, vertical Dopamine bar (orange full → violet empty + glow). Mobile: Minigame + 2 random service windows. Focus Chain (decaying continue-window; Focus Ready = better quality, not required to extend). Combo stickers with boredom curve. Burnout→Recovery with escalating APM. Wave: **Discovery** (unheard tracks) ≠ **Anticipation** (wait for beat drop). Three minigames specified and must all ship; one random per Match. Credits = **scrollable modal** via link on Start Page / Game Over (`13`). Docs first, then **TDD**. Stack: Vite + TypeScript + React + Canvas 2D minigames + Web Audio (`10`).
+Frontend-only web arcade satire of the attention economy. A **Match** runs from Playing until **Dopamine** hits 0 (passive drain only — never direct penalties). Desktop masonry: Minigame | Loop-over-Wave + Pulse|Echo, vertical Dopamine bar (orange full → violet empty + glow). Mobile: Minigame + 2 random service windows. Focus Chain, Combo stickers, Burnout→Recovery. Wave: **Discovery** ≠ **Anticipation**. Three minigames all ship; one random per Match. Credits = scrollable modal. Docs first, then **TDD**. Stack: Vite + TypeScript + React + Canvas 2D + Web Audio (`10`).
 
 ## State flow
 
@@ -26,61 +27,52 @@ Boot → Start Page → (PLAY) → Loading (splash + starter pack)
               → (hub) → Start Page
 ```
 
-Match clock / Dopamine drain start in **Playing**, not at PLAY press.
+## Current phase: Opus visual assets
 
-## Docs map (SSOT)
+**Status:** Specs `00`–`13` complete. Mid-fi placeholders exist. Design lock salvaged. Owner will **not** hand-draw hi-fi.
+
+**Agent:** Cursor Cloud Agent · **Claude Opus 5** (thinking high/xhigh) · follow `defs/14_visual_assets.md` phases **A→E**.
+
+| Phase | What |
+| ---: | --- |
+| A | Start Page, Credits Modal, Splash, Game Over + shared OS chrome / brand |
+| B | Desktop + mobile Playing layouts, Dopamine bar, stickers, Burnout/Recovery |
+| C | Loop / Pulse / Wave / Echo / Alerts window chrome kits + solo mockups |
+| D | Replace `content/icons/*` |
+| E | Lane Defender, Endless Runner, Block Cascade sprites + bevelled “3D” props |
+
+**Hard rules:** No Vite scaffold / feature code. No real-platform UI clones. “3D” = cardboard cutouts + soft bevelled props for Canvas 2D (not Blender). Pause after Phase A for owner approval unless told to continue.
+
+**Out of scope now:** SFX, music beds, Loop/Echo video files (optional still placeholders only).
+
+## Docs map
 
 | Doc | Role |
 | --- | --- |
-| `CONTEXT.md` | Glossary |
-| `PRODUCT.md` / `DESIGN.md` | Impeccable product + visual lock |
-| `00` | Reading order, TDD-early process, structure, asset gate |
-| `01`–`13` | Vision through credits/legal (see prior map) |
+| `14_visual_assets.md` | **Asset production checklist + paths** |
+| `PRODUCT.md` / `DESIGN.md` / `.impeccable/` | Shell visual lock |
+| `09` | Feel language / palettes |
+| `07` | Layout slots |
+| `03` / `04` | Window & minigame behaviour (what chrome must support) |
+| `08` | Later media packs |
+| `00`–`13` | Rest of handbook |
 
-**Process:** Reading order teaches domain; TDD is mandatory from `00`/ADR before coding. Per feature: owning def → failing test → implement (`11` / `12`).
+## After assets approved — coding
 
-## Done this arc
+1. Scaffold Vite + TS + React + Vitest + pnpm (`10`) — fresh; do not revive closed PR #5 app tree wholesale
+2. TDD state machine → Dopamine → Focus Chain → layout shell
+3. Follow `11` / `12`
 
-- Consistency + full defs `00`–`13`
-- Mid-fi mockups + starter icons/minigame SVGs under `content/`
-- Closed stale drafts: PR #1 (skills already on `develop`), PR #5 (Start Page prototype — design lock salvaged; scaffold not merged)
-- Owner cannot produce hi-fi alone — **agent produces**, owner **approves**
-
-## Hard gate
-
-**Do not start feature coding / scaffold** until hi-fi mockups replace mid-fi under `content/mockups/` (and icons/minigame starters as needed) and the owner has approved them.
-
-**Who makes assets:** a Cursor Cloud Agent with the **Impeccable** design harness (same approach as the closed PR #5 Start Page pass), using `PRODUCT.md` / `DESIGN.md` / `.impeccable/` + mid-fi refs in `content/mockups/`. Owner reviews screenshots / dropped files; does not hand-draw.
-
-Order (from `09`): screen hi-fi mockups → windows → HUD → minigames → media beds. Burnout/Recovery overlays still need external visual refs before design (`_PINS`).
-
-## After assets — first coding slice
-
-1. Scaffold Vite + TS + React + Vitest + pnpm (`10`) — fresh TDD scaffold; do not revive the closed PR #5 app tree wholesale
-2. TDD core state machine (Start Page → Loading → Playing → Game Over)
-3. Dopamine → Focus Chain → layout shell → …
-4. Follow `11` TDD order; keep core React-free
-
-## Pins summary
-
-- [ ] Agent hi-fi pass → owner approve → replace mid-fi
-- [ ] Populate `.env` when enabling APIs (never commit secrets)
-- [ ] Run `13` legal checklist before release / API enable
-- Pulse ~100 templates, SFX, `burnout_grunge.png`, empty media dirs as needed
-- Palette conscious call (Pulse blue / Wave green) before high-fi lock
-
-## Suggested first message — hi-fi asset agent
+## Paste this to start the Opus session
 
 ```
-Continue Dopamine from @HANDOFF.md @CONTEXT.md @PRODUCT.md @DESIGN.md @defs/_PINS.md @defs/09_game_feel.md.
-Produce hi-fi screen mockups into content/mockups/ (and icons as needed), starting with Start Page / splash / desktop layout / Game Over.
-Use Impeccable + the locked Collider-inspired GitHub-dark violet stage. Mid-fi SVGs are refs to replace, not keep.
-Do not scaffold the Vite app or feature-code until I approve the mockups.
-```
+Take over Dopamine visual assets from @HANDOFF.md and @defs/14_visual_assets.md.
+Also read @PRODUCT.md @DESIGN.md @CONTEXT.md @defs/_PINS.md @defs/09_game_feel.md @defs/07_layout.md.
 
-## Suggested first message — after assets approved
-
-```
-Continue Dopamine from @HANDOFF.md. Hi-fi mockups are approved under content/mockups/.
-Scaffold per defs/10–12 and TDD the state machine first. Do not revive closed PR #5's app tree wholesale.
+You are Claude Opus producing hi-fi graphics for every hub view and every in-game window + minigame sprites.
+Follow phases A→E in 14_visual_assets.md. Drop files at the exact paths listed.
+Use the locked GitHub-dark + violet bloom stage; Start Page matches .impeccable/mocks/start-comp-a-centered.
+Mid-fi SVGs in content/mockups/ are references to replace. No real-platform UI clones.
+“3D” = bevelled toony props + cardboard cutouts for Canvas 2D — not Blender/glTF.
+Do NOT scaffold the game or write feature code. Pause after Phase A for my approval unless I say continue.
 ```
