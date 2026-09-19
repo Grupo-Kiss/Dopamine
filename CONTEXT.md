@@ -98,11 +98,11 @@ Arcade-style successive-action feedback shown as stickers like `x2` / `x7!!` ove
 _Avoid_: Using "combo" as a synonym for Focus Chain; permanent combo chrome in the HUD bar
 
 **Window Art**:
-Caricaturesque, simple graphics for Loop/Pulse/Wave/Echo/Alerts — readable as a stylized computer screen, not high-fidelity UI clones.
+Caricaturesque, simple graphics for Loop/Pulse/Wave/Echo/Alerts — readable as a stylized computer screen, not high-fidelity UI clones. Hi-fi production paths: `defs/14_visual_assets.md` Phase C.
 _Avoid_: Photoreal OS/app chrome, brand-accurate platform UI
 
 **Minigame Art**:
-Over-the-top arcade presentation for the selected minigame — exaggerated arcade feedback, particles, and spectacle versus the simpler window chrome.
+Over-the-top arcade presentation for the selected minigame — exaggerated arcade feedback, particles, and spectacle versus the simpler window chrome. Sprites / bevelled “3D” props: `defs/14_visual_assets.md` Phase E (Canvas 2D cutouts — not engine meshes).
 _Avoid_: Matching the flat “desktop window” look for the playfield
 
 **TDD**:

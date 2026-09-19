@@ -1,13 +1,18 @@
 # Content drop zone
 
-Place hand-authored media and text here — one folder per window.
+Place media and text here — one folder per window.
+
+**Visual hi-fi pass (Opus):** follow `defs/14_visual_assets.md` for every hub view, window chrome kit, icon, sticker, and minigame sprite path. Feel language: `defs/09_game_feel.md`. Shell lock: `DESIGN.md` / `PRODUCT.md`.
 
 | Folder | What to put |
 | --- | --- |
-| `icons/` | Window logos (SVG). Starter set included — replace after review |
-| `mockups/` | Mid/hi-fi screen & chrome references (`defs/09_game_feel.md`) |
-| `minigames/` | First-party minigame art/SFX (`defs/09_game_feel.md`) |
-| `loop/clips/` | Short videos + `manifest.json` |
+| `brand/` | Wordmark raster (`title-dopamine.webp`) |
+| `ui/` | Shared OS chrome, stickers, overlays, per-window chrome kits (`14`) |
+| `icons/` | Window logos (SVG). Starters included — replace in Phase D |
+| `mockups/` | Screen & chrome references → replace with hi-fi (`09` / `14`) |
+| `minigames/` | First-party minigame art/SFX (`09` / `14` Phase E) |
+| `loop/clips/` | Short videos + `manifest.json` (media pass later) |
+| `loop/placeholders/` | Optional stills for mockups |
 | `pulse/` | Generators now; expand `*.example.json` → authored JSON in mid-dev |
 | `wave/high/` | High-paced / techno / energetic tracks |
 | `wave/boring/` | Slow / throw-off tracks |

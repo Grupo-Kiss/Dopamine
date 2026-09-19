@@ -1,12 +1,5 @@
-# Icons
+# Window icons
 
-Starter SVG logos (gradient tiles, generic marks). Replace any file after review — keep the same filenames.
+SVG logos for Loop, Pulse, Wave, Echo, Alerts, and Dopamine.
 
-| File | Window / system |
-| --- | --- |
-| `loop.svg` | Loop |
-| `pulse.svg` | Pulse |
-| `wave.svg` | Wave |
-| `echo.svg` | Echo |
-| `alerts.svg` | Alerts |
-| `dopamine.svg` | Dopamine meter / brand mark |
+Starters may remain until **Phase D** of `defs/14_visual_assets.md` replaces them with hi-fi gradients readable at 24–64px and on the Splash screen.

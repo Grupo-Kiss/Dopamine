@@ -8,6 +8,8 @@ Gameplay: `02`–`05`. Layout: `07`. Content: `08`. Numbers: `06`.
 
 **Mockups live in** `content/mockups/` — mid-fidelity references you can pull offline and rework.
 
+**Hi-fi production checklist (paths, phases, sprites):** `14_visual_assets.md` — follow that file for the Opus asset pass.
+
 ---
 
 ## Product Surfaces
