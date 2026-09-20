@@ -61,8 +61,8 @@ Rounded corners + stroke + minimal controls. Accent color for primary actions (L
 | Window | Primary | Accent | Notes |
 | --- | --- | --- | --- |
 | Loop | `#ff4d6d` → `#ff8fa3` | `#fff` / hot pink highlight | Light playful feed |
-| Pulse | `#1da1f2` → `#6ec6ff` | `#ffffff` buttons on blue | Clean microblog (parody-adjacent blue — finalize in high-fi) |
-| Wave | `#0b3d2e` / `#1db954` | `#1db954` | **Dark player** chrome (fictional; finalize green in high-fi) |
+| Pulse | `#2f81f7` → `#79b8ff` | `#ffffff` buttons on blue | Clean microblog (blue **locked** in Phase C — see DESIGN.md) |
+| Wave | `#0b3d2e` / `#2ee07a` | `#2ee07a` | **Dark player** chrome (green **locked** in Phase C — see DESIGN.md) |
 | Echo | `#990022` → `#ff0033` | `#ffffff` | Long-form; video or audio chrome |
 | Alerts | `#f5a623` → `#f76b1c` | `#fff` | Urgent cards |
 | Dopamine bar | See below | — | Edge meter |

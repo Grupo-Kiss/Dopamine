@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="550" height="210" viewBox="0 0 550 210" role="img" aria-label="Focus Chain banner — tier 2">
+<title>Focus Chain banner — tier 2</title>
+<defs>
+
+<linearGradient id="fct2-plate" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1d2531"/>
+  <stop offset="0.5" stop-color="#11161d"/>
+  <stop offset="1" stop-color="#080b10"/>
+</linearGradient>
+<linearGradient id="fct2-edge" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#6e40c9"/>
+  <stop offset="0.5" stop-color="#d4a9ff"/>
+  <stop offset="1" stop-color="#6e40c9"/>
+</linearGradient>
+<linearGradient id="fct2-num" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff"/>
+  <stop offset="0.5" stop-color="#d4a9ff"/>
+  <stop offset="1" stop-color="#6e40c9"/>
+</linearGradient>
+<filter id="fct2-glow" x="-70%" y="-140%" width="240%" height="380%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#05070a" flood-opacity="0.8"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#6e40c9" flood-opacity="0.62"/>
+</filter>
+</defs>
+<g transform="translate(275 105)">
+<g transform="translate(0 0) scale(1)">
+  <g filter="url(#fct2-glow)" transform="skewX(-9)">
+    <path d="M-190 -50 H190 A10 10 0 0 1 200 -40 V40 A10 10 0 0 1 190 50 H-190 A10 10 0 0 1 -200 40 V-40 A10 10 0 0 1 -190 -50 Z" fill="url(#fct2-plate)"/>
+    <path d="M-190 -50 H190 A10 10 0 0 1 200 -40 V40 A10 10 0 0 1 190 50 H-190 A10 10 0 0 1 -200 40 V-40 A10 10 0 0 1 -190 -50 Z" fill="none" stroke="#05070a" stroke-width="5"/>
+    <path d="M-189 -45 H189 A6 6 0 0 1 195 -39 V39 A6 6 0 0 1 189 45 H-189 A6 6 0 0 1 -195 39 V-39 A6 6 0 0 1 -189 -45 Z" fill="none" stroke="url(#fct2-edge)" stroke-width="2.6"/>
+    <path d="M-195 45 H195" stroke="url(#fct2-edge)" stroke-width="4" stroke-opacity="0.9"/>
+  </g>
+  <g transform="skewX(-9)">
+    <text x="-178" y="-22" font-family="Public Sans" font-size="16" font-weight="800" fill="#d4a9ff" letter-spacing="4.16">FOCUS CHAIN</text>
+    <text x="-178" y="36" font-family="Teko" font-size="46" font-weight="600" fill="url(#fct2-num)" letter-spacing="1">x7</text>
+    <text x="178" y="34" font-family="Public Sans" font-size="13.76" font-weight="700" fill="#6e7681" text-anchor="end" letter-spacing="2.24">STAY SHARP</text>
+  </g>
+</g></g>
+</svg>

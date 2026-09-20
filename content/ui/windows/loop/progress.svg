@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="460" height="150" viewBox="0 0 460 150" role="img" aria-label="Loop progress pill">
+<title>Loop progress pill</title>
+<defs>
+<linearGradient id="lkp0-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ff8fa3"/></linearGradient>
+<linearGradient id="lkp1-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ff8fa3"/></linearGradient>
+<linearGradient id="lkp2-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ff8fa3"/></linearGradient>
+</defs>
+<rect width="460" height="150" fill="#0a0d12"/>
+<text x="30" y="28" font-family="Public Sans" font-size="11" font-weight="700" fill="#ff8fa3" letter-spacing="1.6">CLIP PROGRESS — LOOPS, NEVER AUTO-ADVANCES</text>
+<g>
+  <path d="M34 42 H426 A4 4 0 0 1 430 46 V46 A4 4 0 0 1 426 50 H34 A4 4 0 0 1 30 46 V46 A4 4 0 0 1 34 42 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M34 42 H74 A4 4 0 0 1 78 46 V46 A4 4 0 0 1 74 50 H34 A4 4 0 0 1 30 46 V46 A4 4 0 0 1 34 42 Z" fill="url(#lkp0-pr)"/>
+  <circle cx="78" cy="46" r="7.6" fill="#fff"/>
+  <circle cx="78" cy="46" r="7.6" fill="none" stroke="#ff8fa3" stroke-width="2"/>
+</g>
+<g>
+  <path d="M34 76 H426 A4 4 0 0 1 430 80 V80 A4 4 0 0 1 426 84 H34 A4 4 0 0 1 30 80 V80 A4 4 0 0 1 34 76 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M34 76 H218 A4 4 0 0 1 222 80 V80 A4 4 0 0 1 218 84 H34 A4 4 0 0 1 30 80 V80 A4 4 0 0 1 34 76 Z" fill="url(#lkp1-pr)"/>
+  <circle cx="222" cy="80" r="7.6" fill="#fff"/>
+  <circle cx="222" cy="80" r="7.6" fill="none" stroke="#ff8fa3" stroke-width="2"/>
+</g>
+<g>
+  <path d="M34 110 H426 A4 4 0 0 1 430 114 V114 A4 4 0 0 1 426 118 H34 A4 4 0 0 1 30 114 V114 A4 4 0 0 1 34 110 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M34 110 H370 A4 4 0 0 1 374 114 V114 A4 4 0 0 1 370 118 H34 A4 4 0 0 1 30 114 V114 A4 4 0 0 1 34 110 Z" fill="url(#lkp2-pr)"/>
+  <circle cx="374" cy="114" r="7.6" fill="#fff"/>
+  <circle cx="374" cy="114" r="7.6" fill="none" stroke="#ff8fa3" stroke-width="2"/>
+</g>
+<text x="230" y="138" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">PROGRESS RAIL STATES</text>
+</svg>

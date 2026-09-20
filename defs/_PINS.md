@@ -6,11 +6,16 @@ Short reminders. Remove when done.
 
 - [ ] **Opus agent** executes `defs/14_visual_assets.md` phases A→E; **owner** approves (owner does not hand-draw)
 - [ ] Model: Claude Opus 5 (thinking high/xhigh) — not Composer (no vision), not Muse Spark
-- [ ] Pause after Phase A (hub screens) unless owner says continue
+- [x] Phase A approved by owner (hub surfaces + shared OS chrome kit, PR #8)
 - [ ] No Vite scaffold / feature code until assets approved
 - [ ] Lock Pulse blue / Wave green hexes in `DESIGN.md` when finalized in Phase C
 - Visual lock: `PRODUCT.md`, `DESIGN.md`, `.impeccable/` (Collider-inspired blooms; no track-line detector UI)
 - Burnout/Recovery: agent may ship provisional overlays from mid-fi + stage language; owner can replace later
+
+### Deferred from Phase A review (do not fix mid-pass)
+
+- [ ] **Wordmark kerning:** `P`→`A` in `content/brand/title-dopamine.*` reads too open. The letterforms use one uniform tracking value with no kerning pairs, and that gap compounds two receding shapes — `P`'s stem falls back under its bowl while `A`'s left diagonal leans away. Needs per-pair kerning on `P`→`A` (then audit `D`→`O`, `A`→`M`, `I`→`N`). Re-export the WebP from the SVG master after the fix.
+- [ ] **Start Page floating stickers → animated:** owner keeps the background `x4` / `+120` / `CHAIN 3` / `x2` stickers but wants them to **pop in and fade out like arcade stickers** rather than sit static. They stay a quiet secondary background layer (well under the title + PLAY), reusing the Phase B combo/chain sticker motion language from `09_game_feel.md`. Motion is **feature code** — belongs in the TDD pass, not the asset pass. Must respect Accessibility Mode (opacity/colour transitions instead of pop + shake).
 
 ## Before coding (after assets)
 

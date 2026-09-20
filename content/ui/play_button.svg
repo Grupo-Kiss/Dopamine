@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="396" height="192" viewBox="0 0 396 192" role="img" aria-label="PLAY button">
+<title>PLAY button</title>
+<defs>
+
+<linearGradient id="pb-frame" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#e8d7a6"/>
+  <stop offset="0.16" stop-color="#a98d52"/>
+  <stop offset="0.5" stop-color="#6d5730"/>
+  <stop offset="0.84" stop-color="#b79a5c"/>
+  <stop offset="1" stop-color="#4a3a1e"/>
+</linearGradient>
+<linearGradient id="pb-face" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ff7a2f"/>
+  <stop offset="0.28" stop-color="#ff4d1a"/>
+  <stop offset="0.72" stop-color="#e03a12"/>
+  <stop offset="1" stop-color="#b3210a"/>
+</linearGradient>
+<radialGradient id="pb-facelight" cx="0.5" cy="0.28" r="0.75">
+  <stop offset="0" stop-color="#ffd9a0" stop-opacity="0.62"/>
+  <stop offset="0.5" stop-color="#ff8c00" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#b3210a" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="pb-label" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#fffdf4"/>
+  <stop offset="0.55" stop-color="#ffe9c4"/>
+  <stop offset="1" stop-color="#f7c477"/>
+</linearGradient>
+<filter id="pb-glow" x="-60%" y="-60%" width="220%" height="220%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#ff4d1a" flood-opacity="0.62"/>
+  <feDropShadow dx="0" dy="6" stdDeviation="28" flood-color="#ff8c00" flood-opacity="0.28"/>
+</filter>
+</defs>
+<rect width="396" height="192" fill="#0a0a0c"/>
+
+<g>
+  <path d="M60 48 H336 A12 12 0 0 1 348 60 V132 A12 12 0 0 1 336 144 H60 A12 12 0 0 1 48 132 V60 A12 12 0 0 1 60 48 Z" fill="#ff4d1a" filter="url(#pb-glow)"/>
+  <path d="M60 48 H336 A12 12 0 0 1 348 60 V132 A12 12 0 0 1 336 144 H60 A12 12 0 0 1 48 132 V60 A12 12 0 0 1 60 48 Z" fill="url(#pb-frame)"/>
+  <path d="M60 49.4 H336 A10.6 10.6 0 0 1 346.6 60 V132 A10.6 10.6 0 0 1 336 142.6 H60 A10.6 10.6 0 0 1 49.4 132 V60 A10.6 10.6 0 0 1 60 49.4 Z" fill="none" stroke="#2a1f0c" stroke-width="1.5" stroke-opacity="0.8"/>
+  <path d="M63 56 H333 A7 7 0 0 1 340 63 V129 A7 7 0 0 1 333 136 H63 A7 7 0 0 1 56 129 V63 A7 7 0 0 1 63 56 Z" fill="url(#pb-face)"/>
+  <path d="M63 56 H333 A7 7 0 0 1 340 63 V129 A7 7 0 0 1 333 136 H63 A7 7 0 0 1 56 129 V63 A7 7 0 0 1 63 56 Z" fill="url(#pb-facelight)"/>
+  <path d="M63 57 H333 A6 6 0 0 1 339 63 V90.6 H57 V63 A6 6 0 0 1 63 57 Z" fill="#fff" opacity="0.1"/>
+  <path d="M63 56 H333 A7 7 0 0 1 340 63 V129 A7 7 0 0 1 333 136 H63 A7 7 0 0 1 56 129 V63 A7 7 0 0 1 63 56 Z" fill="none" stroke="#7d1605" stroke-width="1.6" stroke-opacity="0.75"/>
+  <text x="198" y="115.14" font-family="Teko" font-size="58" font-weight="600" fill="url(#pb-label)" text-anchor="middle" letter-spacing="4.0600000000000005">PLAY</text>
+  <path d="M60.6 48.6 H335.4 A12 12 0 0 1 347.4 60.6 V131.4 A12 12 0 0 1 335.4 143.4 H60.6 A12 12 0 0 1 48.6 131.4 V60.6 A12 12 0 0 1 60.6 48.6 Z" fill="none" stroke="#f3e2b4" stroke-width="1" stroke-opacity="0.45"/>
+</g>
+</svg>

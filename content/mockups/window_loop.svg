@@ -1,0 +1,378 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1138" viewBox="0 0 1600 1138" role="img" aria-label="Loop window chrome">
+<title>Loop window chrome</title>
+<defs>
+
+<pattern id="st-grid" width="46" height="46" patternUnits="userSpaceOnUse">
+  <path d="M46 0 V46 M0 46 H46" fill="none" stroke="#8ea4c4" stroke-width="1" stroke-opacity="0.085"/>
+</pattern>
+<pattern id="st-grid-hot" width="46" height="46" patternUnits="userSpaceOnUse">
+  <path d="M46 0 V46 M0 46 H46" fill="none" stroke="#a371f7" stroke-width="1.35"/>
+</pattern>
+<radialGradient id="st-bloomA" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#c060ff" stop-opacity="0.66"/>
+  <stop offset="0.35" stop-color="#6e40c9" stop-opacity="0.34"/>
+  <stop offset="0.68" stop-color="#3a1a6e" stop-opacity="0.12"/>
+  <stop offset="1" stop-color="#1a0e33" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-bloomB" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ff4fd8" stop-opacity="0.5"/>
+  <stop offset="0.4" stop-color="#c9399b" stop-opacity="0.22"/>
+  <stop offset="1" stop-color="#3d0a33" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-bloomC" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#5f7bff" stop-opacity="0.34"/>
+  <stop offset="0.45" stop-color="#3b3fa8" stop-opacity="0.15"/>
+  <stop offset="1" stop-color="#101a3a" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-bloomD" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ff2d6f" stop-opacity="0.34"/>
+  <stop offset="0.45" stop-color="#8f1440" stop-opacity="0.14"/>
+  <stop offset="1" stop-color="#3d0a1f" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-core" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.2"/>
+  <stop offset="0.16" stop-color="#e6b6ff" stop-opacity="0.15"/>
+  <stop offset="0.45" stop-color="#a371f7" stop-opacity="0.10"/>
+  <stop offset="1" stop-color="#6e40c9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-ring0" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0.6" stop-color="#a371f7" stop-opacity="0"/>
+  <stop offset="0.82" stop-color="#a371f7" stop-opacity="0.16"/>
+  <stop offset="0.93" stop-color="#d9b3ff" stop-opacity="0.09"/>
+  <stop offset="1" stop-color="#6e40c9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-ring1" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0.66" stop-color="#c9399b" stop-opacity="0"/>
+  <stop offset="0.86" stop-color="#ff6fe0" stop-opacity="0.12"/>
+  <stop offset="1" stop-color="#c9399b" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-gridglow" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#fff" stop-opacity="0.5"/>
+  <stop offset="0.5" stop-color="#fff" stop-opacity="0.16"/>
+  <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</radialGradient>
+<mask id="st-gridmask" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="1138">
+  <rect width="1600" height="1138" fill="#000"/>
+  <ellipse cx="800" cy="523.48" rx="672" ry="455.2" fill="url(#st-gridglow)"/>
+  <ellipse cx="272" cy="842.12" rx="272" ry="227.6" fill="url(#st-gridglow)" opacity="0.6"/>
+  <ellipse cx="1376" cy="273.12" rx="240" ry="204.84" fill="url(#st-gridglow)" opacity="0.55"/>
+</mask>
+<linearGradient id="st-floor" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#0d1117"/>
+  <stop offset="0.55" stop-color="#0b0e14"/>
+  <stop offset="1" stop-color="#07090d"/>
+</linearGradient>
+<linearGradient id="st-streak" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#a371f7" stop-opacity="0"/>
+  <stop offset="0.5" stop-color="#e9d5ff" stop-opacity="1"/>
+  <stop offset="1" stop-color="#c9399b" stop-opacity="0"/>
+</linearGradient>
+
+<linearGradient id="ch-panel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1a212b"/>
+  <stop offset="0.45" stop-color="#161b22"/>
+  <stop offset="1" stop-color="#11161d"/>
+</linearGradient>
+<linearGradient id="ch-bar" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#232b36"/>
+  <stop offset="1" stop-color="#181f28"/>
+</linearGradient>
+<linearGradient id="ch-edge" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#454e5a"/>
+  <stop offset="0.5" stop-color="#30363d"/>
+  <stop offset="1" stop-color="#232a33"/>
+</linearGradient>
+<linearGradient id="ch-innertop" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.09"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="ch-drop" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#000" flood-opacity="0.66"/>
+</filter>
+<filter id="ch-vglow" x="-45%" y="-45%" width="190%" height="190%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#6e40c9" flood-opacity="0.5"/>
+</filter>
+<filter id="ch-vglow-strong" x="-55%" y="-55%" width="210%" height="210%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#a371f7" flood-opacity="1"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="26" flood-color="#6e40c9" flood-opacity="0.85"/>
+</filter>
+
+<pattern id="crt-scan" width="4" height="3" patternUnits="userSpaceOnUse">
+  <rect width="4" height="1.5" fill="#000" opacity="0.1"/>
+</pattern>
+<pattern id="crt-aperture" width="3" height="3" patternUnits="userSpaceOnUse">
+  <rect width="1" height="3" fill="#ff2d2d" opacity="0.045"/>
+  <rect x="1" width="1" height="3" fill="#2dff7a" opacity="0.035"/>
+  <rect x="2" width="1" height="3" fill="#2d6cff" opacity="0.045"/>
+</pattern>
+<radialGradient id="crt-vig" cx="0.5" cy="0.48" r="0.72">
+  <stop offset="0" stop-color="#000" stop-opacity="0"/>
+  <stop offset="0.55" stop-color="#000" stop-opacity="0.06"/>
+  <stop offset="0.8" stop-color="#000" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0.82"/>
+</radialGradient>
+<radialGradient id="crt-glass" cx="0.28" cy="0.16" r="0.62">
+  <stop offset="0" stop-color="#cfe4ff" stop-opacity="0.075"/>
+  <stop offset="0.45" stop-color="#cfe4ff" stop-opacity="0.022"/>
+  <stop offset="1" stop-color="#cfe4ff" stop-opacity="0"/>
+</radialGradient>
+<filter id="crt-noise" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="9" stitchTiles="stitch" result="n"/>
+  <feColorMatrix type="saturate" values="0" in="n" result="g"/>
+  <feComponentTransfer in="g" result="c">
+    <feFuncA type="linear" slope="0.045" intercept="0"/>
+  </feComponentTransfer>
+</filter>
+
+
+<linearGradient id="lp-bg" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#1b1017"/><stop offset="1" stop-color="#120a0f"/></linearGradient>
+
+<radialGradient id="lp-st-bg" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#a63b63"/><stop offset="0.6" stop-color="#71463f"/><stop offset="1" stop-color="#3a1030"/></radialGradient>
+<clipPath id="lp-st-cl"><path d="M38 24 H338 A14 14 0 0 1 352 38 V587 A14 14 0 0 1 338 601 H38 A14 14 0 0 1 24 587 V38 A14 14 0 0 1 38 24 Z"/></clipPath>
+
+<linearGradient id="lp-av" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#ff8fa3"/>
+  <stop offset="1" stop-color="#ff4d6d"/>
+</linearGradient>
+<clipPath id="lp-avc"><circle cx="485" cy="86" r="27"/></clipPath>
+
+<linearGradient id="lp-fl-pb" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffabba"/>
+  <stop offset="0.5" stop-color="#ff4d6d"/>
+  <stop offset="1" stop-color="#ad344a"/>
+</linearGradient>
+<linearGradient id="lp-pg-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ff8fa3"/></linearGradient>
+
+<linearGradient id="lp-ar-ar-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff4d6d"/><stop offset="1" stop-color="#ff94a7"/></linearGradient>
+<linearGradient id="lp-ar-arb" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#4b1b26"/>
+  <stop offset="1" stop-color="#281118"/>
+</linearGradient>
+<filter id="lp-ar-arg" x="-30%" y="-40%" width="160%" height="190%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#ff4d6d" flood-opacity="0.6"/>
+</filter>
+
+<linearGradient id="lp-fs-sh" x1="0" y1="0" x2="1" y2="0.35">
+  <stop offset="0" stop-color="#ff8fa3" stop-opacity="0"/>
+  <stop offset="0.38" stop-color="#ffffff" stop-opacity="0.5"/>
+  <stop offset="0.52" stop-color="#ffffff" stop-opacity="0.75"/>
+  <stop offset="0.66" stop-color="#ff8fa3" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#ff8fa3" stop-opacity="0"/>
+</linearGradient>
+<filter id="lp-fs-shg" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#ff8fa3" flood-opacity="0.8"/>
+</filter>
+<radialGradient id="lp-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ff4d6d" stop-opacity="0.22"/><stop offset="1" stop-color="#ff4d6d" stop-opacity="0"/></radialGradient>
+
+<linearGradient id="ic-loop-bar-g" x1="0.08" y1="0" x2="0.92" y2="1">
+  <stop offset="0" stop-color="#ffa3b4"/>
+  <stop offset="0.42" stop-color="#ff4d6d"/>
+  <stop offset="1" stop-color="#9b2b42"/>
+</linearGradient>
+<linearGradient id="ic-loop-bar-bevel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+  <stop offset="0.3" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="0.75" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
+</linearGradient>
+<radialGradient id="ic-loop-bar-sheen" cx="0.3" cy="0.18" r="0.8">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.04"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<filter id="ic-loop-bar-gs" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#4a0f1e" flood-opacity="0.55"/>
+</filter>
+<clipPath id="fr-loop"><path d="M210 200 H1390 V923.5 A14 14 0 0 1 1376 937.5 H224 A14 14 0 0 1 210 923.5 V200 Z"/></clipPath>
+</defs>
+
+<rect width="1600" height="1138" fill="url(#st-floor)"/>
+<g opacity="0.52">
+  <!-- dominant centred collision bloom -->
+  <ellipse cx="800" cy="477.96" rx="864" ry="796.6" fill="url(#st-bloomA)"/>
+  <ellipse cx="800" cy="477.96" rx="480" ry="455.2" fill="url(#st-bloomB)" opacity="0.85"/>
+  <!-- outboard support blooms, pushed to the corners and kept quiet -->
+  <ellipse cx="64" cy="250.36" rx="384" ry="386.92" fill="url(#st-bloomB)" opacity="0.82"/>
+  <ellipse cx="1568" cy="978.68" rx="384" ry="386.92" fill="url(#st-bloomB)" opacity="0.7"/>
+  <ellipse cx="32" cy="933.16" rx="272" ry="295.88" fill="url(#st-bloomD)" opacity="0.7"/>
+  <ellipse cx="1376" cy="45.52" rx="384" ry="295.88" fill="url(#st-bloomC)" opacity="0.7"/>
+  <ellipse cx="96" cy="1138" rx="352" ry="273.12" fill="url(#st-bloomC)" opacity="0.6"/>
+</g>
+<g mask="url(#st-gridmask)">
+  <rect width="1600" height="1138" fill="url(#st-grid)"/>
+  <rect width="1600" height="1138" fill="url(#st-grid-hot)" opacity="0.38"/>
+</g>
+<g><ellipse cx="800" cy="477.96" rx="460.89" ry="341.4" fill="url(#st-ring0)" opacity="0.28"/><ellipse cx="800" cy="477.96" rx="860.33" ry="637.28" fill="url(#st-ring1)" opacity="0.23"/><ellipse cx="800" cy="477.96" rx="1259.77" ry="933.16" fill="url(#st-ring0)" opacity="0.18"/><ellipse cx="800" cy="477.96" rx="1659.2" ry="1229.04" fill="url(#st-ring1)" opacity="0.13"/></g>
+<ellipse cx="800" cy="477.96" rx="569" ry="569" fill="url(#st-core)" opacity="0.55"/>
+<rect x="1471.79" y="486.38" width="128.62" height="2.03" rx="1" transform="rotate(-11.55 1471.79 486.38)" fill="url(#st-streak)" opacity="0.29"/><rect x="729.24" y="198.27" width="149.25" height="1.61" rx="1" transform="rotate(10.92 729.24 198.27)" fill="url(#st-streak)" opacity="0.5"/><rect x="164.13" y="806.01" width="73.07" height="1.42" rx="1" transform="rotate(-14.62 164.13 806.01)" fill="url(#st-streak)" opacity="0.36"/><rect x="1056.33" y="300" width="59.3" height="1.26" rx="1" transform="rotate(-28.74 1056.33 300)" fill="url(#st-streak)" opacity="0.46"/><rect x="1020.45" y="180.82" width="127.49" height="1.98" rx="1" transform="rotate(14.89 1020.45 180.82)" fill="url(#st-streak)" opacity="0.23"/><rect x="456.57" y="747.72" width="119.44" height="1.8" rx="1" transform="rotate(-11.56 456.57 747.72)" fill="url(#st-streak)" opacity="0.38"/><rect x="1267.54" y="415.25" width="176.47" height="0.94" rx="1" transform="rotate(22.2 1267.54 415.25)" fill="url(#st-streak)" opacity="0.52"/><rect x="810.91" y="879.98" width="85.34" height="2.19" rx="1" transform="rotate(-15.33 810.91 879.98)" fill="url(#st-streak)" opacity="0.34"/><rect x="224.45" y="503.67" width="113.2" height="1.44" rx="1" transform="rotate(-6.91 224.45 503.67)" fill="url(#st-streak)" opacity="0.33"/>
+
+<text x="800" y="92" font-family="Teko" font-size="62" font-weight="600" fill="#ff7a92" text-anchor="middle" letter-spacing="16">LOOP</text>
+<text x="800" y="122" font-family="Public Sans" font-size="16" font-weight="500" fill="#6e7681" text-anchor="middle">short-form vertical video — frequent small rewards, strong novelty pull</text>
+
+
+<g>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V923.5 A14 14 0 0 1 1376 937.5 H224 A14 14 0 0 1 210 923.5 V180 A14 14 0 0 1 224 166 Z" fill="#05070a" filter="url(#ch-drop)"/>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V923.5 A14 14 0 0 1 1376 937.5 H224 A14 14 0 0 1 210 923.5 V180 A14 14 0 0 1 224 166 Z" fill="none" stroke="#ff4d6d" stroke-width="3" filter="url(#ch-vglow-strong)"/>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V923.5 A14 14 0 0 1 1376 937.5 H224 A14 14 0 0 1 210 923.5 V180 A14 14 0 0 1 224 166 Z" fill="url(#ch-panel)"/>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V214 H210 V180 A14 14 0 0 1 224 166 Z" fill="url(#ch-bar)"/>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V200 H210 V180 A14 14 0 0 1 224 166 Z" fill="url(#ch-bar)"/>
+  <path d="M210.5 200 H1389.5" stroke="#0b0f14" stroke-width="1"/>
+  <path d="M210.5 201 H1389.5" stroke="#39414d" stroke-width="0.8" stroke-opacity="0.5"/>
+  <path d="M224 167 H1376 A13 13 0 0 1 1389 180 V179 H211 V180 A13 13 0 0 1 224 167 Z" fill="url(#ch-innertop)"/>
+
+<text x="800" y="187.5" font-family="Public Sans" font-size="12.5" font-weight="500" fill="#ff8ba0" text-anchor="middle" letter-spacing="0.6">loop</text>
+<g transform="translate(222 173) scale(0.16)">
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#ic-loop-bar-g)"/>
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#ic-loop-bar-sheen)"/>
+<path d="M28 2.2 H100 A25.8 25.8 0 0 1 125.8 28 V100 A25.8 25.8 0 0 1 100 125.8 H28 A25.8 25.8 0 0 1 2.2 100 V28 A25.8 25.8 0 0 1 28 2.2 Z" fill="none" stroke="url(#ic-loop-bar-bevel)" stroke-width="3"/>
+<g filter="url(#ic-loop-bar-gs)">
+<path d="M48 20h32a14 14 0 0 1 14 14v60a14 14 0 0 1-14 14H48a14 14 0 0 1-14-14V34a14 14 0 0 1 14-14Z" fill="#fff" fill-opacity="0.15"/>
+<path d="M50 24h28a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12H50a12 12 0 0 1-12-12V36a12 12 0 0 1 12-12Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+<path d="M57 52 79 64 57 76Z" fill="#fff"/>
+<path d="M105 30v68" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-opacity="0.32"/>
+<path d="M105 62v36" stroke="#fff" stroke-width="9" stroke-linecap="round"/></g>
+<path d="M28 0.7 H100 A27.3 27.3 0 0 1 127.3 28 V100 A27.3 27.3 0 0 1 100 127.3 H28 A27.3 27.3 0 0 1 0.7 100 V28 A27.3 27.3 0 0 1 28 0.7 Z" fill="none" stroke="#4a0f1e" stroke-width="1.4" stroke-opacity="0.55"/></g><g stroke="#a8354a" stroke-width="1.6" fill="none" stroke-linecap="round">
+  <path d="M1330 183 h10"/>
+  <rect x="1346" y="178" width="10" height="10" rx="2"/>
+  <path d="M1367 178 l10 10 M1377 178 l-10 10"/>
+</g>
+  <path d="M224 166.7 H1376 A13.3 13.3 0 0 1 1389.3 180 V923.5 A13.3 13.3 0 0 1 1376 936.8 H224 A13.3 13.3 0 0 1 210.7 923.5 V180 A13.3 13.3 0 0 1 224 166.7 Z" fill="none" stroke="#ff4d6d" stroke-width="1.4"/>
+  <path d="M224 168 H1376 A12 12 0 0 1 1388 180 V923.5 A12 12 0 0 1 1376 935.5 H224 A12 12 0 0 1 212 923.5 V180 A12 12 0 0 1 224 168 Z" fill="none" stroke="#000" stroke-width="1" stroke-opacity="0.35"/>
+</g>
+<g clip-path="url(#fr-loop)">
+  <g transform="translate(210 200) scale(1.18)">
+<rect width="1000" height="625" fill="url(#lp-bg)"/>
+<ellipse cx="188" cy="250" rx="360.8" ry="375" fill="url(#lp-halo)"/>
+<g clip-path="url(#lp-st-cl)">
+  <rect x="24" y="24" width="328" height="577" fill="url(#lp-st-bg)"/>
+  <path d="M28.21 318.84 H23.92 A10 10 0 0 1 33.92 328.84 V326.88 A10 10 0 0 1 23.92 336.88 H28.21 A10 10 0 0 1 18.21 326.88 V328.84 A10 10 0 0 1 28.21 318.84 Z" transform="rotate(7.67 26.06 326.69)" fill="#ffd166" opacity="0.35"/><path d="M35.71 275.83 H72.32 A10 10 0 0 1 82.32 285.83 V310.27 A10 10 0 0 1 72.32 320.27 H35.71 A10 10 0 0 1 25.71 310.27 V285.83 A10 10 0 0 1 35.71 275.83 Z" transform="rotate(8.48 54.01 304.14)" fill="#ff5f8d" opacity="0.64"/><path d="M243.04 309.65 H277.5 A10 10 0 0 1 287.5 319.65 V382.54 A10 10 0 0 1 277.5 392.54 H243.04 A10 10 0 0 1 233.04 382.54 V319.65 A10 10 0 0 1 243.04 309.65 Z" transform="rotate(-10.32 260.27 336.88)" fill="#ffd166" opacity="0.21"/><path d="M275.67 264.76 H329.05 A10 10 0 0 1 339.05 274.76 V354.57 A10 10 0 0 1 329.05 364.57 H275.67 A10 10 0 0 1 265.67 354.57 V274.76 A10 10 0 0 1 275.67 264.76 Z" transform="rotate(-23.19 302.36 301.45)" fill="#ff5f8d" opacity="0.51"/><path d="M94.62 408 H144.99 A10 10 0 0 1 154.99 418 V459.02 A10 10 0 0 1 144.99 469.02 H94.62 A10 10 0 0 1 84.62 459.02 V418 A10 10 0 0 1 94.62 408 Z" transform="rotate(4.42 119.8 443.18)" fill="#ff5f8d" opacity="0.43"/><path d="M259.33 138.45 H333.77 A10 10 0 0 1 343.77 148.45 V211.62 A10 10 0 0 1 333.77 221.62 H259.33 A10 10 0 0 1 249.33 211.62 V148.45 A10 10 0 0 1 259.33 138.45 Z" transform="rotate(15.04 296.55 185.67)" fill="#ffd166" opacity="0.39"/><circle cx="121.12" cy="235.59" r="65.5" fill="#ff5f8d" opacity="0.66"/>
+  <g>
+    <path d="M118.92 389.14 a69.08 89.54 0 0 1 138.15 0 Z" fill="#fff" opacity="0.9"/>
+    <circle cx="188" cy="266.34" r="42.64" fill="#fff" opacity="0.94"/>
+    <circle cx="173.5" cy="262.08" r="5.54" fill="#3a1030"/>
+    <circle cx="202.5" cy="262.08" r="5.54" fill="#3a1030"/>
+    <path d="M175.21 284.25 h25.58" stroke="#3a1030" stroke-width="5.97" stroke-linecap="round"/>
+  </g>
+  
+  <path d="M38 24 H338 A14 14 0 0 1 352 38 V587 A14 14 0 0 1 338 601 H38 A14 14 0 0 1 24 587 V38 A14 14 0 0 1 38 24 Z" fill="none" stroke="#05070a" stroke-width="2" stroke-opacity="0.6"/>
+</g>
+<g>
+  <path d="M42 575 H334 A4 4 0 0 1 338 579 V579 A4 4 0 0 1 334 583 H42 A4 4 0 0 1 38 579 V579 A4 4 0 0 1 42 575 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M42 575 H136 A4 4 0 0 1 140 579 V579 A4 4 0 0 1 136 583 H42 A4 4 0 0 1 38 579 V579 A4 4 0 0 1 42 575 Z" fill="url(#lp-pg-pr)"/>
+  <circle cx="140" cy="579" r="7.6" fill="#fff"/>
+  <circle cx="140" cy="579" r="7.6" fill="none" stroke="#ff8fa3" stroke-width="2"/>
+</g>
+<g>
+  <path d="M54 38 H160 A16 16 0 0 1 176 54 V54 A16 16 0 0 1 160 70 H54 A16 16 0 0 1 38 54 V54 A16 16 0 0 1 54 38 Z" fill="#05070aaa"/>
+  <circle cx="56" cy="54" r="5" fill="#ff4d6d"/>
+  <text x="68" y="59" font-family="Public Sans" font-size="13" font-weight="700" fill="#fff" letter-spacing="0.8">LOOPING 0:07</text>
+</g>
+
+<g opacity="1">
+  <g transform="translate(390 176)" stroke="#ffffff" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M13 23.5 4.6 15.4a5.6 5.6 0 1 1 8.4-7.3 5.6 5.6 0 1 1 8.4 7.3Z"/></g>
+  <text x="403" y="216" font-family="Public Sans" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.4">128K</text>
+</g><g opacity="0.55">
+  <g transform="translate(390 268)" stroke="#ffffff" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M3 6.5A3 3 0 0 1 6 3.5h14a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-8l-6 5v-5a3 3 0 0 1-3-3Z"/></g>
+  <text x="403" y="308" font-family="Public Sans" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.4">4.2K</text>
+</g><g opacity="1">
+  <g transform="translate(390 360)" stroke="#ffffff" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M5 9.5V8a3 3 0 0 1 3-3h10l-3.5-3.5M21 15.5V17a3 3 0 0 1-3 3H8l3.5 3.5"/></g>
+  <text x="403" y="400" font-family="Public Sans" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.4">912</text>
+</g>
+<g>
+  <path d="M458 23.6 v22" stroke="#ff4d6d" stroke-width="4" stroke-linecap="round"/>
+  <text x="472" y="40" font-family="Teko" font-size="27" font-weight="600" fill="#ff4d6d" letter-spacing="3.2">LOOP</text>
+  <text x="472" y="59.6" font-family="Public Sans" font-size="12" font-weight="600" fill="#6e7681" letter-spacing="1.2">ENDLESS SHORT-FORM</text>
+</g>
+
+<g>
+  <circle cx="485" cy="86" r="27" fill="url(#lp-av)"/>
+  <g clip-path="url(#lp-avc)">
+    <circle cx="485" cy="81.14" r="9.18" fill="#fff" opacity="0.88"/>
+    <path d="M467.18 113 a17.82 14.04 0 0 1 35.64 0 Z" fill="#fff" opacity="0.88"/>
+  </g>
+  <circle cx="485" cy="86" r="27" fill="none" stroke="#05070a" stroke-width="2.43" stroke-opacity="0.6"/>
+  <circle cx="485" cy="86" r="25.5" fill="none" stroke="#fff" stroke-width="1.2" stroke-opacity="0.3"/>
+</g>
+<text x="526" y="78" font-family="Public Sans" font-size="19" font-weight="800" fill="#fff" letter-spacing="0.3">@doom_scroller</text>
+<text x="526" y="102" font-family="Public Sans" font-size="14" font-weight="400" fill="#b08a96">2.1M followers · posts every 4 minutes</text>
+<g>
+  <path d="M878 66 H956 A20 20 0 0 1 976 86 V86 A20 20 0 0 1 956 106 H878 A20 20 0 0 1 858 86 V86 A20 20 0 0 1 878 66 Z" fill="url(#lp-fl-pb)"/>
+  <path d="M880 68 H954 A20 20 0 0 1 974 88 V85.6 H860 V88 A20 20 0 0 1 880 68 Z" fill="#fff" opacity="0.2"/>
+  <path d="M878 66 H956 A20 20 0 0 1 976 86 V86 A20 20 0 0 1 956 106 H878 A20 20 0 0 1 858 86 V86 A20 20 0 0 1 878 66 Z" fill="none" stroke="#802737" stroke-width="1.4"/>
+  <text x="917" y="92.05" font-family="Public Sans" font-size="16.8" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="1.6800000000000002">FOLLOW</text>
+</g>
+<text x="458" y="156" font-family="Public Sans" font-size="23" font-weight="700" fill="#ffe9ee">i filmed myself watching this</text>
+<text x="458" y="186" font-family="Public Sans" font-size="23" font-weight="700" fill="#ffe9ee">and honestly? still not enough</text>
+<g>
+  <path d="M473 226 H539.2 A15 15 0 0 1 554.2 241 V241 A15 15 0 0 1 539.2 256 H473 A15 15 0 0 1 458 241 V241 A15 15 0 0 1 473 226 Z" fill="#2c101a" stroke="#8c2a3c" stroke-width="1.3"/>
+  <text x="506.1" y="246.25" font-family="Public Sans" font-size="15" font-weight="600" fill="#ff8fa3" text-anchor="middle" letter-spacing="0.3">#brainrot</text>
+</g><g>
+  <path d="M579.2 226 H645.4 A15 15 0 0 1 660.4 241 V241 A15 15 0 0 1 645.4 256 H579.2 A15 15 0 0 1 564.2 241 V241 A15 15 0 0 1 579.2 226 Z" fill="#2c101a" stroke="#8c2a3c" stroke-width="1.3"/>
+  <text x="612.3" y="246.25" font-family="Public Sans" font-size="15" font-weight="600" fill="#ff8fa3" text-anchor="middle" letter-spacing="0.3">#loopcore</text>
+</g><g>
+  <path d="M685.4 226 H728.2 A15 15 0 0 1 743.2 241 V241 A15 15 0 0 1 728.2 256 H685.4 A15 15 0 0 1 670.4 241 V241 A15 15 0 0 1 685.4 226 Z" fill="#2c101a" stroke="#8c2a3c" stroke-width="1.3"/>
+  <text x="706.8" y="246.25" font-family="Public Sans" font-size="15" font-weight="600" fill="#ff8fa3" text-anchor="middle" letter-spacing="0.3">#again</text>
+</g>
+<g filter="url(#lp-ar-arg)">
+  <path d="M470 300 H964 A12 12 0 0 1 976 312 V380 A12 12 0 0 1 964 392 H470 A12 12 0 0 1 458 380 V312 A12 12 0 0 1 470 300 Z" fill="url(#lp-ar-arb)" stroke="#ff4d6d" stroke-width="2"/>
+  <circle cx="484" cy="327" r="7" fill="#ff4d6d"/>
+  <circle cx="484" cy="327" r="12" fill="none" stroke="#ff4d6d" stroke-width="2" stroke-opacity="0.45"/>
+  <text x="506" y="333" font-family="Public Sans" font-size="17" font-weight="800" fill="#fff" letter-spacing="2.2">LIVE NOW</text>
+  <text x="960" y="333" font-family="Teko" font-size="26" font-weight="600" fill="#ff4d6d" text-anchor="end" letter-spacing="1">0:06</text>
+  <text x="484" y="358" font-family="Public Sans" font-size="14" font-weight="500" fill="#ffafbd">Creator went live — respond before it expires</text>
+  <g>
+  <path d="M477.5 372 H956.5 A3.5 3.5 0 0 1 960 375.5 V375.5 A3.5 3.5 0 0 1 956.5 379 H477.5 A3.5 3.5 0 0 1 474 375.5 V375.5 A3.5 3.5 0 0 1 477.5 372 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M477.5 372 H752.38 A3.5 3.5 0 0 1 755.88 375.5 V375.5 A3.5 3.5 0 0 1 752.38 379 H477.5 A3.5 3.5 0 0 1 474 375.5 V375.5 A3.5 3.5 0 0 1 477.5 372 Z" fill="url(#lp-ar-ar-pr)"/>
+
+</g>
+</g>
+<g>
+  <text x="458" y="434" font-family="Public Sans" font-size="12" font-weight="800" fill="#ff8fa3" letter-spacing="2.2">UP NEXT</text>
+  <path d="M466 448 H542 A8 8 0 0 1 550 456 V562 A8 8 0 0 1 542 570 H466 A8 8 0 0 1 458 562 V456 A8 8 0 0 1 466 448 Z" fill="#2f111b" stroke="#732331" stroke-width="1.3"/>
+  <circle cx="504" cy="492" r="15" fill="#fff" opacity="0.5"/>
+  <path d="M494 516 H514 A12 12 0 0 1 526 528 V534 A12 12 0 0 1 514 546 H494 A12 12 0 0 1 482 534 V528 A12 12 0 0 1 494 516 Z" fill="#fff" opacity="0.5"/>
+  <path d="M470.5 556 H523.1 A2.5 2.5 0 0 1 525.6 558.5 V558.5 A2.5 2.5 0 0 1 523.1 561 H470.5 A2.5 2.5 0 0 1 468 558.5 V558.5 A2.5 2.5 0 0 1 470.5 556 Z" fill="#ffffff" opacity="0.2"/>
+  <path d="M572 448 H648 A8 8 0 0 1 656 456 V562 A8 8 0 0 1 648 570 H572 A8 8 0 0 1 564 562 V456 A8 8 0 0 1 572 448 Z" fill="#2f111b" stroke="#732331" stroke-width="1.3"/>
+  <circle cx="610" cy="492" r="15" fill="#fff" opacity="0.5"/>
+  <path d="M600 516 H620 A12 12 0 0 1 632 528 V534 A12 12 0 0 1 620 546 H600 A12 12 0 0 1 588 534 V528 A12 12 0 0 1 600 516 Z" fill="#fff" opacity="0.5"/>
+  <path d="M576.5 556 H629.1 A2.5 2.5 0 0 1 631.6 558.5 V558.5 A2.5 2.5 0 0 1 629.1 561 H576.5 A2.5 2.5 0 0 1 574 558.5 V558.5 A2.5 2.5 0 0 1 576.5 556 Z" fill="#ffffff" opacity="0.2"/>
+  <path d="M678 448 H754 A8 8 0 0 1 762 456 V562 A8 8 0 0 1 754 570 H678 A8 8 0 0 1 670 562 V456 A8 8 0 0 1 678 448 Z" fill="#2f111b" stroke="#732331" stroke-width="1.3"/>
+  <circle cx="716" cy="492" r="15" fill="#fff" opacity="0.5"/>
+  <path d="M706 516 H726 A12 12 0 0 1 738 528 V534 A12 12 0 0 1 726 546 H706 A12 12 0 0 1 694 534 V528 A12 12 0 0 1 706 516 Z" fill="#fff" opacity="0.5"/>
+  <path d="M682.5 556 H735.1 A2.5 2.5 0 0 1 737.6 558.5 V558.5 A2.5 2.5 0 0 1 735.1 561 H682.5 A2.5 2.5 0 0 1 680 558.5 V558.5 A2.5 2.5 0 0 1 682.5 556 Z" fill="#ffffff" opacity="0.2"/>
+  <text x="458" y="591" font-family="Public Sans" font-size="13" font-weight="500" fill="#8d6b76">NEXT never auto-plays — you choose when to feed</text>
+</g></g>
+</g>
+<path d="M224 166.7 H1376 A13.3 13.3 0 0 1 1389.3 180 V923.5 A13.3 13.3 0 0 1 1376 936.8 H224 A13.3 13.3 0 0 1 210.7 923.5 V180 A13.3 13.3 0 0 1 224 166.7 Z" fill="none" stroke="#ff4d6d" stroke-width="1.6"/>
+<path d="M210 968 H1390" stroke="#ff8299" stroke-width="1.2" stroke-opacity="0.35"/>
+<g>
+  <circle cx="215" cy="999" r="4.5" fill="#ff8299"/>
+  <circle cx="215" cy="999" r="8.5" fill="none" stroke="#ff8299" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="236" y="1004" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">Clip loops forever; NEXT is always a player decision</text>
+</g>
+<g>
+  <circle cx="805" cy="999" r="4.5" fill="#ff8299"/>
+  <circle cx="805" cy="999" r="8.5" fill="none" stroke="#ff8299" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="826" y="1004" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">Attention Request carries a visible expiry timer</text>
+</g>
+<g>
+  <circle cx="215" cy="1031" r="4.5" fill="#ff8299"/>
+  <circle cx="215" cy="1031" r="8.5" fill="none" stroke="#ff8299" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="236" y="1036" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">Like / comment (display only) / repost rail</text>
+</g>
+<g>
+  <circle cx="805" cy="1031" r="4.5" fill="#ff8299"/>
+  <circle cx="805" cy="1031" r="8.5" fill="none" stroke="#ff8299" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="826" y="1036" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">Each consecutive Like on one clip pays less</text>
+</g>
+<text x="800" y="1106" font-family="Public Sans" font-size="13" font-weight="500" fill="#4b535d" text-anchor="middle">#ff4d6d to #ff8fa3  ·  fictional service — no real-platform chrome, logos or identifiable UI</text>
+
+<g style="mix-blend-mode:normal">
+  <rect width="1600" height="1138" filter="url(#crt-noise)"/>
+  <rect width="1600" height="1138" fill="url(#crt-scan)"/>
+  <rect width="1600" height="1138" fill="url(#crt-aperture)"/>
+  <rect width="1600" height="1138" fill="url(#crt-glass)"/>
+  <rect width="1600" height="1138" fill="url(#crt-vig)"/>
+  <rect x="0.5" y="0.5" width="1599" height="1137" rx="18" fill="none" stroke="#000" stroke-width="1.5" stroke-opacity="0.5"/>
+</g>
+</svg>

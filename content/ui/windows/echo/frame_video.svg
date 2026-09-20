@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="380" viewBox="0 0 640 380" role="img" aria-label="Echo video frame">
+<title>Echo video frame</title>
+<defs>
+
+<radialGradient id="ekvideo-bg" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#2f789b"/><stop offset="0.6" stop-color="#4d194a"/><stop offset="1" stop-color="#0b1533"/></radialGradient>
+<clipPath id="ekvideo-cl"><path d="M34 54 H606 A14 14 0 0 1 620 68 V240 A14 14 0 0 1 606 254 H34 A14 14 0 0 1 20 240 V68 A14 14 0 0 1 34 54 Z"/></clipPath>
+<linearGradient id="eksvideo-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff0033"/><stop offset="1" stop-color="#ff5c7a"/></linearGradient>
+<linearGradient id="ekbgvideo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#20070f"/><stop offset="1" stop-color="#120409"/></linearGradient>
+</defs>
+<rect width="640" height="380" fill="#0a0d12"/>
+<path d="M14 0 H626 A14 14 0 0 1 640 14 V366 A14 14 0 0 1 626 380 H14 A14 14 0 0 1 0 366 V14 A14 14 0 0 1 14 0 Z" fill="url(#ekbgvideo)" stroke="#730017" stroke-width="1.6"/>
+<path d="M14 0 H626 A14 14 0 0 1 640 14 V34 H0 V14 A14 14 0 0 1 14 0 Z" fill="#1b0710"/>
+<text x="16" y="22" font-family="Teko" font-size="21" font-weight="600" fill="#ff0033" letter-spacing="3">ECHO</text>
+<text x="622" y="22" font-family="Public Sans" font-size="10" font-weight="700" fill="#8d5561" text-anchor="end" letter-spacing="1.6">LONG-FORM VIDEO</text>
+<g clip-path="url(#ekvideo-cl)">
+  <rect x="20" y="54" width="600" height="200" fill="url(#ekvideo-bg)"/>
+  <path d="M-29.45 127.23 H78.14 A10 10 0 0 1 88.14 137.23 V232.95 A10 10 0 0 1 78.14 242.95 H-29.45 A10 10 0 0 1 -39.45 232.95 V137.23 A10 10 0 0 1 -29.45 127.23 Z" transform="rotate(-5.36 24.35 191.02)" fill="#f72585" opacity="0.36"/><path d="M282.95 32.15 H382.22 A10 10 0 0 1 392.22 42.15 V169.65 A10 10 0 0 1 382.22 179.65 H282.95 A10 10 0 0 1 272.95 169.65 V42.15 A10 10 0 0 1 282.95 32.15 Z" transform="rotate(8.98 332.59 91.78)" fill="#4cc9f0" opacity="0.65"/><circle cx="87.68" cy="181.59" r="133.86" fill="#f72585" opacity="0.32"/><path d="M95.66 45.19 H216.09 A10 10 0 0 1 226.09 55.19 V181.88 A10 10 0 0 1 216.09 191.88 H95.66 A10 10 0 0 1 85.66 181.88 V55.19 A10 10 0 0 1 95.66 45.19 Z" transform="rotate(4.51 155.88 115.4)" fill="#f72585" opacity="0.24"/><circle cx="148.42" cy="123.39" r="21.66" fill="#f72585" opacity="0.64"/><circle cx="332.5" cy="166.34" r="102.47" fill="#f72585" opacity="0.62"/><path d="M343.42 135.79 H410.52 A10 10 0 0 1 420.52 145.79 V226.08 A10 10 0 0 1 410.52 236.08 H343.42 A10 10 0 0 1 333.42 226.08 V145.79 A10 10 0 0 1 343.42 135.79 Z" transform="rotate(22.55 376.97 179.33)" fill="#4cc9f0" opacity="0.22"/>
+  <g>
+    <path d="M277.88 210.28 a42.12 52 0 0 1 84.24 0 Z" fill="#fff" opacity="0.9"/>
+    <circle cx="320" cy="138" r="26" fill="#fff" opacity="0.94"/>
+    <circle cx="311.16" cy="135.4" r="3.38" fill="#0b1533"/>
+    <circle cx="328.84" cy="135.4" r="3.38" fill="#0b1533"/>
+    <path d="M312.2 148.92 h15.6" stroke="#0b1533" stroke-width="3.64" stroke-linecap="round"/>
+  </g>
+  
+  <path d="M34 54 H606 A14 14 0 0 1 620 68 V240 A14 14 0 0 1 606 254 H34 A14 14 0 0 1 20 240 V68 A14 14 0 0 1 34 54 Z" fill="none" stroke="#05070a" stroke-width="2" stroke-opacity="0.6"/>
+</g>
+
+<g>
+  <path d="M24.5 286 H615.5 A4.5 4.5 0 0 1 620 290.5 V290.5 A4.5 4.5 0 0 1 615.5 295 H24.5 A4.5 4.5 0 0 1 20 290.5 V290.5 A4.5 4.5 0 0 1 24.5 286 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M24.5 286 H291.5 A4.5 4.5 0 0 1 296 290.5 V290.5 A4.5 4.5 0 0 1 291.5 295 H24.5 A4.5 4.5 0 0 1 20 290.5 V290.5 A4.5 4.5 0 0 1 24.5 286 Z" fill="url(#eksvideo-pr)"/>
+  <circle cx="296" cy="290.5" r="8.55" fill="#fff"/>
+  <circle cx="296" cy="290.5" r="8.55" fill="none" stroke="#ff5c7a" stroke-width="2"/>
+</g>
+<text x="20" y="330" font-family="Public Sans" font-size="15" font-weight="700" fill="#ffd8e0">four hours on a topic nobody asked about</text>
+<text x="20" y="354" font-family="Public Sans" font-size="12" font-weight="500" fill="#8d5561">continues while you look elsewhere</text>
+<text x="320" y="368" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">LONG VIDEO CHROME</text>
+</svg>
