@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "brief": "defs/15_sfx_audio.md",
+  "cues": [
+    {
+      "id": "sfx_combo_juicy",
+      "path": "content/minigames/_shared/sfx_sticker_combo_juicy.ogg",
+      "bus": "bus_combo",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_combo_bored",
+      "path": "content/minigames/_shared/sfx_sticker_combo_bored.ogg",
+      "bus": "bus_combo",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_chain_step",
+      "path": "content/minigames/_shared/sfx_sticker_chain_step.ogg",
+      "bus": "bus_reward",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_chain_complete",
+      "path": "content/minigames/_shared/sfx_sticker_chain_complete.ogg",
+      "bus": "bus_reward",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_burnout_telegraph",
+      "path": "content/minigames/_shared/sfx_sticker_burnout_telegraph.ogg",
+      "bus": "bus_critical",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ld_hit",
+      "path": "content/minigames/lane_defender/sfx_hit.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ld_destroy",
+      "path": "content/minigames/lane_defender/sfx_destroy.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ld_boss_warn",
+      "path": "content/minigames/lane_defender/sfx_boss_warn.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ld_boss_down",
+      "path": "content/minigames/lane_defender/sfx_boss_down.ogg",
+      "bus": "bus_reward",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ld_pickup",
+      "path": "content/minigames/lane_defender/sfx_pickup.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_er_lane",
+      "path": "content/minigames/endless_runner/sfx_lane.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_er_collect",
+      "path": "content/minigames/endless_runner/sfx_collect.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_er_crash",
+      "path": "content/minigames/endless_runner/sfx_crash.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_er_rare",
+      "path": "content/minigames/endless_runner/sfx_rare.ogg",
+      "bus": "bus_reward",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_bc_place",
+      "path": "content/minigames/block_cascade/sfx_place.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_bc_rotate",
+      "path": "content/minigames/block_cascade/sfx_rotate.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_bc_clear",
+      "path": "content/minigames/block_cascade/sfx_clear.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_bc_tetris",
+      "path": "content/minigames/block_cascade/sfx_tetris.ogg",
+      "bus": "bus_reward",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_bc_reset",
+      "path": "content/minigames/block_cascade/sfx_reset.ogg",
+      "bus": "bus_minigame",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ui_play",
+      "path": "content/sfx/ui/play.ogg",
+      "bus": "bus_ui",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ui_toggle",
+      "path": "content/sfx/ui/toggle.ogg",
+      "bus": "bus_ui",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ui_modal_open",
+      "path": "content/sfx/ui/modal_open.ogg",
+      "bus": "bus_ui",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ui_modal_close",
+      "path": "content/sfx/ui/modal_close.ogg",
+      "bus": "bus_ui",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_ui_soft_tick",
+      "path": "content/sfx/ui/soft_tick.ogg",
+      "bus": "bus_ui",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_alert_soft",
+      "path": "content/sfx/alerts/soft.ogg",
+      "bus": "bus_alert",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_alert_normal",
+      "path": "content/sfx/alerts/normal.ogg",
+      "bus": "bus_alert",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_alert_high",
+      "path": "content/sfx/alerts/high.ogg",
+      "bus": "bus_alert",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_alert_critical",
+      "path": "content/sfx/alerts/critical.ogg",
+      "bus": "bus_critical",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_alert_dismiss",
+      "path": "content/sfx/alerts/dismiss.ogg",
+      "bus": "bus_ui",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_game_over_sting",
+      "path": "content/sfx/ui/game_over_sting.ogg",
+      "bus": "bus_critical",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_burnout_enter",
+      "path": "content/sfx/ui/burnout_enter.ogg",
+      "bus": "bus_critical",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    },
+    {
+      "id": "sfx_recovery_enter",
+      "path": "content/sfx/ui/recovery_enter.ogg",
+      "bus": "bus_ui",
+      "status": "missing",
+      "license": null,
+      "attribution": null
+    }
+  ]
+}

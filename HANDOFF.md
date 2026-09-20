@@ -8,7 +8,7 @@
 | Canonical branch | `develop` |
 | Owner pins (do not restructure) | `defs/_PINS.md` |
 | Glossary | `CONTEXT.md` |
-| Specs | `defs/00` … `defs/14` |
+| Specs | `defs/00` … `defs/15` |
 | Visual lock | `PRODUCT.md`, `DESIGN.md`, `.impeccable/` |
 | Process ADR | `docs/adr/0001-tdd-after-docs.md` — docs first, then TDD |
 
@@ -36,6 +36,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | Mid-fi placeholders | `content/` (being replaced by hi-fi on PR #8) |
 | Pulse text library (~123 posts + users/trends/seeds) | `content/pulse/` — merged [#9](https://github.com/Grupo-Kiss/Dopamine/pull/9) |
 | Alerts hand templates (66 lines) | `content/alerts/templates.json` — merged [#10](https://github.com/Grupo-Kiss/Dopamine/pull/10) |
+| SFX / short-audio brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — see open PR for this pass |
 
 ### In progress — do not collide
 
@@ -68,10 +69,10 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 These do **not** overlap PR #8:
 
-1. **SFX / audio brief** — paths listed in `defs/09_game_feel.md` (`.ogg` stubs or authoring brief). Out of scope for the visual pass.
-2. **Credits data model** — typed credits-store shape + OSS/font inventory from `defs/13` (data only, no modal mockup).
-3. **Media drop-zone scaffolding** — empty dirs + real `manifest.json` schemas: `content/loop/clips/`, `wave/high|boring/`, `echo/audio|video/` (`defs/08`). No copyrighted media.
-4. **Balance pass** — tighten provisional constants in `defs/06_balance.md` only.
+1. **Credits data model** — typed credits-store shape + OSS/font inventory from `defs/13` (data only, no modal mockup).
+2. **Media drop-zone scaffolding** — empty dirs + real `manifest.json` schemas: `content/loop/clips/`, `wave/high|boring/`, `echo/audio|video/` (`defs/08`). No copyrighted media.
+3. **Balance pass** — tighten provisional constants in `defs/06_balance.md` only.
+4. **SFX file production** — only after owner answers in `defs/15_sfx_audio.md` (who/license/refs); do not invent final `.ogg` bytes.
 
 ### Blocked until owner accepts visuals
 
