@@ -1,3 +1,9 @@
+## Start here
+
+**`HANDOFF.md`** is the live status board and entrypoint for any new agent (done / in progress / safe parallel / blocked).
+
+Owner personal pins: `defs/_PINS.md` (do not restructure).
+
 ## Agent skills
 
 ### Issue tracker
