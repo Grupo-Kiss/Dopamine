@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="420" height="180" viewBox="0 0 420 180" role="img" aria-label="Wave transport controls">
+<title>Wave transport controls</title>
+
+<rect width="420" height="180" fill="#0a0d12"/>
+<g>
+  <circle cx="66" cy="76" r="25" fill="#12261e" stroke="#2a4a3c" stroke-width="1.6"/>
+  <g transform="translate(55 65.5) scale(0.85)" stroke="#2ee07a" fill="none" stroke-width="2.4" stroke-linejoin="round"><path d="M21 4.5v16l-11-8Z"/><path d="M7 4.5v16"/></g>
+  <text x="66" y="130" font-family="Public Sans" font-size="11" font-weight="800" fill="#2ee07a" text-anchor="middle" letter-spacing="1.4">PREV</text>
+</g>
+<g>
+  <circle cx="162" cy="76" r="32" fill="#2ee07a" stroke="#197b43" stroke-width="1.6"/>
+  <g transform="translate(149 63.5) scale(1)" stroke="#04140d" fill="#04140d" stroke-width="2.4" stroke-linejoin="round"><path d="M6 3.5v18l15-9Z"/></g>
+  <text x="162" y="130" font-family="Public Sans" font-size="11" font-weight="800" fill="#2ee07a" text-anchor="middle" letter-spacing="1.4">PLAY</text>
+</g>
+<g>
+  <circle cx="258" cy="76" r="25" fill="#12261e" stroke="#2a4a3c" stroke-width="1.6"/>
+  <g transform="translate(247 65.5) scale(0.85)" stroke="#2ee07a" fill="none" stroke-width="2.4" stroke-linejoin="round"><path d="M5 4.5v16l11-8Z"/><path d="M19 4.5v16"/></g>
+  <text x="258" y="130" font-family="Public Sans" font-size="11" font-weight="800" fill="#2ee07a" text-anchor="middle" letter-spacing="1.4">SKIP</text>
+</g>
+<g>
+  <circle cx="354" cy="76" r="25" fill="#12261e" stroke="#2a4a3c" stroke-width="1.6"/>
+  <g transform="translate(343 65.5) scale(0.85)" stroke="#2ee07a" fill="none" stroke-width="2.4" stroke-linejoin="round"><path d="M13 23.5 4.6 15.4a5.6 5.6 0 1 1 8.4-7.3 5.6 5.6 0 1 1 8.4 7.3Z"/></g>
+  <text x="354" y="130" font-family="Public Sans" font-size="11" font-weight="800" fill="#2ee07a" text-anchor="middle" letter-spacing="1.4">LIKE</text>
+</g>
+<text x="210" y="158" font-family="Public Sans" font-size="11" font-weight="500" fill="#3f7460" text-anchor="middle">playback cannot be paused — PLAY shown for completeness</text>
+<text x="210" y="168" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">TRANSPORT</text>
+</svg>

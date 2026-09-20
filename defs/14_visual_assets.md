@@ -214,7 +214,7 @@ Visible UI per `03`: avatar, title, hashtags, like count, comment count (display
 
 **Mockup:** `content/mockups/window_pulse.svg` (+ `.webp`).
 
-Palette: finalize conscious blue (starter `#1da1f2` → `#6ec6ff`); white buttons on blue. **Not** Twitter/X clone.
+Palette: **locked** `#2f81f7` → `#79b8ff`; white buttons on blue. **Not** Twitter/X clone.
 
 | Asset | Path | Notes |
 | --- | --- | --- |
@@ -230,7 +230,7 @@ Palette: finalize conscious blue (starter `#1da1f2` → `#6ec6ff`); white button
 
 **Mockup:** `content/mockups/window_wave.svg` (+ `.webp`).
 
-Palette: dark player `#0b3d2e` / finalize green `#1db954`-adjacent (conscious lock). Spotify-*grammar* only — **no** logos/wordmarks.
+Palette: dark player `#0b3d2e` / green **locked** `#2ee07a`. Spotify-*grammar* only — **no** logos/wordmarks.
 
 | Asset | Path | Notes |
 | --- | --- | --- |

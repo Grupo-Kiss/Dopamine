@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="516" height="190" viewBox="0 0 516 190" role="img" aria-label="Alert icon slot">
+<title>Alert icon slot</title>
+<defs>
+
+<linearGradient id="aki0-g" x1="0.08" y1="0" x2="0.92" y2="1">
+  <stop offset="0" stop-color="#ffa3b4"/>
+  <stop offset="0.42" stop-color="#ff4d6d"/>
+  <stop offset="1" stop-color="#9b2b42"/>
+</linearGradient>
+<linearGradient id="aki0-bevel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+  <stop offset="0.3" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="0.75" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
+</linearGradient>
+<radialGradient id="aki0-sheen" cx="0.3" cy="0.18" r="0.8">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.04"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<filter id="aki0-gs" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#4a0f1e" flood-opacity="0.55"/>
+</filter>
+
+<linearGradient id="aki1-g" x1="0.08" y1="0" x2="0.92" y2="1">
+  <stop offset="0" stop-color="#91c5ff"/>
+  <stop offset="0.42" stop-color="#2f81f7"/>
+  <stop offset="1" stop-color="#1b498b"/>
+</linearGradient>
+<linearGradient id="aki1-bevel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+  <stop offset="0.3" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="0.75" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
+</linearGradient>
+<radialGradient id="aki1-sheen" cx="0.3" cy="0.18" r="0.8">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.04"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<filter id="aki1-gs" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#0a1c33" flood-opacity="0.55"/>
+</filter>
+
+<linearGradient id="aki2-g" x1="0.08" y1="0" x2="0.92" y2="1">
+  <stop offset="0" stop-color="#92f3b8"/>
+  <stop offset="0.42" stop-color="#2ee07a"/>
+  <stop offset="1" stop-color="#197a45"/>
+</linearGradient>
+<linearGradient id="aki2-bevel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+  <stop offset="0.3" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="0.75" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
+</linearGradient>
+<radialGradient id="aki2-sheen" cx="0.3" cy="0.18" r="0.8">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.04"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<filter id="aki2-gs" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#07261a" flood-opacity="0.55"/>
+</filter>
+
+<linearGradient id="aki3-g" x1="0.08" y1="0" x2="0.92" y2="1">
+  <stop offset="0" stop-color="#ff7992"/>
+  <stop offset="0.42" stop-color="#ff0033"/>
+  <stop offset="1" stop-color="#940120"/>
+</linearGradient>
+<linearGradient id="aki3-bevel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+  <stop offset="0.3" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="0.75" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
+</linearGradient>
+<radialGradient id="aki3-sheen" cx="0.3" cy="0.18" r="0.8">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.04"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<filter id="aki3-gs" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#3d0210" flood-opacity="0.55"/>
+</filter>
+
+<linearGradient id="aki4-g" x1="0.08" y1="0" x2="0.92" y2="1">
+  <stop offset="0" stop-color="#ffd785"/>
+  <stop offset="0.42" stop-color="#f5a623"/>
+  <stop offset="1" stop-color="#906013"/>
+</linearGradient>
+<linearGradient id="aki4-bevel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+  <stop offset="0.3" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="0.75" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
+</linearGradient>
+<radialGradient id="aki4-sheen" cx="0.3" cy="0.18" r="0.8">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.04"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<filter id="aki4-gs" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#3d2606" flood-opacity="0.55"/>
+</filter>
+</defs>
+<rect width="516" height="190" fill="#0a0d12"/>
+<text x="34" y="28" font-family="Public Sans" font-size="11" font-weight="700" fill="#6e7681" letter-spacing="1.6">ICON SLOT — SOURCE WINDOW OR FAKE SYSTEM</text>
+<g transform="translate(34 44) scale(0.5)">
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki0-g)"/>
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki0-sheen)"/>
+<path d="M28 2.2 H100 A25.8 25.8 0 0 1 125.8 28 V100 A25.8 25.8 0 0 1 100 125.8 H28 A25.8 25.8 0 0 1 2.2 100 V28 A25.8 25.8 0 0 1 28 2.2 Z" fill="none" stroke="url(#aki0-bevel)" stroke-width="3"/>
+<g filter="url(#aki0-gs)">
+<path d="M48 20h32a14 14 0 0 1 14 14v60a14 14 0 0 1-14 14H48a14 14 0 0 1-14-14V34a14 14 0 0 1 14-14Z" fill="#fff" fill-opacity="0.15"/>
+<path d="M50 24h28a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12H50a12 12 0 0 1-12-12V36a12 12 0 0 1 12-12Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+<path d="M57 52 79 64 57 76Z" fill="#fff"/>
+<path d="M105 30v68" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-opacity="0.32"/>
+<path d="M105 62v36" stroke="#fff" stroke-width="9" stroke-linecap="round"/></g>
+<path d="M28 0.7 H100 A27.3 27.3 0 0 1 127.3 28 V100 A27.3 27.3 0 0 1 100 127.3 H28 A27.3 27.3 0 0 1 0.7 100 V28 A27.3 27.3 0 0 1 28 0.7 Z" fill="none" stroke="#4a0f1e" stroke-width="1.4" stroke-opacity="0.55"/></g>
+<text x="66" y="134" font-family="Public Sans" font-size="10.5" font-weight="800" fill="#6e7681" text-anchor="middle" letter-spacing="1.4">LOOP</text>
+<g transform="translate(130 44) scale(0.5)">
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki1-g)"/>
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki1-sheen)"/>
+<path d="M28 2.2 H100 A25.8 25.8 0 0 1 125.8 28 V100 A25.8 25.8 0 0 1 100 125.8 H28 A25.8 25.8 0 0 1 2.2 100 V28 A25.8 25.8 0 0 1 28 2.2 Z" fill="none" stroke="url(#aki1-bevel)" stroke-width="3"/>
+<g filter="url(#aki1-gs)">
+<path d="M24 40a14 14 0 0 1 14-14h44a14 14 0 0 1 14 14v26a14 14 0 0 1-14 14H56L34 100V80h-4a6 6 0 0 1-6-6Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+<path d="M44 46h32M44 62h20" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+<circle cx="94" cy="92" r="14" fill="#fff" fill-opacity="0.2"/>
+<circle cx="94" cy="92" r="14" fill="none" stroke="#fff" stroke-width="7"/></g>
+<path d="M28 0.7 H100 A27.3 27.3 0 0 1 127.3 28 V100 A27.3 27.3 0 0 1 100 127.3 H28 A27.3 27.3 0 0 1 0.7 100 V28 A27.3 27.3 0 0 1 28 0.7 Z" fill="none" stroke="#0a1c33" stroke-width="1.4" stroke-opacity="0.55"/></g>
+<text x="162" y="134" font-family="Public Sans" font-size="10.5" font-weight="800" fill="#6e7681" text-anchor="middle" letter-spacing="1.4">PULSE</text>
+<g transform="translate(226 44) scale(0.5)">
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki2-g)"/>
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki2-sheen)"/>
+<path d="M28 2.2 H100 A25.8 25.8 0 0 1 125.8 28 V100 A25.8 25.8 0 0 1 100 125.8 H28 A25.8 25.8 0 0 1 2.2 100 V28 A25.8 25.8 0 0 1 28 2.2 Z" fill="none" stroke="url(#aki2-bevel)" stroke-width="3"/>
+<g filter="url(#aki2-gs)">
+<g stroke="#fff" stroke-width="11" stroke-linecap="round">
+  <path d="M30 74V54"/>
+  <path d="M51 90V38"/>
+  <path d="M72 82V46"/>
+  <path d="M93 96V32"/>
+</g>
+<circle cx="93" cy="24" r="8" fill="#fff"/></g>
+<path d="M28 0.7 H100 A27.3 27.3 0 0 1 127.3 28 V100 A27.3 27.3 0 0 1 100 127.3 H28 A27.3 27.3 0 0 1 0.7 100 V28 A27.3 27.3 0 0 1 28 0.7 Z" fill="none" stroke="#07261a" stroke-width="1.4" stroke-opacity="0.55"/></g>
+<text x="258" y="134" font-family="Public Sans" font-size="10.5" font-weight="800" fill="#6e7681" text-anchor="middle" letter-spacing="1.4">WAVE</text>
+<g transform="translate(322 44) scale(0.5)">
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki3-g)"/>
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki3-sheen)"/>
+<path d="M28 2.2 H100 A25.8 25.8 0 0 1 125.8 28 V100 A25.8 25.8 0 0 1 100 125.8 H28 A25.8 25.8 0 0 1 2.2 100 V28 A25.8 25.8 0 0 1 28 2.2 Z" fill="none" stroke="url(#aki3-bevel)" stroke-width="3"/>
+<g filter="url(#aki3-gs)">
+<path d="M34 26 84 64 34 102Z" fill="#fff"/>
+<path d="M92 40 v48" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-opacity="0.66"/>
+<path d="M108 52 v24" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-opacity="0.34"/></g>
+<path d="M28 0.7 H100 A27.3 27.3 0 0 1 127.3 28 V100 A27.3 27.3 0 0 1 100 127.3 H28 A27.3 27.3 0 0 1 0.7 100 V28 A27.3 27.3 0 0 1 28 0.7 Z" fill="none" stroke="#3d0210" stroke-width="1.4" stroke-opacity="0.55"/></g>
+<text x="354" y="134" font-family="Public Sans" font-size="10.5" font-weight="800" fill="#6e7681" text-anchor="middle" letter-spacing="1.4">ECHO</text>
+<g transform="translate(418 44) scale(0.5)">
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki4-g)"/>
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#aki4-sheen)"/>
+<path d="M28 2.2 H100 A25.8 25.8 0 0 1 125.8 28 V100 A25.8 25.8 0 0 1 100 125.8 H28 A25.8 25.8 0 0 1 2.2 100 V28 A25.8 25.8 0 0 1 28 2.2 Z" fill="none" stroke="url(#aki4-bevel)" stroke-width="3"/>
+<g filter="url(#aki4-gs)">
+<path d="M64 20a26 26 0 0 1 26 26v18l11 16H27l11-16V46a26 26 0 0 1 26-26Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+<path d="M52 92a12 12 0 0 0 24 0" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+<circle cx="97" cy="31" r="12" fill="#fff"/></g>
+<path d="M28 0.7 H100 A27.3 27.3 0 0 1 127.3 28 V100 A27.3 27.3 0 0 1 100 127.3 H28 A27.3 27.3 0 0 1 0.7 100 V28 A27.3 27.3 0 0 1 28 0.7 Z" fill="none" stroke="#3d2606" stroke-width="1.4" stroke-opacity="0.55"/></g>
+<text x="450" y="134" font-family="Public Sans" font-size="10.5" font-weight="800" fill="#6e7681" text-anchor="middle" letter-spacing="1.4">ALERTS</text>
+<text x="258" y="178" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">52px SLOT INSIDE THE CARD</text>
+</svg>

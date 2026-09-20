@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="420" height="220" viewBox="0 0 420 220" role="img" aria-label="Echo avatar / show art placeholders">
+<title>Echo avatar / show art placeholders</title>
+<defs>
+
+<linearGradient id="eksa-av" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#ff5c7a"/>
+  <stop offset="1" stop-color="#ff0033"/>
+</linearGradient>
+<clipPath id="eksa-avc"><circle cx="72" cy="96" r="46"/></clipPath>
+
+<linearGradient id="eksc2-cv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7af0a8"/><stop offset="0.55" stop-color="#41a074"/><stop offset="1" stop-color="#1b6b52"/></linearGradient>
+<clipPath id="eksc2-cvc"><path d="M168.28 50 H243.72 A8.28 8.28 0 0 1 252 58.28 V133.72 A8.28 8.28 0 0 1 243.72 142 H168.28 A8.28 8.28 0 0 1 160 133.72 V58.28 A8.28 8.28 0 0 1 168.28 50 Z"/></clipPath>
+</defs>
+<rect width="420" height="220" fill="#0a0d12"/>
+
+<g>
+  <circle cx="72" cy="96" r="46" fill="url(#eksa-av)"/>
+  <g clip-path="url(#eksa-avc)">
+    <circle cx="72" cy="87.72" r="15.64" fill="#fff" opacity="0.88"/>
+    <path d="M41.64 142 a30.36 23.92 0 0 1 60.72 0 Z" fill="#fff" opacity="0.88"/>
+  </g>
+  <circle cx="72" cy="96" r="46" fill="none" stroke="#05070a" stroke-width="4.14" stroke-opacity="0.6"/>
+  <circle cx="72" cy="96" r="44.5" fill="none" stroke="#fff" stroke-width="1.2" stroke-opacity="0.3"/>
+</g>
+<g clip-path="url(#eksc2-cvc)">
+  <rect x="160" y="50" width="92" height="92" fill="url(#eksc2-cv)"/>
+  <circle cx="206" cy="96" r="9.2" fill="none" stroke="#fff" stroke-width="1.66" stroke-opacity="0.3"/><circle cx="206" cy="96" r="17.48" fill="none" stroke="#fff" stroke-width="1.66" stroke-opacity="0.26"/><circle cx="206" cy="96" r="25.76" fill="none" stroke="#fff" stroke-width="1.66" stroke-opacity="0.21"/><circle cx="206" cy="96" r="34.04" fill="none" stroke="#fff" stroke-width="1.66" stroke-opacity="0.16"/><circle cx="206" cy="96" r="42.32" fill="none" stroke="#fff" stroke-width="1.66" stroke-opacity="0.12"/>
+  <path d="M173.8 119.82 H173.8 A4.6 4.6 0 0 1 178.4 124.42 V126.36 A4.6 4.6 0 0 1 173.8 130.96 H173.8 A4.6 4.6 0 0 1 169.2 126.36 V124.42 A4.6 4.6 0 0 1 173.8 119.82 Z" fill="#fff" opacity="0.24"/><path d="M185.94 115.91 H185.94 A4.6 4.6 0 0 1 190.54 120.51 V126.36 A4.6 4.6 0 0 1 185.94 130.96 H185.94 A4.6 4.6 0 0 1 181.34 126.36 V120.51 A4.6 4.6 0 0 1 185.94 115.91 Z" fill="#fff" opacity="0.25"/><path d="M198.09 87.58 H198.09 A4.6 4.6 0 0 1 202.69 92.18 V126.36 A4.6 4.6 0 0 1 198.09 130.96 H198.09 A4.6 4.6 0 0 1 193.49 126.36 V92.18 A4.6 4.6 0 0 1 198.09 87.58 Z" fill="#fff" opacity="0.14"/><path d="M210.23 91.08 H210.23 A4.6 4.6 0 0 1 214.83 95.68 V126.36 A4.6 4.6 0 0 1 210.23 130.96 H210.23 A4.6 4.6 0 0 1 205.63 126.36 V95.68 A4.6 4.6 0 0 1 210.23 91.08 Z" fill="#fff" opacity="0.29"/><path d="M222.38 97 H222.38 A4.6 4.6 0 0 1 226.98 101.6 V126.36 A4.6 4.6 0 0 1 222.38 130.96 H222.38 A4.6 4.6 0 0 1 217.78 126.36 V101.6 A4.6 4.6 0 0 1 222.38 97 Z" fill="#fff" opacity="0.31"/><path d="M234.52 112.48 H234.52 A4.6 4.6 0 0 1 239.12 117.08 V126.36 A4.6 4.6 0 0 1 234.52 130.96 H234.52 A4.6 4.6 0 0 1 229.92 126.36 V117.08 A4.6 4.6 0 0 1 234.52 112.48 Z" fill="#fff" opacity="0.21"/>
+  <path d="M160 107.04 q27.6 -20.24 50.6 4.6 t46 -5.52 V142 H160 Z" fill="#05070a" opacity="0.26"/>
+  <path d="M168.28 50 H243.72 A8.28 8.28 0 0 1 252 58.28 V133.72 A8.28 8.28 0 0 1 243.72 142 H168.28 A8.28 8.28 0 0 1 160 133.72 V58.28 A8.28 8.28 0 0 1 168.28 50 Z" fill="none" stroke="#05070a" stroke-width="2" stroke-opacity="0.55"/>
+</g>
+<text x="72" y="172" font-family="Public Sans" font-size="11" font-weight="800" fill="#ff5c7a" text-anchor="middle" letter-spacing="1.6">CREATOR</text>
+<text x="206" y="172" font-family="Public Sans" font-size="11" font-weight="800" fill="#ff5c7a" text-anchor="middle" letter-spacing="1.6">SHOW ART</text>
+<path d="M288 50 H390 A10 10 0 0 1 400 60 V132 A10 10 0 0 1 390 142 H288 A10 10 0 0 1 278 132 V60 A10 10 0 0 1 288 50 Z" fill="#2a0a12" stroke="#730017" stroke-width="1.4"/>
+<text x="288" y="76" font-family="Public Sans" font-size="11" font-weight="800" fill="#8d5561" letter-spacing="1.6">SPONSOR</text>
+<text x="288" y="98" font-family="Public Sans" font-size="13" font-weight="600" fill="#8d5561">noise, no</text>
+<text x="288" y="116" font-family="Public Sans" font-size="13" font-weight="600" fill="#8d5561">Dopamine</text>
+<text x="340" y="172" font-family="Public Sans" font-size="11" font-weight="800" fill="#8d5561" text-anchor="middle" letter-spacing="1.6">SEGMENT</text>
+<text x="210" y="208" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">PLACEHOLDER ART SLOTS</text>
+</svg>

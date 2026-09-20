@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="620" height="190" viewBox="0 0 620 190" role="img" aria-label="Echo scrub with chapter marks">
+<title>Echo scrub with chapter marks</title>
+<defs>
+<linearGradient id="eksc-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff0033"/><stop offset="1" stop-color="#ff5c7a"/></linearGradient>
+</defs>
+<rect width="620" height="190" fill="#0a0d12"/>
+<text x="30" y="40" font-family="Public Sans" font-size="11" font-weight="700" fill="#ff0033" letter-spacing="1.6">SCRUB — SPARSE HIGH-VALUE MOMENTS</text>
+<g>
+  <path d="M35 76 H585 A5 5 0 0 1 590 81 V81 A5 5 0 0 1 585 86 H35 A5 5 0 0 1 30 81 V81 A5 5 0 0 1 35 76 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M35 76 H282.6 A5 5 0 0 1 287.6 81 V81 A5 5 0 0 1 282.6 86 H35 A5 5 0 0 1 30 81 V81 A5 5 0 0 1 35 76 Z" fill="url(#eksc-pr)"/>
+  <circle cx="287.6" cy="81" r="9.5" fill="#fff"/>
+  <circle cx="287.6" cy="81" r="9.5" fill="none" stroke="#ff5c7a" stroke-width="2"/>
+</g>
+<g>
+  <path d="M130.8 64 v34" stroke="#6a1f30" stroke-width="2.2"/>
+  
+  <text x="130.8" y="118" font-family="Public Sans" font-size="10" font-weight="800" fill="#8d5561" text-anchor="middle" letter-spacing="1.2">CH 1</text>
+</g>
+<g>
+  <path d="M237.2 64 v34" stroke="#6a1f30" stroke-width="2.2"/>
+  
+  <text x="237.2" y="118" font-family="Public Sans" font-size="10" font-weight="800" fill="#8d5561" text-anchor="middle" letter-spacing="1.2">CH 2</text>
+</g>
+<g>
+  <path d="M377.2 64 v34" stroke="#ff8c00" stroke-width="3.4"/>
+  <path d="M377.2 58 l8 -11 h-16 Z" fill="#ff8c00"/>
+  <text x="377.2" y="118" font-family="Public Sans" font-size="10" font-weight="800" fill="#ff8c00" text-anchor="middle" letter-spacing="1.2">HIGHLIGHT</text>
+</g>
+<g>
+  <path d="M483.6 64 v34" stroke="#6a1f30" stroke-width="2.2"/>
+  
+  <text x="483.6" y="118" font-family="Public Sans" font-size="10" font-weight="800" fill="#8d5561" text-anchor="middle" letter-spacing="1.2">CH 4</text>
+</g>
+<text x="30" y="158" font-family="Public Sans" font-size="12" font-weight="500" fill="#8d5561">Anticipation builds while you stay toward a highlight.</text>
+<text x="310" y="178" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">CHAPTER MARKS</text>
+</svg>

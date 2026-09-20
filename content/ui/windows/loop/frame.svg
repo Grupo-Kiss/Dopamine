@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="420" height="660" viewBox="0 0 420 660" role="img" aria-label="Loop frame">
+<title>Loop frame</title>
+<defs>
+
+<radialGradient id="lkf-bg" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#a63b63"/><stop offset="0.6" stop-color="#71463f"/><stop offset="1" stop-color="#3a1030"/></radialGradient>
+<clipPath id="lkf-cl"><path d="M40 60 H380 A14 14 0 0 1 394 74 V578 A14 14 0 0 1 380 592 H40 A14 14 0 0 1 26 578 V74 A14 14 0 0 1 40 60 Z"/></clipPath>
+<linearGradient id="lkfp-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ff8fa3"/></linearGradient>
+<linearGradient id="lkfbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b1017"/><stop offset="1" stop-color="#120a0f"/></linearGradient>
+</defs>
+<rect width="420" height="660" fill="#0a0d12"/>
+<path d="M14 0 H406 A14 14 0 0 1 420 14 V646 A14 14 0 0 1 406 660 H14 A14 14 0 0 1 0 646 V14 A14 14 0 0 1 14 0 Z" fill="url(#lkfbg)" stroke="#8c2a3c" stroke-width="1.6"/>
+<path d="M14 0 H406 A14 14 0 0 1 420 14 V34 H0 V14 A14 14 0 0 1 14 0 Z" fill="#290f19"/>
+<text x="16" y="22" font-family="Teko" font-size="21" font-weight="600" fill="#ff4d6d" letter-spacing="3">LOOP</text>
+<g clip-path="url(#lkf-cl)">
+  <rect x="26" y="60" width="368" height="532" fill="url(#lkf-bg)"/>
+  <path d="M30.36 331.13 H26.28 A10 10 0 0 1 36.28 341.13 V339.41 A10 10 0 0 1 26.28 349.41 H30.36 A10 10 0 0 1 20.36 339.41 V341.13 A10 10 0 0 1 30.36 331.13 Z" transform="rotate(7.67 28.32 339.09)" fill="#ffd166" opacity="0.35"/><path d="M38.77 287.39 H80.58 A10 10 0 0 1 90.58 297.39 V325.9 A10 10 0 0 1 80.58 335.9 H38.77 A10 10 0 0 1 28.77 325.9 V297.39 A10 10 0 0 1 38.77 287.39 Z" transform="rotate(8.48 59.67 318.29)" fill="#ff5f8d" opacity="0.64"/><path d="M271.39 318.78 H310.78 A10 10 0 0 1 320.78 328.78 V399.18 A10 10 0 0 1 310.78 409.18 H271.39 A10 10 0 0 1 261.39 399.18 V328.78 A10 10 0 0 1 271.39 318.78 Z" transform="rotate(-10.32 291.09 348.48)" fill="#ffd166" opacity="0.21"/><path d="M307.99 275.5 H368.62 A10 10 0 0 1 378.62 285.5 V375.16 A10 10 0 0 1 368.62 385.16 H307.99 A10 10 0 0 1 297.99 375.16 V285.5 A10 10 0 0 1 307.99 275.5 Z" transform="rotate(-23.19 338.31 315.82)" fill="#ff5f8d" opacity="0.51"/><path d="M104.87 407.87 H162.11 A10 10 0 0 1 172.11 417.87 V464.86 A10 10 0 0 1 162.11 474.86 H104.87 A10 10 0 0 1 94.87 464.86 V417.87 A10 10 0 0 1 104.87 407.87 Z" transform="rotate(4.42 133.49 446.49)" fill="#ff5f8d" opacity="0.43"/><path d="M289.66 156.93 H373.91 A10 10 0 0 1 383.91 166.93 V238.74 A10 10 0 0 1 373.91 248.74 H289.66 A10 10 0 0 1 279.66 238.74 V166.93 A10 10 0 0 1 289.66 156.93 Z" transform="rotate(15.04 331.79 209.06)" fill="#ffd166" opacity="0.39"/><circle cx="134.97" cy="255.09" r="71.78" fill="#ff5f8d" opacity="0.66"/>
+  <g>
+    <path d="M132.5 421.22 a77.5 100.46 0 0 1 155 0 Z" fill="#fff" opacity="0.9"/>
+    <circle cx="210" cy="283.44" r="47.84" fill="#fff" opacity="0.94"/>
+    <circle cx="193.73" cy="278.66" r="6.22" fill="#3a1030"/>
+    <circle cx="226.27" cy="278.66" r="6.22" fill="#3a1030"/>
+    <path d="M195.65 303.53 h28.7" stroke="#3a1030" stroke-width="6.7" stroke-linecap="round"/>
+  </g>
+  <g>
+    <path d="M46 530 H374 A8 8 0 0 1 382 538 V556 A8 8 0 0 1 374 564 H46 A8 8 0 0 1 38 556 V538 A8 8 0 0 1 46 530 Z" fill="#05070a" opacity="0.62"/>
+    <text x="210" y="553" font-family="Public Sans" font-size="16.928" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="0.6">VERTICAL STAGE</text>
+  </g>
+  <path d="M40 60 H380 A14 14 0 0 1 394 74 V578 A14 14 0 0 1 380 592 H40 A14 14 0 0 1 26 578 V74 A14 14 0 0 1 40 60 Z" fill="none" stroke="#05070a" stroke-width="2" stroke-opacity="0.6"/>
+</g>
+<g>
+  <path d="M44 608 H376 A4 4 0 0 1 380 612 V612 A4 4 0 0 1 376 616 H44 A4 4 0 0 1 40 612 V612 A4 4 0 0 1 44 608 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M44 608 H151.6 A4 4 0 0 1 155.6 612 V612 A4 4 0 0 1 151.6 616 H44 A4 4 0 0 1 40 612 V612 A4 4 0 0 1 44 608 Z" fill="url(#lkfp-pr)"/>
+  <circle cx="155.6" cy="612" r="7.6" fill="#fff"/>
+  <circle cx="155.6" cy="612" r="7.6" fill="none" stroke="#ff8fa3" stroke-width="2"/>
+</g>
+<text x="210" y="648" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">9:16 CLIP STAGE + CHROME</text>
+</svg>
