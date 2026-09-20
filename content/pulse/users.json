@@ -1,0 +1,154 @@
+{
+  "users": [
+    {
+      "id": "user_a",
+      "handle": "cerealphilosopher",
+      "displayName": "Cereal Philosopher"
+    },
+    {
+      "id": "user_b",
+      "handle": "ratio_ranch",
+      "displayName": "Ratio Ranch"
+    },
+    {
+      "id": "user_c",
+      "handle": "main_character_energy",
+      "displayName": "Main Character Energy"
+    },
+    {
+      "id": "user_d",
+      "handle": "unsolicited_takes",
+      "displayName": "Unsolicited Takes"
+    },
+    {
+      "id": "user_e",
+      "handle": "doomscroll_dan",
+      "displayName": "Doomscroll Dan"
+    },
+    {
+      "id": "user_f",
+      "handle": "hot_take_heater",
+      "displayName": "Hot Take Heater"
+    },
+    {
+      "id": "user_g",
+      "handle": "vaguepost_val",
+      "displayName": "Vaguepost Val"
+    },
+    {
+      "id": "user_h",
+      "handle": "thread_unraveler",
+      "displayName": "Thread Unraveler"
+    },
+    {
+      "id": "user_i",
+      "handle": "engagement_goblin",
+      "displayName": "Engagement Goblin"
+    },
+    {
+      "id": "user_j",
+      "handle": "soft_launch_sam",
+      "displayName": "Soft Launch Sam"
+    },
+    {
+      "id": "user_k",
+      "handle": "quote_tweet_kid",
+      "displayName": "Quote Tweet Kid"
+    },
+    {
+      "id": "user_l",
+      "handle": "algo_whisperer",
+      "displayName": "Algo Whisperer"
+    },
+    {
+      "id": "user_m",
+      "handle": "parasocial_pat",
+      "displayName": "Parasocial Pat"
+    },
+    {
+      "id": "user_n",
+      "handle": "timeline_terror",
+      "displayName": "Timeline Terror"
+    },
+    {
+      "id": "user_o",
+      "handle": "notif_nymph",
+      "displayName": "Notif Nymph"
+    },
+    {
+      "id": "user_p",
+      "handle": "discourse_daisy",
+      "displayName": "Discourse Daisy"
+    },
+    {
+      "id": "user_q",
+      "handle": "cancelled_twice",
+      "displayName": "Cancelled Twice"
+    },
+    {
+      "id": "user_r",
+      "handle": "reply_guy_prime",
+      "displayName": "Reply Guy Prime"
+    },
+    {
+      "id": "user_s",
+      "handle": "trend_tourist",
+      "displayName": "Trend Tourist"
+    },
+    {
+      "id": "user_t",
+      "handle": "inbox_zero_liar",
+      "displayName": "Inbox Zero Liar"
+    },
+    {
+      "id": "user_u",
+      "handle": "muted_words_club",
+      "displayName": "Muted Words Club"
+    },
+    {
+      "id": "user_v",
+      "handle": "blue_check_imposter",
+      "displayName": "Blue Check Imposter"
+    },
+    {
+      "id": "user_w",
+      "handle": "lurker_with_opinions",
+      "displayName": "Lurker With Opinions"
+    },
+    {
+      "id": "user_x",
+      "handle": "groupchat_leak",
+      "displayName": "Groupchat Leak"
+    },
+    {
+      "id": "user_y",
+      "handle": "subtweet_surgeon",
+      "displayName": "Subtweet Surgeon"
+    },
+    {
+      "id": "user_z",
+      "handle": "fomo_farmer",
+      "displayName": "FOMO Farmer"
+    },
+    {
+      "id": "brand_bot",
+      "handle": "stimulcorp_ads",
+      "displayName": "StimulCorp Ads"
+    },
+    {
+      "id": "spam_bot_1",
+      "handle": "free_dopamine_now",
+      "displayName": "FREE DOPAMINE NOW"
+    },
+    {
+      "id": "spam_bot_2",
+      "handle": "click_this_link_pls",
+      "displayName": "Click This Link Pls"
+    },
+    {
+      "id": "brand_bot_2",
+      "handle": "attention_marketplace",
+      "displayName": "Attention Marketplace"
+    }
+  ]
+}

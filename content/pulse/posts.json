@@ -1,0 +1,865 @@
+{
+  "posts": [
+    {
+      "id": "pulse_001",
+      "userId": "user_f",
+      "body": "Is {noun} even legal in {place}? Asking for a friend.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_002",
+      "userId": "user_b",
+      "body": "If you still like {topic}, log off. Permanently.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_003",
+      "userId": "user_d",
+      "body": "Unpopular: people who mute {noun} are the problem.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_004",
+      "userId": "user_n",
+      "body": "Hot take: {topic} was never real and you all got played.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_005",
+      "userId": "user_i",
+      "body": "Ratio incoming: {take}.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_006",
+      "userId": "user_q",
+      "body": "Cancel {noun} before it cancels you.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_007",
+      "userId": "user_e",
+      "body": "If your personality is {topic}, please seek help.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_008",
+      "userId": "user_r",
+      "body": "Nobody asked, but {noun} ruined {place}.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_009",
+      "userId": "user_y",
+      "body": "Subtweet season: whoever invented {topic} owes us rent.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_010",
+      "userId": "user_f",
+      "body": "Bold of you to defend {noun} in {place}.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_011",
+      "userId": "user_p",
+      "body": "The discourse around {topic} is a psyop and I have charts.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_012",
+      "userId": "user_b",
+      "body": "Ratio farm open: {take} about {noun}.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_013",
+      "userId": "user_n",
+      "body": "You're not addicted to {noun}. You're addicted to being seen caring.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_014",
+      "userId": "user_d",
+      "body": "Blocking people over {topic} is the only correct politics.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_015",
+      "userId": "user_i",
+      "body": "Engagement farmers hate this one trick: caring about {noun}.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_016",
+      "userId": "user_w",
+      "body": "Lurkers of {place}: your silence on {topic} is loud.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_017",
+      "userId": "user_f",
+      "body": "Imagine still posting about {noun}. Embarrassing.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_018",
+      "userId": "user_q",
+      "body": "{user} just declared {topic} cancelled. Ratios welcome.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_019",
+      "userId": "user_a",
+      "body": "Is cereal a soup? Scientists HATE this take.",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_020",
+      "userId": "user_a",
+      "body": "Final answer: a hot dog is a taco pretending to be a sandwich.",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_021",
+      "userId": "user_c",
+      "body": "Are notifications a roommate or a parasite? Debate below.",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_022",
+      "userId": "user_h",
+      "body": "Thread: why {noun} is technically a form of cardio.",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_023",
+      "userId": "user_d",
+      "body": "Unironically: is {place} a country?",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_024",
+      "userId": "user_k",
+      "body": "Quote me wrong: {topic} is just astrology for people who code.",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_025",
+      "userId": "user_a",
+      "body": "If {noun} had a passport, what nationality would it claim?",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_026",
+      "userId": "user_p",
+      "body": "Serious question: does {topic} count as a personality trait?",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_027",
+      "userId": "user_w",
+      "body": "Hearing: water is wet. Counterpoint: {noun}.",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_028",
+      "userId": "user_h",
+      "body": "1/? Is liking your own post performance art or tax fraud?",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_029",
+      "userId": "user_c",
+      "body": "We need a Geneva Convention for {place}.",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_030",
+      "userId": "user_a",
+      "body": "Are drafts abandoned children or future lore?",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_031",
+      "userId": "user_s",
+      "body": "Today's vibe: soft lighting and softer opinions. {emoji}",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_032",
+      "userId": "user_j",
+      "body": "Soft launching my new hobby: closing tabs I meant to read.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_033",
+      "userId": "user_t",
+      "body": "Inbox zero is a myth I tell myself before coffee.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_034",
+      "userId": "user_o",
+      "body": "Friendly reminder to drink water between scrolls.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_035",
+      "userId": "user_c",
+      "body": "Main Character Monday: I made my bed and that's enough plot.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_036",
+      "userId": "user_s",
+      "body": "Trending for the right reasons: people being briefly nice.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_037",
+      "userId": "user_g",
+      "body": "some of you get it",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_038",
+      "userId": "user_z",
+      "body": "FOMO but make it wholesome: missing a sunset, not a ratio.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_039",
+      "userId": "user_j",
+      "body": "Soft launch of {topic} \u2014 no drama, just vibes.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_040",
+      "userId": "user_u",
+      "body": "Muted {noun}. Instantly 12% happier. Science.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_041",
+      "userId": "user_s",
+      "body": "Harmless trend check: what's your comfort {noun}?",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_042",
+      "userId": "user_o",
+      "body": "Notif detox day 1: I miss them already {emoji}",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_043",
+      "userId": "user_k",
+      "body": "POV: you opened Pulse for one second and lost an hour.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_044",
+      "userId": "user_i",
+      "body": "Me: I'll just check one trend. Also me: {emoji}{emoji}{emoji}",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_045",
+      "userId": "user_e",
+      "body": "Doomscrolling so hard I unlocked a new personality.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_046",
+      "userId": "user_l",
+      "body": "The algorithm: \"have you considered more {noun}?\" Me: yes.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_047",
+      "userId": "user_k",
+      "body": "Nobody: ... Me: a 47-slide thread about {topic}.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_048",
+      "userId": "user_n",
+      "body": "That face when the ratio arrives before the apology.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_049",
+      "userId": "user_m",
+      "body": "Parasocial speedrun any% (glitchless).",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_050",
+      "userId": "user_i",
+      "body": "Engagement bait? In this economy? {emoji}",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_051",
+      "userId": "user_z",
+      "body": "FOMO starter pack: {noun}, {place}, and unanswered DMs.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_052",
+      "userId": "user_k",
+      "body": "Tag someone who needs this {take}.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_053",
+      "userId": "user_e",
+      "body": "Brainrot level: explaining {topic} to my plants.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_054",
+      "userId": "user_l",
+      "body": "When the For You tab knows you better than your therapist.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_055",
+      "userId": "user_d",
+      "body": "Controversial: reading the whole thread is optional.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_056",
+      "userId": "user_f",
+      "body": "I will die on this hill: {noun} peaked already.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_057",
+      "userId": "user_p",
+      "body": "Hot opinion: {topic} discourse is mostly status games.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_058",
+      "userId": "user_w",
+      "body": "Maybe we don't need a take on every {noun}.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_059",
+      "userId": "user_y",
+      "body": "Unpopular: subtweet clarity > vaguepost mystique.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_060",
+      "userId": "user_b",
+      "body": "The ratio is a public service, not bullying. Debate me.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_061",
+      "userId": "user_r",
+      "body": "Reply guys built this platform and receive no gratitude.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_062",
+      "userId": "user_d",
+      "body": "If your brand is \"authentic,\" it's already a brand.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_063",
+      "userId": "user_q",
+      "body": "Getting cancelled should come with a cooldown timer.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_064",
+      "userId": "user_u",
+      "body": "Muting is free speech for your nervous system.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_065",
+      "userId": "user_f",
+      "body": "Take: {take} \u2014 and I mean it about {topic}.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_066",
+      "userId": "user_p",
+      "body": "We romanticize {place} too much. It's just noise with fonts.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_067",
+      "userId": "user_n",
+      "body": "BREAKING: scientists confirm {noun} causes {topic}. Sources: vibes.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_068",
+      "userId": "user_e",
+      "body": "LEAKED memo: {place} will be privatized by next week.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_069",
+      "userId": "user_h",
+      "body": "Exclusive: the moon just filed a lawsuit against {topic}.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_070",
+      "userId": "user_n",
+      "body": "INSIDERS SAY: {noun} was never real. Mass hallucination confirmed.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_071",
+      "userId": "user_l",
+      "body": "Report: algorithms now charge rent in {place}.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_072",
+      "userId": "user_e",
+      "body": "Just in: {topic} banned in 14 imaginary countries.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_073",
+      "userId": "user_h",
+      "body": "Study (n=3 group chats): {noun} increases lifespan by 2 scrolls.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_074",
+      "userId": "user_n",
+      "body": "Anonymous tip: {user} is three bots in a trench coat.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_075",
+      "userId": "user_e",
+      "body": "Developing: {topic} declared a UNESCO vibe.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_076",
+      "userId": "user_l",
+      "body": "Fact check pending: is {noun} watching you back?",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_077",
+      "userId": "user_x",
+      "body": "Someone leaked the group chat and now {place} is on fire.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_078",
+      "userId": "user_y",
+      "body": "The subtweet was subtle until it wasn't. {emoji}",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_079",
+      "userId": "user_q",
+      "body": "Two creators. One {topic}. Zero chill.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_080",
+      "userId": "user_m",
+      "body": "Parasocial breakup arc just entered the chat.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_081",
+      "userId": "user_x",
+      "body": "Callout post incoming about {noun}. Popcorn ready.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_082",
+      "userId": "user_g",
+      "body": "if you know, you know",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_083",
+      "userId": "user_y",
+      "body": "They unfollowed, then quote-tweeted, then denied it.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_084",
+      "userId": "user_p",
+      "body": "Drama update: {topic} now has factions and merch.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_085",
+      "userId": "user_x",
+      "body": "The apology draft leaked before the apology. Classic.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_086",
+      "userId": "user_q",
+      "body": "{user} vs the timeline \u2014 currently losing on points.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_087",
+      "userId": "user_m",
+      "body": "Stan wars over {noun} have entered international waters.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_088",
+      "userId": "user_y",
+      "body": "Soft launch \u2192 hard crash \u2192 statement \u2192 silence. The cycle.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_089",
+      "userId": "user_c",
+      "body": "Just learned how to archive a conversation. Power fantasy unlocked.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_090",
+      "userId": "user_s",
+      "body": "Trend I can get behind: logging off after one good joke.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_091",
+      "userId": "user_a",
+      "body": "Are stickers a currency or a cry for help?",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_092",
+      "userId": "user_h",
+      "body": "Thread cancelled: I forgot the point by tweet 4.",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_093",
+      "userId": "user_k",
+      "body": "This you? *points at last night's doomscroll*",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_094",
+      "userId": "user_i",
+      "body": "CEO of having a normal one: please hire me.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_095",
+      "userId": "user_d",
+      "body": "Maybe the real engagement was the friends we ratioed along the way.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_096",
+      "userId": "user_f",
+      "body": "If you need a content warning for {topic}, the topic already won.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_097",
+      "userId": "user_n",
+      "body": "Confirmed by a guy in my phone: {noun} is sentient.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_098",
+      "userId": "user_x",
+      "body": "The plot thickened, then got a podcast deal.",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_099",
+      "userId": "user_l",
+      "body": "My screen time report called me a coward.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_100",
+      "userId": "user_o",
+      "body": "Sending gentle vibes to everyone stuck in {place}.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_101",
+      "userId": "user_r",
+      "body": "Corrections are love languages for reply guys.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_102",
+      "userId": "user_b",
+      "body": "Your \"nuance\" on {topic} is just conflict avoidance with a thesaurus.",
+      "category": "ragebait",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_103",
+      "userId": "user_z",
+      "body": "FOMO called. It wants its afternoon back.",
+      "category": "memes",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_104",
+      "userId": "user_g",
+      "body": "anyway",
+      "category": "internet_drama",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_105",
+      "userId": "user_w",
+      "body": "Is a quote tweet a hug or a knife? Depends on the font.",
+      "category": "absurd_debates",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_106",
+      "userId": "user_p",
+      "body": "Discourse without receipts is karaoke.",
+      "category": "controversial_opinions",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_107",
+      "userId": "user_e",
+      "body": "Weather update: 100% chance of {topic} in your feed.",
+      "category": "fake_news",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_108",
+      "userId": "user_u",
+      "body": "Muted three words. Timeline now almost readable.",
+      "category": "harmless_trends",
+      "rewardable": true
+    },
+    {
+      "id": "pulse_ad_001",
+      "userId": "brand_bot",
+      "body": "BUY MORE STIMULATION \u2014 50% OFF YOUR ATTENTION",
+      "category": "advertising",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_ad_002",
+      "userId": "brand_bot",
+      "body": "NEW: Premium Silence\u2122 \u2014 mute reality for only 12.99/mo",
+      "category": "advertising",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_ad_003",
+      "userId": "brand_bot_2",
+      "body": "Auction your focus. Bid on {topic}. Terms apply.",
+      "category": "advertising",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_ad_004",
+      "userId": "brand_bot",
+      "body": "Sponsored: Have you tried our patented {noun}? Doctors hate us.",
+      "category": "advertising",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_ad_005",
+      "userId": "brand_bot_2",
+      "body": "Upgrade to Attention+ and skip 0 ads (lie).",
+      "category": "advertising",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_ad_006",
+      "userId": "brand_bot",
+      "body": "Limited drop: dopamine vials (metaphorical). Shop now.",
+      "category": "advertising",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_ad_007",
+      "userId": "brand_bot_2",
+      "body": "This post brought to you by people who want your eyeballs.",
+      "category": "advertising",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_ad_008",
+      "userId": "brand_bot",
+      "body": "Download FocusBreakr \u2014 we interrupt your interruptions.",
+      "category": "advertising",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_spam_001",
+      "userId": "spam_bot_1",
+      "body": "CLICK HERE FOR FREE {noun}!!! www.totally-real.example/free",
+      "category": "spam",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_spam_002",
+      "userId": "spam_bot_2",
+      "body": "Congratulations you've been selected for {topic} (send handle)",
+      "category": "spam",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_spam_003",
+      "userId": "spam_bot_1",
+      "body": "Make $900/day reacting to posts from {place} \u2014 DM \"YES\"",
+      "category": "spam",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_spam_004",
+      "userId": "spam_bot_2",
+      "body": "Hot singles in your timeline are actually {noun}. Open link.",
+      "category": "spam",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_spam_005",
+      "userId": "spam_bot_1",
+      "body": "URGENT: your account will close unless you verify at not-a-scam.example",
+      "category": "spam",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_spam_006",
+      "userId": "spam_bot_2",
+      "body": "I will grow your followers with pure {emoji} energy. Pay first.",
+      "category": "spam",
+      "rewardable": false
+    },
+    {
+      "id": "pulse_spam_007",
+      "userId": "spam_bot_1",
+      "body": "CRYPTO? No. DOPAMINE COIN. Join the waitlist (there is no coin).",
+      "category": "spam",
+      "rewardable": false
+    }
+  ]
+}
