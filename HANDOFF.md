@@ -8,7 +8,7 @@
 | Canonical branch | `develop` |
 | Owner pins (do not restructure) | `defs/_PINS.md` |
 | Glossary | `CONTEXT.md` |
-| Specs | `defs/00` … `defs/14` |
+| Specs | `defs/00` … `defs/15` |
 | Visual lock | `PRODUCT.md`, `DESIGN.md`, `.impeccable/` |
 | Process ADR | `docs/adr/0001-tdd-after-docs.md` — docs first, then TDD |
 
@@ -36,6 +36,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | Mid-fi placeholders | `content/` (being replaced by hi-fi on PR #8) |
 | Pulse text library (~123 posts + users/trends/seeds) | `content/pulse/` — merged [#9](https://github.com/Grupo-Kiss/Dopamine/pull/9) |
 | Alerts hand templates (66 lines) | `content/alerts/templates.json` — merged [#10](https://github.com/Grupo-Kiss/Dopamine/pull/10) |
+| SFX / short-audio brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — owner decisions locked; **produce `.ogg` after #8** |
 
 ### In progress — do not collide
 
@@ -68,10 +69,11 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 These do **not** overlap PR #8:
 
-1. **SFX / audio brief** — paths listed in `defs/09_game_feel.md` (`.ogg` stubs or authoring brief). Out of scope for the visual pass.
-2. **Credits data model** — typed credits-store shape + OSS/font inventory from `defs/13` (data only, no modal mockup).
-3. **Media drop-zone scaffolding** — empty dirs + real `manifest.json` schemas: `content/loop/clips/`, `wave/high|boring/`, `echo/audio|video/` (`defs/08`). No copyrighted media.
-4. **Balance pass** — tighten provisional constants in `defs/06_balance.md` only.
+1. **Credits data model** — typed credits-store shape + OSS/font inventory from `defs/13` (data only, no modal mockup).
+2. **Media drop-zone scaffolding** — empty dirs + real `manifest.json` schemas: `content/loop/clips/`, `wave/high|boring/`, `echo/audio|video/` (`defs/08`). No copyrighted media.
+3. **Balance pass** — tighten provisional constants in `defs/06_balance.md` only.
+4. **SFX file production** — after #8; generative local `.ogg` (no stream API) or Freesound/CC0 per `defs/15_sfx_audio.md` owner decisions.
+5. **Wave music pack** (related, not SFX) — local techno beds in `wave/high/` + slower `wave/boring/`; per-item licenses (`08`).
 
 ### Blocked until owner accepts visuals
 
@@ -89,6 +91,7 @@ Do **not** start until `defs/14_visual_assets.md` acceptance checklist is signed
 | Domain language | `CONTEXT.md` |
 | Owner’s personal later-thoughts | `defs/_PINS.md` (**owner-owned** — agents may check off facts they completed, not rewrite the file’s role) |
 | Visual production checklist + exact paths | `defs/14_visual_assets.md` |
+| SFX / short-audio cue sheet | `defs/15_sfx_audio.md` + `content/sfx/manifest.json` |
 | Layout slots | `defs/07_layout.md` |
 | Window / minigame behaviour | `defs/03`, `defs/04` |
 | Feel / SFX path lists | `defs/09_game_feel.md` |
