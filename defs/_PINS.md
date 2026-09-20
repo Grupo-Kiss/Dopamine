@@ -27,7 +27,7 @@ Short reminders. Remove when done.
 
 - [ ] **You:** populate `.env` / `.env.local` when enabling APIs — never commit secrets; providers `enabled: false` until keys + legal OK
 - [ ] Run human checklist in `13_credits_and_legal.md` before release / before enabling APIs
-- Pulse ~100 template posts (`content/pulse/posts.json`)
+- [x] Pulse ~100 template posts (`content/pulse/posts.json` + users/trends/seeds) — expand/tune in playtest
 - SFX `.ogg` lists in `09` / `14` out-of-scope note
 - APIs (Pixabay/Pexels/Jamendo) only with keys + legal OK
 - Create empty media dirs if missing: `content/wave/high|boring`, `loop/clips`, `echo/audio|video`

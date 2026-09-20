@@ -1,0 +1,124 @@
+{
+  "trends": [
+    {
+      "id": "trend_001",
+      "topic": "#IsCerealSoup",
+      "lifetimeSeconds": 60
+    },
+    {
+      "id": "trend_002",
+      "topic": "#HotDogIsSandwich",
+      "lifetimeSeconds": 55
+    },
+    {
+      "id": "trend_003",
+      "topic": "#CancelTheMoon",
+      "lifetimeSeconds": 45
+    },
+    {
+      "id": "trend_004",
+      "topic": "#MainCharacterMonday",
+      "lifetimeSeconds": 70
+    },
+    {
+      "id": "trend_005",
+      "topic": "#RatioSeason",
+      "lifetimeSeconds": 50
+    },
+    {
+      "id": "trend_006",
+      "topic": "#QuietQuittingYourFeed",
+      "lifetimeSeconds": 65
+    },
+    {
+      "id": "trend_007",
+      "topic": "#TouchGrassChallenge",
+      "lifetimeSeconds": 40
+    },
+    {
+      "id": "trend_008",
+      "topic": "#UnhingedOpinionsOnly",
+      "lifetimeSeconds": 55
+    },
+    {
+      "id": "trend_009",
+      "topic": "#SoftLaunchHardCrash",
+      "lifetimeSeconds": 48
+    },
+    {
+      "id": "trend_010",
+      "topic": "#DoomscrollOlympics",
+      "lifetimeSeconds": 75
+    },
+    {
+      "id": "trend_011",
+      "topic": "#FakeNewsFriday",
+      "lifetimeSeconds": 50
+    },
+    {
+      "id": "trend_012",
+      "topic": "#InternetDramaHour",
+      "lifetimeSeconds": 42
+    },
+    {
+      "id": "trend_013",
+      "topic": "#MemeEconomyCrash",
+      "lifetimeSeconds": 58
+    },
+    {
+      "id": "trend_014",
+      "topic": "#ParasocialPanic",
+      "lifetimeSeconds": 52
+    },
+    {
+      "id": "trend_015",
+      "topic": "#AttentionAuction",
+      "lifetimeSeconds": 46
+    },
+    {
+      "id": "trend_016",
+      "topic": "#NotifDetoxFailed",
+      "lifetimeSeconds": 44
+    },
+    {
+      "id": "trend_017",
+      "topic": "#VaguepostingWins",
+      "lifetimeSeconds": 38
+    },
+    {
+      "id": "trend_018",
+      "topic": "#TimelinePurge",
+      "lifetimeSeconds": 62
+    },
+    {
+      "id": "trend_019",
+      "topic": "#EngagementBaitBan",
+      "lifetimeSeconds": 56
+    },
+    {
+      "id": "trend_020",
+      "topic": "#ReplyGuyRights",
+      "lifetimeSeconds": 49
+    },
+    {
+      "id": "trend_021",
+      "topic": "#AlgoIsMyTherapist",
+      "lifetimeSeconds": 53
+    },
+    {
+      "id": "trend_022",
+      "topic": "#GroupchatLeaked",
+      "lifetimeSeconds": 41
+    },
+    {
+      "id": "trend_023",
+      "topic": "#SubtweetSeason",
+      "lifetimeSeconds": 47
+    },
+    {
+      "id": "trend_024",
+      "topic": "#FOMOIsALifestyle",
+      "lifetimeSeconds": 59
+    }
+  ]
+}
