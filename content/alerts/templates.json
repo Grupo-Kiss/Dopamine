@@ -1,0 +1,466 @@
+{
+  "templates": [
+    {
+      "id": "alert_social_001",
+      "source": "pulse",
+      "priority": "high",
+      "rewardable": true,
+      "body": "{user} mentioned you in a totally normal discussion about {topic}"
+    },
+    {
+      "id": "alert_social_002",
+      "source": "pulse",
+      "priority": "high",
+      "rewardable": true,
+      "body": "{user} replied to your post about {topic}"
+    },
+    {
+      "id": "alert_social_003",
+      "source": "pulse",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "{user} liked your take on {noun}"
+    },
+    {
+      "id": "alert_social_004",
+      "source": "pulse",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "{user} reposted you. The timeline noticed."
+    },
+    {
+      "id": "alert_social_005",
+      "source": "pulse",
+      "priority": "high",
+      "rewardable": true,
+      "body": "{user} quote-posted you with zero chill"
+    },
+    {
+      "id": "alert_social_006",
+      "source": "pulse",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Your reply is trending inside {place}"
+    },
+    {
+      "id": "alert_social_007",
+      "source": "pulse",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Three people tagged you in {topic}. They expect a statement."
+    },
+    {
+      "id": "alert_social_008",
+      "source": "pulse",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "{user} followed you after your hottest take yet"
+    },
+    {
+      "id": "alert_social_009",
+      "source": "pulse",
+      "priority": "low",
+      "rewardable": true,
+      "body": "Someone bookmarked your post. Mysterious."
+    },
+    {
+      "id": "alert_social_010",
+      "source": "pulse",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Ratio alert: {user} is farming you over {topic}"
+    },
+    {
+      "id": "alert_social_011",
+      "source": "pulse",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Your vaguepost got interpreted. Incorrectly."
+    },
+    {
+      "id": "alert_social_012",
+      "source": "pulse",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Groupchat leak adjacent: {user} named you in {place}"
+    },
+    {
+      "id": "alert_loop_001",
+      "source": "loop",
+      "priority": "high",
+      "rewardable": true,
+      "body": "{creatorLabel} just dropped: {title}"
+    },
+    {
+      "id": "alert_loop_002",
+      "source": "loop",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Everyone is looping {tag}"
+    },
+    {
+      "id": "alert_loop_003",
+      "source": "loop",
+      "priority": "high",
+      "rewardable": true,
+      "body": "New Loop you might rage-watch: {title}"
+    },
+    {
+      "id": "alert_loop_004",
+      "source": "loop",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "{creatorLabel} is going viral with {tag}"
+    },
+    {
+      "id": "alert_loop_005",
+      "source": "loop",
+      "priority": "low",
+      "rewardable": true,
+      "body": "Recommended because you watched something similar: {title}"
+    },
+    {
+      "id": "alert_loop_006",
+      "source": "loop",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Live-ish: {creatorLabel} started a Loop about {topic}"
+    },
+    {
+      "id": "alert_loop_007",
+      "source": "loop",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Your For You tab insists on {title}"
+    },
+    {
+      "id": "alert_loop_008",
+      "source": "loop",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Friends are looping {tag} without you"
+    },
+    {
+      "id": "alert_wave_001",
+      "source": "wave",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "New {pace} track: {title}"
+    },
+    {
+      "id": "alert_wave_002",
+      "source": "wave",
+      "priority": "low",
+      "rewardable": true,
+      "body": "Nobody asked for this lullaby: {title}"
+    },
+    {
+      "id": "alert_wave_003",
+      "source": "wave",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Song Moment approaching in {title}"
+    },
+    {
+      "id": "alert_wave_004",
+      "source": "wave",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Discovery pick: {title} by {creatorLabel}"
+    },
+    {
+      "id": "alert_wave_005",
+      "source": "wave",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Your Wave queue is begging for a skip \u2014 next up: {title}"
+    },
+    {
+      "id": "alert_wave_006",
+      "source": "wave",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Trending audio: {title}"
+    },
+    {
+      "id": "alert_wave_007",
+      "source": "wave",
+      "priority": "low",
+      "rewardable": true,
+      "body": "Boring-mode activated: {title}"
+    },
+    {
+      "id": "alert_wave_008",
+      "source": "wave",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "{creatorLabel} dropped a beat you pretended not to wait for"
+    },
+    {
+      "id": "alert_echo_001",
+      "source": "echo",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Highlight in {title}"
+    },
+    {
+      "id": "alert_echo_002",
+      "source": "echo",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Debate moment \u2014 {momentLabel}"
+    },
+    {
+      "id": "alert_echo_003",
+      "source": "echo",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "New long-form from {creatorLabel}: {title}"
+    },
+    {
+      "id": "alert_echo_004",
+      "source": "echo",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Chapter marker unlocked in {title}"
+    },
+    {
+      "id": "alert_echo_005",
+      "source": "echo",
+      "priority": "low",
+      "rewardable": true,
+      "body": "You left {title} mid-thought. It remembers."
+    },
+    {
+      "id": "alert_echo_006",
+      "source": "echo",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Clip-worthy second in {title} \u2014 jump now?"
+    },
+    {
+      "id": "alert_echo_007",
+      "source": "echo",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Podcast-ish ping: {momentLabel}"
+    },
+    {
+      "id": "alert_echo_008",
+      "source": "echo",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "{creatorLabel} just said something quotable in {title}"
+    },
+    {
+      "id": "alert_system_001",
+      "source": "system",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Suspicious activity detected: you almost touched grass"
+    },
+    {
+      "id": "alert_system_002",
+      "source": "system",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Update available: Attention OS 2.0 (changelog: more urgency)"
+    },
+    {
+      "id": "alert_system_003",
+      "source": "system",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Focus Chain insurance expired. Renew by interacting."
+    },
+    {
+      "id": "alert_system_004",
+      "source": "system",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Battery of patience at 12%. Charge with a valid action."
+    },
+    {
+      "id": "alert_system_005",
+      "source": "system",
+      "priority": "low",
+      "rewardable": true,
+      "body": "Weekly screen-time report ready. Spoiler: it's you."
+    },
+    {
+      "id": "alert_system_006",
+      "source": "system",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "New login from device: Chronically Online Phone"
+    },
+    {
+      "id": "alert_system_007",
+      "source": "system",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Your storage is 97% full of unread dopamine"
+    },
+    {
+      "id": "alert_system_008",
+      "source": "system",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Reminder: you have 0 irl plans"
+    },
+    {
+      "id": "alert_system_009",
+      "source": "system",
+      "priority": "normal",
+      "rewardable": false,
+      "body": "System tip: blinking more does not refresh the feed"
+    },
+    {
+      "id": "alert_system_010",
+      "source": "system",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Calendar sync failed: tomorrow cancelled itself"
+    },
+    {
+      "id": "alert_system_011",
+      "source": "system",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Printer somewhere wants your attention. You don't own a printer."
+    },
+    {
+      "id": "alert_system_012",
+      "source": "system",
+      "priority": "normal",
+      "rewardable": false,
+      "body": "Cloud backup complete: 4TB of deleted drafts"
+    },
+    {
+      "id": "alert_standalone_001",
+      "source": "standalone",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Achievement unlocked: Opened an alert on purpose"
+    },
+    {
+      "id": "alert_standalone_002",
+      "source": "standalone",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Fake security warning: your vibe certificate expired"
+    },
+    {
+      "id": "alert_standalone_003",
+      "source": "standalone",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Useless reminder: hydrate, then reopen Pulse"
+    },
+    {
+      "id": "alert_standalone_004",
+      "source": "standalone",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Device message: the universe left you on read"
+    },
+    {
+      "id": "alert_standalone_005",
+      "source": "standalone",
+      "priority": "low",
+      "rewardable": false,
+      "body": "You have a package. It is emotional baggage."
+    },
+    {
+      "id": "alert_standalone_006",
+      "source": "standalone",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Survey: rate this interruption from 1 to dopamine"
+    },
+    {
+      "id": "alert_standalone_007",
+      "source": "standalone",
+      "priority": "high",
+      "rewardable": true,
+      "body": "Critical: someone is wrong on the timeline"
+    },
+    {
+      "id": "alert_standalone_008",
+      "source": "standalone",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Sticky note from past you: stop reading alerts"
+    },
+    {
+      "id": "alert_standalone_009",
+      "source": "standalone",
+      "priority": "normal",
+      "rewardable": true,
+      "body": "Streak at risk: ignore this and feel nothing"
+    },
+    {
+      "id": "alert_standalone_010",
+      "source": "standalone",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Weather in your head: 100% chance of discourse"
+    },
+    {
+      "id": "alert_spam_001",
+      "source": "spam",
+      "priority": "low",
+      "rewardable": false,
+      "body": "HOT GIVEAWAY: free {noun} if you click nothing useful"
+    },
+    {
+      "id": "alert_spam_002",
+      "source": "spam",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Congratulations! You've been selected for {topic} (scam)"
+    },
+    {
+      "id": "alert_spam_003",
+      "source": "spam",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Limited offer: buy followers in {place}"
+    },
+    {
+      "id": "alert_spam_004",
+      "source": "spam",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Your account will be enhanced unless you ignore this"
+    },
+    {
+      "id": "alert_spam_005",
+      "source": "spam",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Recommended for you: irrelevant product #84921"
+    },
+    {
+      "id": "alert_spam_006",
+      "source": "spam",
+      "priority": "low",
+      "rewardable": false,
+      "body": "URGENT promo from brands that don't exist"
+    },
+    {
+      "id": "alert_spam_007",
+      "source": "spam",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Win a lifetime of notifs \u2014 enter your dignity"
+    },
+    {
+      "id": "alert_spam_008",
+      "source": "spam",
+      "priority": "low",
+      "rewardable": false,
+      "body": "Spam classic: we have been trying to reach you about your attention's extended warranty"
+    }
+  ]
+}
