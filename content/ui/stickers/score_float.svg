@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="972" height="220" viewBox="0 0 972 220" role="img" aria-label="Score / Dopamine floats">
+<title>Score / Dopamine floats</title>
+<defs>
+
+<linearGradient id="fl0-f" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff"/>
+  <stop offset="0.5" stop-color="#9be8b0"/>
+  <stop offset="1" stop-color="#2ee07a"/>
+</linearGradient>
+<filter id="fl0-g" x="-90%" y="-90%" width="280%" height="280%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#05070a" flood-opacity="0.85"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#2ee07a" flood-opacity="0.6"/>
+</filter>
+
+<linearGradient id="fl1-f" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff"/>
+  <stop offset="0.5" stop-color="#9be8b0"/>
+  <stop offset="1" stop-color="#2ee07a"/>
+</linearGradient>
+<filter id="fl1-g" x="-90%" y="-90%" width="280%" height="280%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#05070a" flood-opacity="0.85"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#2ee07a" flood-opacity="0.6"/>
+</filter>
+
+<linearGradient id="fl2-f" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff"/>
+  <stop offset="0.5" stop-color="#ff8c00"/>
+  <stop offset="1" stop-color="#ff4d1a"/>
+</linearGradient>
+<filter id="fl2-g" x="-90%" y="-90%" width="280%" height="280%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#05070a" flood-opacity="0.85"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#ff4d1a" flood-opacity="0.6"/>
+</filter>
+
+<linearGradient id="fl3-f" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff"/>
+  <stop offset="0.5" stop-color="#ff8c00"/>
+  <stop offset="1" stop-color="#ff4d1a"/>
+</linearGradient>
+<filter id="fl3-g" x="-90%" y="-90%" width="280%" height="280%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#05070a" flood-opacity="0.85"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#ff4d1a" flood-opacity="0.6"/>
+</filter>
+</defs>
+<rect width="972" height="220" fill="#0a0a0c"/>
+<text x="40" y="52" font-family="Teko" font-size="30" font-weight="600" fill="#c9d1d9" letter-spacing="3">SCORE / DOPAMINE FLOATS</text>
+
+<g transform="translate(130 120) scale(1)" filter="url(#fl0-g)">
+  <text x="0" y="0" font-family="Teko" font-size="40" font-weight="600" fill="#05070a" text-anchor="middle" letter-spacing="1" style="paint-order:stroke;stroke:#05070a;stroke-width:6.8px;stroke-linejoin:round">+240</text>
+  <text x="0" y="0" font-family="Teko" font-size="40" font-weight="600" fill="url(#fl0-f)" text-anchor="middle" letter-spacing="1">+240</text>
+</g>
+<text x="130" y="176" font-family="Public Sans" font-size="12" font-weight="500" fill="#4b535d" text-anchor="middle">score tick</text>
+
+<g transform="translate(308 120) scale(1)" filter="url(#fl1-g)">
+  <text x="0" y="0" font-family="Teko" font-size="40" font-weight="600" fill="#05070a" text-anchor="middle" letter-spacing="1" style="paint-order:stroke;stroke:#05070a;stroke-width:6.8px;stroke-linejoin:round">+1.8k</text>
+  <text x="0" y="0" font-family="Teko" font-size="40" font-weight="600" fill="url(#fl1-f)" text-anchor="middle" letter-spacing="1">+1.8k</text>
+</g>
+<text x="308" y="176" font-family="Public Sans" font-size="12" font-weight="500" fill="#4b535d" text-anchor="middle">big score</text>
+
+<g transform="translate(508 120) scale(1)" filter="url(#fl2-g)">
+  <text x="0" y="0" font-family="Teko" font-size="40" font-weight="600" fill="#05070a" text-anchor="middle" letter-spacing="1" style="paint-order:stroke;stroke:#05070a;stroke-width:6.8px;stroke-linejoin:round">+DOPAMINE</text>
+  <text x="0" y="0" font-family="Teko" font-size="40" font-weight="600" fill="url(#fl2-f)" text-anchor="middle" letter-spacing="1">+DOPAMINE</text>
+</g>
+<text x="508" y="176" font-family="Public Sans" font-size="12" font-weight="500" fill="#4b535d" text-anchor="middle">Dopamine gain</text>
+
+<g transform="translate(796 120) scale(1)" filter="url(#fl3-g)">
+  <text x="0" y="0" font-family="Teko" font-size="40" font-weight="600" fill="#05070a" text-anchor="middle" letter-spacing="1" style="paint-order:stroke;stroke:#05070a;stroke-width:6.8px;stroke-linejoin:round">+18</text>
+  <text x="0" y="0" font-family="Teko" font-size="40" font-weight="600" fill="url(#fl3-f)" text-anchor="middle" letter-spacing="1">+18</text>
+</g>
+<text x="796" y="176" font-family="Public Sans" font-size="12" font-weight="500" fill="#4b535d" text-anchor="middle">small Dopamine</text>
+</svg>

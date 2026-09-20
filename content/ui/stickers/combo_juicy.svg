@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="253" viewBox="0 0 340 253" role="img" aria-label="Combo sticker — juicy">
+<title>Combo sticker — juicy</title>
+<defs>
+
+<linearGradient id="cj-face" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffe289"/>
+  <stop offset="0.45" stop-color="#ffd24a"/>
+  <stop offset="0.72" stop-color="#ff8c00"/>
+  <stop offset="1" stop-color="#b3210a"/>
+</linearGradient>
+<linearGradient id="cj-plate" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#4c3922"/>
+  <stop offset="1" stop-color="#0b0f14"/>
+</linearGradient>
+<filter id="cj-glow" x="-90%" y="-90%" width="280%" height="280%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#05070a" flood-opacity="0.75"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="26" flood-color="#ff8c00" flood-opacity="0.5"/>
+</filter>
+</defs>
+<g transform="translate(170 126.18)">
+<g transform="translate(0 0) scale(1) rotate(-7)">
+  <g filter="url(#cj-glow)">
+    <g><path d="M65.28 5.58 L84.46 17.12 L62.3 20.28 Z" fill="#ff8c00" opacity="0.23"/><path d="M46.38 46.28 L84.64 106.25 L34.74 55.55 Z" fill="#ff8c00" opacity="0.1"/><path d="M5.32 65.3 L-3.18 124.93 L-8.63 64.95 Z" fill="#ff8c00" opacity="0.16"/><path d="M-35.87 54.83 L-84.43 95.56 L-49.99 42.36 Z" fill="#ff8c00" opacity="0.18"/><path d="M-62.79 18.72 L-110.97 16.67 L-65.52 0.54 Z" fill="#ff8c00" opacity="0.17"/><path d="M-59.1 -28.29 L-103.94 -63.6 L-52.09 -39.74 Z" fill="#ff8c00" opacity="0.18"/><path d="M-29.48 -58.51 L-35.76 -106.61 L-11.76 -64.46 Z" fill="#ff8c00" opacity="0.29"/><path d="M13.4 -64.13 L33.53 -85.31 L33.86 -56.09 Z" fill="#ff8c00" opacity="0.15"/><path d="M51.78 -40.15 L80.01 -43.51 L61.84 -21.64 Z" fill="#ff8c00" opacity="0.18"/></g>
+    <path d="M-88 -56.18 H88 A12 12 0 0 1 100 -44.18 V44.18 A12 12 0 0 1 88 56.18 H-88 A12 12 0 0 1 -100 44.18 V-44.18 A12 12 0 0 1 -88 -56.18 Z" fill="url(#cj-plate)"/>
+    <path d="M-88 -56.18 H88 A12 12 0 0 1 100 -44.18 V44.18 A12 12 0 0 1 88 56.18 H-88 A12 12 0 0 1 -100 44.18 V-44.18 A12 12 0 0 1 -88 -56.18 Z" fill="none" stroke="#05070a" stroke-width="5"/>
+    <path d="M-88 -52.18 H88 A8 8 0 0 1 96 -44.18 V44.18 A8 8 0 0 1 88 52.18 H-88 A8 8 0 0 1 -96 44.18 V-44.18 A8 8 0 0 1 -88 -52.18 Z" fill="none" stroke="#ffd24a" stroke-width="2.6" stroke-opacity="1"/>
+  </g>
+  <text x="0" y="26.64" font-family="Teko" font-size="74" font-weight="600" fill="url(#cj-face)" text-anchor="middle" letter-spacing="2.96">x7!!</text>
+</g></g>
+</svg>

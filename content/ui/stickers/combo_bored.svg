@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="215" height="205" viewBox="0 0 215 205" role="img" aria-label="Combo sticker — bored / flattened">
+<title>Combo sticker — bored / flattened</title>
+<defs>
+
+<linearGradient id="cbo-face" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#a5a9ab"/>
+  <stop offset="0.45" stop-color="#757b7e"/>
+  <stop offset="0.72" stop-color="#545658"/>
+  <stop offset="1" stop-color="#323036"/>
+</linearGradient>
+<linearGradient id="cbo-plate" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1b222b"/>
+  <stop offset="1" stop-color="#0b0f14"/>
+</linearGradient>
+<filter id="cbo-glow" x="-90%" y="-90%" width="280%" height="280%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="3.15" stdDeviation="2.15" flood-color="#05070a" flood-opacity="0.75"/>
+
+</filter>
+</defs>
+<g transform="translate(107.35 102.07)">
+<g transform="translate(0 0) scale(1) rotate(-2.25)">
+  <g filter="url(#cbo-glow)">
+    
+    <path d="M-25.35 -32.07 H25.35 A12 12 0 0 1 37.35 -20.07 V20.07 A12 12 0 0 1 25.35 32.07 H-25.35 A12 12 0 0 1 -37.35 20.07 V-20.07 A12 12 0 0 1 -25.35 -32.07 Z" fill="url(#cbo-plate)"/>
+    <path d="M-25.35 -32.07 H25.35 A12 12 0 0 1 37.35 -20.07 V20.07 A12 12 0 0 1 25.35 32.07 H-25.35 A12 12 0 0 1 -37.35 20.07 V-20.07 A12 12 0 0 1 -25.35 -32.07 Z" fill="none" stroke="#05070a" stroke-width="3.1"/>
+    <path d="M-25.35 -28.07 H25.35 A8 8 0 0 1 33.35 -20.07 V20.07 A8 8 0 0 1 25.35 28.07 H-25.35 A8 8 0 0 1 -33.35 20.07 V-20.07 A8 8 0 0 1 -25.35 -28.07 Z" fill="none" stroke="#757b7e" stroke-width="1.46" stroke-opacity="0.48"/>
+  </g>
+  <text x="0" y="15.01" font-family="Teko" font-size="41.7" font-weight="600" fill="url(#cbo-face)" text-anchor="middle" letter-spacing="1.6680000000000001">x2</text>
+</g></g>
+</svg>
