@@ -1,6 +1,12 @@
-# Echo — long-form audio or video
+# Echo — long-form audio / video
 
-- `audio/` — podcast-like episodes → Wave-like player chrome
-- `video/` — long video → fictional long-form video player chrome (no real YouTube branding)
+| Path | Role |
+| --- | --- |
+| `audio/` | Podcast-style long audio |
+| `video/` | Long-form video (fictional player chrome — no YouTube brand) |
+| `manifest.json` | Shipping inventory (`items[]`) — start empty |
+| `manifest.example.json` | Schema example |
 
-List everything in `manifest.json` with `kind: "audio" | "video"`.
+Each item needs `id`, `kind` (`audio` \| `video`), `path`, `title`, `creatorLabel`, `license`, `attribution`, optional `moments[]` (`atSec`, `label`).
+
+Optional API: Pixabay / Pexels long videos; audio local-first (`08`).

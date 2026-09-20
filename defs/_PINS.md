@@ -30,7 +30,8 @@ Short reminders. Remove when done.
 - [x] Pulse ~100 template posts (`content/pulse/posts.json` + users/trends/seeds) — expand/tune in playtest
 - [x] SFX production brief + owner decisions: `defs/15_sfx_audio.md` (generate local `.ogg` after #8; Freesound/CC0 fallback; Wave = high techno + boring slower)
 - APIs (Pixabay/Pexels/Jamendo) only with keys + legal OK
-- Create empty media dirs if missing: `content/wave/high|boring`, `loop/clips`, `echo/audio|video`
+- [x] Create empty media dirs: `content/wave/high|boring`, `loop/clips`, `echo/audio|video` (+ empty manifests)
+- Credits store scaffold: `content/credits/store.json` (append rows when media/SFX land)
 
 ## Ongoing
 
