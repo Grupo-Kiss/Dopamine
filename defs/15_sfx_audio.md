@@ -16,12 +16,13 @@ Feel language / mix priority: `09`. Credits / licenses: `13`. Handoff status: `H
 
 | Axis | Direction |
 | --- | --- |
-| Overall | Arcade-first satire — punchy, readable, slightly over-the-top. Shell energy refs: Broforce / Kung Fury / Metal Slug / Mortal Kombat **punch**, not cute/childish chimes. **No extra owner audio refs.** |
-| Combo juicy → bored | Early hits bright/satisfying; same-window repeats flatten (duller, shorter, less stereo sparkle) while still readable |
-| Alerts | Distinct from minigame hits; OS-notif parody without copying iOS/Android/Windows sounds |
-| Burnout telegraph | Rising tension, not a jump-scare scream |
-| Game Over | **Short sting (~0.5–1.5 s) → hard silence** (suspend/stop Web Audio graph). Not a long defeat theme. |
-| Legal | No recognisable commercial jingles, platform notif sounds, or meme audio that implies endorsement |
+| **Prime directive** | Every meaningful action gets a **pleasant** sound that **empowers** and adds to Dopamine — never annoying, never harsh spam. Think polished phone-UI satisfaction (**iOS-like clarity/pleasure** as a *feel* reference), not a clone of Apple’s actual sounds. |
+| Overall | Arcade-readable satire with rewarding ticks; minigame hits can be punchier, but still pleasant. Not cute-childish; not abrasive. |
+| Combo juicy → bored | Early hits bright/satisfying; same-window repeats flatten (duller, shorter) — still not grating |
+| Alerts | Distinct tiers, still pleasant; parody OS notifs **without** copying iOS/Android/Windows sound assets |
+| Burnout telegraph | Rising tension that still feels like a reward-pressure cue, not a jump-scare |
+| Game Over | **Boring / drained / no power** short cue (~0.5–1.5 s) → **hard silence**. The one intentional “low dopamine” sound — flat, tired, energy gone. Not a dramatic epic sting. |
+| Legal | No recognisable commercial jingles or real OS/platform notif samples |
 
 ### Production source (locked)
 
@@ -37,7 +38,7 @@ Feel language / mix priority: `09`. Credits / licenses: `13`. Handoff status: `H
 | --- | --- |
 | **SFX / short one-shots** (this brief) | Prefer **CC0** / public domain. Attribution-required OK only if credited. |
 | **Content packs** (Wave/Loop/Echo media — `08`) | **Per-item licenses** in each manifest — may be more restrictive than CC0. Not forced to CC0. |
-| **NC** | "NonCommercial" Creative Commons — fine for personal prototypes, **awkward if you later sell** the game. Prefer avoiding NC for anything you might commercialize; use CC0 or commercial-OK licenses instead. |
+| **NC** | Owner will **not sell** the game — NC would be acceptable, but **still prefer CC0** for SFX simplicity. |
 
 ### Related: Wave music intent (not SFX — track in `08` when authoring)
 
@@ -48,7 +49,7 @@ Owner direction for the **Wave** window bed (separate from this SFX brief):
 - Always played through **Wave** (and mix buses), never a global unrelated BGM layer
 - Same independence rule: local files in the pack, not a streaming API
 
-SFX one-shots stay arcade punches; Wave carries the techno bed.
+SFX one-shots stay pleasant empowering ticks (iOS-*like* pleasure); Wave carries the techno bed. Game Over is the drained exception.
 
 ## Mix buses (implement later — author against these)
 
@@ -151,7 +152,7 @@ Path root: `content/minigames/block_cascade/`
 
 **In plain terms:** tiny sounds for buttons (PLAY, Credits open/close, accessibility toggle), four urgency levels when an Alert pops, plus “you entered Burnout / Recovery / Game Over.”
 
-**Locked:** ship all **Yes** rows. **Optional** rows may wait until polish. Pulse/Wave/Echo micro-clicks (like, skip, scrub) wait until window TDD.
+**Locked:** ship all **Yes** rows. **Optional** rows may wait until polish. Pulse/Wave/Echo micro-clicks (like, skip, scrub, etc.) are **in scope for production after #8** — every meaningful action should have a pleasant empowering tick (add cues to the manifest then; don’t leave windows silent).
 
 Path root: `content/sfx/ui/` and `content/sfx/alerts/`
 
@@ -167,7 +168,7 @@ Path root: `content/sfx/ui/` and `content/sfx/alerts/`
 | `sfx_alert_high` | `content/sfx/alerts/high.ogg` | High / social / media attention | `bus_alert` | Yes |
 | `sfx_alert_critical` | `content/sfx/alerts/critical.ogg` | Critical / fake-system urgent | `bus_critical` | Yes |
 | `sfx_alert_dismiss` | `content/sfx/alerts/dismiss.ogg` | Dismiss | `bus_ui` | Optional |
-| `sfx_game_over_sting` | `content/sfx/ui/game_over_sting.ogg` | Enter Game Over → then silence | `bus_critical` | Yes |
+| `sfx_game_over_sting` | `content/sfx/ui/game_over_sting.ogg` | Enter Game Over → then silence | `bus_critical` | Yes — **boring/drained**, not epic |
 | `sfx_burnout_enter` | `content/sfx/ui/burnout_enter.ogg` | Enter Burnout | `bus_critical` | Yes |
 | `sfx_recovery_enter` | `content/sfx/ui/recovery_enter.ogg` | Enter Recovery | `bus_ui` | Yes |
 
@@ -232,12 +233,12 @@ Wave `high`/`boring` tracks and Echo beds = **separate media pass** (`08`), not 
 | # | Topic | Decision |
 | ---: | --- | --- |
 | 1 | Source | **Generative first** (local `.ogg` in repo, no stream/API). **Freesound** for gaps. |
-| 2 | Licenses | SFX prefer **CC0**. Content packs use **per-item** licenses. Avoid **NC** if commercialization is possible. |
-| 3 | Refs / Wave | No extra SFX refs. Wave bed: **high-pace techno** + slower `boring/` options (see above). |
+| 2 | Licenses | SFX prefer **CC0** (confirmed). Content packs use **per-item** licenses. Game will not be sold; NC OK but unused for SFX. |
+| 3 | Refs / Wave / feel | Pleasant empowering SFX (iOS-*like* pleasure, not Apple samples). Wave: **high-pace techno** + slower `boring/`. |
 | 4 | Accessibility | Soften critical peaks ~−6 dB; keep informational SFX; no soft-file split unless needed later. |
-| 5 | Hub/alert cues | **Include** all Yes rows; optionals optional; no Pulse/Wave micro-SFX yet. |
-| 6 | Game Over | Short sting → hard silence (not a long theme). |
-| 7 | Timing | **Produce `.ogg` after visual PR #8** is accepted; likely Claude for generation/export. |
+| 5 | Action coverage | **Yes** hub/alert rows + later **pleasant micro-SFX on every meaningful action** (Pulse/Wave/Echo/minigame) — empower, never annoy. |
+| 6 | Game Over | Short **boring/drained** cue → hard silence (no power, no energy). |
+| 7 | Timing | **Produce `.ogg` after visual PR #8**; likely Claude for generation/export. |
 
 S0 (this brief + missing manifest) is done. Do not invent final `.ogg` bytes until after #8 unless the owner says otherwise.
 

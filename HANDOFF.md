@@ -72,7 +72,8 @@ These do **not** overlap PR #8:
 1. **Credits data model** — typed credits-store shape + OSS/font inventory from `defs/13` (data only, no modal mockup).
 2. **Media drop-zone scaffolding** — empty dirs + real `manifest.json` schemas: `content/loop/clips/`, `wave/high|boring/`, `echo/audio|video/` (`defs/08`). No copyrighted media.
 3. **Balance pass** — tighten provisional constants in `defs/06_balance.md` only.
-4. **SFX file production** — only after owner answers in `defs/15_sfx_audio.md` (who/license/refs); do not invent final `.ogg` bytes.
+4. **SFX file production** — after #8; generative local `.ogg` (no stream API) or Freesound/CC0 per `defs/15_sfx_audio.md` owner decisions.
+5. **Wave music pack** (related, not SFX) — local techno beds in `wave/high/` + slower `wave/boring/`; per-item licenses (`08`).
 
 ### Blocked until owner accepts visuals
 
