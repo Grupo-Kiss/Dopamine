@@ -12,20 +12,43 @@ Feel language / mix priority: `09`. Credits / licenses: `13`. Handoff status: `H
 
 ---
 
-## Audio personality (locked direction — confirm refs)
+## Audio personality (locked)
 
 | Axis | Direction |
 | --- | --- |
-| Overall | Arcade-first satire — punchy, readable, slightly over-the-top. Same energy refs as shell: Broforce / Kung Fury / Metal Slug / Mortal Kombat **punch**, not cute/childish chimes |
+| Overall | Arcade-first satire — punchy, readable, slightly over-the-top. Shell energy refs: Broforce / Kung Fury / Metal Slug / Mortal Kombat **punch**, not cute/childish chimes. **No extra owner audio refs.** |
 | Combo juicy → bored | Early hits bright/satisfying; same-window repeats flatten (duller, shorter, less stereo sparkle) while still readable |
 | Alerts | Distinct from minigame hits; OS-notif parody without copying iOS/Android/Windows sounds |
 | Burnout telegraph | Rising tension, not a jump-scare scream |
-| Game Over | Short sting → **hard silence** (graph suspend) |
+| Game Over | **Short sting (~0.5–1.5 s) → hard silence** (suspend/stop Web Audio graph). Not a long defeat theme. |
 | Legal | No recognisable commercial jingles, platform notif sounds, or meme audio that implies endorsement |
 
-**Owner input needed:** additional audio references (games / pack / artist), and whether generative SFX are allowed.
+### Production source (locked)
 
----
+| Preference | Detail |
+| --- | --- |
+| **1st** | **Generative SFX**, exported as **local `.ogg` files** committed under `content/` — **no streaming**, no runtime audio API, no keys |
+| **2nd** | **Freesound** downloads for gaps — prefer **CC0**; if attribution-required CC is used, row must land in Credits (`13`) |
+| Independence | Ship everything in the static build; player never depends on an external audio service at runtime |
+
+### License bar (locked)
+
+| Asset class | Bar |
+| --- | --- |
+| **SFX / short one-shots** (this brief) | Prefer **CC0** / public domain. Attribution-required OK only if credited. |
+| **Content packs** (Wave/Loop/Echo media — `08`) | **Per-item licenses** in each manifest — may be more restrictive than CC0. Not forced to CC0. |
+| **NC** | "NonCommercial" Creative Commons — fine for personal prototypes, **awkward if you later sell** the game. Prefer avoiding NC for anything you might commercialize; use CC0 or commercial-OK licenses instead. |
+
+### Related: Wave music intent (not SFX — track in `08` when authoring)
+
+Owner direction for the **Wave** window bed (separate from this SFX brief):
+
+- Primary playlist: **high-pace techno** / energetic instrumental → `content/wave/high/`
+- Slower / duller options for Recovery-adjacent / throw-off moments → `content/wave/boring/`
+- Always played through **Wave** (and mix buses), never a global unrelated BGM layer
+- Same independence rule: local files in the pack, not a streaming API
+
+SFX one-shots stay arcade punches; Wave carries the techno bed.
 
 ## Mix buses (implement later — author against these)
 
@@ -49,7 +72,7 @@ Priority order from `09` (highest first):
 | `bus_ui` | PLAY click, toggle, modal, soft ticks | Lowest SFX tier |
 | `bus_wave` / `bus_echo` | media elements | Muffled when not Active Window (except Burnout) |
 
-Accessibility Mode (`09`): reduce motion first; **SFX policy is an owner decision** (see bottom) — default proposal: keep informational SFX, soften critical peaks −6 dB, no removal of cue meaning.
+Accessibility Mode (`09`): reduce motion first. **SFX policy (locked):** keep informational SFX; soften critical peaks about **−6 dB**; do not remove cue meaning; **no separate soft files** unless playtest demands them later; do not mute `bus_ui` by default.
 
 ---
 
@@ -77,7 +100,7 @@ Path root: `content/minigames/_shared/`
 | `sfx_combo_bored` | `sfx_sticker_combo_bored.ogg` | Combo under diminishing returns | `bus_combo` | Flatter, shorter cousin of juicy |
 | `sfx_chain_step` | `sfx_sticker_chain_step.ogg` | Focus Chain increments | `bus_reward` | Rising step; readable under chaos |
 | `sfx_chain_complete` | `sfx_sticker_chain_complete.ogg` | Chain tier / milestone | `bus_reward` | Bigger than step; not Game Over loud |
-| `sfx_burnout_telegraph` | `sfx_sticker_burnout_telegraph.ogg` | APM approaching Burnout | `bus_critical` | Loopable pulse/tension; Accessibility: prefer softer variant if we split later |
+| `sfx_burnout_telegraph` | `sfx_sticker_burnout_telegraph.ogg` | APM approaching Burnout | `bus_critical` | Loopable pulse/tension; Accessibility softens via mix (−6 dB), not a second file |
 
 ---
 
@@ -122,19 +145,23 @@ Path root: `content/minigames/block_cascade/`
 
 ---
 
-## Cue sheet — hub / UI / Alerts (needed for TDD; not fully named in `09` tables)
+## Cue sheet — hub / UI / Alerts (locked — include)
 
-These are **proposed additions** so Loading → Playing → Alerts have sound without inventing files in code. **Owner: approve or cut.**
+`09` listed minigame/shared SFX paths in detail but not every Start Page / Alert click. This set fills that gap so the hub and notifications aren’t silent.
+
+**In plain terms:** tiny sounds for buttons (PLAY, Credits open/close, accessibility toggle), four urgency levels when an Alert pops, plus “you entered Burnout / Recovery / Game Over.”
+
+**Locked:** ship all **Yes** rows. **Optional** rows may wait until polish. Pulse/Wave/Echo micro-clicks (like, skip, scrub) wait until window TDD.
 
 Path root: `content/sfx/ui/` and `content/sfx/alerts/`
 
-| Cue id | File | Trigger | Bus | Default include? |
+| Cue id | File | Trigger | Bus | Include? |
 | --- | --- | --- | --- | --- |
 | `sfx_ui_play` | `content/sfx/ui/play.ogg` | PLAY / PLAY AGAIN confirm | `bus_ui` | Yes |
 | `sfx_ui_toggle` | `content/sfx/ui/toggle.ogg` | Accessibility toggle | `bus_ui` | Yes |
 | `sfx_ui_modal_open` | `content/sfx/ui/modal_open.ogg` | Credits Modal open | `bus_ui` | Yes |
 | `sfx_ui_modal_close` | `content/sfx/ui/modal_close.ogg` | Credits Modal close | `bus_ui` | Yes |
-| `sfx_ui_soft_tick` | `content/sfx/ui/soft_tick.ogg` | Optional score float / minor UI | `bus_ui` | Optional |
+| `sfx_ui_soft_tick` | `content/sfx/ui/soft_tick.ogg` | Score float / minor UI | `bus_ui` | Optional |
 | `sfx_alert_soft` | `content/sfx/alerts/soft.ogg` | Low-priority / spam-ish alert appear | `bus_alert` | Yes |
 | `sfx_alert_normal` | `content/sfx/alerts/normal.ogg` | Normal alert | `bus_alert` | Yes |
 | `sfx_alert_high` | `content/sfx/alerts/high.ogg` | High / social / media attention | `bus_alert` | Yes |
@@ -143,8 +170,6 @@ Path root: `content/sfx/ui/` and `content/sfx/alerts/`
 | `sfx_game_over_sting` | `content/sfx/ui/game_over_sting.ogg` | Enter Game Over → then silence | `bus_critical` | Yes |
 | `sfx_burnout_enter` | `content/sfx/ui/burnout_enter.ogg` | Enter Burnout | `bus_critical` | Yes |
 | `sfx_recovery_enter` | `content/sfx/ui/recovery_enter.ogg` | Enter Recovery | `bus_ui` | Yes |
-
-Pulse / Wave / Echo **interaction** micro-SFX (like, skip, scrub) can wait until window TDD; not blocking this brief.
 
 ---
 
@@ -186,9 +211,9 @@ Shape (conceptual):
 | **S1** | Shared sticker + burnout telegraph + game over / burnout / recovery stings | Nice before feel polish |
 | **S2** | All three minigame packs | Needed for minigame juice |
 | **S3** | Alert tier set + hub UI clicks | Needed for Alerts / Start Page feel |
-| **S4** | Loudness pass + Accessibility soft variants (if owner wants separate files) | Polish |
+| **S4** | Loudness pass (no separate Accessibility soft files unless playtest demands) | Polish |
 
-Wave `high`/`boring` tracks and Echo beds = **separate media pass** (`08`), not S0–S4.
+Wave `high`/`boring` tracks and Echo beds = **separate media pass** (`08`), not S0–S4. Start after visuals #8 if desired; owner wants **high-pace techno** in `high/`, slower options in `boring/`.
 
 ---
 
@@ -202,55 +227,39 @@ Wave `high`/`boring` tracks and Echo beds = **separate media pass** (`08`), not 
 
 ---
 
-## Owner input needed (blockers for production, not for this brief)
+## Owner decisions (locked 2026-09-20)
 
-Answer these when you can — agents can keep scaffolding manifests without them:
+| # | Topic | Decision |
+| ---: | --- | --- |
+| 1 | Source | **Generative first** (local `.ogg` in repo, no stream/API). **Freesound** for gaps. |
+| 2 | Licenses | SFX prefer **CC0**. Content packs use **per-item** licenses. Avoid **NC** if commercialization is possible. |
+| 3 | Refs / Wave | No extra SFX refs. Wave bed: **high-pace techno** + slower `boring/` options (see above). |
+| 4 | Accessibility | Soften critical peaks ~−6 dB; keep informational SFX; no soft-file split unless needed later. |
+| 5 | Hub/alert cues | **Include** all Yes rows; optionals optional; no Pulse/Wave micro-SFX yet. |
+| 6 | Game Over | Short sting → hard silence (not a long theme). |
+| 7 | Timing | **Produce `.ogg` after visual PR #8** is accepted; likely Claude for generation/export. |
 
-1. **Who makes the sounds?**  
-   - You / a friend · commission · Freesound (per-clip CC) · licensed pack · generative tool · mix of these?
-
-2. **License bar for shipping**  
-   - CC0 / public domain only?  
-   - Attribution-required OK (must flow into Credits Modal)?  
-   - NC (non-commercial) OK for itch prototypes but not later commercial?
-
-3. **Audio references**  
-   - Any specific games, packs, or “sounds like X” beyond Broforce / Kung Fury / Metal Slug / MK punch?
-
-4. **Accessibility Mode + SFX**  
-   - Soften peaks only (proposed default)?  
-   - Mute `bus_ui`?  
-   - Separate “soft” files for telegraph / critical?
-
-5. **Approve proposed hub/alert cue list?**  
-   - Keep all · cut optionals · add Pulse/Wave micro-interactions now?
-
-6. **Game Over**  
-   - Confirm: short sting → hard silence (as `09`)? Any longer sting?
-
-7. **Timing**  
-   - Produce SFX in parallel with visuals, or wait until after #8 acceptance / during TDD?
-
-Until you answer, this brief + `missing` manifest rows are the SSOT; no agent should invent “final” `.ogg` bytes.
+S0 (this brief + missing manifest) is done. Do not invent final `.ogg` bytes until after #8 unless the owner says otherwise.
 
 ---
 
 ## Acceptance checklist
 
-- [ ] Owner answered the input block above (at least 1–2, 4–5)  
-- [ ] `content/sfx/manifest.json` lists every cue in this brief  
-- [ ] Drop zones exist (`_shared/`, each minigame folder, `content/sfx/ui/`, `content/sfx/alerts/`)  
+- [x] Owner decisions locked (table above)  
+- [x] `content/sfx/manifest.json` lists every cue in this brief  
+- [x] Drop zones exist (`content/sfx/ui/`, `content/sfx/alerts/`; minigame folders already present)  
 - [ ] Each `final` cue is `.ogg`, named exactly, credited if third-party  
 - [ ] No real-platform notif / jingle clones  
 - [ ] Mix priority and buses match `09` / `10`  
 
 ---
 
-## Suggested next agent prompt
+## Suggested next agent prompt (after #8)
 
 ```
-Continue Dopamine audio from @defs/15_sfx_audio.md and @HANDOFF.md.
-Respect owner answers in the Owner input section (or ask if still open).
-Do not touch visual paths owned by PR #8. Do not scaffold the Vite app.
-Update content/sfx/manifest.json and HANDOFF when cues land.
+Produce Dopamine SFX from @defs/15_sfx_audio.md (owner decisions locked).
+Prefer generative local .ogg (no streaming API); Freesound/CC0 for gaps.
+Fill content/sfx/manifest.json statuses; credit any third-party rows.
+Do not touch visual paths. Do not scaffold the Vite app unless asked.
+Update HANDOFF when a batch of cues lands.
 ```

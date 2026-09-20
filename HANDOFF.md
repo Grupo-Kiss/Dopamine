@@ -36,7 +36,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | Mid-fi placeholders | `content/` (being replaced by hi-fi on PR #8) |
 | Pulse text library (~123 posts + users/trends/seeds) | `content/pulse/` — merged [#9](https://github.com/Grupo-Kiss/Dopamine/pull/9) |
 | Alerts hand templates (66 lines) | `content/alerts/templates.json` — merged [#10](https://github.com/Grupo-Kiss/Dopamine/pull/10) |
-| SFX / short-audio brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — see open PR for this pass |
+| SFX / short-audio brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — owner decisions locked; **produce `.ogg` after #8** |
 
 ### In progress — do not collide
 
@@ -90,6 +90,7 @@ Do **not** start until `defs/14_visual_assets.md` acceptance checklist is signed
 | Domain language | `CONTEXT.md` |
 | Owner’s personal later-thoughts | `defs/_PINS.md` (**owner-owned** — agents may check off facts they completed, not rewrite the file’s role) |
 | Visual production checklist + exact paths | `defs/14_visual_assets.md` |
+| SFX / short-audio cue sheet | `defs/15_sfx_audio.md` + `content/sfx/manifest.json` |
 | Layout slots | `defs/07_layout.md` |
 | Window / minigame behaviour | `defs/03`, `defs/04` |
 | Feel / SFX path lists | `defs/09_game_feel.md` |
