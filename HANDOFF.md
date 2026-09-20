@@ -36,7 +36,9 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | Mid-fi placeholders | `content/` (being replaced by hi-fi on PR #8) |
 | Pulse text library (~123 posts + users/trends/seeds) | `content/pulse/` — merged [#9](https://github.com/Grupo-Kiss/Dopamine/pull/9) |
 | Alerts hand templates (66 lines) | `content/alerts/templates.json` — merged [#10](https://github.com/Grupo-Kiss/Dopamine/pull/10) |
-| SFX / short-audio brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — owner decisions locked; **produce `.ogg` after #8** |
+| SFX / short-audio brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — owner decisions locked; **produce `.ogg` after #8** — merged [#12](https://github.com/Grupo-Kiss/Dopamine/pull/12) |
+| Credits store + schema (fonts seeded) | `content/credits/` |
+| Media drop zones (empty manifests) | `loop/clips/`, `wave/high\|boring/`, `echo/audio\|video/` + `manifest.json` |
 
 ### In progress — do not collide
 
@@ -69,11 +71,10 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 These do **not** overlap PR #8:
 
-1. **Credits data model** — typed credits-store shape + OSS/font inventory from `defs/13` (data only, no modal mockup).
-2. **Media drop-zone scaffolding** — empty dirs + real `manifest.json` schemas: `content/loop/clips/`, `wave/high|boring/`, `echo/audio|video/` (`defs/08`). No copyrighted media.
-3. **Balance pass** — tighten provisional constants in `defs/06_balance.md` only.
-4. **SFX file production** — after #8; generative local `.ogg` (no stream API) or Freesound/CC0 per `defs/15_sfx_audio.md` owner decisions.
-5. **Wave music pack** (related, not SFX) — local techno beds in `wave/high/` + slower `wave/boring/`; per-item licenses (`08`).
+1. **Balance pass** — tighten provisional constants in `defs/06_balance.md` only.
+2. **SFX file production** — after #8; generative local `.ogg` (no stream API) or Freesound/CC0 per `defs/15_sfx_audio.md`.
+3. **Wave / Loop / Echo media files** — drop licensed local files into the empty dirs; update manifests + `content/credits/store.json`.
+4. **OSS library credit rows** — append `kind: "library"` when Vite deps exist (after scaffold).
 
 ### Blocked until owner accepts visuals
 
@@ -96,7 +97,7 @@ Do **not** start until `defs/14_visual_assets.md` acceptance checklist is signed
 | Window / minigame behaviour | `defs/03`, `defs/04` |
 | Feel / SFX path lists | `defs/09_game_feel.md` |
 | Content / manifests / APIs | `defs/08_content.md` |
-| Credits / legal | `defs/13_credits_and_legal.md` |
+| Credits / legal data | `defs/13_credits_and_legal.md` + `content/credits/store.json` |
 | Tech stack | `defs/10_tech.md` |
 | Testing / coding rules | `defs/11`, `defs/12` |
 

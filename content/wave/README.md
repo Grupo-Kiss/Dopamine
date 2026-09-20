@@ -1,14 +1,14 @@
-# Wave — local music
+# Wave — music beds
 
-## Where to put files
+Local files only by default (no streaming API). Owner intent (`defs/15`): **high-pace techno** in `high/`, slower / Recovery-adjacent in `boring/`.
 
-| Directory | Pace |
+| Path | Role |
 | --- | --- |
-| `high/` | High-paced (techno / instrumental / energetic) — **primary** |
-| `boring/` | Slow / dull / throw-off — occasional |
+| `high/` | Energetic / techno / instrumental (`pace: high` by folder) |
+| `boring/` | Slow / dull / throw-off (`pace: boring` by folder) |
+| `manifest.json` | Shipping inventory (`tracks[]`) — may override pace per track |
+| `manifest.example.json` | Schema example |
 
-The folder name sets default `pace`. Optional `manifest.json` can override.
+Each track needs `id`, `path`, `title`, `artistLabel`, `pace`, `license`, `attribution`. Playlist bias ~85% high / 15% boring (provisional, `06` / `08`).
 
-## API pace
-
-If using Jamendo (only when legally cleared): map tags/BPM/query buckets to `high` vs `boring` as in `defs/08_content.md`. Unknown → do not auto-play; drop the file into `high/` or `boring/` yourself.
+Optional API: Jamendo only if cleared; prefer local drops.

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "brief": "defs/13_credits_and_legal.md",
+  "game": {
+    "title": "Dopamine",
+    "blurb": "A frontend-only web arcade satire of the attention economy. Survive on stimulation across competing fictional digital services until Dopamine hits zero.",
+    "authors": []
+  },
+  "disclaimer": "Dopamine is satire. It is not affiliated with, endorsed by, or connected to any real social network, streaming service, operating system, or platform.",
+  "providersNotice": "Optional media providers (Pixabay, Pexels, Jamendo, Freesound) stay disabled until keys and legal review are OK. Local content/ packs are the default shipping path.",
+  "records": [
+    {
+      "id": "font_public_sans",
+      "kind": "font",
+      "title": "Public Sans",
+      "creatorLabel": "USWDS / Google Fonts",
+      "license": "OFL-1.1",
+      "attribution": "Public Sans \u2014 SIL Open Font License 1.1",
+      "sourceUrl": "https://github.com/uswds/public-sans",
+      "provider": "other"
+    },
+    {
+      "id": "font_teko",
+      "kind": "font",
+      "title": "Teko",
+      "creatorLabel": "Indian Type Foundry / Google Fonts",
+      "license": "OFL-1.1",
+      "attribution": "Teko \u2014 SIL Open Font License 1.1",
+      "sourceUrl": "https://fonts.google.com/specimen/Teko",
+      "provider": "other"
+    },
+    {
+      "id": "game_first_party_placeholder",
+      "kind": "other",
+      "title": "Dopamine first-party art & code",
+      "creatorLabel": "Dopamine project",
+      "license": "owned",
+      "attribution": "",
+      "provider": "local"
+    }
+  ]
+}

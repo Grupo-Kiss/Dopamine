@@ -1,7 +1,13 @@
-# Loop — local videos
+# Loop — short-form clips
 
-Put short clips in `clips/` and list them in `manifest.json`.
+Drop vertical / croppable clips in `clips/`.
 
-Preferred: `.webm` or `.mp4`, vertical or croppable, small file size.
+| File | Role |
+| --- | --- |
+| `manifest.json` | Shipping inventory (`clips[]`) — start empty |
+| `manifest.example.json` | Schema example |
+| `clips/` | Media files (`.webm` / `.mp4`, etc.) |
 
-Each manifest entry needs: `id`, `path`, `title`, `creatorLabel`, `license`, `attribution`, optional `tags`.
+Each clip needs `id`, `path`, `title`, `creatorLabel`, `license`, `attribution` (`defs/08`, `13`). Missing `license` → fail closed on Loading.
+
+Optional API: Pixabay / Pexels (default off). Placeholders for mockups may live under `placeholders/` when the visual pass adds them.

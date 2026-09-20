@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dopamine-credits-store",
+  "title": "DopamineCreditsStore",
+  "type": "object",
+  "required": [
+    "version",
+    "game",
+    "disclaimer",
+    "records"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "brief": {
+      "type": "string"
+    },
+    "game": {
+      "type": "object",
+      "required": [
+        "title",
+        "blurb"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "blurb": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "disclaimer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "providersNotice": {
+      "type": "string"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/CreditRecord"
+      }
+    }
+  },
+  "$defs": {
+    "CreditRecord": {
+      "type": "object",
+      "required": [
+        "id",
+        "kind",
+        "title",
+        "creatorLabel",
+        "license",
+        "attribution"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "loop",
+            "wave",
+            "echo",
+            "sfx",
+            "image",
+            "font",
+            "library",
+            "other"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "creatorLabel": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attribution": {
+          "type": "string"
+        },
+        "sourceUrl": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string",
+          "enum": [
+            "local",
+            "pixabay",
+            "pexels",
+            "jamendo",
+            "freesound",
+            "other"
+          ]
+        },
+        "usedInMatch": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
