@@ -13,6 +13,7 @@ Short reminders. Remove when done.
 - [x] Phase E shipped — shared cast/FX/numbers + all three minigame sprite sets, boards and playfield mockups
 - [ ] **Phase B1/B2 still outstanding** — `content/mockups/desktop_layout.svg` is still the mid-fi placeholder and `mobile_layout.svg` does not exist yet. Both need to compose the Phase C window interiors + Phase D icons + the Lane Defender playfield into the `07` masonry (near-black gutters, Loop-over-Wave matching Minigame height, Pulse|Echo bottom band, vertical Dopamine bar outside the masonry, floating stickers + one overlapping Alert card).
 - [ ] Phases B→E awaiting owner approval (PR #8)
+- **Generators live in `tools/artgen/`** — see its README. `npm run minigames` re-derives all of Phase E byte-for-byte; `npm run verify` render-checks all of `content/`. The Phase A–D emitters were scratch scripts and are gone, but the stage, chrome and cutout language they used survives in `tools/artgen/lib/`, so B1/B2 should build on that rather than start over.
 - [ ] No Vite scaffold / feature code until assets approved
 - [x] Locked Pulse `#2f81f7` / Wave `#2ee07a` in `DESIGN.md`; propagated to `09` and `14`
 - Visual lock: `PRODUCT.md`, `DESIGN.md`, `.impeccable/` (Collider-inspired blooms; no track-line detector UI)

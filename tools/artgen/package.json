@@ -1,0 +1,19 @@
+{
+  "name": "dopamine-artgen",
+  "private": true,
+  "type": "module",
+  "description": "Offline generators for the content/ visual assets. Not part of the game build.",
+  "scripts": {
+    "shared": "node phaseE_shared.mjs",
+    "lane": "node phaseE_lane.mjs",
+    "runner": "node phaseE_runner.mjs",
+    "blocks": "node phaseE_blocks.mjs",
+    "minigames": "node phaseE_shared.mjs && node phaseE_lane.mjs && node phaseE_runner.mjs && node phaseE_blocks.mjs",
+    "preview": "node preview.mjs",
+    "verify": "node verify.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "sharp": "^0.34.4"
+  }
+}
