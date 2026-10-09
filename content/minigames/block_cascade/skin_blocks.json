@@ -1,15 +1,87 @@
 {
-  "comment": "Modern-classic tetromino colors — replace with final skin anytime",
-  "pieces": {
-    "I": "#00e5ff",
-    "O": "#ffd600",
-    "T": "#aa00ff",
-    "S": "#00e676",
-    "Z": "#ff1744",
-    "J": "#2979ff",
-    "L": "#ff9100"
+  "comment": "Block Cascade skin. Dark modern well, bright bevelled faces. Face textures live beside this file as tex_<piece>.png (and tetromino_atlas.png, 7 tiles of 128px in I O T S Z J L order). Colours below are the flat fallbacks and the tint used by the bevel gradients.",
+  "cell": {
+    "size": 40,
+    "radius": 7,
+    "bevel": 2.2
   },
-  "ghostOpacity": 0.25,
-  "boardBackground": "#12141c",
-  "gridLine": "#2a2f3a"
+  "board": {
+    "cols": 10,
+    "rows": 16,
+    "aspect": "10:16"
+  },
+  "pieces": {
+    "I": {
+      "base": "#35d6e8",
+      "light": "#bdf6fd",
+      "dark": "#116b7a",
+      "tex": "tex_I.png"
+    },
+    "O": {
+      "base": "#ffcf3d",
+      "light": "#fff0b0",
+      "dark": "#a37c00",
+      "tex": "tex_O.png"
+    },
+    "T": {
+      "base": "#b06bff",
+      "light": "#e3cfff",
+      "dark": "#54219b",
+      "tex": "tex_T.png"
+    },
+    "S": {
+      "base": "#44dd8a",
+      "light": "#c4f8da",
+      "dark": "#13733f",
+      "tex": "tex_S.png"
+    },
+    "Z": {
+      "base": "#ff5470",
+      "light": "#ffc0cb",
+      "dark": "#9b1230",
+      "tex": "tex_Z.png"
+    },
+    "J": {
+      "base": "#4a8cff",
+      "light": "#bed6ff",
+      "dark": "#1a4499",
+      "tex": "tex_J.png"
+    },
+    "L": {
+      "base": "#ff9f3d",
+      "light": "#ffd9ab",
+      "dark": "#a85200",
+      "tex": "tex_L.png"
+    }
+  },
+  "atlas": {
+    "file": "tetromino_atlas.png",
+    "tile": 128,
+    "order": [
+      "I",
+      "O",
+      "T",
+      "S",
+      "Z",
+      "J",
+      "L"
+    ]
+  },
+  "ghost": {
+    "file": "ghost_piece.png",
+    "opacity": 0.22
+  },
+  "boardBackground": "#0f131b",
+  "boardBackgroundFile": "board_bg.png",
+  "gridLine": "#1d2430",
+  "frame": "board_frame.svg",
+  "clearFx": {
+    "row": "fx_clear_row.webp",
+    "rowFrames": 4,
+    "rowFrameSize": [
+      400,
+      56
+    ],
+    "tetris": "fx_tetris.webp"
+  }
 }

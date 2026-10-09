@@ -1,8 +1,152 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img" aria-label="Boss Monster">
-  <ellipse cx="80" cy="78" rx="70" ry="52" fill="#c0392b" stroke="#333" stroke-width="4"/>
-  <circle cx="55" cy="70" r="16" fill="#fff" stroke="#333" stroke-width="3"/>
-  <circle cx="105" cy="70" r="16" fill="#fff" stroke="#333" stroke-width="3"/>
-  <circle cx="55" cy="74" r="7" fill="#111"/><circle cx="105" cy="74" r="7" fill="#111"/>
-  <path d="M50 100h60" stroke="#111" stroke-width="6" stroke-linecap="round"/>
-  <path d="M30 40l15 22M130 40l-15 22M80 20v24" stroke="#922b21" stroke-width="8" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="364" height="240" viewBox="0 0 364 240" role="img" aria-label="Lane Defender boss">
+<title>Lane Defender boss</title>
+<defs>
+<linearGradient id="cd-fx-hot" x1="0" y1="0" x2="0.4" y2="1">
+  <stop offset="0" stop-color="#ffc24a"/>
+  <stop offset="0.5" stop-color="#ff8c00"/>
+  <stop offset="1" stop-color="#d14a00"/>
+</linearGradient>
+<linearGradient id="cd-fx-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+  <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.26"/>
+</linearGradient>
+<filter id="cd-c-cast" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#05070a" flood-opacity="0.55"/>
+</filter>
+<radialGradient id="cd-c-contact" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#000" stop-opacity="0.62"/>
+  <stop offset="0.6" stop-color="#000" stop-opacity="0.22"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="cd-c-soldier-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#9ccc65"/>
+  <stop offset="0.5" stop-color="#6f9a4a"/>
+  <stop offset="1" stop-color="#41632b"/>
+</linearGradient>
+<linearGradient id="cd-c-soldier-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-soldier-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-skin-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#fbe2c2"/>
+  <stop offset="0.5" stop-color="#f0c79a"/>
+  <stop offset="1" stop-color="#c89a6c"/>
+</linearGradient>
+<linearGradient id="cd-c-skin-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-skin-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-gear-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#5d697b"/>
+  <stop offset="0.5" stop-color="#3b4350"/>
+  <stop offset="1" stop-color="#242a34"/>
+</linearGradient>
+<linearGradient id="cd-c-gear-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-gear-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-steel-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#cfdcea"/>
+  <stop offset="0.5" stop-color="#8fa3bb"/>
+  <stop offset="1" stop-color="#596878"/>
+</linearGradient>
+<linearGradient id="cd-c-steel-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-steel-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-mob-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#86f0e6"/>
+  <stop offset="0.5" stop-color="#36cfc0"/>
+  <stop offset="1" stop-color="#1b7b73"/>
+</linearGradient>
+<linearGradient id="cd-c-mob-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-mob-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-boss-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#ffa78d"/>
+  <stop offset="0.5" stop-color="#ff6b4a"/>
+  <stop offset="1" stop-color="#9c2f17"/>
+</linearGradient>
+<linearGradient id="cd-c-boss-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-boss-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+</defs>
+
+<g filter="url(#cd-c-cast)">
+<ellipse cx="180" cy="224" rx="152" ry="17" fill="url(#cd-c-contact)"/>
+<path d="M117 190 H143 A13 13 0 0 1 156 203 V217 A13 13 0 0 1 143 230 H117 A13 13 0 0 1 104 217 V203 A13 13 0 0 1 117 190 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M117 190 H143 A13 13 0 0 1 156 203 V217 A13 13 0 0 1 143 230 H117 A13 13 0 0 1 104 217 V203 A13 13 0 0 1 117 190 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M117 190 H143 A13 13 0 0 1 156 203 V217 A13 13 0 0 1 143 230 H117 A13 13 0 0 1 104 217 V203 A13 13 0 0 1 117 190 Z" fill="url(#cd-c-gear-print)"/>
+<path d="M217 190 H243 A13 13 0 0 1 256 203 V217 A13 13 0 0 1 243 230 H217 A13 13 0 0 1 204 217 V203 A13 13 0 0 1 217 190 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M217 190 H243 A13 13 0 0 1 256 203 V217 A13 13 0 0 1 243 230 H217 A13 13 0 0 1 204 217 V203 A13 13 0 0 1 217 190 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M217 190 H243 A13 13 0 0 1 256 203 V217 A13 13 0 0 1 243 230 H217 A13 13 0 0 1 204 217 V203 A13 13 0 0 1 217 190 Z" fill="url(#cd-c-gear-print)"/>
+<path d="M56 94 H64 A24 24 0 0 1 88 118 V166 A24 24 0 0 1 64 190 H56 A24 24 0 0 1 32 166 V118 A24 24 0 0 1 56 94 Z" fill="none" stroke="#1d2430" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/><path d="M56 94 H64 A24 24 0 0 1 88 118 V166 A24 24 0 0 1 64 190 H56 A24 24 0 0 1 32 166 V118 A24 24 0 0 1 56 94 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path d="M56 94 H64 A24 24 0 0 1 88 118 V166 A24 24 0 0 1 64 190 H56 A24 24 0 0 1 32 166 V118 A24 24 0 0 1 56 94 Z" fill="url(#cd-c-boss-print)"/><path d="M56 94 H64 A24 24 0 0 1 88 118 V166 A24 24 0 0 1 64 190 H56 A24 24 0 0 1 32 166 V118 A24 24 0 0 1 56 94 Z" fill="url(#cd-c-boss-sheen)"/>
+<path d="M296 94 H304 A24 24 0 0 1 328 118 V166 A24 24 0 0 1 304 190 H296 A24 24 0 0 1 272 166 V118 A24 24 0 0 1 296 94 Z" fill="none" stroke="#1d2430" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/><path d="M296 94 H304 A24 24 0 0 1 328 118 V166 A24 24 0 0 1 304 190 H296 A24 24 0 0 1 272 166 V118 A24 24 0 0 1 296 94 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path d="M296 94 H304 A24 24 0 0 1 328 118 V166 A24 24 0 0 1 304 190 H296 A24 24 0 0 1 272 166 V118 A24 24 0 0 1 296 94 Z" fill="url(#cd-c-boss-print)"/><path d="M296 94 H304 A24 24 0 0 1 328 118 V166 A24 24 0 0 1 304 190 H296 A24 24 0 0 1 272 166 V118 A24 24 0 0 1 296 94 Z" fill="url(#cd-c-boss-sheen)"/>
+<path d="M52 166 H62 A26 26 0 0 1 88 192 V198 A26 26 0 0 1 62 224 H52 A26 26 0 0 1 26 198 V192 A26 26 0 0 1 52 166 Z" fill="none" stroke="#1d2430" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/><path d="M52 166 H62 A26 26 0 0 1 88 192 V198 A26 26 0 0 1 62 224 H52 A26 26 0 0 1 26 198 V192 A26 26 0 0 1 52 166 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path d="M52 166 H62 A26 26 0 0 1 88 192 V198 A26 26 0 0 1 62 224 H52 A26 26 0 0 1 26 198 V192 A26 26 0 0 1 52 166 Z" fill="url(#cd-c-boss-print)"/><path d="M52 166 H62 A26 26 0 0 1 88 192 V198 A26 26 0 0 1 62 224 H52 A26 26 0 0 1 26 198 V192 A26 26 0 0 1 52 166 Z" fill="url(#cd-c-boss-sheen)"/>
+<path d="M298 166 H308 A26 26 0 0 1 334 192 V198 A26 26 0 0 1 308 224 H298 A26 26 0 0 1 272 198 V192 A26 26 0 0 1 298 166 Z" fill="none" stroke="#1d2430" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/><path d="M298 166 H308 A26 26 0 0 1 334 192 V198 A26 26 0 0 1 308 224 H298 A26 26 0 0 1 272 198 V192 A26 26 0 0 1 298 166 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path d="M298 166 H308 A26 26 0 0 1 334 192 V198 A26 26 0 0 1 308 224 H298 A26 26 0 0 1 272 198 V192 A26 26 0 0 1 298 166 Z" fill="url(#cd-c-boss-print)"/><path d="M298 166 H308 A26 26 0 0 1 334 192 V198 A26 26 0 0 1 308 224 H298 A26 26 0 0 1 272 198 V192 A26 26 0 0 1 298 166 Z" fill="url(#cd-c-boss-sheen)"/>
+<path d="M82 106 C82 68 125 48 180 48 C235 48 278 68 278 106 L278 162 C278 188 235 202 180 202 C125 202 82 188 82 162 Z" fill="none" stroke="#1d2430" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/><path d="M82 106 C82 68 125 48 180 48 C235 48 278 68 278 106 L278 162 C278 188 235 202 180 202 C125 202 82 188 82 162 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M82 106 C82 68 125 48 180 48 C235 48 278 68 278 106 L278 162 C278 188 235 202 180 202 C125 202 82 188 82 162 Z" fill="url(#cd-c-boss-print)"/><path d="M82 106 C82 68 125 48 180 48 C235 48 278 68 278 106 L278 162 C278 188 235 202 180 202 C125 202 82 188 82 162 Z" fill="url(#cd-c-boss-sheen)"/>
+<path d="M134 8 L154 46 L116 50 Z" fill="none" stroke="#1d2430" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/><path d="M134 8 L154 46 L116 50 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M134 8 L154 46 L116 50 Z" fill="url(#cd-c-boss-print)"/>
+<path d="M180 0 L201 46 L159 46 Z" fill="none" stroke="#1d2430" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/><path d="M180 0 L201 46 L159 46 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M180 0 L201 46 L159 46 Z" fill="url(#cd-c-boss-print)"/>
+<path d="M226 8 L244 50 L206 46 Z" fill="none" stroke="#1d2430" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/><path d="M226 8 L244 50 L206 46 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M226 8 L244 50 L206 46 Z" fill="url(#cd-c-boss-print)"/>
+<g>
+  <ellipse cx="147" cy="80" rx="12" ry="12.96" fill="#fdfdff"/>
+  <ellipse cx="147" cy="80" rx="12" ry="12.96" fill="none" stroke="#1d2430" stroke-width="3.6"/>
+  <circle cx="149.16" cy="80" r="5.28" fill="#141a24"/>
+  <circle cx="147" cy="76.88" r="1.92" fill="#fff" opacity="0.9"/>
+</g>
+<g>
+  <ellipse cx="169" cy="74" rx="12" ry="12.96" fill="#fdfdff"/>
+  <ellipse cx="169" cy="74" rx="12" ry="12.96" fill="none" stroke="#1d2430" stroke-width="3.6"/>
+  <circle cx="171.16" cy="74" r="5.28" fill="#141a24"/>
+  <circle cx="169" cy="70.88" r="1.92" fill="#fff" opacity="0.9"/>
+</g>
+<g>
+  <ellipse cx="191" cy="74" rx="12" ry="12.96" fill="#fdfdff"/>
+  <ellipse cx="191" cy="74" rx="12" ry="12.96" fill="none" stroke="#1d2430" stroke-width="3.6"/>
+  <circle cx="188.84" cy="74" r="5.28" fill="#141a24"/>
+  <circle cx="186.68" cy="70.88" r="1.92" fill="#fff" opacity="0.9"/>
+</g>
+<g>
+  <ellipse cx="213" cy="80" rx="12" ry="12.96" fill="#fdfdff"/>
+  <ellipse cx="213" cy="80" rx="12" ry="12.96" fill="none" stroke="#1d2430" stroke-width="3.6"/>
+  <circle cx="210.84" cy="80" r="5.28" fill="#141a24"/>
+  <circle cx="208.68" cy="76.88" r="1.92" fill="#fff" opacity="0.9"/>
+</g>
+<path d="M138 184 q42 -22 84 0" fill="none" stroke="#1d2430" stroke-width="5" stroke-linecap="round"/>
+<path d="M133 100 H227 A15 15 0 0 1 242 115 V149 A15 15 0 0 1 227 164 H133 A15 15 0 0 1 118 149 V115 A15 15 0 0 1 133 100 Z" fill="#3a1208"/>
+<path d="M133 100 H227 A15 15 0 0 1 242 115 V149 A15 15 0 0 1 227 164 H133 A15 15 0 0 1 118 149 V115 A15 15 0 0 1 133 100 Z" fill="url(#cd-fx-sheen)" opacity="0.5"/>
+<path d="M133 100 H227 A15 15 0 0 1 242 115 V149 A15 15 0 0 1 227 164 H133 A15 15 0 0 1 118 149 V115 A15 15 0 0 1 133 100 Z" fill="none" stroke="#1d2430" stroke-width="3.4"/>
+<circle cx="130" cy="112" r="4.8" fill="#6d1f0d"/><circle cx="130" cy="110.8" r="3.3" fill="#ffb59f" opacity="0.6"/><circle cx="230" cy="112" r="4.8" fill="#6d1f0d"/><circle cx="230" cy="110.8" r="3.3" fill="#ffb59f" opacity="0.6"/><circle cx="130" cy="152" r="4.8" fill="#6d1f0d"/><circle cx="130" cy="150.8" r="3.3" fill="#ffb59f" opacity="0.6"/><circle cx="230" cy="152" r="4.8" fill="#6d1f0d"/><circle cx="230" cy="150.8" r="3.3" fill="#ffb59f" opacity="0.6"/>
+<text x="180" y="121" font-family="Public Sans" font-size="11" font-weight="800" fill="#ffb59f" text-anchor="middle" letter-spacing="2.6" opacity="0.85">INTEGRITY</text>
+<text x="180" y="155" font-family="Public Sans" font-size="34" font-weight="800" fill="#ffd9ce" text-anchor="middle" letter-spacing="-0.5">24</text>
+</g>
 </svg>

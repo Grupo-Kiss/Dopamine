@@ -1,0 +1,377 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="456" height="740" viewBox="0 0 456 740" role="img" aria-label="Block Cascade board frame">
+<title>Block Cascade board frame</title>
+<defs>
+<linearGradient id="bv-tt-I-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#bdf6fd"/>
+  <stop offset="0.46" stop-color="#35d6e8"/>
+  <stop offset="1" stop-color="#116b7a"/>
+</linearGradient>
+<radialGradient id="bv-tt-I-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-I-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-I-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#bdf6fd" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#35d6e8" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#35d6e8" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-O-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#fff0b0"/>
+  <stop offset="0.46" stop-color="#ffcf3d"/>
+  <stop offset="1" stop-color="#a37c00"/>
+</linearGradient>
+<radialGradient id="bv-tt-O-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-O-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-O-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#fff0b0" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#ffcf3d" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#ffcf3d" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-T-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#e3cfff"/>
+  <stop offset="0.46" stop-color="#b06bff"/>
+  <stop offset="1" stop-color="#54219b"/>
+</linearGradient>
+<radialGradient id="bv-tt-T-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-T-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-T-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#e3cfff" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#b06bff" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#b06bff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-S-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#c4f8da"/>
+  <stop offset="0.46" stop-color="#44dd8a"/>
+  <stop offset="1" stop-color="#13733f"/>
+</linearGradient>
+<radialGradient id="bv-tt-S-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-S-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-S-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#c4f8da" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#44dd8a" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#44dd8a" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-Z-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#ffc0cb"/>
+  <stop offset="0.46" stop-color="#ff5470"/>
+  <stop offset="1" stop-color="#9b1230"/>
+</linearGradient>
+<radialGradient id="bv-tt-Z-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-Z-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-Z-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ffc0cb" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#ff5470" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#ff5470" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-J-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#bed6ff"/>
+  <stop offset="0.46" stop-color="#4a8cff"/>
+  <stop offset="1" stop-color="#1a4499"/>
+</linearGradient>
+<radialGradient id="bv-tt-J-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-J-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-J-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#bed6ff" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#4a8cff" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#4a8cff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-L-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#ffd9ab"/>
+  <stop offset="0.46" stop-color="#ff9f3d"/>
+  <stop offset="1" stop-color="#a85200"/>
+</linearGradient>
+<radialGradient id="bv-tt-L-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-L-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-L-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ffd9ab" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#ff9f3d" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#ff9f3d" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="pr-contact" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#000" stop-opacity="0.6"/>
+  <stop offset="0.6" stop-color="#000" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0"/>
+</radialGradient>
+<filter id="pr-soft" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#04060a" flood-opacity="0.6"/>
+</filter>
+<filter id="pr-hotglow" x="-70%" y="-70%" width="240%" height="240%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#ff8c00" flood-opacity="0.9"/>
+</filter>
+<linearGradient id="bv-bcf-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#36425a"/>
+  <stop offset="0.46" stop-color="#1b2330"/>
+  <stop offset="1" stop-color="#0c1118"/>
+</linearGradient>
+<radialGradient id="bv-bcf-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-bcf-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-bcf-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#36425a" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#1b2330" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#1b2330" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-I-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#bdf6fd"/>
+  <stop offset="0.46" stop-color="#35d6e8"/>
+  <stop offset="1" stop-color="#116b7a"/>
+</linearGradient>
+<radialGradient id="bv-tt-I-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-I-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-I-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#bdf6fd" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#35d6e8" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#35d6e8" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-O-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#fff0b0"/>
+  <stop offset="0.46" stop-color="#ffcf3d"/>
+  <stop offset="1" stop-color="#a37c00"/>
+</linearGradient>
+<radialGradient id="bv-tt-O-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-O-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-O-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#fff0b0" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#ffcf3d" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#ffcf3d" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-T-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#e3cfff"/>
+  <stop offset="0.46" stop-color="#b06bff"/>
+  <stop offset="1" stop-color="#54219b"/>
+</linearGradient>
+<radialGradient id="bv-tt-T-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-T-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-T-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#e3cfff" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#b06bff" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#b06bff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-S-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#c4f8da"/>
+  <stop offset="0.46" stop-color="#44dd8a"/>
+  <stop offset="1" stop-color="#13733f"/>
+</linearGradient>
+<radialGradient id="bv-tt-S-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-S-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-S-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#c4f8da" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#44dd8a" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#44dd8a" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-Z-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#ffc0cb"/>
+  <stop offset="0.46" stop-color="#ff5470"/>
+  <stop offset="1" stop-color="#9b1230"/>
+</linearGradient>
+<radialGradient id="bv-tt-Z-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-Z-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-Z-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ffc0cb" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#ff5470" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#ff5470" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-J-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#bed6ff"/>
+  <stop offset="0.46" stop-color="#4a8cff"/>
+  <stop offset="1" stop-color="#1a4499"/>
+</linearGradient>
+<radialGradient id="bv-tt-J-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-J-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-J-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#bed6ff" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#4a8cff" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#4a8cff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-L-face" x1="0.15" y1="0" x2="0.7" y2="1">
+  <stop offset="0" stop-color="#ffd9ab"/>
+  <stop offset="0.46" stop-color="#ff9f3d"/>
+  <stop offset="1" stop-color="#a85200"/>
+</linearGradient>
+<radialGradient id="bv-tt-L-sheen" cx="0.3" cy="0.16" r="0.82">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="bv-tt-L-rim" x1="0.2" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+  <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.12"/>
+  <stop offset="0.66" stop-color="#10151d" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#10151d" stop-opacity="0.72"/>
+</linearGradient>
+<radialGradient id="bv-tt-L-aura" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ffd9ab" stop-opacity="0.55"/>
+  <stop offset="0.55" stop-color="#ff9f3d" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#ff9f3d" stop-opacity="0"/>
+</radialGradient>
+</defs>
+
+
+<path d="M22 2 H434 A20 20 0 0 1 454 22 V718 A20 20 0 0 1 434 738 H22 A20 20 0 0 1 2 718 V22 A20 20 0 0 1 22 2 Z" fill="none" stroke="#10151d" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M22 2 H434 A20 20 0 0 1 454 22 V718 A20 20 0 0 1 434 738 H22 A20 20 0 0 1 2 718 V22 A20 20 0 0 1 22 2 Z" fill="url(#bv-bcf-face)"/>
+<path d="M22 2 H434 A20 20 0 0 1 454 22 V718 A20 20 0 0 1 434 738 H22 A20 20 0 0 1 2 718 V22 A20 20 0 0 1 22 2 Z" fill="url(#bv-bcf-sheen)"/>
+<path d="M22 2 H434 A20 20 0 0 1 454 22 V718 A20 20 0 0 1 434 738 H22 A20 20 0 0 1 2 718 V22 A20 20 0 0 1 22 2 Z" fill="none" stroke="url(#bv-bcf-rim)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M34 62 H422 A12 12 0 0 1 434 74 V702 A12 12 0 0 1 422 714 H34 A12 12 0 0 1 22 702 V74 A12 12 0 0 1 34 62 Z" fill="#070a0f"/>
+<path d="M34 62 H422 A12 12 0 0 1 434 74 V702 A12 12 0 0 1 422 714 H34 A12 12 0 0 1 22 702 V74 A12 12 0 0 1 34 62 Z" fill="none" stroke="#000" stroke-width="2" stroke-opacity="0.6"/>
+<path d="M33.5 65.5 H422.5 A8 8 0 0 1 430.5 73.5 V702.5 A8 8 0 0 1 422.5 710.5 H33.5 A8 8 0 0 1 25.5 702.5 V73.5 A8 8 0 0 1 33.5 65.5 Z" fill="none" stroke="#93a1b2" stroke-width="1.4" stroke-opacity="0.55"/>
+<text x="28" y="28" font-family="Public Sans" font-size="10.5" font-weight="800" fill="#93a1b2" letter-spacing="2.4">SCORE</text>
+<text x="28" y="52" font-family="Public Sans" font-size="21" font-weight="800" fill="#e6edf5" letter-spacing="-0.4">12,480</text>
+<text x="178" y="28" font-family="Public Sans" font-size="10.5" font-weight="800" fill="#93a1b2" letter-spacing="2.4">LINES</text>
+<text x="178" y="52" font-family="Public Sans" font-size="21" font-weight="800" fill="#e6edf5" letter-spacing="-0.4">34</text>
+<path d="M377 12 H431 A11 11 0 0 1 442 23 V47 A11 11 0 0 1 431 58 H377 A11 11 0 0 1 366 47 V23 A11 11 0 0 1 377 12 Z" fill="#0d1218"/>
+<path d="M377 12 H431 A11 11 0 0 1 442 23 V47 A11 11 0 0 1 431 58 H377 A11 11 0 0 1 366 47 V23 A11 11 0 0 1 377 12 Z" fill="none" stroke="#93a1b2" stroke-width="1.2" stroke-opacity="0.5"/>
+<text x="404" y="26" font-family="Public Sans" font-size="9" font-weight="800" fill="#93a1b2" text-anchor="middle" letter-spacing="2">NEXT</text>
+<g transform="translate(375 35) scale(0.14)"><g>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="none" stroke="#10151d" stroke-width="10.04" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="url(#bv-tt-T-face)"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="url(#bv-tt-T-sheen)"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="none" stroke="url(#bv-tt-T-rim)" stroke-width="7.04" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M37.2 24.4 H90.8 A12.8 12.8 0 0 1 103.6 37.2 V90.8 A12.8 12.8 0 0 1 90.8 103.6 H37.2 A12.8 12.8 0 0 1 24.4 90.8 V37.2 A12.8 12.8 0 0 1 37.2 24.4 Z" fill="#ffffff" opacity="0.07"/>
+<path d="M27.01 17.41 H100.99 A9.6 9.6 0 0 1 110.59 27.01 V31.1 A9.6 9.6 0 0 1 100.99 40.7 H27.01 A9.6 9.6 0 0 1 17.41 31.1 V27.01 A9.6 9.6 0 0 1 27.01 17.41 Z" fill="#ffffff" opacity="0.18"/>
+</g></g><g transform="translate(394 35) scale(0.14)"><g>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="none" stroke="#10151d" stroke-width="10.04" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="url(#bv-tt-T-face)"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="url(#bv-tt-T-sheen)"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="none" stroke="url(#bv-tt-T-rim)" stroke-width="7.04" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M37.2 24.4 H90.8 A12.8 12.8 0 0 1 103.6 37.2 V90.8 A12.8 12.8 0 0 1 90.8 103.6 H37.2 A12.8 12.8 0 0 1 24.4 90.8 V37.2 A12.8 12.8 0 0 1 37.2 24.4 Z" fill="#ffffff" opacity="0.07"/>
+<path d="M27.01 17.41 H100.99 A9.6 9.6 0 0 1 110.59 27.01 V31.1 A9.6 9.6 0 0 1 100.99 40.7 H27.01 A9.6 9.6 0 0 1 17.41 31.1 V27.01 A9.6 9.6 0 0 1 27.01 17.41 Z" fill="#ffffff" opacity="0.18"/>
+</g></g><g transform="translate(413 35) scale(0.14)"><g>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="none" stroke="#10151d" stroke-width="10.04" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="url(#bv-tt-T-face)"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="url(#bv-tt-T-sheen)"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="none" stroke="url(#bv-tt-T-rim)" stroke-width="7.04" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M37.2 24.4 H90.8 A12.8 12.8 0 0 1 103.6 37.2 V90.8 A12.8 12.8 0 0 1 90.8 103.6 H37.2 A12.8 12.8 0 0 1 24.4 90.8 V37.2 A12.8 12.8 0 0 1 37.2 24.4 Z" fill="#ffffff" opacity="0.07"/>
+<path d="M27.01 17.41 H100.99 A9.6 9.6 0 0 1 110.59 27.01 V31.1 A9.6 9.6 0 0 1 100.99 40.7 H27.01 A9.6 9.6 0 0 1 17.41 31.1 V27.01 A9.6 9.6 0 0 1 27.01 17.41 Z" fill="#ffffff" opacity="0.18"/>
+</g></g><g transform="translate(394 17) scale(0.14)"><g>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="none" stroke="#10151d" stroke-width="10.04" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="url(#bv-tt-T-face)"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="url(#bv-tt-T-sheen)"/>
+<path d="M27.52 5.76 H100.48 A21.76 21.76 0 0 1 122.24 27.52 V100.48 A21.76 21.76 0 0 1 100.48 122.24 H27.52 A21.76 21.76 0 0 1 5.76 100.48 V27.52 A21.76 21.76 0 0 1 27.52 5.76 Z" fill="none" stroke="url(#bv-tt-T-rim)" stroke-width="7.04" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M37.2 24.4 H90.8 A12.8 12.8 0 0 1 103.6 37.2 V90.8 A12.8 12.8 0 0 1 90.8 103.6 H37.2 A12.8 12.8 0 0 1 24.4 90.8 V37.2 A12.8 12.8 0 0 1 37.2 24.4 Z" fill="#ffffff" opacity="0.07"/>
+<path d="M27.01 17.41 H100.99 A9.6 9.6 0 0 1 110.59 27.01 V31.1 A9.6 9.6 0 0 1 100.99 40.7 H27.01 A9.6 9.6 0 0 1 17.41 31.1 V27.01 A9.6 9.6 0 0 1 27.01 17.41 Z" fill="#ffffff" opacity="0.18"/>
+</g></g>
+<path d="M31 718 H425 A3 3 0 0 1 428 721 V721 A3 3 0 0 1 425 724 H31 A3 3 0 0 1 28 721 V721 A3 3 0 0 1 31 718 Z" fill="#93a1b2" opacity="0.18"/>
+</svg>

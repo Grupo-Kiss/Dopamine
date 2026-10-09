@@ -1,8 +1,131 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 112" role="img" aria-label="Monster">
-  <ellipse cx="48" cy="60" rx="36" ry="40" fill="#9b59b6" stroke="#333" stroke-width="3"/>
-  <circle cx="34" cy="50" r="10" fill="#fff" stroke="#333" stroke-width="2"/>
-  <circle cx="62" cy="50" r="10" fill="#fff" stroke="#333" stroke-width="2"/>
-  <circle cx="34" cy="52" r="4" fill="#222"/><circle cx="62" cy="52" r="4" fill="#222"/>
-  <path d="M30 78q18 14 36 0" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-  <path d="M20 28l8 16M76 28l-8 16" stroke="#7d3c98" stroke-width="6" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Lane Defender normal enemy">
+<title>Lane Defender normal enemy</title>
+<defs>
+<linearGradient id="cd-fx-hot" x1="0" y1="0" x2="0.4" y2="1">
+  <stop offset="0" stop-color="#ffc24a"/>
+  <stop offset="0.5" stop-color="#ff8c00"/>
+  <stop offset="1" stop-color="#d14a00"/>
+</linearGradient>
+<linearGradient id="cd-fx-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+  <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.26"/>
+</linearGradient>
+<filter id="cd-c-cast" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#05070a" flood-opacity="0.55"/>
+</filter>
+<radialGradient id="cd-c-contact" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#000" stop-opacity="0.62"/>
+  <stop offset="0.6" stop-color="#000" stop-opacity="0.22"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="cd-c-soldier-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#9ccc65"/>
+  <stop offset="0.5" stop-color="#6f9a4a"/>
+  <stop offset="1" stop-color="#41632b"/>
+</linearGradient>
+<linearGradient id="cd-c-soldier-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-soldier-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-skin-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#fbe2c2"/>
+  <stop offset="0.5" stop-color="#f0c79a"/>
+  <stop offset="1" stop-color="#c89a6c"/>
+</linearGradient>
+<linearGradient id="cd-c-skin-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-skin-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-gear-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#5d697b"/>
+  <stop offset="0.5" stop-color="#3b4350"/>
+  <stop offset="1" stop-color="#242a34"/>
+</linearGradient>
+<linearGradient id="cd-c-gear-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-gear-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-steel-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#cfdcea"/>
+  <stop offset="0.5" stop-color="#8fa3bb"/>
+  <stop offset="1" stop-color="#596878"/>
+</linearGradient>
+<linearGradient id="cd-c-steel-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-steel-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-mob-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#86f0e6"/>
+  <stop offset="0.5" stop-color="#36cfc0"/>
+  <stop offset="1" stop-color="#1b7b73"/>
+</linearGradient>
+<linearGradient id="cd-c-mob-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-mob-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-boss-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#ffa78d"/>
+  <stop offset="0.5" stop-color="#ff6b4a"/>
+  <stop offset="1" stop-color="#9c2f17"/>
+</linearGradient>
+<linearGradient id="cd-c-boss-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-boss-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+</defs>
+
+<g filter="url(#cd-c-cast)">
+<ellipse cx="78" cy="142" rx="46" ry="10" fill="url(#cd-c-contact)"/>
+<path d="M44 42 L48 6 L72 34 Z" fill="none" stroke="#1d2430" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M44 42 L48 6 L72 34 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M44 42 L48 6 L72 34 Z" fill="url(#cd-c-mob-print)"/>
+<path d="M112 42 L108 6 L84 34 Z" fill="none" stroke="#1d2430" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M112 42 L108 6 L84 34 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M112 42 L108 6 L84 34 Z" fill="url(#cd-c-mob-print)"/>
+<path d="M50 116 H55 A10 10 0 0 1 65 126 V128 A10 10 0 0 1 55 138 H50 A10 10 0 0 1 40 128 V126 A10 10 0 0 1 50 116 Z" fill="none" stroke="#1d2430" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 116 H55 A10 10 0 0 1 65 126 V128 A10 10 0 0 1 55 138 H50 A10 10 0 0 1 40 128 V126 A10 10 0 0 1 50 116 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 116 H55 A10 10 0 0 1 65 126 V128 A10 10 0 0 1 55 138 H50 A10 10 0 0 1 40 128 V126 A10 10 0 0 1 50 116 Z" fill="url(#cd-c-mob-print)"/>
+<path d="M101 116 H106 A10 10 0 0 1 116 126 V128 A10 10 0 0 1 106 138 H101 A10 10 0 0 1 91 128 V126 A10 10 0 0 1 101 116 Z" fill="none" stroke="#1d2430" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M101 116 H106 A10 10 0 0 1 116 126 V128 A10 10 0 0 1 106 138 H101 A10 10 0 0 1 91 128 V126 A10 10 0 0 1 101 116 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M101 116 H106 A10 10 0 0 1 116 126 V128 A10 10 0 0 1 106 138 H101 A10 10 0 0 1 91 128 V126 A10 10 0 0 1 101 116 Z" fill="url(#cd-c-mob-print)"/>
+<path d="M22 86 C22 46 46 26 78 26 C110 26 134 46 134 86 C134 114 112 128 78 128 C44 128 22 114 22 86 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M22 86 C22 46 46 26 78 26 C110 26 134 46 134 86 C134 114 112 128 78 128 C44 128 22 114 22 86 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M22 86 C22 46 46 26 78 26 C110 26 134 46 134 86 C134 114 112 128 78 128 C44 128 22 114 22 86 Z" fill="url(#cd-c-mob-print)"/><path d="M22 86 C22 46 46 26 78 26 C110 26 134 46 134 86 C134 114 112 128 78 128 C44 128 22 114 22 86 Z" fill="url(#cd-c-mob-sheen)"/>
+<path d="M47 106 C47 94 62 88 78 88 C94 88 109 94 109 106 C109 118 94 124 78 124 C62 124 47 118 47 106 Z" fill="#d6fffa" opacity="0.24"/>
+<g>
+  <ellipse cx="60" cy="70" rx="16.5" ry="17.82" fill="#fdfdff"/>
+  <ellipse cx="60" cy="70" rx="16.5" ry="17.82" fill="none" stroke="#1d2430" stroke-width="4.95"/>
+  <circle cx="58.02" cy="71.65" r="7.26" fill="#141a24"/>
+  <circle cx="55.05" cy="67.36" r="2.64" fill="#fff" opacity="0.9"/>
+</g>
+<g>
+  <ellipse cx="96" cy="70" rx="16.5" ry="17.82" fill="#fdfdff"/>
+  <ellipse cx="96" cy="70" rx="16.5" ry="17.82" fill="none" stroke="#1d2430" stroke-width="4.95"/>
+  <circle cx="97.98" cy="71.65" r="7.26" fill="#141a24"/>
+  <circle cx="95.01" cy="67.36" r="2.64" fill="#fff" opacity="0.9"/>
+</g>
+<path d="M59 100 q19 17 38 0" fill="none" stroke="#1d2430" stroke-width="4.4" stroke-linecap="round"/>
+<path d="M73 101 L85 101 L79 112 Z" fill="#fdfdff"/>
+</g>
 </svg>
