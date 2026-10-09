@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="206" viewBox="0 0 470 206" role="img" aria-label="POSITIVE — OPPORTUNITY">
+<title>POSITIVE — OPPORTUNITY</title>
+<defs>
+<radialGradient id="pr-contact" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#000" stop-opacity="0.6"/>
+  <stop offset="0.6" stop-color="#000" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0"/>
+</radialGradient>
+<filter id="pr-soft" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#04060a" flood-opacity="0.6"/>
+</filter>
+<filter id="pr-hotglow" x="-70%" y="-70%" width="240%" height="240%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#ff8c00" flood-opacity="0.9"/>
+</filter>
+</defs>
+
+<rect width="470" height="206" rx="14" fill="#0c1016"/>
+<rect x="0.6" y="0.6" width="468.8" height="204.8" rx="14" fill="none" stroke="#2ee07a" stroke-width="1.2" stroke-opacity="0.4"/>
+<text x="24" y="34" font-family="Public Sans" font-size="12" font-weight="800" fill="#2ee07a" letter-spacing="2.4">POSITIVE — OPPORTUNITY</text><g>
+  <path d="M42 57 H94 A12 12 0 0 1 106 69 V99 A12 12 0 0 1 94 111 H42 A12 12 0 0 1 30 99 V69 A12 12 0 0 1 42 57 Z" fill="#10151d"/>
+  <path d="M42 57 H94 A12 12 0 0 1 106 69 V99 A12 12 0 0 1 94 111 H42 A12 12 0 0 1 30 99 V69 A12 12 0 0 1 42 57 Z" fill="#2ee07a" opacity="0.14"/>
+  <path d="M42 57 H94 A12 12 0 0 1 106 69 V99 A12 12 0 0 1 94 111 H42 A12 12 0 0 1 30 99 V69 A12 12 0 0 1 42 57 Z" fill="none" stroke="#2ee07a" stroke-width="4.86"/>
+  <path d="M42.96 62.4 H93.04 A6.4799999999999995 6.4799999999999995 0 0 1 99.52 68.88 V72.12 A6.4799999999999995 6.4799999999999995 0 0 1 93.04 78.6 H42.96 A6.4799999999999995 6.4799999999999995 0 0 1 36.48 72.12 V68.88 A6.4799999999999995 6.4799999999999995 0 0 1 42.96 62.4 Z" fill="#ffffff" opacity="0.07"/>
+  <text x="68" y="93.8" font-family="Public Sans" font-size="28" font-weight="800" fill="#2ee07a" text-anchor="middle" letter-spacing="-0.5">+1</text>
+  <text x="68" y="93.8" font-family="Public Sans" font-size="28" font-weight="800" fill="#04140d" text-anchor="middle" letter-spacing="-0.5" opacity="0.001">+1</text>
+</g><g>
+  <path d="M137 57 H235 A12 12 0 0 1 247 69 V99 A12 12 0 0 1 235 111 H137 A12 12 0 0 1 125 99 V69 A12 12 0 0 1 137 57 Z" fill="#10151d"/>
+  <path d="M137 57 H235 A12 12 0 0 1 247 69 V99 A12 12 0 0 1 235 111 H137 A12 12 0 0 1 125 99 V69 A12 12 0 0 1 137 57 Z" fill="#2ee07a" opacity="0.14"/>
+  <path d="M137 57 H235 A12 12 0 0 1 247 69 V99 A12 12 0 0 1 235 111 H137 A12 12 0 0 1 125 99 V69 A12 12 0 0 1 137 57 Z" fill="none" stroke="#2ee07a" stroke-width="4.86"/>
+  <path d="M137.96 62.4 H234.04 A6.4799999999999995 6.4799999999999995 0 0 1 240.52 68.88 V72.12 A6.4799999999999995 6.4799999999999995 0 0 1 234.04 78.6 H137.96 A6.4799999999999995 6.4799999999999995 0 0 1 131.48 72.12 V68.88 A6.4799999999999995 6.4799999999999995 0 0 1 137.96 62.4 Z" fill="#ffffff" opacity="0.07"/>
+  <text x="186" y="95.72" font-family="Public Sans" font-size="33.48" font-weight="800" fill="#2ee07a" text-anchor="middle" letter-spacing="-0.5">+24</text>
+  <text x="186" y="95.72" font-family="Public Sans" font-size="33.48" font-weight="800" fill="#04140d" text-anchor="middle" letter-spacing="-0.5" opacity="0.001">+24</text>
+</g><g>
+  <path d="M285 57 H423 A12 12 0 0 1 435 69 V99 A12 12 0 0 1 423 111 H285 A12 12 0 0 1 273 99 V69 A12 12 0 0 1 285 57 Z" fill="#10151d"/>
+  <path d="M285 57 H423 A12 12 0 0 1 435 69 V99 A12 12 0 0 1 423 111 H285 A12 12 0 0 1 273 99 V69 A12 12 0 0 1 285 57 Z" fill="#2ee07a" opacity="0.14"/>
+  <path d="M285 57 H423 A12 12 0 0 1 435 69 V99 A12 12 0 0 1 423 111 H285 A12 12 0 0 1 273 99 V69 A12 12 0 0 1 285 57 Z" fill="none" stroke="#2ee07a" stroke-width="4.86"/>
+  <path d="M285.96 62.4 H422.04 A6.4799999999999995 6.4799999999999995 0 0 1 428.52 68.88 V72.12 A6.4799999999999995 6.4799999999999995 0 0 1 422.04 78.6 H285.96 A6.4799999999999995 6.4799999999999995 0 0 1 279.48 72.12 V68.88 A6.4799999999999995 6.4799999999999995 0 0 1 285.96 62.4 Z" fill="#ffffff" opacity="0.07"/>
+  <text x="354" y="95.72" font-family="Public Sans" font-size="33.48" font-weight="800" fill="#2ee07a" text-anchor="middle" letter-spacing="-0.5">+860</text>
+  <text x="354" y="95.72" font-family="Public Sans" font-size="33.48" font-weight="800" fill="#04140d" text-anchor="middle" letter-spacing="-0.5" opacity="0.001">+860</text>
+</g><g>
+  <path d="M42 132 H94 A12 12 0 0 1 106 144 V164 A12 12 0 0 1 94 176 H42 A12 12 0 0 1 30 164 V144 A12 12 0 0 1 42 132 Z" fill="#10151d"/>
+  <path d="M42 132 H94 A12 12 0 0 1 106 144 V164 A12 12 0 0 1 94 176 H42 A12 12 0 0 1 30 164 V144 A12 12 0 0 1 42 132 Z" fill="#2ee07a" opacity="0.14"/>
+  <path d="M42 132 H94 A12 12 0 0 1 106 144 V164 A12 12 0 0 1 94 176 H42 A12 12 0 0 1 30 164 V144 A12 12 0 0 1 42 132 Z" fill="none" stroke="#2ee07a" stroke-width="3.96"/>
+  <path d="M40.56 136.4 H95.44 A5.279999999999999 5.279999999999999 0 0 1 100.72 141.68 V144.32 A5.279999999999999 5.279999999999999 0 0 1 95.44 149.6 H40.56 A5.279999999999999 5.279999999999999 0 0 1 35.28 144.32 V141.68 A5.279999999999999 5.279999999999999 0 0 1 40.56 136.4 Z" fill="#ffffff" opacity="0.07"/>
+  <text x="68" y="162.4" font-family="Public Sans" font-size="24" font-weight="800" fill="#2ee07a" text-anchor="middle" letter-spacing="-0.5">x4</text>
+  <text x="68" y="162.4" font-family="Public Sans" font-size="24" font-weight="800" fill="#04140d" text-anchor="middle" letter-spacing="-0.5" opacity="0.001">x4</text>
+</g><text x="124" y="150" font-family="Public Sans" font-size="12.5" font-weight="500" fill="#8b97a6">plate grows with the value width;</text><text x="124" y="170" font-family="Public Sans" font-size="12.5" font-weight="500" fill="#8b97a6">multipliers share the opportunity fill</text>
+</svg>
