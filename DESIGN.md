@@ -66,6 +66,27 @@ Dopamine’s shell is a **GitHub-dark stage** with **violet/magenta collision bl
 - **Play** orange/red (`#ff8c00` → `#ff4d1a`) is reserved for primary action and title heat.
 - **Dim text** `#6e7681` is for corner secondary controls only.
 
+### Window brands (locked in high-fi, Phase C)
+
+| Window | Accent | Light | Ink / panel ground |
+| --- | --- | --- | --- |
+| Loop | `#ff4d6d` | `#ff8fa3` | `#4a0f1e` / `#3d1421` |
+| Pulse | `#2f81f7` | `#79b8ff` | `#0a1c33` / `#0d1d33` |
+| Wave | `#2ee07a` | `#7af0a8` | `#07261a` / `#0b3d2e` |
+| Echo | `#ff0033` | `#ff5c7a` | `#3d0210` / `#1b0710` |
+| Alerts | `#f5a623` | `#ffce6a` | `#3d2606` / `#2a1a08` |
+| Dopamine bar | `#ff8c00` → `#a371f7` | — | `#2a0f3d` |
+
+Pulse and Wave replace the starter hexes deliberately. Pulse moves off the
+starter `#1da1f2` — a cyan-leaning blue that reads as one specific real
+platform — onto the GitHub-dark shell’s own blue, which also sits closer to the
+violet stage. Wave moves off `#1db954` onto a brighter spring green, keeping the
+dark-player-plus-green *grammar* without matching any real mark. The dark player
+ground `#0b3d2e` is unchanged.
+
+Window accents are **skin colour only**. They never signal reward state; that is
+the Dopamine bar’s job, and Combo/Chain stickers carry their own Play palette.
+
 ## Typography
 
 - **UI:** Public Sans for chrome, credits, labels.
@@ -107,3 +128,4 @@ Dopamine’s shell is a **GitHub-dark stage** with **violet/magenta collision bl
 - Don’t ship corporate marketing sections, feature cards, or info-dense Start Page copy.
 - Don’t introduce a light theme via Accessibility Mode (motion only).
 - Don’t put real-platform logos in window skins.
+- Don’t copy real-platform icon geometry, avatars, cover art or notification chrome — window art is caricature built from generic shapes.

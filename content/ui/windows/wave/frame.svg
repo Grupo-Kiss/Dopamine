@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="260" viewBox="0 0 640 260" role="img" aria-label="Wave frame">
+<title>Wave frame</title>
+<defs>
+
+<linearGradient id="wkc-cv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#39d98a"/><stop offset="0.55" stop-color="#1d7b53"/><stop offset="1" stop-color="#0b3d2e"/></linearGradient>
+<clipPath id="wkc-cvc"><path d="M30.8 54 H129.2 A10.8 10.8 0 0 1 140 64.8 V163.2 A10.8 10.8 0 0 1 129.2 174 H30.8 A10.8 10.8 0 0 1 20 163.2 V64.8 A10.8 10.8 0 0 1 30.8 54 Z"/></clipPath>
+<linearGradient id="wkbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2318"/><stop offset="1" stop-color="#05130d"/></linearGradient>
+</defs>
+<rect width="640" height="260" fill="#0a0d12"/>
+<path d="M14 0 H626 A14 14 0 0 1 640 14 V246 A14 14 0 0 1 626 260 H14 A14 14 0 0 1 0 246 V14 A14 14 0 0 1 14 0 Z" fill="url(#wkbg)" stroke="#156537" stroke-width="1.6"/>
+<path d="M14 0 H626 A14 14 0 0 1 640 14 V34 H0 V14 A14 14 0 0 1 14 0 Z" fill="#0a1f16"/>
+<text x="16" y="22" font-family="Teko" font-size="21" font-weight="600" fill="#2ee07a" letter-spacing="3">WAVE</text>
+<g clip-path="url(#wkc-cvc)">
+  <rect x="20" y="54" width="120" height="120" fill="url(#wkc-cv)"/>
+  <circle cx="80" cy="114" r="12" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.3"/><circle cx="80" cy="114" r="22.8" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.26"/><circle cx="80" cy="114" r="33.6" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.21"/><circle cx="80" cy="114" r="44.4" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.16"/><circle cx="80" cy="114" r="55.2" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.12"/>
+  <path d="M38 144.97 H38 A6 6 0 0 1 44 150.97 V153.6 A6 6 0 0 1 38 159.6 H38 A6 6 0 0 1 32 153.6 V150.97 A6 6 0 0 1 38 144.97 Z" fill="#fff" opacity="0.14"/><path d="M53.84 143.05 H53.84 A6 6 0 0 1 59.84 149.05 V153.6 A6 6 0 0 1 53.84 159.6 H53.84 A6 6 0 0 1 47.84 153.6 V149.05 A6 6 0 0 1 53.84 143.05 Z" fill="#fff" opacity="0.15"/><path d="M69.68 102.85 H69.68 A6 6 0 0 1 75.68 108.85 V153.6 A6 6 0 0 1 69.68 159.6 H69.68 A6 6 0 0 1 63.68 153.6 V108.85 A6 6 0 0 1 69.68 102.85 Z" fill="#fff" opacity="0.2"/><path d="M85.52 114.04 H85.52 A6 6 0 0 1 91.52 120.04 V153.6 A6 6 0 0 1 85.52 159.6 H85.52 A6 6 0 0 1 79.52 153.6 V120.04 A6 6 0 0 1 85.52 114.04 Z" fill="#fff" opacity="0.18"/><path d="M101.36 141.69 H101.36 A6 6 0 0 1 107.36 147.69 V153.6 A6 6 0 0 1 101.36 159.6 H101.36 A6 6 0 0 1 95.36 153.6 V147.69 A6 6 0 0 1 101.36 141.69 Z" fill="#fff" opacity="0.29"/><path d="M117.2 107.07 H117.2 A6 6 0 0 1 123.2 113.07 V153.6 A6 6 0 0 1 117.2 159.6 H117.2 A6 6 0 0 1 111.2 153.6 V113.07 A6 6 0 0 1 117.2 107.07 Z" fill="#fff" opacity="0.31"/>
+  <path d="M20 128.4 q36 -26.4 66 6 t60 -7.2 V174 H20 Z" fill="#05070a" opacity="0.26"/>
+  <path d="M30.8 54 H129.2 A10.8 10.8 0 0 1 140 64.8 V163.2 A10.8 10.8 0 0 1 129.2 174 H30.8 A10.8 10.8 0 0 1 20 163.2 V64.8 A10.8 10.8 0 0 1 30.8 54 Z" fill="none" stroke="#05070a" stroke-width="2" stroke-opacity="0.55"/>
+</g>
+<text x="156" y="80" font-family="Public Sans" font-size="18" font-weight="800" fill="#eafff3">UNTITLED DRIFT 04</text>
+<text x="156" y="102" font-family="Public Sans" font-size="14" font-weight="500" fill="#5f9c81">Nobody In Particular</text>
+<path d="M159.5 122 H452.5 A3.5 3.5 0 0 1 456 125.5 V125.5 A3.5 3.5 0 0 1 452.5 129 H159.5 A3.5 3.5 0 0 1 156 125.5 V125.5 A3.5 3.5 0 0 1 159.5 122 Z" fill="#2ee07a" opacity="0.2"/><path d="M159.5 138 H308.13 A3.5 3.5 0 0 1 311.63 141.5 V141.5 A3.5 3.5 0 0 1 308.13 145 H159.5 A3.5 3.5 0 0 1 156 141.5 V141.5 A3.5 3.5 0 0 1 159.5 138 Z" fill="#2ee07a" opacity="0.3"/><path d="M159.5 154 H379.62 A3.5 3.5 0 0 1 383.12 157.5 V157.5 A3.5 3.5 0 0 1 379.62 161 H159.5 A3.5 3.5 0 0 1 156 157.5 V157.5 A3.5 3.5 0 0 1 159.5 154 Z" fill="#2ee07a" opacity="0.36"/>
+<text x="622" y="22" font-family="Public Sans" font-size="10" font-weight="700" fill="#3f7460" text-anchor="end" letter-spacing="1.6">DARK PLAYER</text>
+<text x="320" y="248" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">COMPACT DARK PLAYER</text>
+</svg>

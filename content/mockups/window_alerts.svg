@@ -1,0 +1,262 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Alerts overlay cards">
+<title>Alerts overlay cards</title>
+<defs>
+
+<pattern id="st-grid" width="46" height="46" patternUnits="userSpaceOnUse">
+  <path d="M46 0 V46 M0 46 H46" fill="none" stroke="#8ea4c4" stroke-width="1" stroke-opacity="0.085"/>
+</pattern>
+<pattern id="st-grid-hot" width="46" height="46" patternUnits="userSpaceOnUse">
+  <path d="M46 0 V46 M0 46 H46" fill="none" stroke="#a371f7" stroke-width="1.35"/>
+</pattern>
+<radialGradient id="st-bloomA" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#c060ff" stop-opacity="0.66"/>
+  <stop offset="0.35" stop-color="#6e40c9" stop-opacity="0.34"/>
+  <stop offset="0.68" stop-color="#3a1a6e" stop-opacity="0.12"/>
+  <stop offset="1" stop-color="#1a0e33" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-bloomB" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ff4fd8" stop-opacity="0.5"/>
+  <stop offset="0.4" stop-color="#c9399b" stop-opacity="0.22"/>
+  <stop offset="1" stop-color="#3d0a33" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-bloomC" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#5f7bff" stop-opacity="0.34"/>
+  <stop offset="0.45" stop-color="#3b3fa8" stop-opacity="0.15"/>
+  <stop offset="1" stop-color="#101a3a" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-bloomD" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ff2d6f" stop-opacity="0.34"/>
+  <stop offset="0.45" stop-color="#8f1440" stop-opacity="0.14"/>
+  <stop offset="1" stop-color="#3d0a1f" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-core" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.2"/>
+  <stop offset="0.16" stop-color="#e6b6ff" stop-opacity="0.15"/>
+  <stop offset="0.45" stop-color="#a371f7" stop-opacity="0.10"/>
+  <stop offset="1" stop-color="#6e40c9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-ring0" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0.6" stop-color="#a371f7" stop-opacity="0"/>
+  <stop offset="0.82" stop-color="#a371f7" stop-opacity="0.16"/>
+  <stop offset="0.93" stop-color="#d9b3ff" stop-opacity="0.09"/>
+  <stop offset="1" stop-color="#6e40c9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-ring1" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0.66" stop-color="#c9399b" stop-opacity="0"/>
+  <stop offset="0.86" stop-color="#ff6fe0" stop-opacity="0.12"/>
+  <stop offset="1" stop-color="#c9399b" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-gridglow" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#fff" stop-opacity="0.5"/>
+  <stop offset="0.5" stop-color="#fff" stop-opacity="0.16"/>
+  <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</radialGradient>
+<mask id="st-gridmask" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="1000">
+  <rect width="1600" height="1000" fill="#000"/>
+  <ellipse cx="800" cy="460" rx="672" ry="400" fill="url(#st-gridglow)"/>
+  <ellipse cx="272" cy="740" rx="272" ry="200" fill="url(#st-gridglow)" opacity="0.6"/>
+  <ellipse cx="1376" cy="240" rx="240" ry="180" fill="url(#st-gridglow)" opacity="0.55"/>
+</mask>
+<linearGradient id="st-floor" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#0d1117"/>
+  <stop offset="0.55" stop-color="#0b0e14"/>
+  <stop offset="1" stop-color="#07090d"/>
+</linearGradient>
+<linearGradient id="st-streak" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#a371f7" stop-opacity="0"/>
+  <stop offset="0.5" stop-color="#e9d5ff" stop-opacity="1"/>
+  <stop offset="1" stop-color="#c9399b" stop-opacity="0"/>
+</linearGradient>
+
+<linearGradient id="ch-panel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1a212b"/>
+  <stop offset="0.45" stop-color="#161b22"/>
+  <stop offset="1" stop-color="#11161d"/>
+</linearGradient>
+<linearGradient id="ch-bar" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#232b36"/>
+  <stop offset="1" stop-color="#181f28"/>
+</linearGradient>
+<linearGradient id="ch-edge" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#454e5a"/>
+  <stop offset="0.5" stop-color="#30363d"/>
+  <stop offset="1" stop-color="#232a33"/>
+</linearGradient>
+<linearGradient id="ch-innertop" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.09"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="ch-drop" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#000" flood-opacity="0.66"/>
+</filter>
+<filter id="ch-vglow" x="-45%" y="-45%" width="190%" height="190%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#6e40c9" flood-opacity="0.5"/>
+</filter>
+<filter id="ch-vglow-strong" x="-55%" y="-55%" width="210%" height="210%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#a371f7" flood-opacity="1"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="26" flood-color="#6e40c9" flood-opacity="0.85"/>
+</filter>
+
+<pattern id="crt-scan" width="4" height="3" patternUnits="userSpaceOnUse">
+  <rect width="4" height="1.5" fill="#000" opacity="0.1"/>
+</pattern>
+<pattern id="crt-aperture" width="3" height="3" patternUnits="userSpaceOnUse">
+  <rect width="1" height="3" fill="#ff2d2d" opacity="0.045"/>
+  <rect x="1" width="1" height="3" fill="#2dff7a" opacity="0.035"/>
+  <rect x="2" width="1" height="3" fill="#2d6cff" opacity="0.045"/>
+</pattern>
+<radialGradient id="crt-vig" cx="0.5" cy="0.48" r="0.72">
+  <stop offset="0" stop-color="#000" stop-opacity="0"/>
+  <stop offset="0.55" stop-color="#000" stop-opacity="0.06"/>
+  <stop offset="0.8" stop-color="#000" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0.82"/>
+</radialGradient>
+<radialGradient id="crt-glass" cx="0.28" cy="0.16" r="0.62">
+  <stop offset="0" stop-color="#cfe4ff" stop-opacity="0.075"/>
+  <stop offset="0.45" stop-color="#cfe4ff" stop-opacity="0.022"/>
+  <stop offset="1" stop-color="#cfe4ff" stop-opacity="0"/>
+</radialGradient>
+<filter id="crt-noise" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="9" stitchTiles="stitch" result="n"/>
+  <feColorMatrix type="saturate" values="0" in="n" result="g"/>
+  <feComponentTransfer in="g" result="c">
+    <feFuncA type="linear" slope="0.045" intercept="0"/>
+  </feComponentTransfer>
+</filter>
+
+<linearGradient id="am0-t-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff5a1f"/><stop offset="1" stop-color="#ffa484"/></linearGradient>
+<linearGradient id="am0-pl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#371e14"/><stop offset="1" stop-color="#2a1005"/></linearGradient>
+<linearGradient id="am0-ic" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#94c6ff"/><stop offset="1" stop-color="#2f81f7"/></linearGradient>
+<filter id="am0-sh" x="-40%" y="-60%" width="180%" height="240%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#05070a" flood-opacity="0.75"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#ff5a1f" flood-opacity="0.6"/>
+</filter>
+
+<linearGradient id="am1-t-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f5a623"/><stop offset="1" stop-color="#face86"/></linearGradient>
+<linearGradient id="am1-pl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f2615"/><stop offset="1" stop-color="#221806"/></linearGradient>
+<linearGradient id="am1-ic" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#95f3b9"/><stop offset="1" stop-color="#2ee07a"/></linearGradient>
+<filter id="am1-sh" x="-40%" y="-60%" width="180%" height="240%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#05070a" flood-opacity="0.75"/>
+
+</filter>
+
+<linearGradient id="am2-t-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7d6b46"/><stop offset="1" stop-color="#b8ae99"/></linearGradient>
+<linearGradient id="am2-pl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24282d"/><stop offset="1" stop-color="#161a20"/></linearGradient>
+<linearGradient id="am2-ic" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd888"/><stop offset="1" stop-color="#f5a623"/></linearGradient>
+<filter id="am2-sh" x="-40%" y="-60%" width="180%" height="240%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#05070a" flood-opacity="0.75"/>
+
+</filter>
+</defs>
+
+<rect width="1600" height="1000" fill="url(#st-floor)"/>
+<g opacity="0.48">
+  <!-- dominant centred collision bloom -->
+  <ellipse cx="800" cy="420" rx="864" ry="700" fill="url(#st-bloomA)"/>
+  <ellipse cx="800" cy="420" rx="480" ry="400" fill="url(#st-bloomB)" opacity="0.85"/>
+  <!-- outboard support blooms, pushed to the corners and kept quiet -->
+  <ellipse cx="64" cy="220" rx="384" ry="340" fill="url(#st-bloomB)" opacity="0.82"/>
+  <ellipse cx="1568" cy="860" rx="384" ry="340" fill="url(#st-bloomB)" opacity="0.7"/>
+  <ellipse cx="32" cy="820" rx="272" ry="260" fill="url(#st-bloomD)" opacity="0.7"/>
+  <ellipse cx="1376" cy="40" rx="384" ry="260" fill="url(#st-bloomC)" opacity="0.7"/>
+  <ellipse cx="96" cy="1000" rx="352" ry="240" fill="url(#st-bloomC)" opacity="0.6"/>
+</g>
+<g mask="url(#st-gridmask)">
+  <rect width="1600" height="1000" fill="url(#st-grid)"/>
+  <rect width="1600" height="1000" fill="url(#st-grid-hot)" opacity="0.38"/>
+</g>
+<g><ellipse cx="800" cy="420" rx="405" ry="300" fill="url(#st-ring0)" opacity="0.25"/><ellipse cx="800" cy="420" rx="756" ry="560" fill="url(#st-ring1)" opacity="0.21"/><ellipse cx="800" cy="420" rx="1107" ry="820" fill="url(#st-ring0)" opacity="0.16"/><ellipse cx="800" cy="420" rx="1458" ry="1080" fill="url(#st-ring1)" opacity="0.12"/></g>
+<ellipse cx="800" cy="420" rx="500" ry="500" fill="url(#st-core)" opacity="0.5"/>
+<rect x="1390.33" y="427.4" width="128.62" height="2.03" rx="1" transform="rotate(-11.55 1390.33 427.4)" fill="url(#st-streak)" opacity="0.29"/><rect x="737.82" y="174.23" width="149.25" height="1.61" rx="1" transform="rotate(10.92 737.82 174.23)" fill="url(#st-streak)" opacity="0.5"/><rect x="241.24" y="708.27" width="73.07" height="1.42" rx="1" transform="rotate(-14.62 241.24 708.27)" fill="url(#st-streak)" opacity="0.36"/><rect x="1025.25" y="263.62" width="59.3" height="1.26" rx="1" transform="rotate(-28.74 1025.25 263.62)" fill="url(#st-streak)" opacity="0.46"/><rect x="993.72" y="158.89" width="127.49" height="1.98" rx="1" transform="rotate(14.89 993.72 158.89)" fill="url(#st-streak)" opacity="0.23"/><rect x="498.21" y="657.05" width="119.44" height="1.8" rx="1" transform="rotate(-11.56 498.21 657.05)" fill="url(#st-streak)" opacity="0.38"/><rect x="1210.84" y="364.89" width="176.47" height="0.94" rx="1" transform="rotate(22.2 1210.84 364.89)" fill="url(#st-streak)" opacity="0.52"/><rect x="809.58" y="773.27" width="85.34" height="2.19" rx="1" transform="rotate(-15.33 809.58 773.27)" fill="url(#st-streak)" opacity="0.34"/><rect x="294.24" y="442.59" width="113.2" height="1.44" rx="1" transform="rotate(-6.91 294.24 442.59)" fill="url(#st-streak)" opacity="0.33"/>
+
+<text x="800" y="92" font-family="Teko" font-size="62" font-weight="600" fill="#f8bc5a" text-anchor="middle" letter-spacing="16">ALERTS</text>
+<text x="800" y="122" font-family="Public Sans" font-size="16" font-weight="500" fill="#6e7681" text-anchor="middle">OS-style interruptions — the only element allowed to overlap other windows</text>
+
+<g filter="url(#am0-sh)">
+  <path d="M534 250 H1066 A14 14 0 0 1 1080 264 V372 A14 14 0 0 1 1066 386 H534 A14 14 0 0 1 520 372 V264 A14 14 0 0 1 534 250 Z" fill="url(#am0-pl)" stroke="#ff5a1f" stroke-width="2.4"/>
+  <path d="M533.5 251.5 H1066.5 A12 12 0 0 1 1078.5 263.5 V267.5 H521.5 V263.5 A12 12 0 0 1 533.5 251.5 Z" fill="#fff" opacity="0.07"/>
+  <path d="M526 268 v100" stroke="#ff5a1f" stroke-width="4" stroke-linecap="round"/>
+  <!-- icon slot -->
+  <path d="M556 274 H580 A14 14 0 0 1 594 288 V312 A14 14 0 0 1 580 326 H556 A14 14 0 0 1 542 312 V288 A14 14 0 0 1 556 274 Z" fill="url(#am0-ic)"/>
+  <path d="M556 275.5 H580 A12.5 12.5 0 0 1 592.5 288 V312 A12.5 12.5 0 0 1 580 324.5 H556 A12.5 12.5 0 0 1 543.5 312 V288 A12.5 12.5 0 0 1 556 275.5 Z" fill="none" stroke="#fff" stroke-width="1.4" stroke-opacity="0.3"/>
+  <g transform="translate(556 288) scale(1.08)" stroke="#fff" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M3 6.5A3 3 0 0 1 6 3.5h14a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-8l-6 5v-5a3 3 0 0 1-3-3Z"/></g>
+  <text x="610" y="294" font-family="Public Sans" font-size="12" font-weight="800" fill="#ff5a1f" letter-spacing="2.4">PULSE</text>
+  <text x="1058" y="294" font-family="Public Sans" font-size="12" font-weight="800" fill="#ff5a1f" text-anchor="end" letter-spacing="2">CRITICAL</text>
+  <text x="610" y="320" font-family="Public Sans" font-size="19" font-weight="800" fill="#fff8ea">Your post is exploding</text>
+  <text x="610" y="344" font-family="Public Sans" font-size="14" font-weight="500" fill="#ffad8f">18,402 reactions in 40 seconds</text>
+  <g>
+  <path d="M543 364 H1057 A3 3 0 0 1 1060 367 V367 A3 3 0 0 1 1057 370 H543 A3 3 0 0 1 540 367 V367 A3 3 0 0 1 543 364 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M543 364 H823 A3 3 0 0 1 826 367 V367 A3 3 0 0 1 823 370 H543 A3 3 0 0 1 540 367 V367 A3 3 0 0 1 543 364 Z" fill="url(#am0-t-pr)"/>
+
+</g>
+</g>
+
+<g filter="url(#am1-sh)">
+  <path d="M574 420 H1106 A14 14 0 0 1 1120 434 V542 A14 14 0 0 1 1106 556 H574 A14 14 0 0 1 560 542 V434 A14 14 0 0 1 574 420 Z" fill="url(#am1-pl)" stroke="#f5a623" stroke-width="1.6"/>
+  <path d="M573.5 421.5 H1106.5 A12 12 0 0 1 1118.5 433.5 V437.5 H561.5 V433.5 A12 12 0 0 1 573.5 421.5 Z" fill="#fff" opacity="0.07"/>
+  <path d="M566 438 v100" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+  <!-- icon slot -->
+  <path d="M596 444 H620 A14 14 0 0 1 634 458 V482 A14 14 0 0 1 620 496 H596 A14 14 0 0 1 582 482 V458 A14 14 0 0 1 596 444 Z" fill="url(#am1-ic)"/>
+  <path d="M596 445.5 H620 A12.5 12.5 0 0 1 632.5 458 V482 A12.5 12.5 0 0 1 620 494.5 H596 A12.5 12.5 0 0 1 583.5 482 V458 A12.5 12.5 0 0 1 596 445.5 Z" fill="none" stroke="#fff" stroke-width="1.4" stroke-opacity="0.3"/>
+  <g transform="translate(596 458) scale(1.08)" stroke="#fff" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3.5v18l15-9Z"/></g>
+  <text x="650" y="464" font-family="Public Sans" font-size="12" font-weight="800" fill="#f5a623" letter-spacing="2.4">WAVE</text>
+  
+  <text x="650" y="490" font-family="Public Sans" font-size="19" font-weight="800" fill="#fff8ea">New viral sound discovered</text>
+  <text x="650" y="514" font-family="Public Sans" font-size="14" font-weight="500" fill="#fad391">everyone is using it already</text>
+  <g>
+  <path d="M583 534 H1097 A3 3 0 0 1 1100 537 V537 A3 3 0 0 1 1097 540 H583 A3 3 0 0 1 580 537 V537 A3 3 0 0 1 583 534 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M583 534 H863 A3 3 0 0 1 866 537 V537 A3 3 0 0 1 863 540 H583 A3 3 0 0 1 580 537 V537 A3 3 0 0 1 583 534 Z" fill="url(#am1-t-pr)"/>
+
+</g>
+</g>
+
+<g filter="url(#am2-sh)">
+  <path d="M614 590 H1146 A14 14 0 0 1 1160 604 V712 A14 14 0 0 1 1146 726 H614 A14 14 0 0 1 600 712 V604 A14 14 0 0 1 614 590 Z" fill="url(#am2-pl)" stroke="#7d6b46" stroke-width="1.6"/>
+  <path d="M613.5 591.5 H1146.5 A12 12 0 0 1 1158.5 603.5 V607.5 H601.5 V603.5 A12 12 0 0 1 613.5 591.5 Z" fill="#fff" opacity="0.07"/>
+  <path d="M606 608 v100" stroke="#7d6b46" stroke-width="4" stroke-linecap="round"/>
+  <!-- icon slot -->
+  <path d="M636 614 H660 A14 14 0 0 1 674 628 V652 A14 14 0 0 1 660 666 H636 A14 14 0 0 1 622 652 V628 A14 14 0 0 1 636 614 Z" fill="url(#am2-ic)"/>
+  <path d="M636 615.5 H660 A12.5 12.5 0 0 1 672.5 628 V652 A12.5 12.5 0 0 1 660 664.5 H636 A12.5 12.5 0 0 1 623.5 652 V628 A12.5 12.5 0 0 1 636 615.5 Z" fill="none" stroke="#fff" stroke-width="1.4" stroke-opacity="0.3"/>
+  <g transform="translate(636 628) scale(1.08)" stroke="#fff" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M13 5v16M5 13h16"/></g>
+  <text x="690" y="634" font-family="Public Sans" font-size="12" font-weight="800" fill="#7d6b46" letter-spacing="2.4">ALERTS</text>
+  <text x="1138" y="634" font-family="Public Sans" font-size="12" font-weight="800" fill="#7d6b46" text-anchor="end" letter-spacing="2">LOW</text>
+  <text x="690" y="660" font-family="Public Sans" font-size="19" font-weight="800" fill="#8b939e">Storage almost full</text>
+  <text x="690" y="684" font-family="Public Sans" font-size="14" font-weight="500" fill="#5c636d">you have 9,000 saved clips you will never watch</text>
+  <g>
+  <path d="M623 704 H1137 A3 3 0 0 1 1140 707 V707 A3 3 0 0 1 1137 710 H623 A3 3 0 0 1 620 707 V707 A3 3 0 0 1 623 704 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M623 704 H903 A3 3 0 0 1 906 707 V707 A3 3 0 0 1 903 710 H623 A3 3 0 0 1 620 707 V707 A3 3 0 0 1 623 704 Z" fill="url(#am2-t-pr)"/>
+
+</g>
+</g>
+<path d="M210 764 H1390" stroke="#f8c165" stroke-width="1.2" stroke-opacity="0.35"/>
+<g>
+  <circle cx="215" cy="795" r="4.5" fill="#f8c165"/>
+  <circle cx="215" cy="795" r="8.5" fill="none" stroke="#f8c165" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="236" y="800" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">CRITICAL — stronger stroke, outer glow, may shake the screen</text>
+</g>
+<g>
+  <circle cx="805" cy="795" r="4.5" fill="#f8c165"/>
+  <circle cx="805" cy="795" r="8.5" fill="none" stroke="#f8c165" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="826" y="800" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">NORMAL — standard urgency, most social and media alerts</text>
+</g>
+<g>
+  <circle cx="215" cy="827" r="4.5" fill="#f8c165"/>
+  <circle cx="215" cy="827" r="8.5" fill="none" stroke="#f8c165" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="236" y="832" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">LOW — spam and fake system noise, no Dopamine at all</text>
+</g>
+<g>
+  <circle cx="805" cy="827" r="4.5" fill="#f8c165"/>
+  <circle cx="805" cy="827" r="8.5" fill="none" stroke="#f8c165" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="826" y="832" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">Every Alert is an Attention Request with an expiry rail</text>
+</g>
+<text x="800" y="968" font-family="Public Sans" font-size="13" font-weight="500" fill="#4b535d" text-anchor="middle">#f5a623 to #ffce6a  ·  never a branded imitation of a real operating system</text>
+
+<g style="mix-blend-mode:normal">
+  <rect width="1600" height="1000" filter="url(#crt-noise)"/>
+  <rect width="1600" height="1000" fill="url(#crt-scan)"/>
+  <rect width="1600" height="1000" fill="url(#crt-aperture)"/>
+  <rect width="1600" height="1000" fill="url(#crt-glass)"/>
+  <rect width="1600" height="1000" fill="url(#crt-vig)"/>
+  <rect x="0.5" y="0.5" width="1599" height="999" rx="18" fill="none" stroke="#000" stroke-width="1.5" stroke-opacity="0.5"/>
+</g>
+</svg>

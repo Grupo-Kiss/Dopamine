@@ -1,10 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 128" role="img" aria-label="Soldier">
-  <rect x="28" y="8" width="40" height="28" rx="6" fill="#f5d0a9" stroke="#333" stroke-width="3"/>
-  <rect x="22" y="36" width="52" height="44" rx="4" fill="#5b8c3e" stroke="#333" stroke-width="3"/>
-  <rect x="18" y="40" width="12" height="36" fill="#5b8c3e" stroke="#333" stroke-width="2"/>
-  <rect x="66" y="40" width="12" height="36" fill="#5b8c3e" stroke="#333" stroke-width="2"/>
-  <rect x="30" y="80" width="14" height="36" fill="#3d3d3d" stroke="#333" stroke-width="2"/>
-  <rect x="52" y="80" width="14" height="36" fill="#3d3d3d" stroke="#333" stroke-width="2"/>
-  <rect x="34" y="4" width="28" height="10" fill="#2f5d2e" stroke="#333" stroke-width="2"/>
-  <circle cx="40" cy="20" r="3" fill="#222"/><circle cx="56" cy="20" r="3" fill="#222"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="200" viewBox="0 0 160 200" role="img" aria-label="Lane Defender player soldier">
+<title>Lane Defender player soldier</title>
+<defs>
+<linearGradient id="cd-fx-hot" x1="0" y1="0" x2="0.4" y2="1">
+  <stop offset="0" stop-color="#ffc24a"/>
+  <stop offset="0.5" stop-color="#ff8c00"/>
+  <stop offset="1" stop-color="#d14a00"/>
+</linearGradient>
+<linearGradient id="cd-fx-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+  <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.26"/>
+</linearGradient>
+<filter id="cd-c-cast" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#05070a" flood-opacity="0.55"/>
+</filter>
+<radialGradient id="cd-c-contact" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#000" stop-opacity="0.62"/>
+  <stop offset="0.6" stop-color="#000" stop-opacity="0.22"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="cd-c-soldier-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#9ccc65"/>
+  <stop offset="0.5" stop-color="#6f9a4a"/>
+  <stop offset="1" stop-color="#41632b"/>
+</linearGradient>
+<linearGradient id="cd-c-soldier-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-soldier-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-skin-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#fbe2c2"/>
+  <stop offset="0.5" stop-color="#f0c79a"/>
+  <stop offset="1" stop-color="#c89a6c"/>
+</linearGradient>
+<linearGradient id="cd-c-skin-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-skin-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-gear-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#5d697b"/>
+  <stop offset="0.5" stop-color="#3b4350"/>
+  <stop offset="1" stop-color="#242a34"/>
+</linearGradient>
+<linearGradient id="cd-c-gear-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-gear-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-steel-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#cfdcea"/>
+  <stop offset="0.5" stop-color="#8fa3bb"/>
+  <stop offset="1" stop-color="#596878"/>
+</linearGradient>
+<linearGradient id="cd-c-steel-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-steel-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-mob-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#86f0e6"/>
+  <stop offset="0.5" stop-color="#36cfc0"/>
+  <stop offset="1" stop-color="#1b7b73"/>
+</linearGradient>
+<linearGradient id="cd-c-mob-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-mob-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="cd-c-boss-print" x1="0.18" y1="0" x2="0.82" y2="1">
+  <stop offset="0" stop-color="#ffa78d"/>
+  <stop offset="0.5" stop-color="#ff6b4a"/>
+  <stop offset="1" stop-color="#9c2f17"/>
+</linearGradient>
+<linearGradient id="cd-c-boss-edge" x1="0" y1="0" x2="0.3" y2="1">
+  <stop offset="0" stop-color="#f2e4c9"/>
+  <stop offset="1" stop-color="#cdbb98"/>
+</linearGradient>
+<linearGradient id="cd-c-boss-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+</linearGradient>
+</defs>
+
+<g filter="url(#cd-c-cast)">
+<ellipse cx="80" cy="190" rx="50" ry="12" fill="url(#cd-c-contact)"/>
+<path d="M62 146 H66 A10 10 0 0 1 76 156 V176 A10 10 0 0 1 66 186 H62 A10 10 0 0 1 52 176 V156 A10 10 0 0 1 62 146 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M62 146 H66 A10 10 0 0 1 76 156 V176 A10 10 0 0 1 66 186 H62 A10 10 0 0 1 52 176 V156 A10 10 0 0 1 62 146 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M62 146 H66 A10 10 0 0 1 76 156 V176 A10 10 0 0 1 66 186 H62 A10 10 0 0 1 52 176 V156 A10 10 0 0 1 62 146 Z" fill="url(#cd-c-gear-print)"/>
+<path d="M94 146 H98 A10 10 0 0 1 108 156 V176 A10 10 0 0 1 98 186 H94 A10 10 0 0 1 84 176 V156 A10 10 0 0 1 94 146 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M94 146 H98 A10 10 0 0 1 108 156 V176 A10 10 0 0 1 98 186 H94 A10 10 0 0 1 84 176 V156 A10 10 0 0 1 94 146 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M94 146 H98 A10 10 0 0 1 108 156 V176 A10 10 0 0 1 98 186 H94 A10 10 0 0 1 84 176 V156 A10 10 0 0 1 94 146 Z" fill="url(#cd-c-gear-print)"/>
+<g transform="rotate(-9 46 96)"><path d="M46.5 92 H46.5 A10.5 10.5 0 0 1 57 102.5 V133.5 A10.5 10.5 0 0 1 46.5 144 H46.5 A10.5 10.5 0 0 1 36 133.5 V102.5 A10.5 10.5 0 0 1 46.5 92 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M46.5 92 H46.5 A10.5 10.5 0 0 1 57 102.5 V133.5 A10.5 10.5 0 0 1 46.5 144 H46.5 A10.5 10.5 0 0 1 36 133.5 V102.5 A10.5 10.5 0 0 1 46.5 92 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M46.5 92 H46.5 A10.5 10.5 0 0 1 57 102.5 V133.5 A10.5 10.5 0 0 1 46.5 144 H46.5 A10.5 10.5 0 0 1 36 133.5 V102.5 A10.5 10.5 0 0 1 46.5 92 Z" fill="url(#cd-c-soldier-print)"/><path d="M46.5 92 H46.5 A10.5 10.5 0 0 1 57 102.5 V133.5 A10.5 10.5 0 0 1 46.5 144 H46.5 A10.5 10.5 0 0 1 36 133.5 V102.5 A10.5 10.5 0 0 1 46.5 92 Z" fill="url(#cd-c-soldier-sheen)"/></g>
+<path d="M50 92 C50 82 62 76 80 76 C98 76 110 82 110 92 L114 140 C114 150 100 154 80 154 C60 154 46 150 46 140 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 92 C50 82 62 76 80 76 C98 76 110 82 110 92 L114 140 C114 150 100 154 80 154 C60 154 46 150 46 140 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 92 C50 82 62 76 80 76 C98 76 110 82 110 92 L114 140 C114 150 100 154 80 154 C60 154 46 150 46 140 Z" fill="url(#cd-c-soldier-print)"/><path d="M50 92 C50 82 62 76 80 76 C98 76 110 82 110 92 L114 140 C114 150 100 154 80 154 C60 154 46 150 46 140 Z" fill="url(#cd-c-soldier-sheen)"/><path d="M54 88 L74 152 L62 152 L46 104 Z" fill="#2f5d2e" opacity="0.5"/><path d="M106 88 L86 152 L98 152 L114 104 Z" fill="#2f5d2e" opacity="0.4"/><path d="M72 108.76 H88 A7 7 0 0 1 95 115.76 V125.76 A7 7 0 0 1 88 132.76 H72 A7 7 0 0 1 65 125.76 V115.76 A7 7 0 0 1 72 108.76 Z" fill="#f5d14a"/><path d="M72 108.76 H88 A7 7 0 0 1 95 115.76 V125.76 A7 7 0 0 1 88 132.76 H72 A7 7 0 0 1 65 125.76 V115.76 A7 7 0 0 1 72 108.76 Z" fill="url(#cd-fx-sheen)" opacity="0.45"/><path d="M72 108.76 H88 A7 7 0 0 1 95 115.76 V125.76 A7 7 0 0 1 88 132.76 H72 A7 7 0 0 1 65 125.76 V115.76 A7 7 0 0 1 72 108.76 Z" fill="none" stroke="#1d2430" stroke-width="2.6"/><path d="M73 120.75999999999999 l6 6 l9 -12" fill="none" stroke="#3b2a05" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="rotate(16 114 94)"><path d="M114.5 90 H114.5 A10.5 10.5 0 0 1 125 100.5 V129.5 A10.5 10.5 0 0 1 114.5 140 H114.5 A10.5 10.5 0 0 1 104 129.5 V100.5 A10.5 10.5 0 0 1 114.5 90 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M114.5 90 H114.5 A10.5 10.5 0 0 1 125 100.5 V129.5 A10.5 10.5 0 0 1 114.5 140 H114.5 A10.5 10.5 0 0 1 104 129.5 V100.5 A10.5 10.5 0 0 1 114.5 90 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M114.5 90 H114.5 A10.5 10.5 0 0 1 125 100.5 V129.5 A10.5 10.5 0 0 1 114.5 140 H114.5 A10.5 10.5 0 0 1 104 129.5 V100.5 A10.5 10.5 0 0 1 114.5 90 Z" fill="url(#cd-c-soldier-print)"/><path d="M114.5 90 H114.5 A10.5 10.5 0 0 1 125 100.5 V129.5 A10.5 10.5 0 0 1 114.5 140 H114.5 A10.5 10.5 0 0 1 104 129.5 V100.5 A10.5 10.5 0 0 1 114.5 90 Z" fill="url(#cd-c-soldier-sheen)"/></g>
+<path d="M69 28 H91 A17 17 0 0 1 108 45 V61 A17 17 0 0 1 91 78 H69 A17 17 0 0 1 52 61 V45 A17 17 0 0 1 69 28 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M69 28 H91 A17 17 0 0 1 108 45 V61 A17 17 0 0 1 91 78 H69 A17 17 0 0 1 52 61 V45 A17 17 0 0 1 69 28 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M69 28 H91 A17 17 0 0 1 108 45 V61 A17 17 0 0 1 91 78 H69 A17 17 0 0 1 52 61 V45 A17 17 0 0 1 69 28 Z" fill="url(#cd-c-skin-print)"/><path d="M69 28 H91 A17 17 0 0 1 108 45 V61 A17 17 0 0 1 91 78 H69 A17 17 0 0 1 52 61 V45 A17 17 0 0 1 69 28 Z" fill="url(#cd-c-skin-sheen)"/><g>
+  <ellipse cx="68" cy="58" rx="8.5" ry="9.18" fill="#fdfdff"/>
+  <ellipse cx="68" cy="58" rx="8.5" ry="9.18" fill="none" stroke="#1d2430" stroke-width="2.55"/>
+  <circle cx="68" cy="58.68" r="3.74" fill="#141a24"/>
+  <circle cx="66.47" cy="56.47" r="1.36" fill="#fff" opacity="0.9"/>
+</g><g>
+  <ellipse cx="92" cy="58" rx="8.5" ry="9.18" fill="#fdfdff"/>
+  <ellipse cx="92" cy="58" rx="8.5" ry="9.18" fill="none" stroke="#1d2430" stroke-width="2.55"/>
+  <circle cx="92" cy="58.68" r="3.74" fill="#141a24"/>
+  <circle cx="90.47" cy="56.47" r="1.36" fill="#fff" opacity="0.9"/>
+</g><path d="M71 70 q9 7.5 18 0" fill="none" stroke="#1d2430" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M44 34 C44 11 60 2 80 2 C100 2 116 11 116 34 L116 37 L44 37 Z" fill="none" stroke="#1d2430" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M44 34 C44 11 60 2 80 2 C100 2 116 11 116 34 L116 37 L44 37 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M44 34 C44 11 60 2 80 2 C100 2 116 11 116 34 L116 37 L44 37 Z" fill="url(#cd-c-soldier-print)"/><path d="M44 34 C44 11 60 2 80 2 C100 2 116 11 116 34 L116 37 L44 37 Z" fill="url(#cd-c-soldier-sheen)"/><path d="M48 17 C61 8 99 8 112 17 L112 24 C97 15 63 15 48 24 Z" fill="#2f5d2e" opacity="0.7"/><path d="M44.5 32 H115.5 A6.5 6.5 0 0 1 122 38.5 V38.5 A6.5 6.5 0 0 1 115.5 45 H44.5 A6.5 6.5 0 0 1 38 38.5 V38.5 A6.5 6.5 0 0 1 44.5 32 Z" fill="none" stroke="#1d2430" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M44.5 32 H115.5 A6.5 6.5 0 0 1 122 38.5 V38.5 A6.5 6.5 0 0 1 115.5 45 H44.5 A6.5 6.5 0 0 1 38 38.5 V38.5 A6.5 6.5 0 0 1 44.5 32 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M44.5 32 H115.5 A6.5 6.5 0 0 1 122 38.5 V38.5 A6.5 6.5 0 0 1 115.5 45 H44.5 A6.5 6.5 0 0 1 38 38.5 V38.5 A6.5 6.5 0 0 1 44.5 32 Z" fill="url(#cd-c-gear-print)"/><path d="M44.8 34 H115.2 A1.8 1.8 0 0 1 117 35.8 V35.8 A1.8 1.8 0 0 1 115.2 37.6 H44.8 A1.8 1.8 0 0 1 43 35.8 V35.8 A1.8 1.8 0 0 1 44.8 34 Z" fill="#ffffff" opacity="0.2"/>
+<g transform="translate(109 66) rotate(14)"><path d="M2 32 H3 A7 7 0 0 1 10 39 V51 A7 7 0 0 1 3 58 H2 A7 7 0 0 1 -5 51 V39 A7 7 0 0 1 2 32 Z" fill="none" stroke="#1d2430" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M2 32 H3 A7 7 0 0 1 10 39 V51 A7 7 0 0 1 3 58 H2 A7 7 0 0 1 -5 51 V39 A7 7 0 0 1 2 32 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="3.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M2 32 H3 A7 7 0 0 1 10 39 V51 A7 7 0 0 1 3 58 H2 A7 7 0 0 1 -5 51 V39 A7 7 0 0 1 2 32 Z" fill="url(#cd-c-gear-print)"/><path d="M12 -50 H13 A6 6 0 0 1 19 -44 V6 A6 6 0 0 1 13 12 H12 A6 6 0 0 1 6 6 V-44 A6 6 0 0 1 12 -50 Z" fill="none" stroke="#1d2430" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 -50 H13 A6 6 0 0 1 19 -44 V6 A6 6 0 0 1 13 12 H12 A6 6 0 0 1 6 6 V-44 A6 6 0 0 1 12 -50 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="3.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 -50 H13 A6 6 0 0 1 19 -44 V6 A6 6 0 0 1 13 12 H12 A6 6 0 0 1 6 6 V-44 A6 6 0 0 1 12 -50 Z" fill="url(#cd-c-steel-print)"/><path d="M12 -50 H13 A6 6 0 0 1 19 -44 V6 A6 6 0 0 1 13 12 H12 A6 6 0 0 1 6 6 V-44 A6 6 0 0 1 12 -50 Z" fill="url(#cd-c-steel-sheen)"/><path d="M10.7 -44 H10.8 A2.2 2.2 0 0 1 13 -41.8 V3.8 A2.2 2.2 0 0 1 10.8 6 H10.7 A2.2 2.2 0 0 1 8.5 3.8 V-41.8 A2.2 2.2 0 0 1 10.7 -44 Z" fill="#ffffff" opacity="0.3"/><path d="M5 4 H16 A9 9 0 0 1 25 13 V29 A9 9 0 0 1 16 38 H5 A9 9 0 0 1 -4 29 V13 A9 9 0 0 1 5 4 Z" fill="none" stroke="#1d2430" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path d="M5 4 H16 A9 9 0 0 1 25 13 V29 A9 9 0 0 1 16 38 H5 A9 9 0 0 1 -4 29 V13 A9 9 0 0 1 5 4 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M5 4 H16 A9 9 0 0 1 25 13 V29 A9 9 0 0 1 16 38 H5 A9 9 0 0 1 -4 29 V13 A9 9 0 0 1 5 4 Z" fill="url(#cd-c-steel-print)"/><path d="M5 4 H16 A9 9 0 0 1 25 13 V29 A9 9 0 0 1 16 38 H5 A9 9 0 0 1 -4 29 V13 A9 9 0 0 1 5 4 Z" fill="url(#cd-c-steel-sheen)"/><path d="M4.5 10 H4.5 A3.5 3.5 0 0 1 8 13.5 V28.5 A3.5 3.5 0 0 1 4.5 32 H4.5 A3.5 3.5 0 0 1 1 28.5 V13.5 A3.5 3.5 0 0 1 4.5 10 Z" fill="#ffffff" opacity="0.22"/><path d="M17.5 12 H18.5 A3.5 3.5 0 0 1 22 15.5 V26.5 A3.5 3.5 0 0 1 18.5 30 H17.5 A3.5 3.5 0 0 1 14 26.5 V15.5 A3.5 3.5 0 0 1 17.5 12 Z" fill="#000000" opacity="0.16"/><path d="M10 -4 H15 A3 3 0 0 1 18 -1 V2 A3 3 0 0 1 15 5 H10 A3 3 0 0 1 7 2 V-1 A3 3 0 0 1 10 -4 Z" fill="none" stroke="#1d2430" stroke-width="5.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 -4 H15 A3 3 0 0 1 18 -1 V2 A3 3 0 0 1 15 5 H10 A3 3 0 0 1 7 2 V-1 A3 3 0 0 1 10 -4 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 -4 H15 A3 3 0 0 1 18 -1 V2 A3 3 0 0 1 15 5 H10 A3 3 0 0 1 7 2 V-1 A3 3 0 0 1 10 -4 Z" fill="url(#cd-c-gear-print)"/><path d="M7 -60 H18 A6 6 0 0 1 24 -54 V-53 A6 6 0 0 1 18 -47 H7 A6 6 0 0 1 1 -53 V-54 A6 6 0 0 1 7 -60 Z" fill="none" stroke="#1d2430" stroke-width="6.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M7 -60 H18 A6 6 0 0 1 24 -54 V-53 A6 6 0 0 1 18 -47 H7 A6 6 0 0 1 1 -53 V-54 A6 6 0 0 1 7 -60 Z" fill="none" stroke="url(#cd-c-soldier-edge)" stroke-width="3.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M7 -60 H18 A6 6 0 0 1 24 -54 V-53 A6 6 0 0 1 18 -47 H7 A6 6 0 0 1 1 -53 V-54 A6 6 0 0 1 7 -60 Z" fill="url(#cd-fx-hot)"/><path d="M8 -56 H17 A2.5 2.5 0 0 1 19.5 -53.5 V-53.5 A2.5 2.5 0 0 1 17 -51 H8 A2.5 2.5 0 0 1 5.5 -53.5 V-53.5 A2.5 2.5 0 0 1 8 -56 Z" fill="#fff3d6" opacity="0.65"/></g>
+</g>
 </svg>

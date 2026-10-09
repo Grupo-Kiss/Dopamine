@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="760" height="234" viewBox="0 0 760 234" role="img" aria-label="Burnout telegraph — APM nearing threshold">
+<title>Burnout telegraph — APM nearing threshold</title>
+<defs>
+
+<linearGradient id="btg-plate" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#2a0d06"/>
+  <stop offset="0.5" stop-color="#3d1207"/>
+  <stop offset="1" stop-color="#2a0d06"/>
+</linearGradient>
+<linearGradient id="btg-meter" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#ff8c00"/>
+  <stop offset="0.62" stop-color="#ff4d1a"/>
+  <stop offset="1" stop-color="#ff1f0a"/>
+</linearGradient>
+<filter id="btg-g" x="-60%" y="-160%" width="220%" height="420%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#05070a" flood-opacity="0.8"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#ff3b1f" flood-opacity="0.66"/>
+</filter>
+</defs>
+<rect width="760" height="234" fill="#0a0a0c"/>
+<g transform="translate(380 109)">
+<g transform="translate(0 0)">
+  <g filter="url(#btg-g)">
+    <path d="M-300 -52 H300 A10 10 0 0 1 310 -42 V42 A10 10 0 0 1 300 52 H-300 A10 10 0 0 1 -310 42 V-42 A10 10 0 0 1 -300 -52 Z" fill="url(#btg-plate)"/>
+    <path d="M-300 -52 H300 A10 10 0 0 1 310 -42 V42 A10 10 0 0 1 300 52 H-300 A10 10 0 0 1 -310 42 V-42 A10 10 0 0 1 -300 -52 Z" fill="none" stroke="#05070a" stroke-width="4.5"/>
+    <path d="M-299.5 -47.5 H299.5 A6 6 0 0 1 305.5 -41.5 V41.5 A6 6 0 0 1 299.5 47.5 H-299.5 A6 6 0 0 1 -305.5 41.5 V-41.5 A6 6 0 0 1 -299.5 -47.5 Z" fill="none" stroke="#ff5a2a" stroke-width="2"/>
+  </g>
+  <g transform="translate(0 -26)"><path d="M-270 -13 l13 13 l-13 13" fill="none" stroke="#ff8c00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/><path d="M-244 -13 l13 13 l-13 13" fill="none" stroke="#ff8c00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.51"/><path d="M-218 -13 l13 13 l-13 13" fill="none" stroke="#ff8c00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.67"/><path d="M-192 -13 l13 13 l-13 13" fill="none" stroke="#ff8c00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.83"/><path d="M-166 -13 l13 13 l-13 13" fill="none" stroke="#ff3b1f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.99"/></g>
+  <text x="-132" y="-17" font-family="Public Sans" font-size="21" font-weight="800" fill="#ffd9b0" letter-spacing="3.2">BURNOUT NEAR</text>
+  <g transform="translate(0 28)">
+    <path d="M-263 -7 H263 A7 7 0 0 1 270 0 V0 A7 7 0 0 1 263 7 H-263 A7 7 0 0 1 -270 0 V0 A7 7 0 0 1 -263 -7 Z" fill="#160604" stroke="#4a1a0c" stroke-width="1.4"/>
+    <path d="M-263 -4 H177.56 A4 4 0 0 1 181.56 0 V0 A4 4 0 0 1 177.56 4 H-263 A4 4 0 0 1 -267 0 V0 A4 4 0 0 1 -263 -4 Z" fill="url(#btg-meter)"/>
+    <text x="266" y="6" font-family="Public Sans" font-size="11" font-weight="800" fill="#c2703f" text-anchor="end" letter-spacing="2">APM</text>
+  </g>
+</g></g>
+<text x="380" y="208" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">Edge warning so the player can ease off or push into Burnout deliberately.</text>
+</svg>

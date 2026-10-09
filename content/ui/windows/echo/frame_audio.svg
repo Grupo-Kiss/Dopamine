@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="380" viewBox="0 0 640 380" role="img" aria-label="Echo audio frame">
+<title>Echo audio frame</title>
+<defs>
+
+<linearGradient id="ekcaudio-cv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2ee07a"/><stop offset="0.55" stop-color="#1aa35d"/><stop offset="1" stop-color="#0d7a4a"/></linearGradient>
+<clipPath id="ekcaudio-cvc"><path d="M30.8 54 H129.2 A10.8 10.8 0 0 1 140 64.8 V163.2 A10.8 10.8 0 0 1 129.2 174 H30.8 A10.8 10.8 0 0 1 20 163.2 V64.8 A10.8 10.8 0 0 1 30.8 54 Z"/></clipPath>
+<linearGradient id="eksaudio-pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff0033"/><stop offset="1" stop-color="#ff5c7a"/></linearGradient>
+<linearGradient id="ekbgaudio" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#20070f"/><stop offset="1" stop-color="#120409"/></linearGradient>
+</defs>
+<rect width="640" height="380" fill="#0a0d12"/>
+<path d="M14 0 H626 A14 14 0 0 1 640 14 V366 A14 14 0 0 1 626 380 H14 A14 14 0 0 1 0 366 V14 A14 14 0 0 1 14 0 Z" fill="url(#ekbgaudio)" stroke="#730017" stroke-width="1.6"/>
+<path d="M14 0 H626 A14 14 0 0 1 640 14 V34 H0 V14 A14 14 0 0 1 14 0 Z" fill="#1b0710"/>
+<text x="16" y="22" font-family="Teko" font-size="21" font-weight="600" fill="#ff0033" letter-spacing="3">ECHO</text>
+<text x="622" y="22" font-family="Public Sans" font-size="10" font-weight="700" fill="#8d5561" text-anchor="end" letter-spacing="1.6">PODCAST</text>
+<g clip-path="url(#ekcaudio-cvc)">
+  <rect x="20" y="54" width="120" height="120" fill="url(#ekcaudio-cv)"/>
+  <circle cx="80" cy="114" r="12" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.3"/><circle cx="80" cy="114" r="22.8" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.26"/><circle cx="80" cy="114" r="33.6" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.21"/><circle cx="80" cy="114" r="44.4" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.16"/><circle cx="80" cy="114" r="55.2" fill="none" stroke="#fff" stroke-width="2.16" stroke-opacity="0.12"/>
+  <path d="M38 145.18 H38 A6 6 0 0 1 44 151.18 V153.6 A6 6 0 0 1 38 159.6 H38 A6 6 0 0 1 32 153.6 V151.18 A6 6 0 0 1 38 145.18 Z" fill="#fff" opacity="0.14"/><path d="M53.84 140.43 H53.84 A6 6 0 0 1 59.84 146.43 V153.6 A6 6 0 0 1 53.84 159.6 H53.84 A6 6 0 0 1 47.84 153.6 V146.43 A6 6 0 0 1 53.84 140.43 Z" fill="#fff" opacity="0.21"/><path d="M69.68 117.48 H69.68 A6 6 0 0 1 75.68 123.48 V153.6 A6 6 0 0 1 69.68 159.6 H69.68 A6 6 0 0 1 63.68 153.6 V123.48 A6 6 0 0 1 69.68 117.48 Z" fill="#fff" opacity="0.28"/><path d="M85.52 133.45 H85.52 A6 6 0 0 1 91.52 139.45 V153.6 A6 6 0 0 1 85.52 159.6 H85.52 A6 6 0 0 1 79.52 153.6 V139.45 A6 6 0 0 1 85.52 133.45 Z" fill="#fff" opacity="0.27"/><path d="M101.36 115.99 H101.36 A6 6 0 0 1 107.36 121.99 V153.6 A6 6 0 0 1 101.36 159.6 H101.36 A6 6 0 0 1 95.36 153.6 V121.99 A6 6 0 0 1 101.36 115.99 Z" fill="#fff" opacity="0.25"/><path d="M117.2 92.91 H117.2 A6 6 0 0 1 123.2 98.91 V153.6 A6 6 0 0 1 117.2 159.6 H117.2 A6 6 0 0 1 111.2 153.6 V98.91 A6 6 0 0 1 117.2 92.91 Z" fill="#fff" opacity="0.13"/>
+  <path d="M20 128.4 q36 -26.4 66 6 t60 -7.2 V174 H20 Z" fill="#05070a" opacity="0.26"/>
+  <path d="M30.8 54 H129.2 A10.8 10.8 0 0 1 140 64.8 V163.2 A10.8 10.8 0 0 1 129.2 174 H30.8 A10.8 10.8 0 0 1 20 163.2 V64.8 A10.8 10.8 0 0 1 30.8 54 Z" fill="none" stroke="#05070a" stroke-width="2" stroke-opacity="0.55"/>
+</g>
+<text x="156" y="84" font-family="Public Sans" font-size="16" font-weight="800" fill="#ffe4ea">FOUR HOURS ON ONE TOPIC</text>
+<text x="156" y="108" font-family="Public Sans" font-size="14" font-weight="500" fill="#a5707e">The Long Explainer</text>
+<path d="M159.5 128 H602.5 A3.5 3.5 0 0 1 606 131.5 V131.5 A3.5 3.5 0 0 1 602.5 135 H159.5 A3.5 3.5 0 0 1 156 131.5 V131.5 A3.5 3.5 0 0 1 159.5 128 Z" fill="#ff5c7a" opacity="0.2"/><path d="M159.5 144 H428.97 A3.5 3.5 0 0 1 432.47 147.5 V147.5 A3.5 3.5 0 0 1 428.97 151 H159.5 A3.5 3.5 0 0 1 156 147.5 V147.5 A3.5 3.5 0 0 1 159.5 144 Z" fill="#ff5c7a" opacity="0.29"/>
+<g>
+  <path d="M24.5 210 H615.5 A4.5 4.5 0 0 1 620 214.5 V214.5 A4.5 4.5 0 0 1 615.5 219 H24.5 A4.5 4.5 0 0 1 20 214.5 V214.5 A4.5 4.5 0 0 1 24.5 210 Z" fill="#05070a" opacity="0.66"/>
+  <path d="M24.5 210 H291.5 A4.5 4.5 0 0 1 296 214.5 V214.5 A4.5 4.5 0 0 1 291.5 219 H24.5 A4.5 4.5 0 0 1 20 214.5 V214.5 A4.5 4.5 0 0 1 24.5 210 Z" fill="url(#eksaudio-pr)"/>
+  <circle cx="296" cy="214.5" r="8.55" fill="#fff"/>
+  <circle cx="296" cy="214.5" r="8.55" fill="none" stroke="#ff5c7a" stroke-width="2"/>
+</g>
+<text x="20" y="254" font-family="Public Sans" font-size="15" font-weight="700" fill="#ffd8e0">episode 214 — still no conclusion</text>
+<text x="20" y="278" font-family="Public Sans" font-size="12" font-weight="500" fill="#8d5561">continues while you look elsewhere</text>
+<text x="320" y="368" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">PODCAST CHROME</text>
+</svg>

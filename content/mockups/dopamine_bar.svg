@@ -1,21 +1,218 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" role="img" aria-label="Dopamine bar states">
-  <rect width="420" height="520" fill="#0a0a0c"/>
-  <text x="210" y="36" text-anchor="middle" font-family="Segoe UI" font-size="18" fill="#eee">Dopamine bar</text>
-  <!-- high -->
-  <text x="110" y="70" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#ffb347">HIGH</text>
-  <rect x="80" y="90" width="60" height="360" rx="14" fill="#1a1020" stroke="#ff8c00" stroke-width="2"/>
-  <rect x="88" y="120" width="44" height="320" rx="10" fill="#ff8c00"/>
-  <circle cx="110" cy="120" r="30" fill="#ff8c00" opacity="0.35"/>
-  <circle cx="110" cy="120" r="18" fill="#ffb347" opacity="0.5"/>
-  <text x="110" y="480" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#ff8c00">orange + glow</text>
-  <!-- mid -->
-  <text x="210" y="70" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#c77dff">MID</text>
-  <rect x="180" y="90" width="60" height="360" rx="14" fill="#1a1020" stroke="#9b5de5" stroke-width="2"/>
-  <rect x="188" y="250" width="44" height="190" rx="10" fill="#e07a3d"/>
-  <text x="210" y="480" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#c77dff">blend</text>
-  <!-- low -->
-  <text x="310" y="70" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7b2cbf">LOW</text>
-  <rect x="280" y="90" width="60" height="360" rx="14" fill="#1a1020" stroke="#5b1d8a" stroke-width="2"/>
-  <rect x="288" y="390" width="44" height="50" rx="10" fill="#7b2cbf"/>
-  <text x="310" y="480" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#7b2cbf">violet</text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1180" height="860" viewBox="0 0 1180 860" role="img" aria-label="Dopamine bar — full orange bloom through empty violet">
+<title>Dopamine bar — full orange bloom through empty violet</title>
+<defs>
+
+<linearGradient id="d0-track" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#05070a"/>
+  <stop offset="0.28" stop-color="#14181f"/>
+  <stop offset="0.72" stop-color="#101419"/>
+  <stop offset="1" stop-color="#05070a"/>
+</linearGradient>
+<linearGradient id="d0-fill" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#9f663a"/>
+  <stop offset="0.3" stop-color="#ffa843"/>
+  <stop offset="0.5" stop-color="#ffc683"/>
+  <stop offset="0.72" stop-color="#ffa843"/>
+  <stop offset="1" stop-color="#9f663a"/>
+</linearGradient>
+<linearGradient id="d0-fillv" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.12" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.24"/>
+</linearGradient>
+<linearGradient id="d0-shell" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#454e5a"/>
+  <stop offset="0.5" stop-color="#20262e"/>
+  <stop offset="1" stop-color="#454e5a"/>
+</linearGradient>
+<filter id="d0-bloom" x="-160%" y="-40%" width="420%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="20.93" flood-color="#ffa843" flood-opacity="0.88"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="53.32" flood-color="#ffa843" flood-opacity="0.49"/>
+</filter>
+
+<linearGradient id="d1-track" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#05070a"/>
+  <stop offset="0.28" stop-color="#14181f"/>
+  <stop offset="0.72" stop-color="#101419"/>
+  <stop offset="1" stop-color="#05070a"/>
+</linearGradient>
+<linearGradient id="d1-fill" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#944243"/>
+  <stop offset="0.3" stop-color="#ec6a52"/>
+  <stop offset="0.5" stop-color="#f29d8d"/>
+  <stop offset="0.72" stop-color="#ec6a52"/>
+  <stop offset="1" stop-color="#944243"/>
+</linearGradient>
+<linearGradient id="d1-fillv" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.12" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.24"/>
+</linearGradient>
+<linearGradient id="d1-shell" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#454e5a"/>
+  <stop offset="0.5" stop-color="#20262e"/>
+  <stop offset="1" stop-color="#454e5a"/>
+</linearGradient>
+<filter id="d1-bloom" x="-160%" y="-40%" width="420%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="15.15" flood-color="#ec6a52" flood-opacity="0.65"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="38.88" flood-color="#ec6a52" flood-opacity="0.35"/>
+</filter>
+
+<linearGradient id="d2-track" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#05070a"/>
+  <stop offset="0.28" stop-color="#14181f"/>
+  <stop offset="0.72" stop-color="#101419"/>
+  <stop offset="1" stop-color="#05070a"/>
+</linearGradient>
+<linearGradient id="d2-fill" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#732d69"/>
+  <stop offset="0.3" stop-color="#b44594"/>
+  <stop offset="0.5" stop-color="#ce84b8"/>
+  <stop offset="0.72" stop-color="#b44594"/>
+  <stop offset="1" stop-color="#732d69"/>
+</linearGradient>
+<linearGradient id="d2-fillv" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.12" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.24"/>
+</linearGradient>
+<linearGradient id="d2-shell" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#454e5a"/>
+  <stop offset="0.5" stop-color="#20262e"/>
+  <stop offset="1" stop-color="#454e5a"/>
+</linearGradient>
+<filter id="d2-bloom" x="-160%" y="-40%" width="420%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="10.92" flood-color="#b44594" flood-opacity="0.49"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="28.31" flood-color="#b44594" flood-opacity="0.24"/>
+</filter>
+
+<linearGradient id="d3-track" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#05070a"/>
+  <stop offset="0.28" stop-color="#14181f"/>
+  <stop offset="0.72" stop-color="#101419"/>
+  <stop offset="1" stop-color="#05070a"/>
+</linearGradient>
+<linearGradient id="d3-fill" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#59217d"/>
+  <stop offset="0.3" stop-color="#8631b7"/>
+  <stop offset="0.5" stop-color="#af77cf"/>
+  <stop offset="0.72" stop-color="#8631b7"/>
+  <stop offset="1" stop-color="#59217d"/>
+</linearGradient>
+<linearGradient id="d3-fillv" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.12" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.24"/>
+</linearGradient>
+<linearGradient id="d3-shell" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#454e5a"/>
+  <stop offset="0.5" stop-color="#20262e"/>
+  <stop offset="1" stop-color="#454e5a"/>
+</linearGradient>
+<filter id="d3-bloom" x="-160%" y="-40%" width="420%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="7.84" flood-color="#8631b7" flood-opacity="0.37"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="20.59" flood-color="#8631b7" flood-opacity="0.17"/>
+</filter>
+
+<linearGradient id="d4-track" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#05070a"/>
+  <stop offset="0.28" stop-color="#14181f"/>
+  <stop offset="0.72" stop-color="#101419"/>
+  <stop offset="1" stop-color="#05070a"/>
+</linearGradient>
+<linearGradient id="d4-fill" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#45186b"/>
+  <stop offset="0.3" stop-color="#642198"/>
+  <stop offset="0.5" stop-color="#996cbb"/>
+  <stop offset="0.72" stop-color="#642198"/>
+  <stop offset="1" stop-color="#45186b"/>
+</linearGradient>
+<linearGradient id="d4-fillv" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+  <stop offset="0.12" stop-color="#ffffff" stop-opacity="0.05"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.24"/>
+</linearGradient>
+<linearGradient id="d4-shell" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#454e5a"/>
+  <stop offset="0.5" stop-color="#20262e"/>
+  <stop offset="1" stop-color="#454e5a"/>
+</linearGradient>
+<filter id="d4-bloom" x="-160%" y="-40%" width="420%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="6.13" flood-color="#642198" flood-opacity="0.31"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="16.33" flood-color="#642198" flood-opacity="0.12"/>
+</filter>
+</defs>
+<rect width="1180" height="860" fill="#0a0a0c"/>
+<text x="60" y="62" font-family="Teko" font-size="46" font-weight="600" fill="#c9d1d9" letter-spacing="5">DOPAMINE BAR</text>
+<text x="60" y="92" font-family="Public Sans" font-size="15" font-weight="400" fill="#6e7681">Fill drives height and hue continuously. High pulses and blooms; low goes quiet and cold.</text>
+
+<g>
+  <path d="M151 150 H151 A31 31 0 0 1 182 181 V739 A31 31 0 0 1 151 770 H151 A31 31 0 0 1 120 739 V181 A31 31 0 0 1 151 150 Z" fill="url(#d0-shell)"/>
+  <path d="M151 152 H151 A29 29 0 0 1 180 181 V739 A29 29 0 0 1 151 768 H151 A29 29 0 0 1 122 739 V181 A29 29 0 0 1 151 152 Z" fill="url(#d0-track)"/>
+  <path d="M151 179.4 H151 A26 26 0 0 1 177 205.4 V739 A26 26 0 0 1 151 765 H151 A26 26 0 0 1 125 739 V205.4 A26 26 0 0 1 151 179.4 Z" fill="url(#d0-fill)" filter="url(#d0-bloom)"/>
+  <path d="M151 179.4 H151 A26 26 0 0 1 177 205.4 V739 A26 26 0 0 1 151 765 H151 A26 26 0 0 1 125 739 V205.4 A26 26 0 0 1 151 179.4 Z" fill="url(#d0-fillv)"/>
+  <path d="M130 180.4 H172 A4 4 0 0 1 176 184.4 V185.4 A4 4 0 0 1 172 189.4 H130 A4 4 0 0 1 126 185.4 V184.4 A4 4 0 0 1 130 180.4 Z" fill="#fff" opacity="0.77"/>
+  <path d="M138.6 216 H163.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M138.6 277 H163.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M138.6 338 H163.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M138.6 399 H163.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M138.6 460 H163.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M138.6 521 H163.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M138.6 582 H163.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M138.6 643 H163.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M138.6 704 H163.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/>
+  <path d="M151 151 H151 A30 30 0 0 1 181 181 V739 A30 30 0 0 1 151 769 H151 A30 30 0 0 1 121 739 V181 A30 30 0 0 1 151 151 Z" fill="none" stroke="#000" stroke-width="1.2" stroke-opacity="0.6"/>
+  <path d="M151.5 150.5 H150.5 A31 31 0 0 1 181.5 181.5 V738.5 A31 31 0 0 1 150.5 769.5 H151.5 A31 31 0 0 1 120.5 738.5 V181.5 A31 31 0 0 1 151.5 150.5 Z" fill="none" stroke="#5a636f" stroke-width="1" stroke-opacity="0.7"/>
+</g>
+<text x="151" y="132" font-family="Teko" font-size="30" font-weight="600" fill="#ffa843" text-anchor="middle" letter-spacing="2.4">FULL</text>
+<text x="151" y="808" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">orange</text>
+<text x="151" y="828" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">radioactive bloom</text>
+<text x="151" y="848" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">pulsating</text>
+
+<g>
+  <path d="M385.5 150 H385.5 A31 31 0 0 1 416.5 181 V739 A31 31 0 0 1 385.5 770 H385.5 A31 31 0 0 1 354.5 739 V181 A31 31 0 0 1 385.5 150 Z" fill="url(#d1-shell)"/>
+  <path d="M385.5 152 H385.5 A29 29 0 0 1 414.5 181 V739 A29 29 0 0 1 385.5 768 H385.5 A29 29 0 0 1 356.5 739 V181 A29 29 0 0 1 385.5 152 Z" fill="url(#d1-track)"/>
+  <path d="M385.5 325.8 H385.5 A26 26 0 0 1 411.5 351.8 V739 A26 26 0 0 1 385.5 765 H385.5 A26 26 0 0 1 359.5 739 V351.8 A26 26 0 0 1 385.5 325.8 Z" fill="url(#d1-fill)" filter="url(#d1-bloom)"/>
+  <path d="M385.5 325.8 H385.5 A26 26 0 0 1 411.5 351.8 V739 A26 26 0 0 1 385.5 765 H385.5 A26 26 0 0 1 359.5 739 V351.8 A26 26 0 0 1 385.5 325.8 Z" fill="url(#d1-fillv)"/>
+  <path d="M364.5 326.8 H406.5 A4 4 0 0 1 410.5 330.8 V331.8 A4 4 0 0 1 406.5 335.8 H364.5 A4 4 0 0 1 360.5 331.8 V330.8 A4 4 0 0 1 364.5 326.8 Z" fill="#fff" opacity="0.59"/>
+  <path d="M373.1 216 H397.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M373.1 277 H397.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M373.1 338 H397.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M373.1 399 H397.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M373.1 460 H397.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M373.1 521 H397.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M373.1 582 H397.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M373.1 643 H397.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M373.1 704 H397.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/>
+  <path d="M385.5 151 H385.5 A30 30 0 0 1 415.5 181 V739 A30 30 0 0 1 385.5 769 H385.5 A30 30 0 0 1 355.5 739 V181 A30 30 0 0 1 385.5 151 Z" fill="none" stroke="#000" stroke-width="1.2" stroke-opacity="0.6"/>
+  <path d="M386 150.5 H385 A31 31 0 0 1 416 181.5 V738.5 A31 31 0 0 1 385 769.5 H386 A31 31 0 0 1 355 738.5 V181.5 A31 31 0 0 1 386 150.5 Z" fill="none" stroke="#5a636f" stroke-width="1" stroke-opacity="0.7"/>
+</g>
+<text x="385.5" y="132" font-family="Teko" font-size="30" font-weight="600" fill="#ec6a52" text-anchor="middle" letter-spacing="2.4">72%</text>
+<text x="385.5" y="808" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">still hot</text>
+<text x="385.5" y="828" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">pulse easing off</text>
+
+<g>
+  <path d="M620 150 H620 A31 31 0 0 1 651 181 V739 A31 31 0 0 1 620 770 H620 A31 31 0 0 1 589 739 V181 A31 31 0 0 1 620 150 Z" fill="url(#d2-shell)"/>
+  <path d="M620 152 H620 A29 29 0 0 1 649 181 V739 A29 29 0 0 1 620 768 H620 A29 29 0 0 1 591 739 V181 A29 29 0 0 1 620 152 Z" fill="url(#d2-track)"/>
+  <path d="M620 460 H620 A26 26 0 0 1 646 486 V739 A26 26 0 0 1 620 765 H620 A26 26 0 0 1 594 739 V486 A26 26 0 0 1 620 460 Z" fill="url(#d2-fill)" filter="url(#d2-bloom)"/>
+  <path d="M620 460 H620 A26 26 0 0 1 646 486 V739 A26 26 0 0 1 620 765 H620 A26 26 0 0 1 594 739 V486 A26 26 0 0 1 620 460 Z" fill="url(#d2-fillv)"/>
+  <path d="M599 461 H641 A4 4 0 0 1 645 465 V466 A4 4 0 0 1 641 470 H599 A4 4 0 0 1 595 466 V465 A4 4 0 0 1 599 461 Z" fill="#fff" opacity="0.45"/>
+  <path d="M607.6 216 H632.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M607.6 277 H632.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M607.6 338 H632.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M607.6 399 H632.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M607.6 460 H632.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M607.6 521 H632.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M607.6 582 H632.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M607.6 643 H632.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M607.6 704 H632.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/>
+  <path d="M620 151 H620 A30 30 0 0 1 650 181 V739 A30 30 0 0 1 620 769 H620 A30 30 0 0 1 590 739 V181 A30 30 0 0 1 620 151 Z" fill="none" stroke="#000" stroke-width="1.2" stroke-opacity="0.6"/>
+  <path d="M620.5 150.5 H619.5 A31 31 0 0 1 650.5 181.5 V738.5 A31 31 0 0 1 619.5 769.5 H620.5 A31 31 0 0 1 589.5 738.5 V181.5 A31 31 0 0 1 620.5 150.5 Z" fill="none" stroke="#5a636f" stroke-width="1" stroke-opacity="0.7"/>
+</g>
+<text x="620" y="132" font-family="Teko" font-size="30" font-weight="600" fill="#b44594" text-anchor="middle" letter-spacing="2.4">MID</text>
+<text x="620" y="808" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">hue interpolates orange to violet</text>
+
+<g>
+  <path d="M854.5 150 H854.5 A31 31 0 0 1 885.5 181 V739 A31 31 0 0 1 854.5 770 H854.5 A31 31 0 0 1 823.5 739 V181 A31 31 0 0 1 854.5 150 Z" fill="url(#d3-shell)"/>
+  <path d="M854.5 152 H854.5 A29 29 0 0 1 883.5 181 V739 A29 29 0 0 1 854.5 768 H854.5 A29 29 0 0 1 825.5 739 V181 A29 29 0 0 1 854.5 152 Z" fill="url(#d3-track)"/>
+  <path d="M854.5 594.2 H854.5 A26 26 0 0 1 880.5 620.2 V739 A26 26 0 0 1 854.5 765 H854.5 A26 26 0 0 1 828.5 739 V620.2 A26 26 0 0 1 854.5 594.2 Z" fill="url(#d3-fill)" filter="url(#d3-bloom)"/>
+  <path d="M854.5 594.2 H854.5 A26 26 0 0 1 880.5 620.2 V739 A26 26 0 0 1 854.5 765 H854.5 A26 26 0 0 1 828.5 739 V620.2 A26 26 0 0 1 854.5 594.2 Z" fill="url(#d3-fillv)"/>
+  <path d="M833.5 595.2 H875.5 A4 4 0 0 1 879.5 599.2 V600.2 A4 4 0 0 1 875.5 604.2 H833.5 A4 4 0 0 1 829.5 600.2 V599.2 A4 4 0 0 1 833.5 595.2 Z" fill="#fff" opacity="0.36"/>
+  <path d="M842.1 216 H866.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M842.1 277 H866.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M842.1 338 H866.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M842.1 399 H866.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M842.1 460 H866.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M842.1 521 H866.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M842.1 582 H866.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M842.1 643 H866.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M842.1 704 H866.9" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/>
+  <path d="M854.5 151 H854.5 A30 30 0 0 1 884.5 181 V739 A30 30 0 0 1 854.5 769 H854.5 A30 30 0 0 1 824.5 739 V181 A30 30 0 0 1 854.5 151 Z" fill="none" stroke="#000" stroke-width="1.2" stroke-opacity="0.6"/>
+  <path d="M855 150.5 H854 A31 31 0 0 1 885 181.5 V738.5 A31 31 0 0 1 854 769.5 H855 A31 31 0 0 1 824 738.5 V181.5 A31 31 0 0 1 855 150.5 Z" fill="none" stroke="#5a636f" stroke-width="1" stroke-opacity="0.7"/>
+</g>
+<text x="854.5" y="132" font-family="Teko" font-size="30" font-weight="600" fill="#8631b7" text-anchor="middle" letter-spacing="2.4">28%</text>
+<text x="854.5" y="808" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">cooling</text>
+<text x="854.5" y="828" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">bloom shrinking</text>
+
+<g>
+  <path d="M1089 150 H1089 A31 31 0 0 1 1120 181 V739 A31 31 0 0 1 1089 770 H1089 A31 31 0 0 1 1058 739 V181 A31 31 0 0 1 1089 150 Z" fill="url(#d4-shell)"/>
+  <path d="M1089 152 H1089 A29 29 0 0 1 1118 181 V739 A29 29 0 0 1 1089 768 H1089 A29 29 0 0 1 1060 739 V181 A29 29 0 0 1 1089 152 Z" fill="url(#d4-track)"/>
+  <path d="M1089 713 H1089 A26 26 0 0 1 1115 739 V739 A26 26 0 0 1 1089 765 H1089 A26 26 0 0 1 1063 739 V739 A26 26 0 0 1 1089 713 Z" fill="url(#d4-fill)" filter="url(#d4-bloom)"/>
+  <path d="M1089 713 H1089 A26 26 0 0 1 1115 739 V739 A26 26 0 0 1 1089 765 H1089 A26 26 0 0 1 1063 739 V739 A26 26 0 0 1 1089 713 Z" fill="url(#d4-fillv)"/>
+  <path d="M1068 714 H1110 A4 4 0 0 1 1114 718 V719 A4 4 0 0 1 1110 723 H1068 A4 4 0 0 1 1064 719 V718 A4 4 0 0 1 1068 714 Z" fill="#fff" opacity="0.3"/>
+  <path d="M1076.6 216 H1101.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M1076.6 277 H1101.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M1076.6 338 H1101.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M1076.6 399 H1101.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M1076.6 460 H1101.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M1076.6 521 H1101.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M1076.6 582 H1101.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M1076.6 643 H1101.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/><path d="M1076.6 704 H1101.4" stroke="#000" stroke-width="1.3" stroke-opacity="0.34"/>
+  <path d="M1089 151 H1089 A30 30 0 0 1 1119 181 V739 A30 30 0 0 1 1089 769 H1089 A30 30 0 0 1 1059 739 V181 A30 30 0 0 1 1089 151 Z" fill="none" stroke="#000" stroke-width="1.2" stroke-opacity="0.6"/>
+  <path d="M1089.5 150.5 H1088.5 A31 31 0 0 1 1119.5 181.5 V738.5 A31 31 0 0 1 1088.5 769.5 H1089.5 A31 31 0 0 1 1058.5 738.5 V181.5 A31 31 0 0 1 1089.5 150.5 Z" fill="none" stroke="#5a636f" stroke-width="1" stroke-opacity="0.7"/>
+</g>
+<text x="1089" y="132" font-family="Teko" font-size="30" font-weight="600" fill="#642198" text-anchor="middle" letter-spacing="2.4">EMPTY</text>
+<text x="1089" y="808" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">violet</text>
+<text x="1089" y="828" font-family="Public Sans" font-size="13" font-weight="400" fill="#6e7681" text-anchor="middle">glow dead — Match ends at 0</text>
 </svg>

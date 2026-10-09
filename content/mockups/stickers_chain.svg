@@ -1,6 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" role="img" aria-label="Focus Chain sticker">
-  <rect width="640" height="240" fill="#0a0a0c"/>
-  <rect x="80" y="70" width="480" height="90" rx="12" fill="#111" stroke="#ffe566" stroke-width="4"/>
-  <text x="320" y="130" text-anchor="middle" font-family="Impact" font-size="48" fill="#ffe566" stroke="#000" stroke-width="2">CHAIN 8 · NICE SWITCH</text>
-  <text x="320" y="200" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#888">Balatro-energy pop · distinct from combo xN</text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="620" viewBox="0 0 900 620" role="img" aria-label="Focus Chain banner tiers">
+<title>Focus Chain banner tiers</title>
+<defs>
+
+<linearGradient id="mc1-plate" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1d2531"/>
+  <stop offset="0.5" stop-color="#11161d"/>
+  <stop offset="1" stop-color="#080b10"/>
+</linearGradient>
+<linearGradient id="mc1-edge" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#2f81f7"/>
+  <stop offset="0.5" stop-color="#79b8ff"/>
+  <stop offset="1" stop-color="#2f81f7"/>
+</linearGradient>
+<linearGradient id="mc1-num" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff"/>
+  <stop offset="0.5" stop-color="#79b8ff"/>
+  <stop offset="1" stop-color="#2f81f7"/>
+</linearGradient>
+<filter id="mc1-glow" x="-70%" y="-140%" width="240%" height="380%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#05070a" flood-opacity="0.8"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#2f81f7" flood-opacity="0.46"/>
+</filter>
+
+<linearGradient id="mc2-plate" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1d2531"/>
+  <stop offset="0.5" stop-color="#11161d"/>
+  <stop offset="1" stop-color="#080b10"/>
+</linearGradient>
+<linearGradient id="mc2-edge" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#6e40c9"/>
+  <stop offset="0.5" stop-color="#d4a9ff"/>
+  <stop offset="1" stop-color="#6e40c9"/>
+</linearGradient>
+<linearGradient id="mc2-num" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff"/>
+  <stop offset="0.5" stop-color="#d4a9ff"/>
+  <stop offset="1" stop-color="#6e40c9"/>
+</linearGradient>
+<filter id="mc2-glow" x="-70%" y="-140%" width="240%" height="380%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#05070a" flood-opacity="0.8"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#6e40c9" flood-opacity="0.62"/>
+</filter>
+
+<linearGradient id="mc3-plate" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1d2531"/>
+  <stop offset="0.5" stop-color="#11161d"/>
+  <stop offset="1" stop-color="#080b10"/>
+</linearGradient>
+<linearGradient id="mc3-edge" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#ff4d1a"/>
+  <stop offset="0.5" stop-color="#ffd24a"/>
+  <stop offset="1" stop-color="#ff4d1a"/>
+</linearGradient>
+<linearGradient id="mc3-num" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff"/>
+  <stop offset="0.5" stop-color="#ffd24a"/>
+  <stop offset="1" stop-color="#ff4d1a"/>
+</linearGradient>
+<filter id="mc3-glow" x="-70%" y="-140%" width="240%" height="380%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#05070a" flood-opacity="0.8"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="29" flood-color="#ff4d1a" flood-opacity="0.78"/>
+</filter>
+</defs>
+<rect width="900" height="620" fill="#0a0a0c"/>
+<text x="56" y="64" font-family="Teko" font-size="42" font-weight="600" fill="#c9d1d9" letter-spacing="4">FOCUS CHAIN BANNERS</text>
+<text x="56" y="94" font-family="Public Sans" font-size="14" font-weight="400" fill="#6e7681">Tiered arcade punch. Rewards timed switching across windows â€” not the same as Combo.</text>
+
+<g transform="translate(450 190) scale(1)">
+  <g filter="url(#mc1-glow)" transform="skewX(-9)">
+    <path d="M-135 -38 H135 A10 10 0 0 1 145 -28 V28 A10 10 0 0 1 135 38 H-135 A10 10 0 0 1 -145 28 V-28 A10 10 0 0 1 -135 -38 Z" fill="url(#mc1-plate)"/>
+    <path d="M-135 -38 H135 A10 10 0 0 1 145 -28 V28 A10 10 0 0 1 135 38 H-135 A10 10 0 0 1 -145 28 V-28 A10 10 0 0 1 -135 -38 Z" fill="none" stroke="#05070a" stroke-width="5"/>
+    <path d="M-134 -33 H134 A6 6 0 0 1 140 -27 V27 A6 6 0 0 1 134 33 H-134 A6 6 0 0 1 -140 27 V-27 A6 6 0 0 1 -134 -33 Z" fill="none" stroke="url(#mc1-edge)" stroke-width="2.1"/>
+    <path d="M-140 33 H140" stroke="url(#mc1-edge)" stroke-width="3" stroke-opacity="0.9"/>
+  </g>
+  <g transform="skewX(-9)">
+    <text x="-123" y="-12" font-family="Public Sans" font-size="14" font-weight="800" fill="#79b8ff" letter-spacing="3.64">FOCUS CHAIN</text>
+    <text x="-123" y="24" font-family="Teko" font-size="34" font-weight="600" fill="url(#mc1-num)" letter-spacing="1">x3</text>
+    <text x="123" y="22" font-family="Public Sans" font-size="12.04" font-weight="700" fill="#6e7681" text-anchor="end" letter-spacing="1.9600000000000002">KEEP MOVING</text>
+  </g>
+</g>
+
+<g transform="translate(450 330) scale(1)">
+  <g filter="url(#mc2-glow)" transform="skewX(-9)">
+    <path d="M-190 -50 H190 A10 10 0 0 1 200 -40 V40 A10 10 0 0 1 190 50 H-190 A10 10 0 0 1 -200 40 V-40 A10 10 0 0 1 -190 -50 Z" fill="url(#mc2-plate)"/>
+    <path d="M-190 -50 H190 A10 10 0 0 1 200 -40 V40 A10 10 0 0 1 190 50 H-190 A10 10 0 0 1 -200 40 V-40 A10 10 0 0 1 -190 -50 Z" fill="none" stroke="#05070a" stroke-width="5"/>
+    <path d="M-189 -45 H189 A6 6 0 0 1 195 -39 V39 A6 6 0 0 1 189 45 H-189 A6 6 0 0 1 -195 39 V-39 A6 6 0 0 1 -189 -45 Z" fill="none" stroke="url(#mc2-edge)" stroke-width="2.6"/>
+    <path d="M-195 45 H195" stroke="url(#mc2-edge)" stroke-width="4" stroke-opacity="0.9"/>
+  </g>
+  <g transform="skewX(-9)">
+    <text x="-178" y="-22" font-family="Public Sans" font-size="16" font-weight="800" fill="#d4a9ff" letter-spacing="4.16">FOCUS CHAIN</text>
+    <text x="-178" y="36" font-family="Teko" font-size="46" font-weight="600" fill="url(#mc2-num)" letter-spacing="1">x7</text>
+    <text x="178" y="34" font-family="Public Sans" font-size="13.76" font-weight="700" fill="#6e7681" text-anchor="end" letter-spacing="2.24">STAY SHARP</text>
+  </g>
+</g>
+
+<g transform="translate(450 470) scale(1)">
+  <g filter="url(#mc3-glow)" transform="skewX(-9)">
+    <path d="M-270 -68 H270 A10 10 0 0 1 280 -58 V58 A10 10 0 0 1 270 68 H-270 A10 10 0 0 1 -280 58 V-58 A10 10 0 0 1 -270 -68 Z" fill="url(#mc3-plate)"/>
+    <path d="M-270 -68 H270 A10 10 0 0 1 280 -58 V58 A10 10 0 0 1 270 68 H-270 A10 10 0 0 1 -280 58 V-58 A10 10 0 0 1 -270 -68 Z" fill="none" stroke="#05070a" stroke-width="5"/>
+    <path d="M-269 -63 H269 A6 6 0 0 1 275 -57 V57 A6 6 0 0 1 269 63 H-269 A6 6 0 0 1 -275 57 V-57 A6 6 0 0 1 -269 -63 Z" fill="none" stroke="url(#mc3-edge)" stroke-width="3.1"/>
+    <path d="M-275 63 H275" stroke="url(#mc3-edge)" stroke-width="5" stroke-opacity="0.9"/>
+  </g>
+  <g transform="skewX(-9)">
+    <text x="-258" y="-37" font-family="Public Sans" font-size="19" font-weight="800" fill="#ffd24a" letter-spacing="4.94">FOCUS CHAIN</text>
+    <text x="-258" y="54" font-family="Teko" font-size="64" font-weight="600" fill="url(#mc3-num)" letter-spacing="1">x14</text>
+    <text x="258" y="52" font-family="Public Sans" font-size="16.34" font-weight="700" fill="#6e7681" text-anchor="end" letter-spacing="2.66">UNBROKEN</text>
+  </g>
+</g>
+<text x="70" y="196" font-family="Public Sans" font-size="12" font-weight="800" fill="#4b535d" letter-spacing="2">TIER 1</text>
+<text x="70" y="336" font-family="Public Sans" font-size="12" font-weight="800" fill="#4b535d" letter-spacing="2">TIER 2</text>
+<text x="70" y="476" font-family="Public Sans" font-size="12" font-weight="800" fill="#4b535d" letter-spacing="2">TIER 3</text>
 </svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="Pulse Focus Ready / Attention">
+<title>Pulse Focus Ready / Attention</title>
+<defs>
+
+<linearGradient id="pkfs-sh" x1="0" y1="0" x2="1" y2="0.35">
+  <stop offset="0" stop-color="#79b8ff" stop-opacity="0"/>
+  <stop offset="0.38" stop-color="#ffffff" stop-opacity="0.5"/>
+  <stop offset="0.52" stop-color="#ffffff" stop-opacity="0.75"/>
+  <stop offset="0.66" stop-color="#79b8ff" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#79b8ff" stop-opacity="0"/>
+</linearGradient>
+<filter id="pkfs-shg" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#79b8ff" flood-opacity="0.8"/>
+</filter>
+</defs>
+<rect width="420" height="300" fill="#0a0d12"/>
+<path d="M38 34 H382 A14 14 0 0 1 396 48 V228 A14 14 0 0 1 382 242 H38 A14 14 0 0 1 24 228 V48 A14 14 0 0 1 38 34 Z" fill="#0f1a28" stroke="#1d2b3d" stroke-width="1.4"/>
+<g>
+  <path d="M38 34 H382 A14 14 0 0 1 396 48 V228 A14 14 0 0 1 382 242 H38 A14 14 0 0 1 24 228 V48 A14 14 0 0 1 38 34 Z" fill="none" stroke="url(#pkfs-sh)" stroke-width="3.2" filter="url(#pkfs-shg)"/>
+</g>
+<text x="210" y="264" font-family="Public Sans" font-size="12" font-weight="500" fill="#6e7681" text-anchor="middle">soft in-brand sheen after Reward Cooldown</text>
+<text x="210" y="288" font-family="Public Sans" font-size="10.5" font-weight="600" fill="#4b535d" text-anchor="middle" letter-spacing="1.6">FOCUS READY SHEEN</text>
+</svg>

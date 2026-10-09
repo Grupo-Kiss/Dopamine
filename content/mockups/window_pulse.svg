@@ -1,0 +1,360 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="907" viewBox="0 0 1600 907" role="img" aria-label="Pulse window chrome">
+<title>Pulse window chrome</title>
+<defs>
+
+<pattern id="st-grid" width="46" height="46" patternUnits="userSpaceOnUse">
+  <path d="M46 0 V46 M0 46 H46" fill="none" stroke="#8ea4c4" stroke-width="1" stroke-opacity="0.085"/>
+</pattern>
+<pattern id="st-grid-hot" width="46" height="46" patternUnits="userSpaceOnUse">
+  <path d="M46 0 V46 M0 46 H46" fill="none" stroke="#a371f7" stroke-width="1.35"/>
+</pattern>
+<radialGradient id="st-bloomA" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#c060ff" stop-opacity="0.66"/>
+  <stop offset="0.35" stop-color="#6e40c9" stop-opacity="0.34"/>
+  <stop offset="0.68" stop-color="#3a1a6e" stop-opacity="0.12"/>
+  <stop offset="1" stop-color="#1a0e33" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-bloomB" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ff4fd8" stop-opacity="0.5"/>
+  <stop offset="0.4" stop-color="#c9399b" stop-opacity="0.22"/>
+  <stop offset="1" stop-color="#3d0a33" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-bloomC" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#5f7bff" stop-opacity="0.34"/>
+  <stop offset="0.45" stop-color="#3b3fa8" stop-opacity="0.15"/>
+  <stop offset="1" stop-color="#101a3a" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-bloomD" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ff2d6f" stop-opacity="0.34"/>
+  <stop offset="0.45" stop-color="#8f1440" stop-opacity="0.14"/>
+  <stop offset="1" stop-color="#3d0a1f" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-core" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.2"/>
+  <stop offset="0.16" stop-color="#e6b6ff" stop-opacity="0.15"/>
+  <stop offset="0.45" stop-color="#a371f7" stop-opacity="0.10"/>
+  <stop offset="1" stop-color="#6e40c9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-ring0" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0.6" stop-color="#a371f7" stop-opacity="0"/>
+  <stop offset="0.82" stop-color="#a371f7" stop-opacity="0.16"/>
+  <stop offset="0.93" stop-color="#d9b3ff" stop-opacity="0.09"/>
+  <stop offset="1" stop-color="#6e40c9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-ring1" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0.66" stop-color="#c9399b" stop-opacity="0"/>
+  <stop offset="0.86" stop-color="#ff6fe0" stop-opacity="0.12"/>
+  <stop offset="1" stop-color="#c9399b" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="st-gridglow" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#fff" stop-opacity="0.5"/>
+  <stop offset="0.5" stop-color="#fff" stop-opacity="0.16"/>
+  <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</radialGradient>
+<mask id="st-gridmask" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="907">
+  <rect width="1600" height="907" fill="#000"/>
+  <ellipse cx="800" cy="417.22" rx="672" ry="362.8" fill="url(#st-gridglow)"/>
+  <ellipse cx="272" cy="671.18" rx="272" ry="181.4" fill="url(#st-gridglow)" opacity="0.6"/>
+  <ellipse cx="1376" cy="217.68" rx="240" ry="163.26" fill="url(#st-gridglow)" opacity="0.55"/>
+</mask>
+<linearGradient id="st-floor" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#0d1117"/>
+  <stop offset="0.55" stop-color="#0b0e14"/>
+  <stop offset="1" stop-color="#07090d"/>
+</linearGradient>
+<linearGradient id="st-streak" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#a371f7" stop-opacity="0"/>
+  <stop offset="0.5" stop-color="#e9d5ff" stop-opacity="1"/>
+  <stop offset="1" stop-color="#c9399b" stop-opacity="0"/>
+</linearGradient>
+
+<linearGradient id="ch-panel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1a212b"/>
+  <stop offset="0.45" stop-color="#161b22"/>
+  <stop offset="1" stop-color="#11161d"/>
+</linearGradient>
+<linearGradient id="ch-bar" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#232b36"/>
+  <stop offset="1" stop-color="#181f28"/>
+</linearGradient>
+<linearGradient id="ch-edge" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#454e5a"/>
+  <stop offset="0.5" stop-color="#30363d"/>
+  <stop offset="1" stop-color="#232a33"/>
+</linearGradient>
+<linearGradient id="ch-innertop" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.09"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="ch-drop" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#000" flood-opacity="0.66"/>
+</filter>
+<filter id="ch-vglow" x="-45%" y="-45%" width="190%" height="190%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#6e40c9" flood-opacity="0.5"/>
+</filter>
+<filter id="ch-vglow-strong" x="-55%" y="-55%" width="210%" height="210%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#a371f7" flood-opacity="1"/>
+  <feDropShadow dx="0" dy="0" stdDeviation="26" flood-color="#6e40c9" flood-opacity="0.85"/>
+</filter>
+
+<pattern id="crt-scan" width="4" height="3" patternUnits="userSpaceOnUse">
+  <rect width="4" height="1.5" fill="#000" opacity="0.1"/>
+</pattern>
+<pattern id="crt-aperture" width="3" height="3" patternUnits="userSpaceOnUse">
+  <rect width="1" height="3" fill="#ff2d2d" opacity="0.045"/>
+  <rect x="1" width="1" height="3" fill="#2dff7a" opacity="0.035"/>
+  <rect x="2" width="1" height="3" fill="#2d6cff" opacity="0.045"/>
+</pattern>
+<radialGradient id="crt-vig" cx="0.5" cy="0.48" r="0.72">
+  <stop offset="0" stop-color="#000" stop-opacity="0"/>
+  <stop offset="0.55" stop-color="#000" stop-opacity="0.06"/>
+  <stop offset="0.8" stop-color="#000" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0.82"/>
+</radialGradient>
+<radialGradient id="crt-glass" cx="0.28" cy="0.16" r="0.62">
+  <stop offset="0" stop-color="#cfe4ff" stop-opacity="0.075"/>
+  <stop offset="0.45" stop-color="#cfe4ff" stop-opacity="0.022"/>
+  <stop offset="1" stop-color="#cfe4ff" stop-opacity="0"/>
+</radialGradient>
+<filter id="crt-noise" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="9" stitchTiles="stitch" result="n"/>
+  <feColorMatrix type="saturate" values="0" in="n" result="g"/>
+  <feComponentTransfer in="g" result="c">
+    <feFuncA type="linear" slope="0.045" intercept="0"/>
+  </feComponentTransfer>
+</filter>
+
+
+<linearGradient id="ps-bg" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#0e1724"/><stop offset="1" stop-color="#0a1018"/></linearGradient>
+
+<linearGradient id="ps-cp-pb" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#9bcaff"/>
+  <stop offset="0.5" stop-color="#2f81f7"/>
+  <stop offset="1" stop-color="#2058a8"/>
+</linearGradient>
+
+<linearGradient id="ps-a1-av" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#79b8ff"/>
+  <stop offset="1" stop-color="#2f81f7"/>
+</linearGradient>
+<clipPath id="ps-a1-avc"><circle cx="54" cy="196" r="25"/></clipPath>
+
+<linearGradient id="ps-a2-av" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#8a95a3"/>
+  <stop offset="1" stop-color="#5b6675"/>
+</linearGradient>
+<clipPath id="ps-a2-avc"><circle cx="54" cy="344" r="25"/></clipPath>
+
+<linearGradient id="ps-fs-sh" x1="0" y1="0" x2="1" y2="0.35">
+  <stop offset="0" stop-color="#79b8ff" stop-opacity="0"/>
+  <stop offset="0.38" stop-color="#ffffff" stop-opacity="0.5"/>
+  <stop offset="0.52" stop-color="#ffffff" stop-opacity="0.75"/>
+  <stop offset="0.66" stop-color="#79b8ff" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#79b8ff" stop-opacity="0"/>
+</linearGradient>
+<filter id="ps-fs-shg" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#79b8ff" flood-opacity="0.8"/>
+</filter>
+<linearGradient id="ps-ad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241f14"/><stop offset="1" stop-color="#181410"/></linearGradient>
+
+<linearGradient id="ic-pulse-bar-g" x1="0.08" y1="0" x2="0.92" y2="1">
+  <stop offset="0" stop-color="#91c5ff"/>
+  <stop offset="0.42" stop-color="#2f81f7"/>
+  <stop offset="1" stop-color="#1b498b"/>
+</linearGradient>
+<linearGradient id="ic-pulse-bar-bevel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+  <stop offset="0.3" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="0.75" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
+</linearGradient>
+<radialGradient id="ic-pulse-bar-sheen" cx="0.3" cy="0.18" r="0.8">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.04"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<filter id="ic-pulse-bar-gs" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#0a1c33" flood-opacity="0.55"/>
+</filter>
+<clipPath id="fr-pulse"><path d="M210 200 H1390 V693.4 A14 14 0 0 1 1376 707.4 H224 A14 14 0 0 1 210 693.4 V200 Z"/></clipPath>
+</defs>
+
+<rect width="1600" height="907" fill="url(#st-floor)"/>
+<g opacity="0.52">
+  <!-- dominant centred collision bloom -->
+  <ellipse cx="800" cy="380.94" rx="864" ry="634.9" fill="url(#st-bloomA)"/>
+  <ellipse cx="800" cy="380.94" rx="480" ry="362.8" fill="url(#st-bloomB)" opacity="0.85"/>
+  <!-- outboard support blooms, pushed to the corners and kept quiet -->
+  <ellipse cx="64" cy="199.54" rx="384" ry="308.38" fill="url(#st-bloomB)" opacity="0.82"/>
+  <ellipse cx="1568" cy="780.02" rx="384" ry="308.38" fill="url(#st-bloomB)" opacity="0.7"/>
+  <ellipse cx="32" cy="743.74" rx="272" ry="235.82" fill="url(#st-bloomD)" opacity="0.7"/>
+  <ellipse cx="1376" cy="36.28" rx="384" ry="235.82" fill="url(#st-bloomC)" opacity="0.7"/>
+  <ellipse cx="96" cy="907" rx="352" ry="217.68" fill="url(#st-bloomC)" opacity="0.6"/>
+</g>
+<g mask="url(#st-gridmask)">
+  <rect width="1600" height="907" fill="url(#st-grid)"/>
+  <rect width="1600" height="907" fill="url(#st-grid-hot)" opacity="0.38"/>
+</g>
+<g><ellipse cx="800" cy="380.94" rx="367.34" ry="272.1" fill="url(#st-ring0)" opacity="0.28"/><ellipse cx="800" cy="380.94" rx="685.69" ry="507.92" fill="url(#st-ring1)" opacity="0.23"/><ellipse cx="800" cy="380.94" rx="1004.05" ry="743.74" fill="url(#st-ring0)" opacity="0.18"/><ellipse cx="800" cy="380.94" rx="1322.41" ry="979.56" fill="url(#st-ring1)" opacity="0.13"/></g>
+<ellipse cx="800" cy="380.94" rx="453.5" ry="453.5" fill="url(#st-core)" opacity="0.55"/>
+<rect x="1341.38" y="387.58" width="187.1" height="1.52" rx="1" transform="rotate(7.15 1341.38 387.58)" fill="url(#st-streak)" opacity="0.27"/><rect x="336.63" y="612.06" width="81.69" height="2.13" rx="1" transform="rotate(12.28 336.63 612.06)" fill="url(#st-streak)" opacity="0.47"/><rect x="1369.04" y="442.09" width="65.79" height="1.66" rx="1" transform="rotate(-0.94 1369.04 442.09)" fill="url(#st-streak)" opacity="0.37"/><rect x="765.82" y="78.61" width="85.53" height="1.66" rx="1" transform="rotate(-17.35 765.82 78.61)" fill="url(#st-streak)" opacity="0.41"/><rect x="1118.4" y="430.3" width="189.22" height="1.55" rx="1" transform="rotate(-26.96 1118.4 430.3)" fill="url(#st-streak)" opacity="0.32"/><rect x="749.81" y="598.1" width="45.35" height="1.1" rx="1" transform="rotate(-10.4 749.81 598.1)" fill="url(#st-streak)" opacity="0.39"/><rect x="1087.46" y="254.61" width="61.78" height="1.26" rx="1" transform="rotate(16.1 1087.46 254.61)" fill="url(#st-streak)" opacity="0.22"/><rect x="1063.39" y="239.88" width="158.18" height="1.08" rx="1" transform="rotate(10.71 1063.39 239.88)" fill="url(#st-streak)" opacity="0.48"/><rect x="1031.5" y="175.06" width="52.32" height="1.34" rx="1" transform="rotate(-10.68 1031.5 175.06)" fill="url(#st-streak)" opacity="0.42"/>
+
+<text x="800" y="92" font-family="Teko" font-size="62" font-weight="600" fill="#63a1f9" text-anchor="middle" letter-spacing="16">PULSE</text>
+<text x="800" y="122" font-family="Public Sans" font-size="16" font-weight="500" fill="#6e7681" text-anchor="middle">microblog — trends, outrage, validation, engagement farming</text>
+
+
+<g>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V693.4 A14 14 0 0 1 1376 707.4 H224 A14 14 0 0 1 210 693.4 V180 A14 14 0 0 1 224 166 Z" fill="#05070a" filter="url(#ch-drop)"/>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V693.4 A14 14 0 0 1 1376 707.4 H224 A14 14 0 0 1 210 693.4 V180 A14 14 0 0 1 224 166 Z" fill="none" stroke="#2f81f7" stroke-width="3" filter="url(#ch-vglow-strong)"/>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V693.4 A14 14 0 0 1 1376 707.4 H224 A14 14 0 0 1 210 693.4 V180 A14 14 0 0 1 224 166 Z" fill="url(#ch-panel)"/>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V214 H210 V180 A14 14 0 0 1 224 166 Z" fill="url(#ch-bar)"/>
+  <path d="M224 166 H1376 A14 14 0 0 1 1390 180 V200 H210 V180 A14 14 0 0 1 224 166 Z" fill="url(#ch-bar)"/>
+  <path d="M210.5 200 H1389.5" stroke="#0b0f14" stroke-width="1"/>
+  <path d="M210.5 201 H1389.5" stroke="#39414d" stroke-width="0.8" stroke-opacity="0.5"/>
+  <path d="M224 167 H1376 A13 13 0 0 1 1389 180 V179 H211 V180 A13 13 0 0 1 224 167 Z" fill="url(#ch-innertop)"/>
+
+<text x="800" y="187.5" font-family="Public Sans" font-size="12.5" font-weight="500" fill="#78adfa" text-anchor="middle" letter-spacing="0.6">pulse</text>
+<g transform="translate(222 173) scale(0.16)">
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#ic-pulse-bar-g)"/>
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#ic-pulse-bar-sheen)"/>
+<path d="M28 2.2 H100 A25.8 25.8 0 0 1 125.8 28 V100 A25.8 25.8 0 0 1 100 125.8 H28 A25.8 25.8 0 0 1 2.2 100 V28 A25.8 25.8 0 0 1 28 2.2 Z" fill="none" stroke="url(#ic-pulse-bar-bevel)" stroke-width="3"/>
+<g filter="url(#ic-pulse-bar-gs)">
+<path d="M24 40a14 14 0 0 1 14-14h44a14 14 0 0 1 14 14v26a14 14 0 0 1-14 14H56L34 100V80h-4a6 6 0 0 1-6-6Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+<path d="M44 46h32M44 62h20" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+<circle cx="94" cy="92" r="14" fill="#fff" fill-opacity="0.2"/>
+<circle cx="94" cy="92" r="14" fill="none" stroke="#fff" stroke-width="7"/></g>
+<path d="M28 0.7 H100 A27.3 27.3 0 0 1 127.3 28 V100 A27.3 27.3 0 0 1 100 127.3 H28 A27.3 27.3 0 0 1 0.7 100 V28 A27.3 27.3 0 0 1 28 0.7 Z" fill="none" stroke="#0a1c33" stroke-width="1.4" stroke-opacity="0.55"/></g><g stroke="#2056a4" stroke-width="1.6" fill="none" stroke-linecap="round">
+  <path d="M1330 183 h10"/>
+  <rect x="1346" y="178" width="10" height="10" rx="2"/>
+  <path d="M1367 178 l10 10 M1377 178 l-10 10"/>
+</g>
+  <path d="M224 166.7 H1376 A13.3 13.3 0 0 1 1389.3 180 V693.4 A13.3 13.3 0 0 1 1376 706.7 H224 A13.3 13.3 0 0 1 210.7 693.4 V180 A13.3 13.3 0 0 1 224 166.7 Z" fill="none" stroke="#2f81f7" stroke-width="1.4"/>
+  <path d="M224 168 H1376 A12 12 0 0 1 1388 180 V693.4 A12 12 0 0 1 1376 705.4 H224 A12 12 0 0 1 212 693.4 V180 A12 12 0 0 1 224 168 Z" fill="none" stroke="#000" stroke-width="1" stroke-opacity="0.35"/>
+</g>
+<g clip-path="url(#fr-pulse)">
+  <g transform="translate(210 200) scale(1.18)">
+<rect width="1000" height="430" fill="url(#ps-bg)"/>
+<g>
+  <path d="M22 21.24 v19.8" stroke="#2f81f7" stroke-width="4" stroke-linecap="round"/>
+  <text x="36" y="36" font-family="Teko" font-size="24.3" font-weight="600" fill="#2f81f7" letter-spacing="2.88">PULSE</text>
+  <text x="36" y="53.64" font-family="Public Sans" font-size="10.799999999999999" font-weight="600" fill="#6e7681" letter-spacing="1.2">EVERYONE IS WRONG, LOUDLY</text>
+</g>
+
+<!-- compose -->
+<path d="M34 66 H630 A12 12 0 0 1 642 78 V118 A12 12 0 0 1 630 130 H34 A12 12 0 0 1 22 118 V78 A12 12 0 0 1 34 66 Z" fill="#101a27" stroke="#153a6f" stroke-width="1.4"/>
+<text x="42" y="94" font-family="Public Sans" font-size="17" font-weight="500" fill="#5b6675">say something people will hate</text>
+<text x="42" y="116" font-family="Public Sans" font-size="12" font-weight="600" fill="#3f4a58" letter-spacing="1">0 / 280</text>
+<g>
+  <path d="M530 78 H606 A20 20 0 0 1 626 98 V98 A20 20 0 0 1 606 118 H530 A20 20 0 0 1 510 98 V98 A20 20 0 0 1 530 78 Z" fill="url(#ps-cp-pb)"/>
+  <path d="M532 80 H604 A20 20 0 0 1 624 100 V97.6 H512 V100 A20 20 0 0 1 532 80 Z" fill="#fff" opacity="0.2"/>
+  <path d="M530 78 H606 A20 20 0 0 1 626 98 V98 A20 20 0 0 1 606 118 H530 A20 20 0 0 1 510 98 V98 A20 20 0 0 1 530 78 Z" fill="none" stroke="#18417c" stroke-width="1.4"/>
+  <text x="568" y="104.05" font-family="Public Sans" font-size="16.8" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="1.6800000000000002">PUBLISH</text>
+</g>
+
+<!-- post card -->
+<path d="M34 146 H630 A12 12 0 0 1 642 158 V258 A12 12 0 0 1 630 270 H34 A12 12 0 0 1 22 258 V158 A12 12 0 0 1 34 146 Z" fill="#0f1a28" stroke="#1d2b3d" stroke-width="1.4"/>
+
+<g>
+  <circle cx="54" cy="196" r="25" fill="url(#ps-a1-av)"/>
+  <g clip-path="url(#ps-a1-avc)">
+    <circle cx="54" cy="191.5" r="8.5" fill="#fff" opacity="0.88"/>
+    <path d="M37.5 221 a16.5 13 0 0 1 33 0 Z" fill="#fff" opacity="0.88"/>
+  </g>
+  <circle cx="54" cy="196" r="25" fill="none" stroke="#05070a" stroke-width="2.25" stroke-opacity="0.6"/>
+  <circle cx="54" cy="196" r="23.5" fill="none" stroke="#fff" stroke-width="1.2" stroke-opacity="0.3"/>
+</g>
+<text x="92" y="186" font-family="Public Sans" font-size="16" font-weight="800" fill="#e6edf5">Hot Take Machine</text>
+<text x="258" y="186" font-family="Public Sans" font-size="14" font-weight="400" fill="#5b6675">@ratio_farmer · 2m</text>
+<text x="92" y="212" font-family="Public Sans" font-size="15" font-weight="500" fill="#c4d2e2">nobody is talking about how everybody</text>
+<text x="92" y="232" font-family="Public Sans" font-size="15" font-weight="500" fill="#c4d2e2">is talking about this</text>
+<g transform="translate(98 242) scale(0.82)">
+  <g stroke="#79b8ff" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M13 23.5 4.6 15.4a5.6 5.6 0 1 1 8.4-7.3 5.6 5.6 0 1 1 8.4 7.3Z"/></g>
+  <text x="40" y="20" font-family="Public Sans" font-size="17" font-weight="700" fill="#8fa4bd">2.4K</text>
+</g><g transform="translate(208 242) scale(0.82)">
+  <g stroke="#79b8ff" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M5 9.5V8a3 3 0 0 1 3-3h10l-3.5-3.5M21 15.5V17a3 3 0 0 1-3 3H8l3.5 3.5"/></g>
+  <text x="40" y="20" font-family="Public Sans" font-size="17" font-weight="700" fill="#8fa4bd">806</text>
+</g><g transform="translate(318 242) scale(0.82)">
+  <g stroke="#79b8ff" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M3 6.5A3 3 0 0 1 6 3.5h14a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-8l-6 5v-5a3 3 0 0 1-3-3Z"/></g>
+  <text x="40" y="20" font-family="Public Sans" font-size="17" font-weight="700" fill="#8fa4bd">1.1K</text>
+</g>
+
+<!-- ad / spam card: visually identifiable as rewardable: false -->
+<path d="M34 288 H630 A12 12 0 0 1 642 300 V384 A12 12 0 0 1 630 396 H34 A12 12 0 0 1 22 384 V300 A12 12 0 0 1 34 288 Z" fill="url(#ps-ad)" stroke="#5a4a22" stroke-width="1.4"/>
+
+<g>
+  <circle cx="54" cy="344" r="25" fill="url(#ps-a2-av)"/>
+  <g clip-path="url(#ps-a2-avc)">
+    <circle cx="54" cy="339.5" r="8.5" fill="#fff" opacity="0.88"/>
+    <path d="M37.5 369 a16.5 13 0 0 1 33 0 Z" fill="#fff" opacity="0.88"/>
+  </g>
+  <circle cx="54" cy="344" r="25" fill="none" stroke="#05070a" stroke-width="2.25" stroke-opacity="0.6"/>
+  <circle cx="54" cy="344" r="23.5" fill="none" stroke="#fff" stroke-width="1.2" stroke-opacity="0.3"/>
+</g>
+<text x="92" y="330" font-family="Public Sans" font-size="16" font-weight="800" fill="#9a8c6e">A Brand That Loves You</text>
+<text x="92" y="356" font-family="Public Sans" font-size="15" font-weight="500" fill="#6e6350">buy the thing. the thing is good.</text>
+<g>
+  <path d="M538 300 H583.92 A12 12 0 0 1 595.92 312 V312 A12 12 0 0 1 583.92 324 H538 A12 12 0 0 1 526 312 V312 A12 12 0 0 1 538 300 Z" fill="#3a2f14" stroke="#6b5722" stroke-width="1.3"/>
+  <text x="560.96" y="316.2" font-family="Public Sans" font-size="12" font-weight="600" fill="#d8b75a" text-anchor="middle" letter-spacing="0.3">PROMOTED</text>
+</g>
+<text x="626" y="358" font-family="Public Sans" font-size="12" font-weight="800" fill="#6e6350" text-anchor="end" letter-spacing="1.6">NO REWARD</text>
+
+<!-- trends rail -->
+<path d="M678 66 H966 A12 12 0 0 1 978 78 V396 A12 12 0 0 1 966 408 H678 A12 12 0 0 1 666 396 V78 A12 12 0 0 1 678 66 Z" fill="#0c1420" stroke="#1b2735" stroke-width="1.4"/>
+<text x="682" y="96" font-family="Public Sans" font-size="13" font-weight="800" fill="#79b8ff" letter-spacing="2.4">TRENDING NOW</text>
+<g transform="translate(16 18)"><g>
+  <path d="M682 118 H777.4 A16 16 0 0 1 793.4 134 V134 A16 16 0 0 1 777.4 150 H682 A16 16 0 0 1 666 134 V134 A16 16 0 0 1 682 118 Z" fill="#101a27" stroke="#18417c" stroke-width="1.3"/>
+  <text x="729.7" y="139.25" font-family="Public Sans" font-size="15" font-weight="600" fill="#79b8ff" text-anchor="middle" letter-spacing="0.3">#TheDiscourse</text>
+</g>
+<text x="805.4" y="139" font-family="Public Sans" font-size="13" font-weight="500" fill="#5b6675">18.0K posts</text><g>
+  <path d="M682 162 H793 A16 16 0 0 1 809 178 V178 A16 16 0 0 1 793 194 H682 A16 16 0 0 1 666 178 V178 A16 16 0 0 1 682 162 Z" fill="#101a27" stroke="#18417c" stroke-width="1.3"/>
+  <text x="737.5" y="183.25" font-family="Public Sans" font-size="15" font-weight="600" fill="#79b8ff" text-anchor="middle" letter-spacing="0.3">#ObviouslyWrong</text>
+</g>
+<text x="821" y="183" font-family="Public Sans" font-size="13" font-weight="500" fill="#5b6675">13.1K posts</text><g>
+  <path d="M682 206 H754 A16 16 0 0 1 770 222 V222 A16 16 0 0 1 754 238 H682 A16 16 0 0 1 666 222 V222 A16 16 0 0 1 682 206 Z" fill="#101a27" stroke="#18417c" stroke-width="1.3"/>
+  <text x="718" y="227.25" font-family="Public Sans" font-size="15" font-weight="600" fill="#79b8ff" text-anchor="middle" letter-spacing="0.3">#DayRuined</text>
+</g>
+<text x="782" y="227" font-family="Public Sans" font-size="13" font-weight="500" fill="#5b6675">8.2K posts</text></g>
+<!-- mention event: a reason to leave and come back (defs/03) -->
+<path d="M692 264 H952 A10 10 0 0 1 962 274 V328 A10 10 0 0 1 952 338 H692 A10 10 0 0 1 682 328 V274 A10 10 0 0 1 692 264 Z" fill="#0d1f39" stroke="#2f81f7" stroke-width="1.6"/>
+<circle cx="704" cy="290" r="6" fill="#2f81f7"/>
+<text x="720" y="296" font-family="Public Sans" font-size="12" font-weight="800" fill="#cfe4ff" letter-spacing="1.4">SOMEONE REPLIED TO YOU</text>
+<text x="696" y="322" font-family="Public Sans" font-size="13" font-weight="500" fill="#94c6ff">your opinion is being challenged</text>
+<text x="682" y="376" font-family="Public Sans" font-size="13" font-weight="500" fill="#5b6675">Replies matching a live trend</text>
+<text x="682" y="394" font-family="Public Sans" font-size="13" font-weight="500" fill="#5b6675">earn far more engagement.</text>
+<g>
+  <path d="M32 62 H632 A14 14 0 0 1 646 76 V398 A14 14 0 0 1 632 412 H32 A14 14 0 0 1 18 398 V76 A14 14 0 0 1 32 62 Z" fill="none" stroke="url(#ps-fs-sh)" stroke-width="3.2" filter="url(#ps-fs-shg)"/>
+</g></g>
+</g>
+<path d="M224 166.7 H1376 A13.3 13.3 0 0 1 1389.3 180 V693.4 A13.3 13.3 0 0 1 1376 706.7 H224 A13.3 13.3 0 0 1 210.7 693.4 V180 A13.3 13.3 0 0 1 224 166.7 Z" fill="none" stroke="#2f81f7" stroke-width="1.6"/>
+<path d="M210 737 H1390" stroke="#6da7f9" stroke-width="1.2" stroke-opacity="0.35"/>
+<g>
+  <circle cx="215" cy="768" r="4.5" fill="#6da7f9"/>
+  <circle cx="215" cy="768" r="8.5" fill="none" stroke="#6da7f9" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="236" y="773" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">Compose box: the player types their own posts</text>
+</g>
+<g>
+  <circle cx="805" cy="768" r="4.5" fill="#6da7f9"/>
+  <circle cx="805" cy="768" r="8.5" fill="none" stroke="#6da7f9" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="826" y="773" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">Live trend chips raise the value of a matching reply</text>
+</g>
+<g>
+  <circle cx="215" cy="800" r="4.5" fill="#6da7f9"/>
+  <circle cx="215" cy="800" r="8.5" fill="none" stroke="#6da7f9" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="236" y="805" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">Promoted card is visibly rewardable: false</text>
+</g>
+<g>
+  <circle cx="805" cy="800" r="4.5" fill="#6da7f9"/>
+  <circle cx="805" cy="800" r="8.5" fill="none" stroke="#6da7f9" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="826" y="805" font-family="Public Sans" font-size="15" font-weight="500" fill="#c9d1d9">Focus Ready sheen on the feed after Reward Cooldown</text>
+</g>
+<text x="800" y="875" font-family="Public Sans" font-size="13" font-weight="500" fill="#4b535d" text-anchor="middle">#2f81f7 to #79b8ff  ·  fictional service — no real-platform chrome, logos or identifiable UI</text>
+
+<g style="mix-blend-mode:normal">
+  <rect width="1600" height="907" filter="url(#crt-noise)"/>
+  <rect width="1600" height="907" fill="url(#crt-scan)"/>
+  <rect width="1600" height="907" fill="url(#crt-aperture)"/>
+  <rect width="1600" height="907" fill="url(#crt-glass)"/>
+  <rect width="1600" height="907" fill="url(#crt-vig)"/>
+  <rect x="0.5" y="0.5" width="1599" height="906" rx="18" fill="none" stroke="#000" stroke-width="1.5" stroke-opacity="0.5"/>
+</g>
+</svg>

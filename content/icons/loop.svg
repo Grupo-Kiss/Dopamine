@@ -1,12 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Loop">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff4d6d"/>
-      <stop offset="100%" stop-color="#ff8fa3"/>
-    </linearGradient>
-  </defs>
-  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
-  <rect x="40" y="24" width="48" height="80" rx="12" fill="#fff" opacity="0.95"/>
-  <circle cx="64" cy="64" r="14" fill="none" stroke="#ff4d6d" stroke-width="6"/>
-  <path d="M74 54l12-4-4 12" fill="#ff4d6d"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Loop">
+<title>Loop</title>
+<defs>
+
+<linearGradient id="i-g" x1="0.08" y1="0" x2="0.92" y2="1">
+  <stop offset="0" stop-color="#ffa3b4"/>
+  <stop offset="0.42" stop-color="#ff4d6d"/>
+  <stop offset="1" stop-color="#9b2b42"/>
+</linearGradient>
+<linearGradient id="i-bevel" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+  <stop offset="0.3" stop-color="#ffffff" stop-opacity="0.06"/>
+  <stop offset="0.75" stop-color="#000000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
+</linearGradient>
+<radialGradient id="i-sheen" cx="0.3" cy="0.18" r="0.8">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+  <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.04"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<filter id="i-gs" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#4a0f1e" flood-opacity="0.55"/>
+</filter>
+</defs>
+
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#i-g)"/>
+<path d="M28 0 H100 A28 28 0 0 1 128 28 V100 A28 28 0 0 1 100 128 H28 A28 28 0 0 1 0 100 V28 A28 28 0 0 1 28 0 Z" fill="url(#i-sheen)"/>
+<path d="M28 2.2 H100 A25.8 25.8 0 0 1 125.8 28 V100 A25.8 25.8 0 0 1 100 125.8 H28 A25.8 25.8 0 0 1 2.2 100 V28 A25.8 25.8 0 0 1 28 2.2 Z" fill="none" stroke="url(#i-bevel)" stroke-width="3"/>
+<g filter="url(#i-gs)">
+<path d="M48 20h32a14 14 0 0 1 14 14v60a14 14 0 0 1-14 14H48a14 14 0 0 1-14-14V34a14 14 0 0 1 14-14Z" fill="#fff" fill-opacity="0.15"/>
+<path d="M50 24h28a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12H50a12 12 0 0 1-12-12V36a12 12 0 0 1 12-12Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+<path d="M57 52 79 64 57 76Z" fill="#fff"/>
+<path d="M105 30v68" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-opacity="0.32"/>
+<path d="M105 62v36" stroke="#fff" stroke-width="9" stroke-linecap="round"/></g>
+<path d="M28 0.7 H100 A27.3 27.3 0 0 1 127.3 28 V100 A27.3 27.3 0 0 1 100 127.3 H28 A27.3 27.3 0 0 1 0.7 100 V28 A27.3 27.3 0 0 1 28 0.7 Z" fill="none" stroke="#4a0f1e" stroke-width="1.4" stroke-opacity="0.55"/>
 </svg>
