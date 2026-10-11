@@ -26,6 +26,11 @@ export type LaneDefenderView = {
   readonly sprites: Readonly<Record<LaneDefenderAssetId, string>>
 }
 
+export type AnimationFramePort = {
+  request(callback: FrameRequestCallback): number
+  cancel(id: number): void
+}
+
 const PLAYFIELD_ASPECT_RATIO = 3 / 4
 
 export function createLaneDefenderView(
@@ -83,6 +88,34 @@ export function laneFromPointer(offsetX: number, playfieldWidth: number): Lane {
 
   const laneIndex = Math.floor((offsetX / playfieldWidth) * 3)
   return (['left', 'center', 'right'] as const)[laneIndex]!
+}
+
+export function startLaneDefenderLoop(
+  animationFrame: AnimationFramePort,
+  tick: (deltaMs: number) => void,
+  render: () => void,
+): () => void {
+  let previousTime: number | null = null
+  let frameId = 0
+  let stopped = false
+
+  function frame(time: number): void {
+    if (stopped) return
+
+    if (previousTime !== null) {
+      tick(time - previousTime)
+    }
+    render()
+    previousTime = time
+    frameId = animationFrame.request(frame)
+  }
+
+  frameId = animationFrame.request(frame)
+
+  return () => {
+    stopped = true
+    animationFrame.cancel(frameId)
+  }
 }
 
 function assertPositive(value: number, label: string): void {
