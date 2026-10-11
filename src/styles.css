@@ -1,0 +1,39 @@
+:root {
+  color: #f5f2ff;
+  background: #0b0b0f;
+  font-family: Inter, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.hub {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hub h1 {
+  margin: 0;
+  font-size: clamp(3rem, 12vw, 8rem);
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  color: #bdff45;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
