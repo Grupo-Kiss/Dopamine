@@ -47,7 +47,7 @@ describe('Endless Runner', () => {
       'rare-1',
       'left',
       'Rare',
-      1_000,
+      5_000,
       0.5,
     )
     expect(state.events).toContainEqual({

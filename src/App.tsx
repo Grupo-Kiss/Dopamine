@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import creditsStore from '../content/credits/store.json'
+import type { AudioMixer } from './audio/mixer'
 import { GameOverView } from './components/GameOverView'
 import { LoadingView } from './components/LoadingView'
 import { StartPage } from './components/StartPage'
@@ -13,12 +14,29 @@ import {
 } from './core/gameState'
 import './styles.css'
 
-export function App() {
+const NO_AUDIO: AudioMixer = {
+  async unlock() {},
+  setBusGain() {},
+  setBusMuffled() {},
+  async silence() {},
+}
+
+export function App({ audio = NO_AUDIO }: { readonly audio?: AudioMixer }) {
   const [state, setState] = useState<GameState>(() => boot())
+
+  useEffect(() => {
+    if (state.phase === 'GameOver') void audio.silence()
+  }, [audio, state.phase])
 
   if (state.phase === 'StartPage') {
     return (
-      <StartPage credits={creditsStore} onPlay={() => setState(play(state))} />
+      <StartPage
+        credits={creditsStore}
+        onPlay={() => {
+          void audio.unlock()
+          setState(play(state))
+        }}
+      />
     )
   }
 

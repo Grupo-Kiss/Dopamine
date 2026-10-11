@@ -1,0 +1,14 @@
+{
+  "gameId": "endless_runner",
+  "skinId": "default",
+  "assets": {
+    "player": "player_soldier.png",
+    "obstacleStatic": "obstacle_static_a.png",
+    "obstacleMoving": "obstacle_moving.png",
+    "collectible": "collectible.png",
+    "rareCollectible": "collectible_rare.png",
+    "ground": "ground_strip.png",
+    "parallaxFar": "parallax_far.png",
+    "parallaxNear": "parallax_near.png"
+  }
+}
