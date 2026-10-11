@@ -6,6 +6,7 @@ export default defineConfig({
   publicDir: 'content',
   test: {
     environment: 'jsdom',
+    globals: true,
     setupFiles: './src/testing/setup.ts',
   },
 })
