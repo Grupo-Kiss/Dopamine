@@ -48,8 +48,8 @@ Short reminders. Remove when done.
 
 - [x] Owner accepted visual stage (checklist in `14_visual_assets.md` — “good enough to build against”; restyle later is expected)
 - [x] Hi-fi present under `content/ui/`, `content/icons/`, `content/minigames/`, `content/mockups/` (B1/B2 layout comps included)
-- [x] **Epic / task board laid out** (GitHub Issues) for MVP under TDD — `docs/agents/mvp-board.md` + `tools/issue-board/`; publish map in `tools/issue-board/published.json`
-- [ ] Scaffold Vite + TS + React + Vitest + pnpm only after the board exists; then first failing tests (start at **E00.T01**)
+- [x] **Epic / task board laid out** (GitHub Issues) for MVP under TDD — [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158); `docs/agents/mvp-board.md` + `tools/issue-board/`; effort/model packs in `docs/agents/effort-model-map.md`
+- [ ] Scaffold Vite + TS + React + Vitest + pnpm; first failing tests at **E00.T01** (#19), pack **P1** (effort M)
 
 ## Defs series
 

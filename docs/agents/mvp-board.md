@@ -8,7 +8,8 @@
 **Pin:** Minigame runtime stays **asset-agnostic** — load via manifests / stable ids under `content/minigames/<id>/`; restyle later by swapping files, not rewriting gameplay.
 
 Ignore probe issues `#16` / `#17` (permission checks; close when possible).  
-First coding task: [#19](https://github.com/Grupo-Kiss/Dopamine/issues/19) `E00.T01`.
+First coding task: [#19](https://github.com/Grupo-Kiss/Dopamine/issues/19) `E00.T01` — model pack **P1** (effort **M**).  
+Effort / LLM map: `docs/agents/effort-model-map.md`.
 
 ---
 
@@ -38,7 +39,7 @@ Ship a **playable frontend Match** that proves the attention-economy satire loop
 | Audio | Unlock on PLAY; bus stub; Game Over hard silence (`09`, `10`) |
 | Feel (baseline) | Readable Focus Chain / Combo stickers; Accessibility Mode persisted (`09`) |
 
-**First playable gate:** after epics E00–E14 (Lane Defender + Loop/Pulse/Wave + layout + core). Remaining MVP epics finish the v1 ship bar (other minigames, Echo/Alerts depth, feel/audio baseline).
+**First playable gate:** epics **E00–E15** / model packs **P1–P11** (through Wave — Discovery ≠ Anticipation). Remaining MVP epics (**E16–E21** / **P12–P14**) finish the v1 ship bar (Echo/Alerts core, Block Cascade, Endless Runner, audio stub, baseline stickers).
 
 ### Out of MVP (post-MVP backlog)
 

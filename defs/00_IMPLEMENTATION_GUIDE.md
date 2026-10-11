@@ -124,33 +124,32 @@ Match clock and Dopamine begin at Playing, not at PLAY press.
 
 Do **not** start feature coding until:
 
-1. User finishes **asset review** and supplies high-fi graphics into the paths in `08` / `09`.
-2. Docs slice for the work is complete enough (this guide + relevant `01`–`09`; `10`+ as needed).
+1. ~~User finishes **asset review** and supplies high-fi graphics~~ — **done** (owner-accepted; `content/` + `14`).
+2. Docs slice for the work is complete enough (this guide + relevant `01`–`09`; `10`+ as needed) — **done** for MVP (`00`–`15`).
 3. Delivery follows **TDD** (`docs/adr/0001-tdd-after-docs.md`): failing test → minimal code → refactor.
+4. MVP epic/task board exists — **done** ([#158](https://github.com/Grupo-Kiss/Dopamine/issues/158); `docs/agents/mvp-board.md`). Pick effort/model via `docs/agents/effort-model-map.md`.
 
-Mid-fi references live under `content/mockups/`. Starter icons/minigame SVGs under `content/icons/` and `content/minigames/` are placeholders until replaced.
+Hi-fi assets live under `content/`. Mockups under `content/mockups/` remain review references. **Minigame runtime must stay asset-agnostic** (`_PINS.md`).
+
+**Next coding step:** scaffold + **E00.T01** ([#19](https://github.com/Grupo-Kiss/Dopamine/issues/19)), pack **P1** (effort M).
 
 ---
 
 ## Implementation Priority
 
-After the asset gate and docs/TDD readiness:
+Follow the GitHub board order (epics E00→…); packs in `docs/agents/effort-model-map.md`. High-level:
 
-1. Project scaffold + test runner (`10` / `11` / `12`)
-2. Core state machine (Start Page → Loading → Playing → Game Over)
-3. Dopamine system (passive drain, gains, diminishing returns, Anticipation + Discovery bonuses)
-4. Focus Chain (decaying continue-window, quality tiers, completion bonus)
-5. Layout shell (desktop masonry + Dopamine bar + mobile)
-6. All three minigames (one random per Match; all must ship)
-7. Window systems (Loop, Pulse, Wave, Echo, Alerts)
-8. Burnout / Recovery + telegraph
-9. Difficulty scaling
-10. Content pack loading + progressive preload
-11. Game feel (stickers, overlays, audio buses / muffling)
-12. Credits surfaces + attribution data
-13. Content expansion / optional APIs (keys + legal OK only)
+1. Project scaffold + test runner (`10` / `11` / `12`) — **E00**
+2. Core state machine (Start Page → Loading → Playing → Game Over) — **E01**
+3. Balance constants → Dopamine → Focus Chain → Input — **E02–E05**
+4. Difficulty → Burnout/Recovery → Content gate — **E06–E08**
+5. Layout shell + hub surfaces — **E09–E10**
+6. Asset-agnostic minigame runtime + all three minigames — **E11–E12**, **E18–E19**
+7. Window systems (Loop, Pulse, Wave, Echo, Alerts) — **E13–E17**
+8. Audio stub + baseline stickers / Accessibility — **E20–E21**
+9. Post-MVP: feel polish, SFX, media packs, optional APIs — **E22+**
 
-Do not implement advanced visual polish before gameplay systems are functional — except integrating user-supplied high-fi assets when they arrive.
+Do not implement advanced visual polish before gameplay systems are functional — except integrating already-accepted hi-fi assets.
 
 Keyboard: action keys own meanings globally (**R = Repost**); Echo navigation is **Y** (see `02`).
 
