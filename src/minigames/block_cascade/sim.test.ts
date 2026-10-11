@@ -3,9 +3,7 @@ import * as blockCascade from './sim'
 
 describe('Block Cascade', () => {
   it('creates a fixed board and a balanced seven-piece bag', () => {
-    const state = blockCascade.createBlockCascade(
-      createSequenceRng([0.4]),
-    )
+    const state = blockCascade.createBlockCascade(createSequenceRng([0.4]))
 
     expect(state.board).toHaveLength(16)
     expect(state.board.every((row) => row.length === 10)).toBe(true)
@@ -16,9 +14,7 @@ describe('Block Cascade', () => {
   })
 
   it('supports move, rotate, and soft drop with no hard-drop API', () => {
-    const state = blockCascade.createBlockCascade(
-      createSequenceRng([0]),
-    )
+    const state = blockCascade.createBlockCascade(createSequenceRng([0]))
     const moved = blockCascade.movePiece(state, 'left')
     const rotated = blockCascade.rotatePiece(moved)
     const dropped = blockCascade.softDrop(rotated)
@@ -30,9 +26,7 @@ describe('Block Cascade', () => {
   })
 
   it('clears lines with reward hooks and overflow resets only local state', () => {
-    const initial = blockCascade.createBlockCascade(
-      createSequenceRng([0]),
-    )
+    const initial = blockCascade.createBlockCascade(createSequenceRng([0]))
     const board = initial.board.map((row, index) =>
       index >= 14 ? row.map(() => 'I' as const) : row,
     )

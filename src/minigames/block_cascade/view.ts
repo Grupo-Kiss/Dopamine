@@ -5,13 +5,17 @@ export type BlockCascadeSkin = {
 }
 
 export function loadBlockCascadeSkin(value: unknown): BlockCascadeSkin {
-  if (!isRecord(value) || !isRecord(value.pieces)) {
+  if (!isRecord(value)) {
+    throw new TypeError('Block Cascade skin requires piece assets')
+  }
+  const pieces = value.pieces
+  if (!isRecord(pieces)) {
     throw new TypeError('Block Cascade skin requires piece assets')
   }
 
   const textures = Object.fromEntries(
     TETROMINO_TYPES.map((piece) => {
-      const definition = value.pieces[piece]
+      const definition = pieces[piece]
       if (!isRecord(definition) || typeof definition.tex !== 'string') {
         throw new TypeError(`Block Cascade skin requires ${piece} texture`)
       }
