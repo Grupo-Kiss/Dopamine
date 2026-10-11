@@ -1,0 +1,14 @@
+{
+  "gameId": "lane_defender",
+  "skinId": "default",
+  "assets": {
+    "player": "player_soldier.png",
+    "enemy": "enemy_normal.png",
+    "boss": "enemy_boss.png",
+    "barrier": "hazard_barrier.png",
+    "mine": "hazard_mine.png",
+    "pickup": "pickup_score_mult.png",
+    "ground": "ground.png",
+    "backdrop": "backdrop.png"
+  }
+}
