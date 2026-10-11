@@ -1,7 +1,4 @@
-import {
-  DISCOVERY_HEARD_TRACK_MULT,
-  WINDOW_REWARDS,
-} from '../config/balance'
+import { DISCOVERY_HEARD_TRACK_MULT, WINDOW_REWARDS } from '../config/balance'
 import { createSequenceRng } from '../testing/rng'
 import { createFakeMediaPort } from '../testing/media'
 import {
@@ -114,12 +111,7 @@ describe('Wave recommendations and likes', () => {
     expect(tickWave(request, 1_000).recommendation).toBeNull()
     expect(tickWave(request, 1_000)).not.toHaveProperty('dopaminePenalty')
 
-    const accepted = await acceptWaveRecommendation(
-      request,
-      999,
-      media,
-      rng,
-    )
+    const accepted = await acceptWaveRecommendation(request, 999, media, rng)
     expect(accepted.reward.dopamine).toBeGreaterThanOrEqual(
       WINDOW_REWARDS.Wave.Recommendation.dopamine,
     )

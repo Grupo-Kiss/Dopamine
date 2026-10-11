@@ -57,10 +57,7 @@ export type WavePlaybackTick = {
 
 const NO_REWARD: Reward = { dopamine: 0, score: 0 }
 
-export function createWave(
-  tracks: readonly WaveTrack[],
-  rng: Rng,
-): WaveState {
+export function createWave(tracks: readonly WaveTrack[], rng: Rng): WaveState {
   const currentTrack = tracks[0]
   if (!currentTrack) {
     throw new Error('Wave requires at least one track')
@@ -129,14 +126,10 @@ export function tickWavePlayback(
         ...state,
         positionMs,
         songMomentLanded: true,
-        anticipation: resetAnticipationBonus(
-          anticipation,
-          'obtained',
-        ),
+        anticipation: resetAnticipationBonus(anticipation, 'obtained'),
       },
       reward: {
-        dopamine:
-          WINDOW_REWARDS.Wave.SongMoment.dopamine + anticipation.value,
+        dopamine: WINDOW_REWARDS.Wave.SongMoment.dopamine + anticipation.value,
         score: WINDOW_REWARDS.Wave.SongMoment.score,
       },
       songMomentLanded: true,
@@ -158,9 +151,10 @@ export function leaveWave(state: WaveState): WaveState {
   }
 }
 
-export function likeWaveTrack(
-  state: WaveState,
-): { readonly state: WaveState; readonly reward: Reward } {
+export function likeWaveTrack(state: WaveState): {
+  readonly state: WaveState
+  readonly reward: Reward
+} {
   if (state.likedTrackIds.has(state.currentTrack.id)) {
     return { state, reward: NO_REWARD }
   }
@@ -168,10 +162,7 @@ export function likeWaveTrack(
   return {
     state: {
       ...state,
-      likedTrackIds: new Set([
-        ...state.likedTrackIds,
-        state.currentTrack.id,
-      ]),
+      likedTrackIds: new Set([...state.likedTrackIds, state.currentTrack.id]),
     },
     reward: WINDOW_REWARDS.Wave.Like,
   }
@@ -189,8 +180,7 @@ export function raiseWaveRecommendation(
 }
 
 export function tickWave(state: WaveState, nowMs: number): WaveState {
-  return state.recommendation &&
-    nowMs >= state.recommendation.expiresAtMs
+  return state.recommendation && nowMs >= state.recommendation.expiresAtMs
     ? { ...state, recommendation: null }
     : state
 }
@@ -250,8 +240,7 @@ function discoveryFor(
 
   const streak = previous.streak + 1
   const value = Math.min(
-    WINDOW_REWARDS.Wave.Recommendation.dopamine *
-      DISCOVERY_CAP_VS_DIRECT_MULT,
+    WINDOW_REWARDS.Wave.Recommendation.dopamine * DISCOVERY_CAP_VS_DIRECT_MULT,
     DISCOVERY_STEP_DOPAMINE *
       (Math.log(streak + DISCOVERY_LOG_BASE - 1) /
         Math.log(DISCOVERY_LOG_BASE)),
