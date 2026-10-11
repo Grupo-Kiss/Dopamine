@@ -17,9 +17,7 @@ describe('hub surfaces', () => {
 
     render(<StartPage credits={creditsStore} onPlay={onPlay} />)
 
-    expect(
-      screen.getByRole('heading', { name: 'Dopamine' }),
-    ).toBeVisible()
+    expect(screen.getByRole('heading', { name: 'Dopamine' })).toBeVisible()
     expect(screen.getByText(/switch windows/i)).toBeVisible()
     expect(
       screen.getByRole('checkbox', { name: 'Accessibility Mode' }),
@@ -32,9 +30,7 @@ describe('hub surfaces', () => {
 
   it('persists Accessibility Mode and restores it on remount', async () => {
     const user = userEvent.setup()
-    const first = render(
-      <StartPage credits={creditsStore} onPlay={vi.fn()} />,
-    )
+    const first = render(<StartPage credits={creditsStore} onPlay={vi.fn()} />)
     const toggle = screen.getByRole('checkbox', {
       name: 'Accessibility Mode',
     })

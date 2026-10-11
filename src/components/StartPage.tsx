@@ -51,10 +51,7 @@ export function StartPage({ credits, onPlay }: StartPageProps) {
       </div>
 
       {creditsOpen && (
-        <CreditsModal
-          credits={credits}
-          onClose={() => setCreditsOpen(false)}
-        />
+        <CreditsModal credits={credits} onClose={() => setCreditsOpen(false)} />
       )}
     </main>
   )

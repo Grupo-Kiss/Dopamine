@@ -76,10 +76,7 @@ export function GameOverView({
       </div>
 
       {creditsOpen && (
-        <CreditsModal
-          credits={credits}
-          onClose={() => setCreditsOpen(false)}
-        />
+        <CreditsModal credits={credits} onClose={() => setCreditsOpen(false)} />
       )}
     </main>
   )
