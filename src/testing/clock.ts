@@ -13,7 +13,9 @@ export function createFakeClock(initialTime = 0): FakeClock {
     now: () => currentTime,
     advance(milliseconds) {
       if (!Number.isFinite(milliseconds) || milliseconds < 0) {
-        throw new RangeError('Clock advance must be a finite, non-negative value')
+        throw new RangeError(
+          'Clock advance must be a finite, non-negative value',
+        )
       }
 
       currentTime += milliseconds

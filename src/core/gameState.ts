@@ -28,9 +28,7 @@ export type RecoveryPlayingState = PlayingBase & {
 }
 
 export type PlayingState =
-  | NormalPlayingState
-  | BurnoutPlayingState
-  | RecoveryPlayingState
+  NormalPlayingState | BurnoutPlayingState | RecoveryPlayingState
 
 export type GameOverState = {
   readonly phase: 'GameOver'
@@ -39,10 +37,7 @@ export type GameOverState = {
 }
 
 export type GameState =
-  | StartPageState
-  | LoadingState
-  | PlayingState
-  | GameOverState
+  StartPageState | LoadingState | PlayingState | GameOverState
 
 export function boot(): StartPageState {
   return {
@@ -69,9 +64,7 @@ export function loadingFailed(
   }
 }
 
-export function notifyDopamineDepleted(
-  _state: PlayingState,
-): GameOverState {
+export function notifyDopamineDepleted(_state: PlayingState): GameOverState {
   return {
     phase: 'GameOver',
     matchClockRunning: false,
@@ -87,9 +80,7 @@ export function returnToHub(_state: GameOverState): StartPageState {
   return boot()
 }
 
-export function enterBurnout(
-  _state: NormalPlayingState,
-): BurnoutPlayingState {
+export function enterBurnout(_state: NormalPlayingState): BurnoutPlayingState {
   return createPlayingState('Burnout')
 }
 
@@ -99,9 +90,7 @@ export function enterRecovery(
   return createPlayingState('Recovery')
 }
 
-export function exitRecovery(
-  _state: RecoveryPlayingState,
-): NormalPlayingState {
+export function exitRecovery(_state: RecoveryPlayingState): NormalPlayingState {
   return createPlayingState('Normal')
 }
 
@@ -112,18 +101,10 @@ function createLoadingState(): LoadingState {
   }
 }
 
-function createPlayingState(
-  modifier: 'Normal',
-): NormalPlayingState
-function createPlayingState(
-  modifier: 'Burnout',
-): BurnoutPlayingState
-function createPlayingState(
-  modifier: 'Recovery',
-): RecoveryPlayingState
-function createPlayingState(
-  modifier: PlayingState['modifier'],
-): PlayingState {
+function createPlayingState(modifier: 'Normal'): NormalPlayingState
+function createPlayingState(modifier: 'Burnout'): BurnoutPlayingState
+function createPlayingState(modifier: 'Recovery'): RecoveryPlayingState
+function createPlayingState(modifier: PlayingState['modifier']): PlayingState {
   return {
     phase: 'Playing',
     modifier,
