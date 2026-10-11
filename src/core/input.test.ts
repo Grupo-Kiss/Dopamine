@@ -9,10 +9,12 @@ import {
 describe('input router', () => {
   it('routes text before Alert, Active Window, and navigation', () => {
     const calls: string[] = []
-    const handler = (layer: string): InputHandler => (code) => {
-      calls.push(layer)
-      return { type: 'Handled', layer, code }
-    }
+    const handler =
+      (layer: string): InputHandler =>
+      (code) => {
+        calls.push(layer)
+        return { type: 'Handled', layer, code }
+      }
 
     const result = routeInput('KeyY', {
       textInput: handler('text'),
@@ -29,10 +31,12 @@ describe('input router', () => {
 
   it('falls through layers in priority order when they do not claim a key', () => {
     const calls: string[] = []
-    const pass = (layer: string): InputHandler => () => {
-      calls.push(layer)
-      return null
-    }
+    const pass =
+      (layer: string): InputHandler =>
+      () => {
+        calls.push(layer)
+        return null
+      }
 
     expect(
       routeInput('KeyY', {

@@ -28,8 +28,7 @@ describe('continuous Match difficulty', () => {
     expect(early.progress).toBeGreaterThan(0)
     expect(nextMoment.progress).toBeGreaterThan(early.progress)
     expect(
-      nextMoment.dopamineDrainMultiplier -
-        early.dopamineDrainMultiplier,
+      nextMoment.dopamineDrainMultiplier - early.dopamineDrainMultiplier,
     ).toBeLessThan(0.001)
     expect(maximum.dopamineDrainMultiplier).toBe(
       DOPAMINE_DRAIN_DIFFICULTY_MULT_MAX,
@@ -56,8 +55,7 @@ describe('continuous Match difficulty', () => {
       attentionRequestDurationMultiplier: 1,
     })
     expect(pressureMultipliersAt(DIFFICULTY_TIME_TO_MAX_MS)).toEqual({
-      eventIntervalMultiplier:
-        EVENT_INTERVAL_LATE_MS / EVENT_INTERVAL_EARLY_MS,
+      eventIntervalMultiplier: EVENT_INTERVAL_LATE_MS / EVENT_INTERVAL_EARLY_MS,
       attentionRequestDurationMultiplier:
         ATTENTION_REQUEST_DURATION_LATE_MS /
         ATTENTION_REQUEST_DURATION_EARLY_MS,

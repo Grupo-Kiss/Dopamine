@@ -30,11 +30,7 @@ export type InputLayers = {
 
 export type RoutedInput = {
   readonly consumedBy:
-    | 'TextInput'
-    | 'Alert'
-    | 'ActiveWindow'
-    | 'Navigation'
-    | null
+    'TextInput' | 'Alert' | 'ActiveWindow' | 'Navigation' | null
   readonly command: InputCommand | null
 }
 

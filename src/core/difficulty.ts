@@ -37,9 +37,7 @@ export function difficultyAt(elapsedMs: number): Difficulty {
   }
 }
 
-export function pressureMultipliersAt(
-  elapsedMs: number,
-): PressureMultipliers {
+export function pressureMultipliersAt(elapsedMs: number): PressureMultipliers {
   const { progress } = difficultyAt(elapsedMs)
 
   return {
@@ -50,8 +48,7 @@ export function pressureMultipliersAt(
     ),
     attentionRequestDurationMultiplier: interpolate(
       1,
-      ATTENTION_REQUEST_DURATION_LATE_MS /
-        ATTENTION_REQUEST_DURATION_EARLY_MS,
+      ATTENTION_REQUEST_DURATION_LATE_MS / ATTENTION_REQUEST_DURATION_EARLY_MS,
       progress,
     ),
   }
