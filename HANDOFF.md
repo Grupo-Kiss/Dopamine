@@ -48,7 +48,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| P1–P13 through Block Cascade (E00–E18) | [`cursor/p1-scaffold-state-machine-aa9c` / #161](https://github.com/Grupo-Kiss/Dopamine/pull/161) | Cursor Cloud Agent | App scaffold and `src/{core,testing,config,content,components,minigames,windows}/*` |
+| P1–P14 MVP implementation (E00–E21) | [`cursor/p1-scaffold-state-machine-aa9c` / #161](https://github.com/Grupo-Kiss/Dopamine/pull/161) | Cursor Cloud Agent | App scaffold and `src/{core,testing,config,content,components,minigames,windows,audio}/*` |
 
 ### Next (pick in order)
 
