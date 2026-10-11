@@ -1,7 +1,4 @@
-import {
-  WINDOW_REWARD_COOLDOWN_MS,
-  WINDOW_REWARDS,
-} from '../config/balance'
+import { WINDOW_REWARD_COOLDOWN_MS, WINDOW_REWARDS } from '../config/balance'
 import {
   calculateInteractionGain,
   createDiminishingState,
@@ -80,8 +77,7 @@ export function loopAction(
     targetId: `${state.currentClip.id}:${action}`,
     baseGain: baseReward.dopamine,
   })
-  const multiplier =
-    baseReward.dopamine === 0 ? 0 : result.gain / baseReward.dopamine
+  const multiplier = result.gain / baseReward.dopamine
 
   return {
     state: { ...state, diminishing: result.state },

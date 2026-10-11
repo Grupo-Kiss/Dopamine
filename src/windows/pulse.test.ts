@@ -31,9 +31,9 @@ describe('Pulse window', () => {
 
     const replying = pulseShortcut(initial, 'KeyC', postId).state
     expect(replying.composer).toEqual({ mode: 'Reply', postId, text: '' })
-    expect(
-      publishPulseText(replying, 'the trend agrees', true).reward,
-    ).toEqual(WINDOW_REWARDS.Pulse.ReplyOnTrend)
+    expect(publishPulseText(replying, 'the trend agrees', true).reward).toEqual(
+      WINDOW_REWARDS.Pulse.ReplyOnTrend,
+    )
 
     const creating = pulseShortcut(initial, 'KeyP', postId).state
     expect(creating.composer).toEqual({

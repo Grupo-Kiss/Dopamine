@@ -160,10 +160,7 @@ export function respondToPulseAttention(
   state: PulseState,
   nowMs: number,
 ): { readonly state: PulseState; readonly reward: Reward } {
-  if (
-    !state.attentionRequest ||
-    nowMs >= state.attentionRequest.expiresAtMs
-  ) {
+  if (!state.attentionRequest || nowMs >= state.attentionRequest.expiresAtMs) {
     return { state: tickPulse(state, nowMs), reward: NO_REWARD }
   }
 
@@ -174,15 +171,12 @@ export function respondToPulseAttention(
 }
 
 export function tickPulse(state: PulseState, nowMs: number): PulseState {
-  return state.attentionRequest &&
-    nowMs >= state.attentionRequest.expiresAtMs
+  return state.attentionRequest && nowMs >= state.attentionRequest.expiresAtMs
     ? { ...state, attentionRequest: null }
     : state
 }
 
-export function pulseEventIntervalMs(
-  eventIntervalMultiplier: number,
-): number {
+export function pulseEventIntervalMs(eventIntervalMultiplier: number): number {
   if (
     !Number.isFinite(eventIntervalMultiplier) ||
     eventIntervalMultiplier <= 0
