@@ -79,9 +79,7 @@ describe('Burnout and Recovery', () => {
     system = tickBurnout(system, clock)
 
     expect(system.mode).toBe('Recovery')
-    expect(system.dopamineDrainMultiplier).toBe(
-      DOPAMINE_DRAIN_RECOVERY_MULT,
-    )
+    expect(system.dopamineDrainMultiplier).toBe(DOPAMINE_DRAIN_RECOVERY_MULT)
 
     system = recordActions(system, clock, 200)
     clock.advance(RECOVERY_DURATION_MS - 1)
@@ -96,15 +94,9 @@ describe('Burnout and Recovery', () => {
   })
 
   it('escalates the APM threshold after every completed Recovery', () => {
-    expect(thresholdAfterCompletedRecoveries(0)).toBe(
-      BURNOUT_APM_THRESHOLD_1,
-    )
-    expect(thresholdAfterCompletedRecoveries(1)).toBe(
-      BURNOUT_APM_THRESHOLD_2,
-    )
-    expect(thresholdAfterCompletedRecoveries(2)).toBe(
-      BURNOUT_APM_THRESHOLD_3,
-    )
+    expect(thresholdAfterCompletedRecoveries(0)).toBe(BURNOUT_APM_THRESHOLD_1)
+    expect(thresholdAfterCompletedRecoveries(1)).toBe(BURNOUT_APM_THRESHOLD_2)
+    expect(thresholdAfterCompletedRecoveries(2)).toBe(BURNOUT_APM_THRESHOLD_3)
     expect(thresholdAfterCompletedRecoveries(3)).toBe(
       BURNOUT_APM_THRESHOLD_3 * BURNOUT_APM_THRESHOLD_GROWTH,
     )

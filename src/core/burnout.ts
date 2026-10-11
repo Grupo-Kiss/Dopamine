@@ -38,19 +38,13 @@ export function createApmTracker(): ApmTracker {
   return { actionTimesMs: [] }
 }
 
-export function recordAction(
-  tracker: ApmTracker,
-  clock: Clock,
-): ApmTracker {
+export function recordAction(tracker: ApmTracker, clock: Clock): ApmTracker {
   return {
     actionTimesMs: [...recentActionTimes(tracker, clock), clock.now()],
   }
 }
 
-export function actionsPerMinute(
-  tracker: ApmTracker,
-  clock: Clock,
-): number {
+export function actionsPerMinute(tracker: ApmTracker, clock: Clock): number {
   return recentActionTimes(tracker, clock).length
 }
 
@@ -114,9 +108,7 @@ export function tickBurnout(
 
   if (system.mode === 'Burnout') {
     const belowThresholdSinceMs =
-      apm < system.thresholdApm
-        ? (system.belowThresholdSinceMs ?? now)
-        : null
+      apm < system.thresholdApm ? (system.belowThresholdSinceMs ?? now) : null
 
     if (
       belowThresholdSinceMs !== null &&
@@ -148,9 +140,7 @@ export function tickBurnout(
   }
 
   const aboveThresholdSinceMs =
-    apm >= system.thresholdApm
-      ? (system.aboveThresholdSinceMs ?? now)
-      : null
+    apm >= system.thresholdApm ? (system.aboveThresholdSinceMs ?? now) : null
 
   if (
     aboveThresholdSinceMs !== null &&
@@ -173,8 +163,7 @@ export function tickBurnout(
     ...system,
     apmTracker,
     apm,
-    telegraphActive:
-      apm >= system.thresholdApm * BURNOUT_TELEGRAPH_APM_RATIO,
+    telegraphActive: apm >= system.thresholdApm * BURNOUT_TELEGRAPH_APM_RATIO,
     aboveThresholdSinceMs,
     rewardMultiplier: 1,
     dopamineDrainMultiplier: 1,
@@ -184,10 +173,7 @@ export function tickBurnout(
 export function thresholdAfterCompletedRecoveries(
   completedRecoveries: number,
 ): number {
-  if (
-    !Number.isSafeInteger(completedRecoveries) ||
-    completedRecoveries < 0
-  ) {
+  if (!Number.isSafeInteger(completedRecoveries) || completedRecoveries < 0) {
     throw new RangeError('Completed Recoveries must be a non-negative integer')
   }
 
