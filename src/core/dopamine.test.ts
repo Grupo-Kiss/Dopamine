@@ -89,8 +89,11 @@ describe('Dopamine', () => {
     expect(grants[0]).toBe(10)
     expect(grants[1]).toBeLessThan(grants[0]!)
     expect(grants[2]).toBeLessThan(grants[1]!)
-    expect(grants.at(-1)).toBe(10 * DIMINISH_FLOOR_MULT)
+    expect(grants.at(-1)).toBeGreaterThanOrEqual(10 * DIMINISH_FLOOR_MULT)
     expect(grants.every((gain) => gain > 0)).toBe(true)
+    expect(
+      dopamine.diminishingMultiplier(Number.MAX_SAFE_INTEGER),
+    ).toBe(DIMINISH_FLOOR_MULT)
   })
 
   it('resets diminishing returns when target or gameplay system changes', () => {

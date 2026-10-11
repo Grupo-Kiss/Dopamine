@@ -28,6 +28,15 @@ export const FOCUS_CHAIN_MAX_LINGER_MS = 8_000
 export const WINDOW_REWARD_COOLDOWN_MS = 2_500
 export const CHAIN_COMPLETION_DOPAMINE_PER_STEP = 0.5
 export const CHAIN_COMPLETION_SCORE_PER_STEP = 25
+export const FOCUS_CHAIN_STEP_BONUSES = {
+  1: { dopamine: 0.5, score: 10 },
+  2: { dopamine: 0.75, score: 20 },
+  3: { dopamine: 1, score: 35 },
+  5: { dopamine: 1.5, score: 60 },
+  10: { dopamine: 3, score: 150 },
+  15: { dopamine: 5, score: 300 },
+  20: { dopamine: 8, score: 500 },
+} as const
 
 export const BURNOUT_APM_THRESHOLD_1 = 80
 export const BURNOUT_APM_THRESHOLD_2 = 100
