@@ -42,7 +42,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | SFX brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — [#12](https://github.com/Grupo-Kiss/Dopamine/pull/12) (**`.ogg` files not produced yet**) |
 | Credits store + schema (fonts seeded) | `content/credits/` |
 | Media drop zones (empty manifests) | `loop/clips/`, `wave/high\|boring/`, `echo/audio\|video/` |
-| MVP epic/task board (TDD) | [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) — 29 epics / 111 tasks; `docs/agents/mvp-board.md` |
+| MVP epic/task board (TDD) | [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) — 29 epics / 111 tasks; landed via [#159](https://github.com/Grupo-Kiss/Dopamine/pull/159); `docs/agents/mvp-board.md` + `docs/agents/effort-model-map.md` |
 
 ### In progress — do not collide
 
@@ -52,14 +52,13 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 ### Next (pick in order)
 
-Owner wants **epics → TDD tasks → MVP** before a big scaffold dump (`_PINS.md`).
+1. **Scaffold + first failing tests** — **pack P1** (effort **M** / mid model) per `docs/agents/effort-model-map.md`; TDD [#19](https://github.com/Grupo-Kiss/Dopamine/issues/19) **E00.T01**. Branch from latest `origin/develop`. Do not revive closed PR #5 wholesale. Asset-agnostic minigames.
+2. **Safe parallel content** (paths must not collide with scaffold):
+   - SFX `.ogg` production (`defs/15`) — post-MVP **E23**
+   - Wave / Loop / Echo media + credits rows — post-MVP **E24**
+   - Balance tune on `defs/06_balance.md` only — post-MVP **E28** (after playable)
 
-1. ~~**Epic / task board**~~ — **done**. Board index [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158); summary `docs/agents/mvp-board.md`; source `tools/issue-board/board.json` + `published.json`.
-2. **Scaffold + first failing tests** — next: **pack P1** (effort **M** / mid model) per `docs/agents/effort-model-map.md`; start TDD [#19](https://github.com/Grupo-Kiss/Dopamine/issues/19) **E00.T01**. Fresh; do not revive closed PR #5 wholesale. Asset-agnostic minigames.
-3. **Safe parallel content** (can run beside coding if paths don’t collide):
-   - SFX `.ogg` production (`defs/15`) — tracked as post-MVP epic E23
-   - Wave / Loop / Echo media into empty drop zones + credits rows — post-MVP E24
-   - Balance pass on `defs/06_balance.md` only — post-MVP E28
+**Housekeeping:** close probe issues [#16](https://github.com/Grupo-Kiss/Dopamine/issues/16) / [#17](https://github.com/Grupo-Kiss/Dopamine/issues/17) when convenient (bot cannot close).
 
 ### Hard rules going forward
 

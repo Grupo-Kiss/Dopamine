@@ -18,7 +18,7 @@ Short reminders. Remove when done.
 - Visual lock: `PRODUCT.md`, `DESIGN.md`, `.impeccable/` (Collider-inspired blooms; no track-line detector UI)
 - Burnout/Recovery: agent may ship provisional overlays from mid-fi + stage language; owner can replace later
 - **Minigame runtime is asset-agnostic.** Game code loads sprites/textures/skins through manifests and stable ids (`content/minigames/<id>/…`). Do not hard-code art dimensions, palette, or cutout construction into gameplay logic — a later version will re-style the minigames. Swap files + manifests; keep behaviours.
-- **Before feature coding: epics → tasks → TDD MVP.** Do not jump straight into a Vite scaffold dump. Lay out GitHub Issues as epics with ordered TDD tasks, then implement task-by-task toward an MVP (`docs/adr/0001-tdd-after-docs.md`).
+- **Board laid out; implement task-by-task under TDD.** Do not jump into a Vite scaffold dump — follow [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) / packs in `docs/agents/effort-model-map.md` (`docs/adr/0001-tdd-after-docs.md`).
 
 ### Decisions taken during the Phase B→E pass (flag if you disagree)
 
@@ -48,8 +48,8 @@ Short reminders. Remove when done.
 
 - [x] Owner accepted visual stage (checklist in `14_visual_assets.md` — “good enough to build against”; restyle later is expected)
 - [x] Hi-fi present under `content/ui/`, `content/icons/`, `content/minigames/`, `content/mockups/` (B1/B2 layout comps included)
-- [x] **Epic / task board laid out** (GitHub Issues) for MVP under TDD — `docs/agents/mvp-board.md` + `tools/issue-board/`; publish map in `tools/issue-board/published.json`
-- [ ] Scaffold Vite + TS + React + Vitest + pnpm only after the board exists; then first failing tests (start at **E00.T01**)
+- [x] **Epic / task board laid out** (GitHub Issues) for MVP under TDD — [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158); `docs/agents/mvp-board.md` + `tools/issue-board/`; effort/model packs in `docs/agents/effort-model-map.md`
+- [ ] Scaffold Vite + TS + React + Vitest + pnpm; first failing tests at **E00.T01** (#19), pack **P1** (effort M)
 
 ## Defs series
 
