@@ -9,6 +9,7 @@
     "runner": "node phaseE_runner.mjs",
     "blocks": "node phaseE_blocks.mjs",
     "minigames": "node phaseE_shared.mjs && node phaseE_lane.mjs && node phaseE_runner.mjs && node phaseE_blocks.mjs",
+    "layouts": "node phaseB_layouts.mjs",
     "preview": "node preview.mjs",
     "verify": "node verify.mjs"
   },
