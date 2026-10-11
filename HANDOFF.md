@@ -12,6 +12,7 @@
 | Visual lock | `PRODUCT.md`, `DESIGN.md`, `.impeccable/` |
 | Process ADR | `docs/adr/0001-tdd-after-docs.md` — docs first, then TDD |
 | Issues | GitHub Issues (`docs/agents/issue-tracker.md`) — MVP board [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) |
+| Effort → model | `docs/agents/effort-model-map.md` — pick LLM by pack peak (S/M/L/XL) |
 
 ---
 
@@ -54,7 +55,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 Owner wants **epics → TDD tasks → MVP** before a big scaffold dump (`_PINS.md`).
 
 1. ~~**Epic / task board**~~ — **done**. Board index [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158); summary `docs/agents/mvp-board.md`; source `tools/issue-board/board.json` + `published.json`.
-2. **Scaffold + first failing tests** — next: Vite + TS + React + Vitest + pnpm (`defs/10`), then TDD [#19](https://github.com/Grupo-Kiss/Dopamine/issues/19) **E00.T01**. Fresh; do not revive closed PR #5 wholesale. Asset-agnostic minigames.
+2. **Scaffold + first failing tests** — next: **pack P1** (effort **M** / mid model) per `docs/agents/effort-model-map.md`; start TDD [#19](https://github.com/Grupo-Kiss/Dopamine/issues/19) **E00.T01**. Fresh; do not revive closed PR #5 wholesale. Asset-agnostic minigames.
 3. **Safe parallel content** (can run beside coding if paths don’t collide):
    - SFX `.ogg` production (`defs/15`) — tracked as post-MVP epic E23
    - Wave / Loop / Echo media into empty drop zones + credits rows — post-MVP E24
@@ -83,6 +84,8 @@ Owner wants **epics → TDD tasks → MVP** before a big scaffold dump (`_PINS.m
 | Credits / legal data | `defs/13_credits_and_legal.md` + `content/credits/store.json` |
 | Tech stack | `defs/10_tech.md` |
 | Testing / coding rules | `defs/11`, `defs/12` |
+| Effort / which LLM | `docs/agents/effort-model-map.md` (packs P1–P14) |
+| MVP board summary | `docs/agents/mvp-board.md` + [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) |
 
 ---
 
@@ -101,7 +104,8 @@ Owner wants **epics → TDD tasks → MVP** before a big scaffold dump (`_PINS.m
 ### Start scaffold (next)
 
 ```
-Read @HANDOFF.md and board index #158. Confirm E00.T01 (#19) is the frontier task.
-Branch off develop. Scaffold Vite + TS + React + Vitest + pnpm per @defs/10, then TDD #19 only
-(failing test first). Asset-agnostic minigames. No real-platform clones. No feature dump.
+Read @HANDOFF.md @docs/agents/effort-model-map.md and board index #158.
+Pack P1 (effort M / mid model). Frontier task E00.T01 (#19).
+Branch off develop. Scaffold Vite + TS + React + Vitest + pnpm per @defs/10, then TDD #19
+(failing test first). Stay on P1 this chat. Asset-agnostic minigames. No real-platform clones.
 ```

@@ -2,57 +2,110 @@
   "meta": {
     "title": "[SCOPE] MVP epic/task board index",
     "process": "ADR-0001 TDD after docs",
-    "pin": "Minigame runtime must stay asset-agnostic (manifests + stable ids; restyle later)"
+    "pin": "Minigame runtime must stay asset-agnostic (manifests + stable ids; restyle later)",
+    "effortScale": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "effortDoc": "docs/agents/effort-model-map.md"
   },
   "epics": [
     {
       "id": "E00",
       "scope": "mvp",
       "title": "Scaffold & test harness",
-      "defs": ["10_tech.md", "11_testing_strategy.md", "12_coding_rules.md"],
+      "defs": [
+        "10_tech.md",
+        "11_testing_strategy.md",
+        "12_coding_rules.md"
+      ],
       "summary": "Vite + TypeScript strict + React 19 + Vitest + Testing Library + pnpm. Shared fakes under src/testing (clock, rng, media, audio). No gameplay rules yet.",
       "tasks": [
         {
           "id": "E00.T01",
           "title": "pnpm + Vite + TS strict project boots",
           "failingTest": "scaffold: `pnpm test` runs Vitest successfully on an empty/smoke suite",
-          "doneWhen": ["package.json uses pnpm", "strict TypeScript", "Vitest configured", "src/ layout stubs match defs/00 / 10"],
-          "defs": ["10_tech.md"]
+          "doneWhen": [
+            "package.json uses pnpm",
+            "strict TypeScript",
+            "Vitest configured",
+            "src/ layout stubs match defs/00 / 10"
+          ],
+          "defs": [
+            "10_tech.md"
+          ],
+          "effort": "M",
+          "effortWhy": "Toolchain/scaffold choices stick; worth a careful pass"
         },
         {
           "id": "E00.T02",
           "title": "React 19 app shell mounts without Match drain",
           "failingTest": "app: root renders without throwing; no Dopamine/Match module required yet",
-          "doneWhen": ["React 19 + Vite React plugin", "index entry renders a placeholder hub node"],
-          "defs": ["10_tech.md"]
+          "doneWhen": [
+            "React 19 + Vite React plugin",
+            "index entry renders a placeholder hub node"
+          ],
+          "defs": [
+            "10_tech.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E00.T03",
           "title": "Injected clock fake for domain tests",
           "failingTest": "testing/clock: advance(ms) moves injected now; domain code must not call Date.now() directly in tests",
-          "doneWhen": ["src/testing/clock.ts (+ test)", "documented injection pattern"],
-          "defs": ["11_testing_strategy.md"]
+          "doneWhen": [
+            "src/testing/clock.ts (+ test)",
+            "documented injection pattern"
+          ],
+          "defs": [
+            "11_testing_strategy.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E00.T04",
           "title": "Injected RNG fake for Match picks",
           "failingTest": "testing/rng: sequence/seeded next() is deterministic across runs",
-          "doneWhen": ["src/testing/rng.ts (+ test)", "ready for Minigame pick + layout shuffle"],
-          "defs": ["11_testing_strategy.md"]
+          "doneWhen": [
+            "src/testing/rng.ts (+ test)",
+            "ready for Minigame pick + layout shuffle"
+          ],
+          "defs": [
+            "11_testing_strategy.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E00.T05",
           "title": "Media + AudioContext port fakes",
           "failingTest": "testing/media+audio: fakes record calls; no real decode/network/Autoplay in unit tests",
-          "doneWhen": ["media and audio fakes under src/testing/", "ports usable by later epics"],
-          "defs": ["11_testing_strategy.md", "10_tech.md"]
+          "doneWhen": [
+            "media and audio fakes under src/testing/",
+            "ports usable by later epics"
+          ],
+          "defs": [
+            "11_testing_strategy.md",
+            "10_tech.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E00.T06",
           "title": "CI script: lint + unit test + build stubs",
           "failingTest": "scripts: `pnpm test` and `pnpm build` exit 0 on scaffold",
-          "doneWhen": [".env.example with empty provider keys only", "ESLint/Prettier baseline optional-but-ready", "no secrets committed"],
-          "defs": ["10_tech.md", "12_coding_rules.md"]
+          "doneWhen": [
+            ".env.example with empty provider keys only",
+            "ESLint/Prettier baseline optional-but-ready",
+            "no secrets committed"
+          ],
+          "defs": [
+            "10_tech.md",
+            "12_coding_rules.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -60,57 +113,101 @@
       "id": "E01",
       "scope": "mvp",
       "title": "Match state machine",
-      "defs": ["02_gameplay_core.md", "11_testing_strategy.md"],
+      "defs": [
+        "02_gameplay_core.md",
+        "11_testing_strategy.md"
+      ],
       "summary": "Framework-agnostic core state machine for global gameplay states. Match clock starts only in Playing.",
       "tasks": [
         {
           "id": "E01.T01",
           "title": "Boot lands on Start Page",
           "failingTest": "gameState: initial state is StartPage; no Match clock ticking",
-          "doneWhen": ["discriminated union states exist", "Boot → StartPage"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "discriminated union states exist",
+            "Boot → StartPage"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "M",
+          "effortWhy": "Defines state union shape used everywhere"
         },
         {
           "id": "E01.T02",
           "title": "PLAY transitions Start Page → Loading",
           "failingTest": "gameState: play() from StartPage enters Loading; still no Dopamine drain",
-          "doneWhen": ["PLAY event wired in core"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "PLAY event wired in core"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E01.T03",
           "title": "Loading success → Playing starts Match",
           "failingTest": "gameState: loadingComplete() enters Playing; Match clock / drain eligibility begins only here",
-          "doneWhen": ["Playing is distinct from Loading", "session init hook placeholder"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "Playing is distinct from Loading",
+            "session init hook placeholder"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E01.T04",
           "title": "Loading validation failure stays on Loading",
           "failingTest": "gameState: loadingFailed(reason) never enters Playing",
-          "doneWhen": ["fail-closed path with error payload"],
-          "defs": ["02_gameplay_core.md", "08_content.md"]
+          "doneWhen": [
+            "fail-closed path with error payload"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "08_content.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E01.T05",
           "title": "Dopamine ≤ 0 → Game Over immediately",
           "failingTest": "gameState: notifyDopamineDepleted() from Playing enters GameOver; systems stop flag set",
-          "doneWhen": ["Game Over transition from Playing", "no auto-restart"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "Game Over transition from Playing",
+            "no auto-restart"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E01.T06",
           "title": "PLAY AGAIN → Loading; hub → Start Page",
           "failingTest": "gameState: playAgain()→Loading; returnToHub()→StartPage",
-          "doneWhen": ["both Game Over exits covered"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "both Game Over exits covered"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E01.T07",
           "title": "Playing can enter Burnout and Recovery modifiers",
           "failingTest": "gameState: enterBurnout()/enterRecovery()/exitRecovery() modify Playing without replacing Match",
-          "doneWhen": ["Burnout/Recovery are Playing modifiers per 02", "wired for E07 to drive APM rules"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "Burnout/Recovery are Playing modifiers per 02",
+            "wired for E07 to drive APM rules"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -118,22 +215,37 @@
       "id": "E02",
       "scope": "mvp",
       "title": "Balance constants module",
-      "defs": ["06_balance.md", "12_coding_rules.md"],
+      "defs": [
+        "06_balance.md",
+        "12_coding_rules.md"
+      ],
       "summary": "Single import module mirroring 06 constant names. Spec remains SSOT for numbers.",
       "tasks": [
         {
           "id": "E02.T01",
           "title": "Export Dopamine + drain named constants",
           "failingTest": "balance: exports DOPAMINE_MAX/MIN and drain constants equal to 06 starters",
-          "doneWhen": ["src/config/balance.ts (or equivalent)", "names match 06 exactly"],
-          "defs": ["06_balance.md"]
+          "doneWhen": [
+            "src/config/balance.ts (or equivalent)",
+            "names match 06 exactly"
+          ],
+          "defs": [
+            "06_balance.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E02.T02",
           "title": "Export Focus Chain + Burnout + Discovery/Anticipation constants",
           "failingTest": "balance: Focus Chain timeout/completion, Burnout APM, Discovery/Anticipation names match 06",
-          "doneWhen": ["all MVP-relevant 06 names importable", "no magic numbers in upcoming core modules"],
-          "defs": ["06_balance.md"]
+          "doneWhen": [
+            "all MVP-relevant 06 names importable",
+            "no magic numbers in upcoming core modules"
+          ],
+          "defs": [
+            "06_balance.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -141,51 +253,93 @@
       "id": "E03",
       "scope": "mvp",
       "title": "Dopamine system",
-      "defs": ["02_gameplay_core.md", "06_balance.md", "11_testing_strategy.md"],
+      "defs": [
+        "02_gameplay_core.md",
+        "06_balance.md",
+        "11_testing_strategy.md"
+      ],
       "summary": "Sole survival resource. Passive drain only; positive gains; diminishing returns; Anticipation. No direct penalty helpers.",
       "tasks": [
         {
           "id": "E03.T01",
           "title": "Meter starts full; clamps to [MIN, MAX]",
           "failingTest": "dopamine: create() starts at DOPAMINE_MAX; applyGain cannot exceed MAX; floor at MIN",
-          "doneWhen": ["pure dopamine module in src/core/"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "pure dopamine module in src/core/"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E03.T02",
           "title": "Passive drain uses difficulty × Recovery mult",
           "failingTest": "dopamine: tick(dt) drains by base × difficultyMult × recoveryMult formula from 06",
-          "doneWhen": ["injected clock", "Recovery flag increases drain"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "injected clock",
+            "Recovery flag increases drain"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E03.T03",
           "title": "Positive gain from interactions",
           "failingTest": "dopamine: grant(amount) increases meter; never used as penalty path",
-          "doneWhen": ["gain API only adds"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "gain API only adds"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E03.T04",
           "title": "Diminishing returns logarithmic floor",
           "failingTest": "dopamine: repeated same-target grants follow log falloff toward DIMINISH_FLOOR_MULT; never ≤ 0; reset on target/system change",
-          "doneWhen": ["diminishing helper covered"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "diminishing helper covered"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Log falloff + reset rules easy to get wrong"
         },
         {
           "id": "E03.T05",
           "title": "Anticipation builds and resets correctly",
           "failingTest": "dopamine: AnticipationBonus grows while waiting; resets on obtain / leave / expire; capped vs direct rewards",
-          "doneWhen": ["Anticipation distinct type/API from Discovery"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "Anticipation distinct type/API from Discovery"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Anticipation must stay distinct from Discovery"
         },
         {
           "id": "E03.T06",
           "title": "No direct penalty subtraction API",
           "failingTest": "dopamine: module surface has no penalize/damage/loseLife; fail paths cannot subtract",
-          "doneWhen": ["static test or type-level guard documented in test"],
-          "defs": ["02_gameplay_core.md", "12_coding_rules.md"],
-          "pin": "Never direct Dopamine removal"
+          "doneWhen": [
+            "static test or type-level guard documented in test"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "12_coding_rules.md"
+          ],
+          "pin": "Never direct Dopamine removal",
+          "effort": "S"
         }
       ]
     },
@@ -193,57 +347,103 @@
       "id": "E04",
       "scope": "mvp",
       "title": "Focus Chain",
-      "defs": ["02_gameplay_core.md", "06_balance.md", "11_testing_strategy.md"],
+      "defs": [
+        "02_gameplay_core.md",
+        "06_balance.md",
+        "11_testing_strategy.md"
+      ],
       "summary": "Skill expression via valid Focus Changes across windows. Distinct from Combo.",
       "tasks": [
         {
           "id": "E04.T01",
           "title": "Valid Focus Change extends chain by 1",
           "failingTest": "focusChain: valid interaction on different window increments length when destination is Normal/FocusReady/AttentionRequest",
-          "doneWhen": ["ActiveWindow tracking", "chain length API"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "ActiveWindow tracking",
+            "chain length API"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Core skill expression; many edge cases"
         },
         {
           "id": "E04.T02",
           "title": "Waiting destination does not extend; farming breaks",
           "failingTest": "focusChain: destination in Waiting does not extend; repeated cooldown farming resets to 0",
-          "doneWhen": ["Reward Cooldown / Waiting state modeled"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "Reward Cooldown / Waiting state modeled"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Waiting/farming break is a common bug magnet"
         },
         {
           "id": "E04.T03",
           "title": "Focus Ready improves quality not eligibility",
           "failingTest": "focusChain: Normal vs FocusReady vs AttentionRequest change quality tier; all three can extend",
-          "doneWhen": ["quality tiers Poor/Good/Excellent/Perfect inputs wired"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "quality tiers Poor/Good/Excellent/Perfect inputs wired"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Quality tier vs eligibility subtlety"
         },
         {
           "id": "E04.T04",
           "title": "Decaying continue-window timeoutMs(L)",
           "failingTest": "focusChain: timeoutMs(L) matches 06 formula; expiry resets length to 0",
-          "doneWhen": ["injected clock expiry test"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "injected clock expiry test"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E04.T05",
           "title": "Completion bonus only when length ≥ min",
           "failingTest": "focusChain: ending length 1–2 pays no completion; ≥ min pays once; step bonuses not clawed back",
-          "doneWhen": ["completion bonus grants Dopamine+Score hooks"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "completion bonus grants Dopamine+Score hooks"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E04.T06",
           "title": "Burnout/Recovery do not break chain",
           "failingTest": "focusChain: enter Burnout/Recovery leaves length intact",
-          "doneWhen": ["independence asserted"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "independence asserted"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E04.T07",
           "title": "Hover alone does not change Active Window",
           "failingTest": "focusChain: pointer hover without valid interaction leaves ActiveWindow unchanged",
-          "doneWhen": ["valid-interaction gate"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "valid-interaction gate"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -251,37 +451,62 @@
       "id": "E05",
       "scope": "mvp",
       "title": "Input router",
-      "defs": ["02_gameplay_core.md", "12_coding_rules.md"],
+      "defs": [
+        "02_gameplay_core.md",
+        "12_coding_rules.md"
+      ],
       "summary": "Single router with priority layers. Action meanings beat navigation (R vs Y).",
       "tasks": [
         {
           "id": "E05.T01",
           "title": "Priority: text → Alert → Active Window → navigation",
           "failingTest": "input: same key consumed by higher layer never reaches lower layer",
-          "doneWhen": ["router in src/core/input"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "router in src/core/input"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E05.T02",
           "title": "R is always Repost; Y navigates to Echo",
           "failingTest": "input: KeyR routes Repost; KeyY navigates Echo; R never switches windows",
-          "doneWhen": ["nav map Q/W/E/Y/T", "action map L/N/R/…"],
-          "defs": ["02_gameplay_core.md"],
-          "pin": "R = Repost; Y = Echo navigation"
+          "doneWhen": [
+            "nav map Q/W/E/Y/T",
+            "action map L/N/R/…"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "pin": "R = Repost; Y = Echo navigation",
+          "effort": "M"
         },
         {
           "id": "E05.T03",
           "title": "Nav shortcuts count as Focus Change when they switch windows",
           "failingTest": "input: pressing T then Q updates ActiveWindow and can extend Focus Chain under normal rules",
-          "doneWhen": ["nav calls same valid-interaction path"],
-          "defs": ["02_gameplay_core.md"]
+          "doneWhen": [
+            "nav calls same valid-interaction path"
+          ],
+          "defs": [
+            "02_gameplay_core.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E05.T04",
           "title": "Pointer/touch paths share valid-interaction helpers",
           "failingTest": "input: pointer valid action and keyboard valid action both update ActiveWindow identically",
-          "doneWhen": ["no keyboard-only Focus Chain"],
-          "defs": ["02_gameplay_core.md", "12_coding_rules.md"]
+          "doneWhen": [
+            "no keyboard-only Focus Chain"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "12_coding_rules.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -289,29 +514,50 @@
       "id": "E06",
       "scope": "mvp",
       "title": "Difficulty multipliers",
-      "defs": ["05_difficulty.md", "06_balance.md"],
+      "defs": [
+        "05_difficulty.md",
+        "06_balance.md"
+      ],
       "summary": "Continuous difficulty curve. Changes density/pressure multipliers only — never controls, rules, or scoring formulas.",
       "tasks": [
         {
           "id": "E06.T01",
           "title": "Difficulty starts at minimum and rises continuously",
           "failingTest": "difficulty: value at t=0 is min; smooth curve toward max; no discrete level flags",
-          "doneWhen": ["src/core/difficulty module", "injected Match time"],
-          "defs": ["05_difficulty.md", "06_balance.md"]
+          "doneWhen": [
+            "src/core/difficulty module",
+            "injected Match time"
+          ],
+          "defs": [
+            "05_difficulty.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E06.T02",
           "title": "Difficulty feeds Dopamine drain mult only as multiplier",
           "failingTest": "difficulty: drainMult(t) within [MIN,MAX]; does not expose rule-changing switches",
-          "doneWhen": ["integration with dopamine.tick"],
-          "defs": ["05_difficulty.md", "02_gameplay_core.md"]
+          "doneWhen": [
+            "integration with dopamine.tick"
+          ],
+          "defs": [
+            "05_difficulty.md",
+            "02_gameplay_core.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E06.T03",
           "title": "Event-interval multipliers available to windows/minigames",
           "failingTest": "difficulty: eventIntervalMult decreases over time but stays > 0 (expert-survivable)",
-          "doneWhen": ["ports for window event generators"],
-          "defs": ["05_difficulty.md"]
+          "doneWhen": [
+            "ports for window event generators"
+          ],
+          "defs": [
+            "05_difficulty.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -319,43 +565,78 @@
       "id": "E07",
       "scope": "mvp",
       "title": "Burnout / Recovery / Telegraph",
-      "defs": ["02_gameplay_core.md", "06_balance.md"],
+      "defs": [
+        "02_gameplay_core.md",
+        "06_balance.md"
+      ],
       "summary": "Optional high-intensity Playing modifier driven by sustained APM. Escalating threshold after each Recovery.",
       "tasks": [
         {
           "id": "E07.T01",
           "title": "APM tracking with injected clock",
           "failingTest": "burnout: recorded actions yield APM over sliding window",
-          "doneWhen": ["APM helper in core"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "APM helper in core"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E07.T02",
           "title": "Telegraph when APM approaches threshold",
           "failingTest": "burnout: telegraph active at BURNOUT_TELEGRAPH_APM_RATIO without entering Burnout yet",
-          "doneWhen": ["telegraph flag for UI stickers"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "telegraph flag for UI stickers"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E07.T03",
           "title": "Enter Burnout after sustain above threshold",
           "failingTest": "burnout: sustained APM ≥ threshold for enter window activates Burnout modifier",
-          "doneWhen": ["reward mult flag while active"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "reward mult flag while active"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E07.T04",
           "title": "Exit Burnout → Recovery for fixed duration",
           "failingTest": "burnout: APM below exit sustain enters Recovery; Recovery lasts fixed ms then returns to Playing",
-          "doneWhen": ["Recovery increases drain via dopamine flag", "Burnout cannot retrigger during Recovery"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "Recovery increases drain via dopamine flag",
+            "Burnout cannot retrigger during Recovery"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Recovery drain + no-retrigger invariants"
         },
         {
           "id": "E07.T05",
           "title": "APM threshold escalates after each completed Recovery",
           "failingTest": "burnout: threshold permanently increases mid-Match after Recovery; never decreases",
-          "doneWhen": ["escalation uses 06 constants"],
-          "defs": ["02_gameplay_core.md", "06_balance.md"]
+          "doneWhen": [
+            "escalation uses 06 constants"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -363,36 +644,66 @@
       "id": "E08",
       "scope": "mvp",
       "title": "Content preload gate",
-      "defs": ["08_content.md", "06_balance.md", "10_tech.md"],
+      "defs": [
+        "08_content.md",
+        "06_balance.md",
+        "10_tech.md"
+      ],
       "summary": "Loading validates manifests and preloads starter pack. Providers default off. Fail closed.",
       "tasks": [
         {
           "id": "E08.T01",
           "title": "Manifest schema validation fail-closed",
           "failingTest": "content: missing required manifest/license fields rejects pack; does not call loadingComplete",
-          "doneWhen": ["loader in src/content/", "fixture manifests for tests"],
-          "defs": ["08_content.md"]
+          "doneWhen": [
+            "loader in src/content/",
+            "fixture manifests for tests"
+          ],
+          "defs": [
+            "08_content.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E08.T02",
           "title": "Starter-pack count gate from 06",
           "failingTest": "content: Playing blocked until starter-pack counts satisfied; then loadingComplete allowed",
-          "doneWhen": ["counts from balance/06"],
-          "defs": ["08_content.md", "06_balance.md"]
+          "doneWhen": [
+            "counts from balance/06"
+          ],
+          "defs": [
+            "08_content.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E08.T03",
           "title": "Injected RNG picks Minigame + layout shuffle at Loading",
           "failingTest": "content/session: with seeded rng, Minigame id and desktop shuffle are deterministic",
-          "doneWhen": ["session init values recorded for Match"],
-          "defs": ["02_gameplay_core.md", "07_layout.md", "04_gameplay_minigames.md"]
+          "doneWhen": [
+            "session init values recorded for Match"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "07_layout.md",
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E08.T04",
           "title": "Providers default disabled without env",
           "failingTest": "config: pixabay/pexels/jamendo enabled flags false by default",
-          "doneWhen": ["AppConfig shape from 10", ".env.example only"],
-          "defs": ["10_tech.md", "08_content.md"]
+          "doneWhen": [
+            "AppConfig shape from 10",
+            ".env.example only"
+          ],
+          "defs": [
+            "10_tech.md",
+            "08_content.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -400,36 +711,63 @@
       "id": "E09",
       "scope": "mvp",
       "title": "Layout shell + Dopamine bar",
-      "defs": ["07_layout.md", "11_testing_strategy.md"],
+      "defs": [
+        "07_layout.md",
+        "11_testing_strategy.md"
+      ],
       "summary": "Desktop masonry and mobile stack. Dopamine bar outside masonry. Alerts overlay. Structural assertions over pixels.",
       "tasks": [
         {
           "id": "E09.T01",
           "title": "Desktop slot model: five permanent windows + bar",
           "failingTest": "layout: desktop slots = Minigame+Loop+Pulse+Wave+Echo; DopamineBar reserved outside masonry; Alerts not a slot",
-          "doneWhen": ["pure layout model testable without DOM pixels"],
-          "defs": ["07_layout.md"]
+          "doneWhen": [
+            "pure layout model testable without DOM pixels"
+          ],
+          "defs": [
+            "07_layout.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Masonry slot model is layout SSOT in code"
         },
         {
           "id": "E09.T02",
           "title": "Desktop structural pairs + allowed shuffle",
           "failingTest": "layout: Loop always above Wave; Minigame L/R shuffle; Pulse/Echo swap; gutters applied",
-          "doneWhen": ["shuffle uses session rng output"],
-          "defs": ["07_layout.md"]
+          "doneWhen": [
+            "shuffle uses session rng output"
+          ],
+          "defs": [
+            "07_layout.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Structural pairs + shuffle constraints"
         },
         {
           "id": "E09.T03",
           "title": "Mobile: Minigame + exactly two services",
           "failingTest": "layout: mobile permanent count is 3; services chosen from {Loop,Pulse,Wave,Echo}; Loop-above-Wave if both picked",
-          "doneWhen": ["mobile stack model"],
-          "defs": ["07_layout.md"]
+          "doneWhen": [
+            "mobile stack model"
+          ],
+          "defs": [
+            "07_layout.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E09.T04",
           "title": "React layout smoke: roles/slot counts",
           "failingTest": "Layout.tsx: renders expected roles for desktop fixture; Dopamine bar present; Alerts portal root exists",
-          "doneWhen": ["Testing Library smoke", "CSS variables hook for palettes later"],
-          "defs": ["07_layout.md", "10_tech.md"]
+          "doneWhen": [
+            "Testing Library smoke",
+            "CSS variables hook for palettes later"
+          ],
+          "defs": [
+            "07_layout.md",
+            "10_tech.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -437,43 +775,78 @@
       "id": "E10",
       "scope": "mvp",
       "title": "Hub surfaces (Start Page / Loading / Game Over / Credits)",
-      "defs": ["02_gameplay_core.md", "09_game_feel.md", "13_credits_and_legal.md"],
+      "defs": [
+        "02_gameplay_core.md",
+        "09_game_feel.md",
+        "13_credits_and_legal.md"
+      ],
       "summary": "React hub modes driven by state machine. Credits Modal from store — not a full-page route.",
       "tasks": [
         {
           "id": "E10.T01",
           "title": "Start Page shows brand, how-to, Accessibility, Credits, PLAY",
           "failingTest": "StartPage: exposes PLAY control, Accessibility toggle, Credits link; no drain tick while mounted in StartPage state",
-          "doneWhen": ["wires play() to core"],
-          "defs": ["02_gameplay_core.md", "09_game_feel.md"]
+          "doneWhen": [
+            "wires play() to core"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "09_game_feel.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E10.T02",
           "title": "Accessibility Mode persists in localStorage",
           "failingTest": "a11y: toggle writes localStorage; reload reads same value",
-          "doneWhen": ["no account/backend"],
-          "defs": ["09_game_feel.md", "10_tech.md"]
+          "doneWhen": [
+            "no account/backend"
+          ],
+          "defs": [
+            "09_game_feel.md",
+            "10_tech.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E10.T03",
           "title": "Credits Modal opens from Start Page and lists store rows",
           "failingTest": "CreditsModal: opens from Credits link; renders entries from content/credits/store.json fixture; close returns to hub",
-          "doneWhen": ["scrollable modal", "does not start Match"],
-          "defs": ["13_credits_and_legal.md"]
+          "doneWhen": [
+            "scrollable modal",
+            "does not start Match"
+          ],
+          "defs": [
+            "13_credits_and_legal.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E10.T04",
           "title": "Loading splash shows until gate passes",
           "failingTest": "LoadingView: visible in Loading state; shows error UI on validation failure",
-          "doneWhen": ["hooks content gate"],
-          "defs": ["02_gameplay_core.md", "08_content.md"]
+          "doneWhen": [
+            "hooks content gate"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "08_content.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E10.T05",
           "title": "Game Over shows stats + PLAY AGAIN + hub path",
           "failingTest": "GameOver: renders Survival Time, Final Score, Highest Combo, Longest Focus Chain, Burnouts; PLAY AGAIN → Loading; hub → Start Page",
-          "doneWhen": ["Credits link available", "stats from Match summary"],
-          "defs": ["02_gameplay_core.md", "09_game_feel.md"]
+          "doneWhen": [
+            "Credits link available",
+            "stats from Match summary"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "09_game_feel.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -481,7 +854,11 @@
       "id": "E11",
       "scope": "mvp",
       "title": "Asset-agnostic minigame runtime",
-      "defs": ["04_gameplay_minigames.md", "10_tech.md", "14_visual_assets.md"],
+      "defs": [
+        "04_gameplay_minigames.md",
+        "10_tech.md",
+        "14_visual_assets.md"
+      ],
       "summary": "PIN: runtime loads sprites/textures/skins via manifests and stable ids. Gameplay logic must not hard-code art dimensions, palette, or cutout construction.",
       "pin": "Minigame runtime is asset-agnostic — restyle later by swapping files + manifests",
       "tasks": [
@@ -489,31 +866,58 @@
           "id": "E11.T01",
           "title": "Minigame manifest loader resolves stable asset ids",
           "failingTest": "minigames/assets: loadManifest(id) returns skin/sprite ids without baking pixel sizes into rules API",
-          "doneWhen": ["port: AssetBundle by id", "fixture manifest for lane_defender"],
-          "defs": ["04_gameplay_minigames.md"],
-          "pin": "asset-agnostic"
+          "doneWhen": [
+            "port: AssetBundle by id",
+            "fixture manifest for lane_defender"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "pin": "asset-agnostic",
+          "effort": "L",
+          "effortWhy": "Asset-agnostic pin — wrong shape is expensive later"
         },
         {
           "id": "E11.T02",
           "title": "Minigame host mounts selected id; reports actions into core",
           "failingTest": "minigames/host: given session minigame id, host constructs that game; onValidAction reaches Focus Chain/Dopamine ports",
-          "doneWhen": ["canvas host shell", "failure callback resets minigame only"],
-          "defs": ["04_gameplay_minigames.md", "10_tech.md"]
+          "doneWhen": [
+            "canvas host shell",
+            "failure callback resets minigame only"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md",
+            "10_tech.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Host/core ports for all minigames"
         },
         {
           "id": "E11.T03",
           "title": "Minigame failure preserves Match resources",
           "failingTest": "minigames: onFailure resets local state only; Dopamine, score, Focus Chain, difficulty unchanged",
-          "doneWhen": ["shared failure contract for all three games"],
-          "defs": ["04_gameplay_minigames.md", "11_testing_strategy.md"]
+          "doneWhen": [
+            "shared failure contract for all three games"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md",
+            "11_testing_strategy.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E11.T04",
           "title": "Skin swap test: alternate manifest does not change rules",
           "failingTest": "minigames/assets: swapping fixture skin manifest leaves lane count / failure rules assertions green",
-          "doneWhen": ["documents restyle path for later version"],
-          "defs": ["04_gameplay_minigames.md"],
-          "pin": "asset-agnostic"
+          "doneWhen": [
+            "documents restyle path for later version"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "pin": "asset-agnostic",
+          "effort": "L",
+          "effortWhy": "Proves restyle-without-rewrite pin"
         }
       ]
     },
@@ -521,51 +925,92 @@
       "id": "E12",
       "scope": "mvp",
       "title": "Lane Defender",
-      "defs": ["04_gameplay_minigames.md", "06_balance.md"],
+      "defs": [
+        "04_gameplay_minigames.md",
+        "06_balance.md"
+      ],
       "summary": "First full minigame. Three lanes, auto-fire, enemies/hazards/pickups/bosses. Logic tested without pixel oracles.",
       "tasks": [
         {
           "id": "E12.T01",
           "title": "Three lanes + instantaneous lane change",
           "failingTest": "laneDefender: player occupies exactly one of L/C/R; changeLane is instantaneous",
-          "doneWhen": ["pure sim module"],
-          "defs": ["04_gameplay_minigames.md"]
+          "doneWhen": [
+            "pure sim module"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E12.T02",
           "title": "Enemies advance and die in one hit; reach = fail",
           "failingTest": "laneDefender: normal enemy destroyed on hit; enemy reaching player triggers failure reset",
-          "doneWhen": ["auto-fire model", "spawn with injected rng"],
-          "defs": ["04_gameplay_minigames.md"]
+          "doneWhen": [
+            "auto-fire model",
+            "spawn with injected rng"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Combat sim + failure reset contract"
         },
         {
           "id": "E12.T03",
           "title": "Hazards counters and Barrier semantics",
           "failingTest": "laneDefender: Barrier negative counter increments on shots; negative on reach = fail; positive blocks N enemies",
-          "doneWhen": ["Mine/Barrier types"],
-          "defs": ["04_gameplay_minigames.md"]
+          "doneWhen": [
+            "Mine/Barrier types"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Barrier counter semantics nuanced"
         },
         {
           "id": "E12.T04",
           "title": "Boss integrity + rewards hooks",
           "failingTest": "laneDefender: boss requires multi-hit integrity; defeat grants score/Dopamine/temp mult hooks (not player health)",
-          "doneWhen": ["Attention Request signal on boss spawn"],
-          "defs": ["04_gameplay_minigames.md"]
+          "doneWhen": [
+            "Attention Request signal on boss spawn"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Boss integrity ≠ player health language"
         },
         {
           "id": "E12.T05",
           "title": "Pickups expire; difficulty densifies spawns",
           "failingTest": "laneDefender: pickup despawns after TTL; higher difficultyMult increases spawn density",
-          "doneWhen": ["wired to difficulty port"],
-          "defs": ["04_gameplay_minigames.md", "05_difficulty.md"]
+          "doneWhen": [
+            "wired to difficulty port"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md",
+            "05_difficulty.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E12.T06",
           "title": "Canvas adapter letterboxes playfield; uses asset ids",
           "failingTest": "laneDefender/view: adapter requests assets by stable id; sim tick independent of sprite pixel size",
-          "doneWhen": ["RAF loop thin adapter", "1/2/3 + pointer lane controls"],
-          "defs": ["04_gameplay_minigames.md", "09_game_feel.md"],
-          "pin": "asset-agnostic"
+          "doneWhen": [
+            "RAF loop thin adapter",
+            "1/2/3 + pointer lane controls"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md",
+            "09_game_feel.md"
+          ],
+          "pin": "asset-agnostic",
+          "effort": "L",
+          "effortWhy": "Canvas adapter must not bake art into rules"
         }
       ]
     },
@@ -573,36 +1018,61 @@
       "id": "E13",
       "scope": "mvp",
       "title": "Loop window",
-      "defs": ["03_gameplay_windows.md", "06_balance.md"],
+      "defs": [
+        "03_gameplay_windows.md",
+        "06_balance.md"
+      ],
       "summary": "Short-form vertical video. Clip loops until Next. Core actions N/L/R with rewards and Attention Requests.",
       "tasks": [
         {
           "id": "E13.T01",
           "title": "Clip loops until player Next",
           "failingTest": "loop: ended media does not auto-advance; Next loads different clip from pack",
-          "doneWhen": ["window module + media port"],
-          "defs": ["03_gameplay_windows.md"]
+          "doneWhen": [
+            "window module + media port"
+          ],
+          "defs": [
+            "03_gameplay_windows.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E13.T02",
           "title": "Like / Repost grant Dopamine+Score via tables",
           "failingTest": "loop: Like and Repost call reward table; diminishing applies on same target",
-          "doneWhen": ["shortcuts L/R/N"],
-          "defs": ["03_gameplay_windows.md", "06_balance.md"]
+          "doneWhen": [
+            "shortcuts L/R/N"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E13.T03",
           "title": "Attention Request opportunity expires without penalty",
           "failingTest": "loop: interactive opportunity expires; ignore does not subtract Dopamine",
-          "doneWhen": ["Attention Request state"],
-          "defs": ["03_gameplay_windows.md"]
+          "doneWhen": [
+            "Attention Request state"
+          ],
+          "defs": [
+            "03_gameplay_windows.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E13.T04",
           "title": "Window states Normal/Waiting/Focus Ready",
           "failingTest": "loop: leaving starts Reward Cooldown (Waiting); expiry → Focus Ready",
-          "doneWhen": ["integrates Focus Chain destination rules"],
-          "defs": ["03_gameplay_windows.md", "02_gameplay_core.md"]
+          "doneWhen": [
+            "integrates Focus Chain destination rules"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "02_gameplay_core.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -610,36 +1080,64 @@
       "id": "E14",
       "scope": "mvp",
       "title": "Pulse window",
-      "defs": ["03_gameplay_windows.md", "06_balance.md"],
+      "defs": [
+        "03_gameplay_windows.md",
+        "06_balance.md"
+      ],
       "summary": "Microblogging. Publish/reply/like/repost. Text input priority for Enter publish.",
       "tasks": [
         {
           "id": "E14.T01",
           "title": "Feed renders posts from content pack",
           "failingTest": "pulse: loads posts fixture; timeline non-empty in Normal state",
-          "doneWhen": ["uses content/pulse fixtures"],
-          "defs": ["03_gameplay_windows.md", "08_content.md"]
+          "doneWhen": [
+            "uses content/pulse fixtures"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "08_content.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E14.T02",
           "title": "Like / Repost / Reply / Create Post actions",
           "failingTest": "pulse: L/R/C/P paths grant rewards per table; Create Post then Enter publishes",
-          "doneWhen": ["text-input priority claims Enter"],
-          "defs": ["03_gameplay_windows.md", "02_gameplay_core.md"]
+          "doneWhen": [
+            "text-input priority claims Enter"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "02_gameplay_core.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E14.T03",
           "title": "Mention / trend Attention Requests",
           "failingTest": "pulse: mention event raises Attention Request; respond before expiry grants bonus; ignore no Dopamine penalty",
-          "doneWhen": ["event generator interval uses difficulty mult"],
-          "defs": ["03_gameplay_windows.md", "05_difficulty.md"]
+          "doneWhen": [
+            "event generator interval uses difficulty mult"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "05_difficulty.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E14.T04",
           "title": "Spam/ads reward 0 Dopamine when present",
           "failingTest": "pulse: marked spam/ad interactions grant 0 Dopamine (score rules per 06)",
-          "doneWhen": ["guards farming"],
-          "defs": ["03_gameplay_windows.md", "06_balance.md", "11_testing_strategy.md"]
+          "doneWhen": [
+            "guards farming"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "06_balance.md",
+            "11_testing_strategy.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -647,38 +1145,69 @@
       "id": "E15",
       "scope": "mvp",
       "title": "Wave window (Discovery ≠ Anticipation)",
-      "defs": ["03_gameplay_windows.md", "02_gameplay_core.md", "06_balance.md", "11_testing_strategy.md"],
+      "defs": [
+        "03_gameplay_windows.md",
+        "02_gameplay_core.md",
+        "06_balance.md",
+        "11_testing_strategy.md"
+      ],
       "summary": "Music bed. Discovery on unheard tracks; Anticipation while waiting for Song Moment. Systems must stay distinct.",
       "tasks": [
         {
           "id": "E15.T01",
           "title": "Continuous playback + Next song",
           "failingTest": "wave: track auto-advances on end; N skips to next",
-          "doneWhen": ["audio port integration"],
-          "defs": ["03_gameplay_windows.md"]
+          "doneWhen": [
+            "audio port integration"
+          ],
+          "defs": [
+            "03_gameplay_windows.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E15.T02",
           "title": "Discovery Bonus on unheard tracks only",
           "failingTest": "wave: skip/accept onto unheard track grants DiscoveryBonus; already-heard grants none (DISCOVERY_HEARD_TRACK_MULT)",
-          "doneWhen": ["heard-set per Match", "Discovery API ≠ Anticipation"],
-          "defs": ["03_gameplay_windows.md", "06_balance.md"],
-          "pin": "Discovery ≠ Anticipation"
+          "doneWhen": [
+            "heard-set per Match",
+            "Discovery API ≠ Anticipation"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "06_balance.md"
+          ],
+          "pin": "Discovery ≠ Anticipation",
+          "effort": "XL",
+          "effortWhy": "Discovery pin — farming already-heard must fail tests"
         },
         {
           "id": "E15.T03",
           "title": "Anticipation toward Song Moment",
           "failingTest": "wave: staying to Song Moment builds AnticipationBonus; landing pays off; leave/expire resets; never conflated with Discovery fixtures",
-          "doneWhen": ["separate fixtures for Discovery vs Anticipation in tests"],
-          "defs": ["03_gameplay_windows.md", "02_gameplay_core.md", "11_testing_strategy.md"],
-          "pin": "Discovery ≠ Anticipation"
+          "doneWhen": [
+            "separate fixtures for Discovery vs Anticipation in tests"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "02_gameplay_core.md",
+            "11_testing_strategy.md"
+          ],
+          "pin": "Discovery ≠ Anticipation",
+          "effort": "XL",
+          "effortWhy": "Anticipation pin — separate fixtures from Discovery"
         },
         {
           "id": "E15.T04",
           "title": "Recommendations as Attention Requests",
           "failingTest": "wave: recommendation event is Attention Request; accept/ignore paths; no direct Dopamine penalty on ignore",
-          "doneWhen": ["Like song L reward path"],
-          "defs": ["03_gameplay_windows.md"]
+          "doneWhen": [
+            "Like song L reward path"
+          ],
+          "defs": [
+            "03_gameplay_windows.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -686,29 +1215,49 @@
       "id": "E16",
       "scope": "mvp",
       "title": "Echo window (core)",
-      "defs": ["03_gameplay_windows.md", "06_balance.md"],
+      "defs": [
+        "03_gameplay_windows.md",
+        "06_balance.md"
+      ],
       "summary": "Long-form video/podcast competitor. MVP: playback, react/subscribe, sparse high-value moments, Focus Chain participation. Deep catalog variety can expand later.",
       "tasks": [
         {
           "id": "E16.T01",
           "title": "Playback + Next content",
           "failingTest": "echo: N advances content; playback progress advances with injected media clock",
-          "doneWhen": ["window slot works on desktop+mobile"],
-          "defs": ["03_gameplay_windows.md"]
+          "doneWhen": [
+            "window slot works on desktop+mobile"
+          ],
+          "defs": [
+            "03_gameplay_windows.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E16.T02",
           "title": "React / Subscribe rewards",
           "failingTest": "echo: L react and S subscribe grant table rewards; diminishing on same target",
-          "doneWhen": ["shortcuts L/S/N"],
-          "defs": ["03_gameplay_windows.md", "06_balance.md"]
+          "doneWhen": [
+            "shortcuts L/S/N"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "06_balance.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E16.T03",
           "title": "Highlight moment Anticipation path",
           "failingTest": "echo: waiting for highlight builds AnticipationBonus; distinct from Wave Discovery fixtures",
-          "doneWhen": ["sparse Attention Request moments"],
-          "defs": ["03_gameplay_windows.md", "02_gameplay_core.md"]
+          "doneWhen": [
+            "sparse Attention Request moments"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "02_gameplay_core.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -716,36 +1265,65 @@
       "id": "E17",
       "scope": "mvp",
       "title": "Alerts (core)",
-      "defs": ["03_gameplay_windows.md", "02_gameplay_core.md", "06_balance.md"],
+      "defs": [
+        "03_gameplay_windows.md",
+        "02_gameplay_core.md",
+        "06_balance.md"
+      ],
       "summary": "Overlay notifications. Not a layout slot. Open can extend Focus Chain; spam rewards 0. Esc dismisses.",
       "tasks": [
         {
           "id": "E17.T01",
           "title": "Alert overlay above layout; not a masonry slot",
           "failingTest": "alerts: visible alert renders in overlay root; layout slot count unchanged",
-          "doneWhen": ["portal/overlay integration"],
-          "defs": ["03_gameplay_windows.md", "07_layout.md"]
+          "doneWhen": [
+            "portal/overlay integration"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "07_layout.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E17.T02",
           "title": "A opens highest priority; Esc dismisses",
           "failingTest": "alerts: KeyA opens top alert; Esc dismisses active; Alert layer beats Active Window shortcuts",
-          "doneWhen": ["priority with input router"],
-          "defs": ["02_gameplay_core.md", "03_gameplay_windows.md"]
+          "doneWhen": [
+            "priority with input router"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "03_gameplay_windows.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E17.T03",
           "title": "Open can extend Focus Chain; spam = 0 Dopamine",
           "failingTest": "alerts: opening eligible alert can extend Focus Chain; spam category grants 0 Dopamine",
-          "doneWhen": ["uses templates from content/alerts"],
-          "defs": ["03_gameplay_windows.md", "06_balance.md", "11_testing_strategy.md"]
+          "doneWhen": [
+            "uses templates from content/alerts"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "06_balance.md",
+            "11_testing_strategy.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E17.T04",
           "title": "Ignore/dismiss never subtracts Dopamine",
           "failingTest": "alerts: dismiss/expire paths do not call any Dopamine subtraction",
-          "doneWhen": ["opportunity loss only"],
-          "defs": ["03_gameplay_windows.md", "02_gameplay_core.md"]
+          "doneWhen": [
+            "opportunity loss only"
+          ],
+          "defs": [
+            "03_gameplay_windows.md",
+            "02_gameplay_core.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -753,37 +1331,63 @@
       "id": "E18",
       "scope": "mvp",
       "title": "Block Cascade",
-      "defs": ["04_gameplay_minigames.md", "06_balance.md"],
+      "defs": [
+        "04_gameplay_minigames.md",
+        "06_balance.md"
+      ],
       "summary": "Second minigame. Endless tetromino puzzle. Overflow resets minigame only. Asset-agnostic skins via skin_blocks.json.",
       "tasks": [
         {
           "id": "E18.T01",
           "title": "Board + seven tetrominoes spawn",
           "failingTest": "blockCascade: board dimensions fixed; piece bag includes I/J/L/O/S/T/Z",
-          "doneWhen": ["pure board sim"],
-          "defs": ["04_gameplay_minigames.md"]
+          "doneWhen": [
+            "pure board sim"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Board/piece model foundation"
         },
         {
           "id": "E18.T02",
           "title": "Move/rotate/soft drop; no hard drop",
           "failingTest": "blockCascade: controls move/rotate/softDrop only; hard drop API absent",
-          "doneWhen": ["keyboard + swipe ports"],
-          "defs": ["04_gameplay_minigames.md"]
+          "doneWhen": [
+            "keyboard + swipe ports"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E18.T03",
           "title": "Line clears grant rewards; overflow resets minigame only",
           "failingTest": "blockCascade: clearing N lines grants score/Dopamine hooks; stack overflow triggers failure reset without touching Match Dopamine",
-          "doneWhen": ["shared failure contract from E11"],
-          "defs": ["04_gameplay_minigames.md"]
+          "doneWhen": [
+            "shared failure contract from E11"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Overflow vs Match resources"
         },
         {
           "id": "E18.T04",
           "title": "Fall speed scales with difficulty; skin from manifest ids",
           "failingTest": "blockCascade: higher difficulty increases fall speed; renderer resolves block skins by id from manifest (not hard-coded hex in rules)",
-          "doneWhen": ["uses content/minigames/block_cascade/skin_blocks.json ids"],
-          "defs": ["04_gameplay_minigames.md", "05_difficulty.md"],
-          "pin": "asset-agnostic"
+          "doneWhen": [
+            "uses content/minigames/block_cascade/skin_blocks.json ids"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md",
+            "05_difficulty.md"
+          ],
+          "pin": "asset-agnostic",
+          "effort": "M"
         }
       ]
     },
@@ -791,37 +1395,61 @@
       "id": "E19",
       "scope": "mvp",
       "title": "Endless Runner",
-      "defs": ["04_gameplay_minigames.md", "06_balance.md"],
+      "defs": [
+        "04_gameplay_minigames.md",
+        "06_balance.md"
+      ],
       "summary": "Third minigame. Auto-run, lane selection only. Collision resets minigame only.",
       "tasks": [
         {
           "id": "E19.T01",
           "title": "Auto-forward + three-lane selection",
           "failingTest": "endlessRunner: player advances automatically; only lane selection is controlled",
-          "doneWhen": ["pure sim"],
-          "defs": ["04_gameplay_minigames.md"]
+          "doneWhen": [
+            "pure sim"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E19.T02",
           "title": "Obstacles collide → minigame reset only",
           "failingTest": "endlessRunner: touching obstacle fails minigame; Match Dopamine/score/chain unchanged",
-          "doneWhen": ["static/moving/gap types"],
-          "defs": ["04_gameplay_minigames.md"]
+          "doneWhen": [
+            "static/moving/gap types"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E19.T03",
           "title": "Collectibles + rare pickup Attention Request",
           "failingTest": "endlessRunner: collectibles grant rewards; rare pickup raises Attention Request signal; TTL expiry",
-          "doneWhen": ["difficulty densifies obstacles/collectibles"],
-          "defs": ["04_gameplay_minigames.md", "05_difficulty.md"]
+          "doneWhen": [
+            "difficulty densifies obstacles/collectibles"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md",
+            "05_difficulty.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E19.T04",
           "title": "Canvas adapter uses asset ids",
           "failingTest": "endlessRunner/view: draws via stable asset ids; rules unaffected by texture swap fixture",
-          "doneWhen": ["1/2/3 + swipe controls"],
-          "defs": ["04_gameplay_minigames.md"],
-          "pin": "asset-agnostic"
+          "doneWhen": [
+            "1/2/3 + swipe controls"
+          ],
+          "defs": [
+            "04_gameplay_minigames.md"
+          ],
+          "pin": "asset-agnostic",
+          "effort": "M"
         }
       ]
     },
@@ -829,29 +1457,49 @@
       "id": "E20",
       "scope": "mvp",
       "title": "Audio mixer stub + Game Over silence",
-      "defs": ["09_game_feel.md", "10_tech.md"],
+      "defs": [
+        "09_game_feel.md",
+        "10_tech.md"
+      ],
       "summary": "Web Audio bus stub. Unlock on PLAY. Game Over hard silence. Full muffling choreography can deepen post-MVP.",
       "tasks": [
         {
           "id": "E20.T01",
           "title": "AudioContext unlock on PLAY gesture",
           "failingTest": "audio: unlock() called from PLAY path; before unlock, graph not required to run",
-          "doneWhen": ["mixer module + fake AudioContext"],
-          "defs": ["10_tech.md"]
+          "doneWhen": [
+            "mixer module + fake AudioContext"
+          ],
+          "defs": [
+            "10_tech.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E20.T02",
           "title": "Bus stub records duck/muffle messages",
           "failingTest": "audio: setBusGain/muffle recordable on fake graph",
-          "doneWhen": ["buses for SFX/music/voice placeholders"],
-          "defs": ["09_game_feel.md", "10_tech.md"]
+          "doneWhen": [
+            "buses for SFX/music/voice placeholders"
+          ],
+          "defs": [
+            "09_game_feel.md",
+            "10_tech.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E20.T03",
           "title": "Game Over suspends/stops graph (silence)",
           "failingTest": "audio: on GameOver, mixer silence() suspends/stops; no beds continue",
-          "doneWhen": ["wired from state machine"],
-          "defs": ["02_gameplay_core.md", "09_game_feel.md"]
+          "doneWhen": [
+            "wired from state machine"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "09_game_feel.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -859,36 +1507,63 @@
       "id": "E21",
       "scope": "mvp",
       "title": "Baseline stickers + Accessibility Mode",
-      "defs": ["09_game_feel.md", "07_layout.md", "02_gameplay_core.md"],
+      "defs": [
+        "09_game_feel.md",
+        "07_layout.md",
+        "02_gameplay_core.md"
+      ],
       "summary": "Readable Focus Chain / Combo stickers over Active Window. A11y reduces motion intensity. Not full feel polish.",
       "tasks": [
         {
           "id": "E21.T01",
           "title": "Focus Chain step sticker host",
           "failingTest": "stickers: on Focus Chain +1, sticker host receives chain length event; does not resize masonry slots",
-          "doneWhen": ["HUD sticker layer"],
-          "defs": ["09_game_feel.md", "07_layout.md"]
+          "doneWhen": [
+            "HUD sticker layer"
+          ],
+          "defs": [
+            "09_game_feel.md",
+            "07_layout.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E21.T02",
           "title": "Combo sticker distinct from Focus Chain",
           "failingTest": "stickers: Combo multiplier events use Combo type; never aliased to FocusChain in API",
-          "doneWhen": ["Active Window anchoring"],
-          "defs": ["09_game_feel.md", "CONTEXT.md"]
+          "doneWhen": [
+            "Active Window anchoring"
+          ],
+          "defs": [
+            "09_game_feel.md",
+            "CONTEXT.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E21.T03",
           "title": "Accessibility Mode reduces motion intensity path",
           "failingTest": "stickers/fx: when Accessibility Mode on, heavy shake/pulse path disabled or opacity-only",
-          "doneWhen": ["reads persisted a11y flag"],
-          "defs": ["09_game_feel.md"]
+          "doneWhen": [
+            "reads persisted a11y flag"
+          ],
+          "defs": [
+            "09_game_feel.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E21.T04",
           "title": "Burnout telegraph + Recovery cues as stickers",
           "failingTest": "stickers: telegraph/recovery flags from E07 surface as short-lived stickers",
-          "doneWhen": ["no permanent chrome band"],
-          "defs": ["09_game_feel.md", "02_gameplay_core.md"]
+          "doneWhen": [
+            "no permanent chrome band"
+          ],
+          "defs": [
+            "09_game_feel.md",
+            "02_gameplay_core.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -896,29 +1571,50 @@
       "id": "E22",
       "scope": "post-mvp",
       "title": "Full game-feel polish",
-      "defs": ["09_game_feel.md"],
+      "defs": [
+        "09_game_feel.md"
+      ],
       "summary": "Full sticker choreography, particles, screen flash tiers, focus muffling curves, Burnout visual grade. After MVP baseline feel.",
       "tasks": [
         {
           "id": "E22.T01",
           "title": "Focus Chain visual progression tiers (3/5/10/15/20+)",
           "failingTest": "feel: chain length thresholds emit escalating FX intents (popup→particles→flash→shake→color)",
-          "doneWhen": ["matches 02 visual progression examples without pixel snapshots as oracle"],
-          "defs": ["02_gameplay_core.md", "09_game_feel.md"]
+          "doneWhen": [
+            "matches 02 visual progression examples without pixel snapshots as oracle"
+          ],
+          "defs": [
+            "02_gameplay_core.md",
+            "09_game_feel.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Feel tiers without pixel oracles"
         },
         {
           "id": "E22.T02",
           "title": "Diminishing returns flatten Combo sticker juiciness",
           "failingTest": "feel: repeated same-window combo intensity decreases while remaining readable",
-          "doneWhen": ["boring curve wired to diminishing mult"],
-          "defs": ["09_game_feel.md", "07_layout.md"]
+          "doneWhen": [
+            "boring curve wired to diminishing mult"
+          ],
+          "defs": [
+            "09_game_feel.md",
+            "07_layout.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E22.T03",
           "title": "Focus muffling + Burnout no-muffle + Recovery extra muffling",
           "failingTest": "audio/feel: bus muffling states follow 09 rules per Playing/Burnout/Recovery",
-          "doneWhen": ["uses real Web Audio filters with fakes in tests"],
-          "defs": ["09_game_feel.md"]
+          "doneWhen": [
+            "uses real Web Audio filters with fakes in tests"
+          ],
+          "defs": [
+            "09_game_feel.md"
+          ],
+          "effort": "L",
+          "effortWhy": "Audio muffling state matrix"
         }
       ]
     },
@@ -926,22 +1622,37 @@
       "id": "E23",
       "scope": "post-mvp",
       "title": "SFX production + cue integration",
-      "defs": ["15_sfx_audio.md", "09_game_feel.md"],
+      "defs": [
+        "15_sfx_audio.md",
+        "09_game_feel.md"
+      ],
       "summary": "Produce missing .ogg cues from brief; wire manifest ids into mixer. Parallel-safe with coding once paths do not collide.",
       "tasks": [
         {
           "id": "E23.T01",
           "title": "Generate or license missing .ogg cues per manifest",
           "failingTest": "sfx: content/sfx/manifest.json every required cue resolves to an existing file in tests/CI asset check",
-          "doneWhen": ["credits rows appended for third-party audio"],
-          "defs": ["15_sfx_audio.md", "13_credits_and_legal.md"]
+          "doneWhen": [
+            "credits rows appended for third-party audio"
+          ],
+          "defs": [
+            "15_sfx_audio.md",
+            "13_credits_and_legal.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E23.T02",
           "title": "Play cues on domain events via stable ids",
           "failingTest": "sfx: Focus Chain step / alert open / minigame hit dispatch named cue ids through mixer",
-          "doneWhen": ["no hard-coded filenames in core"],
-          "defs": ["15_sfx_audio.md", "10_tech.md"]
+          "doneWhen": [
+            "no hard-coded filenames in core"
+          ],
+          "defs": [
+            "15_sfx_audio.md",
+            "10_tech.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -949,22 +1660,35 @@
       "id": "E24",
       "scope": "post-mvp",
       "title": "Media pack expansion + credits rows",
-      "defs": ["08_content.md", "13_credits_and_legal.md"],
+      "defs": [
+        "08_content.md",
+        "13_credits_and_legal.md"
+      ],
       "summary": "Fill Wave/Loop/Echo drop zones beyond starter fixtures; keep attribution in credits store.",
       "tasks": [
         {
           "id": "E24.T01",
           "title": "Populate Loop clips + Wave high/boring + Echo media with manifests",
           "failingTest": "content: starter + expanded pack counts validate; license/attribution fields present",
-          "doneWhen": ["drop zones no longer empty"],
-          "defs": ["08_content.md"]
+          "doneWhen": [
+            "drop zones no longer empty"
+          ],
+          "defs": [
+            "08_content.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E24.T02",
           "title": "Credits store rows for every third-party asset",
           "failingTest": "credits: store.json includes a row for each manifest-attributed asset in expanded packs",
-          "doneWhen": ["human checklist in 13 still required before release"],
-          "defs": ["13_credits_and_legal.md"]
+          "doneWhen": [
+            "human checklist in 13 still required before release"
+          ],
+          "defs": [
+            "13_credits_and_legal.md"
+          ],
+          "effort": "S"
         }
       ]
     },
@@ -972,22 +1696,38 @@
       "id": "E25",
       "scope": "post-mvp",
       "title": "Optional media APIs",
-      "defs": ["08_content.md", "10_tech.md", "13_credits_and_legal.md"],
+      "defs": [
+        "08_content.md",
+        "10_tech.md",
+        "13_credits_and_legal.md"
+      ],
       "summary": "Pixabay/Pexels/Jamendo only with keys + legal OK. Default remains local-first.",
       "tasks": [
         {
           "id": "E25.T01",
           "title": "Provider clients gated by enabled flags + env keys",
           "failingTest": "providers: when enabled=false, no network; when enabled without key, fail closed with clear error",
-          "doneWhen": ["secrets never committed"],
-          "defs": ["10_tech.md", "08_content.md"]
+          "doneWhen": [
+            "secrets never committed"
+          ],
+          "defs": [
+            "10_tech.md",
+            "08_content.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E25.T02",
           "title": "Fetched items normalize into content pack + credits",
           "failingTest": "providers: normalized item carries license/attribution into credits store shape",
-          "doneWhen": ["legal checklist acknowledged"],
-          "defs": ["08_content.md", "13_credits_and_legal.md"]
+          "doneWhen": [
+            "legal checklist acknowledged"
+          ],
+          "defs": [
+            "08_content.md",
+            "13_credits_and_legal.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -995,15 +1735,24 @@
       "id": "E26",
       "scope": "post-mvp",
       "title": "Playwright E2E smoke",
-      "defs": ["11_testing_strategy.md", "10_tech.md"],
+      "defs": [
+        "11_testing_strategy.md",
+        "10_tech.md"
+      ],
       "summary": "Optional smoke after Playing shell exists. Not a substitute for core unit tests.",
       "tasks": [
         {
           "id": "E26.T01",
           "title": "Smoke: Start Page → PLAY → Loading → Playing visible",
           "failingTest": "e2e: headed/headless Playwright path reaches Playing landmark",
-          "doneWhen": ["optional CI job", "does not start before core green"],
-          "defs": ["11_testing_strategy.md"]
+          "doneWhen": [
+            "optional CI job",
+            "does not start before core green"
+          ],
+          "defs": [
+            "11_testing_strategy.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -1011,22 +1760,38 @@
       "id": "E27",
       "scope": "post-mvp",
       "title": "Deferred visual polish",
-      "defs": ["_PINS.md", "09_game_feel.md", "14_visual_assets.md"],
+      "defs": [
+        "_PINS.md",
+        "09_game_feel.md",
+        "14_visual_assets.md"
+      ],
       "summary": "Owner-deferred from asset pass: wordmark kerning; animated Start Page stickers with a11y path.",
       "tasks": [
         {
           "id": "E27.T01",
           "title": "Wordmark P→A kerning fix + WebP re-export",
           "failingTest": "brand: visual review checklist item for title-dopamine kerning signed off (manual) / SVG spacing assertion if added",
-          "doneWhen": ["content/brand/title-dopamine.* updated"],
-          "defs": ["_PINS.md"]
+          "doneWhen": [
+            "content/brand/title-dopamine.* updated"
+          ],
+          "defs": [
+            "_PINS.md"
+          ],
+          "effort": "S"
         },
         {
           "id": "E27.T02",
           "title": "Start Page floating stickers animate like arcade stickers",
           "failingTest": "startPage: background stickers pop/fade via motion path; Accessibility Mode uses opacity-only",
-          "doneWhen": ["reuses Phase B sticker motion language", "secondary to title+PLAY"],
-          "defs": ["_PINS.md", "09_game_feel.md"]
+          "doneWhen": [
+            "reuses Phase B sticker motion language",
+            "secondary to title+PLAY"
+          ],
+          "defs": [
+            "_PINS.md",
+            "09_game_feel.md"
+          ],
+          "effort": "M"
         }
       ]
     },
@@ -1034,22 +1799,36 @@
       "id": "E28",
       "scope": "post-mvp",
       "title": "Balance playtest passes",
-      "defs": ["06_balance.md"],
+      "defs": [
+        "06_balance.md"
+      ],
       "summary": "Tune provisional constants after playable MVP. Update 06 only (SSOT); keep formula tests green.",
       "tasks": [
         {
           "id": "E28.T01",
           "title": "Ease-in early Match drain/event intervals",
           "failingTest": "balance: after tune, named constants still satisfy formula shape tests (Discovery≠Anticipation, no direct penalty)",
-          "doneWhen": ["06 updated in same PR as code constants"],
-          "defs": ["06_balance.md", "11_testing_strategy.md"]
+          "doneWhen": [
+            "06 updated in same PR as code constants"
+          ],
+          "defs": [
+            "06_balance.md",
+            "11_testing_strategy.md"
+          ],
+          "effort": "M"
         },
         {
           "id": "E28.T02",
           "title": "Late-Match pressure survivable for experts",
           "failingTest": "balance: difficulty max drain/event mults remain finite and >0; no discrete hard-fail flags",
-          "doneWhen": ["playtest notes linked in issue"],
-          "defs": ["05_difficulty.md", "06_balance.md"]
+          "doneWhen": [
+            "playtest notes linked in issue"
+          ],
+          "defs": [
+            "05_difficulty.md",
+            "06_balance.md"
+          ],
+          "effort": "M"
         }
       ]
     }

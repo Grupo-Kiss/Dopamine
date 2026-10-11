@@ -1,0 +1,2294 @@
+{
+  "mvpCounts": {
+    "S": 27,
+    "M": 51,
+    "L": 17,
+    "XL": 2
+  },
+  "postCounts": {
+    "S": 2,
+    "M": 10,
+    "L": 2,
+    "XL": 0
+  },
+  "epicPacksByPeak": [
+    {
+      "peak": "M",
+      "epics": [
+        {
+          "id": "E00",
+          "number": 18,
+          "title": "Scaffold & test harness",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E00.T01",
+              "number": 19,
+              "effort": "M",
+              "title": "pnpm + Vite + TS strict project boots",
+              "why": "Toolchain/scaffold choices stick; worth a careful pass"
+            },
+            {
+              "id": "E00.T02",
+              "number": 20,
+              "effort": "S",
+              "title": "React 19 app shell mounts without Match drain",
+              "why": null
+            },
+            {
+              "id": "E00.T03",
+              "number": 21,
+              "effort": "S",
+              "title": "Injected clock fake for domain tests",
+              "why": null
+            },
+            {
+              "id": "E00.T04",
+              "number": 22,
+              "effort": "S",
+              "title": "Injected RNG fake for Match picks",
+              "why": null
+            },
+            {
+              "id": "E00.T05",
+              "number": 23,
+              "effort": "M",
+              "title": "Media + AudioContext port fakes",
+              "why": null
+            },
+            {
+              "id": "E00.T06",
+              "number": 24,
+              "effort": "S",
+              "title": "CI script: lint + unit test + build stubs",
+              "why": null
+            }
+          ]
+        },
+        {
+          "id": "E01",
+          "number": 25,
+          "title": "Match state machine",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E01.T01",
+              "number": 26,
+              "effort": "M",
+              "title": "Boot lands on Start Page",
+              "why": "Defines state union shape used everywhere"
+            },
+            {
+              "id": "E01.T02",
+              "number": 27,
+              "effort": "S",
+              "title": "PLAY transitions Start Page → Loading",
+              "why": null
+            },
+            {
+              "id": "E01.T03",
+              "number": 28,
+              "effort": "M",
+              "title": "Loading success → Playing starts Match",
+              "why": null
+            },
+            {
+              "id": "E01.T04",
+              "number": 29,
+              "effort": "S",
+              "title": "Loading validation failure stays on Loading",
+              "why": null
+            },
+            {
+              "id": "E01.T05",
+              "number": 30,
+              "effort": "S",
+              "title": "Dopamine ≤ 0 → Game Over immediately",
+              "why": null
+            },
+            {
+              "id": "E01.T06",
+              "number": 31,
+              "effort": "S",
+              "title": "PLAY AGAIN → Loading; hub → Start Page",
+              "why": null
+            },
+            {
+              "id": "E01.T07",
+              "number": 32,
+              "effort": "M",
+              "title": "Playing can enter Burnout and Recovery modifiers",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "S",
+      "epics": [
+        {
+          "id": "E02",
+          "number": 33,
+          "title": "Balance constants module",
+          "peak": "S",
+          "mix": "S",
+          "tasks": [
+            {
+              "id": "E02.T01",
+              "number": 34,
+              "effort": "S",
+              "title": "Export Dopamine + drain named constants",
+              "why": null
+            },
+            {
+              "id": "E02.T02",
+              "number": 35,
+              "effort": "S",
+              "title": "Export Focus Chain + Burnout + Discovery/Anticipation constants",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "L",
+      "epics": [
+        {
+          "id": "E03",
+          "number": 36,
+          "title": "Dopamine system",
+          "peak": "L",
+          "mix": "S+M+L",
+          "tasks": [
+            {
+              "id": "E03.T01",
+              "number": 37,
+              "effort": "S",
+              "title": "Meter starts full; clamps to [MIN, MAX]",
+              "why": null
+            },
+            {
+              "id": "E03.T02",
+              "number": 38,
+              "effort": "M",
+              "title": "Passive drain uses difficulty × Recovery mult",
+              "why": null
+            },
+            {
+              "id": "E03.T03",
+              "number": 39,
+              "effort": "S",
+              "title": "Positive gain from interactions",
+              "why": null
+            },
+            {
+              "id": "E03.T04",
+              "number": 40,
+              "effort": "L",
+              "title": "Diminishing returns logarithmic floor",
+              "why": "Log falloff + reset rules easy to get wrong"
+            },
+            {
+              "id": "E03.T05",
+              "number": 41,
+              "effort": "L",
+              "title": "Anticipation builds and resets correctly",
+              "why": "Anticipation must stay distinct from Discovery"
+            },
+            {
+              "id": "E03.T06",
+              "number": 42,
+              "effort": "S",
+              "title": "No direct penalty subtraction API",
+              "why": null
+            }
+          ]
+        },
+        {
+          "id": "E04",
+          "number": 43,
+          "title": "Focus Chain",
+          "peak": "L",
+          "mix": "S+M+L",
+          "tasks": [
+            {
+              "id": "E04.T01",
+              "number": 44,
+              "effort": "L",
+              "title": "Valid Focus Change extends chain by 1",
+              "why": "Core skill expression; many edge cases"
+            },
+            {
+              "id": "E04.T02",
+              "number": 45,
+              "effort": "L",
+              "title": "Waiting destination does not extend; farming breaks",
+              "why": "Waiting/farming break is a common bug magnet"
+            },
+            {
+              "id": "E04.T03",
+              "number": 46,
+              "effort": "L",
+              "title": "Focus Ready improves quality not eligibility",
+              "why": "Quality tier vs eligibility subtlety"
+            },
+            {
+              "id": "E04.T04",
+              "number": 47,
+              "effort": "M",
+              "title": "Decaying continue-window timeoutMs(L)",
+              "why": null
+            },
+            {
+              "id": "E04.T05",
+              "number": 48,
+              "effort": "M",
+              "title": "Completion bonus only when length ≥ min",
+              "why": null
+            },
+            {
+              "id": "E04.T06",
+              "number": 49,
+              "effort": "S",
+              "title": "Burnout/Recovery do not break chain",
+              "why": null
+            },
+            {
+              "id": "E04.T07",
+              "number": 50,
+              "effort": "S",
+              "title": "Hover alone does not change Active Window",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "M",
+      "epics": [
+        {
+          "id": "E05",
+          "number": 51,
+          "title": "Input router",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E05.T01",
+              "number": 52,
+              "effort": "M",
+              "title": "Priority: text → Alert → Active Window → navigation",
+              "why": null
+            },
+            {
+              "id": "E05.T02",
+              "number": 53,
+              "effort": "M",
+              "title": "R is always Repost; Y navigates to Echo",
+              "why": null
+            },
+            {
+              "id": "E05.T03",
+              "number": 54,
+              "effort": "M",
+              "title": "Nav shortcuts count as Focus Change when they switch windows",
+              "why": null
+            },
+            {
+              "id": "E05.T04",
+              "number": 55,
+              "effort": "S",
+              "title": "Pointer/touch paths share valid-interaction helpers",
+              "why": null
+            }
+          ]
+        },
+        {
+          "id": "E06",
+          "number": 56,
+          "title": "Difficulty multipliers",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E06.T01",
+              "number": 57,
+              "effort": "M",
+              "title": "Difficulty starts at minimum and rises continuously",
+              "why": null
+            },
+            {
+              "id": "E06.T02",
+              "number": 58,
+              "effort": "S",
+              "title": "Difficulty feeds Dopamine drain mult only as multiplier",
+              "why": null
+            },
+            {
+              "id": "E06.T03",
+              "number": 59,
+              "effort": "S",
+              "title": "Event-interval multipliers available to windows/minigames",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "L",
+      "epics": [
+        {
+          "id": "E07",
+          "number": 60,
+          "title": "Burnout / Recovery / Telegraph",
+          "peak": "L",
+          "mix": "M+L",
+          "tasks": [
+            {
+              "id": "E07.T01",
+              "number": 61,
+              "effort": "M",
+              "title": "APM tracking with injected clock",
+              "why": null
+            },
+            {
+              "id": "E07.T02",
+              "number": 62,
+              "effort": "M",
+              "title": "Telegraph when APM approaches threshold",
+              "why": null
+            },
+            {
+              "id": "E07.T03",
+              "number": 63,
+              "effort": "M",
+              "title": "Enter Burnout after sustain above threshold",
+              "why": null
+            },
+            {
+              "id": "E07.T04",
+              "number": 64,
+              "effort": "L",
+              "title": "Exit Burnout → Recovery for fixed duration",
+              "why": "Recovery drain + no-retrigger invariants"
+            },
+            {
+              "id": "E07.T05",
+              "number": 65,
+              "effort": "M",
+              "title": "APM threshold escalates after each completed Recovery",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "M",
+      "epics": [
+        {
+          "id": "E08",
+          "number": 66,
+          "title": "Content preload gate",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E08.T01",
+              "number": 67,
+              "effort": "M",
+              "title": "Manifest schema validation fail-closed",
+              "why": null
+            },
+            {
+              "id": "E08.T02",
+              "number": 68,
+              "effort": "M",
+              "title": "Starter-pack count gate from 06",
+              "why": null
+            },
+            {
+              "id": "E08.T03",
+              "number": 69,
+              "effort": "M",
+              "title": "Injected RNG picks Minigame + layout shuffle at Loading",
+              "why": null
+            },
+            {
+              "id": "E08.T04",
+              "number": 70,
+              "effort": "S",
+              "title": "Providers default disabled without env",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "L",
+      "epics": [
+        {
+          "id": "E09",
+          "number": 71,
+          "title": "Layout shell + Dopamine bar",
+          "peak": "L",
+          "mix": "M+L",
+          "tasks": [
+            {
+              "id": "E09.T01",
+              "number": 72,
+              "effort": "L",
+              "title": "Desktop slot model: five permanent windows + bar",
+              "why": "Masonry slot model is layout SSOT in code"
+            },
+            {
+              "id": "E09.T02",
+              "number": 73,
+              "effort": "L",
+              "title": "Desktop structural pairs + allowed shuffle",
+              "why": "Structural pairs + shuffle constraints"
+            },
+            {
+              "id": "E09.T03",
+              "number": 74,
+              "effort": "M",
+              "title": "Mobile: Minigame + exactly two services",
+              "why": null
+            },
+            {
+              "id": "E09.T04",
+              "number": 75,
+              "effort": "M",
+              "title": "React layout smoke: roles/slot counts",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "M",
+      "epics": [
+        {
+          "id": "E10",
+          "number": 76,
+          "title": "Hub surfaces (Start Page / Loading / Game Over / Credits)",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E10.T01",
+              "number": 77,
+              "effort": "M",
+              "title": "Start Page shows brand, how-to, Accessibility, Credits, PLAY",
+              "why": null
+            },
+            {
+              "id": "E10.T02",
+              "number": 78,
+              "effort": "S",
+              "title": "Accessibility Mode persists in localStorage",
+              "why": null
+            },
+            {
+              "id": "E10.T03",
+              "number": 79,
+              "effort": "M",
+              "title": "Credits Modal opens from Start Page and lists store rows",
+              "why": null
+            },
+            {
+              "id": "E10.T04",
+              "number": 80,
+              "effort": "S",
+              "title": "Loading splash shows until gate passes",
+              "why": null
+            },
+            {
+              "id": "E10.T05",
+              "number": 81,
+              "effort": "M",
+              "title": "Game Over shows stats + PLAY AGAIN + hub path",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "L",
+      "epics": [
+        {
+          "id": "E11",
+          "number": 82,
+          "title": "Asset-agnostic minigame runtime",
+          "peak": "L",
+          "mix": "M+L",
+          "tasks": [
+            {
+              "id": "E11.T01",
+              "number": 83,
+              "effort": "L",
+              "title": "Minigame manifest loader resolves stable asset ids",
+              "why": "Asset-agnostic pin — wrong shape is expensive later"
+            },
+            {
+              "id": "E11.T02",
+              "number": 84,
+              "effort": "L",
+              "title": "Minigame host mounts selected id; reports actions into core",
+              "why": "Host/core ports for all minigames"
+            },
+            {
+              "id": "E11.T03",
+              "number": 85,
+              "effort": "M",
+              "title": "Minigame failure preserves Match resources",
+              "why": null
+            },
+            {
+              "id": "E11.T04",
+              "number": 86,
+              "effort": "L",
+              "title": "Skin swap test: alternate manifest does not change rules",
+              "why": "Proves restyle-without-rewrite pin"
+            }
+          ]
+        },
+        {
+          "id": "E12",
+          "number": 87,
+          "title": "Lane Defender",
+          "peak": "L",
+          "mix": "M+L",
+          "tasks": [
+            {
+              "id": "E12.T01",
+              "number": 88,
+              "effort": "M",
+              "title": "Three lanes + instantaneous lane change",
+              "why": null
+            },
+            {
+              "id": "E12.T02",
+              "number": 89,
+              "effort": "L",
+              "title": "Enemies advance and die in one hit; reach = fail",
+              "why": "Combat sim + failure reset contract"
+            },
+            {
+              "id": "E12.T03",
+              "number": 90,
+              "effort": "L",
+              "title": "Hazards counters and Barrier semantics",
+              "why": "Barrier counter semantics nuanced"
+            },
+            {
+              "id": "E12.T04",
+              "number": 91,
+              "effort": "L",
+              "title": "Boss integrity + rewards hooks",
+              "why": "Boss integrity ≠ player health language"
+            },
+            {
+              "id": "E12.T05",
+              "number": 92,
+              "effort": "M",
+              "title": "Pickups expire; difficulty densifies spawns",
+              "why": null
+            },
+            {
+              "id": "E12.T06",
+              "number": 93,
+              "effort": "L",
+              "title": "Canvas adapter letterboxes playfield; uses asset ids",
+              "why": "Canvas adapter must not bake art into rules"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "M",
+      "epics": [
+        {
+          "id": "E13",
+          "number": 94,
+          "title": "Loop window",
+          "peak": "M",
+          "mix": "M",
+          "tasks": [
+            {
+              "id": "E13.T01",
+              "number": 95,
+              "effort": "M",
+              "title": "Clip loops until player Next",
+              "why": null
+            },
+            {
+              "id": "E13.T02",
+              "number": 96,
+              "effort": "M",
+              "title": "Like / Repost grant Dopamine+Score via tables",
+              "why": null
+            },
+            {
+              "id": "E13.T03",
+              "number": 97,
+              "effort": "M",
+              "title": "Attention Request opportunity expires without penalty",
+              "why": null
+            },
+            {
+              "id": "E13.T04",
+              "number": 98,
+              "effort": "M",
+              "title": "Window states Normal/Waiting/Focus Ready",
+              "why": null
+            }
+          ]
+        },
+        {
+          "id": "E14",
+          "number": 99,
+          "title": "Pulse window",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E14.T01",
+              "number": 100,
+              "effort": "M",
+              "title": "Feed renders posts from content pack",
+              "why": null
+            },
+            {
+              "id": "E14.T02",
+              "number": 101,
+              "effort": "M",
+              "title": "Like / Repost / Reply / Create Post actions",
+              "why": null
+            },
+            {
+              "id": "E14.T03",
+              "number": 102,
+              "effort": "M",
+              "title": "Mention / trend Attention Requests",
+              "why": null
+            },
+            {
+              "id": "E14.T04",
+              "number": 103,
+              "effort": "S",
+              "title": "Spam/ads reward 0 Dopamine when present",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "XL",
+      "epics": [
+        {
+          "id": "E15",
+          "number": 104,
+          "title": "Wave window (Discovery ≠ Anticipation)",
+          "peak": "XL",
+          "mix": "M+XL",
+          "tasks": [
+            {
+              "id": "E15.T01",
+              "number": 105,
+              "effort": "M",
+              "title": "Continuous playback + Next song",
+              "why": null
+            },
+            {
+              "id": "E15.T02",
+              "number": 106,
+              "effort": "XL",
+              "title": "Discovery Bonus on unheard tracks only",
+              "why": "Discovery pin — farming already-heard must fail tests"
+            },
+            {
+              "id": "E15.T03",
+              "number": 107,
+              "effort": "XL",
+              "title": "Anticipation toward Song Moment",
+              "why": "Anticipation pin — separate fixtures from Discovery"
+            },
+            {
+              "id": "E15.T04",
+              "number": 108,
+              "effort": "M",
+              "title": "Recommendations as Attention Requests",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "M",
+      "epics": [
+        {
+          "id": "E16",
+          "number": 109,
+          "title": "Echo window (core)",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E16.T01",
+              "number": 110,
+              "effort": "M",
+              "title": "Playback + Next content",
+              "why": null
+            },
+            {
+              "id": "E16.T02",
+              "number": 111,
+              "effort": "S",
+              "title": "React / Subscribe rewards",
+              "why": null
+            },
+            {
+              "id": "E16.T03",
+              "number": 112,
+              "effort": "M",
+              "title": "Highlight moment Anticipation path",
+              "why": null
+            }
+          ]
+        },
+        {
+          "id": "E17",
+          "number": 113,
+          "title": "Alerts (core)",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E17.T01",
+              "number": 114,
+              "effort": "M",
+              "title": "Alert overlay above layout; not a masonry slot",
+              "why": null
+            },
+            {
+              "id": "E17.T02",
+              "number": 115,
+              "effort": "M",
+              "title": "A opens highest priority; Esc dismisses",
+              "why": null
+            },
+            {
+              "id": "E17.T03",
+              "number": 116,
+              "effort": "M",
+              "title": "Open can extend Focus Chain; spam = 0 Dopamine",
+              "why": null
+            },
+            {
+              "id": "E17.T04",
+              "number": 117,
+              "effort": "S",
+              "title": "Ignore/dismiss never subtracts Dopamine",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "L",
+      "epics": [
+        {
+          "id": "E18",
+          "number": 118,
+          "title": "Block Cascade",
+          "peak": "L",
+          "mix": "M+L",
+          "tasks": [
+            {
+              "id": "E18.T01",
+              "number": 119,
+              "effort": "L",
+              "title": "Board + seven tetrominoes spawn",
+              "why": "Board/piece model foundation"
+            },
+            {
+              "id": "E18.T02",
+              "number": 120,
+              "effort": "M",
+              "title": "Move/rotate/soft drop; no hard drop",
+              "why": null
+            },
+            {
+              "id": "E18.T03",
+              "number": 121,
+              "effort": "L",
+              "title": "Line clears grant rewards; overflow resets minigame only",
+              "why": "Overflow vs Match resources"
+            },
+            {
+              "id": "E18.T04",
+              "number": 122,
+              "effort": "M",
+              "title": "Fall speed scales with difficulty; skin from manifest ids",
+              "why": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "peak": "M",
+      "epics": [
+        {
+          "id": "E19",
+          "number": 123,
+          "title": "Endless Runner",
+          "peak": "M",
+          "mix": "M",
+          "tasks": [
+            {
+              "id": "E19.T01",
+              "number": 124,
+              "effort": "M",
+              "title": "Auto-forward + three-lane selection",
+              "why": null
+            },
+            {
+              "id": "E19.T02",
+              "number": 125,
+              "effort": "M",
+              "title": "Obstacles collide → minigame reset only",
+              "why": null
+            },
+            {
+              "id": "E19.T03",
+              "number": 126,
+              "effort": "M",
+              "title": "Collectibles + rare pickup Attention Request",
+              "why": null
+            },
+            {
+              "id": "E19.T04",
+              "number": 127,
+              "effort": "M",
+              "title": "Canvas adapter uses asset ids",
+              "why": null
+            }
+          ]
+        },
+        {
+          "id": "E20",
+          "number": 128,
+          "title": "Audio mixer stub + Game Over silence",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E20.T01",
+              "number": 129,
+              "effort": "S",
+              "title": "AudioContext unlock on PLAY gesture",
+              "why": null
+            },
+            {
+              "id": "E20.T02",
+              "number": 130,
+              "effort": "M",
+              "title": "Bus stub records duck/muffle messages",
+              "why": null
+            },
+            {
+              "id": "E20.T03",
+              "number": 131,
+              "effort": "S",
+              "title": "Game Over suspends/stops graph (silence)",
+              "why": null
+            }
+          ]
+        },
+        {
+          "id": "E21",
+          "number": 132,
+          "title": "Baseline stickers + Accessibility Mode",
+          "peak": "M",
+          "mix": "S+M",
+          "tasks": [
+            {
+              "id": "E21.T01",
+              "number": 133,
+              "effort": "M",
+              "title": "Focus Chain step sticker host",
+              "why": null
+            },
+            {
+              "id": "E21.T02",
+              "number": 134,
+              "effort": "M",
+              "title": "Combo sticker distinct from Focus Chain",
+              "why": null
+            },
+            {
+              "id": "E21.T03",
+              "number": 135,
+              "effort": "M",
+              "title": "Accessibility Mode reduces motion intensity path",
+              "why": null
+            },
+            {
+              "id": "E21.T04",
+              "number": 136,
+              "effort": "S",
+              "title": "Burnout telegraph + Recovery cues as stickers",
+              "why": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "consecutiveSameEffortRuns": [
+    {
+      "run": 1,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E00.T01(#19)"
+    },
+    {
+      "run": 2,
+      "effort": "S",
+      "count": 3,
+      "tasks": "E00.T02(#20), E00.T03(#21), E00.T04(#22)"
+    },
+    {
+      "run": 3,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E00.T05(#23)"
+    },
+    {
+      "run": 4,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E00.T06(#24)"
+    },
+    {
+      "run": 5,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E01.T01(#26)"
+    },
+    {
+      "run": 6,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E01.T02(#27)"
+    },
+    {
+      "run": 7,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E01.T03(#28)"
+    },
+    {
+      "run": 8,
+      "effort": "S",
+      "count": 3,
+      "tasks": "E01.T04(#29), E01.T05(#30), E01.T06(#31)"
+    },
+    {
+      "run": 9,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E01.T07(#32)"
+    },
+    {
+      "run": 10,
+      "effort": "S",
+      "count": 3,
+      "tasks": "E02.T01(#34), E02.T02(#35), E03.T01(#37)"
+    },
+    {
+      "run": 11,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E03.T02(#38)"
+    },
+    {
+      "run": 12,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E03.T03(#39)"
+    },
+    {
+      "run": 13,
+      "effort": "L",
+      "count": 2,
+      "tasks": "E03.T04(#40), E03.T05(#41)"
+    },
+    {
+      "run": 14,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E03.T06(#42)"
+    },
+    {
+      "run": 15,
+      "effort": "L",
+      "count": 3,
+      "tasks": "E04.T01(#44), E04.T02(#45), E04.T03(#46)"
+    },
+    {
+      "run": 16,
+      "effort": "M",
+      "count": 2,
+      "tasks": "E04.T04(#47), E04.T05(#48)"
+    },
+    {
+      "run": 17,
+      "effort": "S",
+      "count": 2,
+      "tasks": "E04.T06(#49), E04.T07(#50)"
+    },
+    {
+      "run": 18,
+      "effort": "M",
+      "count": 3,
+      "tasks": "E05.T01(#52), E05.T02(#53), E05.T03(#54)"
+    },
+    {
+      "run": 19,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E05.T04(#55)"
+    },
+    {
+      "run": 20,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E06.T01(#57)"
+    },
+    {
+      "run": 21,
+      "effort": "S",
+      "count": 2,
+      "tasks": "E06.T02(#58), E06.T03(#59)"
+    },
+    {
+      "run": 22,
+      "effort": "M",
+      "count": 3,
+      "tasks": "E07.T01(#61), E07.T02(#62), E07.T03(#63)"
+    },
+    {
+      "run": 23,
+      "effort": "L",
+      "count": 1,
+      "tasks": "E07.T04(#64)"
+    },
+    {
+      "run": 24,
+      "effort": "M",
+      "count": 4,
+      "tasks": "E07.T05(#65), E08.T01(#67), E08.T02(#68), E08.T03(#69)"
+    },
+    {
+      "run": 25,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E08.T04(#70)"
+    },
+    {
+      "run": 26,
+      "effort": "L",
+      "count": 2,
+      "tasks": "E09.T01(#72), E09.T02(#73)"
+    },
+    {
+      "run": 27,
+      "effort": "M",
+      "count": 3,
+      "tasks": "E09.T03(#74), E09.T04(#75), E10.T01(#77)"
+    },
+    {
+      "run": 28,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E10.T02(#78)"
+    },
+    {
+      "run": 29,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E10.T03(#79)"
+    },
+    {
+      "run": 30,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E10.T04(#80)"
+    },
+    {
+      "run": 31,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E10.T05(#81)"
+    },
+    {
+      "run": 32,
+      "effort": "L",
+      "count": 2,
+      "tasks": "E11.T01(#83), E11.T02(#84)"
+    },
+    {
+      "run": 33,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E11.T03(#85)"
+    },
+    {
+      "run": 34,
+      "effort": "L",
+      "count": 1,
+      "tasks": "E11.T04(#86)"
+    },
+    {
+      "run": 35,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E12.T01(#88)"
+    },
+    {
+      "run": 36,
+      "effort": "L",
+      "count": 3,
+      "tasks": "E12.T02(#89), E12.T03(#90), E12.T04(#91)"
+    },
+    {
+      "run": 37,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E12.T05(#92)"
+    },
+    {
+      "run": 38,
+      "effort": "L",
+      "count": 1,
+      "tasks": "E12.T06(#93)"
+    },
+    {
+      "run": 39,
+      "effort": "M",
+      "count": 7,
+      "tasks": "E13.T01(#95), E13.T02(#96), E13.T03(#97), E13.T04(#98), E14.T01(#100), E14.T02(#101), E14.T03(#102)"
+    },
+    {
+      "run": 40,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E14.T04(#103)"
+    },
+    {
+      "run": 41,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E15.T01(#105)"
+    },
+    {
+      "run": 42,
+      "effort": "XL",
+      "count": 2,
+      "tasks": "E15.T02(#106), E15.T03(#107)"
+    },
+    {
+      "run": 43,
+      "effort": "M",
+      "count": 2,
+      "tasks": "E15.T04(#108), E16.T01(#110)"
+    },
+    {
+      "run": 44,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E16.T02(#111)"
+    },
+    {
+      "run": 45,
+      "effort": "M",
+      "count": 4,
+      "tasks": "E16.T03(#112), E17.T01(#114), E17.T02(#115), E17.T03(#116)"
+    },
+    {
+      "run": 46,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E17.T04(#117)"
+    },
+    {
+      "run": 47,
+      "effort": "L",
+      "count": 1,
+      "tasks": "E18.T01(#119)"
+    },
+    {
+      "run": 48,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E18.T02(#120)"
+    },
+    {
+      "run": 49,
+      "effort": "L",
+      "count": 1,
+      "tasks": "E18.T03(#121)"
+    },
+    {
+      "run": 50,
+      "effort": "M",
+      "count": 5,
+      "tasks": "E18.T04(#122), E19.T01(#124), E19.T02(#125), E19.T03(#126), E19.T04(#127)"
+    },
+    {
+      "run": 51,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E20.T01(#129)"
+    },
+    {
+      "run": 52,
+      "effort": "M",
+      "count": 1,
+      "tasks": "E20.T02(#130)"
+    },
+    {
+      "run": 53,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E20.T03(#131)"
+    },
+    {
+      "run": 54,
+      "effort": "M",
+      "count": 3,
+      "tasks": "E21.T01(#133), E21.T02(#134), E21.T03(#135)"
+    },
+    {
+      "run": 55,
+      "effort": "S",
+      "count": 1,
+      "tasks": "E21.T04(#136)"
+    }
+  ],
+  "mvpEpics": [
+    {
+      "id": "E00",
+      "number": 18,
+      "title": "Scaffold & test harness",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E00.T01",
+          "number": 19,
+          "effort": "M",
+          "title": "pnpm + Vite + TS strict project boots",
+          "why": "Toolchain/scaffold choices stick; worth a careful pass"
+        },
+        {
+          "id": "E00.T02",
+          "number": 20,
+          "effort": "S",
+          "title": "React 19 app shell mounts without Match drain",
+          "why": null
+        },
+        {
+          "id": "E00.T03",
+          "number": 21,
+          "effort": "S",
+          "title": "Injected clock fake for domain tests",
+          "why": null
+        },
+        {
+          "id": "E00.T04",
+          "number": 22,
+          "effort": "S",
+          "title": "Injected RNG fake for Match picks",
+          "why": null
+        },
+        {
+          "id": "E00.T05",
+          "number": 23,
+          "effort": "M",
+          "title": "Media + AudioContext port fakes",
+          "why": null
+        },
+        {
+          "id": "E00.T06",
+          "number": 24,
+          "effort": "S",
+          "title": "CI script: lint + unit test + build stubs",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E01",
+      "number": 25,
+      "title": "Match state machine",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E01.T01",
+          "number": 26,
+          "effort": "M",
+          "title": "Boot lands on Start Page",
+          "why": "Defines state union shape used everywhere"
+        },
+        {
+          "id": "E01.T02",
+          "number": 27,
+          "effort": "S",
+          "title": "PLAY transitions Start Page → Loading",
+          "why": null
+        },
+        {
+          "id": "E01.T03",
+          "number": 28,
+          "effort": "M",
+          "title": "Loading success → Playing starts Match",
+          "why": null
+        },
+        {
+          "id": "E01.T04",
+          "number": 29,
+          "effort": "S",
+          "title": "Loading validation failure stays on Loading",
+          "why": null
+        },
+        {
+          "id": "E01.T05",
+          "number": 30,
+          "effort": "S",
+          "title": "Dopamine ≤ 0 → Game Over immediately",
+          "why": null
+        },
+        {
+          "id": "E01.T06",
+          "number": 31,
+          "effort": "S",
+          "title": "PLAY AGAIN → Loading; hub → Start Page",
+          "why": null
+        },
+        {
+          "id": "E01.T07",
+          "number": 32,
+          "effort": "M",
+          "title": "Playing can enter Burnout and Recovery modifiers",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "number": 33,
+      "title": "Balance constants module",
+      "peak": "S",
+      "tasks": [
+        {
+          "id": "E02.T01",
+          "number": 34,
+          "effort": "S",
+          "title": "Export Dopamine + drain named constants",
+          "why": null
+        },
+        {
+          "id": "E02.T02",
+          "number": 35,
+          "effort": "S",
+          "title": "Export Focus Chain + Burnout + Discovery/Anticipation constants",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "number": 36,
+      "title": "Dopamine system",
+      "peak": "L",
+      "tasks": [
+        {
+          "id": "E03.T01",
+          "number": 37,
+          "effort": "S",
+          "title": "Meter starts full; clamps to [MIN, MAX]",
+          "why": null
+        },
+        {
+          "id": "E03.T02",
+          "number": 38,
+          "effort": "M",
+          "title": "Passive drain uses difficulty × Recovery mult",
+          "why": null
+        },
+        {
+          "id": "E03.T03",
+          "number": 39,
+          "effort": "S",
+          "title": "Positive gain from interactions",
+          "why": null
+        },
+        {
+          "id": "E03.T04",
+          "number": 40,
+          "effort": "L",
+          "title": "Diminishing returns logarithmic floor",
+          "why": "Log falloff + reset rules easy to get wrong"
+        },
+        {
+          "id": "E03.T05",
+          "number": 41,
+          "effort": "L",
+          "title": "Anticipation builds and resets correctly",
+          "why": "Anticipation must stay distinct from Discovery"
+        },
+        {
+          "id": "E03.T06",
+          "number": 42,
+          "effort": "S",
+          "title": "No direct penalty subtraction API",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "number": 43,
+      "title": "Focus Chain",
+      "peak": "L",
+      "tasks": [
+        {
+          "id": "E04.T01",
+          "number": 44,
+          "effort": "L",
+          "title": "Valid Focus Change extends chain by 1",
+          "why": "Core skill expression; many edge cases"
+        },
+        {
+          "id": "E04.T02",
+          "number": 45,
+          "effort": "L",
+          "title": "Waiting destination does not extend; farming breaks",
+          "why": "Waiting/farming break is a common bug magnet"
+        },
+        {
+          "id": "E04.T03",
+          "number": 46,
+          "effort": "L",
+          "title": "Focus Ready improves quality not eligibility",
+          "why": "Quality tier vs eligibility subtlety"
+        },
+        {
+          "id": "E04.T04",
+          "number": 47,
+          "effort": "M",
+          "title": "Decaying continue-window timeoutMs(L)",
+          "why": null
+        },
+        {
+          "id": "E04.T05",
+          "number": 48,
+          "effort": "M",
+          "title": "Completion bonus only when length ≥ min",
+          "why": null
+        },
+        {
+          "id": "E04.T06",
+          "number": 49,
+          "effort": "S",
+          "title": "Burnout/Recovery do not break chain",
+          "why": null
+        },
+        {
+          "id": "E04.T07",
+          "number": 50,
+          "effort": "S",
+          "title": "Hover alone does not change Active Window",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "number": 51,
+      "title": "Input router",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E05.T01",
+          "number": 52,
+          "effort": "M",
+          "title": "Priority: text → Alert → Active Window → navigation",
+          "why": null
+        },
+        {
+          "id": "E05.T02",
+          "number": 53,
+          "effort": "M",
+          "title": "R is always Repost; Y navigates to Echo",
+          "why": null
+        },
+        {
+          "id": "E05.T03",
+          "number": 54,
+          "effort": "M",
+          "title": "Nav shortcuts count as Focus Change when they switch windows",
+          "why": null
+        },
+        {
+          "id": "E05.T04",
+          "number": 55,
+          "effort": "S",
+          "title": "Pointer/touch paths share valid-interaction helpers",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "number": 56,
+      "title": "Difficulty multipliers",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E06.T01",
+          "number": 57,
+          "effort": "M",
+          "title": "Difficulty starts at minimum and rises continuously",
+          "why": null
+        },
+        {
+          "id": "E06.T02",
+          "number": 58,
+          "effort": "S",
+          "title": "Difficulty feeds Dopamine drain mult only as multiplier",
+          "why": null
+        },
+        {
+          "id": "E06.T03",
+          "number": 59,
+          "effort": "S",
+          "title": "Event-interval multipliers available to windows/minigames",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "number": 60,
+      "title": "Burnout / Recovery / Telegraph",
+      "peak": "L",
+      "tasks": [
+        {
+          "id": "E07.T01",
+          "number": 61,
+          "effort": "M",
+          "title": "APM tracking with injected clock",
+          "why": null
+        },
+        {
+          "id": "E07.T02",
+          "number": 62,
+          "effort": "M",
+          "title": "Telegraph when APM approaches threshold",
+          "why": null
+        },
+        {
+          "id": "E07.T03",
+          "number": 63,
+          "effort": "M",
+          "title": "Enter Burnout after sustain above threshold",
+          "why": null
+        },
+        {
+          "id": "E07.T04",
+          "number": 64,
+          "effort": "L",
+          "title": "Exit Burnout → Recovery for fixed duration",
+          "why": "Recovery drain + no-retrigger invariants"
+        },
+        {
+          "id": "E07.T05",
+          "number": 65,
+          "effort": "M",
+          "title": "APM threshold escalates after each completed Recovery",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "number": 66,
+      "title": "Content preload gate",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E08.T01",
+          "number": 67,
+          "effort": "M",
+          "title": "Manifest schema validation fail-closed",
+          "why": null
+        },
+        {
+          "id": "E08.T02",
+          "number": 68,
+          "effort": "M",
+          "title": "Starter-pack count gate from 06",
+          "why": null
+        },
+        {
+          "id": "E08.T03",
+          "number": 69,
+          "effort": "M",
+          "title": "Injected RNG picks Minigame + layout shuffle at Loading",
+          "why": null
+        },
+        {
+          "id": "E08.T04",
+          "number": 70,
+          "effort": "S",
+          "title": "Providers default disabled without env",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "number": 71,
+      "title": "Layout shell + Dopamine bar",
+      "peak": "L",
+      "tasks": [
+        {
+          "id": "E09.T01",
+          "number": 72,
+          "effort": "L",
+          "title": "Desktop slot model: five permanent windows + bar",
+          "why": "Masonry slot model is layout SSOT in code"
+        },
+        {
+          "id": "E09.T02",
+          "number": 73,
+          "effort": "L",
+          "title": "Desktop structural pairs + allowed shuffle",
+          "why": "Structural pairs + shuffle constraints"
+        },
+        {
+          "id": "E09.T03",
+          "number": 74,
+          "effort": "M",
+          "title": "Mobile: Minigame + exactly two services",
+          "why": null
+        },
+        {
+          "id": "E09.T04",
+          "number": 75,
+          "effort": "M",
+          "title": "React layout smoke: roles/slot counts",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "number": 76,
+      "title": "Hub surfaces (Start Page / Loading / Game Over / Credits)",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E10.T01",
+          "number": 77,
+          "effort": "M",
+          "title": "Start Page shows brand, how-to, Accessibility, Credits, PLAY",
+          "why": null
+        },
+        {
+          "id": "E10.T02",
+          "number": 78,
+          "effort": "S",
+          "title": "Accessibility Mode persists in localStorage",
+          "why": null
+        },
+        {
+          "id": "E10.T03",
+          "number": 79,
+          "effort": "M",
+          "title": "Credits Modal opens from Start Page and lists store rows",
+          "why": null
+        },
+        {
+          "id": "E10.T04",
+          "number": 80,
+          "effort": "S",
+          "title": "Loading splash shows until gate passes",
+          "why": null
+        },
+        {
+          "id": "E10.T05",
+          "number": 81,
+          "effort": "M",
+          "title": "Game Over shows stats + PLAY AGAIN + hub path",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E11",
+      "number": 82,
+      "title": "Asset-agnostic minigame runtime",
+      "peak": "L",
+      "tasks": [
+        {
+          "id": "E11.T01",
+          "number": 83,
+          "effort": "L",
+          "title": "Minigame manifest loader resolves stable asset ids",
+          "why": "Asset-agnostic pin — wrong shape is expensive later"
+        },
+        {
+          "id": "E11.T02",
+          "number": 84,
+          "effort": "L",
+          "title": "Minigame host mounts selected id; reports actions into core",
+          "why": "Host/core ports for all minigames"
+        },
+        {
+          "id": "E11.T03",
+          "number": 85,
+          "effort": "M",
+          "title": "Minigame failure preserves Match resources",
+          "why": null
+        },
+        {
+          "id": "E11.T04",
+          "number": 86,
+          "effort": "L",
+          "title": "Skin swap test: alternate manifest does not change rules",
+          "why": "Proves restyle-without-rewrite pin"
+        }
+      ]
+    },
+    {
+      "id": "E12",
+      "number": 87,
+      "title": "Lane Defender",
+      "peak": "L",
+      "tasks": [
+        {
+          "id": "E12.T01",
+          "number": 88,
+          "effort": "M",
+          "title": "Three lanes + instantaneous lane change",
+          "why": null
+        },
+        {
+          "id": "E12.T02",
+          "number": 89,
+          "effort": "L",
+          "title": "Enemies advance and die in one hit; reach = fail",
+          "why": "Combat sim + failure reset contract"
+        },
+        {
+          "id": "E12.T03",
+          "number": 90,
+          "effort": "L",
+          "title": "Hazards counters and Barrier semantics",
+          "why": "Barrier counter semantics nuanced"
+        },
+        {
+          "id": "E12.T04",
+          "number": 91,
+          "effort": "L",
+          "title": "Boss integrity + rewards hooks",
+          "why": "Boss integrity ≠ player health language"
+        },
+        {
+          "id": "E12.T05",
+          "number": 92,
+          "effort": "M",
+          "title": "Pickups expire; difficulty densifies spawns",
+          "why": null
+        },
+        {
+          "id": "E12.T06",
+          "number": 93,
+          "effort": "L",
+          "title": "Canvas adapter letterboxes playfield; uses asset ids",
+          "why": "Canvas adapter must not bake art into rules"
+        }
+      ]
+    },
+    {
+      "id": "E13",
+      "number": 94,
+      "title": "Loop window",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E13.T01",
+          "number": 95,
+          "effort": "M",
+          "title": "Clip loops until player Next",
+          "why": null
+        },
+        {
+          "id": "E13.T02",
+          "number": 96,
+          "effort": "M",
+          "title": "Like / Repost grant Dopamine+Score via tables",
+          "why": null
+        },
+        {
+          "id": "E13.T03",
+          "number": 97,
+          "effort": "M",
+          "title": "Attention Request opportunity expires without penalty",
+          "why": null
+        },
+        {
+          "id": "E13.T04",
+          "number": 98,
+          "effort": "M",
+          "title": "Window states Normal/Waiting/Focus Ready",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E14",
+      "number": 99,
+      "title": "Pulse window",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E14.T01",
+          "number": 100,
+          "effort": "M",
+          "title": "Feed renders posts from content pack",
+          "why": null
+        },
+        {
+          "id": "E14.T02",
+          "number": 101,
+          "effort": "M",
+          "title": "Like / Repost / Reply / Create Post actions",
+          "why": null
+        },
+        {
+          "id": "E14.T03",
+          "number": 102,
+          "effort": "M",
+          "title": "Mention / trend Attention Requests",
+          "why": null
+        },
+        {
+          "id": "E14.T04",
+          "number": 103,
+          "effort": "S",
+          "title": "Spam/ads reward 0 Dopamine when present",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E15",
+      "number": 104,
+      "title": "Wave window (Discovery ≠ Anticipation)",
+      "peak": "XL",
+      "tasks": [
+        {
+          "id": "E15.T01",
+          "number": 105,
+          "effort": "M",
+          "title": "Continuous playback + Next song",
+          "why": null
+        },
+        {
+          "id": "E15.T02",
+          "number": 106,
+          "effort": "XL",
+          "title": "Discovery Bonus on unheard tracks only",
+          "why": "Discovery pin — farming already-heard must fail tests"
+        },
+        {
+          "id": "E15.T03",
+          "number": 107,
+          "effort": "XL",
+          "title": "Anticipation toward Song Moment",
+          "why": "Anticipation pin — separate fixtures from Discovery"
+        },
+        {
+          "id": "E15.T04",
+          "number": 108,
+          "effort": "M",
+          "title": "Recommendations as Attention Requests",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E16",
+      "number": 109,
+      "title": "Echo window (core)",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E16.T01",
+          "number": 110,
+          "effort": "M",
+          "title": "Playback + Next content",
+          "why": null
+        },
+        {
+          "id": "E16.T02",
+          "number": 111,
+          "effort": "S",
+          "title": "React / Subscribe rewards",
+          "why": null
+        },
+        {
+          "id": "E16.T03",
+          "number": 112,
+          "effort": "M",
+          "title": "Highlight moment Anticipation path",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E17",
+      "number": 113,
+      "title": "Alerts (core)",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E17.T01",
+          "number": 114,
+          "effort": "M",
+          "title": "Alert overlay above layout; not a masonry slot",
+          "why": null
+        },
+        {
+          "id": "E17.T02",
+          "number": 115,
+          "effort": "M",
+          "title": "A opens highest priority; Esc dismisses",
+          "why": null
+        },
+        {
+          "id": "E17.T03",
+          "number": 116,
+          "effort": "M",
+          "title": "Open can extend Focus Chain; spam = 0 Dopamine",
+          "why": null
+        },
+        {
+          "id": "E17.T04",
+          "number": 117,
+          "effort": "S",
+          "title": "Ignore/dismiss never subtracts Dopamine",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E18",
+      "number": 118,
+      "title": "Block Cascade",
+      "peak": "L",
+      "tasks": [
+        {
+          "id": "E18.T01",
+          "number": 119,
+          "effort": "L",
+          "title": "Board + seven tetrominoes spawn",
+          "why": "Board/piece model foundation"
+        },
+        {
+          "id": "E18.T02",
+          "number": 120,
+          "effort": "M",
+          "title": "Move/rotate/soft drop; no hard drop",
+          "why": null
+        },
+        {
+          "id": "E18.T03",
+          "number": 121,
+          "effort": "L",
+          "title": "Line clears grant rewards; overflow resets minigame only",
+          "why": "Overflow vs Match resources"
+        },
+        {
+          "id": "E18.T04",
+          "number": 122,
+          "effort": "M",
+          "title": "Fall speed scales with difficulty; skin from manifest ids",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E19",
+      "number": 123,
+      "title": "Endless Runner",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E19.T01",
+          "number": 124,
+          "effort": "M",
+          "title": "Auto-forward + three-lane selection",
+          "why": null
+        },
+        {
+          "id": "E19.T02",
+          "number": 125,
+          "effort": "M",
+          "title": "Obstacles collide → minigame reset only",
+          "why": null
+        },
+        {
+          "id": "E19.T03",
+          "number": 126,
+          "effort": "M",
+          "title": "Collectibles + rare pickup Attention Request",
+          "why": null
+        },
+        {
+          "id": "E19.T04",
+          "number": 127,
+          "effort": "M",
+          "title": "Canvas adapter uses asset ids",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E20",
+      "number": 128,
+      "title": "Audio mixer stub + Game Over silence",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E20.T01",
+          "number": 129,
+          "effort": "S",
+          "title": "AudioContext unlock on PLAY gesture",
+          "why": null
+        },
+        {
+          "id": "E20.T02",
+          "number": 130,
+          "effort": "M",
+          "title": "Bus stub records duck/muffle messages",
+          "why": null
+        },
+        {
+          "id": "E20.T03",
+          "number": 131,
+          "effort": "S",
+          "title": "Game Over suspends/stops graph (silence)",
+          "why": null
+        }
+      ]
+    },
+    {
+      "id": "E21",
+      "number": 132,
+      "title": "Baseline stickers + Accessibility Mode",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E21.T01",
+          "number": 133,
+          "effort": "M",
+          "title": "Focus Chain step sticker host",
+          "why": null
+        },
+        {
+          "id": "E21.T02",
+          "number": 134,
+          "effort": "M",
+          "title": "Combo sticker distinct from Focus Chain",
+          "why": null
+        },
+        {
+          "id": "E21.T03",
+          "number": 135,
+          "effort": "M",
+          "title": "Accessibility Mode reduces motion intensity path",
+          "why": null
+        },
+        {
+          "id": "E21.T04",
+          "number": 136,
+          "effort": "S",
+          "title": "Burnout telegraph + Recovery cues as stickers",
+          "why": null
+        }
+      ]
+    }
+  ],
+  "postEpics": [
+    {
+      "id": "E22",
+      "number": 137,
+      "title": "Full game-feel polish",
+      "peak": "L",
+      "tasks": [
+        {
+          "id": "E22.T01",
+          "number": 138,
+          "effort": "L",
+          "title": "Focus Chain visual progression tiers (3/5/10/15/20+)"
+        },
+        {
+          "id": "E22.T02",
+          "number": 139,
+          "effort": "M",
+          "title": "Diminishing returns flatten Combo sticker juiciness"
+        },
+        {
+          "id": "E22.T03",
+          "number": 140,
+          "effort": "L",
+          "title": "Focus muffling + Burnout no-muffle + Recovery extra muffling"
+        }
+      ]
+    },
+    {
+      "id": "E23",
+      "number": 141,
+      "title": "SFX production + cue integration",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E23.T01",
+          "number": 142,
+          "effort": "M",
+          "title": "Generate or license missing .ogg cues per manifest"
+        },
+        {
+          "id": "E23.T02",
+          "number": 143,
+          "effort": "M",
+          "title": "Play cues on domain events via stable ids"
+        }
+      ]
+    },
+    {
+      "id": "E24",
+      "number": 144,
+      "title": "Media pack expansion + credits rows",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E24.T01",
+          "number": 145,
+          "effort": "M",
+          "title": "Populate Loop clips + Wave high/boring + Echo media with manifests"
+        },
+        {
+          "id": "E24.T02",
+          "number": 146,
+          "effort": "S",
+          "title": "Credits store rows for every third-party asset"
+        }
+      ]
+    },
+    {
+      "id": "E25",
+      "number": 147,
+      "title": "Optional media APIs",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E25.T01",
+          "number": 148,
+          "effort": "M",
+          "title": "Provider clients gated by enabled flags + env keys"
+        },
+        {
+          "id": "E25.T02",
+          "number": 149,
+          "effort": "M",
+          "title": "Fetched items normalize into content pack + credits"
+        }
+      ]
+    },
+    {
+      "id": "E26",
+      "number": 150,
+      "title": "Playwright E2E smoke",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E26.T01",
+          "number": 151,
+          "effort": "M",
+          "title": "Smoke: Start Page → PLAY → Loading → Playing visible"
+        }
+      ]
+    },
+    {
+      "id": "E27",
+      "number": 152,
+      "title": "Deferred visual polish",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E27.T01",
+          "number": 153,
+          "effort": "S",
+          "title": "Wordmark P→A kerning fix + WebP re-export"
+        },
+        {
+          "id": "E27.T02",
+          "number": 154,
+          "effort": "M",
+          "title": "Start Page floating stickers animate like arcade stickers"
+        }
+      ]
+    },
+    {
+      "id": "E28",
+      "number": 155,
+      "title": "Balance playtest passes",
+      "peak": "M",
+      "tasks": [
+        {
+          "id": "E28.T01",
+          "number": 156,
+          "effort": "M",
+          "title": "Ease-in early Match drain/event intervals"
+        },
+        {
+          "id": "E28.T02",
+          "number": 157,
+          "effort": "M",
+          "title": "Late-Match pressure survivable for experts"
+        }
+      ]
+    }
+  ]
+}

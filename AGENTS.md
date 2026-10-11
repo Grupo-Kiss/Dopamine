@@ -4,6 +4,9 @@
 
 Owner personal pins: `defs/_PINS.md` (do not restructure).
 
+**MVP board:** [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) · `docs/agents/mvp-board.md`  
+**Which LLM / effort:** `docs/agents/effort-model-map.md` — pick pack peak **S/M/L/XL** before coding.
+
 ## Agent skills
 
 ### Issue tracker

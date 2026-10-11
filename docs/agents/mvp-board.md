@@ -3,6 +3,7 @@
 **Formal tracker:** GitHub Issues (created from `tools/issue-board/board.json` via `tools/issue-board/publish.mjs`).  
 **Board index:** [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158)  
 **Number map:** `tools/issue-board/published.json`  
+**Effort → model:** `docs/agents/effort-model-map.md` (S/M/L/XL + packs P1–P14)  
 **Process:** ADR-0001 — docs first, then strict TDD (failing test → minimal code → refactor).  
 **Pin:** Minigame runtime stays **asset-agnostic** — load via manifests / stable ids under `content/minigames/<id>/`; restyle later by swapping files, not rewriting gameplay.
 

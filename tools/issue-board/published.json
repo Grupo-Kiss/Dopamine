@@ -15,7 +15,9 @@
           "idDb": 5804970457,
           "title": "pnpm + Vite + TS strict project boots",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/19",
-          "failingTest": "scaffold: `pnpm test` runs Vitest successfully on an empty/smoke suite"
+          "failingTest": "scaffold: `pnpm test` runs Vitest successfully on an empty/smoke suite",
+          "effort": "M",
+          "effortWhy": "Toolchain/scaffold choices stick; worth a careful pass"
         },
         {
           "id": "E00.T02",
@@ -23,7 +25,8 @@
           "idDb": 5804970723,
           "title": "React 19 app shell mounts without Match drain",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/20",
-          "failingTest": "app: root renders without throwing; no Dopamine/Match module required yet"
+          "failingTest": "app: root renders without throwing; no Dopamine/Match module required yet",
+          "effort": "S"
         },
         {
           "id": "E00.T03",
@@ -31,7 +34,8 @@
           "idDb": 5804971071,
           "title": "Injected clock fake for domain tests",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/21",
-          "failingTest": "testing/clock: advance(ms) moves injected now; domain code must not call Date.now() directly in tests"
+          "failingTest": "testing/clock: advance(ms) moves injected now; domain code must not call Date.now() directly in tests",
+          "effort": "S"
         },
         {
           "id": "E00.T04",
@@ -39,7 +43,8 @@
           "idDb": 5804971372,
           "title": "Injected RNG fake for Match picks",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/22",
-          "failingTest": "testing/rng: sequence/seeded next() is deterministic across runs"
+          "failingTest": "testing/rng: sequence/seeded next() is deterministic across runs",
+          "effort": "S"
         },
         {
           "id": "E00.T05",
@@ -47,7 +52,8 @@
           "idDb": 5804971694,
           "title": "Media + AudioContext port fakes",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/23",
-          "failingTest": "testing/media+audio: fakes record calls; no real decode/network/Autoplay in unit tests"
+          "failingTest": "testing/media+audio: fakes record calls; no real decode/network/Autoplay in unit tests",
+          "effort": "M"
         },
         {
           "id": "E00.T06",
@@ -55,7 +61,8 @@
           "idDb": 5804972031,
           "title": "CI script: lint + unit test + build stubs",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/24",
-          "failingTest": "scripts: `pnpm test` and `pnpm build` exit 0 on scaffold"
+          "failingTest": "scripts: `pnpm test` and `pnpm build` exit 0 on scaffold",
+          "effort": "S"
         }
       ]
     },
@@ -73,7 +80,9 @@
           "idDb": 5804972507,
           "title": "Boot lands on Start Page",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/26",
-          "failingTest": "gameState: initial state is StartPage; no Match clock ticking"
+          "failingTest": "gameState: initial state is StartPage; no Match clock ticking",
+          "effort": "M",
+          "effortWhy": "Defines state union shape used everywhere"
         },
         {
           "id": "E01.T02",
@@ -81,7 +90,8 @@
           "idDb": 5804972770,
           "title": "PLAY transitions Start Page → Loading",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/27",
-          "failingTest": "gameState: play() from StartPage enters Loading; still no Dopamine drain"
+          "failingTest": "gameState: play() from StartPage enters Loading; still no Dopamine drain",
+          "effort": "S"
         },
         {
           "id": "E01.T03",
@@ -89,7 +99,8 @@
           "idDb": 5804973002,
           "title": "Loading success → Playing starts Match",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/28",
-          "failingTest": "gameState: loadingComplete() enters Playing; Match clock / drain eligibility begins only here"
+          "failingTest": "gameState: loadingComplete() enters Playing; Match clock / drain eligibility begins only here",
+          "effort": "M"
         },
         {
           "id": "E01.T04",
@@ -97,7 +108,8 @@
           "idDb": 5804973275,
           "title": "Loading validation failure stays on Loading",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/29",
-          "failingTest": "gameState: loadingFailed(reason) never enters Playing"
+          "failingTest": "gameState: loadingFailed(reason) never enters Playing",
+          "effort": "S"
         },
         {
           "id": "E01.T05",
@@ -105,7 +117,8 @@
           "idDb": 5804973594,
           "title": "Dopamine ≤ 0 → Game Over immediately",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/30",
-          "failingTest": "gameState: notifyDopamineDepleted() from Playing enters GameOver; systems stop flag set"
+          "failingTest": "gameState: notifyDopamineDepleted() from Playing enters GameOver; systems stop flag set",
+          "effort": "S"
         },
         {
           "id": "E01.T06",
@@ -113,7 +126,8 @@
           "idDb": 5804973887,
           "title": "PLAY AGAIN → Loading; hub → Start Page",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/31",
-          "failingTest": "gameState: playAgain()→Loading; returnToHub()→StartPage"
+          "failingTest": "gameState: playAgain()→Loading; returnToHub()→StartPage",
+          "effort": "S"
         },
         {
           "id": "E01.T07",
@@ -121,7 +135,8 @@
           "idDb": 5804974253,
           "title": "Playing can enter Burnout and Recovery modifiers",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/32",
-          "failingTest": "gameState: enterBurnout()/enterRecovery()/exitRecovery() modify Playing without replacing Match"
+          "failingTest": "gameState: enterBurnout()/enterRecovery()/exitRecovery() modify Playing without replacing Match",
+          "effort": "M"
         }
       ]
     },
@@ -139,7 +154,8 @@
           "idDb": 5804974684,
           "title": "Export Dopamine + drain named constants",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/34",
-          "failingTest": "balance: exports DOPAMINE_MAX/MIN and drain constants equal to 06 starters"
+          "failingTest": "balance: exports DOPAMINE_MAX/MIN and drain constants equal to 06 starters",
+          "effort": "S"
         },
         {
           "id": "E02.T02",
@@ -147,7 +163,8 @@
           "idDb": 5804974966,
           "title": "Export Focus Chain + Burnout + Discovery/Anticipation constants",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/35",
-          "failingTest": "balance: Focus Chain timeout/completion, Burnout APM, Discovery/Anticipation names match 06"
+          "failingTest": "balance: Focus Chain timeout/completion, Burnout APM, Discovery/Anticipation names match 06",
+          "effort": "S"
         }
       ]
     },
@@ -165,7 +182,8 @@
           "idDb": 5804975422,
           "title": "Meter starts full; clamps to [MIN, MAX]",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/37",
-          "failingTest": "dopamine: create() starts at DOPAMINE_MAX; applyGain cannot exceed MAX; floor at MIN"
+          "failingTest": "dopamine: create() starts at DOPAMINE_MAX; applyGain cannot exceed MAX; floor at MIN",
+          "effort": "S"
         },
         {
           "id": "E03.T02",
@@ -173,7 +191,8 @@
           "idDb": 5804975659,
           "title": "Passive drain uses difficulty × Recovery mult",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/38",
-          "failingTest": "dopamine: tick(dt) drains by base × difficultyMult × recoveryMult formula from 06"
+          "failingTest": "dopamine: tick(dt) drains by base × difficultyMult × recoveryMult formula from 06",
+          "effort": "M"
         },
         {
           "id": "E03.T03",
@@ -181,7 +200,8 @@
           "idDb": 5804975937,
           "title": "Positive gain from interactions",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/39",
-          "failingTest": "dopamine: grant(amount) increases meter; never used as penalty path"
+          "failingTest": "dopamine: grant(amount) increases meter; never used as penalty path",
+          "effort": "S"
         },
         {
           "id": "E03.T04",
@@ -189,7 +209,9 @@
           "idDb": 5804976222,
           "title": "Diminishing returns logarithmic floor",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/40",
-          "failingTest": "dopamine: repeated same-target grants follow log falloff toward DIMINISH_FLOOR_MULT; never ≤ 0; reset on target/system change"
+          "failingTest": "dopamine: repeated same-target grants follow log falloff toward DIMINISH_FLOOR_MULT; never ≤ 0; reset on target/system change",
+          "effort": "L",
+          "effortWhy": "Log falloff + reset rules easy to get wrong"
         },
         {
           "id": "E03.T05",
@@ -197,7 +219,9 @@
           "idDb": 5804976483,
           "title": "Anticipation builds and resets correctly",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/41",
-          "failingTest": "dopamine: AnticipationBonus grows while waiting; resets on obtain / leave / expire; capped vs direct rewards"
+          "failingTest": "dopamine: AnticipationBonus grows while waiting; resets on obtain / leave / expire; capped vs direct rewards",
+          "effort": "L",
+          "effortWhy": "Anticipation must stay distinct from Discovery"
         },
         {
           "id": "E03.T06",
@@ -205,7 +229,8 @@
           "idDb": 5804976866,
           "title": "No direct penalty subtraction API",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/42",
-          "failingTest": "dopamine: module surface has no penalize/damage/loseLife; fail paths cannot subtract"
+          "failingTest": "dopamine: module surface has no penalize/damage/loseLife; fail paths cannot subtract",
+          "effort": "S"
         }
       ]
     },
@@ -223,7 +248,9 @@
           "idDb": 5804977340,
           "title": "Valid Focus Change extends chain by 1",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/44",
-          "failingTest": "focusChain: valid interaction on different window increments length when destination is Normal/FocusReady/AttentionRequest"
+          "failingTest": "focusChain: valid interaction on different window increments length when destination is Normal/FocusReady/AttentionRequest",
+          "effort": "L",
+          "effortWhy": "Core skill expression; many edge cases"
         },
         {
           "id": "E04.T02",
@@ -231,7 +258,9 @@
           "idDb": 5804977599,
           "title": "Waiting destination does not extend; farming breaks",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/45",
-          "failingTest": "focusChain: destination in Waiting does not extend; repeated cooldown farming resets to 0"
+          "failingTest": "focusChain: destination in Waiting does not extend; repeated cooldown farming resets to 0",
+          "effort": "L",
+          "effortWhy": "Waiting/farming break is a common bug magnet"
         },
         {
           "id": "E04.T03",
@@ -239,7 +268,9 @@
           "idDb": 5804977942,
           "title": "Focus Ready improves quality not eligibility",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/46",
-          "failingTest": "focusChain: Normal vs FocusReady vs AttentionRequest change quality tier; all three can extend"
+          "failingTest": "focusChain: Normal vs FocusReady vs AttentionRequest change quality tier; all three can extend",
+          "effort": "L",
+          "effortWhy": "Quality tier vs eligibility subtlety"
         },
         {
           "id": "E04.T04",
@@ -247,7 +278,8 @@
           "idDb": 5804978287,
           "title": "Decaying continue-window timeoutMs(L)",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/47",
-          "failingTest": "focusChain: timeoutMs(L) matches 06 formula; expiry resets length to 0"
+          "failingTest": "focusChain: timeoutMs(L) matches 06 formula; expiry resets length to 0",
+          "effort": "M"
         },
         {
           "id": "E04.T05",
@@ -255,7 +287,8 @@
           "idDb": 5804978601,
           "title": "Completion bonus only when length ≥ min",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/48",
-          "failingTest": "focusChain: ending length 1–2 pays no completion; ≥ min pays once; step bonuses not clawed back"
+          "failingTest": "focusChain: ending length 1–2 pays no completion; ≥ min pays once; step bonuses not clawed back",
+          "effort": "M"
         },
         {
           "id": "E04.T06",
@@ -263,7 +296,8 @@
           "idDb": 5804978907,
           "title": "Burnout/Recovery do not break chain",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/49",
-          "failingTest": "focusChain: enter Burnout/Recovery leaves length intact"
+          "failingTest": "focusChain: enter Burnout/Recovery leaves length intact",
+          "effort": "S"
         },
         {
           "id": "E04.T07",
@@ -271,7 +305,8 @@
           "idDb": 5804979186,
           "title": "Hover alone does not change Active Window",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/50",
-          "failingTest": "focusChain: pointer hover without valid interaction leaves ActiveWindow unchanged"
+          "failingTest": "focusChain: pointer hover without valid interaction leaves ActiveWindow unchanged",
+          "effort": "S"
         }
       ]
     },
@@ -289,7 +324,8 @@
           "idDb": 5804979662,
           "title": "Priority: text → Alert → Active Window → navigation",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/52",
-          "failingTest": "input: same key consumed by higher layer never reaches lower layer"
+          "failingTest": "input: same key consumed by higher layer never reaches lower layer",
+          "effort": "M"
         },
         {
           "id": "E05.T02",
@@ -297,7 +333,8 @@
           "idDb": 5804979935,
           "title": "R is always Repost; Y navigates to Echo",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/53",
-          "failingTest": "input: KeyR routes Repost; KeyY navigates Echo; R never switches windows"
+          "failingTest": "input: KeyR routes Repost; KeyY navigates Echo; R never switches windows",
+          "effort": "M"
         },
         {
           "id": "E05.T03",
@@ -305,7 +342,8 @@
           "idDb": 5804980266,
           "title": "Nav shortcuts count as Focus Change when they switch windows",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/54",
-          "failingTest": "input: pressing T then Q updates ActiveWindow and can extend Focus Chain under normal rules"
+          "failingTest": "input: pressing T then Q updates ActiveWindow and can extend Focus Chain under normal rules",
+          "effort": "M"
         },
         {
           "id": "E05.T04",
@@ -313,7 +351,8 @@
           "idDb": 5804980534,
           "title": "Pointer/touch paths share valid-interaction helpers",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/55",
-          "failingTest": "input: pointer valid action and keyboard valid action both update ActiveWindow identically"
+          "failingTest": "input: pointer valid action and keyboard valid action both update ActiveWindow identically",
+          "effort": "S"
         }
       ]
     },
@@ -331,7 +370,8 @@
           "idDb": 5804981003,
           "title": "Difficulty starts at minimum and rises continuously",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/57",
-          "failingTest": "difficulty: value at t=0 is min; smooth curve toward max; no discrete level flags"
+          "failingTest": "difficulty: value at t=0 is min; smooth curve toward max; no discrete level flags",
+          "effort": "M"
         },
         {
           "id": "E06.T02",
@@ -339,7 +379,8 @@
           "idDb": 5804981256,
           "title": "Difficulty feeds Dopamine drain mult only as multiplier",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/58",
-          "failingTest": "difficulty: drainMult(t) within [MIN,MAX]; does not expose rule-changing switches"
+          "failingTest": "difficulty: drainMult(t) within [MIN,MAX]; does not expose rule-changing switches",
+          "effort": "S"
         },
         {
           "id": "E06.T03",
@@ -347,7 +388,8 @@
           "idDb": 5804981552,
           "title": "Event-interval multipliers available to windows/minigames",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/59",
-          "failingTest": "difficulty: eventIntervalMult decreases over time but stays > 0 (expert-survivable)"
+          "failingTest": "difficulty: eventIntervalMult decreases over time but stays > 0 (expert-survivable)",
+          "effort": "S"
         }
       ]
     },
@@ -365,7 +407,8 @@
           "idDb": 5804982005,
           "title": "APM tracking with injected clock",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/61",
-          "failingTest": "burnout: recorded actions yield APM over sliding window"
+          "failingTest": "burnout: recorded actions yield APM over sliding window",
+          "effort": "M"
         },
         {
           "id": "E07.T02",
@@ -373,7 +416,8 @@
           "idDb": 5804982276,
           "title": "Telegraph when APM approaches threshold",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/62",
-          "failingTest": "burnout: telegraph active at BURNOUT_TELEGRAPH_APM_RATIO without entering Burnout yet"
+          "failingTest": "burnout: telegraph active at BURNOUT_TELEGRAPH_APM_RATIO without entering Burnout yet",
+          "effort": "M"
         },
         {
           "id": "E07.T03",
@@ -381,7 +425,8 @@
           "idDb": 5804982593,
           "title": "Enter Burnout after sustain above threshold",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/63",
-          "failingTest": "burnout: sustained APM ≥ threshold for enter window activates Burnout modifier"
+          "failingTest": "burnout: sustained APM ≥ threshold for enter window activates Burnout modifier",
+          "effort": "M"
         },
         {
           "id": "E07.T04",
@@ -389,7 +434,9 @@
           "idDb": 5804982914,
           "title": "Exit Burnout → Recovery for fixed duration",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/64",
-          "failingTest": "burnout: APM below exit sustain enters Recovery; Recovery lasts fixed ms then returns to Playing"
+          "failingTest": "burnout: APM below exit sustain enters Recovery; Recovery lasts fixed ms then returns to Playing",
+          "effort": "L",
+          "effortWhy": "Recovery drain + no-retrigger invariants"
         },
         {
           "id": "E07.T05",
@@ -397,7 +444,8 @@
           "idDb": 5804983183,
           "title": "APM threshold escalates after each completed Recovery",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/65",
-          "failingTest": "burnout: threshold permanently increases mid-Match after Recovery; never decreases"
+          "failingTest": "burnout: threshold permanently increases mid-Match after Recovery; never decreases",
+          "effort": "M"
         }
       ]
     },
@@ -415,7 +463,8 @@
           "idDb": 5804983607,
           "title": "Manifest schema validation fail-closed",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/67",
-          "failingTest": "content: missing required manifest/license fields rejects pack; does not call loadingComplete"
+          "failingTest": "content: missing required manifest/license fields rejects pack; does not call loadingComplete",
+          "effort": "M"
         },
         {
           "id": "E08.T02",
@@ -423,7 +472,8 @@
           "idDb": 5804983882,
           "title": "Starter-pack count gate from 06",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/68",
-          "failingTest": "content: Playing blocked until starter-pack counts satisfied; then loadingComplete allowed"
+          "failingTest": "content: Playing blocked until starter-pack counts satisfied; then loadingComplete allowed",
+          "effort": "M"
         },
         {
           "id": "E08.T03",
@@ -431,7 +481,8 @@
           "idDb": 5804984216,
           "title": "Injected RNG picks Minigame + layout shuffle at Loading",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/69",
-          "failingTest": "content/session: with seeded rng, Minigame id and desktop shuffle are deterministic"
+          "failingTest": "content/session: with seeded rng, Minigame id and desktop shuffle are deterministic",
+          "effort": "M"
         },
         {
           "id": "E08.T04",
@@ -439,7 +490,8 @@
           "idDb": 5804984527,
           "title": "Providers default disabled without env",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/70",
-          "failingTest": "config: pixabay/pexels/jamendo enabled flags false by default"
+          "failingTest": "config: pixabay/pexels/jamendo enabled flags false by default",
+          "effort": "S"
         }
       ]
     },
@@ -457,7 +509,9 @@
           "idDb": 5804984990,
           "title": "Desktop slot model: five permanent windows + bar",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/72",
-          "failingTest": "layout: desktop slots = Minigame+Loop+Pulse+Wave+Echo; DopamineBar reserved outside masonry; Alerts not a slot"
+          "failingTest": "layout: desktop slots = Minigame+Loop+Pulse+Wave+Echo; DopamineBar reserved outside masonry; Alerts not a slot",
+          "effort": "L",
+          "effortWhy": "Masonry slot model is layout SSOT in code"
         },
         {
           "id": "E09.T02",
@@ -465,7 +519,9 @@
           "idDb": 5804985223,
           "title": "Desktop structural pairs + allowed shuffle",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/73",
-          "failingTest": "layout: Loop always above Wave; Minigame L/R shuffle; Pulse/Echo swap; gutters applied"
+          "failingTest": "layout: Loop always above Wave; Minigame L/R shuffle; Pulse/Echo swap; gutters applied",
+          "effort": "L",
+          "effortWhy": "Structural pairs + shuffle constraints"
         },
         {
           "id": "E09.T03",
@@ -473,7 +529,8 @@
           "idDb": 5804985537,
           "title": "Mobile: Minigame + exactly two services",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/74",
-          "failingTest": "layout: mobile permanent count is 3; services chosen from {Loop,Pulse,Wave,Echo}; Loop-above-Wave if both picked"
+          "failingTest": "layout: mobile permanent count is 3; services chosen from {Loop,Pulse,Wave,Echo}; Loop-above-Wave if both picked",
+          "effort": "M"
         },
         {
           "id": "E09.T04",
@@ -481,7 +538,8 @@
           "idDb": 5804985873,
           "title": "React layout smoke: roles/slot counts",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/75",
-          "failingTest": "Layout.tsx: renders expected roles for desktop fixture; Dopamine bar present; Alerts portal root exists"
+          "failingTest": "Layout.tsx: renders expected roles for desktop fixture; Dopamine bar present; Alerts portal root exists",
+          "effort": "M"
         }
       ]
     },
@@ -499,7 +557,8 @@
           "idDb": 5804986374,
           "title": "Start Page shows brand, how-to, Accessibility, Credits, PLAY",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/77",
-          "failingTest": "StartPage: exposes PLAY control, Accessibility toggle, Credits link; no drain tick while mounted in StartPage state"
+          "failingTest": "StartPage: exposes PLAY control, Accessibility toggle, Credits link; no drain tick while mounted in StartPage state",
+          "effort": "M"
         },
         {
           "id": "E10.T02",
@@ -507,7 +566,8 @@
           "idDb": 5804986656,
           "title": "Accessibility Mode persists in localStorage",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/78",
-          "failingTest": "a11y: toggle writes localStorage; reload reads same value"
+          "failingTest": "a11y: toggle writes localStorage; reload reads same value",
+          "effort": "S"
         },
         {
           "id": "E10.T03",
@@ -515,7 +575,8 @@
           "idDb": 5804986922,
           "title": "Credits Modal opens from Start Page and lists store rows",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/79",
-          "failingTest": "CreditsModal: opens from Credits link; renders entries from content/credits/store.json fixture; close returns to hub"
+          "failingTest": "CreditsModal: opens from Credits link; renders entries from content/credits/store.json fixture; close returns to hub",
+          "effort": "M"
         },
         {
           "id": "E10.T04",
@@ -523,7 +584,8 @@
           "idDb": 5804987221,
           "title": "Loading splash shows until gate passes",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/80",
-          "failingTest": "LoadingView: visible in Loading state; shows error UI on validation failure"
+          "failingTest": "LoadingView: visible in Loading state; shows error UI on validation failure",
+          "effort": "S"
         },
         {
           "id": "E10.T05",
@@ -531,7 +593,8 @@
           "idDb": 5804987523,
           "title": "Game Over shows stats + PLAY AGAIN + hub path",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/81",
-          "failingTest": "GameOver: renders Survival Time, Final Score, Highest Combo, Longest Focus Chain, Burnouts; PLAY AGAIN → Loading; hub → Start Page"
+          "failingTest": "GameOver: renders Survival Time, Final Score, Highest Combo, Longest Focus Chain, Burnouts; PLAY AGAIN → Loading; hub → Start Page",
+          "effort": "M"
         }
       ]
     },
@@ -549,7 +612,9 @@
           "idDb": 5804988036,
           "title": "Minigame manifest loader resolves stable asset ids",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/83",
-          "failingTest": "minigames/assets: loadManifest(id) returns skin/sprite ids without baking pixel sizes into rules API"
+          "failingTest": "minigames/assets: loadManifest(id) returns skin/sprite ids without baking pixel sizes into rules API",
+          "effort": "L",
+          "effortWhy": "Asset-agnostic pin — wrong shape is expensive later"
         },
         {
           "id": "E11.T02",
@@ -557,7 +622,9 @@
           "idDb": 5804988345,
           "title": "Minigame host mounts selected id; reports actions into core",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/84",
-          "failingTest": "minigames/host: given session minigame id, host constructs that game; onValidAction reaches Focus Chain/Dopamine ports"
+          "failingTest": "minigames/host: given session minigame id, host constructs that game; onValidAction reaches Focus Chain/Dopamine ports",
+          "effort": "L",
+          "effortWhy": "Host/core ports for all minigames"
         },
         {
           "id": "E11.T03",
@@ -565,7 +632,8 @@
           "idDb": 5804988686,
           "title": "Minigame failure preserves Match resources",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/85",
-          "failingTest": "minigames: onFailure resets local state only; Dopamine, score, Focus Chain, difficulty unchanged"
+          "failingTest": "minigames: onFailure resets local state only; Dopamine, score, Focus Chain, difficulty unchanged",
+          "effort": "M"
         },
         {
           "id": "E11.T04",
@@ -573,7 +641,9 @@
           "idDb": 5804988993,
           "title": "Skin swap test: alternate manifest does not change rules",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/86",
-          "failingTest": "minigames/assets: swapping fixture skin manifest leaves lane count / failure rules assertions green"
+          "failingTest": "minigames/assets: swapping fixture skin manifest leaves lane count / failure rules assertions green",
+          "effort": "L",
+          "effortWhy": "Proves restyle-without-rewrite pin"
         }
       ]
     },
@@ -591,7 +661,8 @@
           "idDb": 5804989567,
           "title": "Three lanes + instantaneous lane change",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/88",
-          "failingTest": "laneDefender: player occupies exactly one of L/C/R; changeLane is instantaneous"
+          "failingTest": "laneDefender: player occupies exactly one of L/C/R; changeLane is instantaneous",
+          "effort": "M"
         },
         {
           "id": "E12.T02",
@@ -599,7 +670,9 @@
           "idDb": 5804989858,
           "title": "Enemies advance and die in one hit; reach = fail",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/89",
-          "failingTest": "laneDefender: normal enemy destroyed on hit; enemy reaching player triggers failure reset"
+          "failingTest": "laneDefender: normal enemy destroyed on hit; enemy reaching player triggers failure reset",
+          "effort": "L",
+          "effortWhy": "Combat sim + failure reset contract"
         },
         {
           "id": "E12.T03",
@@ -607,7 +680,9 @@
           "idDb": 5804990172,
           "title": "Hazards counters and Barrier semantics",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/90",
-          "failingTest": "laneDefender: Barrier negative counter increments on shots; negative on reach = fail; positive blocks N enemies"
+          "failingTest": "laneDefender: Barrier negative counter increments on shots; negative on reach = fail; positive blocks N enemies",
+          "effort": "L",
+          "effortWhy": "Barrier counter semantics nuanced"
         },
         {
           "id": "E12.T04",
@@ -615,7 +690,9 @@
           "idDb": 5804990500,
           "title": "Boss integrity + rewards hooks",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/91",
-          "failingTest": "laneDefender: boss requires multi-hit integrity; defeat grants score/Dopamine/temp mult hooks (not player health)"
+          "failingTest": "laneDefender: boss requires multi-hit integrity; defeat grants score/Dopamine/temp mult hooks (not player health)",
+          "effort": "L",
+          "effortWhy": "Boss integrity ≠ player health language"
         },
         {
           "id": "E12.T05",
@@ -623,7 +700,8 @@
           "idDb": 5804990793,
           "title": "Pickups expire; difficulty densifies spawns",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/92",
-          "failingTest": "laneDefender: pickup despawns after TTL; higher difficultyMult increases spawn density"
+          "failingTest": "laneDefender: pickup despawns after TTL; higher difficultyMult increases spawn density",
+          "effort": "M"
         },
         {
           "id": "E12.T06",
@@ -631,7 +709,9 @@
           "idDb": 5804991092,
           "title": "Canvas adapter letterboxes playfield; uses asset ids",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/93",
-          "failingTest": "laneDefender/view: adapter requests assets by stable id; sim tick independent of sprite pixel size"
+          "failingTest": "laneDefender/view: adapter requests assets by stable id; sim tick independent of sprite pixel size",
+          "effort": "L",
+          "effortWhy": "Canvas adapter must not bake art into rules"
         }
       ]
     },
@@ -649,7 +729,8 @@
           "idDb": 5804991549,
           "title": "Clip loops until player Next",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/95",
-          "failingTest": "loop: ended media does not auto-advance; Next loads different clip from pack"
+          "failingTest": "loop: ended media does not auto-advance; Next loads different clip from pack",
+          "effort": "M"
         },
         {
           "id": "E13.T02",
@@ -657,7 +738,8 @@
           "idDb": 5804991814,
           "title": "Like / Repost grant Dopamine+Score via tables",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/96",
-          "failingTest": "loop: Like and Repost call reward table; diminishing applies on same target"
+          "failingTest": "loop: Like and Repost call reward table; diminishing applies on same target",
+          "effort": "M"
         },
         {
           "id": "E13.T03",
@@ -665,7 +747,8 @@
           "idDb": 5804992073,
           "title": "Attention Request opportunity expires without penalty",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/97",
-          "failingTest": "loop: interactive opportunity expires; ignore does not subtract Dopamine"
+          "failingTest": "loop: interactive opportunity expires; ignore does not subtract Dopamine",
+          "effort": "M"
         },
         {
           "id": "E13.T04",
@@ -673,7 +756,8 @@
           "idDb": 5804992423,
           "title": "Window states Normal/Waiting/Focus Ready",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/98",
-          "failingTest": "loop: leaving starts Reward Cooldown (Waiting); expiry → Focus Ready"
+          "failingTest": "loop: leaving starts Reward Cooldown (Waiting); expiry → Focus Ready",
+          "effort": "M"
         }
       ]
     },
@@ -691,7 +775,8 @@
           "idDb": 5804992884,
           "title": "Feed renders posts from content pack",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/100",
-          "failingTest": "pulse: loads posts fixture; timeline non-empty in Normal state"
+          "failingTest": "pulse: loads posts fixture; timeline non-empty in Normal state",
+          "effort": "M"
         },
         {
           "id": "E14.T02",
@@ -699,7 +784,8 @@
           "idDb": 5804993171,
           "title": "Like / Repost / Reply / Create Post actions",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/101",
-          "failingTest": "pulse: L/R/C/P paths grant rewards per table; Create Post then Enter publishes"
+          "failingTest": "pulse: L/R/C/P paths grant rewards per table; Create Post then Enter publishes",
+          "effort": "M"
         },
         {
           "id": "E14.T03",
@@ -707,7 +793,8 @@
           "idDb": 5804993499,
           "title": "Mention / trend Attention Requests",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/102",
-          "failingTest": "pulse: mention event raises Attention Request; respond before expiry grants bonus; ignore no Dopamine penalty"
+          "failingTest": "pulse: mention event raises Attention Request; respond before expiry grants bonus; ignore no Dopamine penalty",
+          "effort": "M"
         },
         {
           "id": "E14.T04",
@@ -715,7 +802,8 @@
           "idDb": 5804993826,
           "title": "Spam/ads reward 0 Dopamine when present",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/103",
-          "failingTest": "pulse: marked spam/ad interactions grant 0 Dopamine (score rules per 06)"
+          "failingTest": "pulse: marked spam/ad interactions grant 0 Dopamine (score rules per 06)",
+          "effort": "S"
         }
       ]
     },
@@ -733,7 +821,8 @@
           "idDb": 5804994328,
           "title": "Continuous playback + Next song",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/105",
-          "failingTest": "wave: track auto-advances on end; N skips to next"
+          "failingTest": "wave: track auto-advances on end; N skips to next",
+          "effort": "M"
         },
         {
           "id": "E15.T02",
@@ -741,7 +830,9 @@
           "idDb": 5804994578,
           "title": "Discovery Bonus on unheard tracks only",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/106",
-          "failingTest": "wave: skip/accept onto unheard track grants DiscoveryBonus; already-heard grants none (DISCOVERY_HEARD_TRACK_MULT)"
+          "failingTest": "wave: skip/accept onto unheard track grants DiscoveryBonus; already-heard grants none (DISCOVERY_HEARD_TRACK_MULT)",
+          "effort": "XL",
+          "effortWhy": "Discovery pin — farming already-heard must fail tests"
         },
         {
           "id": "E15.T03",
@@ -749,7 +840,9 @@
           "idDb": 5804994906,
           "title": "Anticipation toward Song Moment",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/107",
-          "failingTest": "wave: staying to Song Moment builds AnticipationBonus; landing pays off; leave/expire resets; never conflated with Discovery fixtures"
+          "failingTest": "wave: staying to Song Moment builds AnticipationBonus; landing pays off; leave/expire resets; never conflated with Discovery fixtures",
+          "effort": "XL",
+          "effortWhy": "Anticipation pin — separate fixtures from Discovery"
         },
         {
           "id": "E15.T04",
@@ -757,7 +850,8 @@
           "idDb": 5804995231,
           "title": "Recommendations as Attention Requests",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/108",
-          "failingTest": "wave: recommendation event is Attention Request; accept/ignore paths; no direct Dopamine penalty on ignore"
+          "failingTest": "wave: recommendation event is Attention Request; accept/ignore paths; no direct Dopamine penalty on ignore",
+          "effort": "M"
         }
       ]
     },
@@ -775,7 +869,8 @@
           "idDb": 5804995679,
           "title": "Playback + Next content",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/110",
-          "failingTest": "echo: N advances content; playback progress advances with injected media clock"
+          "failingTest": "echo: N advances content; playback progress advances with injected media clock",
+          "effort": "M"
         },
         {
           "id": "E16.T02",
@@ -783,7 +878,8 @@
           "idDb": 5804995942,
           "title": "React / Subscribe rewards",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/111",
-          "failingTest": "echo: L react and S subscribe grant table rewards; diminishing on same target"
+          "failingTest": "echo: L react and S subscribe grant table rewards; diminishing on same target",
+          "effort": "S"
         },
         {
           "id": "E16.T03",
@@ -791,7 +887,8 @@
           "idDb": 5804996233,
           "title": "Highlight moment Anticipation path",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/112",
-          "failingTest": "echo: waiting for highlight builds AnticipationBonus; distinct from Wave Discovery fixtures"
+          "failingTest": "echo: waiting for highlight builds AnticipationBonus; distinct from Wave Discovery fixtures",
+          "effort": "M"
         }
       ]
     },
@@ -809,7 +906,8 @@
           "idDb": 5804996644,
           "title": "Alert overlay above layout; not a masonry slot",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/114",
-          "failingTest": "alerts: visible alert renders in overlay root; layout slot count unchanged"
+          "failingTest": "alerts: visible alert renders in overlay root; layout slot count unchanged",
+          "effort": "M"
         },
         {
           "id": "E17.T02",
@@ -817,7 +915,8 @@
           "idDb": 5804996954,
           "title": "A opens highest priority; Esc dismisses",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/115",
-          "failingTest": "alerts: KeyA opens top alert; Esc dismisses active; Alert layer beats Active Window shortcuts"
+          "failingTest": "alerts: KeyA opens top alert; Esc dismisses active; Alert layer beats Active Window shortcuts",
+          "effort": "M"
         },
         {
           "id": "E17.T03",
@@ -825,7 +924,8 @@
           "idDb": 5804997254,
           "title": "Open can extend Focus Chain; spam = 0 Dopamine",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/116",
-          "failingTest": "alerts: opening eligible alert can extend Focus Chain; spam category grants 0 Dopamine"
+          "failingTest": "alerts: opening eligible alert can extend Focus Chain; spam category grants 0 Dopamine",
+          "effort": "M"
         },
         {
           "id": "E17.T04",
@@ -833,7 +933,8 @@
           "idDb": 5804997564,
           "title": "Ignore/dismiss never subtracts Dopamine",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/117",
-          "failingTest": "alerts: dismiss/expire paths do not call any Dopamine subtraction"
+          "failingTest": "alerts: dismiss/expire paths do not call any Dopamine subtraction",
+          "effort": "S"
         }
       ]
     },
@@ -851,7 +952,9 @@
           "idDb": 5804998007,
           "title": "Board + seven tetrominoes spawn",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/119",
-          "failingTest": "blockCascade: board dimensions fixed; piece bag includes I/J/L/O/S/T/Z"
+          "failingTest": "blockCascade: board dimensions fixed; piece bag includes I/J/L/O/S/T/Z",
+          "effort": "L",
+          "effortWhy": "Board/piece model foundation"
         },
         {
           "id": "E18.T02",
@@ -859,7 +962,8 @@
           "idDb": 5804998291,
           "title": "Move/rotate/soft drop; no hard drop",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/120",
-          "failingTest": "blockCascade: controls move/rotate/softDrop only; hard drop API absent"
+          "failingTest": "blockCascade: controls move/rotate/softDrop only; hard drop API absent",
+          "effort": "M"
         },
         {
           "id": "E18.T03",
@@ -867,7 +971,9 @@
           "idDb": 5804998578,
           "title": "Line clears grant rewards; overflow resets minigame only",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/121",
-          "failingTest": "blockCascade: clearing N lines grants score/Dopamine hooks; stack overflow triggers failure reset without touching Match Dopamine"
+          "failingTest": "blockCascade: clearing N lines grants score/Dopamine hooks; stack overflow triggers failure reset without touching Match Dopamine",
+          "effort": "L",
+          "effortWhy": "Overflow vs Match resources"
         },
         {
           "id": "E18.T04",
@@ -875,7 +981,8 @@
           "idDb": 5804998891,
           "title": "Fall speed scales with difficulty; skin from manifest ids",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/122",
-          "failingTest": "blockCascade: higher difficulty increases fall speed; renderer resolves block skins by id from manifest (not hard-coded hex in rules)"
+          "failingTest": "blockCascade: higher difficulty increases fall speed; renderer resolves block skins by id from manifest (not hard-coded hex in rules)",
+          "effort": "M"
         }
       ]
     },
@@ -893,7 +1000,8 @@
           "idDb": 5804999393,
           "title": "Auto-forward + three-lane selection",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/124",
-          "failingTest": "endlessRunner: player advances automatically; only lane selection is controlled"
+          "failingTest": "endlessRunner: player advances automatically; only lane selection is controlled",
+          "effort": "M"
         },
         {
           "id": "E19.T02",
@@ -901,7 +1009,8 @@
           "idDb": 5804999643,
           "title": "Obstacles collide → minigame reset only",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/125",
-          "failingTest": "endlessRunner: touching obstacle fails minigame; Match Dopamine/score/chain unchanged"
+          "failingTest": "endlessRunner: touching obstacle fails minigame; Match Dopamine/score/chain unchanged",
+          "effort": "M"
         },
         {
           "id": "E19.T03",
@@ -909,7 +1018,8 @@
           "idDb": 5804999946,
           "title": "Collectibles + rare pickup Attention Request",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/126",
-          "failingTest": "endlessRunner: collectibles grant rewards; rare pickup raises Attention Request signal; TTL expiry"
+          "failingTest": "endlessRunner: collectibles grant rewards; rare pickup raises Attention Request signal; TTL expiry",
+          "effort": "M"
         },
         {
           "id": "E19.T04",
@@ -917,7 +1027,8 @@
           "idDb": 5805000316,
           "title": "Canvas adapter uses asset ids",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/127",
-          "failingTest": "endlessRunner/view: draws via stable asset ids; rules unaffected by texture swap fixture"
+          "failingTest": "endlessRunner/view: draws via stable asset ids; rules unaffected by texture swap fixture",
+          "effort": "M"
         }
       ]
     },
@@ -935,7 +1046,8 @@
           "idDb": 5805000868,
           "title": "AudioContext unlock on PLAY gesture",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/129",
-          "failingTest": "audio: unlock() called from PLAY path; before unlock, graph not required to run"
+          "failingTest": "audio: unlock() called from PLAY path; before unlock, graph not required to run",
+          "effort": "S"
         },
         {
           "id": "E20.T02",
@@ -943,7 +1055,8 @@
           "idDb": 5805001125,
           "title": "Bus stub records duck/muffle messages",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/130",
-          "failingTest": "audio: setBusGain/muffle recordable on fake graph"
+          "failingTest": "audio: setBusGain/muffle recordable on fake graph",
+          "effort": "M"
         },
         {
           "id": "E20.T03",
@@ -951,7 +1064,8 @@
           "idDb": 5805001449,
           "title": "Game Over suspends/stops graph (silence)",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/131",
-          "failingTest": "audio: on GameOver, mixer silence() suspends/stops; no beds continue"
+          "failingTest": "audio: on GameOver, mixer silence() suspends/stops; no beds continue",
+          "effort": "S"
         }
       ]
     },
@@ -969,7 +1083,8 @@
           "idDb": 5805001940,
           "title": "Focus Chain step sticker host",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/133",
-          "failingTest": "stickers: on Focus Chain +1, sticker host receives chain length event; does not resize masonry slots"
+          "failingTest": "stickers: on Focus Chain +1, sticker host receives chain length event; does not resize masonry slots",
+          "effort": "M"
         },
         {
           "id": "E21.T02",
@@ -977,7 +1092,8 @@
           "idDb": 5805002249,
           "title": "Combo sticker distinct from Focus Chain",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/134",
-          "failingTest": "stickers: Combo multiplier events use Combo type; never aliased to FocusChain in API"
+          "failingTest": "stickers: Combo multiplier events use Combo type; never aliased to FocusChain in API",
+          "effort": "M"
         },
         {
           "id": "E21.T03",
@@ -985,7 +1101,8 @@
           "idDb": 5805002553,
           "title": "Accessibility Mode reduces motion intensity path",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/135",
-          "failingTest": "stickers/fx: when Accessibility Mode on, heavy shake/pulse path disabled or opacity-only"
+          "failingTest": "stickers/fx: when Accessibility Mode on, heavy shake/pulse path disabled or opacity-only",
+          "effort": "M"
         },
         {
           "id": "E21.T04",
@@ -993,7 +1110,8 @@
           "idDb": 5805002889,
           "title": "Burnout telegraph + Recovery cues as stickers",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/136",
-          "failingTest": "stickers: telegraph/recovery flags from E07 surface as short-lived stickers"
+          "failingTest": "stickers: telegraph/recovery flags from E07 surface as short-lived stickers",
+          "effort": "S"
         }
       ]
     },
@@ -1011,7 +1129,9 @@
           "idDb": 5805003317,
           "title": "Focus Chain visual progression tiers (3/5/10/15/20+)",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/138",
-          "failingTest": "feel: chain length thresholds emit escalating FX intents (popup→particles→flash→shake→color)"
+          "failingTest": "feel: chain length thresholds emit escalating FX intents (popup→particles→flash→shake→color)",
+          "effort": "L",
+          "effortWhy": "Feel tiers without pixel oracles"
         },
         {
           "id": "E22.T02",
@@ -1019,7 +1139,8 @@
           "idDb": 5805003550,
           "title": "Diminishing returns flatten Combo sticker juiciness",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/139",
-          "failingTest": "feel: repeated same-window combo intensity decreases while remaining readable"
+          "failingTest": "feel: repeated same-window combo intensity decreases while remaining readable",
+          "effort": "M"
         },
         {
           "id": "E22.T03",
@@ -1027,7 +1148,9 @@
           "idDb": 5805003838,
           "title": "Focus muffling + Burnout no-muffle + Recovery extra muffling",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/140",
-          "failingTest": "audio/feel: bus muffling states follow 09 rules per Playing/Burnout/Recovery"
+          "failingTest": "audio/feel: bus muffling states follow 09 rules per Playing/Burnout/Recovery",
+          "effort": "L",
+          "effortWhy": "Audio muffling state matrix"
         }
       ]
     },
@@ -1045,7 +1168,8 @@
           "idDb": 5805004319,
           "title": "Generate or license missing .ogg cues per manifest",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/142",
-          "failingTest": "sfx: content/sfx/manifest.json every required cue resolves to an existing file in tests/CI asset check"
+          "failingTest": "sfx: content/sfx/manifest.json every required cue resolves to an existing file in tests/CI asset check",
+          "effort": "M"
         },
         {
           "id": "E23.T02",
@@ -1053,7 +1177,8 @@
           "idDb": 5805004599,
           "title": "Play cues on domain events via stable ids",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/143",
-          "failingTest": "sfx: Focus Chain step / alert open / minigame hit dispatch named cue ids through mixer"
+          "failingTest": "sfx: Focus Chain step / alert open / minigame hit dispatch named cue ids through mixer",
+          "effort": "M"
         }
       ]
     },
@@ -1071,7 +1196,8 @@
           "idDb": 5805005060,
           "title": "Populate Loop clips + Wave high/boring + Echo media with manifests",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/145",
-          "failingTest": "content: starter + expanded pack counts validate; license/attribution fields present"
+          "failingTest": "content: starter + expanded pack counts validate; license/attribution fields present",
+          "effort": "M"
         },
         {
           "id": "E24.T02",
@@ -1079,7 +1205,8 @@
           "idDb": 5805005326,
           "title": "Credits store rows for every third-party asset",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/146",
-          "failingTest": "credits: store.json includes a row for each manifest-attributed asset in expanded packs"
+          "failingTest": "credits: store.json includes a row for each manifest-attributed asset in expanded packs",
+          "effort": "S"
         }
       ]
     },
@@ -1097,7 +1224,8 @@
           "idDb": 5805005813,
           "title": "Provider clients gated by enabled flags + env keys",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/148",
-          "failingTest": "providers: when enabled=false, no network; when enabled without key, fail closed with clear error"
+          "failingTest": "providers: when enabled=false, no network; when enabled without key, fail closed with clear error",
+          "effort": "M"
         },
         {
           "id": "E25.T02",
@@ -1105,7 +1233,8 @@
           "idDb": 5805006050,
           "title": "Fetched items normalize into content pack + credits",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/149",
-          "failingTest": "providers: normalized item carries license/attribution into credits store shape"
+          "failingTest": "providers: normalized item carries license/attribution into credits store shape",
+          "effort": "M"
         }
       ]
     },
@@ -1123,7 +1252,8 @@
           "idDb": 5805006487,
           "title": "Smoke: Start Page → PLAY → Loading → Playing visible",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/151",
-          "failingTest": "e2e: headed/headless Playwright path reaches Playing landmark"
+          "failingTest": "e2e: headed/headless Playwright path reaches Playing landmark",
+          "effort": "M"
         }
       ]
     },
@@ -1141,7 +1271,8 @@
           "idDb": 5805006918,
           "title": "Wordmark P→A kerning fix + WebP re-export",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/153",
-          "failingTest": "brand: visual review checklist item for title-dopamine kerning signed off (manual) / SVG spacing assertion if added"
+          "failingTest": "brand: visual review checklist item for title-dopamine kerning signed off (manual) / SVG spacing assertion if added",
+          "effort": "S"
         },
         {
           "id": "E27.T02",
@@ -1149,7 +1280,8 @@
           "idDb": 5805007185,
           "title": "Start Page floating stickers animate like arcade stickers",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/154",
-          "failingTest": "startPage: background stickers pop/fade via motion path; Accessibility Mode uses opacity-only"
+          "failingTest": "startPage: background stickers pop/fade via motion path; Accessibility Mode uses opacity-only",
+          "effort": "M"
         }
       ]
     },
@@ -1167,7 +1299,8 @@
           "idDb": 5805007636,
           "title": "Ease-in early Match drain/event intervals",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/156",
-          "failingTest": "balance: after tune, named constants still satisfy formula shape tests (Discovery≠Anticipation, no direct penalty)"
+          "failingTest": "balance: after tune, named constants still satisfy formula shape tests (Discovery≠Anticipation, no direct penalty)",
+          "effort": "M"
         },
         {
           "id": "E28.T02",
@@ -1175,7 +1308,8 @@
           "idDb": 5805007874,
           "title": "Late-Match pressure survivable for experts",
           "url": "https://github.com/Grupo-Kiss/Dopamine/issues/157",
-          "failingTest": "balance: difficulty max drain/event mults remain finite and >0; no discrete hard-fail flags"
+          "failingTest": "balance: difficulty max drain/event mults remain finite and >0; no discrete hard-fail flags",
+          "effort": "M"
         }
       ]
     }
