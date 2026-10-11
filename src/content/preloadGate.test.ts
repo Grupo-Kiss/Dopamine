@@ -49,7 +49,7 @@ describe('content preload gate', () => {
   })
 })
 
-function createStarterPack(): ContentPack {
+function createStarterPack() {
   return {
     loop: {
       clips: Array.from({ length: PRELOAD_LOOP_CLIPS }, (_, index) => ({

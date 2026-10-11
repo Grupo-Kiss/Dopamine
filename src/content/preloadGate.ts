@@ -14,9 +14,7 @@ export type PreloadGateResult =
   | { readonly ok: true; readonly errors: readonly [] }
   | { readonly ok: false; readonly errors: readonly string[] }
 
-export function evaluatePreloadGate(
-  pack: ContentPack,
-): PreloadGateResult {
+export function evaluatePreloadGate(pack: ContentPack): PreloadGateResult {
   const errors = [
     ...validateItems('loop.clips', pack.loop.clips),
     ...validateItems('wave.tracks', pack.wave.tracks),
@@ -42,9 +40,7 @@ export function evaluatePreloadGate(
     PRELOAD_ECHO_ITEMS,
   )
 
-  return errors.length === 0
-    ? { ok: true, errors: [] }
-    : { ok: false, errors }
+  return errors.length === 0 ? { ok: true, errors: [] } : { ok: false, errors }
 }
 
 export function runPreloadGate(
@@ -82,11 +78,9 @@ function validateItem(item: unknown, path: string): string[] {
   requireString(errors, item, path, 'attribution')
 
   const hasCreator =
-    typeof item.creatorLabel === 'string' &&
-    item.creatorLabel.trim().length > 0
+    typeof item.creatorLabel === 'string' && item.creatorLabel.trim().length > 0
   const hasArtist =
-    typeof item.artistLabel === 'string' &&
-    item.artistLabel.trim().length > 0
+    typeof item.artistLabel === 'string' && item.artistLabel.trim().length > 0
   if (!hasCreator && !hasArtist) {
     errors.push(`${path}.creatorLabel or artistLabel is required`)
   }

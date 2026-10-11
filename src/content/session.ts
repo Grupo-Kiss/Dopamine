@@ -1,17 +1,13 @@
 import type { Rng } from '../testing/rng'
 
-export type MinigameId =
-  | 'lane_defender'
-  | 'block_cascade'
-  | 'endless_runner'
+export type MinigameId = 'lane_defender' | 'block_cascade' | 'endless_runner'
 
 export type SessionValues = {
   readonly minigameId: MinigameId
   readonly desktopLayout: {
     readonly minigameSide: 'left' | 'right'
     readonly bottomOrder:
-      | readonly ['Pulse', 'Echo']
-      | readonly ['Echo', 'Pulse']
+      readonly ['Pulse', 'Echo'] | readonly ['Echo', 'Pulse']
   }
 }
 
