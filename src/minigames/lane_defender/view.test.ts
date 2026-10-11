@@ -4,6 +4,7 @@ import {
   laneFromKeyboard,
   laneFromPointer,
   letterboxPlayfield,
+  startLaneDefenderLoop,
 } from './view'
 
 describe('Lane Defender canvas adapter', () => {
@@ -63,5 +64,30 @@ describe('Lane Defender canvas adapter', () => {
     expect(laneFromPointer(10, 300)).toBe('left')
     expect(laneFromPointer(150, 300)).toBe('center')
     expect(laneFromPointer(299, 300)).toBe('right')
+  })
+
+  it('runs a thin injected RAF loop that forwards frame delta', () => {
+    const frames: FrameRequestCallback[] = []
+    const cancelled: number[] = []
+    const raf = {
+      request(callback: FrameRequestCallback) {
+        frames.push(callback)
+        return frames.length
+      },
+      cancel(id: number) {
+        cancelled.push(id)
+      },
+    }
+    const tick = vi.fn()
+    const render = vi.fn()
+
+    const stop = startLaneDefenderLoop(raf, tick, render)
+    frames[0]!(100)
+    frames[1]!(116)
+    stop()
+
+    expect(render).toHaveBeenCalledTimes(2)
+    expect(tick).toHaveBeenCalledWith(16)
+    expect(cancelled).toEqual([3])
   })
 })
