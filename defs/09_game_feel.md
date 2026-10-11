@@ -46,7 +46,7 @@ Reuse the same informational blocks as the Start Page (brief instructions remind
 | --- | --- | --- |
 | **Desktop chrome / windows** | Minimal, rounded, stroked, clean caricaturesque UI | Low |
 | **Arcade stickers / FX** | High energy (Balatro-*motion* energy: snappy squash/stretch, punchy pops) — not Balatro’s art style | Event-only |
-| **Minigames** | Cute Supercell-friendly toony (Lane/Runner) or harmonious modern-classic Tetris (Block Cascade) | High in-slot |
+| **Minigames** | Abstract readable cutouts (Lane/Runner — helmeted wedges, geometric mobs; not cute mascot faces) or harmonious modern-classic Tetris (Block Cascade) | High in-slot |
 
 Overall satire stays **cute / readable**, not depressive-dark. Individual windows may use **darker palettes** (e.g. Wave “dark player”, Block Cascade dark board) without gloomy styling.
 
@@ -140,7 +140,7 @@ Aspect is chosen to fit the `07` masonry slot (not assumed 16:9 fullscreen). Aut
 
 ### Lane Defender / Endless Runner
 
-Cute Supercell-friendly soldier + monsters as **cardboard cutout** billboards in simple 3D space. Shared cast OK. Hazards = bevelled basic shapes.
+Abstract but readable **cardboard cutout** billboards in simple 3D space: visored helmet (no face), geometric diamond mobs, armored boss slab with LED slits + integrity plate. Shared cast OK. Hazards = bevelled basic shapes. Not cute/goofy mascot faces.
 
 ### Block Cascade
 
@@ -205,8 +205,8 @@ Toggle on Start Page (persisted locally). When on:
 | --- | --- |
 | `content/mockups/start_page.svg` | Title, short instructions, accessibility, Credits link, PLAY |
 | `content/mockups/credits_modal.svg` | **Hi-fi target** — scrollable Credits Modal over hub |
-| `content/mockups/desktop_layout.svg` | Near-black gutters, branded windows, Dopamine bar |
-| `content/mockups/mobile_layout.svg` | **Hi-fi target** — Minigame + 2 services + edge Dopamine |
+| `content/mockups/desktop_layout.svg` | Near-black gutters, branded windows, Dopamine bar, stickers, one Alert |
+| `content/mockups/mobile_layout.svg` | Minigame + 2 services + edge Dopamine, two random draws side by side |
 | `content/mockups/dopamine_bar.svg` | High orange glow vs low violet |
 | `content/mockups/stickers_combo.svg` | Juicy vs bored combo |
 | `content/mockups/stickers_chain.svg` | Focus Chain arcade banner |

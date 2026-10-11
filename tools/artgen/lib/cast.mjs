@@ -1,13 +1,19 @@
 import { CARD, n, rr } from './brand.mjs';
-import { cardDefs, contactShadow, cutoutDefs, eye, piece, print } from './card.mjs';
+import { cardDefs, contactShadow, cutoutDefs, piece, print } from './card.mjs';
 
+/**
+ * Shared cast for Lane Defender / Endless Runner.
+ *
+ * Abstract readable silhouettes — helmeted wedge, geometric mob, armored boss —
+ * not cute cartoon faces. Still cardboard-cutout construction (cream edge +
+ * keyline) so the Arcade world stays distinct from the OS chrome.
+ */
 export const CAST = {
-  soldier: { art: '#6f9a4a', artLight: '#9ccc65', artDark: '#41632b' },
-  skin: { art: '#f0c79a', artLight: '#fbe2c2', artDark: '#c89a6c' },
-  gear: { art: '#3b4350', artLight: '#5d697b', artDark: '#242a34' },
-  steel: { art: '#8fa3bb', artLight: '#cfdcea', artDark: '#596878' },
-  mob: { art: '#36cfc0', artLight: '#86f0e6', artDark: '#1b7b73' },
-  boss: { art: '#ff6b4a', artLight: '#ffa78d', artDark: '#9c2f17' },
+  soldier: { art: '#5f8f3f', artLight: '#8fbf5a', artDark: '#355824' },
+  gear: { art: '#2f3642', artLight: '#4d5868', artDark: '#1a1f27' },
+  steel: { art: '#7e92a8', artLight: '#b8c8d8', artDark: '#4a5868' },
+  mob: { art: '#2eb8b0', artLight: '#6ee0d8', artDark: '#176e6a' },
+  boss: { art: '#e85a3a', artLight: '#ff8f70', artDark: '#8a2410' },
 };
 
 export function castDefs(id) {
@@ -23,148 +29,120 @@ const P = (id, k) => `url(#cd-${id}-${k}-print)`;
 const SHEEN = (id, k) => `cd-${id}-${k}-sheen`;
 const EDGE = (id) => `cd-${id}-soldier-edge`;
 
-/** Helmet sits above the brow line so the brim never crops the eyes. */
+/** Visored helmet — no face. Bucket silhouette + one optic slit. */
 function helmet(id, cx, top) {
-  const dome = `M${cx - 36} ${top + 32} C${cx - 36} ${top + 9} ${cx - 20} ${top} ${cx} ${top} C${cx + 20} ${top} ${cx + 36} ${top + 9} ${cx + 36} ${top + 32} L${cx + 36} ${top + 35} L${cx - 36} ${top + 35} Z`;
-  const brim = rr(cx - 42, top + 30, 84, 13, 6.5);
+  const dome = `M${cx - 28} ${top + 50} L${cx - 24} ${top + 6} L${cx - 8} ${top} L${cx + 8} ${top} L${cx + 24} ${top + 6} L${cx + 28} ${top + 50} Z`;
+  const slit = rr(cx - 18, top + 24, 36, 10, 2);
   return (
-    piece(dome, P(id, 'soldier'), { edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') }) +
-    print(
-      `M${cx - 32} ${top + 15} C${cx - 19} ${top + 6} ${cx + 19} ${top + 6} ${cx + 32} ${top + 15} L${cx + 32} ${top + 22} C${cx + 17} ${top + 13} ${cx - 17} ${top + 13} ${cx - 32} ${top + 22} Z`,
-      '#2f5d2e',
-      0.7
-    ) +
-    piece(brim, `url(#cd-${id}-gear-print)`, { key: 8, cream: 5, edgeId: EDGE(id) }) +
-    print(rr(cx - 37, top + 32, 74, 3.6, 1.8), '#ffffff', 0.2)
+    piece(dome, P(id, 'soldier'), { key: 8, cream: 4.4, edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') }) +
+    piece(rr(cx - 30, top + 46, 60, 8, 2), `url(#cd-${id}-gear-print)`, { key: 6, cream: 3.2, edgeId: EDGE(id) }) +
+    print(slit, '#0a0e14') +
+    print(rr(cx - 16, top + 26.5, 32, 3.5, 1), '#7af0a8', 0.95)
   );
 }
 
-function face(id, cx, top, look = 0) {
-  return (
-    piece(rr(cx - 28, top, 56, 50, 17), P(id, 'skin'), { edgeId: EDGE(id), sheen: SHEEN(id, 'skin') }) +
-    eye(cx - 12, top + 30, 8.5, { look, tilt: 0.08 }) +
-    eye(cx + 12, top + 30, 8.5, { look, tilt: 0.08 }) +
-    `<path d="M${cx - 9} ${top + 42} q9 7.5 18 0" fill="none" stroke="${CARD.keyline}" stroke-width="3.4" stroke-linecap="round"/>`
-  );
-}
-
-/** Chunky toony blaster. Auto-firing in `04`, so it reads as equipment. */
+/** Short rectangular blaster — silhouette, not a detailed toy. */
 function blaster(id, x, y, rot) {
   return (
     `<g transform="translate(${x} ${y}) rotate(${rot})">` +
-    piece(rr(-5, 32, 15, 26, 7), `url(#cd-${id}-gear-print)`, { key: 6.4, cream: 3.8, edgeId: EDGE(id) }) +
-    piece(rr(6, -50, 13, 62, 6), P(id, 'steel'), { key: 6.4, cream: 3.8, edgeId: EDGE(id), sheen: SHEEN(id, 'steel') }) +
-    print(rr(8.5, -44, 4.5, 50, 2.2), '#ffffff', 0.3) +
-    piece(rr(-4, 4, 29, 34, 9), P(id, 'steel'), { key: 7, cream: 4.2, edgeId: EDGE(id), sheen: SHEEN(id, 'steel') }) +
-    print(rr(1, 10, 7, 22, 3.5), '#ffffff', 0.22) +
-    print(rr(14, 12, 8, 18, 3.5), '#000000', 0.16) +
-    piece(rr(7, -4, 11, 9, 3), `url(#cd-${id}-gear-print)`, { key: 5.4, cream: 3.2, edgeId: EDGE(id) }) +
-    piece(rr(1, -60, 23, 13, 6), 'url(#cd-fx-hot)', { key: 6.4, cream: 3.8, edgeId: EDGE(id) }) +
-    print(rr(5.5, -56, 14, 5, 2.5), '#fff3d6', 0.65) +
+    piece(rr(0, -8, 48, 14, 5), P(id, 'steel'), { key: 6, cream: 3.4, edgeId: EDGE(id), sheen: SHEEN(id, 'steel') }) +
+    piece(rr(40, -4, 18, 6, 2.5), 'url(#cd-fx-hot)', { key: 5, cream: 2.8, edgeId: EDGE(id) }) +
+    piece(rr(6, 4, 12, 16, 4), `url(#cd-${id}-gear-print)`, { key: 5.4, cream: 3, edgeId: EDGE(id) }) +
     '</g>'
   );
 }
 
-function torsoRig(id, cx, top, bottom) {
-  const h = bottom - top;
-  const torso = `M${cx - 30} ${top + 16} C${cx - 30} ${top + 6} ${cx - 18} ${top} ${cx} ${top} C${cx + 18} ${top} ${cx + 30} ${top + 6} ${cx + 30} ${top + 16} L${cx + 34} ${bottom - 14} C${cx + 34} ${bottom - 4} ${cx + 20} ${bottom} ${cx} ${bottom} C${cx - 20} ${bottom} ${cx - 34} ${bottom - 4} ${cx - 34} ${bottom - 14} Z`;
-  const badge = rr(cx - 15, top + h * 0.42, 30, 24, 7);
+function torso(id, cx, top, bottom) {
+  const body = `M${cx - 26} ${top} L${cx + 26} ${top} L${cx + 30} ${bottom} L${cx - 30} ${bottom} Z`;
   return (
-    piece(torso, P(id, 'soldier'), { edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') }) +
-    print(`M${cx - 26} ${top + 12} L${cx - 6} ${bottom - 2} L${cx - 18} ${bottom - 2} L${cx - 34} ${top + 28} Z`, '#2f5d2e', 0.5) +
-    print(`M${cx + 26} ${top + 12} L${cx + 6} ${bottom - 2} L${cx + 18} ${bottom - 2} L${cx + 34} ${top + 28} Z`, '#2f5d2e', 0.4) +
-    print(badge, '#f5d14a') +
-    print(badge, 'url(#cd-fx-sheen)', 0.45) +
-    `<path d="${badge}" fill="none" stroke="${CARD.keyline}" stroke-width="2.6"/>` +
-    `<path d="M${cx - 7} ${top + h * 0.42 + 12} l6 6 l9 -12" fill="none" stroke="#3b2a05" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>`
+    piece(body, P(id, 'soldier'), { key: 8, cream: 4.4, edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') }) +
+    print(`M${cx - 20} ${top + 10} L${cx - 8} ${bottom - 6} L${cx - 16} ${bottom - 6} L${cx - 26} ${top + 16} Z`, '#2f5d2e', 0.4) +
+    // rank mark: abstract chevron, not a badge face
+    print(`M${cx - 10} ${top + 34} L${cx} ${top + 26} L${cx + 10} ${top + 34} L${cx + 10} ${top + 40} L${cx} ${top + 32} L${cx - 10} ${top + 40} Z`, '#f5d14a') +
+    `<path d="M${cx - 10} ${top + 34} L${cx} ${top + 26} L${cx + 10} ${top + 34} L${cx + 10} ${top + 40} L${cx} ${top + 32} L${cx - 10} ${top + 40} Z" fill="none" stroke="${CARD.keyline}" stroke-width="2"/>`
   );
 }
 
 /** Lane Defender player — standing cutout at the bottom of the three lanes. */
-export function soldierStanding(id, { look = 0 } = {}) {
+export function soldierStanding(id) {
   const cx = 80;
   return `<g filter="url(#cd-${id}-cast)">
-${contactShadow(cx, 190, 50, 12, id)}
-${piece(rr(cx - 28, 146, 24, 40, 10), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}
-${piece(rr(cx + 4, 146, 24, 40, 10), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}
-<g transform="rotate(-9 46 96)">${piece(rr(36, 92, 21, 52, 10.5), P(id, 'soldier'), { edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') })}</g>
-${torsoRig(id, cx, 76, 154)}
-<g transform="rotate(16 114 94)">${piece(rr(104, 90, 21, 50, 10.5), P(id, 'soldier'), { edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') })}</g>
-${face(id, cx, 28, look)}
-${helmet(id, cx, 2)}
-${blaster(id, 109, 66, 14)}
+${contactShadow(cx, 190, 46, 11, id)}
+${piece(rr(cx - 26, 148, 20, 38, 8), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}
+${piece(rr(cx + 6, 148, 20, 38, 8), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}
+${piece(rr(cx - 42, 88, 16, 48, 8), P(id, 'soldier'), { edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') })}
+${torso(id, cx, 72, 152)}
+${piece(rr(cx + 26, 88, 16, 48, 8), P(id, 'soldier'), { edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') })}
+${helmet(id, cx, 8)}
+${blaster(id, 98, 96, 0)}
 </g>`;
 }
 
-/** Endless Runner player — sibling pose: forward lean, split stride, scarf. */
+/** Endless Runner player — forward lean, split stride, same abstract helmet. */
 export function soldierRunning(id) {
   const cx = 84;
-  const limb = (d) => piece(d, P(id, 'soldier'), { edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') });
   return `<g filter="url(#cd-${id}-cast)">
-${contactShadow(cx + 2, 190, 58, 11, id)}
-<g transform="rotate(-40 ${cx + 6} 146)">${piece(rr(cx - 6, 140, 24, 50, 11), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}</g>
-<g transform="rotate(-42 ${cx + 28} 94)">${limb(rr(cx + 20, 90, 20, 48, 10))}</g>
-<g transform="rotate(-11 ${cx} 150)">${torsoRig(id, cx, 78, 152)}</g>
-<g transform="rotate(46 ${cx - 6} 146)">${piece(rr(cx - 18, 140, 24, 50, 11), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}</g>
-<g transform="rotate(68 ${cx - 28} 94)">${limb(rr(cx - 38, 90, 20, 48, 10))}</g>
-<g transform="rotate(-11 ${cx} 56)">
-${piece(`M${cx + 18} 18 L${cx + 26} 42 C${cx + 48} 36 ${cx + 68} 44 ${cx + 82} 60 L${cx + 62} 74 C${cx + 50} 60 ${cx + 34} 56 ${cx + 14} 60 Z`, 'url(#cd-fx-hot)', { key: 8, cream: 5, edgeId: EDGE(id) })}
-${face(id, cx, 28, -0.3)}
-${helmet(id, cx, 2)}
+${contactShadow(cx + 2, 190, 54, 10, id)}
+<g transform="rotate(-38 ${cx + 4} 148)">${piece(rr(cx - 8, 142, 20, 46, 9), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}</g>
+<g transform="rotate(-36 ${cx + 26} 96)">${piece(rr(cx + 18, 92, 16, 44, 8), P(id, 'soldier'), { edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') })}</g>
+<g transform="rotate(-10 ${cx} 148)">${torso(id, cx, 74, 150)}</g>
+<g transform="rotate(42 ${cx - 4} 148)">${piece(rr(cx - 16, 142, 20, 46, 9), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}</g>
+<g transform="rotate(58 ${cx - 26} 96)">${piece(rr(cx - 34, 92, 16, 44, 8), P(id, 'soldier'), { edgeId: EDGE(id), sheen: SHEEN(id, 'soldier') })}</g>
+<g transform="rotate(-10 ${cx} 56)">
+${print(`M${cx + 16} 22 L${cx + 22} 40 C${cx + 44} 34 ${cx + 62} 42 ${cx + 74} 56 L${cx + 56} 68 C${cx + 46} 56 ${cx + 32} 52 ${cx + 12} 56 Z`, 'url(#cd-fx-hot)')}
+${helmet(id, cx, 6)}
 </g>
 </g>`;
 }
 
-/** One-hit enemy: cute toony blob, cheap to feedback at high density (`04`). */
+/**
+ * One-hit enemy: geometric diamond body + single optic slit.
+ * Readable at high density without reading as a cartoon mascot.
+ */
 export function enemyNormal(id) {
   const cx = 78;
+  const body = `M${cx} 18 L${cx + 48} 70 L${cx + 34} 128 L${cx - 34} 128 L${cx - 48} 70 Z`;
   return `<g filter="url(#cd-${id}-cast)">
-${contactShadow(cx, 142, 46, 10, id)}
-${piece(`M${cx - 34} 42 L${cx - 30} 6 L${cx - 6} 34 Z`, P(id, 'mob'), { key: 8, cream: 5, edgeId: EDGE(id) })}
-${piece(`M${cx + 34} 42 L${cx + 30} 6 L${cx + 6} 34 Z`, P(id, 'mob'), { key: 8, cream: 5, edgeId: EDGE(id) })}
-${piece(rr(cx - 38, 116, 25, 22, 10), P(id, 'mob'), { key: 8, cream: 5, edgeId: EDGE(id) })}
-${piece(rr(cx + 13, 116, 25, 22, 10), P(id, 'mob'), { key: 8, cream: 5, edgeId: EDGE(id) })}
-${piece(`M${cx - 56} 86 C${cx - 56} 46 ${cx - 32} 26 ${cx} 26 C${cx + 32} 26 ${cx + 56} 46 ${cx + 56} 86 C${cx + 56} 114 ${cx + 34} 128 ${cx} 128 C${cx - 34} 128 ${cx - 56} 114 ${cx - 56} 86 Z`, P(id, 'mob'), { edgeId: EDGE(id), sheen: SHEEN(id, 'mob') })}
-${print(`M${cx - 31} 106 C${cx - 31} 94 ${cx - 16} 88 ${cx} 88 C${cx + 16} 88 ${cx + 31} 94 ${cx + 31} 106 C${cx + 31} 118 ${cx + 16} 124 ${cx} 124 C${cx - 16} 124 ${cx - 31} 118 ${cx - 31} 106 Z`, '#d6fffa', 0.24)}
-${eye(cx - 18, 70, 16.5, { look: -0.12, tilt: 0.1 })}
-${eye(cx + 18, 70, 16.5, { look: 0.12, tilt: 0.1 })}
-<path d="M${cx - 19} 100 q19 17 38 0" fill="none" stroke="${CARD.keyline}" stroke-width="4.4" stroke-linecap="round"/>
-${print(`M${cx - 5} 101 L${cx + 7} 101 L${cx + 1} 112 Z`, '#fdfdff')}
+${contactShadow(cx, 136, 40, 9, id)}
+${piece(body, P(id, 'mob'), { edgeId: EDGE(id), sheen: SHEEN(id, 'mob') })}
+${print(`M${cx} 34 L${cx + 28} 70 L${cx + 18} 108 L${cx - 18} 108 L${cx - 28} 70 Z`, '#d6fffa', 0.16)}
+${print(rr(cx - 18, 58, 36, 10, 4), '#0a0e14')}
+${print(rr(cx - 14, 60.5, 28, 3.5, 1.5), '#7af0a8', 0.95)}
+${piece(`M${cx - 10} 128 L${cx - 22} 148 L${cx - 2} 140 Z`, P(id, 'mob'), { key: 6, cream: 3.4, edgeId: EDGE(id) })}
+${piece(`M${cx + 10} 128 L${cx + 22} 148 L${cx + 2} 140 Z`, P(id, 'mob'), { key: 6, cream: 3.4, edgeId: EDGE(id) })}
 </g>`;
 }
 
 /**
- * Boss: spans multiple lanes, and carries its integrity counter on a riveted
- * chest plate so the number never floats over busy art (`04` numeric clarity).
+ * Boss: multi-lane armored slab. Integrity sits on a plate so the number
+ * never floats over busy art (`04`). Eyes are LED slits, not cartoon faces.
  */
 export function enemyBoss(id, { integrity = 24 } = {}) {
   const cx = 180;
-  const plate = rr(cx - 62, 100, 124, 64, 15);
+  const plate = rr(cx - 58, 108, 116, 58, 12);
   const rivet = (x, y) =>
-    `<circle cx="${n(x)}" cy="${n(y)}" r="4.8" fill="#6d1f0d"/><circle cx="${n(x)}" cy="${n(y - 1.2)}" r="3.3" fill="#ffb59f" opacity="0.6"/>`;
+    `<circle cx="${n(x)}" cy="${n(y)}" r="4.2" fill="#6d1f0d"/><circle cx="${n(x)}" cy="${n(y - 1)}" r="2.6" fill="#ffb59f" opacity="0.55"/>`;
+  const hull = `M${cx - 110} 70 C${cx - 110} 40 ${cx - 60} 24 ${cx} 24 C${cx + 60} 24 ${cx + 110} 40 ${cx + 110} 70 L${cx + 118} 170 C${cx + 118} 192 ${cx + 60} 206 ${cx} 206 C${cx - 60} 206 ${cx - 118} 192 ${cx - 118} 170 Z`;
   return `<g filter="url(#cd-${id}-cast)">
-${contactShadow(cx, 224, 152, 17, id)}
-${piece(rr(cx - 76, 190, 52, 40, 13), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}
-${piece(rr(cx + 24, 190, 52, 40, 13), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}
-${piece(rr(cx - 148, 94, 56, 96, 24), P(id, 'boss'), { key: 11, cream: 7, edgeId: EDGE(id), sheen: SHEEN(id, 'boss') })}
-${piece(rr(cx + 92, 94, 56, 96, 24), P(id, 'boss'), { key: 11, cream: 7, edgeId: EDGE(id), sheen: SHEEN(id, 'boss') })}
-${piece(rr(cx - 154, 166, 62, 58, 26), P(id, 'boss'), { key: 11, cream: 7, edgeId: EDGE(id), sheen: SHEEN(id, 'boss') })}
-${piece(rr(cx + 92, 166, 62, 58, 26), P(id, 'boss'), { key: 11, cream: 7, edgeId: EDGE(id), sheen: SHEEN(id, 'boss') })}
-${piece(`M${cx - 98} 106 C${cx - 98} 68 ${cx - 55} 48 ${cx} 48 C${cx + 55} 48 ${cx + 98} 68 ${cx + 98} 106 L${cx + 98} 162 C${cx + 98} 188 ${cx + 55} 202 ${cx} 202 C${cx - 55} 202 ${cx - 98} 188 ${cx - 98} 162 Z`, P(id, 'boss'), { key: 13, cream: 8, edgeId: EDGE(id), sheen: SHEEN(id, 'boss') })}
-${piece(`M${cx - 46} 8 L${cx - 26} 46 L${cx - 64} 50 Z`, P(id, 'boss'), { key: 9, cream: 5.5, edgeId: EDGE(id) })}
-${piece(`M${cx} 0 L${cx + 21} 46 L${cx - 21} 46 Z`, P(id, 'boss'), { key: 9, cream: 5.5, edgeId: EDGE(id) })}
-${piece(`M${cx + 46} 8 L${cx + 64} 50 L${cx + 26} 46 Z`, P(id, 'boss'), { key: 9, cream: 5.5, edgeId: EDGE(id) })}
-${eye(cx - 33, 80, 12, { look: 0.18 })}
-${eye(cx - 11, 74, 12, { look: 0.18 })}
-${eye(cx + 11, 74, 12, { look: -0.18 })}
-${eye(cx + 33, 80, 12, { look: -0.18 })}
-<path d="M${cx - 42} 184 q42 -22 84 0" fill="none" stroke="${CARD.keyline}" stroke-width="5" stroke-linecap="round"/>
+${contactShadow(cx, 220, 140, 15, id)}
+${piece(rr(cx - 150, 90, 48, 90, 18), P(id, 'boss'), { key: 10, cream: 6, edgeId: EDGE(id), sheen: SHEEN(id, 'boss') })}
+${piece(rr(cx + 102, 90, 48, 90, 18), P(id, 'boss'), { key: 10, cream: 6, edgeId: EDGE(id), sheen: SHEEN(id, 'boss') })}
+${piece(hull, P(id, 'boss'), { key: 12, cream: 7, edgeId: EDGE(id), sheen: SHEEN(id, 'boss') })}
+${piece(`M${cx - 40} 8 L${cx - 18} 48 L${cx - 58} 48 Z`, P(id, 'boss'), { key: 8, cream: 4.5, edgeId: EDGE(id) })}
+${piece(`M${cx} 0 L${cx + 18} 48 L${cx - 18} 48 Z`, P(id, 'boss'), { key: 8, cream: 4.5, edgeId: EDGE(id) })}
+${piece(`M${cx + 40} 8 L${cx + 58} 48 L${cx + 18} 48 Z`, P(id, 'boss'), { key: 8, cream: 4.5, edgeId: EDGE(id) })}
+${print(rr(cx - 70, 62, 140, 12, 4), '#0a0e14')}
+${print(rr(cx - 64, 65, 38, 5, 2), '#ffb59f', 0.9)}
+${print(rr(cx - 16, 65, 32, 5, 2), '#ffb59f', 0.9)}
+${print(rr(cx + 26, 65, 38, 5, 2), '#ffb59f', 0.9)}
+${piece(rr(cx - 70, 188, 48, 34, 10), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}
+${piece(rr(cx + 22, 188, 48, 34, 10), `url(#cd-${id}-gear-print)`, { edgeId: EDGE(id) })}
 <path d="${plate}" fill="#3a1208"/>
-<path d="${plate}" fill="url(#cd-fx-sheen)" opacity="0.5"/>
-<path d="${plate}" fill="none" stroke="${CARD.keyline}" stroke-width="3.4"/>
-${rivet(cx - 50, 112)}${rivet(cx + 50, 112)}${rivet(cx - 50, 152)}${rivet(cx + 50, 152)}
-<text x="${cx}" y="${121}" font-family="Public Sans" font-size="11" font-weight="800" fill="#ffb59f" text-anchor="middle" letter-spacing="2.6" opacity="0.85">INTEGRITY</text>
-<text x="${cx}" y="${155}" font-family="Public Sans" font-size="34" font-weight="800" fill="#ffd9ce" text-anchor="middle" letter-spacing="-0.5">${integrity}</text>
+<path d="${plate}" fill="url(#cd-fx-sheen)" opacity="0.45"/>
+<path d="${plate}" fill="none" stroke="${CARD.keyline}" stroke-width="3"/>
+${rivet(cx - 46, 118)}${rivet(cx + 46, 118)}${rivet(cx - 46, 152)}${rivet(cx + 46, 152)}
+<text x="${cx}" y="128" font-family="Teko, Arial Narrow, sans-serif" font-size="13" font-weight="600" fill="#ffb59f" text-anchor="middle" letter-spacing="3" opacity="0.9">INTEGRITY</text>
+<text x="${cx}" y="158" font-family="Teko, Arial Narrow, sans-serif" font-size="36" font-weight="600" fill="#ffd9ce" text-anchor="middle" letter-spacing="1">${integrity}</text>
 </g>`;
 }
 

@@ -74,8 +74,8 @@ export function counterPlate(cx, cy, w, h, value, { positive, size } = {}) {
   <path d="${plate}" fill="${fill}" opacity="0.14"/>
   <path d="${plate}" fill="none" stroke="${fill}" stroke-width="${n(h * 0.09)}"/>
   <path d="${rr(cx - w / 2 + h * 0.12, cy - h / 2 + h * 0.1, w - h * 0.24, h * 0.3, h * 0.12)}" fill="#ffffff" opacity="0.07"/>
-  <text x="${n(cx)}" y="${n(cy + fs * 0.35)}" font-family="Public Sans" font-size="${n(fs)}" font-weight="800" fill="${fill}" text-anchor="middle" letter-spacing="-0.5">${value}</text>
-  <text x="${n(cx)}" y="${n(cy + fs * 0.35)}" font-family="Public Sans" font-size="${n(fs)}" font-weight="800" fill="${ink}" text-anchor="middle" letter-spacing="-0.5" opacity="0.001">${value}</text>
+  <text x="${n(cx)}" y="${n(cy + fs * 0.35)}" font-family="Teko, Arial Narrow, sans-serif" font-size="${n(fs)}" font-weight="600" fill="${fill}" text-anchor="middle" letter-spacing="1">${value}</text>
+  <text x="${n(cx)}" y="${n(cy + fs * 0.35)}" font-family="Teko, Arial Narrow, sans-serif" font-size="${n(fs)}" font-weight="600" fill="${ink}" text-anchor="middle" letter-spacing="1" opacity="0.001">${value}</text>
 </g>`;
 }
 
@@ -133,7 +133,7 @@ export function barrierClip() {
 
 const GLYPH = {
   score_mult: (c) =>
-    `<text x="${c}" y="${c + 13}" font-family="Public Sans" font-size="38" font-weight="800" fill="#2a1a00" text-anchor="middle" letter-spacing="-1">x2</text>`,
+    `<text x="${c}" y="${c + 13}" font-family="Teko, Arial Narrow, sans-serif" font-size="38" font-weight="600" fill="#2a1a00" text-anchor="middle" letter-spacing="1">x2</text>`,
   rapid_fire: (c) =>
     `<g fill="#2a1a00"><path d="M${c - 20} ${c - 24} h18 l-8 16 h12 l-24 32 l6 -22 h-12 Z"/><path d="M${c + 6} ${c - 24} h16 l-8 16 h11 l-22 32 l6 -22 h-11 Z"/></g>`,
   pierce: (c) =>

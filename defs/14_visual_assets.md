@@ -429,14 +429,16 @@ content/
 
 ## Acceptance checklist (owner sign-off)
 
-- [ ] Phase A: Start, Credits, Splash, Game Over hi-fi mockups match visual lock
-- [ ] Phase B: Desktop + mobile Playing layouts; Dopamine bar; stickers; Burnout/Recovery
-- [ ] Phase C: Solo chrome for Loop, Pulse, Wave, Echo, Alerts — no real-platform clones
-- [ ] Phase D: All six icons replaced
-- [ ] Phase E: Lane Defender, Endless Runner, Block Cascade sprite sets + playfield mockups
-- [ ] “3D” props are bevelled soft shapes / cutouts — no raw 3D engine assets required
-- [ ] Files land on paths in this doc; `DESIGN.md` updated if Pulse/Wave hexes were locked
-- [ ] No app scaffold committed
+Owner accepted the visual stage as good enough to build against (2026-10-11). Minigame art may be restyled later; runtime must stay asset-agnostic (`_PINS.md`).
+
+- [x] Phase A: Start, Credits, Splash, Game Over hi-fi mockups match visual lock
+- [x] Phase B: Desktop + mobile Playing layouts; Dopamine bar; stickers; Burnout/Recovery
+- [x] Phase C: Solo chrome for Loop, Pulse, Wave, Echo, Alerts — no real-platform clones
+- [x] Phase D: All six icons replaced
+- [x] Phase E: Lane Defender, Endless Runner, Block Cascade sprite sets + playfield mockups
+- [x] “3D” props are bevelled soft shapes / cutouts — no raw 3D engine assets required
+- [x] Files land on paths in this doc; `DESIGN.md` updated if Pulse/Wave hexes were locked
+- [x] No app scaffold committed
 
 ---
 

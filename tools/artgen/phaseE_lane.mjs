@@ -17,7 +17,8 @@ import {
 import { backdrop, groundTile, laneGuide } from './lib/tex.mjs';
 import { lanePlayfield, letterbox, place } from './lib/playfields.mjs';
 import { caption, railPanel, reviewSheet } from './lib/mockup.mjs';
-import { BRAND, n, rr } from './lib/brand.mjs';
+import { BRAND } from './lib/brand.mjs';
+import { minigameMark } from './lib/chrome.mjs';
 import { writePng, writeSvg, writeWebp } from './lib/render.mjs';
 
 const R = 'content/minigames/lane_defender';
@@ -112,13 +113,6 @@ const W = 1600;
 const H = 1000;
 const win = { x: 92, y: 158, w: slotW, h: slotH + 34, title: 'minigame — lane defender' };
 
-function iconMark(x, y, s) {
-  return `<g transform="translate(${x} ${y}) scale(${s})">
-  <path d="${rr(0, 0, 24, 24, 7)}" fill="#1d2430" stroke="${BRAND.minigame.accent}" stroke-width="1.6"/>
-  <path d="M6 19 V8 M12 19 V5 M18 19 V11" stroke="${BRAND.minigame.light}" stroke-width="2.4" stroke-linecap="round"/>
-</g>`;
-}
-
 const railX = win.x + win.w + 40;
 const railW = W - railX - 92;
 let rail = railPanel(railX, 158, railW, 222, 'CAST — CARDBOARD CUTOUTS');
@@ -163,7 +157,7 @@ const svg = reviewSheet({
   title: 'LANE DEFENDER',
   subtitle: 'three lanes, automatic fire, numeric hazards — 3:4 playfield letterboxed in its slot',
   brand: BRAND.minigame,
-  window: { ...win, icon: iconMark(win.x + 12, win.y + 5, 1) },
+  window: { ...win, icon: minigameMark(win.x + 12, win.y + 5, 1) },
   interior: (inner) => place(letterbox(pf, slotW, slotH), inner.x, inner.y, inner.w / slotW),
   rail,
   defs: pf.defs + castAll + propAll,

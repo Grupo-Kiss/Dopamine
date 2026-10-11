@@ -1,6 +1,14 @@
-import { n, rr } from './brand.mjs';
+import { BRAND, n, rr } from './brand.mjs';
 
 export const BAR_H = 34;
+
+/** Title-bar mark for the Minigame window. Phase D has no minigame icon; this is it. */
+export function minigameMark(x, y, s) {
+  return `<g transform="translate(${x} ${y}) scale(${s})">
+  <path d="${rr(0, 0, 24, 24, 7)}" fill="#1d2430" stroke="${BRAND.minigame.accent}" stroke-width="1.6"/>
+  <path d="M6 19 V8 M12 19 V5 M18 19 V11" stroke="${BRAND.minigame.light}" stroke-width="2.4" stroke-linecap="round"/>
+</g>`;
+}
 
 /** Shared OS-window gradients + shadows. Emit once per document. */
 export function chromeDefs() {

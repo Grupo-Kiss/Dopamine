@@ -22,10 +22,25 @@ export function writeSvg(rel, svg) {
   return p;
 }
 
-export function rasterize(svg, width) {
+/**
+ * Brand faces vendored under fonts/ (OFL). Loaded on every rasterize so
+ * font-weight 500/600/800 never fall through to a system serif — that was
+ * making arcade mockups look "traditional" when Medium/SemiBold weren't on disk.
+ */
+const FONT_DIR = resolve(dirname(fileURLToPath(import.meta.url)), '../fonts');
+export const DISPLAY_FONTS = [
+  resolve(FONT_DIR, 'Teko-SemiBold.ttf'),
+  resolve(FONT_DIR, 'PublicSans-Regular.ttf'),
+  resolve(FONT_DIR, 'PublicSans-Medium.ttf'),
+  resolve(FONT_DIR, 'PublicSans-SemiBold.ttf'),
+  resolve(FONT_DIR, 'PublicSans-Bold.ttf'),
+  resolve(FONT_DIR, 'PublicSans-ExtraBold.ttf'),
+];
+
+export function rasterize(svg, width, { fonts = DISPLAY_FONTS } = {}) {
   const r = new Resvg(svg, {
     fitTo: width ? { mode: 'width', value: Math.round(width) } : { mode: 'original' },
-    font: { loadSystemFonts: true, defaultFontFamily: 'Public Sans' },
+    font: { loadSystemFonts: true, fontFiles: fonts, defaultFontFamily: 'Public Sans' },
   });
   return r.render().asPng();
 }
@@ -59,10 +74,10 @@ export async function writePng(rel, svg, width) {
   return p;
 }
 
-export async function writeWebp(rel, svg, width, quality = 92) {
+export async function writeWebp(rel, svg, width, quality = 92, opts) {
   const p = out(rel);
   ensure(p);
-  const png = rasterize(svg, width);
+  const png = rasterize(svg, width, opts);
   await sharp(png).webp({ quality }).toFile(p);
   return p;
 }
