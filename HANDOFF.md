@@ -48,7 +48,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| P1 scaffold + Match state machine (E00–E01) | [`cursor/p1-scaffold-state-machine-aa9c` / #161](https://github.com/Grupo-Kiss/Dopamine/pull/161) | Cursor Cloud Agent | Root scaffold, `src/core/gameState*`, `src/testing/*` |
+| P1–P2 scaffold, state machine, balance constants (E00–E02) | [`cursor/p1-scaffold-state-machine-aa9c` / #161](https://github.com/Grupo-Kiss/Dopamine/pull/161) | Cursor Cloud Agent | Root scaffold, `src/core/gameState*`, `src/testing/*`, `src/config/balance*` |
 
 ### Next (pick in order)
 
