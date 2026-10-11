@@ -11,6 +11,7 @@
 | Specs | `defs/00` … `defs/15` |
 | Visual lock | `PRODUCT.md`, `DESIGN.md`, `.impeccable/` |
 | Process ADR | `docs/adr/0001-tdd-after-docs.md` — docs first, then TDD |
+| Issues | GitHub Issues (`docs/agents/issue-tracker.md`) |
 
 ---
 
@@ -32,57 +33,37 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 | Item | Where |
 | --- | --- |
-| Specs `00`–`14` + design lock | `defs/`, `PRODUCT.md`, `DESIGN.md`, `.impeccable/` |
-| Hi-fi visual assets — Phases A, B3–B5, C, D, E | `content/` — merged [#8](https://github.com/Grupo-Kiss/Dopamine/pull/8) |
-| Art generators (`tools/artgen/`) | merged [#14](https://github.com/Grupo-Kiss/Dopamine/pull/14) into `develop` |
-| Pulse text library (~123 posts + users/trends/seeds) | `content/pulse/` — merged [#9](https://github.com/Grupo-Kiss/Dopamine/pull/9) |
-| Alerts hand templates (66 lines) | `content/alerts/templates.json` — merged [#10](https://github.com/Grupo-Kiss/Dopamine/pull/10) |
-| SFX / short-audio brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — owner decisions locked; **produce `.ogg` after #8** — merged [#12](https://github.com/Grupo-Kiss/Dopamine/pull/12) |
+| Specs `00`–`15` + design lock | `defs/`, `PRODUCT.md`, `DESIGN.md`, `.impeccable/` |
+| Hi-fi visual assets A→E incl. B1/B2 | `content/` — [#8](https://github.com/Grupo-Kiss/Dopamine/pull/8), [#14](https://github.com/Grupo-Kiss/Dopamine/pull/14), [#15](https://github.com/Grupo-Kiss/Dopamine/pull/15) |
+| Art generators | `tools/artgen/` (`npm run minigames` / `layouts` / `verify`) |
+| Pulse text library | `content/pulse/` — [#9](https://github.com/Grupo-Kiss/Dopamine/pull/9) |
+| Alerts hand templates | `content/alerts/templates.json` — [#10](https://github.com/Grupo-Kiss/Dopamine/pull/10) |
+| SFX brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — [#12](https://github.com/Grupo-Kiss/Dopamine/pull/12) (**`.ogg` files not produced yet**) |
 | Credits store + schema (fonts seeded) | `content/credits/` |
-| Media drop zones (empty manifests) | `loop/clips/`, `wave/high\|boring/`, `echo/audio\|video/` + `manifest.json` |
+| Media drop zones (empty manifests) | `loop/clips/`, `wave/high\|boring/`, `echo/audio\|video/` |
 
 ### In progress — do not collide
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| **B1/B2 Playing layout comps** (+ cast simplify, neon letterbox, font lock) | [`cursor/b1-b2-layout-comps-cf4f`](https://github.com/Grupo-Kiss/Dopamine/tree/cursor/b1-b2-layout-comps-cf4f) · [#15](https://github.com/Grupo-Kiss/Dopamine/pull/15) (draft) | Claude Opus 5 | `content/mockups/{desktop,mobile}_layout.*`, `content/minigames/**`, `tools/artgen/**` |
+| — | — | — | — |
 
-**Visual pass status:**
+### Next (pick in order)
 
-| Phase | State |
-| ---: | --- |
-| A — Hub + shared OS chrome / brand | Done (owner approved) |
-| B — Playing layouts, Dopamine bar, stickers, Burnout/Recovery | B3–B5 merged (#8); **B1 desktop + B2 mobile comps on `cursor/b1-b2-layout-comps-cf4f`** |
-| C — Window chrome kits + solo mockups; Pulse/Wave hex lock | Merged (#8) |
-| D — Icons | Merged (#8) |
-| E — Minigame sprites / bevelled props | Merged (#8) |
+Owner wants **epics → TDD tasks → MVP** before a big scaffold dump (`_PINS.md`).
 
-**Hard rules for the visual pass:** visual files only — no Vite scaffold, no feature code. “3D” = bevelled Canvas 2D cutouts, not Blender. Regenerate Phase E with `npm run minigames` and B1/B2 with `npm run layouts` in `tools/artgen/` rather than hand-editing their outputs.
+1. **Epic / task board (do this next)** — GitHub Issues: epics for MVP vertical slices, ordered TDD tasks under each (state machine → Dopamine → Focus Chain → layout shell → windows → one minigame → …). Use `docs/agents/issue-tracker.md`. No feature code in this step.
+2. **Scaffold + first failing tests** — only after the board exists: Vite + TS + React + Vitest + pnpm (`defs/10`), then TDD the first epic task (`defs/11`, `12`). Fresh; do not revive closed PR #5 wholesale.
+3. **Safe parallel content** (can run beside 1–2 if paths don’t collide):
+   - SFX `.ogg` production (`defs/15`)
+   - Wave / Loop / Echo media into empty drop zones + credits rows
+   - Balance pass on `defs/06_balance.md` only
 
-**Do not edit while the visual pass awaits sign-off** (merge conflicts):
+### Hard rules going forward
 
-- `content/ui/**`
-- `content/mockups/**`
-- `content/icons/**`
-- `content/brand/**`
-- `content/minigames/**` (art/sprites/textures)
-- `DESIGN.md` / `.impeccable/**` (hex lock / visual lock lives with the art pass)
-
-### Next (safe parallel — pick one, new `cursor/…` branch off `develop`)
-
-These do **not** overlap the visual pass:
-
-1. **Balance pass** — tighten provisional constants in `defs/06_balance.md` only.
-2. **SFX file production** — generative local `.ogg` (no stream API) or Freesound/CC0 per `defs/15_sfx_audio.md`.
-3. **Wave / Loop / Echo media files** — drop licensed local files into the empty dirs; update manifests + `content/credits/store.json`.
-4. **OSS library credit rows** — append `kind: "library"` when Vite deps exist (after scaffold).
-
-### Blocked until owner accepts visuals
-
-Do **not** start until `defs/14_visual_assets.md` acceptance checklist is signed and hi-fi is on `develop`:
-
-1. Scaffold Vite + TS + React + Vitest + pnpm (`defs/10`) — fresh; do not revive closed PR #5 app tree wholesale
-2. TDD: state machine → Dopamine → Focus Chain → layout shell (`defs/11`, `12`)
+- **Minigame runtime is asset-agnostic** — load via manifests/stable ids; a later version will re-style sprites (`_PINS.md`).
+- Never invent real-platform brands/UI clones. Never commit secrets. Never subtract Dopamine as a direct penalty.
+- “3D” = bevelled Canvas 2D cutouts, not Blender.
 
 ---
 
@@ -106,32 +87,31 @@ Do **not** start until `defs/14_visual_assets.md` acceptance checklist is signed
 
 ## Agent operating rules
 
-1. Branch from latest `origin/develop`: `cursor/<short-name>-dc00` (lowercase).
+1. Branch from latest `origin/develop`: `cursor/<short-name>-dc00` (lowercase) — or the suffix the cloud run assigns.
 2. One concern per PR. Prefer draft until ready; say what’s in/out of scope in the PR body.
-3. Before editing `content/`, check open PRs — especially **#8** — so you don’t overlay.
-4. Never invent real-platform brands/UI clones. Never commit secrets. Never subtract Dopamine as a direct penalty.
-5. When you finish a slice: update **this file’s Status board**, commit, push, open/update the PR.
-6. GitHub Issues are the formal tracker (`docs/agents/issue-tracker.md`) but may be empty — **this handoff is the live status SSOT for agents**.
+3. Before editing `content/`, check open PRs so you don’t overlay.
+4. When you finish a slice: update **this file’s Status board**, commit, push, open/update the PR.
+5. GitHub Issues are the formal tracker (`docs/agents/issue-tracker.md`) — **this handoff is the live status SSOT for agents**.
 
 ---
 
 ## Paste snippets
 
-### Resume visual assets (Opus)
+### Lay out MVP epics / TDD tasks (next)
 
 ```
-Continue Dopamine visual assets from @HANDOFF.md and @defs/14_visual_assets.md.
-Also read @PRODUCT.md @DESIGN.md @CONTEXT.md @defs/_PINS.md @defs/09_game_feel.md @defs/07_layout.md.
+Read @HANDOFF.md @defs/_PINS.md @docs/adr/0001-tdd-after-docs.md @docs/agents/issue-tracker.md
+and the gameplay defs (@defs/02 @defs/03 @defs/04 @defs/05 @defs/07 @defs/10 @defs/11 @defs/12).
 
-All phases A–E have shipped; apply owner review notes. Regenerate through tools/artgen/ (npm run minigames / layouts)
-rather than hand-editing generated files. Drop files at the exact paths in 14. No real-platform UI clones.
-“3D” = bevelled Canvas 2D cutouts — not Blender. Do NOT scaffold the game or write feature code.
+Visual stage is accepted. Before scaffolding, create a GitHub Issues epic/task board for an MVP
+under strict TDD: epics as vertical slices, ordered tasks that each start with a failing test.
+Pin: minigame runtime must stay asset-agnostic (restyle later). Do not write feature code yet.
 ```
 
-### Start a safe parallel content/docs task
+### Start scaffold after the board exists
 
 ```
-Read @HANDOFF.md Status board. Branch off develop. Do not touch paths reserved by PR #8.
-Pick the next safe-parallel item listed in HANDOFF (or the owner’s choice) and ship a focused PR.
-Update HANDOFF Status board when done.
+Read @HANDOFF.md. Confirm the MVP epic/task board exists on GitHub Issues.
+Branch off develop. Scaffold Vite + TS + React + Vitest + pnpm per @defs/10, then TDD the first
+unblocked task only. Asset-agnostic minigames. No real-platform clones.
 ```
