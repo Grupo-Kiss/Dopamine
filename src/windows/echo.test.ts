@@ -1,12 +1,7 @@
 import { WINDOW_REWARDS } from '../config/balance'
 import { createFakeClock } from '../testing/clock'
 import { createFakeMediaPort } from '../testing/media'
-import {
-  createEcho,
-  echoAction,
-  nextEchoItem,
-  tickEcho,
-} from './echo'
+import { createEcho, echoAction, nextEchoItem, tickEcho } from './echo'
 
 const items = [
   {
@@ -43,9 +38,7 @@ describe('Echo window', () => {
     const subscribed = echoAction(state, 'Subscribe')
 
     expect(reacted.reward).toEqual(WINDOW_REWARDS.Echo.React)
-    expect(reactedAgain.reward.dopamine).toBeLessThan(
-      reacted.reward.dopamine,
-    )
+    expect(reactedAgain.reward.dopamine).toBeLessThan(reacted.reward.dopamine)
     expect(subscribed.reward).toEqual(WINDOW_REWARDS.Echo.Subscribe)
   })
 

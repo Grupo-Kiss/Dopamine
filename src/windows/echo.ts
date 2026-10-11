@@ -59,10 +59,7 @@ export function createEcho(
   }
 }
 
-export function tickEcho(
-  state: EchoState,
-  clock: Clock,
-): EchoTickResult {
+export function tickEcho(state: EchoState, clock: Clock): EchoTickResult {
   const now = clock.now()
   const deltaMs = now - state.lastTickAtMs
   if (deltaMs < 0) throw new RangeError('Echo clock cannot move backwards')
@@ -93,15 +90,11 @@ export function tickEcho(
           positionMs,
           lastTickAtMs: now,
           highlightLanded: true,
-          anticipation: resetAnticipationBonus(
-            anticipation,
-            'obtained',
-          ),
+          anticipation: resetAnticipationBonus(anticipation, 'obtained'),
         },
         reward: {
           dopamine:
-            WINDOW_REWARDS.Echo.HighlightedMoment.dopamine +
-            anticipation.value,
+            WINDOW_REWARDS.Echo.HighlightedMoment.dopamine + anticipation.value,
           score: WINDOW_REWARDS.Echo.HighlightedMoment.score,
         },
         highlightLanded: true,
@@ -168,10 +161,7 @@ export function echoAction(
       diminishing: calculated.state,
       subscribedItemIds:
         action === 'Subscribe'
-          ? new Set([
-              ...state.subscribedItemIds,
-              state.currentItem.id,
-            ])
+          ? new Set([...state.subscribedItemIds, state.currentItem.id])
           : state.subscribedItemIds,
     },
     reward: {

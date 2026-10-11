@@ -84,10 +84,7 @@ export function dismissActiveAlert(state: AlertsState): AlertsState {
   return { ...state, activeAlert: null }
 }
 
-export function expireAlerts(
-  state: AlertsState,
-  nowMs: number,
-): AlertsState {
+export function expireAlerts(state: AlertsState, nowMs: number): AlertsState {
   return {
     pending: state.pending.filter((alert) => nowMs < alert.expiresAtMs),
     activeAlert:

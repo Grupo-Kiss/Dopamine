@@ -11,6 +11,8 @@ export function AlertsOverlay({ alerts }: AlertsOverlayProps) {
   const [root, setRoot] = useState<HTMLElement | null>(null)
 
   useLayoutEffect(() => {
+    // The portal target is committed by the sibling Layout in the same render.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setRoot(document.getElementById('alerts-root'))
   }, [])
 
