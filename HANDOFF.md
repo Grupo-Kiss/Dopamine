@@ -11,7 +11,7 @@
 | Specs | `defs/00` … `defs/15` |
 | Visual lock | `PRODUCT.md`, `DESIGN.md`, `.impeccable/` |
 | Process ADR | `docs/adr/0001-tdd-after-docs.md` — docs first, then TDD |
-| Issues | GitHub Issues (`docs/agents/issue-tracker.md`) |
+| Issues | GitHub Issues (`docs/agents/issue-tracker.md`) — MVP board [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) |
 
 ---
 
@@ -41,6 +41,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | SFX brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — [#12](https://github.com/Grupo-Kiss/Dopamine/pull/12) (**`.ogg` files not produced yet**) |
 | Credits store + schema (fonts seeded) | `content/credits/` |
 | Media drop zones (empty manifests) | `loop/clips/`, `wave/high\|boring/`, `echo/audio\|video/` |
+| MVP epic/task board (TDD) | [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) — 29 epics / 111 tasks; `docs/agents/mvp-board.md` |
 
 ### In progress — do not collide
 
@@ -52,12 +53,12 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 Owner wants **epics → TDD tasks → MVP** before a big scaffold dump (`_PINS.md`).
 
-1. **Epic / task board (do this next)** — GitHub Issues: epics for MVP vertical slices, ordered TDD tasks under each (state machine → Dopamine → Focus Chain → layout shell → windows → one minigame → …). Use `docs/agents/issue-tracker.md`. No feature code in this step.
-2. **Scaffold + first failing tests** — only after the board exists: Vite + TS + React + Vitest + pnpm (`defs/10`), then TDD the first epic task (`defs/11`, `12`). Fresh; do not revive closed PR #5 wholesale.
-3. **Safe parallel content** (can run beside 1–2 if paths don’t collide):
-   - SFX `.ogg` production (`defs/15`)
-   - Wave / Loop / Echo media into empty drop zones + credits rows
-   - Balance pass on `defs/06_balance.md` only
+1. ~~**Epic / task board**~~ — **done**. Board index [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158); summary `docs/agents/mvp-board.md`; source `tools/issue-board/board.json` + `published.json`.
+2. **Scaffold + first failing tests** — next: Vite + TS + React + Vitest + pnpm (`defs/10`), then TDD [#19](https://github.com/Grupo-Kiss/Dopamine/issues/19) **E00.T01**. Fresh; do not revive closed PR #5 wholesale. Asset-agnostic minigames.
+3. **Safe parallel content** (can run beside coding if paths don’t collide):
+   - SFX `.ogg` production (`defs/15`) — tracked as post-MVP epic E23
+   - Wave / Loop / Echo media into empty drop zones + credits rows — post-MVP E24
+   - Balance pass on `defs/06_balance.md` only — post-MVP E28
 
 ### Hard rules going forward
 
@@ -97,21 +98,10 @@ Owner wants **epics → TDD tasks → MVP** before a big scaffold dump (`_PINS.m
 
 ## Paste snippets
 
-### Lay out MVP epics / TDD tasks (next)
+### Start scaffold (next)
 
 ```
-Read @HANDOFF.md @defs/_PINS.md @docs/adr/0001-tdd-after-docs.md @docs/agents/issue-tracker.md
-and the gameplay defs (@defs/02 @defs/03 @defs/04 @defs/05 @defs/07 @defs/10 @defs/11 @defs/12).
-
-Visual stage is accepted. Before scaffolding, create a GitHub Issues epic/task board for an MVP
-under strict TDD: epics as vertical slices, ordered tasks that each start with a failing test.
-Pin: minigame runtime must stay asset-agnostic (restyle later). Do not write feature code yet.
-```
-
-### Start scaffold after the board exists
-
-```
-Read @HANDOFF.md. Confirm the MVP epic/task board exists on GitHub Issues.
-Branch off develop. Scaffold Vite + TS + React + Vitest + pnpm per @defs/10, then TDD the first
-unblocked task only. Asset-agnostic minigames. No real-platform clones.
+Read @HANDOFF.md and board index #158. Confirm E00.T01 (#19) is the frontier task.
+Branch off develop. Scaffold Vite + TS + React + Vitest + pnpm per @defs/10, then TDD #19 only
+(failing test first). Asset-agnostic minigames. No real-platform clones. No feature dump.
 ```
