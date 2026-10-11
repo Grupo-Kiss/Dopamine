@@ -33,7 +33,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | Item | Where |
 | --- | --- |
 | Specs `00`–`14` + design lock | `defs/`, `PRODUCT.md`, `DESIGN.md`, `.impeccable/` |
-| Mid-fi placeholders | `content/` (being replaced by hi-fi on PR #8) |
+| Hi-fi visual assets — Phases A, B3–B5, C, D, E | `content/` — merged [#8](https://github.com/Grupo-Kiss/Dopamine/pull/8); awaiting owner sign-off in `defs/14` |
 | Pulse text library (~123 posts + users/trends/seeds) | `content/pulse/` — merged [#9](https://github.com/Grupo-Kiss/Dopamine/pull/9) |
 | Alerts hand templates (66 lines) | `content/alerts/templates.json` — merged [#10](https://github.com/Grupo-Kiss/Dopamine/pull/10) |
 | SFX / short-audio brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — owner decisions locked; **produce `.ogg` after #8** — merged [#12](https://github.com/Grupo-Kiss/Dopamine/pull/12) |
@@ -44,21 +44,22 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| **Hi-fi visual assets** Phases A→E | [`cursor/visual-assets-hifi-e117`](https://github.com/Grupo-Kiss/Dopamine/tree/cursor/visual-assets-hifi-e117) · [#8](https://github.com/Grupo-Kiss/Dopamine/pull/8) (draft) | Claude Opus 5 | Paths listed in `defs/14_visual_assets.md` |
+| **Art generators** (`tools/artgen/`) | [`cursor/artgen-toolkit-e117`](https://github.com/Grupo-Kiss/Dopamine/tree/cursor/artgen-toolkit-e117) · [#14](https://github.com/Grupo-Kiss/Dopamine/pull/14) (draft) | Claude Opus 5 | `tools/artgen/**` |
+| **B1/B2 Playing layout comps** | `cursor/b1-b2-layout-comps-cf4f` (stacked on #14) | Claude Opus 5 | `content/mockups/{desktop,mobile}_layout.*`, `tools/artgen/**` |
 
-**PR #8 progress (as of last commits on that branch):**
+**Visual pass status:**
 
 | Phase | State |
 | ---: | --- |
 | A — Hub + shared OS chrome / brand | Done (owner approved) |
-| B — Playing layouts, Dopamine bar, stickers, Burnout/Recovery | Partial (B3–B5 + `desktop_layout.svg` landed; **no `mobile_layout` yet**) |
-| C — Window chrome kits + solo mockups; Pulse/Wave hex lock | Done on branch |
-| D — Icons | Done on branch |
-| E — Minigame sprites / bevelled props | **In progress / incomplete** — finish here |
+| B — Playing layouts, Dopamine bar, stickers, Burnout/Recovery | B3–B5 merged (#8); **B1 desktop + B2 mobile comps on `cursor/b1-b2-layout-comps-cf4f`** |
+| C — Window chrome kits + solo mockups; Pulse/Wave hex lock | Merged (#8) |
+| D — Icons | Merged (#8) |
+| E — Minigame sprites / bevelled props | Merged (#8) |
 
-**Hard rules for #8:** visual files only — no Vite scaffold, no feature code. Pause was after Phase A (already cleared). “3D” = bevelled Canvas 2D cutouts, not Blender.
+**Hard rules for the visual pass:** visual files only — no Vite scaffold, no feature code. “3D” = bevelled Canvas 2D cutouts, not Blender. Regenerate Phase E with `npm run minigames` and B1/B2 with `npm run layouts` in `tools/artgen/` rather than hand-editing their outputs.
 
-**Do not edit while #8 is open** (merge conflicts):
+**Do not edit while the visual pass awaits sign-off** (merge conflicts):
 
 - `content/ui/**`
 - `content/mockups/**`
@@ -69,10 +70,10 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 ### Next (safe parallel — pick one, new `cursor/…` branch off `develop`)
 
-These do **not** overlap PR #8:
+These do **not** overlap the visual pass:
 
 1. **Balance pass** — tighten provisional constants in `defs/06_balance.md` only.
-2. **SFX file production** — after #8; generative local `.ogg` (no stream API) or Freesound/CC0 per `defs/15_sfx_audio.md`.
+2. **SFX file production** — generative local `.ogg` (no stream API) or Freesound/CC0 per `defs/15_sfx_audio.md`.
 3. **Wave / Loop / Echo media files** — drop licensed local files into the empty dirs; update manifests + `content/credits/store.json`.
 4. **OSS library credit rows** — append `kind: "library"` when Vite deps exist (after scaffold).
 
@@ -119,12 +120,12 @@ Do **not** start until `defs/14_visual_assets.md` acceptance checklist is signed
 ### Resume visual assets (Opus)
 
 ```
-Continue Dopamine hi-fi from @HANDOFF.md and @defs/14_visual_assets.md on branch cursor/visual-assets-hifi-e117 / PR #8.
-Also read @PRODUCT.md @DESIGN.md @CONTEXT.md @defs/09_game_feel.md @defs/07_layout.md.
+Continue Dopamine visual assets from @HANDOFF.md and @defs/14_visual_assets.md.
+Also read @PRODUCT.md @DESIGN.md @CONTEXT.md @defs/_PINS.md @defs/09_game_feel.md @defs/07_layout.md.
 
-Phases A, C, D are done on that branch; finish remaining Phase B (esp. mobile Playing layout if missing) then Phase E minigame sprites.
-Drop files at the exact paths in 14. No real-platform UI clones. “3D” = bevelled Canvas 2D cutouts — not Blender.
-Do NOT scaffold the game or write feature code.
+All phases A–E have shipped; apply owner review notes. Regenerate through tools/artgen/ (npm run minigames / layouts)
+rather than hand-editing generated files. Drop files at the exact paths in 14. No real-platform UI clones.
+“3D” = bevelled Canvas 2D cutouts — not Blender. Do NOT scaffold the game or write feature code.
 ```
 
 ### Start a safe parallel content/docs task

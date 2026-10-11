@@ -205,8 +205,8 @@ Toggle on Start Page (persisted locally). When on:
 | --- | --- |
 | `content/mockups/start_page.svg` | Title, short instructions, accessibility, Credits link, PLAY |
 | `content/mockups/credits_modal.svg` | **Hi-fi target** — scrollable Credits Modal over hub |
-| `content/mockups/desktop_layout.svg` | Near-black gutters, branded windows, Dopamine bar |
-| `content/mockups/mobile_layout.svg` | **Hi-fi target** — Minigame + 2 services + edge Dopamine |
+| `content/mockups/desktop_layout.svg` | Near-black gutters, branded windows, Dopamine bar, stickers, one Alert |
+| `content/mockups/mobile_layout.svg` | Minigame + 2 services + edge Dopamine, two random draws side by side |
 | `content/mockups/dopamine_bar.svg` | High orange glow vs low violet |
 | `content/mockups/stickers_combo.svg` | Juicy vs bored combo |
 | `content/mockups/stickers_chain.svg` | Focus Chain arcade banner |
