@@ -53,18 +53,13 @@ export function tickDopamine(
   clock: Clock,
   options: DopamineTickOptions,
 ): DopamineMeter {
-  assertNonNegativeFinite(
-    options.difficultyMultiplier,
-    'Difficulty multiplier',
-  )
+  assertNonNegativeFinite(options.difficultyMultiplier, 'Difficulty multiplier')
 
   const now = clock.now()
   const elapsedMs = now - meter.lastTickAtMs
   assertNonNegativeFinite(elapsedMs, 'Elapsed time')
 
-  const recoveryMultiplier = options.recovery
-    ? DOPAMINE_DRAIN_RECOVERY_MULT
-    : 1
+  const recoveryMultiplier = options.recovery ? DOPAMINE_DRAIN_RECOVERY_MULT : 1
   const drain =
     (elapsedMs / 1_000) *
     DOPAMINE_DRAIN_PER_SECOND_BASE *
@@ -110,9 +105,7 @@ export function calculateInteractionGain(
   const sameTarget =
     state.systemId === interaction.systemId &&
     state.targetId === interaction.targetId
-  const repeatedInteractions = sameTarget
-    ? state.repeatedInteractions + 1
-    : 1
+  const repeatedInteractions = sameTarget ? state.repeatedInteractions + 1 : 1
 
   return {
     state: {
@@ -149,10 +142,7 @@ export function buildAnticipationBonus(
   bonus: AnticipationBonus,
   comparableDirectReward: number,
 ): AnticipationBonus {
-  assertNonNegativeFinite(
-    comparableDirectReward,
-    'Comparable direct reward',
-  )
+  assertNonNegativeFinite(comparableDirectReward, 'Comparable direct reward')
 
   const steps = bonus.steps + 1
   const logarithmicValue =

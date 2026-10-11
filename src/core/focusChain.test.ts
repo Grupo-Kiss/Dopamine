@@ -115,9 +115,7 @@ describe('Focus Chain', () => {
     const belowMinimum = buildChain(
       FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS - 1,
     )
-    const eligible = buildChain(
-      FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS,
-    )
+    const eligible = buildChain(FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS)
 
     expect(breakFocusChain(belowMinimum.chain).completionBonus).toEqual({
       dopamine: 0,

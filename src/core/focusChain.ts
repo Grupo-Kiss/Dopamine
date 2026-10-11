@@ -10,10 +10,7 @@ import {
 
 export type ActiveWindow = string
 export type FocusDestinationState =
-  | 'Normal'
-  | 'Waiting'
-  | 'FocusReady'
-  | 'AttentionRequest'
+  'Normal' | 'Waiting' | 'FocusReady' | 'AttentionRequest'
 export type FocusQuality = 'Poor' | 'Good' | 'Excellent' | 'Perfect'
 
 export type FocusChain = {
@@ -115,8 +112,7 @@ export function focusChainTimeoutMs(length: number): number {
 
   return Math.max(
     FOCUS_CHAIN_TIMEOUT_MIN_MS,
-    FOCUS_CHAIN_TIMEOUT_BASE_MS -
-      (length - 1) * FOCUS_CHAIN_TIMEOUT_DECAY_MS,
+    FOCUS_CHAIN_TIMEOUT_BASE_MS - (length - 1) * FOCUS_CHAIN_TIMEOUT_DECAY_MS,
   )
 }
 
@@ -132,8 +128,7 @@ export function expireFocusChain(
 }
 
 export function breakFocusChain(chain: FocusChain): FocusChainEndResult {
-  const eligible =
-    chain.length >= FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS
+  const eligible = chain.length >= FOCUS_CHAIN_MIN_LENGTH_FOR_COMPLETION_BONUS
   const completionBonus = eligible
     ? {
         dopamine: chain.length * CHAIN_COMPLETION_DOPAMINE_PER_STEP,
@@ -193,7 +188,5 @@ function stepBonusFor(length: number): FocusBonus {
     .sort((left, right) => right - left)
   const tier = tiers.find((candidate) => length >= candidate) ?? 1
 
-  return FOCUS_CHAIN_STEP_BONUSES[
-    tier as keyof typeof FOCUS_CHAIN_STEP_BONUSES
-  ]
+  return FOCUS_CHAIN_STEP_BONUSES[tier as keyof typeof FOCUS_CHAIN_STEP_BONUSES]
 }
