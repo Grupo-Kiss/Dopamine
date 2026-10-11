@@ -70,3 +70,34 @@ export const PRELOAD_TARGET_MATCH_SECONDS = 120
 
 export const SCORE_FROM_DOPAMINE_GAIN_MULT = 10
 export const GAME_OVER_PLAY_AGAIN_DEMAND_DELAY_MS = 3_000
+
+export const WINDOW_REWARDS = {
+  Loop: {
+    NextVideo: { dopamine: 1.2, score: 15 },
+    Like: { dopamine: 0.6, score: 8 },
+    Repost: { dopamine: 1, score: 12 },
+    InteractiveOpportunity: { dopamine: 4, score: 80 },
+  },
+  Pulse: {
+    Like: { dopamine: 0.7, score: 10 },
+    Repost: { dopamine: 1.1, score: 18 },
+    ReplyOnTrend: { dopamine: 2.5, score: 40 },
+    CreatePostOnTrend: { dopamine: 3, score: 50 },
+    Mention: { dopamine: 4.5, score: 90 },
+  },
+  Wave: {
+    SkipUnheard: { dopamine: 0.3, score: 5 },
+    SkipHeard: { dopamine: 0.1, score: 2 },
+    Like: { dopamine: 1.5, score: 25 },
+    SongMoment: { dopamine: 3.5, score: 70 },
+    Recommendation: { dopamine: 4, score: 80 },
+  },
+  Echo: {
+    PlayPause: { dopamine: 0.4, score: 5 },
+    ChangeContent: { dopamine: 0.5, score: 8 },
+    React: { dopamine: 1.2, score: 20 },
+    Subscribe: { dopamine: 2, score: 35 },
+    HighlightedMoment: { dopamine: 5, score: 100 },
+  },
+  Noise: { dopamine: 0, score: 0 },
+} as const
