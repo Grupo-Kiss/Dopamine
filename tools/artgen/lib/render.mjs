@@ -22,10 +22,17 @@ export function writeSvg(rel, svg) {
   return p;
 }
 
-export function rasterize(svg, width) {
+/**
+ * Display face vendored with the generators. Opt-in, because Phase E was
+ * rendered on system fonts only and must stay byte-identical; Phase C (and
+ * the layout comps that reuse its interiors) were rendered with real Teko.
+ */
+export const DISPLAY_FONTS = [resolve(dirname(fileURLToPath(import.meta.url)), '../fonts/Teko-SemiBold.ttf')];
+
+export function rasterize(svg, width, { fonts = [] } = {}) {
   const r = new Resvg(svg, {
     fitTo: width ? { mode: 'width', value: Math.round(width) } : { mode: 'original' },
-    font: { loadSystemFonts: true, defaultFontFamily: 'Public Sans' },
+    font: { loadSystemFonts: true, fontFiles: fonts, defaultFontFamily: 'Public Sans' },
   });
   return r.render().asPng();
 }
@@ -59,10 +66,10 @@ export async function writePng(rel, svg, width) {
   return p;
 }
 
-export async function writeWebp(rel, svg, width, quality = 92) {
+export async function writeWebp(rel, svg, width, quality = 92, opts) {
   const p = out(rel);
   ensure(p);
-  const png = rasterize(svg, width);
+  const png = rasterize(svg, width, opts);
   await sharp(png).webp({ quality }).toFile(p);
   return p;
 }

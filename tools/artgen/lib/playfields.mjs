@@ -425,4 +425,59 @@ ${place(pf.body, dx, dy, s)}
 ${bars}${label}`;
 }
 
+/**
+ * Lane Defender in a slot wider than 3:4. `09` allows extending non-playable
+ * in-world ground instead of black bars: the board keeps its authored size,
+ * and the same ground pattern (seamless, it shares the board's user space)
+ * plus mirrored backdrop copies run out to the slot edges, dimmed so the three
+ * lanes stay the obvious place to look.
+ */
+export function laneSlot(slotW, slotH, { pfW = 480, pfH = 640 } = {}) {
+  const pf = lanePlayfield(pfW, pfH);
+  const s = slotH / pfH;
+  const dw = pfW * s;
+  const dx = (slotW - dw) / 2;
+  const ext = dx / s;
+  const horizon = Math.round(pfH * 0.235);
+  const bd = backdrop(pfW, Math.round(pfH * 0.3));
+  const reach = Math.ceil(ext / pfW);
+
+  let copies = '';
+  for (let k = -reach; k <= reach; k++) {
+    if (k === 0) continue;
+    const t = k % 2 ? `translate(${(k + 1) * pfW} 0) scale(-1 1)` : `translate(${k * pfW} 0)`;
+    copies += `<g transform="${t}">${bd.body}</g>`;
+  }
+  const L = -ext;
+  const Wt = pfW + ext * 2;
+  const defs = `${pf.defs}
+<linearGradient id="ls-dimL" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#05070a" stop-opacity="0.8"/>
+  <stop offset="1" stop-color="#05070a" stop-opacity="0.42"/>
+</linearGradient>
+<linearGradient id="ls-dimR" x1="1" y1="0" x2="0" y2="0">
+  <stop offset="0" stop-color="#05070a" stop-opacity="0.8"/>
+  <stop offset="1" stop-color="#05070a" stop-opacity="0.42"/>
+</linearGradient>
+<clipPath id="ls-world"><rect x="${n(L)}" width="${n(Wt)}" height="${pfH}"/></clipPath>`;
+
+  const world = `<g clip-path="url(#ls-world)">
+  <rect x="${n(L)}" width="${n(Wt)}" height="${pfH}" fill="#0b0f15"/>
+  ${copies}
+  <rect x="${n(L)}" y="${horizon}" width="${n(Wt)}" height="${pfH - horizon}" fill="url(#lp-ground)"/>
+  <rect x="${n(L)}" y="${horizon}" width="${n(Wt)}" height="${n(pfH * 0.3)}" fill="url(#lp-depth)"/>
+  <rect x="${n(L)}" width="${n(ext)}" height="${pfH}" fill="url(#ls-dimL)"/>
+  <rect x="${pfW}" width="${n(ext)}" height="${pfH}" fill="url(#ls-dimR)"/>
+</g>
+${pf.body}
+<path d="M0 0 V${pfH}" stroke="#93a1b2" stroke-width="${n(1 / s)}" stroke-opacity="0.22"/>
+<path d="M${pfW} 0 V${pfH}" stroke="#93a1b2" stroke-width="${n(1 / s)}" stroke-opacity="0.22"/>`;
+
+  return {
+    defs,
+    body: place(world, dx, 0, s),
+    box: { x: dx, y: 0, w: dw, h: slotH, s },
+  };
+}
+
 export { svgDoc } from './card.mjs';

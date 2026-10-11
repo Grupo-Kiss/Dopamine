@@ -136,14 +136,19 @@ export function crtDefs() {
 </filter>`;
 }
 
-export function crtOverlay(w, h) {
+/**
+ * `vignette` < 1 lightens the barrel falloff. Playing surfaces pack live UI
+ * into the corners (meter cap, bottom-band controls) that hub screens leave
+ * empty, so the full-strength tube edge would hide information there.
+ */
+export function crtOverlay(w, h, { vignette = 1 } = {}) {
   return `
 <g style="mix-blend-mode:normal">
   <rect width="${w}" height="${h}" filter="url(#crt-noise)"/>
   <rect width="${w}" height="${h}" fill="url(#crt-scan)"/>
   <rect width="${w}" height="${h}" fill="url(#crt-aperture)"/>
   <rect width="${w}" height="${h}" fill="url(#crt-glass)"/>
-  <rect width="${w}" height="${h}" fill="url(#crt-vig)"/>
+  <rect width="${w}" height="${h}" fill="url(#crt-vig)"${vignette === 1 ? '' : ` opacity="${vignette}"`}/>
   <rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="15" fill="none" stroke="#000" stroke-width="1.5" stroke-opacity="0.5"/>
 </g>`;
 }
