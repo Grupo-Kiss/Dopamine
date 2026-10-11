@@ -39,12 +39,18 @@ over. `npm run verify` still checks those assets.
 
 ## Fonts
 
-`fonts/Teko-SemiBold.ttf` is a Latin subset of Teko (OFL, see
-`fonts/OFL-Teko.txt`) at the one weight the art uses. Phase C was rendered
-with real Teko, so the layout comps pass it to the rasterizer explicitly
-(`rasterize(svg, w, { fonts: DISPLAY_FONTS })`). Phase E does not: it was
-rendered on system fonts only, and opting it in would rewrite its WebPs.
-Public Sans comes from the system in both cases.
+`fonts/` vendors Latin subsets (OFL) of the brand faces so rasterization
+never falls through to a system serif:
+
+| File | Face |
+| --- | --- |
+| `Teko-SemiBold.ttf` | Display / stickers / PLAY / integrity |
+| `PublicSans-{Regular,Medium,SemiBold,Bold,ExtraBold}.ttf` | UI chrome |
+
+`rasterize` always loads these. Missing Medium/SemiBold on the host was
+what made earlier WebPs look "traditional" — resvg was substituting a serif
+for `font-weight: 500/600`. The game app should load the same faces (Google
+Fonts or self-host); see `DESIGN.md` Typography.
 
 ## Layout
 

@@ -23,13 +23,21 @@ export function writeSvg(rel, svg) {
 }
 
 /**
- * Display face vendored with the generators. Opt-in, because Phase E was
- * rendered on system fonts only and must stay byte-identical; Phase C (and
- * the layout comps that reuse its interiors) were rendered with real Teko.
+ * Brand faces vendored under fonts/ (OFL). Loaded on every rasterize so
+ * font-weight 500/600/800 never fall through to a system serif — that was
+ * making arcade mockups look "traditional" when Medium/SemiBold weren't on disk.
  */
-export const DISPLAY_FONTS = [resolve(dirname(fileURLToPath(import.meta.url)), '../fonts/Teko-SemiBold.ttf')];
+const FONT_DIR = resolve(dirname(fileURLToPath(import.meta.url)), '../fonts');
+export const DISPLAY_FONTS = [
+  resolve(FONT_DIR, 'Teko-SemiBold.ttf'),
+  resolve(FONT_DIR, 'PublicSans-Regular.ttf'),
+  resolve(FONT_DIR, 'PublicSans-Medium.ttf'),
+  resolve(FONT_DIR, 'PublicSans-SemiBold.ttf'),
+  resolve(FONT_DIR, 'PublicSans-Bold.ttf'),
+  resolve(FONT_DIR, 'PublicSans-ExtraBold.ttf'),
+];
 
-export function rasterize(svg, width, { fonts = [] } = {}) {
+export function rasterize(svg, width, { fonts = DISPLAY_FONTS } = {}) {
   const r = new Resvg(svg, {
     fitTo: width ? { mode: 'width', value: Math.round(width) } : { mode: 'original' },
     font: { loadSystemFonts: true, fontFiles: fonts, defaultFontFamily: 'Public Sans' },

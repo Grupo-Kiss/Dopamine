@@ -13,19 +13,19 @@ colors:
   play-hot: "#ff8c00"
 typography:
   ui:
-    fontFamily: "Public Sans, Segoe UI, sans-serif"
+    fontFamily: "Public Sans, Arial, Helvetica, sans-serif"
     fontSize: "16px"
     fontWeight: 400
     lineHeight: 1.4
     letterSpacing: "normal"
   display-play:
-    fontFamily: "Teko, Arial Narrow, sans-serif"
+    fontFamily: "Teko, \"Arial Narrow\", \"Franklin Gothic Condensed\", sans-serif"
     fontSize: "clamp(2rem, 5vw, 2.6rem)"
     fontWeight: 600
     lineHeight: 1
     letterSpacing: "0.12em"
   label-dim:
-    fontFamily: "Public Sans, Segoe UI, sans-serif"
+    fontFamily: "Public Sans, Arial, Helvetica, sans-serif"
     fontSize: "0.8rem"
     fontWeight: 400
     lineHeight: 1.2
@@ -89,9 +89,13 @@ the Dopamine bar’s job, and Combo/Chain stickers carry their own Play palette.
 
 ## Typography
 
-- **UI:** Public Sans for chrome, credits, labels.
-- **PLAY:** Teko condensed for the CTA face.
-- **Title:** raster wordmark (`public/brand/title-dopamine.webp`); alt text comes from `GAME_TITLE` in `src/config/tunables.ts`. Replace the raster when renaming.
+Arcade-first. Condensed display for punch; geometric UI sans for chrome. **Never fall back to a serif or a book face** — if Teko is missing, use a condensed sans (`Arial Narrow` / `Franklin Gothic Condensed`), never Times / Georgia / system serif.
+
+- **Display / stickers / PLAY / integrity numbers:** Teko SemiBold (condensed). Installed for artgen at `tools/artgen/fonts/Teko-SemiBold.ttf` (OFL). Load the same face in the app (Google Fonts or self-host).
+- **UI chrome / credits / body:** Public Sans. Readable, not decorative.
+- **Title:** raster wordmark (`content/brand/title-dopamine.webp`); alt text comes from `GAME_TITLE` when the app exists. Replace the raster when renaming.
+
+Owner note (2026-10-11): mockups that rendered without Teko loaded briefly looked traditional/serif via system fallback — that is a bug, not the brand. Final game must ship Teko (or a chosen arcade condensed replacement) so display never degrades that way.
 
 ## Layout
 

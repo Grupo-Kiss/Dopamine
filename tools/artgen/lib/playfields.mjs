@@ -42,8 +42,8 @@ export function playfieldDefs() {
 export function float(x, y, text, { positive = true, size = 26, rot = -7 } = {}) {
   const fill = positive ? '#ffe566' : '#ff8fa3';
   return `<g transform="rotate(${rot} ${n(x)} ${n(y)})">
-  <text x="${n(x)}" y="${n(y)}" font-family="Public Sans" font-size="${size}" font-weight="800" fill="#10151d" stroke="#10151d" stroke-width="${n(size * 0.3)}" text-anchor="middle" letter-spacing="-0.5">${text}</text>
-  <text x="${n(x)}" y="${n(y)}" font-family="Public Sans" font-size="${size}" font-weight="800" fill="${fill}" text-anchor="middle" letter-spacing="-0.5">${text}</text>
+  <text x="${n(x)}" y="${n(y)}" font-family="Teko, Arial Narrow, sans-serif" font-size="${size}" font-weight="600" fill="#10151d" stroke="#10151d" stroke-width="${n(size * 0.28)}" text-anchor="middle" letter-spacing="1">${text}</text>
+  <text x="${n(x)}" y="${n(y)}" font-family="Teko, Arial Narrow, sans-serif" font-size="${size}" font-weight="600" fill="${fill}" text-anchor="middle" letter-spacing="1">${text}</text>
 </g>`;
 }
 
@@ -100,7 +100,7 @@ ${noiseDefs('lp', 0.95, 0.055, 17)}`;
   ${place(muzzleFlash(), laneX(1, 1) - 80 * 0.86 + 116 - 50, h - 190 + 11 - 50, 0.72)}
 
   ${float(laneX(0, 0.6) + 2, h * 0.6 - 98, '+120')}
-  ${float(laneX(2, 0.68) + 26, h * 0.68 - 44, 'SHOOT x8', { positive: false, size: 17, rot: 5 })}
+  ${float(laneX(2, 0.68) + 26, h * 0.68 - 44, 'x8', { positive: false, size: 20, rot: 5 })}
 
   <rect width="${w}" height="${h}" filter="url(#nz-lp)"/>
 </g>`;
@@ -426,56 +426,126 @@ ${bars}${label}`;
 }
 
 /**
- * Lane Defender in a slot wider than 3:4. `09` allows extending non-playable
- * in-world ground instead of black bars: the board keeps its authored size,
- * and the same ground pattern (seamless, it shares the board's user space)
- * plus mirrored backdrop copies run out to the slot edges, dimmed so the three
- * lanes stay the obvious place to look.
+ * Retro-neon / Outrun pillar panel for letterbox bars. Authored in a unit
+ * square and stretched into each bar: vanishing grid under a striped sun and
+ * neon skyline. Intensity without stealing focus from the playfield.
+ */
+export function neonPillar(w, h, { seed = 11, flip = false } = {}) {
+  const r = rng(seed);
+  const horizon = h * 0.48;
+  const sunCx = w * (flip ? 0.58 : 0.42);
+  const sunR = Math.min(w * 0.9, h * 0.22);
+  let stars = '';
+  for (let i = 0; i < 28; i++) {
+    stars += `<circle cx="${n(r() * w)}" cy="${n(r() * horizon * 0.85)}" r="${n(0.4 + r() * 1.1)}" fill="#ffe6ff" opacity="${n(0.15 + r() * 0.55)}"/>`;
+  }
+  let buildings = '';
+  let x = -6;
+  while (x < w + 10) {
+    const bw = 8 + r() * (w * 0.14);
+    const bh = horizon * (0.12 + r() * 0.38);
+    buildings += `<rect x="${n(x)}" y="${n(horizon - bh)}" width="${n(bw)}" height="${n(bh + 2)}" fill="#140822"/>`;
+    const cols = 1 + Math.floor(r() * 3);
+    const rows = 2 + Math.floor(r() * 5);
+    for (let c = 0; c < cols; c++) {
+      for (let row = 0; row < rows; row++) {
+        if (r() > 0.55) continue;
+        buildings += `<rect x="${n(x + 2 + c * (bw / cols))}" y="${n(horizon - bh + 4 + row * (bh / (rows + 1)))}" width="${n(Math.max(1.2, bw / cols - 3))}" height="${n(Math.max(1.2, bh / (rows + 2)))}" fill="#ff4fd8" opacity="${n(0.35 + r() * 0.55)}"/>`;
+      }
+    }
+    x += bw + 2 + r() * 6;
+  }
+  let grid = '';
+  const vanishX = w * 0.5;
+  for (let i = 1; i <= 8; i++) {
+    const t = i / 8;
+    const y = horizon + (h - horizon) * (t * t);
+    grid += `<path d="M0 ${n(y)} H${w}" stroke="#3de8ff" stroke-width="${n(0.8 + t)}" stroke-opacity="${n(0.12 + 0.45 * t)}"/>`;
+  }
+  for (let i = -6; i <= 6; i++) {
+    const x0 = vanishX + i * (w * 0.08);
+    grid += `<path d="M${n(vanishX)} ${n(horizon)} L${n(x0 + i * w * 0.35)} ${h}" stroke="#3de8ff" stroke-width="1.1" stroke-opacity="${n(0.18 + (1 - Math.abs(i) / 7) * 0.35)}"/>`;
+  }
+  let streaks = '';
+  for (let i = 0; i < 5; i++) {
+    const sx = r() * w;
+    const sy = horizon + r() * (h - horizon) * 0.7;
+    streaks += `<rect x="${n(sx)}" y="${n(sy)}" width="${n(w * (0.2 + r() * 0.35))}" height="${n(1 + r() * 1.6)}" rx="1" fill="#ff4fd8" opacity="${n(0.2 + r() * 0.35)}" transform="rotate(${n((r() - 0.5) * 18)} ${n(sx)} ${n(sy)})"/>`;
+  }
+  const defs = `
+<linearGradient id="np-sky" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#12061f"/>
+  <stop offset="0.45" stop-color="#3a0f5c"/>
+  <stop offset="0.78" stop-color="#a11d6e"/>
+  <stop offset="1" stop-color="#1a0530"/>
+</linearGradient>
+<radialGradient id="np-sun" cx="0.5" cy="0.5" r="0.5">
+  <stop offset="0" stop-color="#ffe566"/>
+  <stop offset="0.45" stop-color="#ff9a3c"/>
+  <stop offset="1" stop-color="#ff4d8d" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="np-floor" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#14082a"/>
+  <stop offset="1" stop-color="#05030c"/>
+</linearGradient>
+<linearGradient id="np-haze" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#05070a" stop-opacity="0.35"/>
+  <stop offset="0.55" stop-color="#05070a" stop-opacity="0.08"/>
+  <stop offset="1" stop-color="#05070a" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="np-box"><rect width="${w}" height="${h}"/></clipPath>`;
+  const sunCy = horizon - sunR * 0.15;
+  let sunBands = '';
+  for (let i = 0; i < 6; i++) {
+    const y = sunCy + sunR * 0.05 + i * (sunR * 0.2);
+    sunBands += `<rect x="${n(sunCx - sunR)}" y="${n(y)}" width="${n(sunR * 2)}" height="${n(sunR * 0.07)}" fill="#3a0f5c" opacity="0.55"/>`;
+  }
+  const body = `<g clip-path="url(#np-box)">
+  <rect width="${w}" height="${h}" fill="url(#np-sky)"/>
+  ${stars}
+  <circle cx="${n(sunCx)}" cy="${n(sunCy)}" r="${n(sunR)}" fill="url(#np-sun)" opacity="0.95"/>
+  ${sunBands}
+  <ellipse cx="${n(sunCx)}" cy="${n(horizon)}" rx="${n(sunR * 1.6)}" ry="${n(sunR * 0.28)}" fill="#ff9a3c" opacity="0.35"/>
+  ${buildings}
+  <path d="M0 ${n(horizon)} H${w}" stroke="#ffe566" stroke-width="2" stroke-opacity="0.75"/>
+  <rect y="${n(horizon)}" width="${w}" height="${n(h - horizon)}" fill="url(#np-floor)"/>
+  ${grid}
+  ${streaks}
+  <rect width="${w}" height="${h}" fill="url(#np-haze)"${flip ? ' transform="scale(-1 1) translate(-' + w + ' 0)"' : ''}/>
+</g>`;
+  return { defs, body };
+}
+
+/**
+ * Lane Defender in a slot wider than 3:4. The board stays letterboxed at its
+ * authored 3:4; the leftover bars are not empty black and are not an extension
+ * of the play world — they carry a retro-neon city / infinite-grid stage so the
+ * slot still reads as arcade intensity.
  */
 export function laneSlot(slotW, slotH, { pfW = 480, pfH = 640 } = {}) {
   const pf = lanePlayfield(pfW, pfH);
   const s = slotH / pfH;
   const dw = pfW * s;
   const dx = (slotW - dw) / 2;
-  const ext = dx / s;
-  const horizon = Math.round(pfH * 0.235);
-  const bd = backdrop(pfW, Math.round(pfH * 0.3));
-  const reach = Math.ceil(ext / pfW);
-
-  let copies = '';
-  for (let k = -reach; k <= reach; k++) {
-    if (k === 0) continue;
-    const t = k % 2 ? `translate(${(k + 1) * pfW} 0) scale(-1 1)` : `translate(${k * pfW} 0)`;
-    copies += `<g transform="${t}">${bd.body}</g>`;
-  }
-  const L = -ext;
-  const Wt = pfW + ext * 2;
-  const defs = `${pf.defs}
-<linearGradient id="ls-dimL" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#05070a" stop-opacity="0.8"/>
-  <stop offset="1" stop-color="#05070a" stop-opacity="0.42"/>
-</linearGradient>
-<linearGradient id="ls-dimR" x1="1" y1="0" x2="0" y2="0">
-  <stop offset="0" stop-color="#05070a" stop-opacity="0.8"/>
-  <stop offset="1" stop-color="#05070a" stop-opacity="0.42"/>
-</linearGradient>
-<clipPath id="ls-world"><rect x="${n(L)}" width="${n(Wt)}" height="${pfH}"/></clipPath>`;
-
-  const world = `<g clip-path="url(#ls-world)">
-  <rect x="${n(L)}" width="${n(Wt)}" height="${pfH}" fill="#0b0f15"/>
-  ${copies}
-  <rect x="${n(L)}" y="${horizon}" width="${n(Wt)}" height="${pfH - horizon}" fill="url(#lp-ground)"/>
-  <rect x="${n(L)}" y="${horizon}" width="${n(Wt)}" height="${n(pfH * 0.3)}" fill="url(#lp-depth)"/>
-  <rect x="${n(L)}" width="${n(ext)}" height="${pfH}" fill="url(#ls-dimL)"/>
-  <rect x="${pfW}" width="${n(ext)}" height="${pfH}" fill="url(#ls-dimR)"/>
-</g>
-${pf.body}
-<path d="M0 0 V${pfH}" stroke="#93a1b2" stroke-width="${n(1 / s)}" stroke-opacity="0.22"/>
-<path d="M${pfW} 0 V${pfH}" stroke="#93a1b2" stroke-width="${n(1 / s)}" stroke-opacity="0.22"/>`;
-
+  const left = neonPillar(Math.max(1, dx), slotH, { seed: 11, flip: false });
+  const right = neonPillar(Math.max(1, slotW - dx - dw), slotH, { seed: 29, flip: true });
+  // Prefix right-hand defs so the two panels don't collide on gradient ids.
+  const rightDefs = right.defs
+    .replace(/\sid="np-/g, ' id="npR-')
+    .replace(/url\(#np-/g, 'url(#npR-');
+  const rightBody = right.body
+    .replace(/url\(#np-/g, 'url(#npR-')
+    .replace(/id="np-box"/g, 'id="npR-box"');
+  const defs = `${pf.defs}${left.defs}${rightDefs}`;
+  const body = `<rect width="${slotW}" height="${slotH}" fill="#07090d"/>
+${dx > 1 ? place(left.body, 0, 0, 1) : ''}
+${place(pf.body, dx, 0, s)}
+${dx > 1 ? place(rightBody, dx + dw, 0, 1) : ''}
+<path d="M${n(dx)} 0 V${slotH}" stroke="#a371f7" stroke-width="1.4" stroke-opacity="0.45"/>
+<path d="M${n(dx + dw)} 0 V${slotH}" stroke="#a371f7" stroke-width="1.4" stroke-opacity="0.45"/>`;
   return {
     defs,
-    body: place(world, dx, 0, s),
+    body,
     box: { x: dx, y: 0, w: dw, h: slotH, s },
   };
 }

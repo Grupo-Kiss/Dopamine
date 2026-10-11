@@ -33,7 +33,8 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | Item | Where |
 | --- | --- |
 | Specs `00`–`14` + design lock | `defs/`, `PRODUCT.md`, `DESIGN.md`, `.impeccable/` |
-| Hi-fi visual assets — Phases A, B3–B5, C, D, E | `content/` — merged [#8](https://github.com/Grupo-Kiss/Dopamine/pull/8); awaiting owner sign-off in `defs/14` |
+| Hi-fi visual assets — Phases A, B3–B5, C, D, E | `content/` — merged [#8](https://github.com/Grupo-Kiss/Dopamine/pull/8) |
+| Art generators (`tools/artgen/`) | merged [#14](https://github.com/Grupo-Kiss/Dopamine/pull/14) into `develop` |
 | Pulse text library (~123 posts + users/trends/seeds) | `content/pulse/` — merged [#9](https://github.com/Grupo-Kiss/Dopamine/pull/9) |
 | Alerts hand templates (66 lines) | `content/alerts/templates.json` — merged [#10](https://github.com/Grupo-Kiss/Dopamine/pull/10) |
 | SFX / short-audio brief + missing-cue manifest | `defs/15_sfx_audio.md`, `content/sfx/` — owner decisions locked; **produce `.ogg` after #8** — merged [#12](https://github.com/Grupo-Kiss/Dopamine/pull/12) |
@@ -44,8 +45,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| **Art generators** (`tools/artgen/`) | [`cursor/artgen-toolkit-e117`](https://github.com/Grupo-Kiss/Dopamine/tree/cursor/artgen-toolkit-e117) · [#14](https://github.com/Grupo-Kiss/Dopamine/pull/14) (draft) | Claude Opus 5 | `tools/artgen/**` |
-| **B1/B2 Playing layout comps** | `cursor/b1-b2-layout-comps-cf4f` (stacked on #14) | Claude Opus 5 | `content/mockups/{desktop,mobile}_layout.*`, `tools/artgen/**` |
+| **B1/B2 Playing layout comps** (+ cast simplify, neon letterbox, font lock) | [`cursor/b1-b2-layout-comps-cf4f`](https://github.com/Grupo-Kiss/Dopamine/tree/cursor/b1-b2-layout-comps-cf4f) · [#15](https://github.com/Grupo-Kiss/Dopamine/pull/15) (draft) | Claude Opus 5 | `content/mockups/{desktop,mobile}_layout.*`, `content/minigames/**`, `tools/artgen/**` |
 
 **Visual pass status:**
 
