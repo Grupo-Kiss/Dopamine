@@ -1,11 +1,7 @@
 import type { CSSProperties, ReactNode } from 'react'
 
 import './Layout.css'
-import type {
-  DesktopLayout,
-  LayoutModel,
-  PermanentWindow,
-} from './layoutModel'
+import type { DesktopLayout, LayoutModel, PermanentWindow } from './layoutModel'
 
 export type LayoutProps = {
   readonly model: LayoutModel
@@ -66,9 +62,13 @@ function renderDesktop(
   model: DesktopLayout,
   children: LayoutProps['childrenByWindow'],
 ) {
+  const minigameSide = model.topBand[0].kind === 'Window' ? 'left' : 'right'
+
   return (
     <>
-      <div className="playing-layout__top-band">
+      <div
+        className={`playing-layout__top-band playing-layout__top-band--minigame-${minigameSide}`}
+      >
         {model.topBand.map((region) =>
           region.kind === 'Window' ? (
             <WindowSlot key={region.window} window={region.window}>

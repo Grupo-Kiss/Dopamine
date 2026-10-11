@@ -27,8 +27,8 @@
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
 }
 
-.playing-layout__top-band > .playing-layout__service-stack:first-child {
-  order: -1;
+.playing-layout__top-band--minigame-right {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
 }
 
 .playing-layout__service-stack {

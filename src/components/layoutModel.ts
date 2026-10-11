@@ -1,24 +1,14 @@
-import {
-  LAYOUT_GUTTER_PX,
-  LAYOUT_OUTER_INSET_PX,
-} from '../config/layout'
+import { LAYOUT_GUTTER_PX, LAYOUT_OUTER_INSET_PX } from '../config/layout'
 import type { Rng } from '../testing/rng'
 
-export const SERVICE_WINDOWS = [
-  'Loop',
-  'Pulse',
-  'Wave',
-  'Echo',
-] as const
+export const SERVICE_WINDOWS = ['Loop', 'Pulse', 'Wave', 'Echo'] as const
 
 export type ServiceWindow = (typeof SERVICE_WINDOWS)[number]
 export type PermanentWindow = 'Minigame' | ServiceWindow
 
 export type DesktopShuffle = {
   readonly minigameSide: 'left' | 'right'
-  readonly bottomOrder:
-    | readonly ['Pulse', 'Echo']
-    | readonly ['Echo', 'Pulse']
+  readonly bottomOrder: readonly ['Pulse', 'Echo'] | readonly ['Echo', 'Pulse']
 }
 
 export type DesktopLayout = {
@@ -45,9 +35,7 @@ export type DesktopLayout = {
         },
         { readonly kind: 'Window'; readonly window: 'Minigame' },
       ]
-  readonly bottomBand:
-    | readonly ['Pulse', 'Echo']
-    | readonly ['Echo', 'Pulse']
+  readonly bottomBand: readonly ['Pulse', 'Echo'] | readonly ['Echo', 'Pulse']
   readonly dopamineBar: { readonly placement: 'outsideMasonry' }
   readonly alerts: { readonly placement: 'overlay' }
   readonly gutterPx: number
@@ -56,11 +44,7 @@ export type DesktopLayout = {
 
 export type MobileLayout = {
   readonly kind: 'Mobile'
-  readonly windows: readonly [
-    'Minigame',
-    ServiceWindow,
-    ServiceWindow,
-  ]
+  readonly windows: readonly ['Minigame', ServiceWindow, ServiceWindow]
   readonly dopamineBar: { readonly placement: 'outsideMasonry' }
   readonly alerts: { readonly placement: 'overlay' }
   readonly gutterPx: number
@@ -76,9 +60,7 @@ const SERVICE_PRIORITY: Readonly<Record<ServiceWindow, number>> = {
   Wave: 4,
 }
 
-export function createDesktopLayout(
-  shuffle: DesktopShuffle,
-): DesktopLayout {
+export function createDesktopLayout(shuffle: DesktopShuffle): DesktopLayout {
   const minigame = { kind: 'Window', window: 'Minigame' } as const
   const services = {
     kind: 'ServiceStack',

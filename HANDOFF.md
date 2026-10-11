@@ -48,7 +48,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| P1–P6 foundation + content gate (E00–E08) | [`cursor/p1-scaffold-state-machine-aa9c` / #161](https://github.com/Grupo-Kiss/Dopamine/pull/161) | Cursor Cloud Agent | Root scaffold, `src/core/*`, `src/testing/*`, `src/config/*`, `src/content/*` |
+| P1–P7 foundation + layout shell (E00–E09) | [`cursor/p1-scaffold-state-machine-aa9c` / #161](https://github.com/Grupo-Kiss/Dopamine/pull/161) | Cursor Cloud Agent | Root scaffold, `src/core/*`, `src/testing/*`, `src/config/*`, `src/content/*`, `src/components/Layout*` |
 
 ### Next (pick in order)
 

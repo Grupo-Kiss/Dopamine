@@ -44,9 +44,9 @@ describe('layout model', () => {
 
     expect(model.windows).toEqual(['Minigame', 'Loop', 'Wave'])
     expect(new Set(model.windows).size).toBe(3)
-    expect(model.windows.filter((window) => window !== 'Minigame')).toHaveLength(
-      2,
-    )
+    expect(
+      model.windows.filter((window) => window !== 'Minigame'),
+    ).toHaveLength(2)
     expect(
       model.windows
         .filter((window) => window !== 'Minigame')
