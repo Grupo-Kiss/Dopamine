@@ -94,12 +94,7 @@ describe('Lane Defender simulation', () => {
     })
     expect(state.barrierBlocks).toBe(1)
 
-    state = spawnNormalEnemy(
-      state,
-      createSequenceRng([0.5]),
-      'enemy-1',
-      0.001,
-    )
+    state = spawnNormalEnemy(state, createSequenceRng([0.5]), 'enemy-1', 0.001)
     state = tickLaneDefender(state, {
       deltaMs: 100,
       difficultyMultiplier: 1,

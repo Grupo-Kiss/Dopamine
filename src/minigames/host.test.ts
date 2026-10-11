@@ -9,11 +9,7 @@ describe('Minigame host', () => {
       endless_runner: vi.fn(() => ({ reset: vi.fn() })),
     }
     const onValidAction = vi.fn()
-    const host = createMinigameHost(
-      'lane_defender',
-      factories,
-      onValidAction,
-    )
+    const host = createMinigameHost('lane_defender', factories, onValidAction)
 
     host.reportValidAction({ type: 'ChangeLane', lane: 'left' })
 
@@ -39,11 +35,7 @@ describe('Minigame host', () => {
       block_cascade: () => ({ reset: vi.fn() }),
       endless_runner: () => ({ reset: vi.fn() }),
     }
-    const host = createMinigameHost(
-      'lane_defender',
-      factories,
-      vi.fn(),
-    )
+    const host = createMinigameHost('lane_defender', factories, vi.fn())
 
     host.reportFailure()
 

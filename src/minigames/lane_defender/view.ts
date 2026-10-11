@@ -12,8 +12,7 @@ export const LANE_DEFENDER_ASSET_IDS = [
   'backdrop',
 ] as const
 
-export type LaneDefenderAssetId =
-  (typeof LANE_DEFENDER_ASSET_IDS)[number]
+export type LaneDefenderAssetId = (typeof LANE_DEFENDER_ASSET_IDS)[number]
 
 export type Letterbox = {
   readonly x: number
@@ -76,10 +75,7 @@ export function laneFromKeyboard(code: string): Lane | null {
   return null
 }
 
-export function laneFromPointer(
-  offsetX: number,
-  playfieldWidth: number,
-): Lane {
+export function laneFromPointer(offsetX: number, playfieldWidth: number): Lane {
   assertPositive(playfieldWidth, 'Playfield width')
   if (!Number.isFinite(offsetX) || offsetX < 0 || offsetX >= playfieldWidth) {
     throw new RangeError('Pointer offset must be inside the playfield')

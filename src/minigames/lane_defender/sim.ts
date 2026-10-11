@@ -217,10 +217,7 @@ export function autoFire(state: LaneDefenderState): LaneDefenderState {
     return {
       ...state,
       entities: removeEntity(state.entities, target.id),
-      events: [
-        ...state.events,
-        { type: 'NormalEnemyDefeated', id: target.id },
-      ],
+      events: [...state.events, { type: 'NormalEnemyDefeated', id: target.id }],
     }
   }
 
@@ -234,12 +231,13 @@ export function autoFire(state: LaneDefenderState): LaneDefenderState {
       ? {
           ...state,
           entities: removeEntity(state.entities, target.id),
-          events: [
-            ...state.events,
-            { type: 'MineActivated', id: target.id },
-          ],
+          events: [...state.events, { type: 'MineActivated', id: target.id }],
         }
       : replaceEntity(state, { ...target, counter })
+  }
+
+  if (target.kind === 'Pickup') {
+    return state
   }
 
   const integrity = target.integrity - 1
@@ -276,8 +274,7 @@ export function tickLaneDefender(
     (tick.deltaMs / 1_000)
   const moved = state.entities
     .filter(
-      (entity) =>
-        entity.kind !== 'Pickup' || entity.expiresAtMs > elapsedMs,
+      (entity) => entity.kind !== 'Pickup' || entity.expiresAtMs > elapsedMs,
     )
     .map((entity) =>
       entity.kind === 'Pickup'
