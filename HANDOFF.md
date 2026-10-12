@@ -43,30 +43,24 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | Credits store + schema (fonts seeded) | `content/credits/` |
 | Media drop zones (empty manifests) | `loop/clips/`, `wave/high\|boring/`, `echo/audio\|video/` |
 | MVP epic/task board (TDD) | [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) — 29 epics / 111 tasks; landed via [#159](https://github.com/Grupo-Kiss/Dopamine/pull/159); `docs/agents/mvp-board.md` + `docs/agents/effort-model-map.md` |
+| **MVP code P1–P14 (E00–E21)** | App scaffold + core systems + windows + minigames + audio/stickers — [#161](https://github.com/Grupo-Kiss/Dopamine/pull/161) |
 
 ### In progress — do not collide
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| *(none — merge [#161](https://github.com/Grupo-Kiss/Dopamine/pull/161) into `develop` to land MVP code)* | | | |
-
-### Done pending merge
-
-| Work | Branch / PR | Notes |
-| --- | --- | --- |
-| P1–P14 MVP implementation (E00–E21) | [`cursor/p1-scaffold-state-machine-aa9c` / #161](https://github.com/Grupo-Kiss/Dopamine/pull/161) | Mergeable; owner merge required (agent has read-only GitHub). After merge, delete remote branch if not auto-deleted. |
+| *(none)* | | | |
 
 ### Next (pick in order)
 
-1. **Merge #161** into `develop`, then close/delete `cursor/p1-scaffold-state-machine-aa9c`.
-2. **Critical-path post-MVP:** **E22** Full game-feel polish (peak **L** / strong model) — [#137](https://github.com/Grupo-Kiss/Dopamine/issues/137), start [#138](https://github.com/Grupo-Kiss/Dopamine/issues/138) `E22.T01`.
-3. **Safe parallel content** (paths must not collide with E22 feel/audio work):
+1. **Critical-path post-MVP:** **E22** Full game-feel polish (peak **L** / strong model) — [#137](https://github.com/Grupo-Kiss/Dopamine/issues/137), start [#138](https://github.com/Grupo-Kiss/Dopamine/issues/138) `E22.T01`.
+2. **Safe parallel content** (paths must not collide with E22 feel/audio work):
    - SFX `.ogg` production (`defs/15`) — **E23** (peak **M**)
    - Wave / Loop / Echo media + credits rows — **E24** (peak **M**)
    - Wordmark kerning — **E27.T01** (effort **S**)
    - Balance tune on `defs/06_balance.md` only — **E28** (peak **M**, after playable)
 
-**Housekeeping:** close probe issues [#16](https://github.com/Grupo-Kiss/Dopamine/issues/16) / [#17](https://github.com/Grupo-Kiss/Dopamine/issues/17) when convenient (bot cannot close). Close MVP task issues #19–#136 when #161 lands.
+**Housekeeping:** close probe issues [#16](https://github.com/Grupo-Kiss/Dopamine/issues/16) / [#17](https://github.com/Grupo-Kiss/Dopamine/issues/17) when convenient. Close MVP task issues #19–#136 now that #161 is merged.
 
 ### Hard rules going forward
 
