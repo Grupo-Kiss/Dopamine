@@ -50,6 +50,45 @@ describe('baseline stickers', () => {
     })
   })
 
+  it('tags Focus Chain stickers with their FX tier and intents', () => {
+    render(
+      <StickerHost
+        activeWindow="Loop"
+        events={[
+          { type: 'FocusChain', length: 2, id: 'chain-2' },
+          { type: 'FocusChain', length: 12, id: 'chain-12' },
+        ]}
+      />,
+    )
+
+    const quiet = screen.getByText('Focus Chain 2')
+    const loud = screen.getByText('Focus Chain 12')
+    expect(quiet).toHaveAttribute('data-fx-tier', '0')
+    expect(quiet).toHaveAttribute('data-fx', '')
+    expect(loud).toHaveAttribute('data-fx-tier', '10')
+    expect(loud).toHaveAttribute('data-fx', 'Popup Particles ScreenFlash')
+    expect(
+      screen.getByRole('region', { name: 'Arcade stickers' }),
+    ).toHaveAttribute('data-screen-fx', 'ScreenFlash')
+  })
+
+  it('drops shake and flash from Focus Chain stickers in Accessibility Mode', () => {
+    render(
+      <StickerHost
+        accessibilityMode
+        activeWindow="Loop"
+        events={[{ type: 'FocusChain', length: 16, id: 'chain-16' }]}
+      />,
+    )
+
+    const sticker = screen.getByText('Focus Chain 16')
+    expect(sticker).toHaveAttribute('data-fx-tier', '15')
+    expect(sticker).toHaveAttribute('data-fx', 'Popup Particles ColorFade')
+    expect(
+      screen.getByRole('region', { name: 'Arcade stickers' }),
+    ).toHaveAttribute('data-screen-fx', '')
+  })
+
   it('surfaces Burnout telegraph and Recovery as short-lived stickers', () => {
     expect(
       burnoutStickerEvents({

@@ -71,6 +71,12 @@ export const PRELOAD_TARGET_MATCH_SECONDS = 120
 export const SCORE_FROM_DOPAMINE_GAIN_MULT = 10
 export const GAME_OVER_PLAY_AGAIN_DEMAND_DELAY_MS = 3_000
 
+export const FOCUS_CHAIN_FX_POPUP_LENGTH = 3
+export const FOCUS_CHAIN_FX_PARTICLES_LENGTH = 5
+export const FOCUS_CHAIN_FX_FLASH_LENGTH = 10
+export const FOCUS_CHAIN_FX_SHAKE_LENGTH = 15
+export const FOCUS_CHAIN_FX_SPECIAL_COLOR_LENGTH = 20
+
 export const WINDOW_REWARDS = {
   Loop: {
     NextVideo: { dopamine: 1.2, score: 15 },
