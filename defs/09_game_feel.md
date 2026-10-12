@@ -94,12 +94,12 @@ Snappy pops, brief overshoot, satisfying settle. Not constant chaos on chrome.
 
 | Sticker | Behavior |
 | --- | --- |
-| Combo `xN` / `xN!!` | Over Active Window; **juicy → bored** as same-window diminishing returns rise |
-| Focus Chain | Bigger arcade banners; tiered punch |
+| Combo `xN` / `xN!!` | Over Active Window; **juicy → bored** as same-window diminishing returns rise. Juiciness = normalized same-window diminishing multiplier: `!!` while juicy, `!` mid, bare `xN` when bored; scale/overshoot/saturation flatten toward readable floors (`06`) |
+| Focus Chain | Bigger arcade banners; tiered punch — cumulative FX intents at `02` Visual Progression lengths (3 popup → 5 particles → 10 flash → 15 shake → 20+ special color; thresholds in `06`) |
 | Score / Dopamine `+N` | Tiny floats; bigger on Attention Requests |
 | Burnout telegraph | Edge + sticker when near APM threshold |
 
-Reduced-motion (accessibility): replace shake/big pulse with opacity/color transitions; keep information.
+Reduced-motion (accessibility): replace shake/big pulse with opacity/color transitions; keep information. For Focus Chain tiers, Screen flash and Camera shake become a single Color fade intent; the tier itself is still reported. Combo stickers drop pop overshoot but keep the boredom colour/opacity curve.
 
 Mockups: `content/mockups/stickers_combo.svg`, `content/mockups/stickers_chain.svg`
 
@@ -175,6 +175,14 @@ Intended behaviour:
 | Playing (normal) | Slightly muffled / lower gain | Clear |
 | Burnout | **No muffling** — all competing | All hot |
 | Recovery | **Extra muffled** globally, ease back to normal | Still muted relative |
+
+Bus rules (values in `06` → Feel Presentation):
+
+- **Window buses** = Loop, Pulse, Wave, Echo. The focused bus is the Active Window's bus; when the Minigame (or nothing) is active, every window bus counts as non-focused.
+- **SFX bus** (alerts, chain, combo, minigame action) stays clear in Playing and Burnout; in Recovery it shares the focused "still muted" level ("almost everything").
+- **Master** never muffles (it is the limiter stage).
+- Recovery eases linearly in progress (log-frequency for the cutoff) from its start values to the Playing values as Recovery ends.
+- If the browser lacks `BiquadFilterNode`, fall back to gain-only ducks (`10`).
 
 If scheduling pressure appears during TDD, ship priority ducks first and muffling second — but **design intent includes muffling**.
 

@@ -298,6 +298,52 @@ Final Game Over stats (Survival Time, Final Score, Highest Combo, Longest Focus 
 
 ---
 
+## Feel Presentation (stickers + focus muffling)
+
+Presentation-only knobs. They never change Dopamine, Score, or Focus Chain rules. Behaviour lives in `02` (Visual Progression) and `09` (Stickers, Audio Mix).
+
+### Focus Chain visual tiers
+
+Chain length at which each FX intent first appears. Intents are cumulative (a 15-chain still pops, sprays particles, and flashes).
+
+| Constant | Starter | Intent |
+| --- | ---: | --- |
+| `FOCUS_CHAIN_FX_POPUP_LENGTH` | `3` | Small popup |
+| `FOCUS_CHAIN_FX_PARTICLES_LENGTH` | `5` | Particles |
+| `FOCUS_CHAIN_FX_FLASH_LENGTH` | `10` | Screen flash |
+| `FOCUS_CHAIN_FX_SHAKE_LENGTH` | `15` | Camera shake |
+| `FOCUS_CHAIN_FX_SPECIAL_COLOR_LENGTH` | `20` | Special color treatment (20+) |
+
+### Combo sticker boredom curve
+
+Combo sticker juiciness follows the same-window diminishing multiplier (`DIMINISH_*` above): first hit = fully juicy, floor = fully bored. Bored stays readable — scale never drops below base size and opacity never below the floor.
+
+| Constant | Starter | Notes |
+| --- | ---: | --- |
+| `COMBO_STICKER_JUICY_SCALE` | `1.35` | Scale at full juiciness; bored = `1.0` |
+| `COMBO_STICKER_JUICY_OVERSHOOT` | `0.3` | Pop overshoot at full juiciness; bored = `0` |
+| `COMBO_STICKER_BORED_SATURATION` | `0.35` | Colour saturation at full boredom; juicy = `1.0` |
+| `COMBO_STICKER_BORED_OPACITY` | `0.85` | Readability floor; juicy = `1.0` |
+
+### Focus muffling (Web Audio buses)
+
+Per-bus lowpass cutoff + gain. Unmuffled = `MUFFLE_OPEN_LOWPASS_HZ` at gain `1.0`.
+
+| Constant | Starter | Notes |
+| --- | ---: | --- |
+| `MUFFLE_OPEN_LOWPASS_HZ` | `20000` | Filter fully open |
+| `MUFFLE_PLAYING_LOWPASS_HZ` | `2200` | Non-focused window buses in Playing (slight) |
+| `MUFFLE_PLAYING_GAIN` | `0.7` | |
+| `MUFFLE_RECOVERY_LOWPASS_HZ` | `700` | Non-focused window buses at Recovery start (extra) |
+| `MUFFLE_RECOVERY_GAIN` | `0.45` | |
+| `MUFFLE_RECOVERY_FOCUSED_LOWPASS_HZ` | `1600` | Focused window + SFX at Recovery start (still muted) |
+| `MUFFLE_RECOVERY_FOCUSED_GAIN` | `0.75` | |
+| `MUFFLE_RAMP_MS` | `120` | Param smoothing per change (no zipper clicks) |
+
+Recovery eases from its start values back to Playing values across `RECOVERY_DURATION_MS`. Burnout = every bus open at gain `1.0`.
+
+---
+
 ## Acceptance Criteria
 
 - Every gameplay rule that says “defined in balance” has a named constant here.
