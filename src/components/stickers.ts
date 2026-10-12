@@ -6,7 +6,13 @@ export type StickerEvent =
       readonly length: number
       readonly id: string
     }
-  | { readonly type: 'Combo'; readonly multiplier: number; readonly id: string }
+  | {
+      readonly type: 'Combo'
+      readonly multiplier: number
+      /** Same-window repeat count from that window's DiminishingState. */
+      readonly repeatedInteractions: number
+      readonly id: string
+    }
   | { readonly type: 'BurnoutTelegraph'; readonly id: string }
   | { readonly type: 'Recovery'; readonly id: string }
 

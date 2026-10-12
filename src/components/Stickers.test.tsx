@@ -23,6 +23,7 @@ describe('baseline stickers', () => {
     const combo: StickerEvent = {
       type: 'Combo',
       multiplier: 2.5,
+      repeatedInteractions: 1,
       id: 'combo',
     }
     const chain: StickerEvent = {
@@ -87,6 +88,37 @@ describe('baseline stickers', () => {
     expect(
       screen.getByRole('region', { name: 'Arcade stickers' }),
     ).toHaveAttribute('data-screen-fx', '')
+  })
+
+  it('renders Combo stickers juicy on a fresh window and flatter when farmed', () => {
+    render(
+      <StickerHost
+        activeWindow="Pulse"
+        events={[
+          {
+            type: 'Combo',
+            multiplier: 1.2,
+            repeatedInteractions: 1,
+            id: 'fresh',
+          },
+          {
+            type: 'Combo',
+            multiplier: 2,
+            repeatedInteractions: 60,
+            id: 'farmed',
+          },
+        ]}
+      />,
+    )
+
+    const fresh = screen.getByText('x1.2!!')
+    const farmed = screen.getByText('x2')
+    expect(Number(fresh.dataset.juiciness)).toBe(1)
+    expect(Number(farmed.dataset.juiciness)).toBeLessThan(0.5)
+    expect(fresh.style.getPropertyValue('--combo-scale')).toBe('1.35')
+    expect(
+      Number(farmed.style.getPropertyValue('--combo-scale')),
+    ).toBeGreaterThanOrEqual(1)
   })
 
   it('surfaces Burnout telegraph and Recovery as short-lived stickers', () => {

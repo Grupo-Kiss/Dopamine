@@ -77,6 +77,11 @@ export const FOCUS_CHAIN_FX_FLASH_LENGTH = 10
 export const FOCUS_CHAIN_FX_SHAKE_LENGTH = 15
 export const FOCUS_CHAIN_FX_SPECIAL_COLOR_LENGTH = 20
 
+export const COMBO_STICKER_JUICY_SCALE = 1.35
+export const COMBO_STICKER_JUICY_OVERSHOOT = 0.3
+export const COMBO_STICKER_BORED_SATURATION = 0.35
+export const COMBO_STICKER_BORED_OPACITY = 0.85
+
 export const WINDOW_REWARDS = {
   Loop: {
     NextVideo: { dopamine: 1.2, score: 15 },

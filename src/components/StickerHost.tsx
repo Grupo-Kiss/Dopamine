@@ -1,4 +1,7 @@
+import type { CSSProperties } from 'react'
+
 import type { ActiveWindow } from '../core/focusChain'
+import { comboJuice, comboLabel } from './comboJuice'
 import { focusChainFx, SCREEN_FX_INTENTS } from './focusChainFx'
 import type { StickerEvent } from './stickers'
 
@@ -26,13 +29,50 @@ export function StickerHost({
             key={event.id}
             length={event.length}
           />
+        ) : event.type === 'Combo' ? (
+          <ComboSticker
+            accessibilityMode={accessibilityMode}
+            key={event.id}
+            multiplier={event.multiplier}
+            repeatedInteractions={event.repeatedInteractions}
+          />
         ) : (
           <span className={`sticker sticker--${event.type}`} key={event.id}>
-            {label(event)}
+            {event.type === 'BurnoutTelegraph'
+              ? 'Burnout incoming'
+              : 'Recovery'}
           </span>
         ),
       )}
     </div>
+  )
+}
+
+function ComboSticker({
+  multiplier,
+  repeatedInteractions,
+  accessibilityMode,
+}: {
+  readonly multiplier: number
+  readonly repeatedInteractions: number
+  readonly accessibilityMode: boolean
+}) {
+  const juice = comboJuice(repeatedInteractions, { accessibilityMode })
+  const style = {
+    '--combo-scale': cssNumber(juice.scale),
+    '--combo-overshoot': cssNumber(juice.overshoot),
+    '--combo-saturation': cssNumber(juice.saturation),
+    '--combo-opacity': cssNumber(juice.opacity),
+  } as CSSProperties
+
+  return (
+    <span
+      className="sticker sticker--Combo"
+      data-juiciness={cssNumber(juice.juiciness)}
+      style={style}
+    >
+      {comboLabel(multiplier, juice)}
+    </span>
   )
 }
 
@@ -72,8 +112,6 @@ function screenFx(
     .join(' ')
 }
 
-function label(event: Exclude<StickerEvent, { type: 'FocusChain' }>): string {
-  if (event.type === 'Combo') return `x${event.multiplier}`
-  if (event.type === 'BurnoutTelegraph') return 'Burnout incoming'
-  return 'Recovery'
+function cssNumber(value: number): string {
+  return String(Math.round(value * 1_000) / 1_000)
 }
