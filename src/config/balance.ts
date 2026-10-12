@@ -82,6 +82,15 @@ export const COMBO_STICKER_JUICY_OVERSHOOT = 0.3
 export const COMBO_STICKER_BORED_SATURATION = 0.35
 export const COMBO_STICKER_BORED_OPACITY = 0.85
 
+export const MUFFLE_OPEN_LOWPASS_HZ = 20_000
+export const MUFFLE_PLAYING_LOWPASS_HZ = 2_200
+export const MUFFLE_PLAYING_GAIN = 0.7
+export const MUFFLE_RECOVERY_LOWPASS_HZ = 700
+export const MUFFLE_RECOVERY_GAIN = 0.45
+export const MUFFLE_RECOVERY_FOCUSED_LOWPASS_HZ = 1_600
+export const MUFFLE_RECOVERY_FOCUSED_GAIN = 0.75
+export const MUFFLE_RAMP_MS = 120
+
 export const WINDOW_REWARDS = {
   Loop: {
     NextVideo: { dopamine: 1.2, score: 15 },
