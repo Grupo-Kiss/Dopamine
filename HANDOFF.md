@@ -48,17 +48,25 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| — | — | — | — |
+| *(none — merge [#161](https://github.com/Grupo-Kiss/Dopamine/pull/161) into `develop` to land MVP code)* | | | |
+
+### Done pending merge
+
+| Work | Branch / PR | Notes |
+| --- | --- | --- |
+| P1–P14 MVP implementation (E00–E21) | [`cursor/p1-scaffold-state-machine-aa9c` / #161](https://github.com/Grupo-Kiss/Dopamine/pull/161) | Mergeable; owner merge required (agent has read-only GitHub). After merge, delete remote branch if not auto-deleted. |
 
 ### Next (pick in order)
 
-1. **Scaffold + first failing tests** — **pack P1** (effort **M** / mid model) per `docs/agents/effort-model-map.md`; TDD [#19](https://github.com/Grupo-Kiss/Dopamine/issues/19) **E00.T01**. Branch from latest `origin/develop`. Do not revive closed PR #5 wholesale. Asset-agnostic minigames.
-2. **Safe parallel content** (paths must not collide with scaffold):
-   - SFX `.ogg` production (`defs/15`) — post-MVP **E23**
-   - Wave / Loop / Echo media + credits rows — post-MVP **E24**
-   - Balance tune on `defs/06_balance.md` only — post-MVP **E28** (after playable)
+1. **Merge #161** into `develop`, then close/delete `cursor/p1-scaffold-state-machine-aa9c`.
+2. **Critical-path post-MVP:** **E22** Full game-feel polish (peak **L** / strong model) — [#137](https://github.com/Grupo-Kiss/Dopamine/issues/137), start [#138](https://github.com/Grupo-Kiss/Dopamine/issues/138) `E22.T01`.
+3. **Safe parallel content** (paths must not collide with E22 feel/audio work):
+   - SFX `.ogg` production (`defs/15`) — **E23** (peak **M**)
+   - Wave / Loop / Echo media + credits rows — **E24** (peak **M**)
+   - Wordmark kerning — **E27.T01** (effort **S**)
+   - Balance tune on `defs/06_balance.md` only — **E28** (peak **M**, after playable)
 
-**Housekeeping:** close probe issues [#16](https://github.com/Grupo-Kiss/Dopamine/issues/16) / [#17](https://github.com/Grupo-Kiss/Dopamine/issues/17) when convenient (bot cannot close).
+**Housekeeping:** close probe issues [#16](https://github.com/Grupo-Kiss/Dopamine/issues/16) / [#17](https://github.com/Grupo-Kiss/Dopamine/issues/17) when convenient (bot cannot close). Close MVP task issues #19–#136 when #161 lands.
 
 ### Hard rules going forward
 
@@ -100,11 +108,13 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 ## Paste snippets
 
-### Start scaffold (next)
+### Start post-MVP E22 (next coding pack)
 
 ```
-Read @HANDOFF.md @docs/agents/effort-model-map.md and board index #158.
-Pack P1 (effort M / mid model). Frontier task E00.T01 (#19).
-Branch off develop. Scaffold Vite + TS + React + Vitest + pnpm per @defs/10, then TDD #19
-(failing test first). Stay on P1 this chat. Asset-agnostic minigames. No real-platform clones.
+Read @HANDOFF.md @docs/agents/effort-model-map.md @docs/agents/mvp-board.md
+and board task #138 (effort L, epic E22 / post-MVP feel polish).
+
+ADR-0001: write the failing test named in the issue first.
+Asset-agnostic minigames. No real-platform clones. No direct Dopamine penalties.
+Stay on E22 this chat — do not start E23+ unless parallel content paths are agreed.
 ```
