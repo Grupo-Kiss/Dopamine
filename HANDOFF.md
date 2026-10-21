@@ -45,14 +45,14 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | MVP epic/task board (TDD) | [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) — 29 epics / 111 tasks; landed via [#159](https://github.com/Grupo-Kiss/Dopamine/pull/159); `docs/agents/mvp-board.md` + `docs/agents/effort-model-map.md` |
 | **MVP code P1–P14 (E00–E21)** | App scaffold + core systems + windows + minigames + audio/stickers — [#161](https://github.com/Grupo-Kiss/Dopamine/pull/161) |
 | **E22 Full game-feel polish** (T01–T03) | Focus Chain FX tiers `src/components/focusChainFx.ts`; Combo boredom curve `src/components/comboJuice.ts`; focus muffling matrix `src/audio/muffling.ts` + real Web Audio graph `src/audio/webAudioPort.ts` (fake `AudioContext` in `src/testing/audio.ts`); knobs in `06` → Feel Presentation — [#163](https://github.com/Grupo-Kiss/Dopamine/pull/163) |
-| **E23 SFX production + cue integration** (T01–T02) | Generative `.ogg` cues via `tools/sfxgen/`; `content/sfx/manifest.json` `final`; `mixer.playCue(id)` + `DOMAIN_CUE_IDS` (`src/audio/cues.ts`) — this PR |
-| **E24 Media pack expansion + credits** (T01–T02) | Loop/Wave/Echo drop zones filled (`tools/mediagen/`); credits rows for CC0 attributed assets — this PR |
+| **E23 SFX production + cue integration** (T01–T02) | Generative `.ogg` cues via `tools/sfxgen/`; `content/sfx/manifest.json` `final`; `mixer.playCue(id)` + `DOMAIN_CUE_IDS` (`src/audio/cues.ts`) — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
+| **E24 Media pack expansion + credits** (T01–T02) | Loop/Wave/Echo drop zones filled (`tools/mediagen/`); credits rows for CC0 attributed assets — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
 
 ### In progress — do not collide
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| E23 + E24 | `cursor/e23-e24-sfx-media-ad68` | this agent | `content/sfx/`, `content/minigames/**/sfx_*.ogg`, `content/{loop,wave,echo}/`, `content/credits/`, `src/audio/`, `tools/{sfxgen,mediagen}/` |
+| E23 + E24 | `cursor/e23-e24-sfx-media-ad68` / [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) | this agent | `content/sfx/`, `content/minigames/**/sfx_*.ogg`, `content/{loop,wave,echo}/`, `content/credits/`, `src/audio/`, `tools/{sfxgen,mediagen}/` |
 
 ### Next (pick in order)
 
