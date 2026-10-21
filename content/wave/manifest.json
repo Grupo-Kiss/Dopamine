@@ -1,5 +1,42 @@
 {
   "version": 1,
-  "tracks": [],
-  "notes": "Folder high/ => pace high; boring/ => pace boring. Manifest may override per track. Owner intent: high = techno; boring = slower/Recovery-adjacent (defs/15)."
+  "tracks": [
+    {
+      "id": "wave_high_001",
+      "path": "high/corridor_pulse.mp3",
+      "title": "Corridor Pulse",
+      "artistLabel": "Null Festival",
+      "pace": "high",
+      "license": "CC0",
+      "attribution": "Null Festival \u2014 CC0"
+    },
+    {
+      "id": "wave_high_002",
+      "path": "high/feed_accelerator.mp3",
+      "title": "Feed Accelerator",
+      "artistLabel": "Null Festival",
+      "pace": "high",
+      "license": "CC0",
+      "attribution": "Null Festival \u2014 CC0"
+    },
+    {
+      "id": "wave_boring_001",
+      "path": "boring/hold_music_forever.mp3",
+      "title": "Hold Music Forever",
+      "artistLabel": "Waiting Room",
+      "pace": "boring",
+      "license": "owned",
+      "attribution": ""
+    },
+    {
+      "id": "wave_high_003",
+      "path": "high/notification_overdrive.mp3",
+      "title": "Notification Overdrive",
+      "artistLabel": "Null Festival",
+      "pace": "high",
+      "license": "CC0",
+      "attribution": "Null Festival \u2014 CC0"
+    }
+  ],
+  "notes": "Folder high/ => pace high; boring/ => pace boring. Owner intent: high = techno; boring = slower/Recovery-adjacent (defs/15)."
 }

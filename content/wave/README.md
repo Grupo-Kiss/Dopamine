@@ -6,7 +6,8 @@ Local files only by default (no streaming API). Owner intent (`defs/15`): **high
 | --- | --- |
 | `high/` | Energetic / techno / instrumental (`pace: high` by folder) |
 | `boring/` | Slow / dull / throw-off (`pace: boring` by folder) |
-| `manifest.json` | Shipping inventory (`tracks[]`) — may override pace per track |
+| `manifest.json` | Shipping inventory (`tracks[]`) — starter + expanded (E24); may override pace |
+| Regen | `python3 tools/mediagen/generate.py` |
 | `manifest.example.json` | Schema example |
 
 Each track needs `id`, `path`, `title`, `artistLabel`, `pace`, `license`, `attribution`. Playlist bias ~85% high / 15% boring (provisional, `06` / `08`).

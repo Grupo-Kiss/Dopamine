@@ -4,7 +4,8 @@
 | --- | --- |
 | `audio/` | Podcast-style long audio |
 | `video/` | Long-form video (fictional player chrome — no YouTube brand) |
-| `manifest.json` | Shipping inventory (`items[]`) — start empty |
+| `manifest.json` | Shipping inventory (`items[]`) — starter + expanded (E24) |
+| Regen | `python3 tools/mediagen/generate.py` |
 | `manifest.example.json` | Schema example |
 
 Each item needs `id`, `kind` (`audio` \| `video`), `path`, `title`, `creatorLabel`, `license`, `attribution`, optional `moments[]` (`atSec`, `label`).

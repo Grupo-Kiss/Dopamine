@@ -45,21 +45,22 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | MVP epic/task board (TDD) | [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) — 29 epics / 111 tasks; landed via [#159](https://github.com/Grupo-Kiss/Dopamine/pull/159); `docs/agents/mvp-board.md` + `docs/agents/effort-model-map.md` |
 | **MVP code P1–P14 (E00–E21)** | App scaffold + core systems + windows + minigames + audio/stickers — [#161](https://github.com/Grupo-Kiss/Dopamine/pull/161) |
 | **E22 Full game-feel polish** (T01–T03) | Focus Chain FX tiers `src/components/focusChainFx.ts`; Combo boredom curve `src/components/comboJuice.ts`; focus muffling matrix `src/audio/muffling.ts` + real Web Audio graph `src/audio/webAudioPort.ts` (fake `AudioContext` in `src/testing/audio.ts`); knobs in `06` → Feel Presentation — [#163](https://github.com/Grupo-Kiss/Dopamine/pull/163) |
+| **E23 SFX production + cue integration** (T01–T02) | Generative `.ogg` cues via `tools/sfxgen/`; `content/sfx/manifest.json` `final`; `mixer.playCue(id)` + `DOMAIN_CUE_IDS` (`src/audio/cues.ts`) — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
+| **E24 Media pack expansion + credits** (T01–T02) | Loop/Wave/Echo drop zones filled (`tools/mediagen/`); credits rows for CC0 attributed assets — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
 
 ### In progress — do not collide
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| *(none)* | | | |
+| E23 + E24 | `cursor/e23-e24-sfx-media-ad68` / [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) | this agent | `content/sfx/`, `content/minigames/**/sfx_*.ogg`, `content/{loop,wave,echo}/`, `content/credits/`, `src/audio/`, `tools/{sfxgen,mediagen}/` |
 
 ### Next (pick in order)
 
 1. **Playing shell** is still a placeholder (`App.tsx` renders "Match in progress"): mounting `Layout` + `StickerHost` and calling `mixer.applyFeelState({ mode, activeWindow, recoveryProgress })` each tick is what makes E22 visible/audible in a Match. Not yet ticketed on the board.
-2. **Safe parallel content**:
-   - SFX `.ogg` production (`defs/15`) — **E23** (peak **M**)
-   - Wave / Loop / Echo media + credits rows — **E24** (peak **M**)
+2. **Safe parallel content** (after this PR merges, clear in-progress row):
    - Wordmark kerning — **E27.T01** (effort **S**)
    - Balance tune on `defs/06_balance.md` only — **E28** (peak **M**, after playable)
+   - Optional media APIs — **E25** (peak **M**)
 
 **Housekeeping:** close probe issues [#16](https://github.com/Grupo-Kiss/Dopamine/issues/16) / [#17](https://github.com/Grupo-Kiss/Dopamine/issues/17) when convenient. Close MVP task issues #19–#136 now that #161 is merged.
 

@@ -19,6 +19,7 @@ const NO_AUDIO: AudioMixer = {
   setBusGain() {},
   setBusMuffled() {},
   applyFeelState() {},
+  playCue() {},
   async silence() {},
 }
 

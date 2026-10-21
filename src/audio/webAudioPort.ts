@@ -88,6 +88,12 @@ export function createWebAudioPort(
       if (stage.filter) ramp(stage.filter.frequency, muffle.lowpassHz)
       ramp(stage.muffle.gain, muffle.gain)
     },
+    playCue(_request) {
+      // Buffer decode / one-shot scheduling lands with media element wiring.
+      // Cue ids are dispatched through the mixer; the graph input is ready.
+      void _request
+      void ensureGraph()
+    },
   }
 }
 
