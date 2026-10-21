@@ -53,22 +53,22 @@ describe('credits: store.json includes a row for each manifest-attributed asset 
 
     for (const clip of loop.clips) {
       if (needsCreditRow(clip)) {
-        attributed.push({ creditId: `loop_${clip.id}`, kind: 'loop' })
+        attributed.push({ creditId: clip.id, kind: 'loop' })
       }
     }
     for (const track of wave.tracks) {
       if (needsCreditRow(track)) {
-        attributed.push({ creditId: `wave_${track.id}`, kind: 'wave' })
+        attributed.push({ creditId: track.id, kind: 'wave' })
       }
     }
     for (const item of echo.items) {
       if (needsCreditRow(item)) {
-        attributed.push({ creditId: `echo_${item.id}`, kind: 'echo' })
+        attributed.push({ creditId: item.id, kind: 'echo' })
       }
     }
     for (const cue of sfx.cues) {
       if (needsCreditRow(cue)) {
-        attributed.push({ creditId: `sfx_${cue.id}`, kind: 'sfx' })
+        attributed.push({ creditId: cue.id, kind: 'sfx' })
       }
     }
 

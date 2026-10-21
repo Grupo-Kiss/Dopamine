@@ -4,7 +4,8 @@ Drop vertical / croppable clips in `clips/`.
 
 | File | Role |
 | --- | --- |
-| `manifest.json` | Shipping inventory (`clips[]`) — start empty |
+| `manifest.json` | Shipping inventory (`clips[]`) — starter + expanded pack (E24) |
+| Regen | `python3 tools/mediagen/generate.py` |
 | `manifest.example.json` | Schema example |
 | `clips/` | Media files (`.webm` / `.mp4`, etc.) |
 

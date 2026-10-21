@@ -63,7 +63,7 @@ describe('sfx: content/sfx/manifest.json every required cue resolves to an exist
     )
 
     for (const cue of thirdParty) {
-      expect(creditIds.has(`sfx_${cue.id}`)).toBe(true)
+      expect(creditIds.has(cue.id)).toBe(true)
     }
   })
 })

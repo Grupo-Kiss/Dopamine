@@ -1,4 +1,43 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "echo_a_001",
+      "kind": "audio",
+      "path": "audio/three_hours_on_nothing.mp3",
+      "title": "Three Hours On Nothing",
+      "creatorLabel": "Deep Dive Fiction",
+      "license": "owned",
+      "attribution": "",
+      "moments": [
+        {
+          "atSec": 8,
+          "label": "hot take cold open"
+        },
+        {
+          "atSec": 20,
+          "label": "controversial take"
+        },
+        {
+          "atSec": 33,
+          "label": "apology tour preview"
+        }
+      ]
+    },
+    {
+      "id": "echo_v_001",
+      "kind": "video",
+      "path": "video/edited_too_long.webm",
+      "title": "I Edited This For Too Long",
+      "creatorLabel": "Longform Larry",
+      "license": "CC0",
+      "attribution": "Longform Larry \u2014 CC0",
+      "moments": [
+        {
+          "atSec": 2,
+          "label": "thumbnail bait"
+        }
+      ]
+    }
+  ]
 }
