@@ -44,6 +44,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | Media drop zones (empty manifests) | `loop/clips/`, `wave/high\|boring/`, `echo/audio\|video/` |
 | MVP epic/task board (TDD) | [#158](https://github.com/Grupo-Kiss/Dopamine/issues/158) — 29 epics / 111 tasks; landed via [#159](https://github.com/Grupo-Kiss/Dopamine/pull/159); `docs/agents/mvp-board.md` + `docs/agents/effort-model-map.md` |
 | **MVP code P1–P14 (E00–E21)** | App scaffold + core systems + windows + minigames + audio/stickers — [#161](https://github.com/Grupo-Kiss/Dopamine/pull/161) |
+| **E22 Full game-feel polish** (T01–T03) | Focus Chain FX tiers `src/components/focusChainFx.ts`; Combo boredom curve `src/components/comboJuice.ts`; focus muffling matrix `src/audio/muffling.ts` + real Web Audio graph `src/audio/webAudioPort.ts` (fake `AudioContext` in `src/testing/audio.ts`); knobs in `06` → Feel Presentation — [#163](https://github.com/Grupo-Kiss/Dopamine/pull/163) |
 
 ### In progress — do not collide
 
@@ -53,8 +54,8 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 ### Next (pick in order)
 
-1. **Critical-path post-MVP:** **E22** Full game-feel polish (peak **L** / strong model) — [#137](https://github.com/Grupo-Kiss/Dopamine/issues/137), start [#138](https://github.com/Grupo-Kiss/Dopamine/issues/138) `E22.T01`.
-2. **Safe parallel content** (paths must not collide with E22 feel/audio work):
+1. **Playing shell** is still a placeholder (`App.tsx` renders "Match in progress"): mounting `Layout` + `StickerHost` and calling `mixer.applyFeelState({ mode, activeWindow, recoveryProgress })` each tick is what makes E22 visible/audible in a Match. Not yet ticketed on the board.
+2. **Safe parallel content**:
    - SFX `.ogg` production (`defs/15`) — **E23** (peak **M**)
    - Wave / Loop / Echo media + credits rows — **E24** (peak **M**)
    - Wordmark kerning — **E27.T01** (effort **S**)
@@ -102,13 +103,13 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 
 ## Paste snippets
 
-### Start post-MVP E22 (next coding pack)
+### Start the next post-MVP pack
 
 ```
 Read @HANDOFF.md @docs/agents/effort-model-map.md @docs/agents/mvp-board.md
-and board task #138 (effort L, epic E22 / post-MVP feel polish).
+and board task #<N> (effort <S|M|L|XL>, epic E2x).
 
 ADR-0001: write the failing test named in the issue first.
 Asset-agnostic minigames. No real-platform clones. No direct Dopamine penalties.
-Stay on E22 this chat — do not start E23+ unless parallel content paths are agreed.
+Stay on this epic — do not start the next one unless parallel content paths are agreed.
 ```
