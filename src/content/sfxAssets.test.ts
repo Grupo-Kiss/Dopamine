@@ -1,8 +1,7 @@
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
 
-const REPO_ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '../..')
+const REPO_ROOT = process.cwd()
 const MANIFEST_PATH = resolve(REPO_ROOT, 'content/sfx/manifest.json')
 
 /** Optional cues from defs/15 — may stay missing until polish. */

@@ -3,7 +3,8 @@
 Short one-shots and stingers for UI / Alerts / shared arcade feel.
 
 **Brief (SSOT):** `defs/15_sfx_audio.md`  
-**Inventory:** `manifest.json` (`status: missing` until real `.ogg` files land)
+**Inventory:** `manifest.json` (`status: final` for generative first-party cues)  
+**Regen:** `python3 tools/sfxgen/generate.py`
 
 | Folder | What |
 | --- | --- |
