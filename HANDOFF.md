@@ -47,7 +47,7 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | **E22 Full game-feel polish** (T01–T03) | Focus Chain FX tiers `src/components/focusChainFx.ts`; Combo boredom curve `src/components/comboJuice.ts`; focus muffling matrix `src/audio/muffling.ts` + real Web Audio graph `src/audio/webAudioPort.ts` (fake `AudioContext` in `src/testing/audio.ts`); knobs in `06` → Feel Presentation — [#163](https://github.com/Grupo-Kiss/Dopamine/pull/163) |
 | **E23 SFX production + cue integration** (T01–T02) | Generative `.ogg` cues via `tools/sfxgen/`; `content/sfx/manifest.json` `final`; `mixer.playCue(id)` + `DOMAIN_CUE_IDS` (`src/audio/cues.ts`) — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
 | **E24 Media pack expansion + credits** (T01–T02) | Loop/Wave/Echo drop zones filled (`tools/mediagen/`); credits rows for CC0 attributed assets — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
-| **Playing shell** | `PlayingView` mounts `Layout` + `StickerHost`; `applyFeelState` each rAF tick; `playShellCue` wires Focus Chain / alert / hit → `DOMAIN_CUE_IDS`; PLAY preload → Playing — `cursor/playing-shell-efb3` |
+| **Playing shell** | `PlayingView` mounts `Layout` + `StickerHost`; `applyFeelState` each rAF tick; `playShellCue` wires Focus Chain / alert / hit → `DOMAIN_CUE_IDS`; PLAY preload → Playing — [#165](https://github.com/Grupo-Kiss/Dopamine/pull/165) |
 
 ### In progress — do not collide
 
