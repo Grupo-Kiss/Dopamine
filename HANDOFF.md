@@ -47,17 +47,18 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | **E22 Full game-feel polish** (T01–T03) | Focus Chain FX tiers `src/components/focusChainFx.ts`; Combo boredom curve `src/components/comboJuice.ts`; focus muffling matrix `src/audio/muffling.ts` + real Web Audio graph `src/audio/webAudioPort.ts` (fake `AudioContext` in `src/testing/audio.ts`); knobs in `06` → Feel Presentation — [#163](https://github.com/Grupo-Kiss/Dopamine/pull/163) |
 | **E23 SFX production + cue integration** (T01–T02) | Generative `.ogg` cues via `tools/sfxgen/`; `content/sfx/manifest.json` `final`; `mixer.playCue(id)` + `DOMAIN_CUE_IDS` (`src/audio/cues.ts`) — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
 | **E24 Media pack expansion + credits** (T01–T02) | Loop/Wave/Echo drop zones filled (`tools/mediagen/`); credits rows for CC0 attributed assets — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
+| **Playing shell** | `PlayingView` mounts `Layout` + `StickerHost`; `applyFeelState` each rAF tick; `playShellCue` wires Focus Chain / alert / hit → `DOMAIN_CUE_IDS`; PLAY preload → Playing — [#165](https://github.com/Grupo-Kiss/Dopamine/pull/165) |
 
 ### In progress — do not collide
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| E23 + E24 | `cursor/e23-e24-sfx-media-ad68` / [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) | this agent | `content/sfx/`, `content/minigames/**/sfx_*.ogg`, `content/{loop,wave,echo}/`, `content/credits/`, `src/audio/`, `tools/{sfxgen,mediagen}/` |
+| — | — | — | — |
 
 ### Next (pick in order)
 
-1. **Playing shell** is still a placeholder (`App.tsx` renders "Match in progress"): mounting `Layout` + `StickerHost` and calling `mixer.applyFeelState({ mode, activeWindow, recoveryProgress })` each tick is what makes E22 visible/audible in a Match. Not yet ticketed on the board.
-2. **Safe parallel content** (after this PR merges, clear in-progress row):
+1. **Match systems on the shell** — drive Dopamine drain, Focus Chain / windows / minigame into `PlayingView` props (feel + stickers + `playShellCue` on real events). Still makes E22 fully visible in a live Match.
+2. **Safe parallel content:**
    - Wordmark kerning — **E27.T01** (effort **S**)
    - Balance tune on `defs/06_balance.md` only — **E28** (peak **M**, after playable)
    - Optional media APIs — **E25** (peak **M**)
