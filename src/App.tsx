@@ -1,15 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import creditsStore from '../content/credits/store.json'
 import echoManifest from '../content/echo/manifest.json'
 import loopManifest from '../content/loop/manifest.json'
 import waveManifest from '../content/wave/manifest.json'
 import type { AudioMixer } from './audio/mixer'
-import { DOPAMINE_MAX } from './config/balance'
 import { GameOverView } from './components/GameOverView'
 import { createDesktopLayout } from './components/layoutModel'
 import { LoadingView } from './components/LoadingView'
-import { PlayingView } from './components/PlayingView'
+import {
+  MatchPlaying,
+  type MatchEndStats,
+} from './components/MatchPlaying'
 import { StartPage } from './components/StartPage'
 import {
   evaluatePreloadGate,
@@ -23,12 +25,14 @@ import {
   boot,
   loadingComplete,
   loadingFailed,
+  notifyDopamineDepleted,
   play,
   playAgain,
   returnToHub,
   type GameOverState,
   type GameState,
   type LoadingState,
+  type PlayingState,
   type StartPageState,
 } from './core/gameState'
 import { createSeededRng } from './testing/rng'
@@ -49,13 +53,18 @@ const STARTER_PACK: ContentPack = {
   echo: { items: echoManifest.items },
 }
 
+const EMPTY_STATS: MatchEndStats = {
+  survivalTimeSeconds: 0,
+  finalScore: 0,
+  highestCombo: 0,
+  longestFocusChain: 0,
+  burnoutsTriggered: 0,
+}
+
 export function App({ audio = NO_AUDIO }: { readonly audio?: AudioMixer }) {
   const [state, setState] = useState<GameState>(() => boot())
   const [session, setSession] = useState<SessionValues | null>(null)
-
-  useEffect(() => {
-    if (state.phase === 'GameOver') void audio.silence()
-  }, [audio, state.phase])
+  const [matchStats, setMatchStats] = useState<MatchEndStats>(EMPTY_STATS)
 
   function startFromHub(hub: StartPageState): void {
     void audio.unlock()
@@ -74,7 +83,14 @@ export function App({ audio = NO_AUDIO }: { readonly audio?: AudioMixer }) {
     }
 
     setSession(createSessionValues(createSeededRng(Date.now() >>> 0)))
+    setMatchStats(EMPTY_STATS)
     setState(loadingComplete(loading))
+  }
+
+  function endMatch(playing: PlayingState, stats: MatchEndStats): void {
+    setMatchStats(stats)
+    void audio.silence()
+    setState(notifyDopamineDepleted(playing))
   }
 
   if (state.phase === 'StartPage') {
@@ -96,13 +112,7 @@ export function App({ audio = NO_AUDIO }: { readonly audio?: AudioMixer }) {
         credits={creditsStore}
         onPlayAgain={() => startFromGameOver(state)}
         onReturnToHub={() => setState(returnToHub(state))}
-        stats={{
-          survivalTimeSeconds: 0,
-          finalScore: 0,
-          highestCombo: 0,
-          longestFocusChain: 0,
-          burnoutsTriggered: 0,
-        }}
+        stats={matchStats}
       />
     )
   }
@@ -115,12 +125,10 @@ export function App({ audio = NO_AUDIO }: { readonly audio?: AudioMixer }) {
   )
 
   return (
-    <PlayingView
+    <MatchPlaying
       audio={audio}
-      dopamine={DOPAMINE_MAX}
-      feel={{ mode: 'Playing', activeWindow: null }}
       model={layout}
-      stickerEvents={[]}
+      onDepleted={(stats) => endMatch(state, stats)}
     />
   )
 }

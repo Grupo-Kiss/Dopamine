@@ -30,13 +30,15 @@ describe('Match session on the Playing shell', () => {
     const clock = createFakeClock(0)
     let session = createMatchSession(clock)
 
-    clock.advance(10_000)
+    clock.advance(1_000)
     let result = tickMatch(session, clock)
     session = result.session
 
+    // Early Match: difficulty multiplier ≈ 1, so drain is near the base rate.
+    expect(session.dopamine.value).toBeLessThan(DOPAMINE_MAX)
     expect(session.dopamine.value).toBeCloseTo(
-      DOPAMINE_MAX - DOPAMINE_DRAIN_PER_SECOND_BASE * 10,
-      5,
+      DOPAMINE_MAX - DOPAMINE_DRAIN_PER_SECOND_BASE,
+      2,
     )
     expect(session.depleted).toBe(false)
 
@@ -51,6 +53,11 @@ describe('Match session on the Playing shell', () => {
     const clock = createFakeClock(0)
     let session = createMatchSession(clock)
 
+    // Leave headroom under the cap so step bonuses are visible.
+    clock.advance(5_000)
+    session = tickMatch(session, clock).session
+    const drained = session.dopamine.value
+
     const first = matchFocusNavigate(session, clock, 'Pulse')
     expect(first.cues).toEqual(['focusChainStep'])
     expect(first.session.focusChain).toMatchObject({
@@ -63,6 +70,7 @@ describe('Match session on the Playing shell', () => {
       length: 1,
       id: 'focus-chain',
     })
+    expect(first.session.dopamine.value).toBeGreaterThan(drained)
 
     clock.advance(100)
     session = first.session
@@ -70,7 +78,7 @@ describe('Match session on the Playing shell', () => {
     expect(second.cues).toEqual(['focusChainStep'])
     expect(second.session.focusChain.length).toBe(2)
     expect(second.session.longestFocusChain).toBe(2)
-    expect(second.session.dopamine.value).toBeGreaterThan(first.session.dopamine.value)
+    expect(second.session.score).toBeGreaterThan(first.session.score)
   })
 
   it('wires alert open and minigame hit to shell cue events', () => {
