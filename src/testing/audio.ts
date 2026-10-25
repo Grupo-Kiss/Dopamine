@@ -17,12 +17,14 @@ export type AudioCall =
       gain: number
       lowpassHz: number
     }
+  | { operation: 'playCue'; id: string; bus: AudioBus }
 
 export interface AudioPort {
   unlock(): Promise<void>
   suspend(): Promise<void>
   setBusGain(bus: AudioBus, gain: number): void
   setBusMuffle(bus: AudioBus, muffle: BusMuffle): void
+  playCue(request: { readonly id: string; readonly bus: AudioBus }): void
 }
 
 export interface FakeAudioPort extends AudioPort {
@@ -49,6 +51,9 @@ export function createFakeAudioPort(): FakeAudioPort {
     },
     setBusMuffle(bus, muffle) {
       calls.push({ operation: 'setBusMuffle', bus, ...muffle })
+    },
+    playCue({ id, bus }) {
+      calls.push({ operation: 'playCue', id, bus })
     },
   }
 }

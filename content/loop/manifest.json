@@ -1,4 +1,77 @@
 {
   "version": 1,
-  "clips": []
+  "clips": [
+    {
+      "id": "loop_001",
+      "path": "clips/clip_01.webm",
+      "title": "Scroll Ritual 1",
+      "creatorLabel": "Dopamine procedural desk",
+      "tags": [
+        "brainrot",
+        "owned"
+      ],
+      "license": "owned",
+      "attribution": ""
+    },
+    {
+      "id": "loop_002",
+      "path": "clips/clip_02.webm",
+      "title": "Scroll Ritual 2",
+      "creatorLabel": "Dopamine procedural desk",
+      "tags": [
+        "brainrot",
+        "owned"
+      ],
+      "license": "owned",
+      "attribution": ""
+    },
+    {
+      "id": "loop_003",
+      "path": "clips/clip_03.webm",
+      "title": "Scroll Ritual 3",
+      "creatorLabel": "Dopamine procedural desk",
+      "tags": [
+        "brainrot",
+        "owned"
+      ],
+      "license": "owned",
+      "attribution": ""
+    },
+    {
+      "id": "loop_004",
+      "path": "clips/clip_04.webm",
+      "title": "Infinite Stare Buffer",
+      "creatorLabel": "Dopamine procedural desk",
+      "tags": [
+        "brainrot",
+        "owned"
+      ],
+      "license": "owned",
+      "attribution": ""
+    },
+    {
+      "id": "loop_005",
+      "path": "clips/clip_05.webm",
+      "title": "Definitely Not A Trend",
+      "creatorLabel": "Dopamine procedural desk",
+      "tags": [
+        "brainrot",
+        "owned"
+      ],
+      "license": "owned",
+      "attribution": ""
+    },
+    {
+      "id": "loop_006",
+      "path": "clips/clip_06.webm",
+      "title": "Swipe Gravity Well",
+      "creatorLabel": "Dopamine procedural desk",
+      "tags": [
+        "brainrot",
+        "owned"
+      ],
+      "license": "owned",
+      "attribution": ""
+    }
+  ]
 }
