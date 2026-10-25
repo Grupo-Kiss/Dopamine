@@ -48,13 +48,13 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | **E23 SFX production + cue integration** (T01–T02) | Generative `.ogg` cues via `tools/sfxgen/`; `content/sfx/manifest.json` `final`; `mixer.playCue(id)` + `DOMAIN_CUE_IDS` (`src/audio/cues.ts`) — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
 | **E24 Media pack expansion + credits** (T01–T02) | Loop/Wave/Echo drop zones filled (`tools/mediagen/`); credits rows for CC0 attributed assets — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
 | **Playing shell** | `PlayingView` mounts `Layout` + `StickerHost`; `applyFeelState` each rAF tick; `playShellCue` wires Focus Chain / alert / hit → `DOMAIN_CUE_IDS`; PLAY preload → Playing — [#165](https://github.com/Grupo-Kiss/Dopamine/pull/165) |
-| **Match systems on shell** | `matchSession` + `MatchPlaying`: Dopamine drain → Game Over; Focus Chain nav (Q/W/E/Y/T) → stickers/feel + step cue; alert/hit cue hooks; Recovery `recoveryProgress` — `cursor/match-systems-shell-efb3` |
+| **Match systems on shell** | `matchSession` + `MatchPlaying`: Dopamine drain → Game Over; Focus Chain nav (Q/W/E/Y/T) → stickers/feel + step cue; alert/hit cue hooks; Recovery `recoveryProgress` — [#166](https://github.com/Grupo-Kiss/Dopamine/pull/166) |
 
 ### In progress — do not collide
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| Match systems on shell | `cursor/match-systems-shell-efb3` | this agent | `src/core/matchSession*`, `src/components/MatchPlaying*`, `src/App.tsx`, `HANDOFF.md` |
+| Match systems on shell | `cursor/match-systems-shell-efb3` / [#166](https://github.com/Grupo-Kiss/Dopamine/pull/166) | this agent | `src/core/matchSession*`, `src/components/MatchPlaying*`, `src/App.tsx`, `HANDOFF.md` |
 
 ### Next (pick in order)
 
