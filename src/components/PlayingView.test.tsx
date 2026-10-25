@@ -4,11 +4,8 @@ import { DOMAIN_CUE_IDS, type SfxCueManifest } from '../audio/cues'
 import { createAudioMixer } from '../audio/mixer'
 import { createFakeAudioPort } from '../testing/audio'
 import { createDesktopLayout } from './layoutModel'
-import {
-  playShellCue,
-  PlayingView,
-  type ShellCueEvent,
-} from './PlayingView'
+import { playShellCue, type ShellCueEvent } from './playingCues'
+import { PlayingView } from './PlayingView'
 import type { StickerEvent } from './stickers'
 
 const FIXTURE_MANIFEST: SfxCueManifest = {
