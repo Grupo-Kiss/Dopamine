@@ -45,5 +45,16 @@ describe('app shell', () => {
       screen.getByRole('region', { name: 'Arcade stickers' }),
     ).toBeInTheDocument()
     expect(screen.queryByText('Match in progress')).toBeNull()
+    expect(screen.getByRole('article', { name: 'Loop' })).toHaveTextContent(
+      'Scroll Ritual 1',
+    )
+    expect(screen.getByRole('article', { name: 'Pulse' })).toHaveTextContent(
+      'Like (L)',
+    )
+    expect(
+      screen
+        .getByRole('article', { name: 'Minigame' })
+        .querySelector('canvas, .testground-panel'),
+    ).toBeTruthy()
   })
 })
