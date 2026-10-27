@@ -3,6 +3,7 @@ import { useState } from 'react'
 import creditsStore from '../content/credits/store.json'
 import echoManifest from '../content/echo/manifest.json'
 import loopManifest from '../content/loop/manifest.json'
+import postsStore from '../content/pulse/posts.json'
 import waveManifest from '../content/wave/manifest.json'
 import type { AudioMixer } from './audio/mixer'
 import { GameOverView } from './components/GameOverView'
@@ -13,6 +14,10 @@ import {
   type MatchEndStats,
 } from './components/MatchPlaying'
 import { StartPage } from './components/StartPage'
+import {
+  buildMatchStarterPack,
+  labelsFromManifests,
+} from './content/matchPack'
 import {
   evaluatePreloadGate,
   type ContentPack,
@@ -53,6 +58,19 @@ const STARTER_PACK: ContentPack = {
   echo: { items: echoManifest.items },
 }
 
+const MATCH_STARTER = buildMatchStarterPack({
+  loopManifest: loopManifest.clips,
+  waveManifest: waveManifest.tracks,
+  echoManifest: echoManifest.items,
+  pulsePosts: postsStore.posts,
+})
+
+const MATCH_LABELS = labelsFromManifests({
+  loopManifest: loopManifest.clips,
+  waveManifest: waveManifest.tracks,
+  echoManifest: echoManifest.items,
+})
+
 const EMPTY_STATS: MatchEndStats = {
   survivalTimeSeconds: 0,
   finalScore: 0,
@@ -64,6 +82,7 @@ const EMPTY_STATS: MatchEndStats = {
 export function App({ audio = NO_AUDIO }: { readonly audio?: AudioMixer }) {
   const [state, setState] = useState<GameState>(() => boot())
   const [session, setSession] = useState<SessionValues | null>(null)
+  const [matchKey, setMatchKey] = useState(0)
   const [matchStats, setMatchStats] = useState<MatchEndStats>(EMPTY_STATS)
 
   function startFromHub(hub: StartPageState): void {
@@ -83,6 +102,7 @@ export function App({ audio = NO_AUDIO }: { readonly audio?: AudioMixer }) {
     }
 
     setSession(createSessionValues(createSeededRng(Date.now() >>> 0)))
+    setMatchKey((key) => key + 1)
     setMatchStats(EMPTY_STATS)
     setState(loadingComplete(loading))
   }
@@ -126,9 +146,13 @@ export function App({ audio = NO_AUDIO }: { readonly audio?: AudioMixer }) {
 
   return (
     <MatchPlaying
+      key={matchKey}
       audio={audio}
+      contentLabels={MATCH_LABELS}
+      minigameId={session?.minigameId ?? 'lane_defender'}
       model={layout}
       onDepleted={(stats) => endMatch(state, stats)}
+      starterPack={MATCH_STARTER}
     />
   )
 }

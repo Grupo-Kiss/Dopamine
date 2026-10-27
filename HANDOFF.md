@@ -49,16 +49,17 @@ Boot → Start Page → Loading → Playing ⇄ Burnout → Recovery
 | **E24 Media pack expansion + credits** (T01–T02) | Loop/Wave/Echo drop zones filled (`tools/mediagen/`); credits rows for CC0 attributed assets — [#164](https://github.com/Grupo-Kiss/Dopamine/pull/164) |
 | **Playing shell** | `PlayingView` mounts `Layout` + `StickerHost`; `applyFeelState` each rAF tick; `playShellCue` wires Focus Chain / alert / hit → `DOMAIN_CUE_IDS`; PLAY preload → Playing — [#165](https://github.com/Grupo-Kiss/Dopamine/pull/165) |
 | **Match systems on shell** | `matchSession` + `MatchPlaying`: Dopamine drain → Game Over; Focus Chain nav (Q/W/E/Y/T) → stickers/feel + step cue; alert/hit cue hooks; Recovery `recoveryProgress` — [#166](https://github.com/Grupo-Kiss/Dopamine/pull/166) |
+| **Match testground (windows + minigame)** | `matchWorld` + Layout slot panels + Lane Defender canvas; L/R/N window actions, demo alert, passive Wave/Echo ticks — branch `cursor/match-testground-948a` |
 
 ### In progress — do not collide
 
 | Work | Branch / PR | Owner | Touch only |
 | --- | --- | --- | --- |
-| Match systems on shell | `cursor/match-systems-shell-efb3` / [#166](https://github.com/Grupo-Kiss/Dopamine/pull/166) | this agent | `src/core/matchSession*`, `src/components/MatchPlaying*`, `src/App.tsx`, `HANDOFF.md` |
+| — | — | — | — |
 
 ### Next (pick in order)
 
-1. **Wire windows / minigame into Match** — Loop/Pulse/Wave/Echo actions + Alerts + chosen minigame host on Layout slots; call `matchAlertOpen` / `matchMinigameHit` from real events.
+1. **Combo stickers from window farming** — wire `Combo` sticker events + `highestCombo` on repeated same-window rewards.
 2. **Safe parallel content:**
    - Wordmark kerning — **E27.T01** (effort **S**)
    - Balance tune on `defs/06_balance.md` only — **E28** (peak **M**, after playable)
